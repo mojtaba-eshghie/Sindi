@@ -43,15 +43,15 @@ class Comparator:
             return "The predicates are equivalent."
 
         # Check if one implies the other
-        implies1_to_2 = sp.simplify(sp.Implies(expr1, expr2))
-        implies2_to_1 = sp.simplify(sp.Implies(expr2, expr1))
+        implies1_to_2 = sp.simplify(sp.Implies(expr1, expr2)) == True
+        implies2_to_1 = sp.simplify(sp.Implies(expr2, expr1)) == True
 
         print(f"Implies expr1 to expr2: {implies1_to_2}")
         print(f"Implies expr2 to expr1: {implies2_to_1}")
 
-        if implies1_to_2 == True and implies2_to_1 != True:
+        if implies1_to_2 and not implies2_to_1:
             return "The first predicate is stronger."
-        elif implies2_to_1 == True and implies1_to_2 != True:
+        elif implies2_to_1 and not implies1_to_2:
             return "The second predicate is stronger."
         else:
             return "The predicates are not equivalent and neither is stronger."
@@ -76,4 +76,3 @@ class Comparator:
             '>=': 'Ge',
             '<=': 'Le'
         }[op]
-
