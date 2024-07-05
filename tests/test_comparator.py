@@ -17,7 +17,6 @@ class TestComparator(unittest.TestCase):
         predicate1 = "msg.sender == msg.origin && a >= b"
         predicate2 = "msg.sender == msg.origin"
         result = self.comparator.compare(predicate1, predicate2)
-        print('result: ', result)
         self.assertEqual(result, "The first predicate is stronger.")
 
     def test_compare_non_equivalent_predicates(self):

@@ -30,25 +30,31 @@ class Comparator:
         simplified_ast2 = self.simplifier.simplify(ast2)
         print(f"Simplified AST2: {simplified_ast2}")
 
-        # Compare the simplified ASTs
-        if self._ast_equal(simplified_ast1, simplified_ast2):
+        # Compare the simplified ASTs using logical equivalence
+        expr1 = self._to_sympy_expr(simplified_ast1)
+        expr2 = self._to_sympy_expr(simplified_ast2)
+
+        print(f"SymPy Expression 1: {expr1}")
+        print(f"SymPy Expression 2: {expr2}")
+
+        # Check for equivalence
+        if sp.simplify(expr1 == expr2):
+            print("Predicates are equivalent")
             return "The predicates are equivalent."
-        elif self._is_stronger(simplified_ast1, simplified_ast2):
+
+        # Check if one implies the other
+        implies1_to_2 = sp.simplify(sp.Implies(expr1, expr2))
+        implies2_to_1 = sp.simplify(sp.Implies(expr2, expr1))
+
+        print(f"Implies expr1 to expr2: {implies1_to_2}")
+        print(f"Implies expr2 to expr1: {implies2_to_1}")
+
+        if implies1_to_2 == True and implies2_to_1 != True:
             return "The first predicate is stronger."
-        elif self._is_stronger(simplified_ast2, simplified_ast1):
+        elif implies2_to_1 == True and implies1_to_2 != True:
             return "The second predicate is stronger."
         else:
             return "The predicates are not equivalent and neither is stronger."
-
-    def _ast_equal(self, ast1: ASTNode, ast2: ASTNode) -> bool:
-        if ast1.value != ast2.value or len(ast1.children) != len(ast2.children):
-            return False
-        return all(self._ast_equal(c1, c2) for c1, c2 in zip(ast1.children, ast2.children))
-
-    def _is_stronger(self, ast1: ASTNode, ast2: ASTNode) -> bool:
-        expr1 = self._to_sympy_expr(ast1)
-        expr2 = self._to_sympy_expr(ast2)
-        return sp.simplify(sp.Implies(expr1, expr2))
 
     def _to_sympy_expr(self, ast: ASTNode):
         if not ast.children:
@@ -70,12 +76,4 @@ class Comparator:
             '>=': 'Ge',
             '<=': 'Le'
         }[op]
-
-
-
-    def _contains(self, haystack: ASTNode, needle: ASTNode) -> bool:
-        if haystack.value == needle.value and len(haystack.children) == len(needle.children):
-            if all(self._contains(hc, nc) for hc, nc in zip(haystack.children, needle.children)):
-                return True
-        return any(self._contains(child, needle) for child in haystack.children)
 
