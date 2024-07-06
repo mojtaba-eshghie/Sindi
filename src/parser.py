@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/src/parser.py
-
 from typing import List, Tuple, Union
 
 # Define a Node class for the AST

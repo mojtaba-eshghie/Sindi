@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/tests/test_parser.py
-
 import unittest
 from src.tokenizer import Tokenizer
 from src.parser import Parser, ASTNode

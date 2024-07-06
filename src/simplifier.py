@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/src/simplifier.py
-
 import sympy as sp
 from typing import Union
 from src.parser import ASTNode

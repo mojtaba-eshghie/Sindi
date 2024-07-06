@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/tests/test_comparator.py
-
 import unittest
 from src.comparator import Comparator
 

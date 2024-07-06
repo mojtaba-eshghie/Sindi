@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/tests/test_tokenizer.py
-
 import unittest
 import csv
 import os

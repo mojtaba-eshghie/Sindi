@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/src/tokenizer.py
-
 import re
 from typing import List, Tuple
 

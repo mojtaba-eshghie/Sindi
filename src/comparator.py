@@ -1,5 +1,3 @@
-# solidity_predicate_comparison/src/comparator.py
-
 import sympy as sp
 from src.tokenizer import Tokenizer
 from src.parser import Parser

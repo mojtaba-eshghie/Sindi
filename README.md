@@ -1,19 +1,10 @@
-# SSPredicates: Solidity Structural and Semantic Predicate Comparison Tool
+# SPi: Solidity Semantic Predicate Comparison Tool
 
-This project provides tools to compare predicates (boolean expressions) in Solidity programming language. It can determine if two predicates are equivalent, or if one is stronger than the other.
-Sure, let's start by creating a `README.md` file for the repository that explains the purpose of the repository, how to set it up, and how to use it with an example. After that, we'll fill in the `main.py` to provide a command-line interface for comparing predicates.
-
-### README.md
-
-````markdown
-# Solidity Predicate Comparison
-
-This repository provides a tool for comparing boolean predicates in Solidity. It can determine if two predicates are equivalent, or if one is stronger than the other.
+SPi [spaɪ], the Solidity Predicate Inspector, is a tool for comparing two boolean predicates written in Solidity, a smart contract programming language. SPi determines if two predicates are equivalent or if one is stronger than the other.
 
 ## Features
 
-- Solidity boolean expressions
-- Tokenizes and parses predicates into an Abstract Syntax Tree (AST)
+- Tokenizes and parses Solidity predicates into an Abstract Syntax Tree (AST)
 - Simplify AST using symbolic mathematics
 - Compare predicates for equivalence and logical strength
 
@@ -27,7 +18,6 @@ This repository provides a tool for comparing boolean predicates in Solidity. It
 ```sh
 pip install -r requirements.txt
 ```
-````
 
 ### Running the Tests
 
@@ -64,8 +54,4 @@ The second predicate is stronger.
 
 - `src/`: Contains the main logic for tokenizing, parsing, simplifying, and comparing predicates.
 - `tests/`: Contains unit tests for the project.
-- `main.py`: Script for comparing two predicates from the command line.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+- `main.py`: Script for comparing two predicates using CLI.
