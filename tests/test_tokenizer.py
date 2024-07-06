@@ -3,7 +3,7 @@ import csv
 import os
 from src.tokenizer import Tokenizer
 
-DATASET = 'predicate_sample_10000.csv'
+DATASET = '../datasets/predicate_sample_10000.csv'
 
 
 class TestTokenizer(unittest.TestCase):
