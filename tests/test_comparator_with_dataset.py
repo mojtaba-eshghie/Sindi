@@ -14,7 +14,7 @@ class TestComparatorWithDataset(unittest.TestCase):
         return predicates
 
     def test_comparator_with_dataset(self):
-        predicates = self.load_predicates('diversified_predicates.csv')
+        predicates = self.load_predicates('datasets/diversified_predicates.csv')
         for predicate1, predicate2 in predicates:
             with self.subTest(predicate1=predicate1, predicate2=predicate2):
                 result = self.comparator.compare(predicate1, predicate2)

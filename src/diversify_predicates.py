@@ -82,6 +82,6 @@ def diversify_predicates(input_file, output_file):
 
 
 if __name__ == '__main__':
-    input_file = 'tests/datasets/predicate_sample_10000.csv'
+    input_file = 'datasets/predicate_sample_10000.csv'
     output_file = 'datasets/diversified_predicates.csv'
     diversify_predicates(input_file, output_file)
