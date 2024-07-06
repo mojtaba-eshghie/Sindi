@@ -1,1 +1,3 @@
 sympy=1.12.1 
+colorama
+yaml
