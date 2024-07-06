@@ -12,8 +12,8 @@ This repository provides a tool for comparing boolean predicates in Solidity. It
 
 ## Features
 
-- Tokenize Solidity boolean expressions
-- Parse tokens into an Abstract Syntax Tree (AST)
+- Solidity boolean expressions
+- Tokenizes and parses predicates into an Abstract Syntax Tree (AST)
 - Simplify AST using symbolic mathematics
 - Compare predicates for equivalence and logical strength
 
