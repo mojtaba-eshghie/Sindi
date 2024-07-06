@@ -1,6 +1,7 @@
 import sympy as sp
 from typing import Union
 from src.parser import ASTNode
+from src.config import debug_print
 
 class Simplifier:
     def __init__(self):
@@ -20,21 +21,21 @@ class Simplifier:
         }
 
     def simplify(self, ast: ASTNode) -> Union[str, ASTNode]:
-        #print(f"Simplifying AST: {ast}")
+        debug_print(f"Simplifying AST: {ast}")
         sympy_expr = self._to_sympy(ast)
-        #print(f"Converted to sympy expression: {sympy_expr}")
+        debug_print(f"Converted to sympy expression: {sympy_expr}")
         simplified_expr = sp.simplify(sympy_expr)
-        #print(f"Simplified sympy expression: {simplified_expr}")
+        debug_print(f"Simplified sympy expression: {simplified_expr}")
         simplified_ast = self._to_ast(simplified_expr)
-        #print(f"Converted back to AST: {simplified_ast}")
+        debug_print(f"Converted back to AST: {simplified_ast}")
         return simplified_ast
 
     def _to_sympy(self, node: ASTNode):
-        #print(f"Converting AST node to sympy: {node}")
+        debug_print(f"Converting AST node to sympy: {node}")
         if node.value in self.symbols and not node.children:
             # Leaf nodes such as msg.sender, msg.origin, etc.
             leaf_symbol = self.symbols[node.value]
-            #print(f"Leaf node {node.value} mapped to sympy symbol: {leaf_symbol}")
+            debug_print(f"Leaf node {node.value} mapped to sympy symbol: {leaf_symbol}")
             return leaf_symbol
         elif node.value in self.symbols:
             if node.value in ('&&', '||'):
@@ -50,11 +51,11 @@ class Simplifier:
         else:
             # Handle any identifier as a symbol
             identifier_symbol = sp.Symbol(node.value)
-            #print(f"Identifier {node.value} mapped to sympy symbol: {identifier_symbol}")
+            debug_print(f"Identifier {node.value} mapped to sympy symbol: {identifier_symbol}")
             return identifier_symbol
 
     def _to_ast(self, expr):
-        #print(f"Converting sympy expression to AST: {expr}")
+        debug_print(f"Converting sympy expression to AST: {expr}")
         if isinstance(expr, sp.Equality):
             return ASTNode('==', [self._to_ast(expr.lhs), self._to_ast(expr.rhs)])
         elif isinstance(expr, sp.Rel):
