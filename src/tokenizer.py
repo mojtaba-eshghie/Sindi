@@ -3,7 +3,6 @@ from typing import List, Tuple
 
 class Tokenizer:
     def __init__(self):
-        # Define the token patterns
         self.token_patterns = [
             (r'\bmsg\.sender\b', 'MSG_SENDER'),
             (r'\bmsg\.origin\b', 'MSG_ORIGIN'),
@@ -32,24 +31,27 @@ class Tokenizer:
             (r'=', 'ASSIGN'),
             (r'\[', 'LBRACKET'),
             (r'\]', 'RBRACKET'),
-            (r'address\([^\)]*\)', 'ADDRESS'),
-            (r'bytes4\([^\)]*\)', 'BYTES4'),
-            (r'bytes32\([^\)]*\)', 'BYTES32'),
-            (r'keccak256\([^\)]*\)', 'KECCAK256'),
             (r'\"[^\"]*\"', 'STRING_LITERAL'),
-            (r'[a-zA-Z_]\w*\[.*?\]', 'ARRAY_ACCESS'),
-            (r'[a-zA-Z_]\w*\.\w+\([^\)]*\)', 'METHOD_CALL'),
-            (r'[a-zA-Z_]\w*\([^\)]*\)', 'FUNCTION_CALL'),
             (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
             (r'\d+', 'NUMBER'),
-            (r'\s+', None),  # Ignore whitespace
+            (r'\btrue\b', 'TRUE'),
+            (r'\bfalse\b', 'FALSE'),
+            (r'0x[0-9a-fA-F]{40}', 'ADDRESS_LITERAL'),
+            (r'0x[0-9a-fA-F]+', 'BYTES_LITERAL'),
+            (r'\s+', None),  # Let's ignore whitespace(s)
         ]
 
-    
     def normalize(self, predicate: str) -> str:
-        # Remove extra spaces
+        """
+        Normalizes the given predicate string by removing unnecessary spaces and adding spaces around operators and parentheses.
+
+        Args:
+            predicate (str): The predicate string to be normalized.
+
+        Returns:
+            str: The normalized predicate string.
+        """
         predicate = re.sub(r'\s+', '', predicate)
-        # Ensure consistent spacing around operators and parentheses
         predicate = re.sub(r'([!=<>]=?)', r' \1 ', predicate)
         predicate = re.sub(r'(\&\&|\|\|)', r' \1 ', predicate)
         predicate = re.sub(r'\(', r' ( ', predicate)
@@ -61,7 +63,7 @@ class Tokenizer:
         tokens = []
         position = 0
         length = len(predicate)
-        
+
         while position < length:
             match = None
             for pattern, tag in self.token_patterns:
@@ -73,6 +75,15 @@ class Tokenizer:
                     position = match.end()
                     break
             if not match:
-                # Handle unexpected character case for better debugging
-                raise ValueError(f"Unexpected character: {predicate[position]} at position {position}")
+                if predicate[position] == '(':
+                    tokens.append(('(', 'LPAREN'))
+                    position += 1
+                elif predicate[position] == ')':
+                    tokens.append((')', 'RPAREN'))
+                    position += 1
+                elif predicate[position] == ',':
+                    tokens.append((',', 'COMMA'))
+                    position += 1
+                else:
+                    raise ValueError(f"Unexpected character: {predicate[position]} at position {position}")
         return tokens

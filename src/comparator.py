@@ -1,10 +1,11 @@
 import sympy as sp
+from sympy.logic.inference import satisfiable
+from sympy.logic.boolalg import Not, Or, And
 from src.tokenizer import Tokenizer
 from src.parser import Parser
 from src.simplifier import Simplifier
 from src.parser import ASTNode
 from src.config import debug_print
-
 
 class Comparator:
     def __init__(self):
@@ -30,29 +31,35 @@ class Comparator:
         simplified_ast2 = self.simplifier.simplify(ast2)
         debug_print(f"Simplified AST2: {simplified_ast2}")
 
-        # Compare the simplified ASTs using logical equivalence
+        # Convert ASTs to SymPy expressions
         expr1 = self._to_sympy_expr(simplified_ast1)
         expr2 = self._to_sympy_expr(simplified_ast2)
 
         debug_print(f"SymPy Expression 1: {expr1}")
         debug_print(f"SymPy Expression 2: {expr2}")
 
-        # Check for equivalence
-        if sp.simplify(expr1 == expr2):
-            debug_print("Predicates are equivalent")
-            return "The predicates are equivalent."
+        # Simplify expressions
+        simplified_expr1 = sp.simplify(expr1)
+        simplified_expr2 = sp.simplify(expr2)
 
-        # Check if one implies the other
-        implies1_to_2 = sp.simplify(sp.Implies(expr1, expr2)) == True
-        implies2_to_1 = sp.simplify(sp.Implies(expr2, expr1)) == True
+        debug_print(f"Simplified SymPy Expression 1: {simplified_expr1}")
+        debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
-        debug_print(f"Implies expr1 to expr2: {implies1_to_2}")
-        debug_print(f"Implies expr2 to expr1: {implies2_to_1}")
+        # Check implications using satisfiable
+        # implies1_to_2 = not satisfiable(simplified_expr1 & Not(simplified_expr2))
+        # implies2_to_1 = not satisfiable(simplified_expr2 & Not(simplified_expr1))
+        implies1_to_2 = not satisfiable(simplified_expr1 & Not(simplified_expr2), use_lra_theory=True)
+        implies2_to_1 = not satisfiable(simplified_expr2 & Not(simplified_expr1), use_lra_theory=True)
+
+        debug_print(f"Implies expr1 to expr2: {bool(implies1_to_2)}")
+        debug_print(f"Implies expr2 to expr1: {bool(implies2_to_1)}")
 
         if implies1_to_2 and not implies2_to_1:
             return "The first predicate is stronger."
         elif implies2_to_1 and not implies1_to_2:
             return "The second predicate is stronger."
+        elif implies1_to_2 and implies2_to_1:
+            return "The predicates are equivalent."
         else:
             return "The predicates are not equivalent and neither is stronger."
 

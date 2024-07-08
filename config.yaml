@@ -3,3 +3,4 @@ debugging:
   test_comparator: false
   comparator: false
   test_comparator_with_dataset: true
+  simplifier: false
