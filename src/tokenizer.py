@@ -32,12 +32,12 @@ class Tokenizer:
             (r'\[', 'LBRACKET'),
             (r'\]', 'RBRACKET'),
             (r'\"[^\"]*\"', 'STRING_LITERAL'),
-            (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
             (r'\d+', 'NUMBER'),
             (r'\btrue\b', 'TRUE'),
             (r'\bfalse\b', 'FALSE'),
             (r'0x[0-9a-fA-F]{40}', 'ADDRESS_LITERAL'),
             (r'0x[0-9a-fA-F]+', 'BYTES_LITERAL'),
+            (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
             (r'\s+', None),  # Let's ignore whitespace(s)
         ]
 
@@ -86,4 +86,17 @@ class Tokenizer:
                     position += 1
                 else:
                     raise ValueError(f"Unexpected character: {predicate[position]} at position {position}")
-        return tokens
+
+        # Handle cases where numbers are directly followed by identifiers
+        final_tokens = []
+        i = 0
+        while i < len(tokens):
+            if i < len(tokens) - 1 and tokens[i][1] == 'NUMBER' and tokens[i+1][1] == 'IDENTIFIER':
+                final_tokens.append((tokens[i][0], 'NUMBER'))
+                final_tokens.append((tokens[i+1][0], 'IDENTIFIER'))
+                i += 2
+            else:
+                final_tokens.append(tokens[i])
+                i += 1
+
+        return final_tokens
