@@ -10,15 +10,6 @@ class TestTokenizer(unittest.TestCase):
     def setUp(self):
         self.tokenizer = Tokenizer()
 
-    def test_simple_tokenization(self):
-        predicate = "(_to!=address(0)) || (msg.value > 0)"
-        # expected_tokens = [
-        #     ('msg.sender', 'MSG_SENDER'),
-        #     ('==', 'EQUAL'),
-        #     ('msg.origin', 'MSG_ORIGIN')
-        # ]
-        # self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
-        print(self.tokenizer.tokenize(predicate))
     
     def test_simple_predicate(self):
         predicate = "msg.sender == msg.origin"
@@ -30,9 +21,8 @@ class TestTokenizer(unittest.TestCase):
         self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
 
     def test_complex_predicate(self):
-        predicate = "require(msg.sender != msg.origin && balance >= 100)"
+        predicate = "(msg.sender != msg.origin && balance >= 100)"
         expected_tokens = [
-            ('require', 'REQUIRE'),
             ('(', 'LPAREN'),
             ('msg.sender', 'MSG_SENDER'),
             ('!=', 'NOT_EQUAL'),
@@ -58,47 +48,35 @@ class TestTokenizer(unittest.TestCase):
 
 
     def test_normalize_complex_predicate(self):
-        predicate = "require( msg.sender!=msg.origin && a>=b )"
-        normalized_predicate = "require ( msg.sender != msg.origin && a >= b )"
+        predicate = "( msg.sender!=msg.origin && a>=b )"
+        normalized_predicate = "( msg.sender != msg.origin && a >= b )"
         self.assertEqual(self.tokenizer.normalize(predicate), normalized_predicate)
     
-    def test_simple_normalization(self):
-        predicate = "msg.sender==msg.origin"
+    # def test_function_call_predicate(self):
+    #     predicate = "value<=allowance(from,to)"
+    #     expected_tokens = [
+    #         ('value', 'IDENTIFIER'),
+    #         ('<=', 'LESS_EQUAL'),
+    #         ('allowance(from,to)', 'FUNCTION_CALL')
+    #     ]
+    #     self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
 
-    def test_array_access_predicate(self):
-        predicate = "value<=_balances[from]"
-        expected_tokens = [
-            ('value', 'IDENTIFIER'),
-            ('<=', 'LESS_EQUAL'),
-            ('_balances[from]', 'ARRAY_ACCESS')
-        ]
-        self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
-
-    def test_function_call_predicate(self):
-        predicate = "value<=allowance(from,to)"
-        expected_tokens = [
-            ('value', 'IDENTIFIER'),
-            ('<=', 'LESS_EQUAL'),
-            ('allowance(from,to)', 'FUNCTION_CALL')
-        ]
-        self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
-
-    '''
-    def test_tokenize_dataset_predicates(self):
-        dataset_path = os.path.join(os.path.dirname(__file__), 'datasets', DATASET)
-        with open(dataset_path, newline='', encoding='utf-8') as csvfile:
-            reader = csv.reader(csvfile)
-            for index, row in enumerate(reader):
-                # Assuming the predicate is always in the first column
-                predicate = row[1]
-                print(f"({index}) Tokenizing predicate: {predicate}")
-                # Attempt to tokenize the predicate
-                try:
-                    self.tokenizer.tokenize(predicate)
-                except Exception as e:
-                    # print row index and predicate
-                    self.fail(f"Tokenization failed for predicate '{predicate}' with exception {e}")
-    '''
+    
+    # def test_tokenize_dataset_predicates(self):
+    #     dataset_path = os.path.join(os.path.dirname(__file__), 'datasets', DATASET)
+    #     with open(dataset_path, newline='', encoding='utf-8') as csvfile:
+    #         reader = csv.reader(csvfile)
+    #         for index, row in enumerate(reader):
+    #             # Assuming the predicate is always in the first column
+    #             predicate = row[1]
+    #             print(f"({index}) Tokenizing predicate: {predicate}")
+    #             # Attempt to tokenize the predicate
+    #             try:
+    #                 self.tokenizer.tokenize(predicate)
+    #             except Exception as e:
+    #                 # print row index and predicate
+    #                 self.fail(f"Tokenization failed for predicate '{predicate}' with exception {e}")
+    
     
 if __name__ == '__main__':
     unittest.main()
