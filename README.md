@@ -49,9 +49,3 @@ The first predicate is stronger.
 $ python main.py "msg.sender == msg.origin || a < b" "a < b"
 The second predicate is stronger.
 ```
-
-## Project Structure
-
-- `src/`: Contains the main logic for tokenizing, parsing, simplifying, and comparing predicates.
-- `tests/`: Contains unit tests for the project.
-- `main.py`: Script for comparing two predicates using CLI.
