@@ -4,6 +4,11 @@ from src.comparator import Comparator
 class TestComparator(unittest.TestCase):
     def setUp(self):
         self.comparator = Comparator()
+    
+
+    def test_comparator_equivalence(self):
+        result = self.comparator.compare("a > b", "a >= b")
+        self.assertEqual(result, "The first predicate is stronger.")
 
     def test_compare_equivalent_predicates(self):
         predicate1 = "msg.sender == msg.origin"

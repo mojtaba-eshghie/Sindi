@@ -17,12 +17,16 @@ class Config:
 
 config = Config()
 
-def debug_print(message, is_exception=False):
+def debug_print(message, type_=False):
     caller_frame = inspect.stack()[1]
     module = inspect.getmodule(caller_frame[0])
     component = module.__name__.split('.')[-1] if module else 'unknown'
     if config.get_debugging(component):
-        if is_exception:
+        if type_ == 'exception':
             print(Fore.RED + message)
+        elif type_ == 'info':
+            print(Fore.GREEN + message)
+        elif type_ == 'neutral':
+            print(Fore.YELLOW + message)
         else:
             print(message)

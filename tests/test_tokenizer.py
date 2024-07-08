@@ -52,7 +52,9 @@ class TestTokenizer(unittest.TestCase):
         predicate = "require( msg.sender!=msg.origin && a>=b )"
         normalized_predicate = "require ( msg.sender != msg.origin && a >= b )"
         self.assertEqual(self.tokenizer.normalize(predicate), normalized_predicate)
-
+    
+    def test_simple_normalization(self):
+        predicate = "msg.sender==msg.origin"
 
     def test_array_access_predicate(self):
         predicate = "value<=_balances[from]"

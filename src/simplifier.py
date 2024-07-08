@@ -5,7 +5,6 @@ from src.config import debug_print
 
 class Simplifier:
     def __init__(self):
-        # Map ASTNode values to sympy symbols
         self.symbols = {
             'msg.sender': sp.Symbol('msg_sender'),
             'msg.origin': sp.Symbol('msg_origin'),
@@ -31,12 +30,8 @@ class Simplifier:
         return simplified_ast
 
     def _to_sympy(self, node: ASTNode):
-        debug_print(f"Converting AST node to sympy: {node}")
         if node.value in self.symbols and not node.children:
-            # Leaf nodes such as msg.sender, msg.origin, etc.
-            leaf_symbol = self.symbols[node.value]
-            debug_print(f"Leaf node {node.value} mapped to sympy symbol: {leaf_symbol}")
-            return leaf_symbol
+            return self.symbols[node.value]
         elif node.value in self.symbols:
             if node.value in ('&&', '||'):
                 return self.symbols[node.value](*[self._to_sympy(child) for child in node.children])
@@ -49,13 +44,9 @@ class Simplifier:
         elif node.value.isdigit():
             return sp.Integer(node.value)
         else:
-            # Handle any identifier as a symbol
-            identifier_symbol = sp.Symbol(node.value)
-            debug_print(f"Identifier {node.value} mapped to sympy symbol: {identifier_symbol}")
-            return identifier_symbol
+            return sp.Symbol(node.value.replace('.', '_'))
 
     def _to_ast(self, expr):
-        debug_print(f"Converting sympy expression to AST: {expr}")
         if isinstance(expr, sp.Equality):
             return ASTNode('==', [self._to_ast(expr.lhs), self._to_ast(expr.rhs)])
         elif isinstance(expr, sp.Rel):
@@ -69,4 +60,3 @@ class Simplifier:
             return ASTNode('!', [self._to_ast(expr.args[0])])
         else:
             return ASTNode(str(expr))
-
