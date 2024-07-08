@@ -10,6 +10,15 @@ class TestTokenizer(unittest.TestCase):
     def setUp(self):
         self.tokenizer = Tokenizer()
 
+    def test_simple_tokenization(self):
+        predicate = "(_to!=address(0)) || (msg.value > 0)"
+        # expected_tokens = [
+        #     ('msg.sender', 'MSG_SENDER'),
+        #     ('==', 'EQUAL'),
+        #     ('msg.origin', 'MSG_ORIGIN')
+        # ]
+        # self.assertEqual(self.tokenizer.tokenize(predicate), expected_tokens)
+        print(self.tokenizer.tokenize(predicate))
     
     def test_simple_predicate(self):
         predicate = "msg.sender == msg.origin"
