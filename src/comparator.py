@@ -1,10 +1,9 @@
 import sympy as sp
 from sympy.logic.inference import satisfiable
-from sympy.logic.boolalg import Not, Or, And
+from sympy.logic.boolalg import Not, And, Or
 from src.tokenizer import Tokenizer
 from src.parser import Parser
 from src.simplifier import Simplifier
-from src.parser import ASTNode
 from src.config import debug_print
 
 class Comparator:
@@ -16,6 +15,7 @@ class Comparator:
         # Tokenize, parse, and simplify the first predicate
         tokens1 = self.tokenizer.tokenize(predicate1)
         debug_print(f"Tokens1: {tokens1}")
+        use_lra_expr1 = self._contains_numerical_comparison(tokens1)
         parser1 = Parser(tokens1)
         ast1 = parser1.parse()
         debug_print(f"Parsed AST1: {ast1}")
@@ -25,6 +25,7 @@ class Comparator:
         # Tokenize, parse, and simplify the second predicate
         tokens2 = self.tokenizer.tokenize(predicate2)
         debug_print(f"Tokens2: {tokens2}")
+        use_lra_expr2 = self._contains_numerical_comparison(tokens2)
         parser2 = Parser(tokens2)
         ast2 = parser2.parse()
         debug_print(f"Parsed AST2: {ast2}")
@@ -45,14 +46,13 @@ class Comparator:
         debug_print(f"Simplified SymPy Expression 1: {simplified_expr1}")
         debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
-        # Check implications using satisfiable
-        # implies1_to_2 = not satisfiable(simplified_expr1 & Not(simplified_expr2))
-        # implies2_to_1 = not satisfiable(simplified_expr2 & Not(simplified_expr1))
-        implies1_to_2 = not satisfiable(simplified_expr1 & Not(simplified_expr2), use_lra_theory=True)
-        implies2_to_1 = not satisfiable(simplified_expr2 & Not(simplified_expr1), use_lra_theory=True)
 
-        debug_print(f"Implies expr1 to expr2: {bool(implies1_to_2)}")
-        debug_print(f"Implies expr2 to expr1: {bool(implies2_to_1)}")
+        # Check implications using satisfiability
+        implies1_to_2 = not satisfiable(And(simplified_expr1, Not(simplified_expr2)), use_lra_theory=use_lra_expr1)
+        implies2_to_1 = not satisfiable(And(simplified_expr2, Not(simplified_expr1)), use_lra_theory=use_lra_expr2)
+
+        debug_print(f"Implies expr1 to expr2: {implies1_to_2}")
+        debug_print(f"Implies expr2 to expr1: {implies2_to_1}")
 
         if implies1_to_2 and not implies2_to_1:
             return "The first predicate is stronger."
@@ -63,7 +63,7 @@ class Comparator:
         else:
             return "The predicates are not equivalent and neither is stronger."
 
-    def _to_sympy_expr(self, ast: ASTNode):
+    def _to_sympy_expr(self, ast):
         if not ast.children:
             return sp.Symbol(ast.value.replace('.', '_'))
         args = [self._to_sympy_expr(child) for child in ast.children]
@@ -71,7 +71,7 @@ class Comparator:
             return getattr(sp, self._sympy_operator(ast.value))(*args)
         return sp.Symbol(ast.value.replace('.', '_'))
 
-    def _sympy_operator(self, op: str) -> str:
+    def _sympy_operator(self, op):
         return {
             '&&': 'And',
             '||': 'Or',
@@ -83,3 +83,11 @@ class Comparator:
             '>=': 'Ge',
             '<=': 'Le'
         }[op]
+
+    def _contains_numerical_comparison(self, tokens):
+        """
+        Check if the tokenized expression contains numerical comparisons.
+        """
+        numerical_tokens = {'NUMBER', 'GREATER', 'LESS', 'GREATER_EQUAL', 'LESS_EQUAL'}
+        return any(token_type in numerical_tokens for _, token_type in tokens)
+
