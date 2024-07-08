@@ -1,0 +1,101 @@
+index,predicate,diversified_predicate
+6206,address(this).balance>=value,address(this).balance>=value
+8259,trustedIssuerClaimTopics[address(_trustedIssuer)].length!=0,trustedIssuerClaimTopics[address(_trustedIssuer)].length!=0
+2870,"tokenAmountOut<=bmul(outRecord.balance,MAX_OUT_RATIO)","tokenAmountOut<=bmul(outRecord.balance,MAX_OUT_RATIO)"
+6552,target.length==amount.length,target.length!=amount.length
+4547,users[msg.sender].earlySaleMint+_count<=MAX_MINT_EARLYSALE,(users[msg.sender].earlySaleMint+_count<=MAX_MINT_EARLYSALE) && (a > b)
+5424,msg.sender==address(manager),(msg.sender==address(manager)) || (false)
+4461,_endTime>=_startTime,(_endTime>=_startTime) && (true)
+297,b<=a,b<=a
+6985,a==0||c/a==b,(a==0||c/a==b) && (true)
+4890,to!=address(0),to!=address(0)
+9077,b!=0,b==0
+3814,b<=a,b<=a
+9534,keyIndex!=0,keyIndex!=0
+9964,to!=owner,(to!=owner) || (false)
+1038,state!=ModultradeLibrary.ProposalStates.Closed,state==ModultradeLibrary.ProposalStates.Closed
+554,msg.sender==poolParams.owner,msg.sender!=poolParams.owner
+7535,rule.maxSenderAmount!=0,(rule.maxSenderAmount!=0) || (msg.value > 0)
+499,now<=LOCK_END_TIME,now>LOCK_END_TIME
+3465,_to!=address(0),_to!=address(0)
+2151,owner!=address(0),owner!=address(0)
+9083,isWhitelistAdmin(msg.sender),(isWhitelistAdmin(msg.sender)) || (msg.value > 0)
+3682,balanceOf[msg.sender]>=_value,(balanceOf[msg.sender]>=_value) || (a < b)
+9270,account!=address(0),(account!=address(0)) && (msg.sender != address(0))
+8059,sender!=address(0),sender==address(0)
+611,grant.grantManager==msg.sender,grant.grantManager==msg.sender
+8788,!isPrototype&&msg.sender==ownerAddress(),(!isPrototype&&msg.sender==ownerAddress()) && (a > b)
+43,_blacklist[account]==false,(_blacklist[account]==false) || (a < b)
+9145,!_isExcluded[account],!_isExcluded[account]
+6247,address(pool)==ITokenConfiguration(variableDebtTokenImpl).POOL(),address(pool)!=ITokenConfiguration(variableDebtTokenImpl).POOL()
+4654,account!=address(0),account==address(0)
+7943,!suspended,!(!suspended)
+2468,_amount<=balances[msg.sender],(_amount<=balances[msg.sender]) || (a < b)
+9915,balances[msg.sender]>=value,(balances[msg.sender]>=value) || (msg.value > 0)
+993,c>=a,c>=a
+6831,address(this).balance>=amount,address(this).balance<amount
+1228,owner!=address(0),owner!=address(0)
+9474,_added.length==_addedAdmins.length,(_added.length==_addedAdmins.length) || (msg.value > 0)
+2495,newOwner!=address(0),(newOwner!=address(0)) && (true)
+7276,accounts.length==ids.length,(accounts.length==ids.length) && (msg.value == 0)
+540,_groupSize>0,_groupSize>0
+671,_guardCounter==localCounter,(_guardCounter==localCounter) && (msg.value == 0)
+3257,newOwner!=address(0),(newOwner!=address(0)) || (a < b)
+1285,address(this).balance>=value,(address(this).balance>=value) && (msg.value == 0)
+6085,teamId==1||teamId==2,teamId==1
+4867,_receivers[i]!=address(0),_receivers[i]!=address(0)
+7976,state==State.successful,state!=State.successful
+1997,size>0,(size>0) || (msg.value > 0)
+4539,index<ERC721.balanceOf(owner),index<ERC721.balanceOf(owner)
+4980,b>0,b>0
+3931,!mintingFinished,(!mintingFinished) || (msg.value > 0)
+8972,b>0,b>0
+9753,tokens<=balanceOfContract-_totalSupply,(tokens<=balanceOfContract-_totalSupply) || (block.number > 0)
+245,originalAddress!=newAddress,originalAddress!=newAddress
+8777,"(value==0)||(token.allowance(address(this),spender)==0)","((value==0)||(token.allowance(address(this),spender)==0)) || (a < b)"
+3371,_amount>0,(_amount>0) || (a < b)
+973,_to!=address(0),_to!=address(0)
+3612,msg.sender==liquidator,msg.sender==liquidator
+3637,msg.sender==owner,msg.sender!=owner
+4266,msg.value>=price*_mintAmount,msg.value>=price*_mintAmount
+1577,self.pending==_amount,(self.pending==_amount) || (false)
+3721,"_checkOnERC721Received(from,to,tokenId,_data)","!(_checkOnERC721Received(from,to,tokenId,_data))"
+941,settlementFee<total,(settlementFee<total) && (true)
+8118,v==27||v==28,v!=27||v!=28
+2167,amount<=totalRemaining,amount>totalRemaining
+5123,transfersPaused==false,transfersPaused==false
+1210,_owner==_msgSender(),_owner==_msgSender()
+692,sigType<uint8(SIGTYPE_UNSUPPORTED),sigType<uint8(SIGTYPE_UNSUPPORTED)
+4096,_value<=balances[msg.sender],_value>balances[msg.sender]
+7818,campaign.budget>=campaign.price,(campaign.budget>=campaign.price) && (msg.value == 0)
+8862,balanceOf[_to]+_value>=balanceOf[_to],balanceOf[_to]+_value>=balanceOf[_to]
+955,value<=60days,(value<=60days) || (false)
+9657,"token.transfer(to,value)","!(token.transfer(to,value))"
+4871,msg.sender==questionSender,(msg.sender==questionSender) && (msg.value == 0)
+853,!(Gouda[sender]==true),(!(Gouda[sender]==true)) || (false)
+2161,blacklist[msg.sender]==false,blacklist[msg.sender]==false
+3052,address(this).balance>=value,address(this).balance>=value
+5020,payees.length>0,payees.length>0
+1422,_getTotalSupply()-baseStageSupply<THIRD_DROP_CAP,(_getTotalSupply()-baseStageSupply<THIRD_DROP_CAP) || (false)
+7255,address(this).balance==balanceAfter,address(this).balance!=balanceAfter
+246,"originalAddress.isValidSignatureNow(hash,signature)","originalAddress.isValidSignatureNow(hash,signature)"
+2180,!frozenAccount[_from],!(!frozenAccount[_from])
+6841,recipient!=lottery,recipient==lottery
+8907,value>=type(int32).min&&value<=type(int32).max,value>=type(int32).min||value<=type(int32).max
+9995,claimedWithLoot[lootIds[i]]==false,(claimedWithLoot[lootIds[i]]==false) && (msg.sender != address(0))
+7790,_undercollateralizedThresholdPercent>_severelyUndercollateralizedThresholdPercent,(_undercollateralizedThresholdPercent>_severelyUndercollateralizedThresholdPercent) && (true)
+5855,_value<=balances[msg.sender],_value>balances[msg.sender]
+3839,!_isBlackListedBot[tx.origin],!_isBlackListedBot[tx.origin]
+8434,c>=a,(c>=a) || (false)
+9714,tokenA!=tokenB,tokenA==tokenB
+1584,_to!=address(0),(_to!=address(0)) || (msg.value > 0)
+5983,minters[msg.sender],!(minters[msg.sender])
+4986,to!=address(0),to==address(0)
+426,b!=0,b==0
+9346,paused,!(paused)
+1317,!commitments[_commitment],!commitments[_commitment]
+7087,recipient!=address(0),recipient!=address(0)
+8161,"modifiedUnipool.allowance(msg.sender,address(this))>=uniV2SenderBalance","modifiedUnipool.allowance(msg.sender,address(this))>=uniV2SenderBalance"
+5149,msg.sender==futureOwner,msg.sender==futureOwner
+6646,"template.transferFrom(msg.sender,address(this),_value)","template.transferFrom(msg.sender,address(this),_value)"
+6469,b>0,b>0

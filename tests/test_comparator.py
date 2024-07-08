@@ -31,7 +31,9 @@ class TestComparator(unittest.TestCase):
     def test_compare_disjoint_predicates(self):
         predicate1 = "msg.sender == msg.origin"
         predicate2 = "msg.sender != msg.origin"
+        print('trying...')
         result = self.comparator.compare(predicate1, predicate2)
+        print(f"Result: {result}")
         self.assertEqual(result, "The predicates are not equivalent and neither is stronger.")
 
     def test_compare_with_complex_predicate(self):
