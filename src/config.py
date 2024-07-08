@@ -29,4 +29,4 @@ def debug_print(message, type_=False):
         elif type_ == 'neutral':
             print(Fore.YELLOW + message)
         else:
-            print(message)
+            print(message + Fore.RESET + '\n ------------------------------------------------------------ ')
