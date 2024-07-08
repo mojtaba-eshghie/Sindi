@@ -15,7 +15,9 @@ class Comparator:
         # Tokenize, parse, and simplify the first predicate
         tokens1 = self.tokenizer.tokenize(predicate1)
         debug_print(f"Tokens1: {tokens1}")
-        use_lra_expr1 = self._contains_numerical_comparison(tokens1)
+        numerical_expr1, symbolic_expr1 = self._separate_numerical_symbolic(tokens1)
+        debug_print(f"Numerical Expression 1: {numerical_expr1}")
+        debug_print(f"Symbolic Expression 1: {symbolic_expr1}")
         parser1 = Parser(tokens1)
         ast1 = parser1.parse()
         debug_print(f"Parsed AST1: {ast1}")
@@ -25,7 +27,9 @@ class Comparator:
         # Tokenize, parse, and simplify the second predicate
         tokens2 = self.tokenizer.tokenize(predicate2)
         debug_print(f"Tokens2: {tokens2}")
-        use_lra_expr2 = self._contains_numerical_comparison(tokens2)
+        numerical_expr2, symbolic_expr2 = self._separate_numerical_symbolic(tokens2)
+        debug_print(f"Numerical Expression 2: {numerical_expr2}")
+        debug_print(f"Symbolic Expression 2: {symbolic_expr2}")
         parser2 = Parser(tokens2)
         ast2 = parser2.parse()
         debug_print(f"Parsed AST2: {ast2}")
@@ -46,10 +50,9 @@ class Comparator:
         debug_print(f"Simplified SymPy Expression 1: {simplified_expr1}")
         debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
-
         # Check implications using satisfiability
-        implies1_to_2 = not satisfiable(And(simplified_expr1, Not(simplified_expr2)), use_lra_theory=use_lra_expr1)
-        implies2_to_1 = not satisfiable(And(simplified_expr2, Not(simplified_expr1)), use_lra_theory=use_lra_expr2)
+        implies1_to_2 = self._check_implication(simplified_expr1, simplified_expr2, numerical_expr1 or numerical_expr2)
+        implies2_to_1 = self._check_implication(simplified_expr2, simplified_expr1, numerical_expr1 or numerical_expr2)
 
         debug_print(f"Implies expr1 to expr2: {implies1_to_2}")
         debug_print(f"Implies expr2 to expr1: {implies2_to_1}")
@@ -91,3 +94,21 @@ class Comparator:
         numerical_tokens = {'NUMBER', 'GREATER', 'LESS', 'GREATER_EQUAL', 'LESS_EQUAL'}
         return any(token_type in numerical_tokens for _, token_type in tokens)
 
+    def _separate_numerical_symbolic(self, tokens):
+        """
+        Separate numerical and symbolic parts of the tokenized expression.
+        """
+        numerical_tokens = {'NUMBER', 'GREATER', 'LESS', 'GREATER_EQUAL', 'LESS_EQUAL'}
+        numerical_expr = any(token_type in numerical_tokens for _, token_type in tokens)
+        symbolic_expr = any(token_type not in numerical_tokens for _, token_type in tokens)
+        return numerical_expr, symbolic_expr
+
+    def _check_implication(self, expr1, expr2, use_lra):
+        """
+        Check if expr1 implies expr2 using satisfiability with optional LRA.
+        """
+        try:
+            return not satisfiable(And(expr1, Not(expr2)), use_lra_theory=use_lra)
+        except Exception as e:
+            debug_print(f"Error checking implication: {e}")
+            return False
