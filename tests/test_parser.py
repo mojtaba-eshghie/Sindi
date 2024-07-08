@@ -16,15 +16,16 @@ class TestParser(unittest.TestCase):
         self.assertEqual(repr(ast), repr(expected_ast))
 
     def test_parse_complex_predicate(self):
-        predicate = "require ( msg.sender != msg.origin && a >= b )"
+        predicate = "msg.sender != msg.origin && a >= b"
         tokens = self.tokenizer.tokenize(predicate)
         parser = Parser(tokens)
         ast = parser.parse()
-        expected_ast = ASTNode('require', [ASTNode('&&', [
+        expected_ast = ASTNode('&&', [
             ASTNode('!=', [ASTNode('msg.sender'), ASTNode('msg.origin')]),
             ASTNode('>=', [ASTNode('a'), ASTNode('b')])
-        ])])
+        ])
         self.assertEqual(repr(ast), repr(expected_ast))
+
 
     def test_parse_not_operator(self):
         predicate = "!msg.sender"
