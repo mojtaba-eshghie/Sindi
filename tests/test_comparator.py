@@ -10,6 +10,10 @@ class TestComparator(unittest.TestCase):
         result = self.comparator.compare("a > b", "a >= b")
         self.assertEqual(result, "The first predicate is stronger.")
 
+    def test_comparator_equivalence(self):
+        result = self.comparator.compare("(a > b) && (a <= c)", "(a >= b) && (a < c)")
+        self.assertEqual(result, "The predicates are not equivalent and neither is stronger.")
+
     def test_compare_equivalent_predicates(self):
         predicate1 = "msg.sender == msg.origin"
         predicate2 = "msg.origin == msg.sender"
