@@ -3,6 +3,7 @@ from typing import Union
 from src.parser import ASTNode
 from src.config import debug_print
 
+
 class Simplifier:
     def __init__(self):
         self.symbols = {
@@ -41,8 +42,8 @@ class Simplifier:
                 return self.symbols[node.value](self._to_sympy(node.children[0]), self._to_sympy(node.children[1]))
             else:
                 raise ValueError(f"Invalid number of children for operator {node.value}")
-        elif node.value.isdigit():
-            return sp.Integer(node.value)
+        elif isinstance(node.value, (int, float)):
+            return sp.Number(node.value)
         else:
             return sp.Symbol(node.value.replace('.', '_'))
 
@@ -60,3 +61,4 @@ class Simplifier:
             return ASTNode('!', [self._to_ast(expr.args[0])])
         else:
             return ASTNode(str(expr))
+

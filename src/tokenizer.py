@@ -32,7 +32,8 @@ class Tokenizer:
             (r'\[', 'LBRACKET'),
             (r'\]', 'RBRACKET'),
             (r'\"[^\"]*\"', 'STRING_LITERAL'),
-            (r'\d+', 'NUMBER'),
+            (r'\b\d+\.\d+\b', 'FLOAT'),
+            (r'\b\d+\b', 'INTEGER'),
             (r'\btrue\b', 'TRUE'),
             (r'\bfalse\b', 'FALSE'),
             (r'0x[0-9a-fA-F]{40}', 'ADDRESS_LITERAL'),
@@ -71,7 +72,13 @@ class Tokenizer:
                 match = regex.match(predicate, position)
                 if match:
                     if tag:
-                        tokens.append((match.group(0), tag))
+                        value = match.group(0)
+                        if tag == 'NUMBER':
+                            if '.' in value:
+                                value = float(value)
+                            else:
+                                value = int(value)
+                        tokens.append((value, tag))
                     position = match.end()
                     break
             if not match:
@@ -100,3 +107,4 @@ class Tokenizer:
                 i += 1
 
         return final_tokens
+
