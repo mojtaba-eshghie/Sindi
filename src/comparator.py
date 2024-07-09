@@ -1,10 +1,11 @@
 import sympy as sp
+from sympy.logic.boolalg import And, Or, Not
 from sympy.logic.inference import satisfiable
-from sympy.logic.boolalg import Not, And, Or
 from src.tokenizer import Tokenizer
 from src.parser import Parser
 from src.simplifier import Simplifier
 from src.config import debug_print
+import re
 
 class Comparator:
     def __init__(self):
@@ -39,7 +40,6 @@ class Comparator:
         simplified_expr1 = sp.simplify(expr1)
         debug_print(f"Simplified SymPy Expression 1: {simplified_expr1}")
 
-
         debug_print(f"SymPy Expression 2: {expr2}")
         simplified_expr2 = sp.simplify(expr2)
         debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
@@ -61,11 +61,18 @@ class Comparator:
 
     def _to_sympy_expr(self, ast):
         if not ast.children:
-            return sp.Symbol(ast.value.replace('.', '_'))
+            try:
+                # Try converting to int or float if the value is a numeric string
+                value = float(ast.value) if '.' in ast.value else int(ast.value)
+                return sp.Number(value)
+            except ValueError:
+                # If conversion fails, treat it as a symbol
+                return sp.Symbol(ast.value.replace('.', '_'))
         args = [self._to_sympy_expr(child) for child in ast.children]
         if ast.value in ('&&', '||', '!', '==', '!=', '>', '<', '>=', '<='):
             return getattr(sp, self._sympy_operator(ast.value))(*args)
         return sp.Symbol(ast.value.replace('.', '_'))
+
 
     def _sympy_operator(self, op):
         return {
@@ -117,48 +124,15 @@ class Comparator:
             debug_print(f"Implication results for Or expr1 which was `{expr1} => {expr2}`: {results}")
             return all(results)
 
-        # Specific relational operator checks
-        if isinstance(expr1, sp.Gt) and isinstance(expr2, sp.Ge):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs
-            debug_print(f"Implication Gt -> Ge: {result}")
-            return result
-        if isinstance(expr1, sp.Ge) and isinstance(expr2, sp.Gt):
-            result = False
-            debug_print(f"Implication Ge -> Gt: {result}")
-            return result
-        if isinstance(expr1, sp.Lt) and isinstance(expr2, sp.Le):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs
-            debug_print(f"Implication Lt -> Le: {result}")
-            return result
-        if isinstance(expr1, sp.Le) and isinstance(expr2, sp.Lt):
-            result = False
-            debug_print(f"Implication Le -> Lt: {result}")
-            return result
-        if isinstance(expr1, sp.Ge) and isinstance(expr2, sp.Eq):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs
-            debug_print(f"Implication Ge -> Eq: {result}")
-            return result
-        if isinstance(expr1, sp.Le) and isinstance(expr2, sp.Eq):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs
-            debug_print(f"Implication Le -> Eq: {result}")
-            return result
-
-        # Check specific cases of comparisons for stronger implication
-        if isinstance(expr1, sp.Le) and isinstance(expr2, sp.Eq):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs and not satisfiable(And(expr1, Not(expr2)))
-            debug_print(f"Implication Le -> Eq with satisfiability check: {result}")
-            return result
-        if isinstance(expr2, sp.Eq) and isinstance(expr1, sp.Le):
-            result = expr1.lhs == expr2.lhs and expr1.rhs == expr2.rhs
-            debug_print(f"Implication Eq -> Le: {result}")
-            return result
-
-        # Default case
+        # Specific relational operator checks for numerical comparisons
+        relational_operators = (sp.Gt, sp.Ge, sp.Lt, sp.Le, sp.Eq, sp.Ne)
+        if isinstance(expr1, relational_operators) and isinstance(expr2, relational_operators):
+            if all(isinstance(arg, (sp.Float, sp.Integer)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
+                # Check if the negation of the implication is not satisfiable
+                negation = sp.And(expr1, Not(expr2))
+                debug_print(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}")
+                result = not satisfiable(negation, use_lra_theory=True)
+                debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
+                return result
+        
         return False
-
-    def _contains_numerical_comparison(self, tokens):
-        """
-        Check if the tokenized expression contains numerical comparisons.
-        """
-        numerical_tokens = {'NUMBER', 'GREATER', 'LESS', 'GREATER_EQUAL', 'LESS_EQUAL'}
-        return any(token_type in numerical_tokens for _, token_type in tokens)

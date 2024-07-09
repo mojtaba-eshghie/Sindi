@@ -97,7 +97,6 @@ class Parser:
 
         return node
 
-    
     def factor(self) -> ASTNode:
         if self.position >= len(self.tokens):
             raise ValueError("Unexpected end of input")
@@ -116,7 +115,7 @@ class Parser:
             node = self.expression()
             self.consume('RPAREN')
             return node
-        elif token[1] in ('IDENTIFIER', 'MSG_SENDER', 'MSG_ORIGIN', 'NUMBER'):
+        elif token[1] in ('IDENTIFIER', 'MSG_SENDER', 'MSG_ORIGIN', 'INTEGER', 'FLOAT'):
             self.position += 1
             node = ASTNode(token[0])
             return self.postfix(node)
@@ -132,7 +131,6 @@ class Parser:
             return node
         raise ValueError(f"Unexpected token {token[1]} at position {self.position}")
 
-
     def postfix(self, node: ASTNode) -> ASTNode:
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('DOT', 'LBRACKET', 'LPAREN'):
             token = self.tokens[self.position]
@@ -165,7 +163,6 @@ class Parser:
                 node = ASTNode(f"{node.value}()", args)
             debug_print(f"Parsed postfix: {node}")
         return node
-
 
     def function_call(self, token: Tuple[str, str]) -> ASTNode:
         function_name = token[0]
@@ -179,37 +176,4 @@ class Parser:
         self.consume('RPAREN')
         node = ASTNode(function_name, args)
         debug_print(f"Parsed function call: {node}")
-        return node
-
-    def postfix(self, node: ASTNode) -> ASTNode:
-        while self.position < len(self.tokens) and self.tokens[self.position][1] in ('DOT', 'LBRACKET', 'LPAREN'):
-            token = self.tokens[self.position]
-            debug_print(f"Parsing postfix at position {self.position}: {token}")
-
-            if token[1] == 'DOT':
-                self.position += 1
-                next_token = self.tokens[self.position]
-                debug_print(f"Next token after DOT: {next_token}")
-                if next_token[1] == 'IDENTIFIER':
-                    member_token = self.consume('IDENTIFIER')
-                    node = ASTNode(f"{node.value}.{member_token[0]}")
-                elif next_token[1] in ('FUNCTION_CALL', 'METHOD_CALL'):
-                    function_call_node = self.function_call(next_token)
-                    node = ASTNode(f"{node.value}.{function_call_node.value}", function_call_node.children)
-            elif token[1] == 'LBRACKET':
-                self.position += 1
-                index_node = self.expression()
-                self.consume('RBRACKET')
-                node = ASTNode(f"{node.value}[]", [index_node])
-            elif token[1] == 'LPAREN':
-                self.position += 1
-                args = []
-                while self.position < len(self.tokens) and self.tokens[self.position][1] != 'RPAREN':
-                    args.append(self.expression())
-                    if self.position < len(self.tokens) and self.tokens[self.position][1] == 'COMMA':
-                        debug_print(f"Consuming COMMA at position {self.position}")
-                        self.position += 1
-                self.consume('RPAREN')
-                node = ASTNode(f"{node.value}()", args)
-            debug_print(f"Parsed postfix: {node}")
         return node
