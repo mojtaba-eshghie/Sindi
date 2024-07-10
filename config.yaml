@@ -4,3 +4,4 @@ debugging:
   comparator: true
   test_comparator_with_dataset: true
   simplifier: false
+  playground: true
