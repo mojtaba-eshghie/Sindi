@@ -5,7 +5,7 @@ from src.tokenizer import Tokenizer
 from src.parser import Parser
 from src.simplifier import Simplifier
 from src.config import debug_print
-import re
+
 
 class Comparator:
     def __init__(self):
