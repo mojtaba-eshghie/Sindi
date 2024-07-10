@@ -3,7 +3,6 @@ from typing import Union
 from src.parser import ASTNode
 from src.config import debug_print
 
-
 class Simplifier:
     def __init__(self):
         self.symbols = {
@@ -45,7 +44,13 @@ class Simplifier:
         elif isinstance(node.value, (int, float)):
             return sp.Number(node.value)
         else:
-            return sp.Symbol(node.value.replace('.', '_'))
+            # Preserve function calls and other identifiers as-is
+            if '(' in node.value and ')' in node.value:
+                func_name = node.value  # Ensure the function name is preserved entirely
+                args = node.children
+                return sp.Function(func_name)(*map(self._to_sympy, args))
+            else:
+                return sp.Symbol(node.value.replace('.', '_'))
 
     def _to_ast(self, expr):
         if isinstance(expr, sp.Equality):
@@ -59,6 +64,8 @@ class Simplifier:
             return ASTNode('||', [self._to_ast(arg) for arg in expr.args])
         elif isinstance(expr, sp.Not):
             return ASTNode('!', [self._to_ast(expr.args[0])])
+        elif isinstance(expr, sp.Function):
+            func_name = str(expr.func)
+            return ASTNode(func_name, [self._to_ast(arg) for arg in expr.args])
         else:
             return ASTNode(str(expr))
-
