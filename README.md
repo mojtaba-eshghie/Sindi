@@ -1,6 +1,6 @@
-# SPi: Solidity Semantic Predicate Comparison Tool
+# PreDi: Semantic Solidity Predicate Difference Tool
 
-SPi [spaɪ], the Solidity Predicate Inspector, is a tool for comparing two boolean predicates written in Solidity, a smart contract programming language. SPi determines if two predicates are equivalent or if one is stronger than the other.
+PreDi is a tool to compare two predicates written in Solidity, the smart contract programming language. PreDi determines if two predicates are equivalent or if one is stronger than the other.
 
 ## Features
 
