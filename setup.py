@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='spi_solidity_predicate_inspector',  # Changed to match PyPI naming conventions
-    version='0.1.1',  # Incremented version for re-upload
+    name='spi_solidity_predicate_inspector',  
+    version='0.1.1',  
     author='Mojtaba Eshghie',
     author_email='eshghie@kth.se',
     description='SPi (Solidity Predicate Inspector): Solidity Semantic Predicate Comparison Tool',
