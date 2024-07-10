@@ -6,7 +6,6 @@ from src.parser import Parser
 from src.simplifier import Simplifier
 from src.config import debug_print
 
-
 class Comparator:
    def __init__(self):
        self.tokenizer = Tokenizer()
@@ -41,9 +40,9 @@ class Comparator:
        debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
        # Manually check implications
-       implies1_to_2 = self._implies(expr1, expr2)
+       implies1_to_2 = self._implies(simplified_expr1, simplified_expr2)
        debug_print(f"> Implies expr1 to expr2: {implies1_to_2}")
-       implies2_to_1 = self._implies(expr2, expr1)
+       implies2_to_1 = self._implies(simplified_expr2, simplified_expr1)
        debug_print(f"> Implies expr2 to expr1: {implies2_to_1}")
 
        if implies1_to_2 and not implies2_to_1:
@@ -151,18 +150,23 @@ class Comparator:
            if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                debug_print(f'Inside!... expr1: {expr1}, expr2: {expr2}')
                # Check if the negation of the implication is not satisfiable
-               negation = sp.And(expr1, Not(expr2))
-               debug_print(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}")
-               result = not satisfiable(negation, use_lra_theory=True)
-               debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
-               return result
+               try:
+                   negation = sp.And(expr1, Not(expr2))
+                   debug_print(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}")
+                   result = not satisfiable(negation, use_lra_theory=True)
+                   debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
+                   return result
+               except Exception as e:
+                   debug_print(f"Exception: {e}")
+                   return False
+
+       #Check if the negation of the implication is not satisfiable for general expressions
+       debug_print(f'Expression 1 is: {expr1}, and its type is {type(expr1)}')
+       debug_print(f'Expression 2 is: {expr2}, and its type is {type(expr2)}')
+       negation = sp.And(expr1, Not(expr2))
+       result = not satisfiable(negation, use_lra_theory=True) # here.
+       debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
+       return result
        
-       #    debug_print('We got to the buttom of the function!')
-       #    # Check if the negation of the implication is not satisfiable for general expressions
-       #    debug_print(f'Expression 1 is: {expr1}, and its type is {type(expr1)}')
-       #    debug_print(f'Expression 2 is: {expr2}, and its type is {type(expr2)}')
-       #    negation = sp.And(expr1, Not(expr2))
-       #    result = not satisfiable(negation)
-       #    debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
-       #    return result
-       return False
+    #    just return False for all other cases we haven't taken into account  
+    #    return False
