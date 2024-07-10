@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='spi_solidity_predicate_inspector',  
-    version='0.1.1',  
+    name='predi',  
+    version='0.1.2',  
     author='Mojtaba Eshghie',
     author_email='eshghie@kth.se',
-    description='SPi (Solidity Predicate Inspector): Solidity Semantic Predicate Comparison Tool',
+    description='PreDi: Semantic Solidity Predicate Difference Tool ',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/mojtaba-eshghie/spi',
