@@ -2,7 +2,6 @@ from typing import List, Tuple
 from src.config import debug_print
 
 
-
 class ASTNode:
     def __init__(self, value: str, children: List['ASTNode'] = None):
         self.value = value

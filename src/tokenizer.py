@@ -1,6 +1,7 @@
 import re
 from typing import List, Tuple
 
+
 class Tokenizer:
     def __init__(self):
         self.token_patterns = [
