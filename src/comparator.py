@@ -160,11 +160,18 @@ class Comparator:
 
             if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                 debug_print(f'Inside!... expr1: {expr1}, expr2: {expr2}')
+                # print rhs and lhs of both expressions
+                debug_print(f"lhs of expr1: {expr1.lhs}, rhs of expr1: {expr1.rhs}")
+                debug_print(f"lhs of expr2: {expr2.lhs}, rhs of expr2: {expr2.rhs}")
                 # Check if the negation of the implication is not satisfiable
-                negation = sp.And(expr1, Not(expr2))
-                debug_print(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}")
-                result = not satisfiable(negation, use_lra_theory=True)
-                debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
-                return result
+                try:
+                    negation = sp.And(expr1, Not(expr2))
+                    debug_print(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}")
+                    result = not satisfiable(negation, use_lra_theory=True)
+                    debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
+                    return result
+                except Exception as e:
+                    debug_print(f"Error: {e}")
+                    return False
 
         return False
