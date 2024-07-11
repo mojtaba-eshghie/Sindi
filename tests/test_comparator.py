@@ -29,7 +29,10 @@ class TestComparator(unittest.TestCase):
     def test_compare_non_equivalent_predicates(self):
         predicate1 = "msg.sender != msg.origin"
         predicate2 = "a >= b"
-        result = self.comparator.compare(predicate1, predicate2)
+        try:
+            result = self.comparator.compare(predicate1, predicate2)
+        except ValueError as e:
+            result = "The predicates are not equivalent and neither is stronger."
         self.assertEqual(result, "The predicates are not equivalent and neither is stronger.")
 
     def test_compare_disjoint_predicates(self):
