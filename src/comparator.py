@@ -7,6 +7,7 @@ from src.simplifier import Simplifier
 from src.config import debug_print
 
 
+
 class Comparator:
     def __init__(self):
         self.tokenizer = Tokenizer()
@@ -41,9 +42,9 @@ class Comparator:
         debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
         # Manually check implications
-        implies1_to_2 = self._implies(expr1, expr2)
+        implies1_to_2 = self._implies(simplified_expr1, simplified_expr2)
         debug_print(f"> Implies expr1 to expr2: {implies1_to_2}")
-        implies2_to_1 = self._implies(expr2, expr1)
+        implies2_to_1 = self._implies(simplified_expr2, simplified_expr1)
         debug_print(f"> Implies expr2 to expr1: {implies2_to_1}")
 
         if implies1_to_2 and not implies2_to_1:
@@ -102,13 +103,22 @@ class Comparator:
             debug_print("Expressions are identical.")
             return True
 
+        # Handle equivalences through algebraic manipulation
+        try:
+            if sp.simplify(expr1 - expr2) == 0:
+                debug_print("Expressions are equivalent through algebraic manipulation.")
+                return True
+        except Exception as e: 
+            debug_print(f"Error: {e}")
+            pass
+
         # Handle AND expression for expr2
         if isinstance(expr2, And):
             # expr1 should imply all parts of expr2 if expr2 is an AND expression
             results = [self._implies(expr1, arg) for arg in expr2.args]
             debug_print(f"Implication results for And expr2 which was `{expr1} => {expr2}`: {results}")
             return all(results)
-      
+
         # Handle AND expression for expr1
         if isinstance(expr1, And):
             # All parts of expr1 should imply expr2 if expr1 is an AND expression
@@ -122,21 +132,21 @@ class Comparator:
             results = [self._implies(expr1, arg) for arg in expr2.args]
             debug_print(f"Implication results for Or expr2 which was `{expr1} => {expr2}`: {results}")
             return any(results)
-      
+
         # Handle OR expression for expr1
         if isinstance(expr1, Or):
             # All parts of expr1 should imply expr2 if expr1 is an OR expression
             results = [self._implies(arg, expr2) for arg in expr1.args]
             debug_print(f"Implication results for Or expr1 which was `{expr1} => {expr2}`: {results}")
             return all(results)
-       
+
         # Handle function calls
         if isinstance(expr1, sp.Function) and isinstance(expr2, sp.Function):
             # Ensure the function names and the number of arguments match
             if expr1.func == expr2.func and len(expr1.args) == len(expr2.args):
                 return all(self._implies(arg1, arg2) for arg1, arg2 in zip(expr1.args, expr2.args))
             return False
-       
+
         if isinstance(expr1, sp.Symbol) and isinstance(expr2, sp.Symbol):
             return expr1 == expr2
 
@@ -147,7 +157,7 @@ class Comparator:
             # Check for Eq vs non-Eq comparisons; we don't handle this well, let's return False
             if (isinstance(expr1, sp.Eq) and not isinstance(expr2, sp.Eq)) or (not isinstance(expr1, sp.Eq) and isinstance(expr2, sp.Eq)):
                 return False  # Handle Eq vs non-Eq cases explicitly
-            
+
             if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                 debug_print(f'Inside!... expr1: {expr1}, expr2: {expr2}')
                 # Check if the negation of the implication is not satisfiable
@@ -156,13 +166,5 @@ class Comparator:
                 result = not satisfiable(negation, use_lra_theory=True)
                 debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
                 return result
-       
-        #    debug_print('We got to the buttom of the function!')
-        #    # Check if the negation of the implication is not satisfiable for general expressions
-        #    debug_print(f'Expression 1 is: {expr1}, and its type is {type(expr1)}')
-        #    debug_print(f'Expression 2 is: {expr2}, and its type is {type(expr2)}')
-        #    negation = sp.And(expr1, Not(expr2))
-        #    result = not satisfiable(negation)
-        #    debug_print(f"Implication {expr1} -> {expr2} using satisfiable: {result}")
-        #    return result
+
         return False
