@@ -1,10 +1,10 @@
-# PreDi: Semantic Solidity Predicate Difference Tool
+# PreDi: Symbolic Solidity Predicate Difference Tool
 
 PreDi is a tool to compare two predicates written in Solidity, the smart contract programming language. PreDi determines if two predicates are equivalent or if one is stronger than the other.
 
 ## Features
 
-- Tokenizes and parses Solidity predicates into an Abstract Syntax Tree (AST)
+- Tokenizes and parses each Solidity predicate into an Abstract Syntax Tree (AST)
 - Simplify AST using symbolic mathematics
 - Compare predicates for equivalence and logical strength
 

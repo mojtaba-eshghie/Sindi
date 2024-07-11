@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PreDi',  
-    version='0.1.5',  
+    version='0.1.6',  
     author='Mojtaba Eshghie',
     author_email='eshghie@kth.se',
     description='PreDi: Semantic Solidity Predicate Difference Tool ',
