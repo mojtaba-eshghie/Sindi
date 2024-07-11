@@ -4,7 +4,6 @@ from typing import List, Tuple
 class Tokenizer:
     def __init__(self):
         self.token_patterns = [
-            (r'\b\d+\s*(seconds|minutes|hours|days|weeks)\b', 'TIME_UNIT'),  # Handle time units first
             (r'\bmsg\.sender\b', 'MSG_SENDER'),
             (r'\bmsg\.origin\b', 'MSG_ORIGIN'),
             (r'\brequire\b', 'REQUIRE'),
@@ -39,7 +38,9 @@ class Tokenizer:
             (r'\bfalse\b', 'FALSE'),
             (r'0x[0-9a-fA-F]{40}', 'ADDRESS_LITERAL'),
             (r'0x[0-9a-fA-F]+', 'BYTES_LITERAL'),
+            (r'\b\d+\s*(seconds|minutes|hours|days|weeks)\b', 'TIME_UNIT'),  # Handle time units
             (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
+            (r'\d+e\d+', 'SCIENTIFIC'),  # Handle scientific notation
             (r'\s+', None),  # Let's ignore whitespace(s)
         ]
         self.time_units = {
@@ -75,6 +76,9 @@ class Tokenizer:
                         if tag == 'TIME_UNIT':
                             number, unit = re.match(r'(\d+)\s*(\w+)', value).groups()
                             value = str(int(number) * self.time_units[unit])
+                            tag = 'INTEGER'
+                        elif tag == 'SCIENTIFIC':
+                            value = str(int(float(value)))
                             tag = 'INTEGER'
                         tokens.append((value, tag))
                     position = match.end()

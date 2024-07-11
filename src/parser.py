@@ -1,6 +1,8 @@
 from typing import List, Tuple
 from src.config import debug_print
 
+
+
 class ASTNode:
     def __init__(self, value: str, children: List['ASTNode'] = None):
         self.value = value
@@ -115,7 +117,7 @@ class Parser:
             node = self.expression()
             self.consume('RPAREN')
             return node
-        elif token[1] in ('IDENTIFIER', 'MSG_SENDER', 'MSG_ORIGIN', 'INTEGER', 'FLOAT'):
+        elif token[1] in ('IDENTIFIER', 'MSG_SENDER', 'MSG_ORIGIN', 'INTEGER', 'FLOAT', 'SCIENTIFIC'):
             self.position += 1
             node = ASTNode(token[0])
             return self.postfix(node)
