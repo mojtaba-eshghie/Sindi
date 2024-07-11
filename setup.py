@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='predi',  
-    version='0.1.2',  
+    name='PreDi',  
+    version='0.1.5',  
     author='Mojtaba Eshghie',
     author_email='eshghie@kth.se',
     description='PreDi: Semantic Solidity Predicate Difference Tool ',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/mojtaba-eshghie/spi',
+    url='https://github.com/mojtaba-eshghie/PreDi',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
