@@ -7,7 +7,6 @@ from src.simplifier import Simplifier
 from src.config import debug_print
 
 
-
 class Comparator:
     def __init__(self):
         self.tokenizer = Tokenizer()
@@ -32,12 +31,13 @@ class Comparator:
         expr1 = self._to_sympy_expr(ast1)
         expr2 = self._to_sympy_expr(ast2)
 
+        debug_print(f'> expr1: {expr1}')
+        debug_print(f'> expr2: {expr2}')
+
         # Simplify expressions
-        debug_print(f"SymPy Expression 1: {expr1}")
         simplified_expr1 = sp.simplify(expr1)
         debug_print(f"Simplified SymPy Expression 1: {simplified_expr1}")
 
-        debug_print(f"SymPy Expression 2: {expr2}")
         simplified_expr2 = sp.simplify(expr2)
         debug_print(f"Simplified SymPy Expression 2: {simplified_expr2}")
 
@@ -112,6 +112,73 @@ class Comparator:
             debug_print(f"Error: {e}")
             pass
 
+
+        # Handle negation equivalence (e.g., !used[salt] == used[salt] == false)
+        if isinstance(expr1, Not) and isinstance(expr2, sp.Equality):
+            debug_print('>>>>>>>>>>>> here1')
+            debug_print(f'expr2: {expr2}')
+            debug_print(f'expr2.rhs: {expr2.rhs}')
+            debug_print(f'expr2.lhs: {expr2.lhs}')
+            if expr2.rhs == sp.false or expr2.rhs == False or expr2.rhs == sp.Symbol('false'):
+                debug_print('>>>>>>>>>>>> here1.1')
+                return self._implies(expr1.args[0], expr2.lhs)
+            if expr2.lhs == sp.false or expr2.lhs == False or expr2.lhs == sp.Symbol('false'):
+                debug_print('>>>>>>>>>>>> here1.2')
+                return self._implies(expr1.args[0], expr2.rhs)
+
+        if isinstance(expr2, Not) and isinstance(expr1, sp.Equality):
+            debug_print('>>>>>>>>>>>> here2')
+            debug_print(f'expr1: {expr1}')
+            debug_print(f'expr1.rhs: {expr1.rhs}')
+            debug_print(f'expr1.lhs: {expr1.lhs}')
+            if expr1.rhs == sp.false or expr1.rhs == False or expr1.rhs == sp.Symbol('false'):
+                debug_print('>>>>>>>>>>>> here2.1')
+                return self._implies(expr2.args[0], expr1.lhs)
+            if expr1.lhs == sp.false or expr1.lhs == False or expr1.lhs == sp.Symbol('false'):
+                debug_print('>>>>>>>>>>>> here2.2')
+                return self._implies(expr2.args[0], expr1.rhs)
+
+        # Handle equivalence involving `true`
+        if isinstance(expr1, sp.Symbol) and isinstance(expr2, sp.Equality):
+            if expr2.rhs == sp.true or expr2.rhs == True or expr2.rhs == sp.Symbol('true'):
+                return self._implies(expr1, expr2.lhs)
+            if expr2.lhs == sp.true or expr2.lhs == True or expr2.lhs == sp.Symbol('true'):
+                return self._implies(expr1, expr2.rhs)
+        
+        if isinstance(expr2, sp.Symbol) and isinstance(expr1, sp.Equality):
+            if expr1.rhs == sp.true or expr1.rhs == True or expr1.rhs == sp.Symbol('true'):
+                return self._implies(expr2, expr1.lhs)
+            if expr1.lhs == sp.true or expr1.lhs == True or expr1.lhs == sp.Symbol('true'):
+                return self._implies(expr2, expr1.rhs)
+        
+
+        # Handle logical equivalence for AND, OR, NOT operations
+        if isinstance(expr1, Not) and isinstance(expr2, Or):
+            if len(expr2.args) == 2:
+                left, right = expr2.args
+                if isinstance(left, sp.Equality) and left.rhs == sp.false:
+                    return self._implies(expr1.args[0], left.lhs) and self._implies(right, sp.true)
+                if isinstance(right, sp.Equality) and right.rhs == sp.false:
+                    return self._implies(expr1.args[0], right.lhs) and self._implies(left, sp.true)
+
+        if isinstance(expr2, Not) and isinstance(expr1, Or):
+            if len(expr1.args) == 2:
+                left, right = expr1.args
+                if isinstance(left, sp.Equality) and left.rhs == sp.false:
+                    return self._implies(expr2.args[0], left.lhs) and self._implies(right, sp.true)
+                if isinstance(right, sp.Equality) and right.rhs == sp.false:
+                    return self._implies(expr2.args[0], right.lhs) and self._implies(left, sp.true)
+
+        if isinstance(expr1, And) and isinstance(expr2, And):
+            if len(expr1.args) == len(expr2.args):
+                return all(self._implies(arg1, arg2) for arg1, arg2 in zip(expr1.args, expr2.args))
+
+        if isinstance(expr1, Or) and isinstance(expr2, Or):
+            if len(expr1.args) == len(expr2.args):
+                return all(self._implies(arg1, arg2) for arg1, arg2 in zip(expr1.args, expr2.args))
+
+
+
         # Handle AND expression for expr2
         if isinstance(expr2, And):
             # expr1 should imply all parts of expr2 if expr2 is an AND expression
@@ -160,9 +227,6 @@ class Comparator:
 
             if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                 debug_print(f'Inside!... expr1: {expr1}, expr2: {expr2}')
-                # print rhs and lhs of both expressions
-                debug_print(f"lhs of expr1: {expr1.lhs}, rhs of expr1: {expr1.rhs}")
-                debug_print(f"lhs of expr2: {expr2.lhs}, rhs of expr2: {expr2.rhs}")
                 # Check if the negation of the implication is not satisfiable
                 try:
                     negation = sp.And(expr1, Not(expr2))
@@ -173,5 +237,4 @@ class Comparator:
                 except Exception as e:
                     debug_print(f"Error: {e}")
                     return False
-
         return False
