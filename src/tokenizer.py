@@ -4,6 +4,7 @@ from typing import List, Tuple
 class Tokenizer:
     def __init__(self):
         self.token_patterns = [
+            (r'\b\d+\s*(seconds|minutes|hours|days|weeks)\b', 'TIME_UNIT'),  # Handle time units first
             (r'\bmsg\.sender\b', 'MSG_SENDER'),
             (r'\bmsg\.origin\b', 'MSG_ORIGIN'),
             (r'\brequire\b', 'REQUIRE'),
@@ -41,17 +42,15 @@ class Tokenizer:
             (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
             (r'\s+', None),  # Let's ignore whitespace(s)
         ]
+        self.time_units = {
+            'seconds': 1,
+            'minutes': 60,
+            'hours': 3600,
+            'days': 86400,
+            'weeks': 604800,
+        }
 
     def normalize(self, predicate: str) -> str:
-        """
-        Normalizes the given predicate string by removing unnecessary spaces and adding spaces around operators and parentheses.
-
-        Args:
-            predicate (str): The predicate string to be normalized.
-
-        Returns:
-            str: The normalized predicate string.
-        """
         predicate = re.sub(r'\s+', '', predicate)
         predicate = re.sub(r'([!=<>]=?)', r' \1 ', predicate)
         predicate = re.sub(r'(\&\&|\|\|)', r' \1 ', predicate)
@@ -73,11 +72,10 @@ class Tokenizer:
                 if match:
                     if tag:
                         value = match.group(0)
-                        if tag == 'NUMBER':
-                            if '.' in value:
-                                value = float(value)
-                            else:
-                                value = int(value)
+                        if tag == 'TIME_UNIT':
+                            number, unit = re.match(r'(\d+)\s*(\w+)', value).groups()
+                            value = str(int(number) * self.time_units[unit])
+                            tag = 'INTEGER'
                         tokens.append((value, tag))
                     position = match.end()
                     break
@@ -94,17 +92,4 @@ class Tokenizer:
                 else:
                     raise ValueError(f"Unexpected character: {predicate[position]} at position {position}")
 
-        # Handle cases where numbers are directly followed by identifiers
-        final_tokens = []
-        i = 0
-        while i < len(tokens):
-            if i < len(tokens) - 1 and tokens[i][1] == 'NUMBER' and tokens[i+1][1] == 'IDENTIFIER':
-                final_tokens.append((tokens[i][0], 'NUMBER'))
-                final_tokens.append((tokens[i+1][0], 'IDENTIFIER'))
-                i += 2
-            else:
-                final_tokens.append(tokens[i])
-                i += 1
-
-        return final_tokens
-
+        return tokens
