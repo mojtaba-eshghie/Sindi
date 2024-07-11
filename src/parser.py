@@ -138,14 +138,8 @@ class Parser:
 
             if token[1] == 'DOT':
                 self.position += 1
-                next_token = self.tokens[self.position]
-                debug_print(f"Next token after DOT: {next_token}")
-                if next_token[1] == 'IDENTIFIER':
-                    member_token = self.consume('IDENTIFIER')
-                    node = ASTNode(f"{node.value}.{member_token[0]}")
-                elif next_token[1] in ('FUNCTION_CALL', 'METHOD_CALL'):
-                    function_call_node = self.function_call(next_token)
-                    node = ASTNode(f"{node.value}.{function_call_node.value}", function_call_node.children)
+                member_token = self.consume('IDENTIFIER')
+                node = ASTNode(f"{node.value}.{member_token[0]}")
             elif token[1] == 'LBRACKET':
                 self.position += 1
                 index_node = self.expression()
