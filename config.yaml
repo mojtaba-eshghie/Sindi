@@ -1,7 +1,7 @@
 debugging:
   diversify_predicates: false
   test_comparator: false
-  comparator: true
+  comparator: false
   test_comparator_with_dataset: true
   simplifier: false
   playground: true
