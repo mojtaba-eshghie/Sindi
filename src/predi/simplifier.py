@@ -1,7 +1,7 @@
 import sympy as sp
 from typing import Union
-from src.parser import ASTNode
-from src.config import debug_print
+from predi.parser import ASTNode
+from predi.config import debug_print
 
 class Simplifier:
     def __init__(self):

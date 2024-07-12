@@ -1,5 +1,5 @@
 import sys
-from src.comparator import Comparator
+from src.predi.comparator import Comparator
 
 def main():
     if len(sys.argv) != 3:

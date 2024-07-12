@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from src.config import debug_print
+from predi.config import debug_print
 
 
 class ASTNode:

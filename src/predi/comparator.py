@@ -1,10 +1,10 @@
 import sympy as sp
 from sympy.logic.boolalg import And, Or, Not
 from sympy.logic.inference import satisfiable
-from src.tokenizer import Tokenizer
-from src.parser import Parser
-from src.simplifier import Simplifier
-from src.config import debug_print
+from predi.tokenizer import Tokenizer
+from predi.parser import Parser
+from predi.simplifier import Simplifier
+from predi.config import debug_print
 
 
 class Comparator:
