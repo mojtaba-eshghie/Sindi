@@ -6,9 +6,30 @@ PreDi is a tool to compare two predicates written in Solidity, the smart contrac
 
 - Tokenizes and parses each Solidity predicate into an Abstract Syntax Tree (AST)
 - Simplify AST using symbolic mathematics
-- Compare predicates for equivalence and logical strength
+- Compare predicates for equivalence and logical strength either using predefined rules (when applicable) or negated satisfiability checking.
 
-## Getting Started
+## Install Using pip and Use as a Python Library
+
+Running the following command should suffice:
+
+```sh
+pip install predi
+```
+
+### Library Usage
+
+#### Simple Predicate Comparison
+
+```Python
+>>> from predi.comparator import Comparator
+>>> comparator = Comparator()
+>>> comparator.compare("a < b", "a <= b")
+'The first predicate is stronger.'
+>>> comparator.compare("a > b", "a <= b")
+'The predicates are not equivalent and neither is stronger.'
+```
+
+## Installing and Using as a CLI Tool
 
 ### Prerequisites
 
@@ -27,17 +48,9 @@ To ensure everything is set up correctly, run the unit tests:
 python -m unittest discover -s tests
 ```
 
-### Usage
+### CLI Usage
 
 You can compare two predicates using the `main.py` script. Here's an example:
-
-```sh
-python main.py "msg.sender == msg.origin" "a < b"
-```
-
-This will output whether the predicates are equivalent, or which one is stronger.
-
-## Example
 
 ```sh
 $ python main.py "msg.sender == msg.origin" "msg.origin == msg.sender"
