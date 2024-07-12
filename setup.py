@@ -1,11 +1,12 @@
 from setuptools import setup, find_packages
 
+
 setup(
-    name='PreDi',  
-    version='0.1.6',  
+    name='predi',
+    version='0.1.11',
     author='Mojtaba Eshghie',
     author_email='eshghie@kth.se',
-    description='PreDi: Semantic Solidity Predicate Difference Tool ',
+    description='PreDi: Symbolic Solidity Predicate Difference Tool',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/mojtaba-eshghie/PreDi',
@@ -22,4 +23,5 @@ setup(
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.8',
+    include_package_data=True,
 )
