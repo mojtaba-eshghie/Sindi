@@ -5,8 +5,8 @@ PreDi is a tool to compare two predicates written in Solidity, the smart contrac
 ## Features
 
 - Tokenizes and parses each Solidity predicate into an Abstract Syntax Tree (AST)
-- Simplify AST using symbolic mathematics
-- Compare predicates for equivalence and logical strength either using predefined rules (when applicable) or negated satisfiability checking.
+- Simplifies AST using symbolic mathematics
+- Compare predicates for equivalence and logical strength either using predefined rules (when applicable) or checking for satisfiability when pre-defined rules are not applicable.
 
 ## Install Using pip and Use as a Python Library
 
