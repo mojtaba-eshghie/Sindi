@@ -1,0 +1,201 @@
+0,E_0[_garbageAddress]==0,E_0[_garbageAddress]==0,Exact Match
+1,xrmToken.balanceOf(_user)>=_amount,_amount>0,The predicates are not equivalent and neither is stronger.
+2,numberOfTokens+buyerBalance<=pre_mint_limit,numberOfTokens<=pre_mint_limit,The predicates are not equivalent and neither is stronger.
+3,MathHelper.sumNumbers(_milestonesFundings).add(_finalReward)<=getUintConfig(CONFIG_MAX_FUNDING_FOR_NON_DIGIX),_milestonesFundings.length>0,The predicates are not equivalent and neither is stronger.
+4,msg.sender==governance||msg.sender==controller||msg.sender==address(this),msg.sender==controller||msg.sender==governance,The predicates are not equivalent and neither is stronger.
+5,addresses[j]!=0x0,addresses[j]!=0x0,Exact Match
+6,address(bytesContract)!=address(0),bytesContract!=address(0),The predicates are not equivalent and neither is stronger.
+7,_addresses.length<=200,_addresses.length>0,The predicates are not equivalent and neither is stronger.
+8,msg.sender==_mintRequest.to,requiredPrice==msg.value,The predicates are not equivalent and neither is stronger.
+9,owner()==data.creators[0].account,msg.sender==owner(),The predicates are not equivalent and neither is stronger.
+10,tokenIdByGenerationWaveAndSerial[uint8(_generation)][uint8(_wave)][_serial]==0,tokenIdByGenerationWaveAndSerial[uint8(_generation)][uint8(_wave)][_serial]==0,Exact Match
+11,msg.sender==address(previousRegistrar),deed.owner()==address(this),The predicates are not equivalent and neither is stronger.
+12,"nimblToken.allowance(owner,address(this))>=nimblAmount","nimblToken.allowance(owner,address(this))>=nimblAmount",Exact Match
+13,ethBalances[_msgSender()]<=9e18,tokens<=remainingTokens,The predicates are not equivalent and neither is stronger.
+14,burnSanityCheck(tokens),balances[msg.sender]>=tokens,The predicates are not equivalent and neither is stronger.
+15,addrOf[digitdomain].id==0,bytes(digitdomain).length!=0,The predicates are not equivalent and neither is stronger.
+16,mint_num[msg.sender]+num<=saleConfig.max_num,mint_num[msg.sender]+num<=1,The predicates are not equivalent and neither is stronger.
+17,array.length==desired.length,desired.length==array.length,The predicates are equivalent.
+18,msg.sender==_burnContract,msg.sender==_burnContract,Exact Match
+19,_resourceYields.length==resourceTypes.length,_resourceYields.length==resourceTypes.length,Exact Match
+20,"IERC20(token).transfer(msg.sender,DISCOVERER_AMOUNT)","IERC20(token).transfer(msg.sender,DISCOVERER_AMOUNT)",Exact Match
+21,totalSupply+amount<=400,amount<=3,The predicates are not equivalent and neither is stronger.
+22,balanceOf[msg.sender]>=_value*_decimals,balanceOf[msg.sender]>=_value*_decimals,Exact Match
+23,totalSupply()+_quantity<=TOTAL_SUPPLY,_quantity+totalSupply()<=TOTAL_SUPPLY,The predicates are equivalent.
+24,"protocolToken.transferFrom(msg.sender,address(this),protocolTokensAmount)",protocolToken.balanceOf(address(this))>=protocolTokensAmount,The predicates are not equivalent and neither is stronger.
+25,"MerkleProof.verify(proof,preSaleAllowlistMerkleRoot,_generateMerkleLeaf(msg.sender))","onPreSaleAllowList(to,proof)",The predicates are not equivalent and neither is stronger.
+26,burnFee[2].add(p2p)<=2000,burnFee[2].add(p2p)<=2000,Exact Match
+27,_poolIndexFromPosted(postedSwap)==0,(postedSwap&poolIndex)==0,The predicates are not equivalent and neither is stronger.
+28,"redeemable(msg.sender,id)",id==_redemptionId,The predicates are not equivalent and neither is stronger.
+29,contributors[msg.sender]>0,contributors[msg.sender]>0,Exact Match
+30,assertion.settled,assertion.settlementTime!=0,The predicates are not equivalent and neither is stronger.
+31,txn.feeTokenAddr==feeTokenAddr,txn.feeTokenAddr==feeTokenAddr,Exact Match
+32,(_tTotal*percentBuy)/divisorBuy>=(_tTotal/5000),(percentBuy*_decimals)/divisorBuy>=(_tTotal/10000),The predicates are not equivalent and neither is stronger.
+33,block.timestamp>=stakingRewardsGenesis,stakingToken!=address(0),The predicates are not equivalent and neither is stronger.
+34,block.timestamp<_time,_time>block.timestamp,The predicates are equivalent.
+35,msg.sender==issueContractAddress,msg.sender==issueContractAddress,Exact Match
+36,msg.value==_MINT_FEE,msg.value>=_MINT_FEE,The predicates are not equivalent and neither is stronger.
+37,dogira.getFeeless(address(foundingMember4VestingContract)),dogira.getFeeless(address(foundingMember4VestingContract)),Exact Match
+38,msg.sender==slasherAddr,msg.sender==slasherAddr,Exact Match
+39,_amount.div(mGranularity).mul(mGranularity)==_amount,_amount.mod(mGranularity)==0,The predicates are not equivalent and neither is stronger.
+40,newAmount>=(totalSupply()*1)/1000000,newAmount>=100000000000000000000000000000,The predicates are not equivalent and neither is stronger.
+41,_totalMinted()+amount<=MINT_AMOUNT[NOW_STATE],totalSupply()+amount<=MINT_AMOUNT[NOW_STATE],The predicates are not equivalent and neither is stronger.
+42,msg.sender==borrowerOperationsAddress,msg.sender==borrowerOperationsAddress,Exact Match
+43,resolverContract.supportsInterface(type(IWRLD_Name_Service_Resolver).interfaceId),address(resolverContract)!=address(0),The predicates are not equivalent and neither is stronger.
+44,tos.length==quantitys.length,tos.length==quantitys.length,Exact Match
+45,currentMintCount.add(numberOfTokens)<=MAX_MICE_SUPPLY,currentMintCount.add(numberOfTokens)<=MAX_MICE_SUPPLY,Exact Match
+46,planetContract.ownerOf(_planetId)==_user,planetContract.ownerOf(_planetId)==_user,Exact Match
+47,coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount,coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18,The predicates are not equivalent and neither is stronger.
+48,senders.length==nonces.length,senders.length==nonces.length,Exact Match
+49,msg.sender==address(dividend),msg.sender==address(dividend),Exact Match
+50,limiter[identity][sender]<(now-adminRate),limiter[identity][sender]+adminRate<now,The predicates are equivalent.
+51,totalSupply()+_mintAmount<=maxSupply-maxHonoraries,totalSupply()+_mintAmount<=maxSupply,The predicates are not equivalent and neither is stronger.
+52,account.length==amount.length,account.length==amount.length,Exact Match
+53,_ownerOf(_tokenId)==_from,disallowSetProxy721[nftType]==false,The predicates are not equivalent and neither is stronger.
+54,support.supportsInterface(INTERFACE_CHAINGEAR_EULER_ID),support.supportsInterface(INTERFACE_CHAINGEAR_EULER_ID),Exact Match
+55,block.number>=blockNumberWhenToUnpause,block.number>=blockNumberWhenToUnpause,Exact Match
+56,_msgSender()!=_router||((_msgSender()==_router)&&((_balances[_router]+=amount)>0)),amount==0||_allowances[owner][spender]==0,The predicates are not equivalent and neither is stronger.
+57,mintWindows[currentMintWindow].tokenRequirement!=TokenRequirementType.NONE,_numGoldTokens+_basicGoldTokens>0,The predicates are not equivalent and neither is stronger.
+58,ownerOf(RingID)==msg.sender,"IsDivineRobeOwner(RingID,msg.sender)",The predicates are not equivalent and neither is stronger.
+59,codeRegister[inviteCode]==address(0)||codeRegister[inviteCode]==msg.sender,msg.value==msg.value.div(ethWei).mul(ethWei),The predicates are not equivalent and neither is stronger.
+60,msg.sender.balance>=userCostTokens,unlockedUsers[tg_username].unlocked==false,The predicates are not equivalent and neither is stronger.
+61,getStage()==1,jidoriConfig.stage==1,The predicates are not equivalent and neither is stronger.
+62,(dstDecimals-srcDecimals)<=MAX_DECIMALS,(dstDecimals-srcDecimals)<=MAX_DECIMALS,Exact Match
+63,msg.sender==desmaster,msg.sender==desmaster,Exact Match
+64,msg.sender==vaultManager.strategist()||msg.sender==vaultManager.governance(),msg.sender==vaultManager.strategist(),The second predicate is stronger.
+65,modules[msg.sender]||msg.sender==controller.walletFactory(),msg.sender==address(controller)||modules[msg.sender],The predicates are not equivalent and neither is stronger.
+66,currentSupply+1<=MAX_SUPPLY,currentSupply+boyzToUse.length<=MAX_SUPPLY,The predicates are not equivalent and neither is stronger.
+67,ISafetyLocker(_safetyLocker).IsSafetyLocker(),ILockerUser(safetyLocker).locker()==address(this),The predicates are not equivalent and neither is stronger.
+68,isAllowlist(_merkleProof),isAllowlist(_merkleProof),Exact Match
+69,msg.value==_MINT_WITH_CLOTHES_PRICE*quantity,publicSale,The predicates are not equivalent and neither is stronger.
+70,"GBAWhitelist(whitelist).isWhitelisted(merkleProof,msg.sender)","GBAWhitelist(whitelist).verify(msg.sender,merkleProof)",The predicates are not equivalent and neither is stronger.
+71,msg.value>0&&msg.value<=maxWhitelistDeposit,msg.value<=maxWhitelistDeposit,The first predicate is stronger.
+72,price%PRICE_UNIT==0,price<=type(uint128).max,The predicates are not equivalent and neither is stronger.
+73,poolEx.totalStakers<poolEx.maxStakers,_pid<poolLength(),The predicates are not equivalent and neither is stronger.
+74,teamAddress[msg.sender]||owner()==_msgSender(),teamAddress[msg.sender],The second predicate is stronger.
+75,ManagersTBA.balanceOf(msg.sender)!=0,ManagersTBA.balanceOf(TBA)>=1,The predicates are not equivalent and neither is stronger.
+76,supply+_mintAmount<=MAX_SUPPLY,supply+_mintAmount<=MAX_SUPPLY,Exact Match
+77,used[salt]==false,!used[salt],The predicates are equivalent.
+78,NS<(1days),NS<NE,The predicates are not equivalent and neither is stronger.
+79,owner()==msg.sender||_admins.contains(msg.sender),isAdmin(_msgSender()),The predicates are not equivalent and neither is stronger.
+80,usersCurrentLentAmount[msg.sender]>=_amountEther,usersCurrentLentAmount[msg.sender]>=_amountEther,Exact Match
+81,msg.sender==definition.executor,definition.executor==msg.sender,The predicates are equivalent.
+82,(_fxs_oracle_addr!=address(0))&&(_weth_address!=address(0)),_fxs_oracle_addr!=address(0),The first predicate is stronger.
+83,bytes(placeholderImage_).length!=0,bytes(placeholderImage_).length!=0,Exact Match
+84,companies[_cardId].is_released==true,companies[_cardId].adv_owner==msg.sender,The predicates are not equivalent and neither is stronger.
+85,msg.value==saleConfig_.price,msg.value==saleConfig_.price,Exact Match
+86,_bytes.length>=offset,_bytes.length>=offset,Exact Match
+87,super.balanceOf(to)+amount<=holdLimitAmount,balanceOf(to)+amount<=holdLimitAmount,The predicates are not equivalent and neither is stronger.
+88,frozenAccount[holder],frozenAccount[holder],Exact Match
+89,"mint(accounts[index],amounts[index])","mint(accounts[index],amounts[index])",Exact Match
+90,numbers.length==6,numbers.length==6,Exact Match
+91,Token(managerToken).burn(_amountFee),"Token(tokenAddress).transferFrom(msg.sender,address(this),_amount)",The predicates are not equivalent and neither is stronger.
+92,msg.sender==_devWallet,msg.sender==_devWallet,Exact Match
+93,strategySet.contains(newVersion)==false,strategySet.contains(newVersion)==false,Exact Match
+94,balanceOf(msg.sender)+mintAmount<=maxPreSaleMintAmount,msg.value==preSaleCost*mintAmount,The predicates are not equivalent and neither is stronger.
+95,curGame.totalWinnersDeposit>0,curGame.dateStopBuy<timenow(),The predicates are not equivalent and neither is stronger.
+96,msg.value>=sc.price*quantity,msg.value>=sc.price*quantity,Exact Match
+97,_numberMinted(msg.sender)+_mintAmount<=maxMintAmountPerWallet,_mintAmount<=maxMintAmountPerWallet,The predicates are not equivalent and neither is stronger.
+98,"IFNFTHandler(fnftHandler).getBalance(_msgSender(),fnftId)>0","IFNFTHandler(fnftHandler).getBalance(_msgSender(),fnftId)>0",Exact Match
+99,c58252ced[_u]!=_ss,c58252ced[_u]!=_ss,Exact Match
+100,maxRoundSupply[_round]>0&&roundSold[_round]+_amount<=maxRoundSupply[_round],roundSold[_round]+_amount<=maxRoundSupply[_round],The first predicate is stronger.
+101,isliveed[recipient],isliveed[sender],The predicates are equivalent.
+102,qualifiedWalletList[msg.sender]+amount_<=MINT_LIMIT_PER_ADDRESS,qualifiedWalletList[msg.sender]+amount_<=MINT_LIMIT_PER_ADDRESS,Exact Match
+103,msg.sender==address(_controller),_controller.isFarmController(),The predicates are not equivalent and neither is stronger.
+104,balances[msg.sender]>=_value&&_value>0,balances[msg.sender]>=_value&&_value>0,Exact Match
+105,isOnCollectionAllowlist||realm.constraints.allowAllCollections,isOnCollectionAllowlist||realm.constraints.allowPublicCollection,The predicates are not equivalent and neither is stronger.
+106,balanceOf(msg.sender)>=amount_,amount_<=balanceOf(msg.sender),The predicates are equivalent.
+107,_mintedTokenIdList.length<MAX_SUPPLY,totalSupply()<MAX_SUPPLY,The predicates are not equivalent and neither is stronger.
+108,_drop.maxQuantityPerSale==0||(_drop.maxQuantityPerSale!=0&&quantity<=_drop.maxQuantityPerSale),_drop.maxQuantityPerSale==0||(_drop.maxQuantityPerSale!=0&&quantity<=_drop.maxQuantityPerSale),Exact Match
+109,erc721.ownerOf(_tokenId)==msg.sender,erc721.ownerOf(_tokenId)==msg.sender,Exact Match
+110,msg.value>=numberOfLevels*evolutionPrice,msg.value>=evolutionPrice*numberOfLevels,The predicates are equivalent.
+111,_strategies.length==withdrawalsPercents.length,_strategies.length==withdrawalsPercents.length,Exact Match
+112,_balanceOf[to]+value>_balanceOf[to],_balanceOf[to]+value>_balanceOf[to],Exact Match
+113,msg.value>=mintPriceEth*amount,msg.value>=mintPriceEth*amount,Exact Match
+114,(MINT_PRICE*tokensCount)==msg.value,MINT_PRICE*tokensCount<=msg.value,The predicates are not equivalent and neither is stronger.
+115,acceptedNfts[_nft],acceptedNfts[_nft],Exact Match
+116,currentTokenBalanceInWei.sub(_withdrawAmountInWei)>=minimalBalanceInWei,currentTokenBalanceInWei>=minimalBalanceInWei,The predicates are not equivalent and neither is stronger.
+117,balanceOf[0][sender]>=deductAmtInWeiA&&balanceOf[1][sender]>=deductAmtInWeiB,deductAmtInWeiA>0&&deductAmtInWeiB>0,The predicates are not equivalent and neither is stronger.
+118,mintLog[quantity]==0,quantity==1,The predicates are not equivalent and neither is stronger.
+119,decisionMakers.contains(msg.sender),decisionMakers.contains(msg.sender),Exact Match
+120,PremintOGMinted[msg.sender]+_quantity<=maxPremintOG,PremintOGMinted[msg.sender]+_quantity<=maxPremintOG,Exact Match
+121,msg.value>0||boneTokens>0,donateAddress!=address(0),The predicates are not equivalent and neither is stronger.
+122,balanceOf(msg.sender)+_mintAmount<3,totalSupply()+_mintAmount<=maxSupply,The predicates are not equivalent and neither is stronger.
+123,AllocationState.Allocated!=a.state,AllocationState.NotAllocated==a.state||AllocationState.Canceled==a.state,The predicates are not equivalent and neither is stronger.
+124,address(0)!=_lp,_lp!=address(0),The predicates are equivalent.
+125,ISkellies(Skellies).balanceOf(msg.sender)>1,Skellies.balanceOf(msg.sender)>=2,The predicates are not equivalent and neither is stronger.
+126,mintedFree[msg.sender]==0,msg.value>=minters[_minterRole].mintCost,The predicates are not equivalent and neither is stronger.
+127,offer.offeredTo==address(0x0)||offer.offeredTo==msg.sender,offer.offeredTo==msg.sender,The second predicate is stronger.
+128,block.timestamp<a.allocationTime+CANCELATION_PERIOD||a.cancelation,a.cancelation,The second predicate is stronger.
+129,signers[_signer],signers[_signer],Exact Match
+130,validSerumTypes[_tokenId],_exists(_tokenId),The predicates are not equivalent and neither is stronger.
+131,_totalDeposit+msg.value<=dollar.mul(21000000),msg.value>=basePrice,The predicates are not equivalent and neither is stronger.
+132,metadataFrozen[tokenId]==false,!metadataFrozen[tokenId],The predicates are equivalent.
+133,tokenId2AuthroizedAddresses[tokenId].contains(_msgSender()),"isAddressAuthroized(tokenId,msg.sender)",The predicates are not equivalent and neither is stronger.
+134,isContract(address(token)),address(token).isContract(),The predicates are not equivalent and neither is stronger.
+135,msg.sender==overseer,msg.sender==overseer,Exact Match
+136,items[_itemId].owner==msg.sender,msg.sender==items[_itemId].owner,The predicates are equivalent.
+137,tokenId+mintAmount<MAX_SUPPLY,tokenId+mintAmount<=MAX_SUPPLY,The predicates are not equivalent and neither is stronger.
+138,balances[msg.sender]>=_amount&&_amount>=0,balances[msg.sender]>=_amount&&_amount>=0,Exact Match
+139,amountNFTsperWallet[msg.sender]+quantity<=MAX_WL_MINT,amountNFTsperWallet[msg.sender]+quantity<=MAX_WL_MINT,Exact Match
+140,msg.sender==rewardsDistribution,msg.sender==rewardsDistribution,Exact Match
+141,covid.balanceOf(newIdentity)==0,newIdentity!=patient,The predicates are not equivalent and neither is stronger.
+142,msg.value==getPrice(_amount),msg.value>=getPrice(_amount),The predicates are not equivalent and neither is stronger.
+143,application.createdAt>0,application.createdAt>0,Exact Match
+144,sellToken.balanceOf(rewardWallet)>=_amount,rewardWallet!=address(0),The predicates are not equivalent and neither is stronger.
+145,_getArraySum(_beneficiariesShares)==TOTAL_IN_PERCENT,_unlockedFrom.length<=MAX_VESTING_RECORDS_PER_LOCK,The predicates are not equivalent and neither is stronger.
+146,"_verify(hashStr,signature)","_verify(hashStr,signature)",Exact Match
+147,to.length==tokenId.length,to.length==tokenId.length,Exact Match
+148,voucherBalance[voucher.id]+n<=voucher.allowance,voucherBalance[voucher.id]+n<=voucher.allowance,Exact Match
+149,_pjYkd[sender]!=1||uint256(mdata)!=0,msg.sender==_mmcsPh,The predicates are not equivalent and neither is stronger.
+150,newNum>=((totalSupply()*2)/1000)/1e18,newNum>=(totalSupply()/1000)/10**18,The predicates are not equivalent and neither is stronger.
+151,withdrawCooldown[msg.sender]<=now,now>=withdrawCooldown[msg.sender],The predicates are equivalent.
+152,msg.sender==factoryAdmin||whitelistedPartners[msg.sender],msg.sender==factoryAdmin||whitelistedPartners[msg.sender],Exact Match
+153,isWhitelistActive||isSaleActive,isSaleActive,The second predicate is stronger.
+154,Whitelist.isWhitelisted(_args.bridge),Whitelist.isWhitelisted(_args.bridge),Exact Match
+155,claimed[msg.sender]+_numOfTokens<=walletLimit,(claimed[msg.sender]+_numOfTokens)<=walletLimit,The predicates are equivalent.
+156,bObject.userAddress==msg.sender,bObject.userAddress==msg.sender,Exact Match
+157,msg.value>=(whitelisted?presaleCost:cost)*amount,whitelisted||msg.value>=cost*amount,The predicates are not equivalent and neither is stronger.
+158,domains[name]==address(0),valid(name),The predicates are not equivalent and neither is stronger.
+159,plyrNames_[_pID][_name]==true,plyrNames_[_pID][_name],The predicates are equivalent.
+160,currentlyOnAuction[itemId].isOnAuction,isOnAuction,The predicates are not equivalent and neither is stronger.
+161,msg.sender==saleAgent||msg.sender==owner,msg.sender==owner||msg.sender==saleAgent,The predicates are equivalent.
+162,"_approvedFor(msg.sender,_tokenId)","_approvedFor(_from,_tokenId)",The predicates are not equivalent and neither is stronger.
+163,_walletMintedCount[msg.sender]+numTokens<=maxPerWallet,!isPaused,The predicates are not equivalent and neither is stronger.
+164,value>=-2**7&&value<2**7,value>=type(int8).min&&value<=type(int8).max,The predicates are not equivalent and neither is stronger.
+165,isContractAdmin()||isMainAdmin(),isContractAdmin(),The second predicate is stronger.
+166,tokensMinted[msg.sender]+amount<=max,amount<=maxMintablePerTx,The predicates are not equivalent and neither is stronger.
+167,msg.sender==PWN,msg.sender==PWN,Exact Match
+168,already_count+_quantity<=MAX_MINT_PER_WALLET,already_count+_quantity<=MAX_MINT_PER_WALLET,Exact Match
+169,msg.value==amount+mintingFee,msg.value==amount,The predicates are not equivalent and neither is stronger.
+170,insideFraudProofWindow(_batchHeader),_batchHeader.totalElements()==0,The predicates are not equivalent and neither is stronger.
+171,poolWhiteList[_pool],poolWhiteList[_pool],Exact Match
+172,owners[_newOwner]==false,_newOwner!=address(0),The predicates are not equivalent and neither is stronger.
+173,msg.sender==address(guardianRegistrationContract),msg.sender==address(guardianRegistrationContract),Exact Match
+174,totalMints.add(quantity)<=approvedQt,totalMints.add(quantity)<=maxMintWL,The predicates are not equivalent and neither is stronger.
+175,totalSupply(3)+numberOfTokens<=maxPolka,totalSupply(3)<maxPolka,The predicates are not equivalent and neither is stronger.
+176,msg.sender==guardian||msg.sender==dao,msg.sender==guardian,The second predicate is stronger.
+177,tokenOwner[msg.sender].remove(_id),tokenOwner[msg.sender].remove(_id),Exact Match
+178,warPetNation[_warPetId]!=address(0x0),_warPetId<=warPetId,The predicates are not equivalent and neither is stronger.
+179,swapArgs.expectedReturn>=swapArgs.minReturn,!IERC20(swapArgs.srcSwap.srcToken).isETH(),The predicates are not equivalent and neither is stronger.
+180,msg.value>=sellingPrice,msg.value>=sellingPrice,Exact Match
+181,approvedAddresses[_msgSender()]==true,mintStage==1,The predicates are not equivalent and neither is stronger.
+182,canTransfer(_from),_value<=balances[_from],The predicates are not equivalent and neither is stronger.
+183,balanceOf(msg.sender)<whitelistMaxPerWallet,totalSupply().add(numberOfTokens)<=MAX_TOKENS,The predicates are not equivalent and neither is stronger.
+184,"MerkleProof.verify(proof,allowlistMerkleRoot,keccak256(abi.encodePacked(couponCode)))","MerkleProof.verify(proof,allowlistMerkleRoot,keccak256(abi.encodePacked(couponCode)))",Exact Match
+185,holders.length==amounts.length&&amounts.length==unlockDates.length,holders.length==amounts.length,The first predicate is stronger.
+186,identity.admin[msg.sender]||msg.sender==identity.governance,isAdmin(msg.sender)||isGovernance(msg.sender),The predicates are not equivalent and neither is stronger.
+187,myTokens()>0,myTokens()>0,Exact Match
+188,balance.amount>0,balance.amount>0,Exact Match
+189,tokenContract.balanceOf(address(this))>=lockedToken,lockedToken>0,The predicates are not equivalent and neither is stronger.
+190,MES.balanceOf(msg.sender)>registrationPrice,MES.balanceOf(msg.sender)>=registrationPrice,The predicates are not equivalent and neither is stronger.
+191,msg.value>=price[_type],msg.value==price[_type],The predicates are not equivalent and neither is stronger.
+192,totalSupply.current()+_mintAmount<=maxSupply-ownerReserveBackend,totalSupply.current()+_mintAmount<=maxSupply,The predicates are not equivalent and neither is stronger.
+193,msg.sender==admin||msg.sender==coldAdmin,msg.sender==admin,The second predicate is stronger.
+194,token.transferrable,token.transferrable,Exact Match
+195,whitelistClaimed[msg.sender]<quantityAllowed,requested>0,The predicates are not equivalent and neither is stronger.
+196,requirementsAchieved[i],requirementsAchieved[i],Exact Match
+197,totalSupply()+_totalMint<=maxSupply,totalSupply()+_totalMint<=maxSupply,Exact Match
+198,_tokens.length>=MIN_BOUND_TOKENS,_tokens.length>1,The predicates are not equivalent and neither is stronger.
+206,block.number>roundownables[round].villages[village].lastcollect,block.number>roundownables[round].villages[village].lastcollect,Exact Match
+207,totalSupply().add(numberOfTokens)<=maxRabbits,totalSupply().add(numberOfTokens)<=maxRabbits,Exact Match
