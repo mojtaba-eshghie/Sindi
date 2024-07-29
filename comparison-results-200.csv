@@ -198,4 +198,3 @@
 197,totalSupply()+_totalMint<=maxSupply,totalSupply()+_totalMint<=maxSupply,Exact Match
 198,_tokens.length>=MIN_BOUND_TOKENS,_tokens.length>1,The predicates are not equivalent and neither is stronger.
 206,block.number>roundownables[round].villages[village].lastcollect,block.number>roundownables[round].villages[village].lastcollect,Exact Match
-207,totalSupply().add(numberOfTokens)<=maxRabbits,totalSupply().add(numberOfTokens)<=maxRabbits,Exact Match

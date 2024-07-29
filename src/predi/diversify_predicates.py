@@ -73,7 +73,7 @@ def diversify_predicates(input_file, output_file):
             diversified_predicate = advanced_diversify_predicate(original_predicate)
             row['diversified_predicate'] = diversified_predicate
             rows.append(row)
-            debug_print('diversify_predicates', f"Original: {original_predicate} => Diversified: {diversified_predicate}")
+            #debug_print('diversify_predicates', f"Original: {original_predicate} => Diversified: {diversified_predicate}")
 
     with open(output_file, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

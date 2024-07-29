@@ -30,71 +30,71 @@ class Parser:
 
     def expression(self) -> ASTNode:
         node = self.logical_term()
-        debug_print(f"Parsed term: {node}")
+        #debug_print(f"Parsed term: {node}")
 
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('AND', 'OR'):
             operator = self.tokens[self.position]
-            debug_print(f"Parsing operator in expression: {operator}")
+            #debug_print(f"Parsing operator in expression: {operator}")
             self.position += 1
             right = self.logical_term()
             node = ASTNode(operator[0], [node, right])
-            debug_print(f"Parsed expression with operator: {node}")
+            #debug_print(f"Parsed expression with operator: {node}")
 
         return node
 
     def logical_term(self) -> ASTNode:
         node = self.equality()
-        debug_print(f"Parsed equality: {node}")
+        #debug_print(f"Parsed equality: {node}")
 
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('EQUAL', 'NOT_EQUAL'):
             operator = self.tokens[self.position]
-            debug_print(f"Parsing operator in logical term: {operator}")
+            #debug_print(f"Parsing operator in logical term: {operator}")
             self.position += 1
             right = self.equality()
             node = ASTNode(operator[0], [node, right])
-            debug_print(f"Parsed logical term with operator: {node}")
+            #debug_print(f"Parsed logical term with operator: {node}")
 
         return node
 
     def equality(self) -> ASTNode:
         node = self.relational()
-        debug_print(f"Parsed relational: {node}")
+        #debug_print(f"Parsed relational: {node}")
 
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('GREATER', 'LESS', 'GREATER_EQUAL', 'LESS_EQUAL'):
             operator = self.tokens[self.position]
-            debug_print(f"Parsing operator in equality: {operator}")
+            #debug_print(f"Parsing operator in equality: {operator}")
             self.position += 1
             right = self.relational()
             node = ASTNode(operator[0], [node, right])
-            debug_print(f"Parsed equality with operator: {node}")
+            #debug_print(f"Parsed equality with operator: {node}")
 
         return node
 
     def relational(self) -> ASTNode:
         node = self.term()
-        debug_print(f"Parsed term in relational: {node}")
+        #debug_print(f"Parsed term in relational: {node}")
 
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('PLUS', 'MINUS'):
             operator = self.tokens[self.position]
-            debug_print(f"Parsing operator in relational: {operator}")
+            #debug_print(f"Parsing operator in relational: {operator}")
             self.position += 1
             right = self.term()
             node = ASTNode(operator[0], [node, right])
-            debug_print(f"Parsed relational with operator: {node}")
+            #debug_print(f"Parsed relational with operator: {node}")
 
         return node
 
     def term(self) -> ASTNode:
         node = self.factor()
-        debug_print(f"Parsed factor in term: {node}")
+        #debug_print(f"Parsed factor in term: {node}")
 
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('MULTIPLY', 'DIVIDE', 'MODULUS'):
             operator = self.tokens[self.position]
-            debug_print(f"Parsing operator in term: {operator}")
+            #debug_print(f"Parsing operator in term: {operator}")
             self.position += 1
             right = self.factor()
             node = ASTNode(operator[0], [node, right])
-            debug_print(f"Parsed term with operator: {node}")
+            #debug_print(f"Parsed term with operator: {node}")
 
         return node
 
@@ -135,7 +135,7 @@ class Parser:
     def postfix(self, node: ASTNode) -> ASTNode:
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('DOT', 'LBRACKET', 'LPAREN'):
             token = self.tokens[self.position]
-            debug_print(f"Parsing postfix at position {self.position}: {token}")
+            #debug_print(f"Parsing postfix at position {self.position}: {token}")
 
             if token[1] == 'DOT':
                 self.position += 1
@@ -152,11 +152,11 @@ class Parser:
                 while self.position < len(self.tokens) and self.tokens[self.position][1] != 'RPAREN':
                     args.append(self.expression())
                     if self.position < len(self.tokens) and self.tokens[self.position][1] == 'COMMA':
-                        debug_print(f"Consuming COMMA at position {self.position}")
+                        #debug_print(f"Consuming COMMA at position {self.position}")
                         self.position += 1
                 self.consume('RPAREN')
                 node = ASTNode(f"{node.value}()", args)
-            debug_print(f"Parsed postfix: {node}")
+            #debug_print(f"Parsed postfix: {node}")
         return node
 
     def function_call(self, token: Tuple[str, str]) -> ASTNode:
@@ -170,5 +170,5 @@ class Parser:
                 self.position += 1
         self.consume('RPAREN')
         node = ASTNode(function_name, args)
-        debug_print(f"Parsed function call: {node}")
+        #debug_print(f"Parsed function call: {node}")
         return node

@@ -20,13 +20,13 @@ class Simplifier:
         }
 
     def simplify(self, ast: ASTNode) -> Union[str, ASTNode]:
-        debug_print(f"Simplifying AST: {ast}")
+        #debug_print(f"Simplifying AST: {ast}")
         sympy_expr = self._to_sympy(ast)
-        debug_print(f"Converted to sympy expression: {sympy_expr}")
+        #debug_print(f"Converted to sympy expression: {sympy_expr}")
         simplified_expr = sp.simplify(sympy_expr)
-        debug_print(f"Simplified sympy expression: {simplified_expr}")
+        #debug_print(f"Simplified sympy expression: {simplified_expr}")
         simplified_ast = self._to_ast(simplified_expr)
-        debug_print(f"Converted back to AST: {simplified_ast}")
+        #debug_print(f"Converted back to AST: {simplified_ast}")
         return simplified_ast
 
     def _to_sympy(self, node: ASTNode):
