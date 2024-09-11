@@ -1,7 +1,7 @@
 import unittest
 import csv
 import os
-from src.tokenizer import Tokenizer
+from src.predi.tokenizer import Tokenizer
 
 
 

@@ -1,7 +1,7 @@
 import unittest
-from src.tokenizer import Tokenizer
-from src.parser import Parser, ASTNode
-from src.simplifier import Simplifier
+from src.predi.tokenizer import Tokenizer
+from src.predi.parser import Parser, ASTNode
+from src.predi.simplifier import Simplifier
 
 class TestSimplifier(unittest.TestCase):
     def setUp(self):

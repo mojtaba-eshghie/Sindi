@@ -1,6 +1,6 @@
 import unittest
-from src.tokenizer import Tokenizer
-from src.parser import Parser, ASTNode
+from src.predi.tokenizer import Tokenizer
+from src.predi.parser import Parser, ASTNode
 
 
 class TestParser(unittest.TestCase):
