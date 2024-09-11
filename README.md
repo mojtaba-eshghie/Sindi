@@ -48,6 +48,12 @@ To ensure everything is set up correctly, run the unit tests:
 python -m unittest discover -s tests
 ```
 
+To run an specific test:
+
+```sh
+python -m unittest tests.test_comparator.TestComparator.test_comparator
+```
+
 ### CLI Usage
 
 You can compare two predicates using the `main.py` script. Here's an example:
