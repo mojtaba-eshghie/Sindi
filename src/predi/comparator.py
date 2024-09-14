@@ -112,6 +112,8 @@ class Comparator:
     def sympy_to_z3(self, expr):
         if isinstance(expr, sp.Symbol):
             return z3.Real(str(expr))
+        elif isinstance(expr, sp.Number):
+            return z3.RealVal(float(expr))
         elif isinstance(expr, sp.Eq):
             return self.sympy_to_z3(expr.lhs) == self.sympy_to_z3(expr.rhs)
         elif isinstance(expr, sp.Gt):
