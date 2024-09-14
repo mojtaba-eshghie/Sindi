@@ -278,10 +278,20 @@ class Comparator:
                 else:
                     printer(f"Implies {expr1} to {expr2}: True", level=0)
                     return True
-
-            if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
+            elif all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                 printer(f'Inside!... expr1: {expr1}, expr2: {expr2}', level)
                 # Check if the negation of the implication is not satisfiable
+                try:
+                    negation = sp.And(expr1, Not(expr2))
+                    printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
+                    result = not satisfiable(negation, use_lra_theory=True)
+                    printer(f"Implication {expr1} -> {expr2} using satisfiable: {result}", level)
+                    return result
+                except Exception as e:
+                    printer(f"Error (satisfiability error): {e}", level)
+                    return False
+            else:
+                printer(f'Not all arguments are numbers, floats, or symbols in expr1 and expr2, however, we still try to use the same sympy satisfiability check', level)
                 try:
                     negation = sp.And(expr1, Not(expr2))
                     printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
