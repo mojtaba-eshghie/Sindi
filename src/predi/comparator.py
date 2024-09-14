@@ -278,7 +278,6 @@ class Comparator:
                 else:
                     printer(f"Implies {expr1} to {expr2}: True", level=0)
                     return True
-
             if all(isinstance(arg, (sp.Float, sp.Integer, sp.Symbol)) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
                 printer(f'Inside!... expr1: {expr1}, expr2: {expr2}', level)
                 # Check if the negation of the implication is not satisfiable
