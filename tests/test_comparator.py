@@ -8,12 +8,15 @@ test_cases = {
         ("a > b", "a >= b"), 
         ("msg.sender == msg.origin && a >= b", "msg.sender == msg.origin"),
         ("msg.sender == msg.origin", "msg.sender == msg.origin || a < b"),
-        ("a == 1", "a >= 1")
+        ("a == 1", "a >= 1"),
+        ("a > b * 2", "a > b * 1")
     ],
     'The second predicate is stronger.': [
         ("msg.sender == msg.origin || a < b", "a < b"),
         ("a > 12", "a > 13"),
         ("a + 1 <= b", "a + 1 < b"),
+        ("a > b * 1/2", "a > b * 1"), 
+        ("coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount", "coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18")
     ],
     'The predicates are equivalent.': [
         ("msg.sender == msg.origin", "msg.origin == msg.sender"),
