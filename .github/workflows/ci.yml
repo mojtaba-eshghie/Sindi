@@ -26,4 +26,4 @@ jobs:
 
       - name: Run tests
         run: |
-          run: python -m unittest tests.test_comparator.TestComparator.test_comparator
+          pytest tests/test_comparator.py::TestComparator::test_comparator --maxfail=1 --disable-warnings -v
