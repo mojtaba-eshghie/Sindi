@@ -12,7 +12,8 @@ test_cases = {
     ],
     'The second predicate is stronger.': [
         ("msg.sender == msg.origin || a < b", "a < b"),
-        ("a > 12", "a > 13")
+        ("a > 12", "a > 13"),
+        ("a + 1 <= b", "a + 1 < b"),
     ],
     'The predicates are equivalent.': [
         ("msg.sender == msg.origin", "msg.origin == msg.sender"),
