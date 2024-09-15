@@ -9,14 +9,16 @@ test_cases = {
         ("msg.sender == msg.origin && a >= b", "msg.sender == msg.origin"),
         ("msg.sender == msg.origin", "msg.sender == msg.origin || a < b"),
         ("a == 1", "a >= 1"),
-        ("a > b * 2", "a > b * 1")
+        ("a > b * 2", "a > b * 1"),
+        ("x > y", "x != y"),
     ],
     'The second predicate is stronger.': [
         ("msg.sender == msg.origin || a < b", "a < b"),
         ("a > 12", "a > 13"),
         ("a + 1 <= b", "a + 1 < b"),
         ("a > b * 1/2", "a > b * 1"), 
-        ("coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount", "coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18")
+        ("coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount", "coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18"),
+        ("x >= y", "x == y"),
     ],
     'The predicates are equivalent.': [
         ("msg.sender == msg.origin", "msg.origin == msg.sender"),
@@ -30,6 +32,8 @@ test_cases = {
         ("NS<(1days)", "NS<NE"),
         ("super.balanceOf(to)+amount<=holdLimitAmount", "balanceOf(to)+amount<=holdLimitAmount"),
         (" currentSupply+1<=MAX_SUPPLY", "currentSupply+boyzToUse.length<=MAX_SUPPLY"),
+        ("x > y", "x == y"),
+        ("x >= y", "x != y")
     ]
 }
 
