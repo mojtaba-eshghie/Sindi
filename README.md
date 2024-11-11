@@ -1,6 +1,6 @@
-# PreDi: Symbolic Solidity Predicate Difference Tool
+# SINA: Semantic Invariant Analysis for Smart Contracts 
 
-PreDi is a tool to compare two predicates written in Solidity, the smart contract programming language. PreDi determines if two predicates are equivalent or if one is stronger than the other.
+SINA is a tool to compare two predicates written in Solidity, the smart contract programming language. PreDi determines if two predicates are equivalent or if one is stronger than the other.
 
 ## Features
 
