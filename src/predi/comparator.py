@@ -90,6 +90,15 @@ class Comparator:
             except ValueError:
                 return sp.Symbol(ast.value.replace('.', '_'))
 
+        # Handle indexed attributes: a[b].c
+        if '[]' in ast.value and '.' in ast.value:
+            base_name, attr = ast.value.split('.')
+            base_name = base_name.replace('[]', '')
+            base = sp.IndexedBase(f"{base_name}_{attr}")
+            index = self._to_sympy_expr(ast.children[0])
+            return base[index]
+
+        # Handle indexing without attributes: a[b]
         if '[]' in ast.value:
             base_name = ast.value.replace('[]', '')
             base = sp.IndexedBase(base_name)
@@ -113,6 +122,7 @@ class Comparator:
             return sp.Function(func_name)(*args)
 
         return sp.Symbol(ast.value.replace('.', '_'))
+
 
 
     def _sympy_operator(self, op):

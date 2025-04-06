@@ -135,12 +135,12 @@ class Parser:
     def postfix(self, node: ASTNode) -> ASTNode:
         while self.position < len(self.tokens) and self.tokens[self.position][1] in ('DOT', 'LBRACKET', 'LPAREN'):
             token = self.tokens[self.position]
-            #debug_print(f"Parsing postfix at position {self.position}: {token}")
 
             if token[1] == 'DOT':
                 self.position += 1
                 member_token = self.consume('IDENTIFIER')
-                node = ASTNode(f"{node.value}.{member_token[0]}")
+                # Important fix: preserve indexing clearly
+                node = ASTNode(f"{node.value}.{member_token[0]}", node.children)
             elif token[1] == 'LBRACKET':
                 self.position += 1
                 index_node = self.expression()
@@ -152,12 +152,11 @@ class Parser:
                 while self.position < len(self.tokens) and self.tokens[self.position][1] != 'RPAREN':
                     args.append(self.expression())
                     if self.position < len(self.tokens) and self.tokens[self.position][1] == 'COMMA':
-                        #debug_print(f"Consuming COMMA at position {self.position}")
                         self.position += 1
                 self.consume('RPAREN')
                 node = ASTNode(f"{node.value}()", args)
-            #debug_print(f"Parsed postfix: {node}")
         return node
+
 
     def function_call(self, token: Tuple[str, str]) -> ASTNode:
         function_name = token[0]

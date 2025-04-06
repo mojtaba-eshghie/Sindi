@@ -39,18 +39,36 @@ class Simplifier:
                 return self.symbols[node.value](self._to_sympy(node.children[0]))
             elif len(node.children) == 2:
                 return self.symbols[node.value](self._to_sympy(node.children[0]), self._to_sympy(node.children[1]))
-            else:
-                raise ValueError(f"Invalid number of children for operator {node.value}")
-        elif isinstance(node.value, (int, float)):
-            return sp.Number(node.value)
-        else:
-            # Preserve function calls and other identifiers as-is
-            if '(' in node.value and ')' in node.value:
-                func_name = node.value  # Ensure the function name is preserved entirely
-                args = node.children
-                return sp.Function(func_name)(*map(self._to_sympy, args))
-            else:
+
+        if not node.children:
+            try:
+                return sp.Number(float(node.value)) if '.' in node.value else sp.Number(int(node.value))
+            except ValueError:
                 return sp.Symbol(node.value.replace('.', '_'))
+
+        # Handle indexed attributes: a[b].c
+        if '[]' in node.value and '.' in node.value:
+            base_name, attr = node.value.split('.')
+            base_name = base_name.replace('[]', '')
+            base = sp.IndexedBase(f"{base_name}_{attr}")
+            index = self._to_sympy(node.children[0])
+            return base[index]
+
+        # Handle indexing without attributes: a[b]
+        if '[]' in node.value:
+            base_name = node.value.replace('[]', '')
+            base = sp.IndexedBase(base_name)
+            index = self._to_sympy(node.children[0])
+            return base[index]
+
+        if '(' in node.value and ')' in node.value:
+            func_name = node.value.replace('()', '')
+            args = [self._to_sympy(child) for child in node.children]
+            return sp.Function(func_name)(*args)
+
+        args = [self._to_sympy(child) for child in node.children]
+        return sp.Symbol(node.value.replace('.', '_'))(*args)
+
 
     def _to_ast(self, expr):
         if isinstance(expr, sp.Equality):
