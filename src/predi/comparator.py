@@ -33,6 +33,15 @@ class Comparator:
         expr1 = self._to_sympy_expr(ast1)
         expr2 = self._to_sympy_expr(ast2)
 
+
+        print('*' * 140)
+        print('*' * 140)
+        printer(f"expr1 this time is: {self.simplifier._to_sympy(ast1)}")
+        printer(f"expr2 this time is: {self.simplifier._to_sympy(ast2)}")
+        print('*' * 140)
+        print('*' * 140)
+
+        
         printer(f'> expr1: {expr1}')
         printer(f'> expr2: {expr2}')
 
@@ -70,31 +79,41 @@ class Comparator:
             return "The predicates are equivalent."
         else:
             return "The predicates are not equivalent and neither is stronger."
+    
+    def _has_indexed_symbols(self, expr):
+        return bool(expr.atoms(sp.Indexed))
 
     def _to_sympy_expr(self, ast):
         if not ast.children:
             try:
-                # Try converting to int or float if the value is a numeric string
-                value = float(ast.value) if '.' in ast.value else int(ast.value)
-                return sp.Number(value)
+                return sp.Number(float(ast.value)) if '.' in ast.value else sp.Number(int(ast.value))
             except ValueError:
-                # If conversion fails, treat it as a symbol
                 return sp.Symbol(ast.value.replace('.', '_'))
+
+        if '[]' in ast.value:
+            base_name = ast.value.replace('[]', '')
+            base = sp.IndexedBase(base_name)
+            index = self._to_sympy_expr(ast.children[0])
+            return base[index]
+
         args = [self._to_sympy_expr(child) for child in ast.children]
+
         if ast.value in ('&&', '||', '!', '==', '!=', '>', '<', '>=', '<='):
             return getattr(sp, self._sympy_operator(ast.value))(*args)
         elif ast.value == '/':
-            return sp.Mul(sp.Pow(args[1], -1), args[0])
+            return sp.Mul(args[0], sp.Pow(args[1], -1))
         elif ast.value == '+':
             return sp.Add(*args)
         elif ast.value == '-':
-            return sp.Add(args[0], sp.Mul(-1, args[1]))
+            return sp.Add(args[0], -args[1])
         elif ast.value == '*':
             return sp.Mul(*args)
         elif '()' in ast.value:
             func_name = ast.value.replace('()', '')
             return sp.Function(func_name)(*args)
+
         return sp.Symbol(ast.value.replace('.', '_'))
+
 
     def _sympy_operator(self, op):
         return {
@@ -112,10 +131,13 @@ class Comparator:
     
     def sympy_to_z3(self, expr):
         if isinstance(expr, sp.Symbol):
-            # Convert SymPy symbols to Z3 Real
             return z3.Real(str(expr))
         elif isinstance(expr, sp.Number):
             return z3.RealVal(float(expr))
+        elif isinstance(expr, sp.Indexed):
+            base = str(expr.base)
+            indices = '_'.join(str(i) for i in expr.indices)
+            return z3.Real(f"{base}_{indices}")
         elif isinstance(expr, sp.Eq):
             return self.sympy_to_z3(expr.lhs) == self.sympy_to_z3(expr.rhs)
         elif isinstance(expr, sp.Gt):
@@ -127,11 +149,11 @@ class Comparator:
         elif isinstance(expr, sp.Le):
             return self.sympy_to_z3(expr.lhs) <= self.sympy_to_z3(expr.rhs)
         elif isinstance(expr, sp.And):
-            return And(*[self.sympy_to_z3(arg) for arg in expr.args])
+            return z3.And(*[self.sympy_to_z3(arg) for arg in expr.args])
         elif isinstance(expr, sp.Or):
-            return Or(*[self.sympy_to_z3(arg) for arg in expr.args])
+            return z3.Or(*[self.sympy_to_z3(arg) for arg in expr.args])
         elif isinstance(expr, sp.Not):
-            return Not(self.sympy_to_z3(expr.args[0]))
+            return z3.Not(self.sympy_to_z3(expr.args[0]))
         elif isinstance(expr, sp.Ne):
             return self.sympy_to_z3(expr.lhs) != self.sympy_to_z3(expr.rhs)
         elif isinstance(expr, sp.Add):
@@ -145,19 +167,12 @@ class Comparator:
             base = self.sympy_to_z3(expr.args[0])
             exponent = self.sympy_to_z3(expr.args[1])
             return base ** exponent
-        # elif isinstance(expr, sp.Function):
-        #     # Handle function calls by converting SymPy functions to Z3 function applications
-        #     func_name = str(expr.func)
-        #     z3_func = z3.Function(func_name, *([z3.Real] * len(expr.args)), z3.Real)  # Assuming it takes and returns reals
-        #     z3_args = [self.sympy_to_z3(arg) for arg in expr.args]
-        #     return z3_func(*z3_args)
         elif isinstance(expr, sp.Function):
-        # Handle complex paths or function calls as single Real symbols
-        # Convert the full function call into a symbol-like string
             func_name = str(expr).replace('[', '_').replace(']', '').replace('.', '_')
             return z3.Real(func_name)
         else:
             raise ValueError(f"Unsupported expression type: {expr}")
+
 
     def _implies(self, expr1, expr2, level=0):
         """
@@ -309,11 +324,36 @@ class Comparator:
                 printer(f'Inside!... expr1: {expr1}, expr2: {expr2}', level)
                 # Check if the negation of the implication is not satisfiable
                 try:
-                    negation = sp.And(expr1, Not(expr2))
-                    printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
-                    result = not satisfiable(negation, use_lra_theory=True)
-                    printer(f"Implication {expr1} -> {expr2} using satisfiable: {result}", level)
-                    return result
+                    # First check if Indexed symbols exist
+                    if self._has_indexed_symbols(expr1) or self._has_indexed_symbols(expr2):
+                        printer("Indexed symbols detected; switching to Z3 solver.", level)
+
+                        z3_expr1 = self.sympy_to_z3(expr1)
+                        z3_expr2 = self.sympy_to_z3(expr2)
+
+                        solver = z3.Solver()
+                        solver.add(z3_expr1, z3.Not(z3_expr2))
+
+                        result = solver.check()
+
+                        if result == z3.unsat:
+                            printer(f"Z3 implication {expr1} -> {expr2}: True", level)
+                            return True
+                        else:
+                            printer(f"Z3 implication {expr1} -> {expr2}: False", level)
+                            return False
+
+                    # Otherwise, use SymPy as before
+                    try:
+                        negation = sp.And(expr1, Not(expr2))
+                        printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
+                        result = not satisfiable(negation, use_lra_theory=True)
+                        printer(f"Implication {expr1} -> {expr2} using satisfiable: {result}", level)
+                        return result
+                    except Exception as e:
+                        printer(f"Error (satisfiability error): {e}", level)
+                        return False
+                    
                 except Exception as e:
                     printer(f"Error (satisfiability error): {e}", level)
                     return False
@@ -363,11 +403,36 @@ class Comparator:
                         return True
                 else: 
                     try:
-                        negation = sp.And(expr1, Not(expr2))
-                        printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
-                        result = not satisfiable(negation, use_lra_theory=True)
-                        printer(f"Implication {expr1} -> {expr2} using satisfiable: {result}", level)
-                        return result
+                        # First check if Indexed symbols exist
+                        if self._has_indexed_symbols(expr1) or self._has_indexed_symbols(expr2):
+                            printer("Indexed symbols detected; switching to Z3 solver.", level)
+
+                            z3_expr1 = self.sympy_to_z3(expr1)
+                            z3_expr2 = self.sympy_to_z3(expr2)
+
+                            solver = z3.Solver()
+                            solver.add(z3_expr1, z3.Not(z3_expr2))
+
+                            result = solver.check()
+
+                            if result == z3.unsat:
+                                printer(f"Z3 implication {expr1} -> {expr2}: True", level)
+                                return True
+                            else:
+                                printer(f"Z3 implication {expr1} -> {expr2}: False", level)
+                                return False
+
+                        # Otherwise, use SymPy as before
+                        try:
+                            negation = sp.And(expr1, Not(expr2))
+                            printer(f"Negation of the implication {expr1} -> {expr2}: {satisfiable(negation)}; type of {type(satisfiable(negation))}", level)
+                            result = not satisfiable(negation, use_lra_theory=True)
+                            printer(f"Implication {expr1} -> {expr2} using satisfiable: {result}", level)
+                            return result
+                        except Exception as e:
+                            printer(f"Error (satisfiability error): {e}", level)
+                            return False
+
                     except Exception as e:
                         printer(f"Error (satisfiability error): {e}", level)
                         return False
