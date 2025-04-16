@@ -1,6 +1,5 @@
-# SINA: Semantic Invariant Analysis for Smart Contracts 
-
-SINA is a tool to compare two predicates written in Solidity, the smart contract programming language. PreDi determines if two predicates are equivalent or if one is stronger than the other.
+# SInDi: Semantic Invariant Differencing for Solidity Smart Contracts 
+SInDi is a tool to compare two predicates written in Solidity, the smart contract programming language. SInDi determines if two predicates are equivalent or if one is stronger than the other.
 
 ## Features
 
