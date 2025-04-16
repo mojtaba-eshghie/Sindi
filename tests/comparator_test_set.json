@@ -6,7 +6,16 @@
             ["msg.sender == msg.origin", "msg.sender == msg.origin || a < b"],
             ["a == 1", "a >= 1"],
             ["a > b * 2", "a > b * 1"],
-            ["x > y", "x != y"]
+            ["x > y", "x != y"],
+            ["collateralValue >= debt * 1.5", "collateralValue >= debt / 1.6"],
+            ["collateralValue >= debt * 2", "collateralValue >= debt * 1"], 
+            ["a > b", "a >= b"],
+            ["(a + b) > c", "(a + b) >= c"], 
+            ["msg.value==_MINT_FEE ", "msg.value>=_MINT_FEE"],
+            ["a > b * 2", "a > b * 1"], 
+            ["ethBalances[_msgSender()]<=9e18", "ethBalances[_msgSender()]<=9e19"], 
+            ["x - 1 < y", "x - 1 <= y"],
+            ["x + 1 < y", "x + 1 <= y"]
         ],
         "The second predicate is stronger.": [
             ["msg.sender == msg.origin || a < b", "a < b"],
