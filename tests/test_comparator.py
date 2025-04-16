@@ -1,5 +1,5 @@
 import unittest
-from src.predi.comparator import Comparator
+from src.sindi.comparator import Comparator
 
 
 # Test cases for the Comparator class

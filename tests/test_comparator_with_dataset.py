@@ -1,7 +1,7 @@
 import csv
 import unittest
-from src.predi.config import debug_print
-from src.predi.comparator import Comparator
+from src.sindi.config import debug_print
+from src.sindi.comparator import Comparator
 
 class TestComparatorWithDataset(unittest.TestCase):
     def setUp(self):
