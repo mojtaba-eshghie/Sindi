@@ -23,5 +23,4 @@ setup(
     ],
     python_requires='>=3.8',
     include_package_data=True,
-    license='MIT',  # Add this line
 )
