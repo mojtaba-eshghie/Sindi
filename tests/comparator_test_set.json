@@ -23,7 +23,18 @@
             ["a + 1 <= b", "a + 1 < b"],
             ["a > b * 1/2", "a > b * 1"], 
             ["coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount", "coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18"],
-            ["x >= y", "x == y"]
+            ["x >= y", "x == y"],
+            ["collateralValue >= debt * 1.5", "collateralValue >= debt * 1.6"], 
+            ["a >= b", "a > b"],
+            ["(a + b) >= c", "(a + b) > c"],
+            ["a > b / 2", "a > b / 1"],
+            ["(a+1) > b / 2", "(a+1) > b / 1"], 
+            ["(a+4) > b / 2", "(a+1) > b / 1"],
+            ["x > 0", "x == 1"],
+            ["a + 1 <= b", "a + 1 < b"],
+            ["stakingTokenBalances > stakingTokenBalances", "stakingTokenBalances != stakingTokenBalances"],
+            ["x > y", "x != y"],
+            ["x <= y", "x == y"]
         ], 
         "The predicates are equivalent.": [
             ["msg.sender == msg.origin", "msg.origin == msg.sender"],
