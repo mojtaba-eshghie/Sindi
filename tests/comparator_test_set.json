@@ -39,7 +39,10 @@
         "The predicates are equivalent.": [
             ["msg.sender == msg.origin", "msg.origin == msg.sender"],
             ["limiter[identity][sender]<(now-adminRate)", "limiter[identity][sender]+adminRate<now"],
-            ["used[salt]==false", "!used[salt]"]
+            ["used[salt]==false", "!used[salt]"], 
+            ["collateralValue >= debt * 1.5", "collateralValue >= debt * 1.5"],
+            ["balanceOf(to)<=holdLimitAmount-amount", "balanceOf(to)+amount<=holdLimitAmount"], 
+            ["(value<=60days) || (false)", "(value<=60days)||(false)"]
         ],
         "The predicates are not equivalent and neither is stronger.": [
             ["(a > b) && (a <= c)", "(a >= b) && (a < c)"],
@@ -60,7 +63,13 @@
             ["a <= b", "a < b"],
             ["a == b", "a != b"],
             ["a != b", "a == b"],
-            ["msg.sender == msg.origin && a >= b", "msg.sender == msg.origin && a < b"]  
+            ["msg.sender == msg.origin && a >= b", "msg.sender == msg.origin && a < b"],
+            ["(a + b) == c", "(a + b) > c"], 
+            ["(a + b) <= c", "(a + b) > c"],
+            ["_getIdentifierWhitelist().isIdentifierSupported(_priceIdentifier)", "_getIdentifierWhitelist().isIdentifierSupported(smt)"],
+            ["(_tTotalpercentBuy)/divisorBuy>=(_tTotal/5000)", "(percentBuy_decimals)/divisorBuy>=(_tTotal/10000)"],
+            ["currentSupply+1<=MAX_SUPPLY", "currentSupply+boyzToUse.length<=MAX_SUPPLY"],
+            ["super.balanceOf(to)+amount<=holdLimitAmount", "balanceOf(to)+amount<=holdLimitAmount"]
         ]
     }
 ]
