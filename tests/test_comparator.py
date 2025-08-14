@@ -1,53 +1,49 @@
-import unittest
+import json
+from pathlib import Path
+import pytest
 from src.sindi.comparator import Comparator
 
+# --- Test Case Loading ---
 
-# Test cases for the Comparator class
-test_cases = {
-    'The first predicate is stronger.': [
-        ("a > b", "a >= b"), 
-        ("msg.sender == msg.origin && a >= b", "msg.sender == msg.origin"),
-        ("msg.sender == msg.origin", "msg.sender == msg.origin || a < b"),
-        ("a == 1", "a >= 1"),
-        ("a > b * 2", "a > b * 1"),
-        ("x > y", "x != y"),
-    ],
-    'The second predicate is stronger.': [
-        ("msg.sender == msg.origin || a < b", "a < b"),
-        ("a > 12", "a > 13"),
-        ("a + 1 <= b", "a + 1 < b"),
-        ("a > b * 1/2", "a > b * 1"), 
-        ("coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount", "coinMap[_coin].coinContract.balanceOf(msg.sender)>=_amount*1e18"),
-        ("x >= y", "x == y"),
-    ],
-    'The predicates are equivalent.': [
-        ("msg.sender == msg.origin", "msg.origin == msg.sender"),
-        ("limiter[identity][sender]<(now-adminRate)", "limiter[identity][sender]+adminRate<now"),
-        ("used[salt]==false", "!used[salt]"),
-    ],
-    'The predicates are not equivalent and neither is stronger.': [
-        ("(a > b) && (a <= c)", "(a >= b) && (a < c)"),
-        ("msg.sender != msg.origin", "a >= b"),
-        ("ethBalances[_msgSender()]<=9e18", "tokens<=remainingTokens"),
-        ("NS<(1days)", "NS<NE"),
-        ("super.balanceOf(to)+amount<=holdLimitAmount", "balanceOf(to)+amount<=holdLimitAmount"),
-        (" currentSupply+1<=MAX_SUPPLY", "currentSupply+boyzToUse.length<=MAX_SUPPLY"),
-        ("x > y", "x == y"),
-        ("x >= y", "x != y")
-    ]
-}
+def load_test_cases():
+    """
+    Loads and parses test cases from the JSON file.
+    The JSON file is expected to be a list containing one dictionary.
+    The dictionary's keys are the expected outcomes (e.g., "The first predicate is stronger.").
+    The values are lists of predicate pairs to be compared.
+    """
+    # Build a reliable path to the JSON file, no matter where pytest is run from
+    current_dir = Path(__file__).parent
+    test_set_path = current_dir / "comparator_test_set.json"
 
-class TestComparator(unittest.TestCase):
-    def setUp(self):
-        self.comparator = Comparator()
-    
-    
-    def test_comparator(self):
-        for expected, test_data in test_cases.items():
-            for data in test_data:
-                result = self.comparator.compare(data[0], data[1])
-                self.assertEqual(result, expected, f"Test case failed: {data[0]} vs {data[1]}")
+    test_cases = []
+    with open(test_set_path) as f:
+        # The JSON is a list with one dictionary inside
+        data = json.load(f)[0]
+        # Iterate over each category (e.g., "The first predicate is stronger.")
+        for expected_outcome, predicate_pairs in data.items():
+            # Iterate over each pair of predicates in the category
+            for pair in predicate_pairs:
+                if len(pair) == 2:
+                    p1, p2 = pair
+                    # Create a pytest parameter set with an informative ID
+                    test_cases.append(pytest.param(p1, p2, expected_outcome, id=f"{p1} vs {p2}"))
+    return test_cases
 
+# --- Test Function ---
 
-if __name__ == '__main__':
-    unittest.main()
+@pytest.mark.parametrize("predicate1, predicate2, expected", load_test_cases())
+def test_comparator_with_json_data(predicate1, predicate2, expected):
+    """
+    Tests the Comparator using data loaded from comparator_test_set.json.
+    """
+    # Initialize the comparator
+    comparator = Comparator()
+
+    # I'm assuming your Comparator has a `compare` method that takes two
+    # predicates and returns a string result like the keys in your JSON file.
+    # If it returns something else, you may need to adjust the assertion.
+    actual_result = comparator.compare(predicate1, predicate2)
+
+    # Assert that the actual result from the comparator matches the expected outcome
+    assert actual_result == expected
