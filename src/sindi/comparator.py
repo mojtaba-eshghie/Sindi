@@ -395,7 +395,7 @@ class Comparator:
                 #solver.add(self.sympy_to_z3(negation))
                 result = solver.check()
 
-                if solver.check() == z3.sat:
+                if result == z3.sat:
                     printer(f"Implies {expr1} to {expr2}: False", level=0)
                     return False
                 else:
