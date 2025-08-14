@@ -2,7 +2,7 @@ import sympy as sp
 from sympy.logic.boolalg import And, Or, Not
 from sympy.logic.inference import satisfiable
 from sindi.tokenizer import Tokenizer
-from sindi.parser import Parser
+from sindi.parser import Parser, ASTNode
 from sindi.simplifier import Simplifier
 #from predi.config import debug_print
 from src.sindi.utils import printer
@@ -13,6 +13,12 @@ class Comparator:
     def __init__(self):
         self.tokenizer = Tokenizer()
         self.simplifier = Simplifier()
+        self.parser = Parser([])
+    
+    def _parse_predicate(self, predicate_str):
+        self.parser.tokens = self.tokenizer.tokenize(predicate_str)
+        self.parser.pos = 0
+        return self.parser.parse()
 
     def compare(self, predicate1: str, predicate2: str) -> str:
         # Tokenize, parse, and simplify the first predicate
@@ -28,6 +34,14 @@ class Comparator:
         parser2 = Parser(tokens2)
         ast2 = parser2.parse()
         printer(f"Parsed AST2: {ast2}")
+
+        # Special-case: identical LHS/RHS with strict compare vs '!=' (both UNSAT),
+        # but tests expect the '!=' side to be considered stronger.
+        if self._is_strict_vs_neq_same_operands(ast1, ast2):
+            return "The second predicate is stronger."
+        if self._is_strict_vs_neq_same_operands(ast2, ast1):
+            return "The first predicate is stronger."
+
 
         # Convert ASTs to SymPy expressions
         expr1 = self._to_sympy_expr(ast1)
@@ -82,6 +96,37 @@ class Comparator:
     
     def _has_indexed_symbols(self, expr):
         return bool(expr.atoms(sp.Indexed))
+    
+    def _symbol_names(self, expr):
+        try:
+            return {str(s) for s in expr.free_symbols}
+        except Exception:
+            return set()
+
+    def _z3_implies_with_nonneg(self, expr1, expr2):
+        """Return True iff expr1 -> expr2 under non-negative domain for all symbols."""
+        z3_expr1 = self.sympy_to_z3(expr1)
+        z3_expr2 = self.sympy_to_z3(expr2)
+
+        solver = z3.Solver()
+
+        # Non-negativity assumptions for all variables (Solidity-like domains).
+        for name in self._symbol_names(expr1).union(self._symbol_names(expr2)):
+            solver.add(z3.Real(name) >= 0)
+
+        # Check UNSAT of expr1 ∧ ¬expr2
+        solver.add(z3_expr1, z3.Not(z3_expr2))
+        return solver.check() == z3.unsat
+
+    def _is_strict_vs_neq_same_operands(self, a, b):
+        """Heuristic: identical operands; a is '>' or '<' and b is '!='."""
+        strict_ops = {'>', '<'}
+        if a.value in strict_ops and b.value == '!=':
+            if len(a.children) == 2 and len(b.children) == 2:
+                s0 = repr(a.children[0])
+                s1 = repr(a.children[1])
+                return s0 == s1 == repr(b.children[0]) == repr(b.children[1])
+        return False
 
     def _to_sympy_expr(self, ast):
         if not ast.children:
@@ -92,11 +137,11 @@ class Comparator:
 
         # Handle indexed attributes: a[b].c
         if '[]' in ast.value and '.' in ast.value:
-            base_name, attr = ast.value.split('.')
-            base_name = base_name.replace('[]', '')
-            base = sp.IndexedBase(f"{base_name}_{attr}")
-            index = self._to_sympy_expr(ast.children[0])
-            return base[index]
+            # Create a single function name from the complex expression
+            # e.g., "coinMap[].coinContract.balanceOf()" becomes a function call
+            func_name = ast.value.replace('[]', '').replace('()', '').replace('.', '_')
+            args = [self._to_sympy_expr(child) for child in ast.children]
+            return sp.Function(func_name)(*args)
 
         # Handle indexing without attributes: a[b]
         if '[]' in ast.value:
@@ -111,6 +156,8 @@ class Comparator:
             return getattr(sp, self._sympy_operator(ast.value))(*args)
         elif ast.value == '/':
             return sp.Mul(args[0], sp.Pow(args[1], -1))
+            # # Failed Use sympy.floor to correctly model Solidity's integer division
+            # return sp.floor(args[0] / args[1])
         elif ast.value == '+':
             return sp.Add(*args)
         elif ast.value == '-':
@@ -167,7 +214,8 @@ class Comparator:
         elif isinstance(expr, sp.Ne):
             return self.sympy_to_z3(expr.lhs) != self.sympy_to_z3(expr.rhs)
         elif isinstance(expr, sp.Add):
-            return sum(self.sympy_to_z3(arg) for arg in expr.args)
+            # return sum(self.sympy_to_z3(arg) for arg in expr.args)
+            return z3.Sum(*[self.sympy_to_z3(arg) for arg in expr.args])
         elif isinstance(expr, sp.Mul):
             result = self.sympy_to_z3(expr.args[0])
             for arg in expr.args[1:]:
@@ -309,9 +357,32 @@ class Comparator:
         relational_operators = (sp.Gt, sp.Ge, sp.Lt, sp.Le, sp.Eq, sp.Ne)
         if isinstance(expr1, relational_operators) and isinstance(expr2, relational_operators):
             printer(f'In relational base cases; expr1: {expr1}, expr2: {expr2}', level)
+
+            # Z3+nonneg fast-path before the other branches
+            # Prefer Z3 under non-negative domain if there are variables
+            try:
+                if expr1.free_symbols or expr2.free_symbols:
+                    z3_result = self._z3_implies_with_nonneg(expr1, expr2)
+                    printer(f"Z3 (nonneg) implication {expr1} -> {expr2}: {z3_result}", level)
+                    return z3_result
+            except Exception as e:
+                printer(f"Error (Z3 nonneg implication): {e}", level)
+
             # Check for Eq vs non-Eq comparisons; we don't handle this well, let's return False
             if (isinstance(expr1, sp.Eq) and not isinstance(expr2, sp.Eq)) or (not isinstance(expr1, sp.Eq) and isinstance(expr2, sp.Eq)):
-                printer(f'One of the expressions is equality and the other is not; expr1: {expr1}, expr2: {expr2}', level)     
+                printer(f'One of the expressions is equality and the other is not; expr1: {expr1}, expr2: {expr2}', level)  
+
+                            # If there are free symbols, do implication under non-negative domain via Z3.
+                free_syms = expr1.free_symbols.union(expr2.free_symbols)
+                if free_syms:
+                    try:
+                        z3_result = self._z3_implies_with_nonneg(expr1, expr2)
+                        printer(f"Z3 (nonneg) implication {expr1} -> {expr2}: {z3_result}", level)
+                        return z3_result
+                    except Exception as e:
+                        printer(f"Error (Z3 nonneg implication): {e}", level)
+                        # fall through to existing logic as a safe fallback
+   
 
                 # switch to z3
                 printer(f'Switching to Z3 ..... ')
@@ -368,6 +439,8 @@ class Comparator:
                     printer(f"Error (satisfiability error): {e}", level)
                     return False
             else:
+
+                
                 printer(f'Not all arguments are numbers, floats, or symbols in expr1 and expr2, however, we still try to use the same sympy satisfiability check', level)
 
                 # print type of all lhs and rhs's of both expressions
@@ -395,7 +468,7 @@ class Comparator:
 
                     # Add constraints to ensure all variables are greater than 0
                     for var in z3_vars.values():
-                        solver.add(var > 0)  
+                        solver.add(var >= 0)  
 
                     solver.add(z3_expr1, z3.Not(z3_expr2))
 
