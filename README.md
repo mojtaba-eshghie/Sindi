@@ -7,6 +7,15 @@ SInDi is a tool to compare two predicates written in Solidity, the smart contrac
 - Simplifies AST using symbolic mathematics
 - Compare predicates for equivalence and logical strength either using predefined rules (when applicable) or checking for satisfiability when pre-defined rules are not applicable.
 
+
+## Testing Sindi
+
+Run the following in project root to see if all tests pass:
+
+```sh
+PYTHONPATH=src:. pytest tests/test_comparator.py
+```
+
 ## Install Using pip and Use as a Python Library
 
 Running the following command should suffice:
