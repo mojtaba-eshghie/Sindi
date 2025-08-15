@@ -8,7 +8,7 @@ SInDi compares two Solidity boolean predicates (e.g., the guards in `require`/`a
 
 * **Contract evolution:** When you refactor or upgrade a contract (proxy patterns, library changes, Solidity version bumps), the *same* invariant often appears in a different syntactic form. SInDi checks whether behavior is preserved.
 * **Invariant denoising:** Auto-mined invariants can be redundant or weak. SInDi helps find equivalences and strength relationships to keep only the strongest set.
-* **Fast iteration:** A rich **CLI** lets you run individual stages (rewrite → tokenize → parse → simplify → compare), so you can see what SInDi “understands” at each step.
+* **Fast iteration:** The API lets you run individual stages (rewrite → tokenize → parse → simplify → compare), so you can see what SInDi “understands” at each step.
 
 ---
 
