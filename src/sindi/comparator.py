@@ -1,10 +1,10 @@
 import sympy as sp
 from sympy.logic.boolalg import And, Or, Not
 from sympy.logic.inference import satisfiable
-from sindi.tokenizer import Tokenizer
-from sindi.parser import Parser, ASTNode
-from sindi.simplifier import Simplifier
-#from predi.config import debug_print
+from src.sindi.tokenizer import Tokenizer
+from src.sindi.parser import Parser, ASTNode
+from src.sindi.simplifier import Simplifier
+from src.sindi.rewriter import Rewriter
 from src.sindi.utils import printer
 import z3
 
@@ -14,13 +14,18 @@ class Comparator:
         self.tokenizer = Tokenizer()
         self.simplifier = Simplifier()
         self.parser = Parser([])
+        self.rewriter = Rewriter() 
     
     def _parse_predicate(self, predicate_str):
+        predicate_str = self.rewriter.apply(predicate_str)
         self.parser.tokens = self.tokenizer.tokenize(predicate_str)
         self.parser.pos = 0
         return self.parser.parse()
 
     def compare(self, predicate1: str, predicate2: str) -> str:
+        predicate1 = self.rewriter.apply(predicate1)
+        predicate2 = self.rewriter.apply(predicate2)
+
         # Tokenize, parse, and simplify the first predicate
         tokens1 = self.tokenizer.tokenize(predicate1)
         printer(f"Tokens1: {tokens1}")
