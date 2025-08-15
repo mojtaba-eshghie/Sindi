@@ -28,4 +28,4 @@ jobs:
         env:
           PYTHONPATH: src:.
         run: |
-          pytest -q tests/test_comparator.py tests/test_rewriter_smoke.py
+          pytest -q tests/test_comparator.py tests/test_rewriter_smoke.py tests/test_comparator_light.py
