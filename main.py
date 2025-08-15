@@ -5,7 +5,6 @@ import json
 import sys
 from typing import Any, Dict
 from contextlib import redirect_stdout
-
 from src.sindi.rewriter import Rewriter
 from src.sindi.tokenizer import Tokenizer
 from src.sindi.parser import Parser, ASTNode
@@ -13,7 +12,29 @@ from src.sindi.simplifier import Simplifier
 from src.sindi.comparator import Comparator
 from src.sindi.utils import printer, set_quiet
 from src.sindi.comparator_light import ComparatorRulesOnly
+from src.sindi.utils import printer, set_quiet, set_debug
+import os
 
+
+def _env_truthy(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in ("1", "true", "yes", "on")
+
+def _configure_logging(args) -> None:
+    """
+    CLI logging policy:
+      - If --debug-logs: enable debug.
+      - Else if SINDI_DEBUG is truthy: enable debug.
+      - Else: keep quiet.
+      - If SINDI_QUIET is truthy: force quiet (overrides both).
+    """
+    if getattr(args, "debug_logs", False):
+        set_debug(True)
+    elif _env_truthy("SINDI_DEBUG"):
+        set_debug(True)
+    else:
+        set_quiet(True)
+    if _env_truthy("SINDI_QUIET"):
+        set_quiet(True)
 
 def ast_to_dict(n: ASTNode) -> Dict[str, Any]:
     return {"value": n.value, "children": [ast_to_dict(c) for c in n.children]}
@@ -33,14 +54,14 @@ def read_predicate(value: str, is_file: bool) -> str:
 # ---- subcommands ----
 
 def cmd_rewrite(args: argparse.Namespace) -> int:
-    set_quiet(True)  # keep CLI clean
+    _configure_logging(args)
     rw = Rewriter()
     s = read_predicate(args.predicate, args.from_file)
     print(rw.apply(s))
     return 0
 
 def cmd_tokenize(args: argparse.Namespace) -> int:
-    set_quiet(True)
+    _configure_logging(args)
     rw = Rewriter()
     tk = Tokenizer()
     s = read_predicate(args.predicate, args.from_file)
@@ -54,7 +75,7 @@ def cmd_tokenize(args: argparse.Namespace) -> int:
     return 0
 
 def cmd_parse(args: argparse.Namespace) -> int:
-    set_quiet(True)
+    _configure_logging(args)
     rw = Rewriter()
     tk = Tokenizer()
     s = read_predicate(args.predicate, args.from_file)
@@ -71,7 +92,7 @@ def cmd_parse(args: argparse.Namespace) -> int:
     return 0
 
 def cmd_simplify(args: argparse.Namespace) -> int:
-    set_quiet(True)
+    _configure_logging(args)
     rw = Rewriter()
     tk = Tokenizer()
     sp = Simplifier()
@@ -107,9 +128,8 @@ def cmd_simplify(args: argparse.Namespace) -> int:
     return 0
 
 def cmd_compare(args: argparse.Namespace) -> int:
-    # Silence internal debug logs unless explicitly requested
-    set_quiet(not args.debug_logs)
-
+    _configure_logging(args)
+    
     rw = Rewriter()
     tk = Tokenizer()
 
