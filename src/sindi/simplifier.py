@@ -1,6 +1,6 @@
 import sympy as sp
 from typing import Union
-from sindi.parser import ASTNode
+from src.sindi.parser import ASTNode
 #from predi.config import debug_print
 
 class Simplifier:

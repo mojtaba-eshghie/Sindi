@@ -42,7 +42,17 @@
             ["used[salt]==false", "!used[salt]"], 
             ["collateralValue >= debt * 1.5", "collateralValue >= debt * 1.5"],
             ["balanceOf(to)<=holdLimitAmount-amount", "balanceOf(to)+amount<=holdLimitAmount"], 
-            ["(value<=60days) || (false)", "(value<=60days)||(false)"]
+            ["(value<=60days) || (false)", "(value<=60days)||(false)"],
+            ["isOwner()", "msg.sender == owner()"],
+            ["isAdmin()", "msg.sender == admin"],
+            ["now >= 0 && _msgSender() != address(0)", "block.timestamp >= 0 && msg.sender != address(0)"],
+            ["SafeMath.add(a,b) > c", "(a + b) > c"],
+            ["balances[user].add(amount) <= cap", "balances[user] + amount <= cap"],
+            ["msg.value >= 1 ether", "msg.value >= 1000000000000000000"],
+            ["fee == 10**18 wei", "fee == 1000000000000000000"],
+            ["x == 1e18 wei", "x == 1000000000000000000"],
+            ["to != 0x0000000000000000000000000000000000000000", "to != address(0)"],
+            ["x == 0x80ac58cd", "x == type(IERC721).interfaceId"]
         ],
         "The predicates are not equivalent and neither is stronger.": [
             ["(a > b) && (a <= c)", "(a >= b) && (a < c)"],
