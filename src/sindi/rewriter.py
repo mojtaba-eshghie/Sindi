@@ -28,7 +28,10 @@ class Rewriter:
 
     # Bare _owner / owner -> owner()
     _BARE__OWNER = re.compile(r"(?<!\.)\b_owner\b")
-    _BARE_OWNER = re.compile(r"(?<!\.)\bower\b(?!\s*\()")
+    # Bare 'owner' (not member access foo.owner, not a call owner(), not part of ownerOf)
+    # Preceding char must NOT be dot or a word char; following must NOT start a '('.
+    # This matches start-of-string, whitespace, operators, etc.
+    _BARE_OWNER = re.compile(r"(?<![\.\w])owner(?!\s*\()", flags=0)
 
     # Interface ID literals
     _IFACE_MAP = {

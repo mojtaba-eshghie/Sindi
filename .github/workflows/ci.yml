@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
@@ -12,18 +12,20 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: "3.8"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Run tests
+      - name: Run tests 
+        env:
+          PYTHONPATH: src:.
         run: |
-          pytest tests/test_comparator.py::TestComparator::test_comparator --maxfail=1 --disable-warnings -v
+          pytest -q tests/test_comparator.py tests/test_rewriter_smoke.py
