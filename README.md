@@ -137,7 +137,7 @@ Enable logs with:
 If you installed from PyPI:
 
 ```python
-from sindi.comparator import Comparator
+from src.sindi.comparator import Comparator
 
 cmp = Comparator()
 print(cmp.compare("a < b", "a <= b"))
