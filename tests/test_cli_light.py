@@ -10,11 +10,11 @@ MAIN = REPO_ROOT / "main.py"
 ENV = dict(os.environ)
 ENV["PYTHONPATH"] = "src:."
 
-# Skip the whole module if rules-only comparator isn't present
-RULES_ONLY_IMPL = (REPO_ROOT / "src" / "sindi" / "comparator_rules.py")
+# Skip the whole module if light comparator isn't present
+RULES_ONLY_IMPL = (REPO_ROOT / "src" / "sindi" / "comparator_light.py")
 pytestmark = pytest.mark.skipif(
     not RULES_ONLY_IMPL.exists(),
-    reason="rules-only comparator not present (src/sindi/comparator_rules.py missing)",
+    reason="light comparator not present (src/sindi/comparator_light.py missing)",
 )
 
 def run_cli(*args, check=True):
@@ -33,7 +33,6 @@ def run_cli(*args, check=True):
 @pytest.mark.parametrize(
     "p1,p2,expected",
     [
-        # Drawn from tests/comparator_test_set.json categories that the rules path covers
         ("a > b", "a >= b", "The first predicate is stronger."),
         ("(a + 1) < b", "(a + 1) <= b", "The first predicate is stronger."),
         ("used[salt] == false", "!used[salt]", "The predicates are equivalent."),
@@ -45,6 +44,6 @@ def run_cli(*args, check=True):
     ],
 )
 def test_cli_compare_rules_only(p1, p2, expected):
-    rc, out, _ = run_cli("compare", p1, p2, "--rules-only")
+    rc, out, _ = run_cli("compare", p1, p2, "--light")
     assert rc == 0
     assert out.strip() == expected
