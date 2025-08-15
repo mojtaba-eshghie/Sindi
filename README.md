@@ -188,7 +188,7 @@ simplified_ast = sp.simplify(ast)
 
 ---
 
-## Optional: solver-free comparator (rules-only)
+## Light Comparator (solver-free)
 
 A lightweight comparator (no Z3, purely structural/rewrites/AST reasoning) can be provided at:
 
