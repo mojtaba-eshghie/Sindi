@@ -53,12 +53,12 @@ class Comparator:
         expr2 = self._to_sympy_expr(ast2)
 
 
-        print('*' * 140)
-        print('*' * 140)
+        printer('*' * 140)
+        printer('*' * 140)
         printer(f"expr1 this time is: {self.simplifier._to_sympy(ast1)}")
         printer(f"expr2 this time is: {self.simplifier._to_sympy(ast2)}")
-        print('*' * 140)
-        print('*' * 140)
+        printer('*' * 140)
+        printer('*' * 140)
 
         
         printer(f'> expr1: {expr1}')
