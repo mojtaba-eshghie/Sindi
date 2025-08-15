@@ -39,7 +39,7 @@ SInDi compares two Solidity boolean predicates (e.g., the guards in `require`/`a
   * `The second predicate is stronger.`
   * `The predicates are not equivalent and neither is stronger.`
 
-> By default, the comparator uses symbolic reasoning with selective SMT (Z3) for tricky numeric/logical cases. You can also plug in a **rules-only** comparator (no SMT) as an optional module (details below).
+> By default, the comparator uses symbolic reasoning with selective SMT (Z3) for tricky numeric/logical cases. You can also plug in a **light** comparator (no SMT) as an optional module (details below).
 
 ---
 
@@ -74,7 +74,7 @@ sindi rewrite   <predicate> [--from-file]
 sindi tokenize  <predicate> [--from-file] [--skip-rewrite] [--json]
 sindi parse     <predicate> [--from-file] [--skip-rewrite] [--tree|--json]
 sindi simplify  <predicate> [--from-file] [--skip-rewrite] [--show-sympy] [--json]
-sindi compare   <p1> <p2> [--p1-file] [--p2-file] [--rules-only] [--verbose|--json] [--debug-logs]
+sindi compare   <p1> <p2> [--p1-file] [--p2-file] [--light] [--verbose|--json] [--debug-logs]
 ```
 
 Run via Python:
@@ -109,10 +109,10 @@ python main.py compare "msg.sender == msg.origin && a >= b" "msg.sender == msg.o
 # -> The first predicate is stronger.
 ```
 
-**Compare (rules-only, solver-free)**
+**Compare (light, solver-free)**
 
 ```bash
-python main.py compare "a > b * 2" "a > b * 1" --rules-only
+python main.py compare "a > b * 2" "a > b * 1" --light
 ```
 
 **Verbose/JSON output:**
@@ -196,7 +196,7 @@ A lightweight comparator (no Z3, purely structural/rewrites/AST reasoning) can b
 src/sindi/comparator_rules.py
 ```
 
-If present, the CLI gains `--rules-only`. Some **light** tests (`tests/test_cli_light.py`) will run only if this file exists; otherwise they are skipped. The **full** test suite does not require it.
+If present, the CLI gains `--light`. Some **light** tests (`tests/test_cli_light.py`) will run only if this file exists; otherwise they are skipped. The **full** test suite does not require it.
 
 ---
 
@@ -217,7 +217,7 @@ PYTHONPATH=src:. pytest -q tests/test_comparator.py
 # CLI tests (full comparator)
 PYTHONPATH=src:. pytest -q tests/test_cli_tool.py
 
-# CLI "light" tests (run only if rules-only comparator exists)
+# CLI "light" tests (run only if light comparator exists)
 PYTHONPATH=src:. pytest -q tests/test_cli_light.py
 ```
 
