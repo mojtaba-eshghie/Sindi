@@ -12,9 +12,10 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
-        'sympy>=1.13.0rc2',
+        'sympy>=1.13',
         'colorama>=0.4.6',
-        'pyyaml>=6.0.1'
+        'pyyaml>=6.0.1',
+        'z3-solver>=4.12.4.0'
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
