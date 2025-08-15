@@ -155,10 +155,10 @@ print(Comparator().compare("a > b", "a < b"))'
 You can also use building blocks:
 
 ```python
-from sindi.rewriter import Rewriter
-from sindi.tokenizer import Tokenizer
-from sindi.parser import Parser
-from sindi.simplifier import Simplifier
+from src.sindi.rewriter import Rewriter
+from src.sindi.tokenizer import Tokenizer
+from src.sindi.parser import Parser
+from src.sindi.simplifier import Simplifier
 
 rw, tk, sp = Rewriter(), Tokenizer(), Simplifier()
 
@@ -245,7 +245,7 @@ PYTHONPATH=src:. pytest -q tests/test_cli_light.py
 * **Division:** We model `a / b` as `a * (b ** -1)` in symbolic form (not integer division).
 * **Functions & arrays:** Uninterpreted in reasoning unless specialized; treated as symbols or function terms.
 * **Scope:** Focused on boolean predicates used in `require`/`assert`—not full contract semantics.
-* **Logging:** All internal debug goes through `sindi.utils.printer`. Set `SINDI_QUIET=1` to suppress globally.
+* **Logging:** All internal debug goes through `src.sindi.utils.printer`. Set `SINDI_QUIET=1` to suppress globally.
 
 ---
 
