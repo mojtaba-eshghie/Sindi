@@ -64,71 +64,72 @@ def parse_original(input: dict, list):
 
 
 def reduce_json(path: str, contract_addr: str):
-    """Reduces the invariants found in the path and outputs a new json"""
-    f = open(path)
-    data = json.load(f)
-    total_list = []
-    total_list_red = []
-    output_path= output_folder.replace("./output/", "").rstrip("/") + ".json"
-    
-    output_data: dict =  {"contract": path }
-    total_parsing_time = 0
-    total_reducing_time = 0
-    for entry in data:
-        pre_conditions = entry["preconditions"]
-        post_conditions = entry["postconditions"]
-        total_list += pre_conditions + post_conditions
-        parsing_time_start = time.time()
-        parsed_preconditions = parse_daikon_list(pre_conditions)
-        parsed_postconditions = parse_daikon_list(post_conditions)
-        parsing_time_end = time.time()
-        total_parsing_time +=  (parsing_time_end - parsing_time_start)
-        category_preconditions_dict, parsed_preconditions_dict = parsed_to_dict(parsed_preconditions )
-        category_postconditions_dict, parsed_postconditions_dict = parsed_to_dict(parsed_postconditions)
-        reducing_time_start = time.time()
-        strongest_preconditions = find_strongest_in_dict(category_preconditions_dict, contract_addr,  parsed_preconditions_dict,)
-        strongest_postconditions = find_strongest_in_dict(category_postconditions_dict, contract_addr, parsed_postconditions_dict)
-        reducing_time_end = time.time()
-        total_reducing_time += (reducing_time_end - reducing_time_start)
-        reduced_preconditions = parse_original(parsed_preconditions_dict, strongest_preconditions)
-        reduced_postconditions = parse_original(parsed_postconditions_dict, strongest_postconditions)
-        entry["postconditions"] = reduced_postconditions
-        entry["preconditions"] =reduced_preconditions
-        total_list_red += reduced_postconditions + reduced_preconditions
+   """Reduces the invariants found in the path and outputs a new json"""
+   f = open(path)
+   data = json.load(f)
+   total_list = []
+   total_list_red = []
+   output_path= output_folder.replace("./output/", "").rstrip("/") + ".json"
    
-    json_out = open(f"{output_folder}/{contract_addr}.json", "w")
-    json.dump(data, json_out, indent=4)
-    json_out.close()
-    output_data = {
-    "predicates_before_reduction": len(total_list),
-    "predicates_after_reduction": len(total_list_red),
-    "reduction_ratio": len(total_list_red) / len(total_list),
-    "total_parsing_time": total_parsing_time,
-    "total_reduction_time": total_reducing_time,
-    "contract": path
-}
+   output_data: dict =  {"contract": path }
+   total_parsing_time = 0
+   total_reducing_time = 0
+   for entry in data:
+      pre_conditions = entry["preconditions"]
+      post_conditions = entry["postconditions"]
+      total_list += pre_conditions + post_conditions
+      parsing_time_start = time.time()
+      parsed_preconditions = parse_daikon_list(pre_conditions)
+      parsed_postconditions = parse_daikon_list(post_conditions)
+      parsing_time_end = time.time()
+      total_parsing_time +=  (parsing_time_end - parsing_time_start)
+      category_preconditions_dict, parsed_preconditions_dict = parsed_to_dict(parsed_preconditions )
+      category_postconditions_dict, parsed_postconditions_dict = parsed_to_dict(parsed_postconditions)
+      reducing_time_start = time.time()
+      strongest_preconditions = find_strongest_in_dict(category_preconditions_dict, contract_addr,  parsed_preconditions_dict,)
+      strongest_postconditions = find_strongest_in_dict(category_postconditions_dict, contract_addr, parsed_postconditions_dict)
+      reducing_time_end = time.time()
+      total_reducing_time += (reducing_time_end - reducing_time_start)
+      reduced_preconditions = parse_original(parsed_preconditions_dict, strongest_preconditions)
+      reduced_postconditions = parse_original(parsed_postconditions_dict, strongest_postconditions)
+      entry["postconditions"] = reduced_postconditions
+      entry["preconditions"] =reduced_preconditions
+      total_list_red += reduced_postconditions + reduced_preconditions
 
+   json_out = open(f"{output_folder}/{contract_addr}.json", "w")
+   json.dump(data, json_out, indent=4)
+   json_out.close()
+   output_data = {
+   "predicates_before_reduction": len(total_list),
+   "predicates_after_reduction": len(total_list_red),
+   "reduction_ratio": len(total_list_red) / len(total_list),
+   "total_parsing_time": total_parsing_time,
+   "total_reduction_time": total_reducing_time,
+   "contract": path
+   }
 
+   # Check if the output file exists and load existing data
 
-# Check if the output file exists and load existing data
-    if os.path.exists(output_path):
+   if os.path.exists(output_path):
+      print(f"+++ Output path: {output_path}")
       with open(output_path, "r") as f:
          try:
                all_output_data = json.load(f)
          except json.JSONDecodeError:
                # In case of an empty or malformed file, start with an empty list
                all_output_data = []
-    else:
+   else:
       all_output_data = []
 
-# Append the new data
-    all_output_data.append(output_data)
+   # Append the new data
+   all_output_data.append(output_data)
 
    # Write the updated list back to the file with indentation
-    with open(output_path, "w") as f:
+   with open(output_path, "w") as f:
+      print(f"+++ Writing output to: {output_path}")
       json.dump(all_output_data, f, indent=4)
 
-    
+   
 
 
 
