@@ -1,0 +1,2222 @@
+[
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_converter != 0"
+        ],
+        "after_preds": [
+            "_converter != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(approvedJarConverters[_converter]) == false"
+        ],
+        "after_preds": [
+            "ori(approvedJarConverters[_converter]) == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(governance) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedJarConverters[_converter] == true"
+        ],
+        "after_preds": [
+            "approvedJarConverters[_converter] == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == msg.sender"
+        ],
+        "after_preds": [
+            "governance == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedJarConverters[_converter] != ori(approvedJarConverters[_converter])"
+        ],
+        "after_preds": [
+            "approvedJarConverters[_converter] != ori(approvedJarConverters[_converter])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "_strategy != 0"
+        ],
+        "after_preds": [
+            "_strategy != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(approvedStrategies[_token][_strategy]) == false"
+        ],
+        "after_preds": [
+            "ori(approvedStrategies[_token][_strategy]) == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_token != 0"
+        ],
+        "after_preds": [
+            "_token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(timelock) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedStrategies[_token][_strategy] == true"
+        ],
+        "after_preds": [
+            "approvedStrategies[_token][_strategy] == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedStrategies[_token][_strategy] != ori(approvedStrategies[_token][_strategy])"
+        ],
+        "after_preds": [
+            "approvedStrategies[_token][_strategy] != ori(approvedStrategies[_token][_strategy])"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == timelock"
+        ],
+        "after_preds": [
+            "msg.sender == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != 0"
+        ],
+        "after_preds": [
+            "_governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(governance) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != _governance"
+        ],
+        "after_preds": [
+            "ori(governance) != _governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != _governance"
+        ],
+        "after_preds": [
+            "msg.sender != _governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != ori(governance)"
+        ],
+        "after_preds": [
+            "governance != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != msg.sender"
+        ],
+        "after_preds": [
+            "governance != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == _governance"
+        ],
+        "after_preds": [
+            "governance == _governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(jars[_token]) == 0"
+        ],
+        "after_preds": [
+            "ori(jars[_token]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_jar != 0"
+        ],
+        "after_preds": [
+            "_jar != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_token != 0"
+        ],
+        "after_preds": [
+            "_token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(jars[_token]) != _jar"
+        ],
+        "after_preds": [
+            "ori(jars[_token]) != _jar"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != ori(strategist)"
+        ],
+        "after_preds": [
+            "ori(governance) != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(governance) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != msg.sender"
+        ],
+        "after_preds": [
+            "ori(strategist) != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "jars[_token] != 0"
+        ],
+        "after_preds": [
+            "jars[_token] != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(jars[_token]) != jars[_token]"
+        ],
+        "after_preds": [
+            "ori(jars[_token]) != jars[_token]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != strategist"
+        ],
+        "after_preds": [
+            "governance != strategist"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != ori(strategist)"
+        ],
+        "after_preds": [
+            "governance != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == msg.sender"
+        ],
+        "after_preds": [
+            "governance == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_jar == jars[_token]"
+        ],
+        "after_preds": [
+            "_jar == jars[_token]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != ori(governance)"
+        ],
+        "after_preds": [
+            "strategist != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != msg.sender"
+        ],
+        "after_preds": [
+            "strategist != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "_strategy != 0"
+        ],
+        "after_preds": [
+            "_strategy != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategies[_token]) == 0"
+        ],
+        "after_preds": [
+            "ori(strategies[_token]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(approvedStrategies[_token][_strategy]) == true"
+        ],
+        "after_preds": [
+            "ori(approvedStrategies[_token][_strategy]) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_token != 0"
+        ],
+        "after_preds": [
+            "_token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_strategy != ori(strategies[_token])"
+        ],
+        "after_preds": [
+            "_strategy != ori(strategies[_token])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != ori(strategist)"
+        ],
+        "after_preds": [
+            "ori(governance) != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(governance) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != msg.sender"
+        ],
+        "after_preds": [
+            "ori(strategist) != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedStrategies[_token][_strategy] == true"
+        ],
+        "after_preds": [
+            "approvedStrategies[_token][_strategy] == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategies[_token] != 0"
+        ],
+        "after_preds": [
+            "strategies[_token] != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_strategy == strategies[_token]"
+        ],
+        "after_preds": [
+            "_strategy == strategies[_token]"
+        ]
+    },
+    {
+        "before_preds": [
+            "approvedStrategies[_token][_strategy] == ori(approvedStrategies[_token][_strategy])"
+        ],
+        "after_preds": [
+            "approvedStrategies[_token][_strategy] == ori(approvedStrategies[_token][_strategy])"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != strategist"
+        ],
+        "after_preds": [
+            "governance != strategist"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != ori(strategist)"
+        ],
+        "after_preds": [
+            "governance != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == msg.sender"
+        ],
+        "after_preds": [
+            "governance == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategies[_token]) != strategies[_token]"
+        ],
+        "after_preds": [
+            "ori(strategies[_token]) != strategies[_token]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != ori(governance)"
+        ],
+        "after_preds": [
+            "strategist != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != msg.sender"
+        ],
+        "after_preds": [
+            "strategist != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_timelock != 0"
+        ],
+        "after_preds": [
+            "_timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(timelock) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != _timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) != _timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != _timelock"
+        ],
+        "after_preds": [
+            "msg.sender != _timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != timelock"
+        ],
+        "after_preds": [
+            "ori(timelock) != timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != timelock"
+        ],
+        "after_preds": [
+            "msg.sender != timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == _timelock"
+        ],
+        "after_preds": [
+            "timelock == _timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) != 0"
+        ],
+        "after_preds": [
+            "ori(devfund) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(split) one of [500]"
+        ],
+        "after_preds": [
+            "ori(split) one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) one of [100]"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(treasury) != 0"
+        ],
+        "after_preds": [
+            "ori(treasury) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(strategist) != 0"
+        ],
+        "after_preds": [
+            "ori(strategist) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(onesplit) != 0"
+        ],
+        "after_preds": [
+            "ori(onesplit) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != ori(strategist)"
+        ],
+        "after_preds": [
+            "ori(governance) != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "split > 0",
+            "split == 500"
+        ],
+        "after_preds": [
+            "split > 0",
+            "split == 500"
+        ]
+    },
+    {
+        "before_preds": [
+            "split one of [500]"
+        ],
+        "after_preds": [
+            "split one of [500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit != 0"
+        ],
+        "after_preds": [
+            "onesplit != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury != 0"
+        ],
+        "after_preds": [
+            "treasury != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != 0"
+        ],
+        "after_preds": [
+            "strategist != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "devfund != 0"
+        ],
+        "after_preds": [
+            "devfund != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ],
+        "after_preds": [
+            "convenienceFee > 0",
+            "convenienceFee == 100"
+        ]
+    },
+    {
+        "before_preds": [
+            "convenienceFee one of [100]"
+        ],
+        "after_preds": [
+            "convenienceFee one of [100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != strategist"
+        ],
+        "after_preds": [
+            "governance != strategist"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != ori(strategist)"
+        ],
+        "after_preds": [
+            "governance != ori(strategist)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(devfund) == devfund"
+        ],
+        "after_preds": [
+            "ori(devfund) == devfund"
+        ]
+    },
+    {
+        "before_preds": [
+            "onesplit == ori(onesplit)"
+        ],
+        "after_preds": [
+            "onesplit == ori(onesplit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "treasury == ori(treasury)"
+        ],
+        "after_preds": [
+            "treasury == ori(treasury)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == convenienceFee",
+            "ori(convenienceFee) >= convenienceFee",
+            "ori(convenienceFee) <= convenienceFee"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist != ori(governance)"
+        ],
+        "after_preds": [
+            "strategist != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "strategist == ori(strategist)"
+        ],
+        "after_preds": [
+            "strategist == ori(strategist)"
+        ]
+    }
+]

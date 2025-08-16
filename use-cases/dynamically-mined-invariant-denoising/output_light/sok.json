@@ -1,0 +1,82 @@
+[
+    {
+        "predicates_before_reduction": 1491,
+        "predicates_after_reduction": 1193,
+        "reduction_ratio": 0.8001341381623072,
+        "total_parsing_time": 0.006921529769897461,
+        "total_reduction_time": 4.462685585021973,
+        "contract": "./invariants/sok/0x3ec4a6cfe803ee84009ce6e1ecf419c9cb1e8af0-bVault.inv.json"
+    },
+    {
+        "predicates_before_reduction": 88,
+        "predicates_after_reduction": 80,
+        "reduction_ratio": 0.9090909090909091,
+        "total_parsing_time": 0.0011990070343017578,
+        "total_reduction_time": 0.09661340713500977,
+        "contract": "./invariants/sok/0x6b7a87899490ece95443e979ca9485cbe7e71522-AnyswapV4Router.inv.json"
+    },
+    {
+        "predicates_before_reduction": 45,
+        "predicates_after_reduction": 41,
+        "reduction_ratio": 0.9111111111111111,
+        "total_parsing_time": 0.0004994869232177734,
+        "total_reduction_time": 0.05982851982116699,
+        "contract": "./invariants/sok/0x39b1df026010b5aea781f90542ee19e900f2db15-Keep3rV2Oracle.inv.json"
+    },
+    {
+        "predicates_before_reduction": 708,
+        "predicates_after_reduction": 554,
+        "reduction_ratio": 0.7824858757062146,
+        "total_parsing_time": 0.0035622119903564453,
+        "total_reduction_time": 1.349210500717163,
+        "contract": "./invariants/sok/0x67b66c99d3eb37fa76aa3ed1ff33e8e39f0b9c7a-Bank.inv.json"
+    },
+    {
+        "predicates_before_reduction": 141,
+        "predicates_after_reduction": 141,
+        "reduction_ratio": 1.0,
+        "total_parsing_time": 0.001338958740234375,
+        "total_reduction_time": 0.23883652687072754,
+        "contract": "./invariants/sok/0x818e6fecd516ecc3849daf6845e3ec868087b755-KyberNetworkProxy.inv.json"
+    },
+    {
+        "predicates_before_reduction": 39,
+        "predicates_after_reduction": 39,
+        "reduction_ratio": 1.0,
+        "total_parsing_time": 0.0003991127014160156,
+        "total_reduction_time": 0.044595956802368164,
+        "contract": "./invariants/sok/0x6684977bbed67e101bb80fc07fccfba655c0a64f-SushiMaker.inv.json"
+    },
+    {
+        "predicates_before_reduction": 330,
+        "predicates_after_reduction": 316,
+        "reduction_ratio": 0.9575757575757575,
+        "total_parsing_time": 0.00339508056640625,
+        "total_reduction_time": 0.82120680809021,
+        "contract": "./invariants/sok/0x6847259b2b3a4c17e7c43c54409810af48ba5210-ControllerV4.inv.json"
+    },
+    {
+        "predicates_before_reduction": 299,
+        "predicates_after_reduction": 254,
+        "reduction_ratio": 0.8494983277591973,
+        "total_parsing_time": 0.0019974708557128906,
+        "total_reduction_time": 0.5158243179321289,
+        "contract": "./invariants/sok/0x88093840aad42d2621e1a452bf5d7076ff804d61-UFragments.inv.json"
+    },
+    {
+        "predicates_before_reduction": 468,
+        "predicates_after_reduction": 413,
+        "reduction_ratio": 0.8824786324786325,
+        "total_parsing_time": 0.002871990203857422,
+        "total_reduction_time": 0.9035501480102539,
+        "contract": "./invariants/sok/0xacd43e627e64355f1861cec6d3a6688b31a6f952-yVault.inv.json"
+    },
+    {
+        "predicates_before_reduction": 56,
+        "predicates_after_reduction": 56,
+        "reduction_ratio": 1.0,
+        "total_parsing_time": 0.0005207061767578125,
+        "total_reduction_time": 0.0667576789855957,
+        "contract": "./invariants/sok/0xe11fc0b43ab98eb91e9836129d1ee7c3bc95df50-SushiMaker.inv.json"
+    }
+]

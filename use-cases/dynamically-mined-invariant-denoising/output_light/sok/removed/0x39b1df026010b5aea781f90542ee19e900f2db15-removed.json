@@ -1,0 +1,22 @@
+[
+    {
+        "before_preds": [
+            "e10 == ori(e10)",
+            "e10 >= ori(e10)",
+            "e10 <= ori(e10)"
+        ],
+        "after_preds": [
+            "e10 == ori(e10)"
+        ]
+    },
+    {
+        "before_preds": [
+            "e10 == ori(e10)",
+            "e10 >= ori(e10)",
+            "e10 <= ori(e10)"
+        ],
+        "after_preds": [
+            "e10 == ori(e10)"
+        ]
+    }
+]

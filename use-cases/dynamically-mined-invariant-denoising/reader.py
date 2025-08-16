@@ -12,7 +12,7 @@ import time
 import os
 
 
-comparator = cp.Comparator()
+comparator = cp_light.ComparatorRulesOnly()
 output_folder = ""
 
 def parse_daikon_list(predicates: list):

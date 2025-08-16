@@ -1,0 +1,42 @@
+[
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime >= ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime <= ori(_newMPCEffectiveTime)"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime >= ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime <= ori(_newMPCEffectiveTime)"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime >= ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime <= ori(_newMPCEffectiveTime)"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime >= ori(_newMPCEffectiveTime)",
+            "_newMPCEffectiveTime <= ori(_newMPCEffectiveTime)"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)"
+        ]
+    }
+]
