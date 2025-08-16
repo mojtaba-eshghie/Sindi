@@ -1,0 +1,218 @@
+[
+    {
+        "before_preds": [
+            "ori(Q112) == 0"
+        ],
+        "after_preds": [
+            "ori(Q112) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Q112) one of [0]"
+        ],
+        "after_preds": [
+            "ori(Q112) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(e10) == 0"
+        ],
+        "after_preds": [
+            "ori(e10) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(e10) one of [0]"
+        ],
+        "after_preds": [
+            "ori(e10) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) == 0"
+        ],
+        "after_preds": [
+            "ori(length) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) one of [0]"
+        ],
+        "after_preds": [
+            "ori(length) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Q112 == 0"
+        ],
+        "after_preds": [
+            "Q112 == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Q112 one of [0]"
+        ],
+        "after_preds": [
+            "Q112 one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "e10 == 0"
+        ],
+        "after_preds": [
+            "e10 == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "e10 one of [0]"
+        ],
+        "after_preds": [
+            "e10 one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "length == 0"
+        ],
+        "after_preds": [
+            "length == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "length one of [0]"
+        ],
+        "after_preds": [
+            "length one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Q112) == 0"
+        ],
+        "after_preds": [
+            "ori(Q112) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Q112) one of [0]"
+        ],
+        "after_preds": [
+            "ori(Q112) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(e10) == 0"
+        ],
+        "after_preds": [
+            "ori(e10) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(e10) one of [0]"
+        ],
+        "after_preds": [
+            "ori(e10) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) == 0"
+        ],
+        "after_preds": [
+            "ori(length) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) one of [0]"
+        ],
+        "after_preds": [
+            "ori(length) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Q112 == 0"
+        ],
+        "after_preds": [
+            "Q112 == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Q112 one of [0]"
+        ],
+        "after_preds": [
+            "Q112 one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "e10 == 0"
+        ],
+        "after_preds": [
+            "e10 == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "e10 one of [0]"
+        ],
+        "after_preds": [
+            "e10 one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "length == 0"
+        ],
+        "after_preds": [
+            "length == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "length one of [0]"
+        ],
+        "after_preds": [
+            "length one of [0]"
+        ]
+    }
+]

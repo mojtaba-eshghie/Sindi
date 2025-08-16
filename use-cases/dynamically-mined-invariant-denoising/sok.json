@@ -1,82 +1,82 @@
 [
     {
         "predicates_before_reduction": 1491,
-        "predicates_after_reduction": 924,
-        "reduction_ratio": 0.6197183098591549,
-        "total_parsing_time": 0.003945112228393555,
-        "total_reduction_time": 51.6808500289917,
+        "predicates_after_reduction": 922,
+        "reduction_ratio": 0.6183769282360831,
+        "total_parsing_time": 0.00718235969543457,
+        "total_reduction_time": 113.1889967918396,
         "contract": "./invariants/sok/0x3ec4a6cfe803ee84009ce6e1ecf419c9cb1e8af0-bVault.inv.json"
     },
     {
         "predicates_before_reduction": 88,
         "predicates_after_reduction": 70,
         "reduction_ratio": 0.7954545454545454,
-        "total_parsing_time": 0.0003712177276611328,
-        "total_reduction_time": 1.672656774520874,
+        "total_parsing_time": 0.0009465217590332031,
+        "total_reduction_time": 3.193233013153076,
         "contract": "./invariants/sok/0x6b7a87899490ece95443e979ca9485cbe7e71522-AnyswapV4Router.inv.json"
     },
     {
         "predicates_before_reduction": 45,
         "predicates_after_reduction": 33,
         "reduction_ratio": 0.7333333333333333,
-        "total_parsing_time": 0.0002181529998779297,
-        "total_reduction_time": 1.381868839263916,
+        "total_parsing_time": 0.0005981922149658203,
+        "total_reduction_time": 2.453716278076172,
         "contract": "./invariants/sok/0x39b1df026010b5aea781f90542ee19e900f2db15-Keep3rV2Oracle.inv.json"
     },
     {
         "predicates_before_reduction": 708,
         "predicates_after_reduction": 430,
         "reduction_ratio": 0.6073446327683616,
-        "total_parsing_time": 0.002055644989013672,
-        "total_reduction_time": 31.290276527404785,
+        "total_parsing_time": 0.004693269729614258,
+        "total_reduction_time": 71.69141364097595,
         "contract": "./invariants/sok/0x67b66c99d3eb37fa76aa3ed1ff33e8e39f0b9c7a-Bank.inv.json"
     },
     {
         "predicates_before_reduction": 141,
         "predicates_after_reduction": 130,
         "reduction_ratio": 0.9219858156028369,
-        "total_parsing_time": 0.0005276203155517578,
-        "total_reduction_time": 3.0120651721954346,
+        "total_parsing_time": 0.0011169910430908203,
+        "total_reduction_time": 6.443445444107056,
         "contract": "./invariants/sok/0x818e6fecd516ecc3849daf6845e3ec868087b755-KyberNetworkProxy.inv.json"
     },
     {
         "predicates_before_reduction": 39,
         "predicates_after_reduction": 39,
         "reduction_ratio": 1.0,
-        "total_parsing_time": 0.00020503997802734375,
-        "total_reduction_time": 1.025242567062378,
+        "total_parsing_time": 0.0003592967987060547,
+        "total_reduction_time": 2.2742459774017334,
         "contract": "./invariants/sok/0x6684977bbed67e101bb80fc07fccfba655c0a64f-SushiMaker.inv.json"
     },
     {
         "predicates_before_reduction": 330,
         "predicates_after_reduction": 274,
         "reduction_ratio": 0.8303030303030303,
-        "total_parsing_time": 0.0010573863983154297,
-        "total_reduction_time": 8.86786961555481,
+        "total_parsing_time": 0.002045869827270508,
+        "total_reduction_time": 17.68912625312805,
         "contract": "./invariants/sok/0x6847259b2b3a4c17e7c43c54409810af48ba5210-ControllerV4.inv.json"
     },
     {
         "predicates_before_reduction": 299,
-        "predicates_after_reduction": 220,
-        "reduction_ratio": 0.7357859531772575,
-        "total_parsing_time": 0.0009560585021972656,
-        "total_reduction_time": 10.77918028831482,
+        "predicates_after_reduction": 231,
+        "reduction_ratio": 0.7725752508361204,
+        "total_parsing_time": 0.0018007755279541016,
+        "total_reduction_time": 22.529717206954956,
         "contract": "./invariants/sok/0x88093840aad42d2621e1a452bf5d7076ff804d61-UFragments.inv.json"
     },
     {
         "predicates_before_reduction": 468,
         "predicates_after_reduction": 293,
         "reduction_ratio": 0.6260683760683761,
-        "total_parsing_time": 0.001405954360961914,
-        "total_reduction_time": 16.010133504867554,
+        "total_parsing_time": 0.0034198760986328125,
+        "total_reduction_time": 36.94824767112732,
         "contract": "./invariants/sok/0xacd43e627e64355f1861cec6d3a6688b31a6f952-yVault.inv.json"
     },
     {
         "predicates_before_reduction": 56,
         "predicates_after_reduction": 56,
         "reduction_ratio": 1.0,
-        "total_parsing_time": 0.00022912025451660156,
-        "total_reduction_time": 1.5980191230773926,
+        "total_parsing_time": 0.00047969818115234375,
+        "total_reduction_time": 3.274705648422241,
         "contract": "./invariants/sok/0xe11fc0b43ab98eb91e9836129d1ee7c3bc95df50-SushiMaker.inv.json"
     }
 ]

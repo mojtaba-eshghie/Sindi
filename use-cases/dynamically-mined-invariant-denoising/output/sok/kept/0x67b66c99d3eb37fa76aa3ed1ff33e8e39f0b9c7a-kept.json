@@ -1,0 +1,2226 @@
+[
+    {
+        "before_preds": [
+            "ori(decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) != 0"
+        ],
+        "after_preds": [
+            "ori(_owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) > 0"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) > 0"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(config) != 0"
+        ],
+        "after_preds": [
+            "ori(config) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) > 0"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value > 0"
+        ],
+        "after_preds": [
+            "msg.value > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_owner != 0"
+        ],
+        "after_preds": [
+            "_owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime > 0"
+        ],
+        "after_preds": [
+            "lastAccrueTime > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID > 0"
+        ],
+        "after_preds": [
+            "nextPositionID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter > 0"
+        ],
+        "after_preds": [
+            "_guardCounter > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != 0"
+        ],
+        "after_preds": [
+            "config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) == _owner"
+        ],
+        "after_preds": [
+            "ori(_owner) == _owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= reservePool"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= reservePool"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(reservePool) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(reservePool) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ],
+        "after_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply != glbDebtVal"
+        ],
+        "after_preds": [
+            "_totalSupply != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "reservePool <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "reservePool != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != _guardCounter"
+        ],
+        "after_preds": [
+            "reservePool != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "reservePool != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= glbDebtVal"
+        ],
+        "after_preds": [
+            "reservePool <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] <= Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != glbDebtVal"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ],
+        "after_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter != glbDebtVal"
+        ],
+        "after_preds": [
+            "_guardCounter != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "config == ori(config)"
+        ],
+        "after_preds": [
+            "config == ori(config)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) one of [14854681992016139228071]"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) one of [14854681992016139228071]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) != 0"
+        ],
+        "after_preds": [
+            "ori(_owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) one of [148922433659474232]"
+        ],
+        "after_preds": [
+            "ori(reservePool) one of [148922433659474232]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) one of [1602231144]"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) one of [1602231144]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_config != 0"
+        ],
+        "after_preds": [
+            "_config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) one of [198]"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) one of [198]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(config) != 0"
+        ],
+        "after_preds": [
+            "ori(config) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) one of [376]"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) one of [376]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtShare) one of [14846441340661167278357]"
+        ],
+        "after_preds": [
+            "ori(glbDebtShare) one of [14846441340661167278357]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_config != ori(config)"
+        ],
+        "after_preds": [
+            "_config != ori(config)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_owner != 0"
+        ],
+        "after_preds": [
+            "_owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime one of [1602231144]"
+        ],
+        "after_preds": [
+            "lastAccrueTime one of [1602231144]"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare one of [14846441340661167278357]"
+        ],
+        "after_preds": [
+            "glbDebtShare one of [14846441340661167278357]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool one of [148922433659474232]"
+        ],
+        "after_preds": [
+            "reservePool one of [148922433659474232]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [0,207595542558178816,2499288059837974695884,4999207308361928720,76989635665897056757,2099694672502978261129,2499278042403573792,23994090941122685480,348905267647927528350,4057048061363058246,19994236218049902145,12008096684355041865,3498972866121430093,399952049758648104376,379892644249751734723,7331074273148906603,499926721158544918445,28995014649187331200,155534040163110543,3419055614113489263301,199945786064955255869,99984922215138066540,11940731249496242,9998648791479301808,99997986090636984,4999319919409024702,75278599312019471008,20004274794429721786,22994220695367180988,3998913359845597384,9497882822697579207,1849753685077835228080,1499693766495532245,9998132539448897243,2999161464973501151,122963923838163536554,9998602921031189222,249933540782134667412,8748256010480108303,199870887498978286782,74979877460347423478,2999622873234109207,74989718060626759416,1999465504916710427064,499908735865805608,1241962116152060713,401109492287907629,73980033536100457236,29886166173581944622,359442063782612289,39988232675288000305,999713726897813322,953321242468317018,22006669614395381074,330342581938126080214,401583241182296934,1999553099697343335,4998650914601382245,899807013883311181285,349967173402743561941,4999141914029901165,999808531376531825,19996452589694343531,2999199985428679028,100983359711349393234,86984751696672373087,299941269738273242381,2999577045009891728,2099550583177882008,156757421593122201,18497345372475515793,2999475445556411802,99980055585089435,282421952098266234655,99985734138462998901,499892501497066034892,37108231016789653399,7997832369182641578,1427667316733088179,2199682035744654782,499855855955010505,9997205556608119756,19994928949477146578,4018969067458326495,19995027751107133405,1999420721406120521858,177960697518442657180,39994654851654382555,999861461461553649,99985182676534263,1999560000545579004,29998406400582478834]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [0,207595542558178816,2499288059837974695884,4999207308361928720,76989635665897056757,2099694672502978261129,2499278042403573792,23994090941122685480,348905267647927528350,4057048061363058246,19994236218049902145,12008096684355041865,3498972866121430093,399952049758648104376,379892644249751734723,7331074273148906603,499926721158544918445,28995014649187331200,155534040163110543,3419055614113489263301,199945786064955255869,99984922215138066540,11940731249496242,9998648791479301808,99997986090636984,4999319919409024702,75278599312019471008,20004274794429721786,22994220695367180988,3998913359845597384,9497882822697579207,1849753685077835228080,1499693766495532245,9998132539448897243,2999161464973501151,122963923838163536554,9998602921031189222,249933540782134667412,8748256010480108303,199870887498978286782,74979877460347423478,2999622873234109207,74989718060626759416,1999465504916710427064,499908735865805608,1241962116152060713,401109492287907629,73980033536100457236,29886166173581944622,359442063782612289,39988232675288000305,999713726897813322,953321242468317018,22006669614395381074,330342581938126080214,401583241182296934,1999553099697343335,4998650914601382245,899807013883311181285,349967173402743561941,4999141914029901165,999808531376531825,19996452589694343531,2999199985428679028,100983359711349393234,86984751696672373087,299941269738273242381,2999577045009891728,2099550583177882008,156757421593122201,18497345372475515793,2999475445556411802,99980055585089435,282421952098266234655,99985734138462998901,499892501497066034892,37108231016789653399,7997832369182641578,1427667316733088179,2199682035744654782,499855855955010505,9997205556608119756,19994928949477146578,4018969067458326495,19995027751107133405,1999420721406120521858,177960697518442657180,39994654851654382555,999861461461553649,99985182676534263,1999560000545579004,29998406400582478834]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID one of [198]"
+        ],
+        "after_preds": [
+            "nextPositionID one of [198]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter one of [376]"
+        ],
+        "after_preds": [
+            "_guardCounter one of [376]"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != 0"
+        ],
+        "after_preds": [
+            "config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtVal one of [14854681992016139228071]"
+        ],
+        "after_preds": [
+            "glbDebtVal one of [14854681992016139228071]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) == _owner"
+        ],
+        "after_preds": [
+            "ori(_owner) == _owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "_config == config"
+        ],
+        "after_preds": [
+            "_config == config"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != ori(config)"
+        ],
+        "after_preds": [
+            "config != ori(config)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) > 0"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) != 0"
+        ],
+        "after_preds": [
+            "ori(_owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) > 0"
+        ],
+        "after_preds": [
+            "ori(reservePool) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "share > 0"
+        ],
+        "after_preds": [
+            "share > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) > 0"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) > 0"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(config) != 0"
+        ],
+        "after_preds": [
+            "ori(config) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) > 0"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtShare) > 0"
+        ],
+        "after_preds": [
+            "ori(glbDebtShare) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_owner != 0"
+        ],
+        "after_preds": [
+            "_owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime > 0"
+        ],
+        "after_preds": [
+            "lastAccrueTime > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare > 0"
+        ],
+        "after_preds": [
+            "glbDebtShare > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool > 0"
+        ],
+        "after_preds": [
+            "reservePool > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] one of [0,999710360703060260929,65205495417134526340]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] one of [0,999710360703060260929,65205495417134526340]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [20424063187886226982599]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [20424063187886226982599]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID > 0"
+        ],
+        "after_preds": [
+            "nextPositionID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter > 0"
+        ],
+        "after_preds": [
+            "_guardCounter > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != 0"
+        ],
+        "after_preds": [
+            "config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtVal > 0"
+        ],
+        "after_preds": [
+            "glbDebtVal > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) == _owner"
+        ],
+        "after_preds": [
+            "ori(_owner) == _owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(reservePool) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply != glbDebtVal"
+        ],
+        "after_preds": [
+            "_totalSupply != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "reservePool != ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "reservePool != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != _guardCounter"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ],
+        "after_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "config == ori(config)"
+        ],
+        "after_preds": [
+            "config == ori(config)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) != 0"
+        ],
+        "after_preds": [
+            "ori(_owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "maxReturn one of [0,115792089237316195423570985008687907853269984665640564039457584007913129639935]"
+        ],
+        "after_preds": [
+            "maxReturn one of [0,115792089237316195423570985008687907853269984665640564039457584007913129639935]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "goblin != 0"
+        ],
+        "after_preds": [
+            "goblin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) > 0"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) > 0"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(config) != 0"
+        ],
+        "after_preds": [
+            "ori(config) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) > 0"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "data != \"\""
+        ],
+        "after_preds": [
+            "data != \"\""
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= id"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= id"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) >= id"
+        ],
+        "after_preds": [
+            "ori(reservePool) >= id"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != loan"
+        ],
+        "after_preds": [
+            "ori(reservePool) != loan"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "goblin != msg.sender"
+        ],
+        "after_preds": [
+            "goblin != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "id <= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "loan != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "loan != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "loan != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "loan != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_owner != 0"
+        ],
+        "after_preds": [
+            "_owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime > 0"
+        ],
+        "after_preds": [
+            "lastAccrueTime > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare > 0"
+        ],
+        "after_preds": [
+            "glbDebtShare > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID > 0"
+        ],
+        "after_preds": [
+            "nextPositionID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter > 0"
+        ],
+        "after_preds": [
+            "_guardCounter > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != 0"
+        ],
+        "after_preds": [
+            "config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtVal > 0"
+        ],
+        "after_preds": [
+            "glbDebtVal > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "positions[id].goblin == ori(positions[id].goblin)"
+        ],
+        "after_preds": [
+            "positions[id].goblin == ori(positions[id].goblin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != glbDebtShare"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != glbDebtShare"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != nextPositionID"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) == _owner"
+        ],
+        "after_preds": [
+            "ori(_owner) == _owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= reservePool"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != nextPositionID"
+        ],
+        "after_preds": [
+            "ori(reservePool) != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(reservePool) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ],
+        "after_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "positions[id].debtShare <= ori(positions[id].debtShare)"
+        ],
+        "after_preds": [
+            "positions[id].debtShare <= ori(positions[id].debtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= reservePool"
+        ],
+        "after_preds": [
+            "id <= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= loan"
+        ],
+        "after_preds": [
+            "glbDebtShare >= loan"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare <= glbDebtVal"
+        ],
+        "after_preds": [
+            "glbDebtShare <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != loan"
+        ],
+        "after_preds": [
+            "reservePool != loan"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != nextPositionID"
+        ],
+        "after_preds": [
+            "reservePool != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != _guardCounter"
+        ],
+        "after_preds": [
+            "reservePool != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "reservePool != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "reservePool != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "reservePool <= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(positions[id].owner) == positions[id].owner"
+        ],
+        "after_preds": [
+            "ori(positions[id].owner) == positions[id].owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "loan != nextPositionID"
+        ],
+        "after_preds": [
+            "loan != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "loan != _guardCounter"
+        ],
+        "after_preds": [
+            "loan != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "loan <= glbDebtVal"
+        ],
+        "after_preds": [
+            "loan <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID >= ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "nextPositionID >= ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID <= ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "nextPositionID <= ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "nextPositionID != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ],
+        "after_preds": [
+            "_guardCounter == ori(_guardCounter) + 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "_guardCounter != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "config == ori(config)"
+        ],
+        "after_preds": [
+            "config == ori(config)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtShare) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(glbDebtShare) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) != 0"
+        ],
+        "after_preds": [
+            "ori(_owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) > 0"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) > 0"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(config) != 0"
+        ],
+        "after_preds": [
+            "ori(config) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) > 0"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(reservePool) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) <= ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) <= ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_owner != 0"
+        ],
+        "after_preds": [
+            "_owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime > 0"
+        ],
+        "after_preds": [
+            "lastAccrueTime > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [10000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID > 0"
+        ],
+        "after_preds": [
+            "nextPositionID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter > 0"
+        ],
+        "after_preds": [
+            "_guardCounter > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "config != 0"
+        ],
+        "after_preds": [
+            "config != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != nextPositionID"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_owner) == _owner"
+        ],
+        "after_preds": [
+            "ori(_owner) == _owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= reservePool"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtShare"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= glbDebtShare"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= reservePool"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != nextPositionID"
+        ],
+        "after_preds": [
+            "ori(reservePool) != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(reservePool) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(reservePool) <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ],
+        "after_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= reservePool"
+        ],
+        "after_preds": [
+            "glbDebtShare >= reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare != nextPositionID"
+        ],
+        "after_preds": [
+            "glbDebtShare != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare != _guardCounter"
+        ],
+        "after_preds": [
+            "glbDebtShare != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "glbDebtShare != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "glbDebtShare != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare <= glbDebtVal"
+        ],
+        "after_preds": [
+            "glbDebtShare <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply != glbDebtVal"
+        ],
+        "after_preds": [
+            "_totalSupply != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "reservePool <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != nextPositionID"
+        ],
+        "after_preds": [
+            "reservePool != nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != _guardCounter"
+        ],
+        "after_preds": [
+            "reservePool != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "reservePool != ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "reservePool != ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "reservePool <= ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= glbDebtVal"
+        ],
+        "after_preds": [
+            "reservePool <= glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID >= ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "nextPositionID >= ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID <= ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "nextPositionID <= ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "nextPositionID != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID != glbDebtVal"
+        ],
+        "after_preds": [
+            "nextPositionID != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_guardCounter >= ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter != ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "_guardCounter != ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter != glbDebtVal"
+        ],
+        "after_preds": [
+            "_guardCounter != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) != glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) != glbDebtVal"
+        ]
+    }
+]

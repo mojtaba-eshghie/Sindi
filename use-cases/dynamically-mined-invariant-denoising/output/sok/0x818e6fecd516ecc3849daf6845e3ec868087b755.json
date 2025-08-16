@@ -1,0 +1,433 @@
+[
+    {
+        "func": "removeAlerter(alerter)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "removeAlerter(alerter)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "tradeWithHint(src,srcAmount,dest,destAddress,maxDestAmount,minConversionRate,walletId,hint)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "tradeWithHint(src,srcAmount,dest,destAddress,maxDestAmount,minConversionRate,walletId,hint)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapTokenToEther(token,srcAmount,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapTokenToEther(token,srcAmount,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "withdrawToken(token,amount,sendTo)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(decimals[...])) == 81",
+            "ori(Sum(decimals[...])) one of [81]",
+            "ori(pendingAdmin) != 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "msg.sender != 0",
+            "ori(kyberNetworkContract) != 0",
+            "sendTo != 0",
+            "token != 0",
+            "ori(admin) != 0",
+            "amount == 40963957051",
+            "amount one of [40963957051]",
+            "msg.sender == ori(admin)"
+        ],
+        "postconditions": [
+            "elem of decimals[...] is one of [81]",
+            "elem of decimals[...] is one of [9,18]",
+            "pendingAdmin != 0",
+            "admin != 0",
+            "Sum(decimals[...]) == 81",
+            "Sum(decimals[...]) one of [81]",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(pendingAdmin) == pendingAdmin",
+            "msg.sender == admin",
+            "ori(kyberNetworkContract) == kyberNetworkContract",
+            "ori(admin) == admin"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "withdrawToken(token,amount,sendTo)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addAlerter(newAlerter)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addAlerter(newAlerter)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapTokenToToken(src,srcAmount,dest,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapTokenToToken(src,srcAmount,dest,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferAdmin(newAdmin)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(decimals[...])) == 0",
+            "ori(Sum(decimals[...])) one of [0]",
+            "ori(pendingAdmin) == 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "msg.sender != 0",
+            "ori(kyberNetworkContract) != 0",
+            "newAdmin != 0",
+            "ori(admin) != 0",
+            "ori(pendingAdmin) != newAdmin",
+            "msg.sender == ori(admin)"
+        ],
+        "postconditions": [
+            "elem of decimals[...] is one of [0]",
+            "elem of decimals[...] is one of []",
+            "pendingAdmin != 0",
+            "admin != 0",
+            "Sum(decimals[...]) == 0",
+            "Sum(decimals[...]) one of [0]",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(pendingAdmin) != pendingAdmin",
+            "msg.sender == admin",
+            "ori(kyberNetworkContract) == kyberNetworkContract",
+            "newAdmin == pendingAdmin",
+            "ori(admin) == admin"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferAdmin(newAdmin)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "claimAdmin()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "claimAdmin()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapEtherToToken(token,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "swapEtherToToken(token,minConversionRate)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferAdminQuickly(newAdmin)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(decimals[...])) == 0",
+            "ori(Sum(decimals[...])) one of [0]",
+            "ori(pendingAdmin) == 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "msg.sender != 0",
+            "ori(kyberNetworkContract) != 0",
+            "newAdmin != 0",
+            "ori(admin) != 0",
+            "msg.sender != newAdmin",
+            "msg.sender == ori(admin)",
+            "newAdmin != ori(admin)"
+        ],
+        "postconditions": [
+            "elem of decimals[...] is one of [0]",
+            "elem of decimals[...] is one of []",
+            "pendingAdmin == 0",
+            "admin != 0",
+            "Sum(decimals[...]) == 0",
+            "Sum(decimals[...]) one of [0]",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(pendingAdmin) == pendingAdmin",
+            "msg.sender != admin",
+            "ori(kyberNetworkContract) == kyberNetworkContract",
+            "newAdmin == admin",
+            "ori(admin) != admin"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferAdminQuickly(newAdmin)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addOperator(newOperator)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addOperator(newOperator)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "setKyberNetworkContract(_kyberNetworkContract)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(decimals[...])) == 0",
+            "ori(Sum(decimals[...])) one of [0]",
+            "_kyberNetworkContract != 0",
+            "ori(pendingAdmin) == 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "msg.sender != 0",
+            "ori(kyberNetworkContract) == 0",
+            "ori(admin) != 0",
+            "_kyberNetworkContract != ori(kyberNetworkContract)",
+            "msg.sender == ori(admin)"
+        ],
+        "postconditions": [
+            "elem of decimals[...] is one of [0]",
+            "elem of decimals[...] is one of []",
+            "pendingAdmin == 0",
+            "admin != 0",
+            "Sum(decimals[...]) == 0",
+            "Sum(decimals[...]) one of [0]",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "_kyberNetworkContract == kyberNetworkContract",
+            "ori(pendingAdmin) == pendingAdmin",
+            "msg.sender == admin",
+            "ori(kyberNetworkContract) != kyberNetworkContract",
+            "ori(admin) == admin"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "setKyberNetworkContract(_kyberNetworkContract)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "removeOperator(operator)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "removeOperator(operator)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "trade(src,srcAmount,dest,destAddress,maxDestAmount,minConversionRate,walletId)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "minConversionRate > 0",
+            "destAddress != 0",
+            "ori(pendingAdmin) != 0",
+            "msg.sender != 0",
+            "ori(kyberNetworkContract) != 0",
+            "maxDestAmount > 0",
+            "maxDestAmount one of [57896044618658097711785492504343953926634992332820282019728792003956564819968,1606938044258990300000000000000000000000000000000000000000000]",
+            "dest != 0",
+            "src != 0",
+            "srcAmount > 0",
+            "ori(admin) != 0",
+            "walletId != 0"
+        ],
+        "postconditions": [
+            "elem of decimals[...] is one of [161]",
+            "elem of decimals[...] is one of [8,9,18,12]",
+            "pendingAdmin != 0",
+            "admin != 0",
+            "Sum(decimals[...]) > 0",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])",
+            "ori(pendingAdmin) == pendingAdmin",
+            "ori(kyberNetworkContract) == kyberNetworkContract",
+            "ori(admin) == admin"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": [
+            "ori(Sum(decimals[...])) < Sum(decimals[...])",
+            "ori(Sum(decimals[...])) != Sum(decimals[...])"
+        ]
+    },
+    {
+        "func": "trade(src,srcAmount,dest,destAddress,maxDestAmount,minConversionRate,walletId)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "withdrawEther(amount,sendTo)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "withdrawEther(amount,sendTo)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(admin) != 0",
+            "ori(admin) != ori(pendingAdmin)"
+        ],
+        "postconditions": [
+            "admin != 0",
+            "elem of decimals[...] is one of [0]",
+            "elem of decimals[...] is one of [8,9,18,12]",
+            "kyberNetworkContract != 0",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])",
+            "pendingAdmin != ori(admin)",
+            "pendingAdmin != admin",
+            "admin != ori(pendingAdmin)"
+        ],
+        "falsified_preconditions": [
+            "ori(Sum(decimals[...])) == 0",
+            "ori(pendingAdmin) == 0"
+        ],
+        "falsified_postconditions": [
+            "Sum(decimals[...]) == 0",
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])"
+        ]
+    }
+]

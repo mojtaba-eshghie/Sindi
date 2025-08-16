@@ -1,0 +1,539 @@
+[
+    {
+        "func": "anySwapFeeTo(token,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapFeeTo(token,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapIn(txs,tokens,to,amounts,fromChainIDs)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapIn(txs,tokens,to,amounts,fromChainIDs)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapIn(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapIn(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInAuto(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "to != 0",
+            "token != 0",
+            "amount > 0",
+            "fromChainID > 0",
+            "fromChainID one of [56,137,250]",
+            "txs != \"\"",
+            "ori(_oldMPC) == 0",
+            "ori(_newMPC) != 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) == 1624013046",
+            "ori(_newMPCEffectiveTime) one of [1624013046]",
+            "msg.sender != 0"
+        ],
+        "postconditions": [
+            "_newMPC != 0",
+            "_newMPCEffectiveTime == 1624013046",
+            "_newMPCEffectiveTime one of [1624013046]",
+            "_oldMPC == 0",
+            "_newMPC == ori(_newMPC)",
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInAuto(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInExactTokensForNative(txs,amountIn,amountOutMin,path,to,deadline,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInExactTokensForNative(txs,amountIn,amountOutMin,path,to,deadline,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInExactTokensForTokens(txs,amountIn,amountOutMin,path,to,deadline,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInExactTokensForTokens(txs,amountIn,amountOutMin,path,to,deadline,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInUnderlying(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapInUnderlying(txs,token,to,amount,fromChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOut(token,to,amount,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "to != 0",
+            "token != 0",
+            "toChainID == 56",
+            "toChainID one of [56]",
+            "amount == 390000000000",
+            "amount one of [390000000000]",
+            "ori(_oldMPC) == 0",
+            "ori(_newMPC) != 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) == 1624013046",
+            "ori(_newMPCEffectiveTime) one of [1624013046]",
+            "msg.sender != 0"
+        ],
+        "postconditions": [
+            "_newMPC != 0",
+            "_newMPCEffectiveTime == 1624013046",
+            "_newMPCEffectiveTime one of [1624013046]",
+            "_oldMPC == 0",
+            "_newMPC == ori(_newMPC)",
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOut(token,to,amount,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOut(tokens,to,amounts,toChainIDs)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOut(tokens,to,amounts,toChainIDs)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNative(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNative(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlying(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlying(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlyingWithPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlyingWithPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlyingWithTransferPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForNativeUnderlyingWithTransferPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokens(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokens(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlying(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlying(amountIn,amountOutMin,path,to,deadline,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlyingWithPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlyingWithPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlyingWithTransferPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutExactTokensForTokensUnderlyingWithTransferPermit(from,amountIn,amountOutMin,path,to,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlying(token,to,amount,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "to != 0",
+            "token != 0",
+            "toChainID > 0",
+            "toChainID one of [56,137,250]",
+            "amount > 0",
+            "ori(_oldMPC) == 0",
+            "ori(_newMPC) != 0",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) == 1624013046",
+            "ori(_newMPCEffectiveTime) one of [1624013046]",
+            "msg.sender != 0"
+        ],
+        "postconditions": [
+            "_newMPC != 0",
+            "_newMPCEffectiveTime == 1624013046",
+            "_newMPCEffectiveTime one of [1624013046]",
+            "_oldMPC == 0",
+            "_newMPC == ori(_newMPC)",
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlying(token,to,amount,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlyingWithPermit(from,token,to,amount,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlyingWithPermit(from,token,to,amount,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlyingWithTransferPermit(from,token,to,amount,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "anySwapOutUnderlyingWithTransferPermit(from,token,to,amount,deadline,v,r,s,toChainID)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "changeMPC(newMPC)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "changeMPC(newMPC)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "changeVault(token,newVault)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "changeVault(token,newVault)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "getAmountIn(amountOut,reserveIn,reserveOut)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "getAmountIn(amountOut,reserveIn,reserveOut)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "getAmountOut(amountIn,reserveIn,reserveOut)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "getAmountOut(amountIn,reserveIn,reserveOut)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "quote(amountA,reserveA,reserveB)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "quote(amountA,reserveA,reserveB)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(_oldMPC) == 0",
+            "ori(_newMPC) != 0",
+            "ori(_newMPCEffectiveTime) == 1624013046",
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ],
+        "postconditions": [
+            "_newMPC != 0",
+            "_newMPCEffectiveTime == 1624013046",
+            "_newMPCEffectiveTime one of [1624013046]",
+            "_oldMPC == 0",
+            "_newMPC == ori(_newMPC)",
+            "_newMPCEffectiveTime == ori(_newMPCEffectiveTime)",
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

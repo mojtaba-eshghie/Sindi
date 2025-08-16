@@ -1,0 +1,414 @@
+[
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) == ori(_allowedFragments[msg.sender][spender])",
+            "ori(Sum(_allowedFragments[msg.sender][...])) >= ori(_allowedFragments[msg.sender][spender])",
+            "ori(Sum(_allowedFragments[msg.sender][...])) <= ori(_allowedFragments[msg.sender][spender])"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) == ori(_allowedFragments[msg.sender][spender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) <= value",
+            "ori(Sum(_allowedFragments[msg.sender][...])) < value",
+            "ori(Sum(_allowedFragments[msg.sender][...])) != value"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) < value"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_allowedFragments[msg.sender][spender]) <= value",
+            "ori(_allowedFragments[msg.sender][spender]) < value",
+            "ori(_allowedFragments[msg.sender][spender]) != value"
+        ],
+        "after_preds": [
+            "ori(_allowedFragments[msg.sender][spender]) < value"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowedFragments[msg.sender][spender] >= ori(Sum(_allowedFragments[msg.sender][...]))",
+            "_allowedFragments[msg.sender][spender] > ori(Sum(_allowedFragments[msg.sender][...]))",
+            "_allowedFragments[msg.sender][spender] != ori(Sum(_allowedFragments[msg.sender][...]))"
+        ],
+        "after_preds": [
+            "_allowedFragments[msg.sender][spender] > ori(Sum(_allowedFragments[msg.sender][...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowedFragments[msg.sender][spender] == Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] >= Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] <= Sum(_allowedFragments[msg.sender][...])"
+        ],
+        "after_preds": [
+            "_allowedFragments[msg.sender][spender] == Sum(_allowedFragments[msg.sender][...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowedFragments[msg.sender][spender] >= ori(_allowedFragments[msg.sender][spender])",
+            "_allowedFragments[msg.sender][spender] > ori(_allowedFragments[msg.sender][spender])",
+            "_allowedFragments[msg.sender][spender] != ori(_allowedFragments[msg.sender][spender])"
+        ],
+        "after_preds": [
+            "_allowedFragments[msg.sender][spender] > ori(_allowedFragments[msg.sender][spender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowedFragments[msg.sender][spender] == value",
+            "_allowedFragments[msg.sender][spender] >= value",
+            "_allowedFragments[msg.sender][spender] <= value"
+        ],
+        "after_preds": [
+            "_allowedFragments[msg.sender][spender] == value"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) <= Sum(_allowedFragments[msg.sender][...])",
+            "ori(Sum(_allowedFragments[msg.sender][...])) < Sum(_allowedFragments[msg.sender][...])",
+            "ori(Sum(_allowedFragments[msg.sender][...])) != Sum(_allowedFragments[msg.sender][...])"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowedFragments[msg.sender][...])) < Sum(_allowedFragments[msg.sender][...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_allowedFragments[msg.sender][...]) >= ori(_allowedFragments[msg.sender][spender])",
+            "Sum(_allowedFragments[msg.sender][...]) > ori(_allowedFragments[msg.sender][spender])",
+            "Sum(_allowedFragments[msg.sender][...]) != ori(_allowedFragments[msg.sender][spender])"
+        ],
+        "after_preds": [
+            "Sum(_allowedFragments[msg.sender][...]) > ori(_allowedFragments[msg.sender][spender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_allowedFragments[msg.sender][...]) == value",
+            "Sum(_allowedFragments[msg.sender][...]) >= value",
+            "Sum(_allowedFragments[msg.sender][...]) <= value"
+        ],
+        "after_preds": [
+            "Sum(_allowedFragments[msg.sender][...]) == value"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment == ori(_gonsPerFragment)",
+            "_gonsPerFragment >= ori(_gonsPerFragment)",
+            "_gonsPerFragment <= ori(_gonsPerFragment)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == ori(_gonsPerFragment)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) >= ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) <= ori(Sum(_gonBalances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment == ori(_gonsPerFragment)",
+            "_gonsPerFragment >= ori(_gonsPerFragment)",
+            "_gonsPerFragment <= ori(_gonsPerFragment)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == ori(_gonsPerFragment)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) >= ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) <= ori(Sum(_gonBalances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply > ori(_totalSupply)",
+            "_totalSupply != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment >= ori(_gonsPerFragment)",
+            "_gonsPerFragment > ori(_gonsPerFragment)",
+            "_gonsPerFragment != ori(_gonsPerFragment)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > ori(_gonsPerFragment)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) >= ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) > ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) != ori(Sum(_gonBalances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) > ori(Sum(_gonBalances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply <= _gonsPerFragment",
+            "_totalSupply < _gonsPerFragment",
+            "_totalSupply != _gonsPerFragment"
+        ],
+        "after_preds": [
+            "_totalSupply < _gonsPerFragment"
+        ]
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment >= ori(_totalSupply)",
+            "_gonsPerFragment > ori(_totalSupply)",
+            "_gonsPerFragment != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    }
+]

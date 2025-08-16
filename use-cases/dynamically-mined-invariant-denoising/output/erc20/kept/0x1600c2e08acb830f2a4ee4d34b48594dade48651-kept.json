@@ -1,0 +1,330 @@
+[
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(unfrozen) == false"
+        ],
+        "after_preds": [
+            "ori(unfrozen) == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(owner)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(owner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "unfrozen == true"
+        ],
+        "after_preds": [
+            "unfrozen == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == owner"
+        ],
+        "after_preds": [
+            "msg.sender == owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "unfrozen != ori(unfrozen)"
+        ],
+        "after_preds": [
+            "unfrozen != ori(unfrozen)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) == owner"
+        ],
+        "after_preds": [
+            "ori(owner) == owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_value > 0"
+        ],
+        "after_preds": [
+            "_value > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_to != 0"
+        ],
+        "after_preds": [
+            "_to != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(unfrozen) == true"
+        ],
+        "after_preds": [
+            "ori(unfrozen) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "unfrozen == true"
+        ],
+        "after_preds": [
+            "unfrozen == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "unfrozen == ori(unfrozen)"
+        ],
+        "after_preds": [
+            "unfrozen == ori(unfrozen)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) == owner"
+        ],
+        "after_preds": [
+            "ori(owner) == owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "totalSupply_ one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "unfrozen == true"
+        ],
+        "after_preds": [
+            "unfrozen == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of balances[...] is one of [5000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) == owner"
+        ],
+        "after_preds": [
+            "ori(owner) == owner"
+        ]
+    }
+]

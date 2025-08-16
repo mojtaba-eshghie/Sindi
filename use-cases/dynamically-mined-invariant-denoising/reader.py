@@ -1,6 +1,12 @@
 import json
 import sys
-import predi.comparator as cp
+
+# import our comparator module from the parent directory
+sys.path.append('../..')
+import src.sindi.comparator as cp
+import src.sindi.comparator_light as cp_light
+
+
 import re
 import time
 import os
@@ -135,13 +141,20 @@ def find_strongest_predicate(preds: list, contract_addr: str, all_preds_dict: di
         for second_pred in preds:
             if '"' in first_pred or '"' in second_pred:
                continue
-            result = comparator.compare(first_pred, second_pred)
-            if result == 'The predicates are equivalent.':
+            try:
+               result = comparator.compare(first_pred, second_pred)
+               if result == 'The predicates are equivalent.':
+                  continue
+               if result == 'The first predicate is stronger.':
+                  preds.remove(second_pred)
+               if result == 'The second predicate is stronger.':
+                  preds.remove(first_pred)
+            except Exception as e:
+               print('- - -' * 20)
+               print(f"Error comparing predicates: {first_pred} and {second_pred}. Error: {e}")
+               print('- - -' * 20)
                continue
-            if result == 'The first predicate is stronger.':
-               preds.remove(second_pred)
-            if result == 'The second predicate is stronger.':
-               preds.remove(first_pred)
+            
 
     # Define file paths for removed and kept predicates
     removed_file_path = f"{output_folder}/removed/{contract_addr}-removed.json"

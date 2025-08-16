@@ -1,0 +1,1490 @@
+[
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [0,141846855438073018741198,142345985557645870700604,128570263817014177167271]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [0,141846855438073018741198,142345985557645870700604,128570263817014177167271]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) == 0"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [0]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_amount > 0"
+        ],
+        "after_preds": [
+            "_amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_amount one of [500000000000000000000,13105133700000000000000,100000000000000000000,103970700000000000000]"
+        ],
+        "after_preds": [
+            "_amount one of [500000000000000000000,13105133700000000000000,100000000000000000000,103970700000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [0,141846855438073018741198,142345985557645870700604,128570263817014177167271]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [0,141846855438073018741198,142345985557645870700604,128570263817014177167271]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [142345985557645870700604,142449775039435131775208,100000000000000000000,141652622877015924045934]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [142345985557645870700604,142449775039435131775208,100000000000000000000,141652622877015924045934]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [142345985557645870700604,142449775039435131775208,100000000000000000000,141652622877015924045934]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [142345985557645870700604,142449775039435131775208,100000000000000000000,141652622877015924045934]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] one of [13082359060001746878663,103789481789261074604,100000000000000000000,499130119572851959406]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] one of [13082359060001746878663,103789481789261074604,100000000000000000000,499130119572851959406]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [142345985557645870700604]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [142345985557645870700604]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [0,90000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [0,90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [134406668607338084218100]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [134406668607338084218100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "_totalSupply >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [100000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [100000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [5000096484670531227816,723959234856246226088,193288114234845046898,15113130871002806453838,100000000000000000000,7682645945411942583280,9999286966540985221802,58078098074825682085113]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [5000096484670531227816,723959234856246226088,193288114234845046898,15113130871002806453838,100000000000000000000,7682645945411942583280,9999286966540985221802,58078098074825682085113]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != 0"
+        ],
+        "after_preds": [
+            "_governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [142449775039435131775208]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [142449775039435131775208]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != ori(governance)"
+        ],
+        "after_preds": [
+            "_governance != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != msg.sender"
+        ],
+        "after_preds": [
+            "_governance != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(governance) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [142449775039435131775208]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [142449775039435131775208]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [142449775039435131775208]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [5000096484670531227816,723959234856246226088,0,193288114234845046898,499130119572851959406,15113130871002806453838,2887782269888984921831,28891975855582153400605,13082359060001746878663,7682645945411942583280,194232561057094695264,103789481789261074604,9999286966540985221802,58078098074825682085113]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [5000096484670531227816,723959234856246226088,0,193288114234845046898,499130119572851959406,15113130871002806453838,2887782269888984921831,28891975855582153400605,13082359060001746878663,7682645945411942583280,194232561057094695264,103789481789261074604,9999286966540985221802,58078098074825682085113]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance == governance"
+        ],
+        "after_preds": [
+            "_governance == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != ori(governance)"
+        ],
+        "after_preds": [
+            "governance != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != msg.sender"
+        ],
+        "after_preds": [
+            "governance != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_shares one of [10000000000000000000]"
+        ],
+        "after_preds": [
+            "_shares one of [10000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [100000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [100000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [100000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [100000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [100000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [100000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [90000000000000000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [90000000000000000000]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] one of [90000000000000000000]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] one of [90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [90000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [128942301002958992697573,134406668607338084218100]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [128942301002958992697573,134406668607338084218100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [5464367604379091520527,29264013041526968930907]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [5464367604379091520527,29264013041526968930907]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [128942301002958992697573,134406668607338084218100]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [128942301002958992697573,134406668607338084218100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [128942301002958992697573,99678287961432023766666]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [128942301002958992697573,99678287961432023766666]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [128942301002958992697573,99678287961432023766666]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [128942301002958992697573,99678287961432023766666]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] == 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] one of [0]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [128942301002958992697573]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [128942301002958992697573]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance == ori(governance)"
+        ],
+        "after_preds": [
+            "governance == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [141846855438073018741198]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [141846855438073018741198]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller == ori(controller)"
+        ],
+        "after_preds": [
+            "controller == ori(controller)"
+        ]
+    }
+]

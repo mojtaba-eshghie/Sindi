@@ -150,5 +150,13 @@
         "total_parsing_time": 0.0008337497711181641,
         "total_reduction_time": 6.636699199676514,
         "contract": "./invariants/erc20/0x1600c2e08acb830f2a4ee4d34b48594dade48651-TurexToken.inv.json"
+    },
+    {
+        "predicates_before_reduction": 95,
+        "predicates_after_reduction": 63,
+        "reduction_ratio": 0.6631578947368421,
+        "total_parsing_time": 0.0007114410400390625,
+        "total_reduction_time": 5.690693140029907,
+        "contract": "./invariants/erc20/0x1600c2e08acb830f2a4ee4d34b48594dade48651-TurexToken.inv.json"
     }
 ]

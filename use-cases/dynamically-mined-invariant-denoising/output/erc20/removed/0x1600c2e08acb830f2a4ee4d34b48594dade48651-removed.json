@@ -1,0 +1,210 @@
+[
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "totalSupply_ == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == totalSupply_"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "totalSupply_ == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == totalSupply_"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) == ori(totalSupply_)",
+            "ori(Sum(balances[...])) >= ori(totalSupply_)",
+            "ori(Sum(balances[...])) <= ori(totalSupply_)"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == ori(totalSupply_)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000"
+        ],
+        "after_preds": [
+            "totalSupply_ == 5000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(totalSupply_)",
+            "Sum(balances[...]) >= ori(totalSupply_)",
+            "Sum(balances[...]) <= ori(totalSupply_)"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(totalSupply_)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == totalSupply_",
+            "Sum(balances[...]) >= totalSupply_",
+            "Sum(balances[...]) <= totalSupply_"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == totalSupply_"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) == totalSupply_",
+            "ori(Sum(balances[...])) >= totalSupply_",
+            "ori(Sum(balances[...])) <= totalSupply_"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == totalSupply_"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_"
+        ],
+        "after_preds": [
+            "ori(totalSupply_) == totalSupply_"
+        ]
+    }
+]

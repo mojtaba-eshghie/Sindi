@@ -1,0 +1,450 @@
+[
+    {
+        "before_preds": [
+            "ori(_bridges[ori(weth)]) == 0"
+        ],
+        "after_preds": [
+            "ori(_bridges[ori(weth)]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token0 != 0"
+        ],
+        "after_preds": [
+            "token0 != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token1 != 0"
+        ],
+        "after_preds": [
+            "token1 != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_bridges[weth]) == 0"
+        ],
+        "after_preds": [
+            "ori(_bridges[weth]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingOwner) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingOwner) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_bridges[ori(weth)]) == ori(_bridges[weth])"
+        ],
+        "after_preds": [
+            "ori(_bridges[ori(weth)]) == ori(_bridges[weth])"
+        ]
+    },
+    {
+        "before_preds": [
+            "token0 != token1"
+        ],
+        "after_preds": [
+            "token0 != token1"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[ori(weth)] == 0"
+        ],
+        "after_preds": [
+            "_bridges[ori(weth)] == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[weth] == 0"
+        ],
+        "after_preds": [
+            "_bridges[weth] == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == 0"
+        ],
+        "after_preds": [
+            "pendingOwner == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner == ori(owner)"
+        ],
+        "after_preds": [
+            "owner == ori(owner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[ori(weth)] == ori(_bridges[ori(weth)])"
+        ],
+        "after_preds": [
+            "_bridges[ori(weth)] == ori(_bridges[ori(weth)])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[ori(weth)] == _bridges[weth]"
+        ],
+        "after_preds": [
+            "_bridges[ori(weth)] == _bridges[weth]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[ori(weth)] == ori(_bridges[weth])"
+        ],
+        "after_preds": [
+            "_bridges[ori(weth)] == ori(_bridges[weth])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_bridges[ori(weth)]) == _bridges[weth]"
+        ],
+        "after_preds": [
+            "ori(_bridges[ori(weth)]) == _bridges[weth]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_bridges[weth] == ori(_bridges[weth])"
+        ],
+        "after_preds": [
+            "_bridges[weth] == ori(_bridges[weth])"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner != 0"
+        ],
+        "after_preds": [
+            "newOwner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "renounce == false"
+        ],
+        "after_preds": [
+            "renounce == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "direct == true"
+        ],
+        "after_preds": [
+            "direct == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingOwner) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingOwner) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner != ori(owner)"
+        ],
+        "after_preds": [
+            "newOwner != ori(owner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner != ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "newOwner != ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner != msg.sender"
+        ],
+        "after_preds": [
+            "newOwner != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "ori(owner) != ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) == msg.sender"
+        ],
+        "after_preds": [
+            "ori(owner) == msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingOwner) != msg.sender"
+        ],
+        "after_preds": [
+            "ori(pendingOwner) != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == 0"
+        ],
+        "after_preds": [
+            "pendingOwner == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner == owner"
+        ],
+        "after_preds": [
+            "newOwner == owner"
+        ]
+    },
+    {
+        "before_preds": [
+            "newOwner != pendingOwner"
+        ],
+        "after_preds": [
+            "newOwner != pendingOwner"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != ori(owner)"
+        ],
+        "after_preds": [
+            "owner != ori(owner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != pendingOwner"
+        ],
+        "after_preds": [
+            "owner != pendingOwner"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "owner != ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != msg.sender"
+        ],
+        "after_preds": [
+            "owner != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != pendingOwner"
+        ],
+        "after_preds": [
+            "ori(owner) != pendingOwner"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner != msg.sender"
+        ],
+        "after_preds": [
+            "pendingOwner != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != 0"
+        ],
+        "after_preds": [
+            "ori(owner) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingOwner) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingOwner) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "ori(owner) != ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == 0"
+        ],
+        "after_preds": [
+            "pendingOwner == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != pendingOwner"
+        ],
+        "after_preds": [
+            "owner != pendingOwner"
+        ]
+    },
+    {
+        "before_preds": [
+            "owner != ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "owner != ori(pendingOwner)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(owner) != pendingOwner"
+        ],
+        "after_preds": [
+            "ori(owner) != pendingOwner"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ],
+        "after_preds": [
+            "pendingOwner == ori(pendingOwner)"
+        ]
+    }
+]

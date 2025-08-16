@@ -1,0 +1,1496 @@
+[
+    {
+        "before_preds": [
+            "ori(decimals) > 0",
+            "ori(decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals > 0",
+            "decimals == 18"
+        ],
+        "after_preds": [
+            "decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) == decimals",
+            "ori(decimals) >= decimals",
+            "ori(decimals) <= decimals"
+        ],
+        "after_preds": [
+            "ori(decimals) == decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) <= _totalSupply",
+            "ori(_totalSupply) < _totalSupply",
+            "ori(_totalSupply) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) < _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) <= Sum(_balances[...])",
+            "ori(_totalSupply) < Sum(_balances[...])",
+            "ori(_totalSupply) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= _totalSupply",
+            "ori(reservePool) < _totalSupply",
+            "ori(reservePool) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(reservePool) < _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= Sum(_balances[...])",
+            "ori(reservePool) < Sum(_balances[...])",
+            "ori(reservePool) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(reservePool) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare == ori(glbDebtShare)",
+            "glbDebtShare >= ori(glbDebtShare)",
+            "glbDebtShare <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "glbDebtShare == ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= reservePool",
+            "_totalSupply > reservePool",
+            "_totalSupply != reservePool"
+        ],
+        "after_preds": [
+            "_totalSupply > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_balances[msg.sender])",
+            "_totalSupply > ori(_balances[msg.sender])",
+            "_totalSupply != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(Sum(_balances[...]))",
+            "_totalSupply > ori(Sum(_balances[...]))",
+            "_totalSupply != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _guardCounter",
+            "_totalSupply > _guardCounter",
+            "_totalSupply != _guardCounter"
+        ],
+        "after_preds": [
+            "_totalSupply > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_guardCounter)",
+            "_totalSupply > ori(_guardCounter)",
+            "_totalSupply != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= Sum(_balances[...])",
+            "reservePool < Sum(_balances[...])",
+            "reservePool != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "reservePool < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= _balances[msg.sender]",
+            "ori(_balances[msg.sender]) < _balances[msg.sender]",
+            "ori(_balances[msg.sender]) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) < _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= Sum(_balances[...])",
+            "ori(_balances[msg.sender]) < Sum(_balances[...])",
+            "ori(_balances[msg.sender]) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) <= Sum(_balances[...])",
+            "ori(Sum(_balances[...])) < Sum(_balances[...])",
+            "ori(Sum(_balances[...])) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= _guardCounter",
+            "_balances[msg.sender] > _guardCounter",
+            "_balances[msg.sender] != _guardCounter"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= ori(_guardCounter)",
+            "_balances[msg.sender] > ori(_guardCounter)",
+            "_balances[msg.sender] != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _guardCounter",
+            "Sum(_balances[...]) > _guardCounter",
+            "Sum(_balances[...]) != _guardCounter"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(_guardCounter)",
+            "Sum(_balances[...]) > ori(_guardCounter)",
+            "Sum(_balances[...]) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID == ori(nextPositionID)",
+            "nextPositionID >= ori(nextPositionID)",
+            "nextPositionID <= ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "nextPositionID == ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(_guardCounter)",
+            "_guardCounter > ori(_guardCounter)",
+            "_guardCounter != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_guardCounter > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) > 0",
+            "ori(decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) > 0",
+            "ori(glbDebtVal) == 14854681992016139228071"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) == 14854681992016139228071"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 20424063187886226982599"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == 20424063187886226982599"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) > 0",
+            "ori(reservePool) == 148922433659474232"
+        ],
+        "after_preds": [
+            "ori(reservePool) == 148922433659474232"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(lastAccrueTime) > 0",
+            "ori(lastAccrueTime) == 1602231144"
+        ],
+        "after_preds": [
+            "ori(lastAccrueTime) == 1602231144"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 20424063187886226982599"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) == 20424063187886226982599"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) > 0",
+            "ori(nextPositionID) == 198"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) == 198"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) > 0",
+            "ori(_guardCounter) == 376"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) == 376"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtShare) > 0",
+            "ori(glbDebtShare) == 14846441340661167278357"
+        ],
+        "after_preds": [
+            "ori(glbDebtShare) == 14846441340661167278357"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals > 0",
+            "decimals == 18"
+        ],
+        "after_preds": [
+            "decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime > 0",
+            "lastAccrueTime == 1602231144"
+        ],
+        "after_preds": [
+            "lastAccrueTime == 1602231144"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare > 0",
+            "glbDebtShare == 14846441340661167278357"
+        ],
+        "after_preds": [
+            "glbDebtShare == 14846441340661167278357"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 20424063187886226982599"
+        ],
+        "after_preds": [
+            "_totalSupply == 20424063187886226982599"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool > 0",
+            "reservePool == 148922433659474232"
+        ],
+        "after_preds": [
+            "reservePool == 148922433659474232"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 20424063187886226982599"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == 20424063187886226982599"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID > 0",
+            "nextPositionID == 198"
+        ],
+        "after_preds": [
+            "nextPositionID == 198"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter > 0",
+            "_guardCounter == 376"
+        ],
+        "after_preds": [
+            "_guardCounter == 376"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtVal > 0",
+            "glbDebtVal == 14854681992016139228071"
+        ],
+        "after_preds": [
+            "glbDebtVal == 14854681992016139228071"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) == decimals",
+            "ori(decimals) >= decimals",
+            "ori(decimals) <= decimals"
+        ],
+        "after_preds": [
+            "ori(decimals) == decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) == glbDebtVal",
+            "ori(glbDebtVal) >= glbDebtVal",
+            "ori(glbDebtVal) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) == glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == _totalSupply",
+            "ori(_totalSupply) >= _totalSupply",
+            "ori(_totalSupply) <= _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) == reservePool",
+            "ori(reservePool) >= reservePool",
+            "ori(reservePool) <= reservePool"
+        ],
+        "after_preds": [
+            "ori(reservePool) == reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime == ori(lastAccrueTime)",
+            "lastAccrueTime >= ori(lastAccrueTime)",
+            "lastAccrueTime <= ori(lastAccrueTime)"
+        ],
+        "after_preds": [
+            "lastAccrueTime == ori(lastAccrueTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare == ori(glbDebtShare)",
+            "glbDebtShare >= ori(glbDebtShare)",
+            "glbDebtShare <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "glbDebtShare == ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) == Sum(_balances[...])",
+            "ori(Sum(_balances[...])) >= Sum(_balances[...])",
+            "ori(Sum(_balances[...])) <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) == Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID == ori(nextPositionID)",
+            "nextPositionID >= ori(nextPositionID)",
+            "nextPositionID <= ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "nextPositionID == ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter == ori(_guardCounter)",
+            "_guardCounter >= ori(_guardCounter)",
+            "_guardCounter <= ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_guardCounter == ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) > 0",
+            "ori(decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(reservePool)",
+            "ori(glbDebtVal) > ori(reservePool)",
+            "ori(glbDebtVal) != ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(_balances[msg.sender])",
+            "ori(glbDebtVal) > ori(_balances[msg.sender])",
+            "ori(glbDebtVal) != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= ori(_guardCounter)",
+            "ori(glbDebtVal) > ori(_guardCounter)",
+            "ori(glbDebtVal) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(reservePool)",
+            "ori(_totalSupply) > ori(reservePool)",
+            "ori(_totalSupply) != ori(reservePool)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > ori(reservePool)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(_balances[msg.sender])",
+            "ori(_totalSupply) > ori(_balances[msg.sender])",
+            "ori(_totalSupply) != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= ori(_guardCounter)",
+            "ori(_totalSupply) > ori(_guardCounter)",
+            "ori(_totalSupply) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= ori(Sum(_balances[...]))",
+            "ori(reservePool) < ori(Sum(_balances[...]))",
+            "ori(reservePool) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(reservePool) < ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) >= ori(_guardCounter)",
+            "ori(reservePool) > ori(_guardCounter)",
+            "ori(reservePool) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(reservePool) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) < ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) < ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= ori(_guardCounter)",
+            "ori(_balances[msg.sender]) > ori(_guardCounter)",
+            "ori(_balances[msg.sender]) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= ori(_guardCounter)",
+            "ori(Sum(_balances[...])) > ori(_guardCounter)",
+            "ori(Sum(_balances[...])) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals > 0",
+            "decimals == 18"
+        ],
+        "after_preds": [
+            "decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) == decimals",
+            "ori(decimals) >= decimals",
+            "ori(decimals) <= decimals"
+        ],
+        "after_preds": [
+            "ori(decimals) == decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= reservePool",
+            "ori(glbDebtVal) > reservePool",
+            "ori(glbDebtVal) != reservePool"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= _balances[msg.sender]",
+            "ori(glbDebtVal) > _balances[msg.sender]",
+            "ori(glbDebtVal) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) >= _guardCounter",
+            "ori(glbDebtVal) > _guardCounter",
+            "ori(glbDebtVal) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) <= glbDebtVal",
+            "ori(glbDebtVal) < glbDebtVal",
+            "ori(glbDebtVal) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= _totalSupply",
+            "ori(_totalSupply) > _totalSupply",
+            "ori(_totalSupply) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= reservePool",
+            "ori(_totalSupply) > reservePool",
+            "ori(_totalSupply) != reservePool"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= _balances[msg.sender]",
+            "ori(_totalSupply) > _balances[msg.sender]",
+            "ori(_totalSupply) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= Sum(_balances[...])",
+            "ori(_totalSupply) > Sum(_balances[...])",
+            "ori(_totalSupply) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= _guardCounter",
+            "ori(_totalSupply) > _guardCounter",
+            "ori(_totalSupply) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= _totalSupply",
+            "ori(reservePool) < _totalSupply",
+            "ori(reservePool) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(reservePool) < _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= reservePool",
+            "ori(reservePool) < reservePool",
+            "ori(reservePool) != reservePool"
+        ],
+        "after_preds": [
+            "ori(reservePool) < reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= Sum(_balances[...])",
+            "ori(reservePool) < Sum(_balances[...])",
+            "ori(reservePool) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(reservePool) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) >= _guardCounter",
+            "ori(reservePool) > _guardCounter",
+            "ori(reservePool) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(reservePool) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtVal",
+            "ori(reservePool) < glbDebtVal",
+            "ori(reservePool) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(reservePool) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "lastAccrueTime >= ori(lastAccrueTime)",
+            "lastAccrueTime > ori(lastAccrueTime)",
+            "lastAccrueTime != ori(lastAccrueTime)"
+        ],
+        "after_preds": [
+            "lastAccrueTime > ori(lastAccrueTime)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare == ori(glbDebtShare)",
+            "glbDebtShare >= ori(glbDebtShare)",
+            "glbDebtShare <= ori(glbDebtShare)"
+        ],
+        "after_preds": [
+            "glbDebtShare == ori(glbDebtShare)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= reservePool",
+            "_totalSupply > reservePool",
+            "_totalSupply != reservePool"
+        ],
+        "after_preds": [
+            "_totalSupply > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_balances[msg.sender])",
+            "_totalSupply > ori(_balances[msg.sender])",
+            "_totalSupply != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply <= ori(Sum(_balances[...]))",
+            "_totalSupply < ori(Sum(_balances[...]))",
+            "_totalSupply != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_totalSupply < ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _balances[msg.sender]",
+            "_totalSupply > _balances[msg.sender]",
+            "_totalSupply != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "_totalSupply > _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _guardCounter",
+            "_totalSupply > _guardCounter",
+            "_totalSupply != _guardCounter"
+        ],
+        "after_preds": [
+            "_totalSupply > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_guardCounter)",
+            "_totalSupply > ori(_guardCounter)",
+            "_totalSupply != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= ori(Sum(_balances[...]))",
+            "reservePool < ori(Sum(_balances[...]))",
+            "reservePool != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "reservePool < ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= Sum(_balances[...])",
+            "reservePool < Sum(_balances[...])",
+            "reservePool != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "reservePool < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool >= _guardCounter",
+            "reservePool > _guardCounter",
+            "reservePool != _guardCounter"
+        ],
+        "after_preds": [
+            "reservePool > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool >= ori(_guardCounter)",
+            "reservePool > ori(_guardCounter)",
+            "reservePool != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "reservePool > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= glbDebtVal",
+            "reservePool < glbDebtVal",
+            "reservePool != glbDebtVal"
+        ],
+        "after_preds": [
+            "reservePool < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _balances[msg.sender]",
+            "ori(_balances[msg.sender]) > _balances[msg.sender]",
+            "ori(_balances[msg.sender]) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= Sum(_balances[...])",
+            "ori(_balances[msg.sender]) < Sum(_balances[...])",
+            "ori(_balances[msg.sender]) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _guardCounter",
+            "ori(_balances[msg.sender]) > _guardCounter",
+            "ori(_balances[msg.sender]) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= glbDebtVal",
+            "ori(_balances[msg.sender]) < glbDebtVal",
+            "ori(_balances[msg.sender]) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= _balances[msg.sender]",
+            "ori(Sum(_balances[...])) > _balances[msg.sender]",
+            "ori(Sum(_balances[...])) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= Sum(_balances[...])",
+            "ori(Sum(_balances[...])) > Sum(_balances[...])",
+            "ori(Sum(_balances[...])) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= _guardCounter",
+            "ori(Sum(_balances[...])) > _guardCounter",
+            "ori(Sum(_balances[...])) != _guardCounter"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= Sum(_balances[...])",
+            "_balances[msg.sender] < Sum(_balances[...])",
+            "_balances[msg.sender] != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= glbDebtVal",
+            "_balances[msg.sender] < glbDebtVal",
+            "_balances[msg.sender] != glbDebtVal"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _guardCounter",
+            "Sum(_balances[...]) > _guardCounter",
+            "Sum(_balances[...]) != _guardCounter"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(_guardCounter)",
+            "Sum(_balances[...]) > ori(_guardCounter)",
+            "Sum(_balances[...]) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID == ori(nextPositionID)",
+            "nextPositionID >= ori(nextPositionID)",
+            "nextPositionID <= ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "nextPositionID == ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(_guardCounter)",
+            "_guardCounter > ori(_guardCounter)",
+            "_guardCounter != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_guardCounter > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter <= glbDebtVal",
+            "_guardCounter < glbDebtVal",
+            "_guardCounter != glbDebtVal"
+        ],
+        "after_preds": [
+            "_guardCounter < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) <= glbDebtVal",
+            "ori(_guardCounter) < glbDebtVal",
+            "ori(_guardCounter) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) > 0",
+            "ori(decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= ori(nextPositionID)",
+            "id < ori(nextPositionID)",
+            "id != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "id < ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= ori(_guardCounter)",
+            "id < ori(_guardCounter)",
+            "id != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "id < ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) <= ori(_guardCounter)",
+            "ori(nextPositionID) < ori(_guardCounter)",
+            "ori(nextPositionID) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) < ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals > 0",
+            "decimals == 18"
+        ],
+        "after_preds": [
+            "decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) == decimals",
+            "ori(decimals) >= decimals",
+            "ori(decimals) <= decimals"
+        ],
+        "after_preds": [
+            "ori(decimals) == decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == _totalSupply",
+            "ori(_totalSupply) >= _totalSupply",
+            "ori(_totalSupply) <= _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtShare",
+            "ori(reservePool) < glbDebtShare",
+            "ori(reservePool) != glbDebtShare"
+        ],
+        "after_preds": [
+            "ori(reservePool) < glbDebtShare"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= glbDebtVal",
+            "ori(reservePool) < glbDebtVal",
+            "ori(reservePool) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(reservePool) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= glbDebtShare",
+            "id < glbDebtShare",
+            "id != glbDebtShare"
+        ],
+        "after_preds": [
+            "id < glbDebtShare"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= nextPositionID",
+            "id < nextPositionID",
+            "id != nextPositionID"
+        ],
+        "after_preds": [
+            "id < nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= _guardCounter",
+            "id < _guardCounter",
+            "id != _guardCounter"
+        ],
+        "after_preds": [
+            "id < _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "id <= glbDebtVal",
+            "id < glbDebtVal",
+            "id != glbDebtVal"
+        ],
+        "after_preds": [
+            "id < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= reservePool",
+            "glbDebtShare > reservePool",
+            "glbDebtShare != reservePool"
+        ],
+        "after_preds": [
+            "glbDebtShare > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= nextPositionID",
+            "glbDebtShare > nextPositionID",
+            "glbDebtShare != nextPositionID"
+        ],
+        "after_preds": [
+            "glbDebtShare > nextPositionID"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= _guardCounter",
+            "glbDebtShare > _guardCounter",
+            "glbDebtShare != _guardCounter"
+        ],
+        "after_preds": [
+            "glbDebtShare > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= ori(nextPositionID)",
+            "glbDebtShare > ori(nextPositionID)",
+            "glbDebtShare != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "glbDebtShare > ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= ori(_guardCounter)",
+            "glbDebtShare > ori(_guardCounter)",
+            "glbDebtShare != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "glbDebtShare > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= glbDebtVal",
+            "reservePool < glbDebtVal",
+            "reservePool != glbDebtVal"
+        ],
+        "after_preds": [
+            "reservePool < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) == Sum(_balances[...])",
+            "ori(Sum(_balances[...])) >= Sum(_balances[...])",
+            "ori(Sum(_balances[...])) <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) == Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID <= _guardCounter",
+            "nextPositionID < _guardCounter",
+            "nextPositionID != _guardCounter"
+        ],
+        "after_preds": [
+            "nextPositionID < _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID <= glbDebtVal",
+            "nextPositionID < glbDebtVal",
+            "nextPositionID != glbDebtVal"
+        ],
+        "after_preds": [
+            "nextPositionID < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(nextPositionID)",
+            "_guardCounter > ori(nextPositionID)",
+            "_guardCounter != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "_guardCounter > ori(nextPositionID)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(_guardCounter)",
+            "_guardCounter > ori(_guardCounter)",
+            "_guardCounter != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_guardCounter > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter <= glbDebtVal",
+            "_guardCounter < glbDebtVal",
+            "_guardCounter != glbDebtVal"
+        ],
+        "after_preds": [
+            "_guardCounter < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(nextPositionID) <= glbDebtVal",
+            "ori(nextPositionID) < glbDebtVal",
+            "ori(nextPositionID) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(nextPositionID) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_guardCounter) <= glbDebtVal",
+            "ori(_guardCounter) < glbDebtVal",
+            "ori(_guardCounter) != glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(_guardCounter) < glbDebtVal"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) > 0",
+            "ori(decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals > 0",
+            "decimals == 18"
+        ],
+        "after_preds": [
+            "decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(decimals) == decimals",
+            "ori(decimals) >= decimals",
+            "ori(decimals) <= decimals"
+        ],
+        "after_preds": [
+            "ori(decimals) == decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= _totalSupply",
+            "ori(reservePool) < _totalSupply",
+            "ori(reservePool) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(reservePool) < _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(reservePool) <= Sum(_balances[...])",
+            "ori(reservePool) < Sum(_balances[...])",
+            "ori(reservePool) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(reservePool) < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= reservePool",
+            "_totalSupply > reservePool",
+            "_totalSupply != reservePool"
+        ],
+        "after_preds": [
+            "_totalSupply > reservePool"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _guardCounter",
+            "_totalSupply > _guardCounter",
+            "_totalSupply != _guardCounter"
+        ],
+        "after_preds": [
+            "_totalSupply > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_guardCounter)",
+            "_totalSupply > ori(_guardCounter)",
+            "_totalSupply != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "_totalSupply > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "reservePool <= Sum(_balances[...])",
+            "reservePool < Sum(_balances[...])",
+            "reservePool != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "reservePool < Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _guardCounter",
+            "Sum(_balances[...]) > _guardCounter",
+            "Sum(_balances[...]) != _guardCounter"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(_guardCounter)",
+            "Sum(_balances[...]) > ori(_guardCounter)",
+            "Sum(_balances[...]) != ori(_guardCounter)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > ori(_guardCounter)"
+        ]
+    },
+    {
+        "before_preds": [
+            "nextPositionID <= _guardCounter",
+            "nextPositionID < _guardCounter",
+            "nextPositionID != _guardCounter"
+        ],
+        "after_preds": [
+            "nextPositionID < _guardCounter"
+        ]
+    },
+    {
+        "before_preds": [
+            "_guardCounter >= ori(nextPositionID)",
+            "_guardCounter > ori(nextPositionID)",
+            "_guardCounter != ori(nextPositionID)"
+        ],
+        "after_preds": [
+            "_guardCounter > ori(nextPositionID)"
+        ]
+    }
+]
