@@ -1,0 +1,168 @@
+[
+    {
+        "before_preds": [
+            "ori(allowed[msg.sender][spender]) <= tokens",
+            "ori(allowed[msg.sender][spender]) < tokens",
+            "ori(allowed[msg.sender][spender]) != tokens"
+        ],
+        "after_preds": [
+            "ori(allowed[msg.sender][spender]) != tokens"
+        ]
+    },
+    {
+        "before_preds": [
+            "allowed[msg.sender][spender] >= ori(allowed[msg.sender][spender])",
+            "allowed[msg.sender][spender] > ori(allowed[msg.sender][spender])",
+            "allowed[msg.sender][spender] != ori(allowed[msg.sender][spender])"
+        ],
+        "after_preds": [
+            "allowed[msg.sender][spender] != ori(allowed[msg.sender][spender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "allowed[msg.sender][spender] == tokens",
+            "allowed[msg.sender][spender] >= tokens",
+            "allowed[msg.sender][spender] <= tokens"
+        ],
+        "after_preds": [
+            "allowed[msg.sender][spender] == tokens"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(allowed[msg.sender][spender]) <= Sum(allowed[msg.sender][...])",
+            "ori(allowed[msg.sender][spender]) < Sum(allowed[msg.sender][...])",
+            "ori(allowed[msg.sender][spender]) != Sum(allowed[msg.sender][...])"
+        ],
+        "after_preds": [
+            "ori(allowed[msg.sender][spender]) < Sum(allowed[msg.sender][...])",
+            "ori(allowed[msg.sender][spender]) != Sum(allowed[msg.sender][...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(allowed[msg.sender][...])) <= Sum(allowed[msg.sender][...])",
+            "ori(Sum(allowed[msg.sender][...])) < Sum(allowed[msg.sender][...])",
+            "ori(Sum(allowed[msg.sender][...])) != Sum(allowed[msg.sender][...])"
+        ],
+        "after_preds": [
+            "ori(Sum(allowed[msg.sender][...])) < Sum(allowed[msg.sender][...])",
+            "ori(Sum(allowed[msg.sender][...])) != Sum(allowed[msg.sender][...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) >= ori(balances[to])",
+            "ori(Sum(balances[...])) > ori(balances[to])",
+            "ori(Sum(balances[...])) != ori(balances[to])"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) != ori(balances[to])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) >= tokens",
+            "ori(Sum(balances[...])) > tokens",
+            "ori(Sum(balances[...])) != tokens"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) != tokens"
+        ]
+    },
+    {
+        "before_preds": [
+            "balances[to] <= ori(Sum(balances[...]))",
+            "balances[to] < ori(Sum(balances[...]))",
+            "balances[to] != ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "balances[to] < ori(Sum(balances[...]))",
+            "balances[to] != ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "balances[to] >= ori(balances[to])",
+            "balances[to] > ori(balances[to])",
+            "balances[to] != ori(balances[to])"
+        ],
+        "after_preds": [
+            "balances[to] != ori(balances[to])"
+        ]
+    },
+    {
+        "before_preds": [
+            "balances[to] <= Sum(balances[...])",
+            "balances[to] < Sum(balances[...])",
+            "balances[to] != Sum(balances[...])"
+        ],
+        "after_preds": [
+            "balances[to] < Sum(balances[...])",
+            "balances[to] != Sum(balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(balances[msg.sender]) >= balances[msg.sender]",
+            "ori(balances[msg.sender]) > balances[msg.sender]",
+            "ori(balances[msg.sender]) != balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(balances[msg.sender]) > balances[msg.sender]",
+            "ori(balances[msg.sender]) != balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) >= balances[msg.sender]",
+            "ori(Sum(balances[...])) > balances[msg.sender]",
+            "ori(Sum(balances[...])) != balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) != balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(balances[to]) <= Sum(balances[...])",
+            "ori(balances[to]) < Sum(balances[...])",
+            "ori(balances[to]) != Sum(balances[...])"
+        ],
+        "after_preds": [
+            "ori(balances[to]) < Sum(balances[...])",
+            "ori(balances[to]) != Sum(balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) >= tokens",
+            "Sum(balances[...]) > tokens",
+            "Sum(balances[...]) != tokens"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) != tokens"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) >= balances[msg.sender]",
+            "Sum(balances[...]) > balances[msg.sender]",
+            "Sum(balances[...]) != balances[msg.sender]"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) != balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    }
+]

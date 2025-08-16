@@ -1,0 +1,6428 @@
+[
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0",
+            "amount == 79228162514000000000000000000"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 79228162514000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount one of [79228162514000000000000000000]"
+        ],
+        "after_preds": [
+            "amount one of [79228162514000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "spender != 0"
+        ],
+        "after_preds": [
+            "spender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_amount > 0"
+        ],
+        "after_preds": [
+            "_amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) one of [0,1611890956,1612413709,1612672271,1612709011,1612516662]"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) one of [0,1611890956,1612413709,1612672271,1612709011,1612516662]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [0,494036168419,501354600,72,9986072971,9975667988]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [0,494036168419,501354600,72,9986072971,9975667988]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) >= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) <= ori(Sum(userDepoistTime[...]))"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) <= ori(Sum(userDepoistTime[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) <= ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "userDepoistTime[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "userDepoistTime[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != ori(earnLowerlimit)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != ori(earnLowerlimit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != earnLowerlimit"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) != _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= _totalSupply"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] <= _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != earnLowerlimit"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply != earnLowerlimit"
+        ],
+        "after_preds": [
+            "_totalSupply != earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) >= userDepoistTime[msg.sender]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) >= userDepoistTime[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) != userDepoistTime[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) != userDepoistTime[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [37084585504,22572762120,29022429166,43534554260,8061100949,3224014173,32247272285]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [37084585504,22572762120,29022429166,43534554260,8061100949,3224014173,32247272285]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [82641458184]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [82641458184]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [82641458184,493442357552,1013641382544,851093071954,636030155668,186161256091,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [37084585504,22572762120,29022429166,43534554260,8061100949,3224014173,32247272285]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [37084585504,22572762120,29022429166,43534554260,8061100949,3224014173,32247272285]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [37084585504]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [37084585504]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [50815436600,82641458184]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [50815436600,82641458184]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "_earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "_earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [3224014173,1611989982]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [3224014173,1611989982]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [50815436600,82641458184]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [50815436600,82641458184]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(governance)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [50815436600,82641458184]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [50815436600,82641458184]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [50815436600]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [50815436600]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [50815436600,31826021500,84]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [50815436600,31826021500,84]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [50815436600,82641458184]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [50815436600,82641458184]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [3224014173,1611989982]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [3224014173,1611989982]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [5]"
+        ],
+        "after_preds": [
+            "fee1 one of [5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [3224014173]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [3224014173]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [1611989982,1612024191]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [1611989982,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == governance"
+        ],
+        "after_preds": [
+            "msg.sender == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 1310289998969"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [1310289998969]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 41922035526"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 41922035526"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [41922035526]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [41922035526]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 1310289998969"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [1310289998969]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(timelock)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 1310289998969"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [1310289998969]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [1310289998969]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [0,4,6,9,17,23,26,29,36,43,47,73,75,1300417580500,84,88,92,93,97,98,9872417260]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [0,4,6,9,17,23,26,29,36,43,47,73,75,1300417580500,84,88,92,93,97,98,9872417260]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 1310289998969"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [1310289998969]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 41922035526"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 41922035526"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [41922035526]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [41922035526]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 10"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 10"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10]"
+        ],
+        "after_preds": [
+            "fee1 one of [10]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [41922035526]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [41922035526]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [1612433282,1612411910,1612393607,1612411674,1612422047,1612497702,1612414375,1612493096,1612411957,1612410556,1612413117,1612399811,1612435272,1612419407,1612421072,1612459224,1611989982,1612363871,1612399975,1612358764,1612364141,1612418803,1612408564,1612444665,1612414461,1612024191]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [1612433282,1612411910,1612393607,1612411674,1612422047,1612497702,1612414375,1612493096,1612411957,1612410556,1612413117,1612399811,1612435272,1612419407,1612421072,1612459224,1611989982,1612363871,1612399975,1612358764,1612364141,1612418803,1612408564,1612444665,1612414461,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == timelock"
+        ],
+        "after_preds": [
+            "msg.sender == timelock"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 851093071954"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [851093071954]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != 0"
+        ],
+        "after_preds": [
+            "_governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 32247272285"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 32247272285"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [32247272285]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [32247272285]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 851093071954"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [851093071954]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != msg.sender"
+        ],
+        "after_preds": [
+            "_governance != msg.sender"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance != ori(governance)"
+        ],
+        "after_preds": [
+            "_governance != ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(governance)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(governance)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 851093071954"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [851093071954]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [851093071954]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [0,4,6,9,18,23,26,29,36,73,75,77,84,115213479893,88,92,93,97,1373058547,734506532600]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [0,4,6,9,18,23,26,29,36,73,75,77,84,115213479893,88,92,93,97,1373058547,734506532600]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 851093071954"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [851093071954]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 32247272285"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 32247272285"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [32247272285]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [32247272285]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [5]"
+        ],
+        "after_preds": [
+            "fee1 one of [5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [32247272285]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [32247272285]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [1612411910,1612393607,1612411674,1612422047,1612414375,1612411957,1612410556,1612413117,1612399811,1612419407,1612421072,1611989982,1612363871,1612399975,1612358764,1612364141,1612418803,1612408564,1612414461,1612024191]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [1612411910,1612393607,1612411674,1612422047,1612414375,1612411957,1612410556,1612413117,1612399811,1612419407,1612421072,1611989982,1612363871,1612399975,1612358764,1612364141,1612418803,1612408564,1612414461,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "_governance == governance"
+        ],
+        "after_preds": [
+            "_governance == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != governance"
+        ],
+        "after_preds": [
+            "msg.sender != governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != governance"
+        ],
+        "after_preds": [
+            "ori(governance) != governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount one of [4673850400,19974784100,120385957800,499026405900,31826021500]"
+        ],
+        "after_preds": [
+            "amount one of [4673850400,19974784100,120385957800,499026405900,31826021500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[recipient]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[recipient]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[recipient]) one of [36,77,18,84,88]"
+        ],
+        "after_preds": [
+            "ori(_balances[recipient]) one of [36,77,18,84,88]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "recipient != 0"
+        ],
+        "after_preds": [
+            "recipient != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [38697044728,53210802285,43534554260,3224014173]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [38697044728,53210802285,43534554260,3224014173]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[recipient] > 0"
+        ],
+        "after_preds": [
+            "_balances[recipient] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[recipient] one of [499026405988,120385957836,4673850477,31826021584,19974784118]"
+        ],
+        "after_preds": [
+            "_balances[recipient] one of [499026405988,120385957836,4673850477,31826021584,19974784118]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [1003539015686]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [1003539015686]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [1003539015686,82641458184,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [38697044728,53210802285,43534554260,3224014173]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [38697044728,53210802285,43534554260,3224014173]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [38697044728]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [38697044728]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowances[sender][...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowances[sender][...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowances[sender][...])) one of [79228162513999999970070829900,79228162513999999968173978500,79228162514000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowances[sender][...])) one of [79228162513999999970070829900,79228162513999999968173978500,79228162514000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "sender != 0"
+        ],
+        "after_preds": [
+            "sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "recipient != 0"
+        ],
+        "after_preds": [
+            "recipient != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[sender]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[recipient]) != ori(_balances[sender])"
+        ],
+        "after_preds": [
+            "ori(_balances[recipient]) != ori(_balances[sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "sender != recipient"
+        ],
+        "after_preds": [
+            "sender != recipient"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_allowances[sender][...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_allowances[sender][...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[recipient] > 0"
+        ],
+        "after_preds": [
+            "_balances[recipient] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [860260929152]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _allowances[sender][...] is one of [79228162513999999968173978500]"
+        ],
+        "after_preds": [
+            "elem of _allowances[sender][...] is one of [79228162513999999968173978500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [51597976325]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[sender] != ori(_balances[recipient])"
+        ],
+        "after_preds": [
+            "_balances[sender] != ori(_balances[recipient])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[recipient] != ori(_balances[sender])"
+        ],
+        "after_preds": [
+            "_balances[recipient] != ori(_balances[sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [1003539015686,1114072368810,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [1003539015686,1114072368810,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) one of [1612433282,1612399975,1612393607,1612518734,1612408564,1612024191]"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) one of [1612433282,1612399975,1612393607,1612518734,1612408564,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) one of [499026405988,120385957836,4673850477,31826021584,19974784118,262979296856]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) one of [499026405988,120385957836,4673850477,31826021584,19974784118,262979296856]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [38697044728,43534554260,53210802285,33859705567]"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) one of [38697044728,43534554260,53210802285,33859705567]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [1003539015686,1114072368810,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [1003539015686,1114072368810,1688930447121,1440140604945,1023513799804,1809316404957]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [1408314583361,1003539015686,1189904041133,1688930447121,851093071954,998865165209]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [1408314583361,1003539015686,1189904041133,1688930447121,851093071954,998865165209]"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [1408314583361]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [1408314583361]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] == 0"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] one of [0]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [1408314583361,1003539015686,1189904041133,1688930447121,851093071954,998865165209]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [1408314583361,1003539015686,1189904041133,1688930447121,851093071954,998865165209]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) one of [38697044728,43534554260,53210802285,33859705567]"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) one of [38697044728,43534554260,53210802285,33859705567]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [38697044728]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [38697044728]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "userDepoistTime[msg.sender] > 0"
+        ],
+        "after_preds": [
+            "userDepoistTime[msg.sender] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "userDepoistTime[msg.sender] one of [1612433282,1612399975,1612393607,1612518734,1612408564,1612024191]"
+        ],
+        "after_preds": [
+            "userDepoistTime[msg.sender] one of [1612433282,1612399975,1612393607,1612518734,1612408564,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) == userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) >= userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) <= userDepoistTime[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) == userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) >= userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) <= userDepoistTime[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) == governance"
+        ],
+        "after_preds": [
+            "ori(governance) == governance"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) one of [1000]"
+        ],
+        "after_preds": [
+            "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) one of [3]"
+        ],
+        "after_preds": [
+            "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == true"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) != 0"
+        ],
+        "after_preds": [
+            "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) one of [1]"
+        ],
+        "after_preds": [
+            "ori(fee3) one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(governance) != 0"
+        ],
+        "after_preds": [
+            "ori(governance) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(token) != 0"
+        ],
+        "after_preds": [
+            "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) != 0"
+        ],
+        "after_preds": [
+            "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) one of [9500]"
+        ],
+        "after_preds": [
+            "ori(min) one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(timelock) != 0"
+        ],
+        "after_preds": [
+            "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) one of [10,5]"
+        ],
+        "after_preds": [
+            "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) != ori(earnLowerlimit)"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) != ori(earnLowerlimit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
+            "depositWithdrawInterval one of [60]"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
+            "min one of [9500]"
+        ],
+        "after_preds": [
+            "min one of [9500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 one of [1]"
+        ],
+        "after_preds": [
+            "fee3 one of [1]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock != 0"
+        ],
+        "after_preds": [
+            "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 one of [3]"
+        ],
+        "after_preds": [
+            "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0"
+        ],
+        "after_preds": [
+            "fee1 > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 one of [10,5]"
+        ],
+        "after_preds": [
+            "fee1 one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "controller != 0"
+        ],
+        "after_preds": [
+            "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit > 0"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "earnLowerlimit one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ],
+        "after_preds": [
+            "earnLowerlimit one of [50000000000,500000000000000000000000,1000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeMax one of [1000]"
+        ],
+        "after_preds": [
+            "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of userDepoistTime[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of userDepoistTime[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "RestrictContractCall == true"
+        ],
+        "after_preds": [
+            "RestrictContractCall == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "feeAddress != 0"
+        ],
+        "after_preds": [
+            "feeAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "governance != 0"
+        ],
+        "after_preds": [
+            "governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != ori(earnLowerlimit)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != ori(earnLowerlimit)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) != earnLowerlimit"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ],
+        "after_preds": [
+            "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(feeAddress) == feeAddress"
+        ],
+        "after_preds": [
+            "ori(feeAddress) == feeAddress"
+        ]
+    },
+    {
+        "before_preds": [
+            "token == ori(token)"
+        ],
+        "after_preds": [
+            "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(controller) == controller"
+        ],
+        "after_preds": [
+            "ori(controller) == controller"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply != earnLowerlimit"
+        ],
+        "after_preds": [
+            "_totalSupply != earnLowerlimit"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) >= ori(Sum(userDepoistTime[...]))"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) >= ori(Sum(userDepoistTime[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "timelock == ori(timelock)"
+        ],
+        "after_preds": [
+            "timelock == ori(timelock)"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 >= ori(fee1)"
+        ],
+        "after_preds": [
+            "fee1 >= ori(fee1)"
+        ]
+    }
+]

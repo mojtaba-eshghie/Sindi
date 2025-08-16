@@ -1,0 +1,1064 @@
+[
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) > 0",
+            "ori(Sum(decimals[...])) == 81"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) > 0",
+            "ori(Sum(decimals[...])) == 81"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) one of [81]"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) one of [81]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) != 0"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "sendTo != 0"
+        ],
+        "after_preds": [
+            "sendTo != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0",
+            "amount == 40963957051"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 40963957051"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount one of [40963957051]"
+        ],
+        "after_preds": [
+            "amount one of [40963957051]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(admin)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [81]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [81]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [9,18]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [9,18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin != 0"
+        ],
+        "after_preds": [
+            "pendingAdmin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) > 0",
+            "Sum(decimals[...]) == 81"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) > 0",
+            "Sum(decimals[...]) == 81"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) one of [81]"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) one of [81]"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == admin"
+        ],
+        "after_preds": [
+            "msg.sender == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) == admin"
+        ],
+        "after_preds": [
+            "ori(admin) == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "newAdmin != 0"
+        ],
+        "after_preds": [
+            "newAdmin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) != newAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) != newAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(admin)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of []"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of []"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin != 0"
+        ],
+        "after_preds": [
+            "pendingAdmin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) == 0"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) != pendingAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) != pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == admin"
+        ],
+        "after_preds": [
+            "msg.sender == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "newAdmin == pendingAdmin"
+        ],
+        "after_preds": [
+            "newAdmin == pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) == admin"
+        ],
+        "after_preds": [
+            "ori(admin) == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "newAdmin != 0"
+        ],
+        "after_preds": [
+            "newAdmin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != newAdmin"
+        ],
+        "after_preds": [
+            "msg.sender != newAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(admin)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "newAdmin != ori(admin)"
+        ],
+        "after_preds": [
+            "newAdmin != ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of []"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of []"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin == 0"
+        ],
+        "after_preds": [
+            "pendingAdmin == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) == 0"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != admin"
+        ],
+        "after_preds": [
+            "msg.sender != admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "newAdmin == admin"
+        ],
+        "after_preds": [
+            "newAdmin == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != admin"
+        ],
+        "after_preds": [
+            "ori(admin) != admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "_kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == 0"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) == 0"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_kyberNetworkContract != ori(kyberNetworkContract)"
+        ],
+        "after_preds": [
+            "_kyberNetworkContract != ori(kyberNetworkContract)"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == ori(admin)"
+        ],
+        "after_preds": [
+            "msg.sender == ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of []"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of []"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin == 0"
+        ],
+        "after_preds": [
+            "pendingAdmin == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) == 0"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_kyberNetworkContract == kyberNetworkContract"
+        ],
+        "after_preds": [
+            "_kyberNetworkContract == kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender == admin"
+        ],
+        "after_preds": [
+            "msg.sender == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) != kyberNetworkContract"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) != kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) == admin"
+        ],
+        "after_preds": [
+            "ori(admin) == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "minConversionRate > 0"
+        ],
+        "after_preds": [
+            "minConversionRate > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "destAddress != 0"
+        ],
+        "after_preds": [
+            "destAddress != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) != 0"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "maxDestAmount > 0"
+        ],
+        "after_preds": [
+            "maxDestAmount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "maxDestAmount one of [57896044618658097711785492504343953926634992332820282019728792003956564819968,1606938044258990300000000000000000000000000000000000000000000]"
+        ],
+        "after_preds": [
+            "maxDestAmount one of [57896044618658097711785492504343953926634992332820282019728792003956564819968,1606938044258990300000000000000000000000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "dest != 0"
+        ],
+        "after_preds": [
+            "dest != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "src != 0"
+        ],
+        "after_preds": [
+            "src != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "srcAmount > 0"
+        ],
+        "after_preds": [
+            "srcAmount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "walletId != 0"
+        ],
+        "after_preds": [
+            "walletId != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [161]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [161]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [8,9,18,12]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [8,9,18,12]"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin != 0"
+        ],
+        "after_preds": [
+            "pendingAdmin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ],
+        "after_preds": [
+            "ori(pendingAdmin) == pendingAdmin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ],
+        "after_preds": [
+            "ori(kyberNetworkContract) == kyberNetworkContract"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) == admin"
+        ],
+        "after_preds": [
+            "ori(admin) == admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != 0"
+        ],
+        "after_preds": [
+            "ori(admin) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(admin) != ori(pendingAdmin)"
+        ],
+        "after_preds": [
+            "ori(admin) != ori(pendingAdmin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != 0"
+        ],
+        "after_preds": [
+            "admin != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [0]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of decimals[...] is one of [8,9,18,12]"
+        ],
+        "after_preds": [
+            "elem of decimals[...] is one of [8,9,18,12]"
+        ]
+    },
+    {
+        "before_preds": [
+            "kyberNetworkContract != 0"
+        ],
+        "after_preds": [
+            "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin != ori(admin)"
+        ],
+        "after_preds": [
+            "pendingAdmin != ori(admin)"
+        ]
+    },
+    {
+        "before_preds": [
+            "pendingAdmin != admin"
+        ],
+        "after_preds": [
+            "pendingAdmin != admin"
+        ]
+    },
+    {
+        "before_preds": [
+            "admin != ori(pendingAdmin)"
+        ],
+        "after_preds": [
+            "admin != ori(pendingAdmin)"
+        ]
+    }
+]

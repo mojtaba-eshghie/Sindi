@@ -1,0 +1,32 @@
+[
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ]
+    }
+]

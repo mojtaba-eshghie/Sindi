@@ -1,0 +1,72 @@
+[
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ]
+    }
+]

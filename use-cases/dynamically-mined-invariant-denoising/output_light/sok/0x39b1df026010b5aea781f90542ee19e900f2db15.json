@@ -1,0 +1,92 @@
+[
+    {
+        "func": "cache(size)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "cache(size)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "update()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Q112) == 0",
+            "ori(Q112) one of [0]",
+            "ori(e10) == 0",
+            "ori(e10) one of [0]",
+            "ori(length) == 0",
+            "ori(length) one of [0]",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "msg.sender != 0"
+        ],
+        "postconditions": [
+            "Q112 == 0",
+            "Q112 one of [0]",
+            "e10 == 0",
+            "e10 one of [0]",
+            "length == 0",
+            "length one of [0]",
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112",
+            "e10 == ori(e10)",
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "update()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Q112) == 0",
+            "ori(Q112) one of [0]",
+            "ori(e10) == 0",
+            "ori(e10) one of [0]",
+            "ori(length) == 0",
+            "ori(length) one of [0]"
+        ],
+        "postconditions": [
+            "Q112 == 0",
+            "Q112 one of [0]",
+            "e10 == 0",
+            "e10 one of [0]",
+            "length == 0",
+            "length one of [0]",
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112",
+            "e10 == ori(e10)",
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

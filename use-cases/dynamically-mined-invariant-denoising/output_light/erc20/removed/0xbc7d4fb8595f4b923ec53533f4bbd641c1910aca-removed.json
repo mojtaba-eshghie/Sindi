@@ -1,0 +1,820 @@
+[
+    {
+        "before_preds": [
+            "ori(_allowed[msg.sender][spender]) <= value",
+            "ori(_allowed[msg.sender][spender]) < value",
+            "ori(_allowed[msg.sender][spender]) != value"
+        ],
+        "after_preds": [
+            "ori(_allowed[msg.sender][spender]) != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)",
+            "_lastTokenSupply >= ori(_lastTokenSupply)",
+            "_lastTokenSupply <= ori(_lastTokenSupply)"
+        ],
+        "after_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_allowed[msg.sender][spender]) <= Sum(_allowed[msg.sender][...])",
+            "ori(_allowed[msg.sender][spender]) < Sum(_allowed[msg.sender][...])",
+            "ori(_allowed[msg.sender][spender]) != Sum(_allowed[msg.sender][...])"
+        ],
+        "after_preds": [
+            "ori(_allowed[msg.sender][spender]) < Sum(_allowed[msg.sender][...])",
+            "ori(_allowed[msg.sender][spender]) != Sum(_allowed[msg.sender][...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_allowed[msg.sender][spender]) <= _allowed[msg.sender][spender]",
+            "ori(_allowed[msg.sender][spender]) < _allowed[msg.sender][spender]",
+            "ori(_allowed[msg.sender][spender]) != _allowed[msg.sender][spender]"
+        ],
+        "after_preds": [
+            "ori(_allowed[msg.sender][spender]) < _allowed[msg.sender][spender]",
+            "ori(_allowed[msg.sender][spender]) != _allowed[msg.sender][spender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_allowed[msg.sender][...]) >= ori(Sum(_allowed[msg.sender][...]))",
+            "Sum(_allowed[msg.sender][...]) > ori(Sum(_allowed[msg.sender][...]))",
+            "Sum(_allowed[msg.sender][...]) != ori(Sum(_allowed[msg.sender][...]))"
+        ],
+        "after_preds": [
+            "Sum(_allowed[msg.sender][...]) != ori(Sum(_allowed[msg.sender][...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowed[msg.sender][spender] == value",
+            "_allowed[msg.sender][spender] >= value",
+            "_allowed[msg.sender][spender] <= value"
+        ],
+        "after_preds": [
+            "_allowed[msg.sender][spender] == value"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)",
+            "_burnStopAmount >= ori(_burnStopAmount)",
+            "_burnStopAmount <= ori(_burnStopAmount)"
+        ],
+        "after_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)",
+            "_lastTokenSupply >= ori(_lastTokenSupply)",
+            "_lastTokenSupply <= ori(_lastTokenSupply)"
+        ],
+        "after_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)",
+            "_burnStopAmount >= ori(_burnStopAmount)",
+            "_burnStopAmount <= ori(_burnStopAmount)"
+        ],
+        "after_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) >= ori(_balances[to])",
+            "ori(maxTxAmount) > ori(_balances[to])",
+            "ori(maxTxAmount) != ori(_balances[to])"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) > ori(_balances[to])",
+            "ori(maxTxAmount) != ori(_balances[to])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= ori(_balances[msg.sender])",
+            "ori(maxTxAmount) < ori(_balances[msg.sender])",
+            "ori(maxTxAmount) != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < ori(_balances[msg.sender])",
+            "ori(maxTxAmount) != ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) >= value",
+            "ori(maxTxAmount) > value",
+            "ori(maxTxAmount) != value"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= ori(_totalSupply)",
+            "ori(maxTxAmount) < ori(_totalSupply)",
+            "ori(maxTxAmount) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < ori(_totalSupply)",
+            "ori(maxTxAmount) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) < ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= ori(_balances[msg.sender])",
+            "ori(_balances[to]) < ori(_balances[msg.sender])",
+            "ori(_balances[to]) != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) < ori(_balances[msg.sender])",
+            "ori(_balances[to]) != ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= value",
+            "ori(_balances[to]) < value",
+            "ori(_balances[to]) != value"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= ori(_totalSupply)",
+            "ori(_balances[to]) < ori(_totalSupply)",
+            "ori(_balances[to]) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= ori(Sum(_balances[...]))",
+            "ori(_balances[to]) < ori(Sum(_balances[...]))",
+            "ori(_balances[to]) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) < ori(Sum(_balances[...]))",
+            "ori(_balances[to]) != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= value",
+            "ori(_balances[msg.sender]) > value",
+            "ori(_balances[msg.sender]) != value"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "value <= ori(_totalSupply)",
+            "value < ori(_totalSupply)",
+            "value != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "value < ori(_totalSupply)",
+            "value != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "value <= ori(Sum(_balances[...]))",
+            "value < ori(Sum(_balances[...]))",
+            "value != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "value < ori(Sum(_balances[...]))",
+            "value != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)",
+            "_lastTokenSupply >= ori(_lastTokenSupply)",
+            "_lastTokenSupply <= ori(_lastTokenSupply)"
+        ],
+        "after_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= ori(maxTxAmount)",
+            "_balances[msg.sender] > ori(maxTxAmount)",
+            "_balances[msg.sender] != ori(maxTxAmount)"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(maxTxAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= Sum(_balances[...])",
+            "_balances[msg.sender] < Sum(_balances[...])",
+            "_balances[msg.sender] != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] < Sum(_balances[...])",
+            "_balances[msg.sender] != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= ori(_balances[to])",
+            "_balances[msg.sender] > ori(_balances[to])",
+            "_balances[msg.sender] != ori(_balances[to])"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(_balances[to])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= ori(_balances[msg.sender])",
+            "_balances[msg.sender] < ori(_balances[msg.sender])",
+            "_balances[msg.sender] != ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= _totalSupply",
+            "_balances[msg.sender] < _totalSupply",
+            "_balances[msg.sender] != _totalSupply"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= value",
+            "_balances[msg.sender] > value",
+            "_balances[msg.sender] != value"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= _balances[to]",
+            "_balances[msg.sender] > _balances[to]",
+            "_balances[msg.sender] != _balances[to]"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= ori(_totalSupply)",
+            "_balances[msg.sender] < ori(_totalSupply)",
+            "_balances[msg.sender] != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] >= maxTxAmount",
+            "_balances[msg.sender] > maxTxAmount",
+            "_balances[msg.sender] != maxTxAmount"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[msg.sender] <= ori(Sum(_balances[...]))",
+            "_balances[msg.sender] < ori(Sum(_balances[...]))",
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] < ori(Sum(_balances[...]))",
+            "_balances[msg.sender] != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= Sum(_balances[...])",
+            "ori(maxTxAmount) < Sum(_balances[...])",
+            "ori(maxTxAmount) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < Sum(_balances[...])",
+            "ori(maxTxAmount) != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= _totalSupply",
+            "ori(maxTxAmount) < _totalSupply",
+            "ori(maxTxAmount) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < _totalSupply",
+            "ori(maxTxAmount) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) >= _balances[to]",
+            "ori(maxTxAmount) > _balances[to]",
+            "ori(maxTxAmount) != _balances[to]"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) > _balances[to]",
+            "ori(maxTxAmount) != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(_balances[to])",
+            "Sum(_balances[...]) > ori(_balances[to])",
+            "Sum(_balances[...]) != ori(_balances[to])"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != ori(_balances[to])"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) == _totalSupply",
+            "Sum(_balances[...]) >= _totalSupply",
+            "Sum(_balances[...]) <= _totalSupply"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= value",
+            "Sum(_balances[...]) > value",
+            "Sum(_balances[...]) != value"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= _balances[to]",
+            "Sum(_balances[...]) > _balances[to]",
+            "Sum(_balances[...]) != _balances[to]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) <= ori(_totalSupply)",
+            "Sum(_balances[...]) < ori(_totalSupply)",
+            "Sum(_balances[...]) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= maxTxAmount",
+            "Sum(_balances[...]) > maxTxAmount",
+            "Sum(_balances[...]) != maxTxAmount"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) <= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) < ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= _totalSupply",
+            "ori(_balances[to]) < _totalSupply",
+            "ori(_balances[to]) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= _balances[to]",
+            "ori(_balances[to]) < _balances[to]",
+            "ori(_balances[to]) != _balances[to]"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) < _balances[to]",
+            "ori(_balances[to]) != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[to]) <= maxTxAmount",
+            "ori(_balances[to]) < maxTxAmount",
+            "ori(_balances[to]) != maxTxAmount"
+        ],
+        "after_preds": [
+            "ori(_balances[to]) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _balances[to]",
+            "ori(_balances[msg.sender]) > _balances[to]",
+            "ori(_balances[msg.sender]) != _balances[to]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > _balances[to]",
+            "ori(_balances[msg.sender]) != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= maxTxAmount",
+            "ori(_balances[msg.sender]) > maxTxAmount",
+            "ori(_balances[msg.sender]) != maxTxAmount"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= value",
+            "_totalSupply > value",
+            "_totalSupply != value"
+        ],
+        "after_preds": [
+            "_totalSupply != value"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= _balances[to]",
+            "_totalSupply > _balances[to]",
+            "_totalSupply != _balances[to]"
+        ],
+        "after_preds": [
+            "_totalSupply > _balances[to]",
+            "_totalSupply != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply <= ori(_totalSupply)",
+            "_totalSupply < ori(_totalSupply)",
+            "_totalSupply != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= maxTxAmount",
+            "_totalSupply > maxTxAmount",
+            "_totalSupply != maxTxAmount"
+        ],
+        "after_preds": [
+            "_totalSupply != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply <= ori(Sum(_balances[...]))",
+            "_totalSupply < ori(Sum(_balances[...]))",
+            "_totalSupply != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_totalSupply < ori(Sum(_balances[...]))",
+            "_totalSupply != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)",
+            "_burnStopAmount >= ori(_burnStopAmount)",
+            "_burnStopAmount <= ori(_burnStopAmount)"
+        ],
+        "after_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "value >= _balances[to]",
+            "value > _balances[to]",
+            "value != _balances[to]"
+        ],
+        "after_preds": [
+            "value > _balances[to]",
+            "value != _balances[to]"
+        ]
+    },
+    {
+        "before_preds": [
+            "value <= maxTxAmount",
+            "value < maxTxAmount",
+            "value != maxTxAmount"
+        ],
+        "after_preds": [
+            "value < maxTxAmount",
+            "value != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[to] <= ori(_totalSupply)",
+            "_balances[to] < ori(_totalSupply)",
+            "_balances[to] != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_balances[to] != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[to] <= maxTxAmount",
+            "_balances[to] < maxTxAmount",
+            "_balances[to] != maxTxAmount"
+        ],
+        "after_preds": [
+            "_balances[to] != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[to] <= ori(Sum(_balances[...]))",
+            "_balances[to] < ori(Sum(_balances[...]))",
+            "_balances[to] != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_balances[to] < ori(Sum(_balances[...]))",
+            "_balances[to] != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= maxTxAmount",
+            "ori(_totalSupply) > maxTxAmount",
+            "ori(_totalSupply) != maxTxAmount"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "maxTxAmount <= ori(Sum(_balances[...]))",
+            "maxTxAmount < ori(Sum(_balances[...]))",
+            "maxTxAmount != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "maxTxAmount < ori(Sum(_balances[...]))",
+            "maxTxAmount != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)",
+            "_lastTokenSupply >= ori(_lastTokenSupply)",
+            "_lastTokenSupply <= ori(_lastTokenSupply)"
+        ],
+        "after_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply == ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)",
+            "_burnStopAmount >= ori(_burnStopAmount)",
+            "_burnStopAmount <= ori(_burnStopAmount)"
+        ],
+        "after_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= ori(_totalSupply)",
+            "ori(maxTxAmount) < ori(_totalSupply)",
+            "ori(maxTxAmount) != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < ori(_totalSupply)",
+            "ori(maxTxAmount) != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) < ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < ori(Sum(_balances[...]))",
+            "ori(maxTxAmount) != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)",
+            "_lastTokenSupply >= ori(_lastTokenSupply)",
+            "_lastTokenSupply <= ori(_lastTokenSupply)"
+        ],
+        "after_preds": [
+            "_lastTokenSupply == ori(_lastTokenSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= Sum(_balances[...])",
+            "ori(maxTxAmount) < Sum(_balances[...])",
+            "ori(maxTxAmount) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < Sum(_balances[...])",
+            "ori(maxTxAmount) != Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(maxTxAmount) <= _totalSupply",
+            "ori(maxTxAmount) < _totalSupply",
+            "ori(maxTxAmount) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(maxTxAmount) < _totalSupply",
+            "ori(maxTxAmount) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) == _totalSupply",
+            "Sum(_balances[...]) >= _totalSupply",
+            "Sum(_balances[...]) <= _totalSupply"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) == _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= maxTxAmount",
+            "Sum(_balances[...]) > maxTxAmount",
+            "Sum(_balances[...]) != maxTxAmount"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= maxTxAmount",
+            "_totalSupply > maxTxAmount",
+            "_totalSupply != maxTxAmount"
+        ],
+        "after_preds": [
+            "_totalSupply != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)",
+            "_burnStopAmount >= ori(_burnStopAmount)",
+            "_burnStopAmount <= ori(_burnStopAmount)"
+        ],
+        "after_preds": [
+            "_burnStopAmount == ori(_burnStopAmount)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= maxTxAmount",
+            "ori(_totalSupply) > maxTxAmount",
+            "ori(_totalSupply) != maxTxAmount"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) != maxTxAmount"
+        ]
+    },
+    {
+        "before_preds": [
+            "maxTxAmount <= ori(Sum(_balances[...]))",
+            "maxTxAmount < ori(Sum(_balances[...]))",
+            "maxTxAmount != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "maxTxAmount < ori(Sum(_balances[...]))",
+            "maxTxAmount != ori(Sum(_balances[...]))"
+        ]
+    }
+]

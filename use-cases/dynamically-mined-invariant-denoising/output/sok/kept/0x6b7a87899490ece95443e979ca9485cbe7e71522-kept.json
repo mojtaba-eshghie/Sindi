@@ -1,0 +1,550 @@
+[
+    {
+        "before_preds": [
+            "to != 0"
+        ],
+        "after_preds": [
+            "to != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fromChainID > 0"
+        ],
+        "after_preds": [
+            "fromChainID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fromChainID one of [56,137,250]"
+        ],
+        "after_preds": [
+            "fromChainID one of [56,137,250]"
+        ]
+    },
+    {
+        "before_preds": [
+            "txs != \"\""
+        ],
+        "after_preds": [
+            "txs != \"\""
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == 0"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPC) != 0"
+        ],
+        "after_preds": [
+            "ori(_newMPC) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC != 0"
+        ],
+        "after_preds": [
+            "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_oldMPC == 0"
+        ],
+        "after_preds": [
+            "_oldMPC == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC == ori(_newMPC)"
+        ],
+        "after_preds": [
+            "_newMPC == ori(_newMPC)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ]
+    },
+    {
+        "before_preds": [
+            "to != 0"
+        ],
+        "after_preds": [
+            "to != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "toChainID > 0",
+            "toChainID == 56"
+        ],
+        "after_preds": [
+            "toChainID > 0",
+            "toChainID == 56"
+        ]
+    },
+    {
+        "before_preds": [
+            "toChainID one of [56]"
+        ],
+        "after_preds": [
+            "toChainID one of [56]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0",
+            "amount == 390000000000"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 390000000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount one of [390000000000]"
+        ],
+        "after_preds": [
+            "amount one of [390000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == 0"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPC) != 0"
+        ],
+        "after_preds": [
+            "ori(_newMPC) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC != 0"
+        ],
+        "after_preds": [
+            "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_oldMPC == 0"
+        ],
+        "after_preds": [
+            "_oldMPC == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC == ori(_newMPC)"
+        ],
+        "after_preds": [
+            "_newMPC == ori(_newMPC)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ]
+    },
+    {
+        "before_preds": [
+            "to != 0"
+        ],
+        "after_preds": [
+            "to != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token != 0"
+        ],
+        "after_preds": [
+            "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "toChainID > 0"
+        ],
+        "after_preds": [
+            "toChainID > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "toChainID one of [56,137,250]"
+        ],
+        "after_preds": [
+            "toChainID one of [56,137,250]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == 0"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPC) != 0"
+        ],
+        "after_preds": [
+            "ori(_newMPC) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC != 0"
+        ],
+        "after_preds": [
+            "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_oldMPC == 0"
+        ],
+        "after_preds": [
+            "_oldMPC == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC == ori(_newMPC)"
+        ],
+        "after_preds": [
+            "_newMPC == ori(_newMPC)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == 0"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPC) != 0"
+        ],
+        "after_preds": [
+            "ori(_newMPC) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC != 0"
+        ],
+        "after_preds": [
+            "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime one of [1624013046]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_oldMPC == 0"
+        ],
+        "after_preds": [
+            "_oldMPC == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPC == ori(_newMPC)"
+        ],
+        "after_preds": [
+            "_newMPC == ori(_newMPC)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ],
+        "after_preds": [
+            "ori(_oldMPC) == _oldMPC"
+        ]
+    }
+]

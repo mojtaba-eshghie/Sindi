@@ -1,0 +1,312 @@
+[
+    {
+        "func": "approve(spender,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "approve(spender,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferFrom(sender,recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferFrom(sender,recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "increaseAllowance(spender,addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "increaseAllowance(spender,addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "mint(account,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "msg.sender != 0",
+            "ori(_balances[account]) one of [0,200000000,40000000200000000,20000000200000000]",
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "account != 0",
+            "amount > 0",
+            "amount one of [200000000,20000000000000000,200000000000000000000000000]",
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]",
+            "ori(_balances[account]) <= ori(Sum(_balances[...]))",
+            "ori(_balances[account]) <= ori(_totalSupply)",
+            "ori(Sum(_balances[...])) == ori(_totalSupply)",
+            "ori(Sum(_balances[...])) >= ori(_totalSupply)",
+            "ori(Sum(_balances[...])) <= ori(_totalSupply)"
+        ],
+        "postconditions": [
+            "elem of _balances[...] is one of [200000000]",
+            "elem of _balances[...] is one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]",
+            "_balances[account] > 0",
+            "_balances[account] one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]",
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "_totalSupply > 0",
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "_balances[account] <= Sum(_balances[...])",
+            "_balances[account] >= ori(_balances[account])",
+            "_balances[account] > ori(_balances[account])",
+            "_balances[account] != ori(_balances[account])",
+            "_balances[account] != ori(Sum(_balances[...]))",
+            "_balances[account] <= _totalSupply",
+            "_balances[account] != ori(_totalSupply)",
+            "Sum(_balances[...]) >= ori(_balances[account])",
+            "Sum(_balances[...]) > ori(_balances[account])",
+            "Sum(_balances[...]) != ori(_balances[account])",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) > ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) != ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) == _totalSupply",
+            "Sum(_balances[...]) >= _totalSupply",
+            "Sum(_balances[...]) <= _totalSupply",
+            "Sum(_balances[...]) >= ori(_totalSupply)",
+            "Sum(_balances[...]) > ori(_totalSupply)",
+            "Sum(_balances[...]) != ori(_totalSupply)",
+            "ori(_balances[account]) <= _totalSupply",
+            "ori(_balances[account]) < _totalSupply",
+            "ori(_balances[account]) != _totalSupply",
+            "ori(Sum(_balances[...])) <= _totalSupply",
+            "ori(Sum(_balances[...])) < _totalSupply",
+            "ori(Sum(_balances[...])) != _totalSupply",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply > ori(_totalSupply)",
+            "_totalSupply != ori(_totalSupply)"
+        ],
+        "falsified_preconditions": [
+            "ori(_balances[account]) == ori(Sum(_balances[...]))",
+            "ori(_balances[account]) >= ori(Sum(_balances[...]))",
+            "ori(_balances[account]) == ori(_totalSupply)",
+            "ori(_balances[account]) >= ori(_totalSupply)"
+        ],
+        "falsified_postconditions": [
+            "_balances[account] == Sum(_balances[...])",
+            "_balances[account] >= Sum(_balances[...])",
+            "_balances[account] >= ori(Sum(_balances[...]))",
+            "_balances[account] > ori(Sum(_balances[...]))",
+            "_balances[account] == _totalSupply",
+            "_balances[account] >= _totalSupply",
+            "_balances[account] >= ori(_totalSupply)",
+            "_balances[account] > ori(_totalSupply)"
+        ]
+    },
+    {
+        "func": "mint(account,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burn(amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burn(amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addMinter(account)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "addMinter(account)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "renounceMinter()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "renounceMinter()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "decreaseAllowance(spender,subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "decreaseAllowance(spender,subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(_balances[recipient]) one of [0,5000000000000000000,100000000000000000000000,100000000000000000000,200000000000000000000000,5872550000000000000000,200000000000000000000,55000000000000000000]",
+            "msg.sender != 0",
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 400000000040000000200000000",
+            "ori(Sum(_balances[...])) one of [400000000040000000200000000]",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "amount > 0",
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 400000000040000000200000000",
+            "ori(_totalSupply) one of [400000000040000000200000000]",
+            "recipient != 0",
+            "ori(_balances[recipient]) <= ori(Sum(_balances[...]))",
+            "ori(_balances[recipient]) < ori(Sum(_balances[...]))",
+            "ori(_balances[recipient]) != ori(Sum(_balances[...]))"
+        ],
+        "postconditions": [
+            "elem of _balances[...] is one of [400000000040000000200000000]",
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 400000000040000000200000000",
+            "Sum(_balances[...]) one of [400000000040000000200000000]",
+            "_totalSupply > 0",
+            "_totalSupply == 400000000040000000200000000",
+            "_totalSupply one of [400000000040000000200000000]",
+            "_balances[recipient] > 0",
+            "ori(_balances[recipient]) <= Sum(_balances[...])",
+            "ori(_balances[recipient]) < Sum(_balances[...])",
+            "ori(_balances[recipient]) != Sum(_balances[...])",
+            "ori(_balances[recipient]) <= _balances[recipient]",
+            "ori(_balances[recipient]) < _balances[recipient]",
+            "ori(_balances[recipient]) != _balances[recipient]",
+            "Sum(_balances[...]) == ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) <= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) >= _balances[recipient]",
+            "Sum(_balances[...]) > _balances[recipient]",
+            "Sum(_balances[...]) != _balances[recipient]",
+            "ori(Sum(_balances[...])) >= _balances[recipient]",
+            "ori(Sum(_balances[...])) > _balances[recipient]",
+            "ori(Sum(_balances[...])) != _balances[recipient]",
+            "_totalSupply == ori(_totalSupply)",
+            "_totalSupply >= ori(_totalSupply)",
+            "_totalSupply <= ori(_totalSupply)"
+        ],
+        "falsified_preconditions": [
+            "ori(_balances[recipient]) == 0"
+        ],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "ori(Sum(_balances[...])) == ori(_totalSupply)",
+            "ori(Sum(_balances[...])) >= ori(_totalSupply)",
+            "ori(Sum(_balances[...])) <= ori(_totalSupply)"
+        ],
+        "postconditions": [
+            "elem of _balances[...] is one of [200000000]",
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "_totalSupply > 0",
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]",
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) == _totalSupply",
+            "Sum(_balances[...]) >= _totalSupply",
+            "Sum(_balances[...]) <= _totalSupply",
+            "Sum(_balances[...]) >= ori(_totalSupply)",
+            "ori(Sum(_balances[...])) <= _totalSupply",
+            "_totalSupply >= ori(_totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": [
+            "Sum(_balances[...]) > ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) != ori(Sum(_balances[...]))",
+            "Sum(_balances[...]) > ori(_totalSupply)",
+            "Sum(_balances[...]) != ori(_totalSupply)",
+            "ori(Sum(_balances[...])) < _totalSupply",
+            "ori(Sum(_balances[...])) != _totalSupply",
+            "_totalSupply > ori(_totalSupply)",
+            "_totalSupply != ori(_totalSupply)"
+        ]
+    }
+]

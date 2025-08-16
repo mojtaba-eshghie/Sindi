@@ -1,0 +1,535 @@
+[
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) == 500"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= Sum(_balances[...])",
+            "ori(_totalSupply) > Sum(_balances[...])",
+            "ori(_totalSupply) != Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > Sum(_balances[...])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ],
+        "after_preds": [
+            "ori(Q112) == Q112"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "glbDebtShare >= nextPositionID",
+            "glbDebtShare > nextPositionID",
+            "glbDebtShare != nextPositionID"
+        ],
+        "after_preds": [
+            "glbDebtShare > nextPositionID"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply == 60000000000000"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment >= ori(_gonsPerFragment)",
+            "_gonsPerFragment > ori(_gonsPerFragment)",
+            "_gonsPerFragment != ori(_gonsPerFragment)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > ori(_gonsPerFragment)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "e10 == ori(e10)",
+            "e10 >= ori(e10)",
+            "e10 <= ori(e10)"
+        ],
+        "after_preds": [
+            "e10 == ori(e10)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) >= ori(fee3)",
+            "ori(feeMax) > ori(fee3)",
+            "ori(feeMax) != ori(fee3)"
+        ],
+        "after_preds": [
+            "ori(feeMax) > ori(fee3)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) == ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) >= ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) == ori(Sum(_balances[...]))"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) >= _totalSupply",
+            "ori(_totalSupply) > _totalSupply",
+            "ori(_totalSupply) != _totalSupply"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > _totalSupply"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) >= ori(fee1)",
+            "ori(feeMax) > ori(fee1)",
+            "ori(feeMax) != ori(fee1)"
+        ],
+        "after_preds": [
+            "ori(feeMax) > ori(fee1)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) >= ori(Sum(_gonBalances[...]))",
+            "Sum(_gonBalances[...]) <= ori(Sum(_gonBalances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == ori(Sum(_gonBalances[...]))"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_gonBalances[owner_] > 0",
+            "_gonBalances[owner_] == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "_gonBalances[owner_] == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "Sum(decimals[...]) > 0",
+            "Sum(decimals[...]) == 81"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) == 81"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) >= ori(_balances[sender])",
+            "ori(Sum(_balances[...])) > ori(_balances[sender])",
+            "ori(Sum(_balances[...])) != ori(_balances[sender])"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > ori(_balances[sender])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) == 1000"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "amount > 0",
+            "amount == 40963957051"
+        ],
+        "after_preds": [
+            "amount == 40963957051"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(glbDebtVal) == glbDebtVal",
+            "ori(glbDebtVal) >= glbDebtVal",
+            "ori(glbDebtVal) <= glbDebtVal"
+        ],
+        "after_preds": [
+            "ori(glbDebtVal) == glbDebtVal"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "e10 == ori(e10)",
+            "e10 >= ori(e10)",
+            "e10 <= ori(e10)"
+        ],
+        "after_preds": [
+            "e10 == ori(e10)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(convenienceFee) > 0",
+            "ori(convenienceFee) == 100"
+        ],
+        "after_preds": [
+            "ori(convenienceFee) == 100"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_decimals == ori(_decimals)",
+            "_decimals >= ori(_decimals)",
+            "_decimals <= ori(_decimals)"
+        ],
+        "after_preds": [
+            "_decimals == ori(_decimals)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _balances[msg.sender]",
+            "ori(_balances[msg.sender]) > _balances[msg.sender]",
+            "ori(_balances[msg.sender]) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > _balances[msg.sender]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) > 0",
+            "ori(Sum(decimals[...])) == 81"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == 81"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "toChainID > 0",
+            "toChainID == 56"
+        ],
+        "after_preds": [
+            "toChainID == 56"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _balances[msg.sender]",
+            "ori(_balances[msg.sender]) > _balances[msg.sender]",
+            "ori(_balances[msg.sender]) != _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > _balances[msg.sender]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(fee3) <= fee2",
+            "ori(fee3) < fee2",
+            "ori(fee3) != fee2"
+        ],
+        "after_preds": [
+            "ori(fee3) < fee2"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "id <= _guardCounter",
+            "id < _guardCounter",
+            "id != _guardCounter"
+        ],
+        "after_preds": [
+            "id < _guardCounter"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(split) > 0",
+            "ori(split) == 500"
+        ],
+        "after_preds": [
+            "ori(split) == 500"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ],
+        "after_preds": [
+            "ori(Q112) == Q112"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_gonBalances[...])) == ori(_gonBalances[owner_])",
+            "ori(Sum(_gonBalances[...])) >= ori(_gonBalances[owner_])",
+            "ori(Sum(_gonBalances[...])) <= ori(_gonBalances[owner_])"
+        ],
+        "after_preds": [
+            "ori(Sum(_gonBalances[...])) == ori(_gonBalances[owner_])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) == _gonBalances[owner_]",
+            "Sum(_gonBalances[...]) >= _gonBalances[owner_]",
+            "Sum(_gonBalances[...]) <= _gonBalances[owner_]"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) == _gonBalances[owner_]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_gonsPerFragment >= ori(_gonsPerFragment)",
+            "_gonsPerFragment > ori(_gonsPerFragment)",
+            "_gonsPerFragment != ori(_gonsPerFragment)"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > ori(_gonsPerFragment)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
+        ],
+        "after_preds": [
+            "split == ori(split)"
+        ],
+        "valid_output": true
+    }
+]

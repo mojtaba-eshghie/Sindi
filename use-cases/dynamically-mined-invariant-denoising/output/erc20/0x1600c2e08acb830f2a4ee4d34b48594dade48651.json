@@ -1,0 +1,314 @@
+[
+    {
+        "func": "approve(_spender,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "approve(_spender,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferFrom(_from,_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferFrom(_from,_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burn(_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burn(_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "disableTransfer(_for)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "disableTransfer(_for)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "decreaseApproval(_spender,_subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "decreaseApproval(_spender,_subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "unfreeze()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "msg.sender != 0",
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000",
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000",
+            "ori(totalSupply_) one of [5000000000000000000000000]",
+            "ori(unfrozen) == false",
+            "ori(owner) != 0",
+            "msg.sender == ori(owner)"
+        ],
+        "postconditions": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000",
+            "Sum(balances[...]) one of [5000000000000000000000000]",
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000",
+            "totalSupply_ one of [5000000000000000000000000]",
+            "unfrozen == true",
+            "elem of balances[...] is one of [5000000000000000000000000]",
+            "owner != 0",
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "msg.sender == owner",
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_",
+            "unfrozen != ori(unfrozen)",
+            "ori(owner) == owner"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "unfreeze()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "renounceOwnership()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "renounceOwnership()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burnFrom(_from,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "burnFrom(_from,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "msg.sender != 0",
+            "_value > 0",
+            "_to != 0",
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000",
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]",
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000",
+            "ori(totalSupply_) one of [5000000000000000000000000]",
+            "ori(unfrozen) == true",
+            "ori(owner) != 0"
+        ],
+        "postconditions": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000",
+            "Sum(balances[...]) one of [5000000000000000000000000]",
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000",
+            "totalSupply_ one of [5000000000000000000000000]",
+            "unfrozen == true",
+            "elem of balances[...] is one of [5000000000000000000000000]",
+            "owner != 0",
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_",
+            "unfrozen == ori(unfrozen)",
+            "ori(owner) == owner"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "allowTransfer(_for)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "allowTransfer(_for)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "increaseApproval(_spender,_addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "increaseApproval(_spender,_addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferOwnership(_newOwner)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transferOwnership(_newOwner)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(Sum(balances[...])) > 0",
+            "ori(Sum(balances[...])) == 5000000000000000000000000",
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]",
+            "ori(totalSupply_) > 0",
+            "ori(totalSupply_) == 5000000000000000000000000",
+            "ori(totalSupply_) one of [5000000000000000000000000]",
+            "ori(owner) != 0",
+            "ori(Sum(balances[...])) == ori(totalSupply_)"
+        ],
+        "postconditions": [
+            "Sum(balances[...]) > 0",
+            "Sum(balances[...]) == 5000000000000000000000000",
+            "Sum(balances[...]) one of [5000000000000000000000000]",
+            "totalSupply_ > 0",
+            "totalSupply_ == 5000000000000000000000000",
+            "totalSupply_ one of [5000000000000000000000000]",
+            "unfrozen == true",
+            "elem of balances[...] is one of [5000000000000000000000000]",
+            "owner != 0",
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) == ori(totalSupply_)",
+            "Sum(balances[...]) == totalSupply_",
+            "ori(Sum(balances[...])) == totalSupply_",
+            "ori(totalSupply_) == totalSupply_",
+            "ori(totalSupply_) >= totalSupply_",
+            "ori(totalSupply_) <= totalSupply_",
+            "ori(owner) == owner"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) == ori(totalSupply_)",
+            "ori(Sum(balances[...])) >= ori(totalSupply_)",
+            "ori(Sum(balances[...])) <= ori(totalSupply_)"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == ori(totalSupply_)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))",
+            "Sum(balances[...]) >= ori(Sum(balances[...]))",
+            "Sum(balances[...]) <= ori(Sum(balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(Sum(balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == ori(totalSupply_)",
+            "Sum(balances[...]) >= ori(totalSupply_)",
+            "Sum(balances[...]) <= ori(totalSupply_)"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == ori(totalSupply_)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balances[...]) == totalSupply_",
+            "Sum(balances[...]) >= totalSupply_",
+            "Sum(balances[...]) <= totalSupply_"
+        ],
+        "after_preds": [
+            "Sum(balances[...]) == totalSupply_"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) == totalSupply_",
+            "ori(Sum(balances[...])) >= totalSupply_",
+            "ori(Sum(balances[...])) <= totalSupply_"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) == totalSupply_"
+        ]
+    }
+]

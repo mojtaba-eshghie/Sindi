@@ -1,0 +1,314 @@
+[
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != 0"
+        ],
+        "after_preds": [
+            "ori(sushi) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(factory) != 0"
+        ],
+        "after_preds": [
+            "ori(factory) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) != 0"
+        ],
+        "after_preds": [
+            "ori(weth) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token0 != 0"
+        ],
+        "after_preds": [
+            "token0 != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(bar) != 0"
+        ],
+        "after_preds": [
+            "ori(bar) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "token1 != 0"
+        ],
+        "after_preds": [
+            "token1 != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != ori(weth)"
+        ],
+        "after_preds": [
+            "ori(sushi) != ori(weth)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != token0"
+        ],
+        "after_preds": [
+            "ori(sushi) != token0"
+        ]
+    },
+    {
+        "before_preds": [
+            "weth != 0"
+        ],
+        "after_preds": [
+            "weth != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "sushi != 0"
+        ],
+        "after_preds": [
+            "sushi != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "bar != 0"
+        ],
+        "after_preds": [
+            "bar != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "factory != 0"
+        ],
+        "after_preds": [
+            "factory != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != weth"
+        ],
+        "after_preds": [
+            "ori(sushi) != weth"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) == sushi"
+        ],
+        "after_preds": [
+            "ori(sushi) == sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(factory) == factory"
+        ],
+        "after_preds": [
+            "ori(factory) == factory"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) == weth"
+        ],
+        "after_preds": [
+            "ori(weth) == weth"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) != sushi"
+        ],
+        "after_preds": [
+            "ori(weth) != sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "weth != sushi"
+        ],
+        "after_preds": [
+            "weth != sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "token0 != sushi"
+        ],
+        "after_preds": [
+            "token0 != sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "bar == ori(bar)"
+        ],
+        "after_preds": [
+            "bar == ori(bar)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != 0"
+        ],
+        "after_preds": [
+            "ori(sushi) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(factory) != 0"
+        ],
+        "after_preds": [
+            "ori(factory) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) != 0"
+        ],
+        "after_preds": [
+            "ori(weth) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(bar) != 0"
+        ],
+        "after_preds": [
+            "ori(bar) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != ori(weth)"
+        ],
+        "after_preds": [
+            "ori(sushi) != ori(weth)"
+        ]
+    },
+    {
+        "before_preds": [
+            "weth != 0"
+        ],
+        "after_preds": [
+            "weth != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "sushi != 0"
+        ],
+        "after_preds": [
+            "sushi != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "bar != 0"
+        ],
+        "after_preds": [
+            "bar != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "factory != 0"
+        ],
+        "after_preds": [
+            "factory != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) != weth"
+        ],
+        "after_preds": [
+            "ori(sushi) != weth"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(sushi) == sushi"
+        ],
+        "after_preds": [
+            "ori(sushi) == sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(factory) == factory"
+        ],
+        "after_preds": [
+            "ori(factory) == factory"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) == weth"
+        ],
+        "after_preds": [
+            "ori(weth) == weth"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(weth) != sushi"
+        ],
+        "after_preds": [
+            "ori(weth) != sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "weth != sushi"
+        ],
+        "after_preds": [
+            "weth != sushi"
+        ]
+    },
+    {
+        "before_preds": [
+            "bar == ori(bar)"
+        ],
+        "after_preds": [
+            "bar == ori(bar)"
+        ]
+    }
+]
