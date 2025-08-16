@@ -1,0 +1,410 @@
+[
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[account]) one of [0,200000000,40000000200000000,20000000200000000]"
+        ],
+        "after_preds": [
+            "ori(_balances[account]) one of [0,200000000,40000000200000000,20000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "account != 0"
+        ],
+        "after_preds": [
+            "account != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount one of [200000000,20000000000000000,200000000000000000000000000]"
+        ],
+        "after_preds": [
+            "amount one of [200000000,20000000000000000,200000000000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[account]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[account]) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[account]) <= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "ori(_balances[account]) <= ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [200000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] > 0"
+        ],
+        "after_preds": [
+            "_balances[account] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]"
+        ],
+        "after_preds": [
+            "_balances[account] one of [200000000,20000000200000000,40000000200000000,200000000000000000000000000,200000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_balances[account] <= Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] != ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_balances[account] != ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] <= _totalSupply"
+        ],
+        "after_preds": [
+            "_balances[account] <= _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[account] != ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_balances[account] != ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[recipient]) one of [0,5000000000000000000,100000000000000000000000,100000000000000000000,200000000000000000000000,5872550000000000000000,200000000000000000000,55000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(_balances[recipient]) one of [0,5000000000000000000,100000000000000000000000,100000000000000000000,200000000000000000000000,5872550000000000000000,200000000000000000000,55000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 400000000040000000200000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 400000000040000000200000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0"
+        ],
+        "after_preds": [
+            "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 400000000040000000200000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 400000000040000000200000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "recipient != 0"
+        ],
+        "after_preds": [
+            "recipient != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 400000000040000000200000000"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 400000000040000000200000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 400000000040000000200000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 400000000040000000200000000"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_balances[recipient] > 0"
+        ],
+        "after_preds": [
+            "_balances[recipient] > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) one of [0,200000000,40000000200000000,20000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [200000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0"
+        ],
+        "after_preds": [
+            "_totalSupply > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [200000000,20000000200000000,40000000200000000,200000000040000000200000000,400000000040000000200000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) >= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) >= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) >= ori(_totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) <= _totalSupply"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) <= _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply >= ori(_totalSupply)"
+        ],
+        "after_preds": [
+            "_totalSupply >= ori(_totalSupply)"
+        ]
+    }
+]

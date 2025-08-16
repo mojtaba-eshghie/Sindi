@@ -17,6 +17,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
@@ -45,6 +55,16 @@
         ],
         "after_preds": [
             "ori(_balances[msg.sender]) one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -121,6 +141,18 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
         ],
         "after_preds": [
@@ -169,6 +201,16 @@
     },
     {
         "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "_decimals one of [18]"
         ],
         "after_preds": [
@@ -209,6 +251,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -221,6 +273,18 @@
         ],
         "after_preds": [
             "elem of _balances[...] is one of [142345985557645870700604]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
         ]
     },
     {
@@ -241,6 +305,18 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) != _balances[msg.sender]"
         ],
         "after_preds": [
@@ -253,6 +329,18 @@
         ],
         "after_preds": [
             "Sum(_balances[...]) >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -297,6 +385,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
@@ -317,6 +415,16 @@
         ],
         "after_preds": [
             "ori(_balances[msg.sender]) one of [0,90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -377,6 +485,18 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
         ],
         "after_preds": [
@@ -405,6 +525,16 @@
         ],
         "after_preds": [
             "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
         ]
     },
     {
@@ -441,6 +571,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -453,6 +593,18 @@
         ],
         "after_preds": [
             "elem of _balances[...] is one of [134406668607338084218100]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
         ]
     },
     {
@@ -473,6 +625,18 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) != _balances[msg.sender]"
         ],
         "after_preds": [
@@ -485,6 +649,18 @@
         ],
         "after_preds": [
             "Sum(_balances[...]) >= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -529,6 +705,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
@@ -549,6 +735,16 @@
         ],
         "after_preds": [
             "ori(_totalSupply) one of [100000000000000000000,96790505691543038844835,7682645945411942583280]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -649,6 +845,16 @@
     },
     {
         "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "_decimals one of [18]"
         ],
         "after_preds": [
@@ -689,6 +895,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -701,6 +917,30 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -745,6 +985,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
@@ -753,10 +1003,30 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 142449775039435131775208"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 142449775039435131775208"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) one of [142449775039435131775208]"
         ],
         "after_preds": [
             "ori(_totalSupply) one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -773,6 +1043,16 @@
         ],
         "after_preds": [
             "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 142449775039435131775208"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 142449775039435131775208"
         ]
     },
     {
@@ -833,6 +1113,16 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 142449775039435131775208"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 142449775039435131775208"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [142449775039435131775208]"
         ],
         "after_preds": [
@@ -849,10 +1139,30 @@
     },
     {
         "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 142449775039435131775208"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 142449775039435131775208"
+        ]
+    },
+    {
+        "before_preds": [
             "Sum(_balances[...]) one of [142449775039435131775208]"
         ],
         "after_preds": [
             "Sum(_balances[...]) one of [142449775039435131775208]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
         ]
     },
     {
@@ -897,6 +1207,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -917,6 +1237,30 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -945,6 +1289,16 @@
     },
     {
         "before_preds": [
+            "_shares > 0",
+            "_shares == 10000000000000000000"
+        ],
+        "after_preds": [
+            "_shares > 0",
+            "_shares == 10000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_shares one of [10000000000000000000]"
         ],
         "after_preds": [
@@ -969,10 +1323,30 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
             "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 100000000000000000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 100000000000000000000"
         ]
     },
     {
@@ -985,10 +1359,30 @@
     },
     {
         "before_preds": [
+            "ori(_balances[msg.sender]) > 0",
+            "ori(_balances[msg.sender]) == 100000000000000000000"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > 0",
+            "ori(_balances[msg.sender]) == 100000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_balances[msg.sender]) one of [100000000000000000000]"
         ],
         "after_preds": [
             "ori(_balances[msg.sender]) one of [100000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -1005,6 +1399,16 @@
         ],
         "after_preds": [
             "ori(token) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 100000000000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 100000000000000000000"
         ]
     },
     {
@@ -1041,6 +1445,52 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) == ori(_balances[msg.sender])",
+            "ori(_totalSupply) >= ori(_balances[msg.sender])",
+            "ori(_totalSupply) <= ori(_balances[msg.sender])"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(_balances[msg.sender])",
+            "ori(_totalSupply) >= ori(_balances[msg.sender])",
+            "ori(_totalSupply) <= ori(_balances[msg.sender])"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) == ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) >= ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) == ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) >= ori(Sum(_balances[...]))",
+            "ori(_balances[msg.sender]) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 90000000000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 90000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [90000000000000000000]"
         ],
         "after_preds": [
@@ -1057,10 +1507,30 @@
     },
     {
         "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 90000000000000000000"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 90000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "Sum(_balances[...]) one of [90000000000000000000]"
         ],
         "after_preds": [
             "Sum(_balances[...]) one of [90000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
         ]
     },
     {
@@ -1081,6 +1551,16 @@
     },
     {
         "before_preds": [
+            "_balances[msg.sender] > 0",
+            "_balances[msg.sender] == 90000000000000000000"
+        ],
+        "after_preds": [
+            "_balances[msg.sender] > 0",
+            "_balances[msg.sender] == 90000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_balances[msg.sender] one of [90000000000000000000]"
         ],
         "after_preds": [
@@ -1093,6 +1573,16 @@
         ],
         "after_preds": [
             "controller != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -1113,10 +1603,58 @@
     },
     {
         "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "_totalSupply == _balances[msg.sender]",
+            "_totalSupply >= _balances[msg.sender]",
+            "_totalSupply <= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "_totalSupply == _balances[msg.sender]",
+            "_totalSupply >= _balances[msg.sender]",
+            "_totalSupply <= _balances[msg.sender]"
+        ]
+    },
+    {
+        "before_preds": [
             "token == ori(token)"
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -1149,6 +1687,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
         ]
     },
     {
@@ -1189,6 +1737,16 @@
         ],
         "after_preds": [
             "ori(_balances[msg.sender]) one of [5464367604379091520527,29264013041526968930907]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -1249,6 +1807,18 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply > 0"
         ],
         "after_preds": [
@@ -1285,6 +1855,16 @@
         ],
         "after_preds": [
             "Sum(_balances[...]) one of [128942301002958992697573,99678287961432023766666]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
         ]
     },
     {
@@ -1329,6 +1909,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -1345,10 +1935,46 @@
     },
     {
         "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
             "token == ori(token)"
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {
@@ -1369,10 +1995,30 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 18"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [18]"
         ],
         "after_preds": [
             "ori(_decimals) one of [18]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -1409,6 +2055,18 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) == ori(Sum(_balances[...]))",
+            "ori(_totalSupply) >= ori(Sum(_balances[...]))",
+            "ori(_totalSupply) <= ori(Sum(_balances[...]))"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply > 0"
         ],
         "after_preds": [
@@ -1429,6 +2087,16 @@
         ],
         "after_preds": [
             "Sum(_balances[...]) > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 18"
         ]
     },
     {
@@ -1465,6 +2133,16 @@
     },
     {
         "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "min one of [9500]"
         ],
         "after_preds": [
@@ -1473,10 +2151,46 @@
     },
     {
         "before_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ],
+        "after_preds": [
+            "_totalSupply == Sum(_balances[...])",
+            "_totalSupply >= Sum(_balances[...])",
+            "_totalSupply <= Sum(_balances[...])"
+        ]
+    },
+    {
+        "before_preds": [
             "token == ori(token)"
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ],
+        "after_preds": [
+            "ori(_decimals) == _decimals",
+            "ori(_decimals) >= _decimals",
+            "ori(_decimals) <= _decimals"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
+        ],
+        "after_preds": [
+            "ori(min) == min",
+            "ori(min) >= min",
+            "ori(min) <= min"
         ]
     },
     {

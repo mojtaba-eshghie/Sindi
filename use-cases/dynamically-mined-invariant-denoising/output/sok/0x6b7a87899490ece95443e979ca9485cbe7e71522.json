@@ -68,12 +68,14 @@
             "ori(_newMPC) != 0",
             "msg.value == 0",
             "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) > 0",
             "ori(_newMPCEffectiveTime) == 1624013046",
             "ori(_newMPCEffectiveTime) one of [1624013046]",
             "msg.sender != 0"
         ],
         "postconditions": [
             "_newMPC != 0",
+            "_newMPCEffectiveTime > 0",
             "_newMPCEffectiveTime == 1624013046",
             "_newMPCEffectiveTime one of [1624013046]",
             "_oldMPC == 0",
@@ -154,20 +156,24 @@
         "preconditions": [
             "to != 0",
             "token != 0",
+            "toChainID > 0",
             "toChainID == 56",
             "toChainID one of [56]",
+            "amount > 0",
             "amount == 390000000000",
             "amount one of [390000000000]",
             "ori(_oldMPC) == 0",
             "ori(_newMPC) != 0",
             "msg.value == 0",
             "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) > 0",
             "ori(_newMPCEffectiveTime) == 1624013046",
             "ori(_newMPCEffectiveTime) one of [1624013046]",
             "msg.sender != 0"
         ],
         "postconditions": [
             "_newMPC != 0",
+            "_newMPCEffectiveTime > 0",
             "_newMPCEffectiveTime == 1624013046",
             "_newMPCEffectiveTime one of [1624013046]",
             "_oldMPC == 0",
@@ -363,12 +369,14 @@
             "ori(_newMPC) != 0",
             "msg.value == 0",
             "msg.value one of [0]",
+            "ori(_newMPCEffectiveTime) > 0",
             "ori(_newMPCEffectiveTime) == 1624013046",
             "ori(_newMPCEffectiveTime) one of [1624013046]",
             "msg.sender != 0"
         ],
         "postconditions": [
             "_newMPC != 0",
+            "_newMPCEffectiveTime > 0",
             "_newMPCEffectiveTime == 1624013046",
             "_newMPCEffectiveTime one of [1624013046]",
             "_oldMPC == 0",
@@ -521,11 +529,13 @@
         "preconditions": [
             "ori(_oldMPC) == 0",
             "ori(_newMPC) != 0",
+            "ori(_newMPCEffectiveTime) > 0",
             "ori(_newMPCEffectiveTime) == 1624013046",
             "ori(_newMPCEffectiveTime) one of [1624013046]"
         ],
         "postconditions": [
             "_newMPC != 0",
+            "_newMPCEffectiveTime > 0",
             "_newMPCEffectiveTime == 1624013046",
             "_newMPCEffectiveTime one of [1624013046]",
             "_oldMPC == 0",

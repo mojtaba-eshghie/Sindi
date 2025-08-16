@@ -1,6 +1,16 @@
 [
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -9,10 +19,30 @@
     },
     {
         "before_preds": [
+            "amount > 0",
+            "amount == 79228162514000000000000000000"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 79228162514000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "amount one of [79228162514000000000000000000]"
         ],
         "after_preds": [
             "amount one of [79228162514000000000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -65,6 +95,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -105,6 +145,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -133,6 +183,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -185,6 +245,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -201,10 +271,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -221,6 +311,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -261,6 +361,16 @@
         ],
         "after_preds": [
             "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
         ]
     },
     {
@@ -313,10 +423,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -361,10 +491,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -381,6 +547,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -409,6 +587,16 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -421,6 +609,16 @@
         ],
         "after_preds": [
             "_amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -473,6 +671,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -521,6 +729,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -553,6 +771,16 @@
     },
     {
         "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(depositWithdrawInterval) one of [60]"
         ],
         "after_preds": [
@@ -573,6 +801,16 @@
         ],
         "after_preds": [
             "ori(fee1) one of [10,5]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
         ]
     },
     {
@@ -617,10 +855,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -637,6 +895,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -689,6 +957,16 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
@@ -737,10 +1015,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -817,6 +1115,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(_balances[...])) != _balances[msg.sender]"
         ],
         "after_preds": [
@@ -845,6 +1167,18 @@
         ],
         "after_preds": [
             "ori(earnLowerlimit) != _totalSupply"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -937,10 +1271,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
             "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -977,6 +1331,16 @@
     },
     {
         "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(earnLowerlimit) one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -989,6 +1353,16 @@
         ],
         "after_preds": [
             "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
         ]
     },
     {
@@ -1033,6 +1407,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -1061,6 +1445,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -1121,6 +1515,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -1145,10 +1549,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -1165,6 +1589,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -1225,6 +1659,16 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
@@ -1257,6 +1701,16 @@
     },
     {
         "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "earnLowerlimit one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -1265,10 +1719,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -1313,10 +1787,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -1333,6 +1843,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -1361,10 +1883,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
             "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -1425,6 +1967,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -1461,6 +2013,16 @@
         ],
         "after_preds": [
             "ori(controller) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
         ]
     },
     {
@@ -1513,10 +2075,30 @@
     },
     {
         "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(depositWithdrawInterval) one of [60]"
         ],
         "after_preds": [
             "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
         ]
     },
     {
@@ -1561,6 +2143,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -1593,10 +2185,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -1613,6 +2225,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -1681,10 +2303,30 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
             "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
         ]
     },
     {
@@ -1721,10 +2363,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -1777,6 +2439,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
@@ -1797,6 +2483,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -1833,6 +2531,16 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -1841,10 +2549,30 @@
     },
     {
         "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee2) one of [3]"
         ],
         "after_preds": [
             "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 1310289998969"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 1310289998969"
         ]
     },
     {
@@ -1865,6 +2593,16 @@
     },
     {
         "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(earnLowerlimit) one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -1877,6 +2615,16 @@
         ],
         "after_preds": [
             "ori(feeAddress) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
         ]
     },
     {
@@ -1921,6 +2669,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -1953,10 +2711,30 @@
     },
     {
         "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(depositWithdrawInterval) one of [60]"
         ],
         "after_preds": [
             "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
         ]
     },
     {
@@ -1969,6 +2747,16 @@
     },
     {
         "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 41922035526"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 41922035526"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(userDepoistTime[...])) one of [41922035526]"
         ],
         "after_preds": [
@@ -1977,10 +2765,30 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 1310289998969"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) one of [1310289998969]"
         ],
         "after_preds": [
             "ori(_totalSupply) one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
         ]
     },
     {
@@ -2001,6 +2809,16 @@
     },
     {
         "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 1310289998969"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
             "Sum(_balances[...]) one of [1310289998969]"
         ],
         "after_preds": [
@@ -2009,10 +2827,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -2029,6 +2867,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -2057,10 +2905,30 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 1310289998969"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 1310289998969"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [1310289998969]"
         ],
         "after_preds": [
             "_totalSupply one of [1310289998969]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 41922035526"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 41922035526"
         ]
     },
     {
@@ -2081,10 +2949,30 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
             "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 10"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 10"
         ]
     },
     {
@@ -2105,6 +2993,16 @@
     },
     {
         "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "earnLowerlimit one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -2113,10 +3011,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -2169,10 +3087,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -2189,6 +3143,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -2225,6 +3191,16 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -2233,10 +3209,30 @@
     },
     {
         "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee2) one of [3]"
         ],
         "after_preds": [
             "ori(fee2) one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 851093071954"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0",
+            "ori(Sum(_balances[...])) == 851093071954"
         ]
     },
     {
@@ -2253,6 +3249,16 @@
         ],
         "after_preds": [
             "ori(RestrictContractCall) == true"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
         ]
     },
     {
@@ -2277,6 +3283,16 @@
         ],
         "after_preds": [
             "_governance != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
         ]
     },
     {
@@ -2321,6 +3337,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -2353,10 +3379,30 @@
     },
     {
         "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(depositWithdrawInterval) one of [60]"
         ],
         "after_preds": [
             "ori(depositWithdrawInterval) one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
+        ],
+        "after_preds": [
+            "ori(fee1) > 0",
+            "ori(fee1) == 5"
         ]
     },
     {
@@ -2369,6 +3415,16 @@
     },
     {
         "before_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 32247272285"
+        ],
+        "after_preds": [
+            "ori(Sum(userDepoistTime[...])) > 0",
+            "ori(Sum(userDepoistTime[...])) == 32247272285"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(userDepoistTime[...])) one of [32247272285]"
         ],
         "after_preds": [
@@ -2377,10 +3433,30 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 851093071954"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) one of [851093071954]"
         ],
         "after_preds": [
             "ori(_totalSupply) one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
         ]
     },
     {
@@ -2417,6 +3493,16 @@
     },
     {
         "before_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 851093071954"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0",
+            "Sum(_balances[...]) == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
             "Sum(_balances[...]) one of [851093071954]"
         ],
         "after_preds": [
@@ -2425,10 +3511,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -2445,6 +3551,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -2473,10 +3589,30 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 851093071954"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 851093071954"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [851093071954]"
         ],
         "after_preds": [
             "_totalSupply one of [851093071954]"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 32247272285"
+        ],
+        "after_preds": [
+            "Sum(userDepoistTime[...]) > 0",
+            "Sum(userDepoistTime[...]) == 32247272285"
         ]
     },
     {
@@ -2497,10 +3633,30 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
             "fee2 one of [3]"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
+        ],
+        "after_preds": [
+            "fee1 > 0",
+            "fee1 == 5"
         ]
     },
     {
@@ -2521,6 +3677,16 @@
     },
     {
         "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "earnLowerlimit one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -2529,10 +3695,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -2585,10 +3771,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -2613,6 +3835,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -2649,6 +3883,16 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -2669,6 +3913,16 @@
         ],
         "after_preds": [
             "amount one of [4673850400,19974784100,120385957800,499026405900,31826021500]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -2729,6 +3983,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -2785,6 +4049,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -2813,6 +4087,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -2881,6 +4165,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -2905,10 +4199,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -2941,6 +4255,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -3001,6 +4325,16 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
@@ -3049,10 +4383,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -3097,10 +4451,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -3117,6 +4507,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {
@@ -3145,6 +4547,16 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
@@ -3157,6 +4569,16 @@
         ],
         "after_preds": [
             "amount > 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -3225,6 +4647,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -3265,6 +4697,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -3301,6 +4743,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -3361,6 +4813,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -3401,10 +4863,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -3429,6 +4911,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -3469,6 +4961,16 @@
         ],
         "after_preds": [
             "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
         ]
     },
     {
@@ -3529,10 +5031,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -3577,6 +5099,18 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
             "_balances[sender] != ori(_balances[recipient])"
         ],
         "after_preds": [
@@ -3585,10 +5119,34 @@
     },
     {
         "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -3617,6 +5175,18 @@
     },
     {
         "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(governance) == governance"
         ],
         "after_preds": [
@@ -3641,10 +5211,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
             "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -3681,6 +5271,16 @@
     },
     {
         "before_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) > 0",
+            "ori(earnLowerlimit) == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(earnLowerlimit) one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -3709,6 +5309,16 @@
         ],
         "after_preds": [
             "ori(userDepoistTime[msg.sender]) one of [1612433282,1612399975,1612393607,1612518734,1612408564,1612024191]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
         ]
     },
     {
@@ -3769,6 +5379,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -3797,6 +5417,16 @@
         ],
         "after_preds": [
             "msg.value one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -3857,6 +5487,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -3881,10 +5521,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -3901,6 +5561,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -3977,6 +5647,16 @@
     },
     {
         "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ]
+    },
+    {
+        "before_preds": [
             "fee2 one of [3]"
         ],
         "after_preds": [
@@ -4009,6 +5689,16 @@
     },
     {
         "before_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ],
+        "after_preds": [
+            "earnLowerlimit > 0",
+            "earnLowerlimit == 1000000000000000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "earnLowerlimit one of [1000000000000000000000000]"
         ],
         "after_preds": [
@@ -4017,10 +5707,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -4081,10 +5791,46 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
+        ],
+        "after_preds": [
+            "ori(earnLowerlimit) == earnLowerlimit",
+            "ori(earnLowerlimit) >= earnLowerlimit",
+            "ori(earnLowerlimit) <= earnLowerlimit"
         ]
     },
     {
@@ -4101,6 +5847,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(userDepoistTime[msg.sender]) == userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) >= userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) <= userDepoistTime[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(userDepoistTime[msg.sender]) == userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) >= userDepoistTime[msg.sender]",
+            "ori(userDepoistTime[msg.sender]) <= userDepoistTime[msg.sender]"
         ]
     },
     {
@@ -4129,10 +5887,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ],
+        "after_preds": [
+            "ori(feeMax) > 0",
+            "ori(feeMax) == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(feeMax) one of [1000]"
         ],
         "after_preds": [
             "ori(feeMax) one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
+        ],
+        "after_preds": [
+            "ori(fee2) > 0",
+            "ori(fee2) == 3"
         ]
     },
     {
@@ -4177,6 +5955,16 @@
     },
     {
         "before_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ],
+        "after_preds": [
+            "ori(fee3) > 0",
+            "ori(fee3) == 1"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(fee3) one of [1]"
         ],
         "after_preds": [
@@ -4209,6 +5997,16 @@
     },
     {
         "before_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ],
+        "after_preds": [
+            "ori(min) > 0",
+            "ori(min) == 9500"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(min) one of [9500]"
         ],
         "after_preds": [
@@ -4221,6 +6019,16 @@
         ],
         "after_preds": [
             "ori(timelock) != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
+        ],
+        "after_preds": [
+            "ori(depositWithdrawInterval) > 0",
+            "ori(depositWithdrawInterval) == 60"
         ]
     },
     {
@@ -4249,6 +6057,16 @@
     },
     {
         "before_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ],
+        "after_preds": [
+            "ori(_decimals) > 0",
+            "ori(_decimals) == 6"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_decimals) one of [6]"
         ],
         "after_preds": [
@@ -4273,10 +6091,30 @@
     },
     {
         "before_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ],
+        "after_preds": [
+            "depositWithdrawInterval > 0",
+            "depositWithdrawInterval == 60"
+        ]
+    },
+    {
+        "before_preds": [
             "depositWithdrawInterval one of [60]"
         ],
         "after_preds": [
             "depositWithdrawInterval one of [60]"
+        ]
+    },
+    {
+        "before_preds": [
+            "min > 0",
+            "min == 9500"
+        ],
+        "after_preds": [
+            "min > 0",
+            "min == 9500"
         ]
     },
     {
@@ -4293,6 +6131,16 @@
         ],
         "after_preds": [
             "token != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
+        ],
+        "after_preds": [
+            "fee3 > 0",
+            "fee3 == 1"
         ]
     },
     {
@@ -4317,6 +6165,16 @@
         ],
         "after_preds": [
             "timelock != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
+        ],
+        "after_preds": [
+            "fee2 > 0",
+            "fee2 == 3"
         ]
     },
     {
@@ -4369,10 +6227,30 @@
     },
     {
         "before_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ],
+        "after_preds": [
+            "feeMax > 0",
+            "feeMax == 1000"
+        ]
+    },
+    {
+        "before_preds": [
             "feeMax one of [1000]"
         ],
         "after_preds": [
             "feeMax one of [1000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
+        ],
+        "after_preds": [
+            "_decimals > 0",
+            "_decimals == 6"
         ]
     },
     {
@@ -4433,6 +6311,30 @@
     },
     {
         "before_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ],
+        "after_preds": [
+            "ori(feeMax) == feeMax",
+            "ori(feeMax) >= feeMax",
+            "ori(feeMax) <= feeMax"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ],
+        "after_preds": [
+            "ori(fee2) == fee2",
+            "ori(fee2) >= fee2",
+            "ori(fee2) <= fee2"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(RestrictContractCall) == RestrictContractCall"
         ],
         "after_preds": [
@@ -4469,6 +6371,18 @@
         ],
         "after_preds": [
             "token == ori(token)"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
+        ],
+        "after_preds": [
+            "ori(fee3) == fee3",
+            "ori(fee3) >= fee3",
+            "ori(fee3) <= fee3"
         ]
     },
     {

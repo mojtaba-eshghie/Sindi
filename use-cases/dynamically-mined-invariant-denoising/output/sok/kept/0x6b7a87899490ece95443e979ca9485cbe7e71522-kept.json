@@ -81,6 +81,16 @@
     },
     {
         "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_newMPCEffectiveTime) one of [1624013046]"
         ],
         "after_preds": [
@@ -101,6 +111,16 @@
         ],
         "after_preds": [
             "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
         ]
     },
     {
@@ -153,10 +173,30 @@
     },
     {
         "before_preds": [
+            "toChainID > 0",
+            "toChainID == 56"
+        ],
+        "after_preds": [
+            "toChainID > 0",
+            "toChainID == 56"
+        ]
+    },
+    {
+        "before_preds": [
             "toChainID one of [56]"
         ],
         "after_preds": [
             "toChainID one of [56]"
+        ]
+    },
+    {
+        "before_preds": [
+            "amount > 0",
+            "amount == 390000000000"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 390000000000"
         ]
     },
     {
@@ -201,6 +241,16 @@
     },
     {
         "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_newMPCEffectiveTime) one of [1624013046]"
         ],
         "after_preds": [
@@ -221,6 +271,16 @@
         ],
         "after_preds": [
             "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
         ]
     },
     {
@@ -329,6 +389,16 @@
     },
     {
         "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_newMPCEffectiveTime) one of [1624013046]"
         ],
         "after_preds": [
@@ -349,6 +419,16 @@
         ],
         "after_preds": [
             "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
         ]
     },
     {
@@ -401,6 +481,16 @@
     },
     {
         "before_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ],
+        "after_preds": [
+            "ori(_newMPCEffectiveTime) > 0",
+            "ori(_newMPCEffectiveTime) == 1624013046"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_newMPCEffectiveTime) one of [1624013046]"
         ],
         "after_preds": [
@@ -413,6 +503,16 @@
         ],
         "after_preds": [
             "_newMPC != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
+        ],
+        "after_preds": [
+            "_newMPCEffectiveTime > 0",
+            "_newMPCEffectiveTime == 1624013046"
         ]
     },
     {

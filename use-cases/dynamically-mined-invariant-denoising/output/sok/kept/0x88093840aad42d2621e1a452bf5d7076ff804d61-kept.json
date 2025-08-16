@@ -73,6 +73,16 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) one of [60000000000000]"
         ],
         "after_preds": [
@@ -113,10 +123,30 @@
     },
     {
         "before_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(_gonBalances[...])) one of [115792089237316195423570985008687907853269984665640564039457583980000000000000]"
         ],
         "after_preds": [
             "ori(Sum(_gonBalances[...])) one of [115792089237316195423570985008687907853269984665640564039457583980000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
         ]
     },
     {
@@ -193,6 +223,16 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [60000000000000]"
         ],
         "after_preds": [
@@ -241,6 +281,16 @@
     },
     {
         "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
             "_gonsPerFragment one of [1929868153955269923726183083478131797554499744427342733990959733]"
         ],
         "after_preds": [
@@ -253,6 +303,16 @@
         ],
         "after_preds": [
             "tokenPausedDeprecated == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
         ]
     },
     {
@@ -317,6 +377,18 @@
         ],
         "after_preds": [
             "ori(initializing) == initializing"
+        ]
+    },
+    {
+        "before_preds": [
+            "_allowedFragments[msg.sender][spender] == Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] >= Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] <= Sum(_allowedFragments[msg.sender][...])"
+        ],
+        "after_preds": [
+            "_allowedFragments[msg.sender][spender] == Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] >= Sum(_allowedFragments[msg.sender][...])",
+            "_allowedFragments[msg.sender][spender] <= Sum(_allowedFragments[msg.sender][...])"
         ]
     },
     {
@@ -393,6 +465,16 @@
     },
     {
         "before_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ],
+        "after_preds": [
+            "ori(_totalSupply) > 0",
+            "ori(_totalSupply) == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(_totalSupply) one of [60000000000000]"
         ],
         "after_preds": [
@@ -433,10 +515,30 @@
     },
     {
         "before_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "ori(Sum(_gonBalances[...])) > 0",
+            "ori(Sum(_gonBalances[...])) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(_gonBalances[...])) one of [115792089237316195423570985008687907853269984665640564039457583980000000000000]"
         ],
         "after_preds": [
             "ori(Sum(_gonBalances[...])) one of [115792089237316195423570985008687907853269984665640564039457583980000000000000]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "ori(_gonsPerFragment) > 0",
+            "ori(_gonsPerFragment) == 1929868153955269923726183083478131797554499744427342733990959733"
         ]
     },
     {
@@ -497,6 +599,16 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [60000000000000]"
         ],
         "after_preds": [
@@ -529,6 +641,16 @@
     },
     {
         "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
             "_gonsPerFragment one of [1929868153955269923726183083478131797554499744427342733990959733]"
         ],
         "after_preds": [
@@ -541,6 +663,16 @@
         ],
         "after_preds": [
             "tokenPausedDeprecated == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
         ]
     },
     {
@@ -845,6 +977,16 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [60000000000000]"
         ],
         "after_preds": [
@@ -877,6 +1019,16 @@
     },
     {
         "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
             "_gonsPerFragment one of [1929868153955269923726183083478131797554499744427342733990959733]"
         ],
         "after_preds": [
@@ -889,6 +1041,16 @@
         ],
         "after_preds": [
             "tokenPausedDeprecated == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
         ]
     },
     {
@@ -1223,6 +1385,16 @@
     },
     {
         "before_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ],
+        "after_preds": [
+            "_totalSupply > 0",
+            "_totalSupply == 60000000000000"
+        ]
+    },
+    {
+        "before_preds": [
             "_totalSupply one of [60000000000000]"
         ],
         "after_preds": [
@@ -1255,6 +1427,16 @@
     },
     {
         "before_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ],
+        "after_preds": [
+            "_gonsPerFragment > 0",
+            "_gonsPerFragment == 1929868153955269923726183083478131797554499744427342733990959733"
+        ]
+    },
+    {
+        "before_preds": [
             "_gonsPerFragment one of [1929868153955269923726183083478131797554499744427342733990959733]"
         ],
         "after_preds": [
@@ -1267,6 +1449,16 @@
         ],
         "after_preds": [
             "tokenPausedDeprecated == false"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
+        ],
+        "after_preds": [
+            "Sum(_gonBalances[...]) > 0",
+            "Sum(_gonBalances[...]) == 115792089237316195423570985008687907853269984665640564039457583980000000000000"
         ]
     },
     {

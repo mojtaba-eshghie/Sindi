@@ -1,38 +1,12 @@
 [
     {
         "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
         ],
         "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
+            "split == ori(split)"
         ]
     },
     {
@@ -47,48 +21,12 @@
     },
     {
         "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
         ],
         "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
+            "split == ori(split)"
         ]
     },
     {
@@ -103,48 +41,12 @@
     },
     {
         "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
+            "split == ori(split)",
+            "split >= ori(split)",
+            "split <= ori(split)"
         ],
         "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
+            "split == ori(split)"
         ]
     },
     {
@@ -159,236 +61,12 @@
     },
     {
         "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
-        ]
-    },
-    {
-        "before_preds": [
             "split == ori(split)",
             "split >= ori(split)",
             "split <= ori(split)"
         ],
         "after_preds": [
             "split == ori(split)"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split == ori(split)",
-            "split >= ori(split)",
-            "split <= ori(split)"
-        ],
-        "after_preds": [
-            "split == ori(split)"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split == ori(split)",
-            "split >= ori(split)",
-            "split <= ori(split)"
-        ],
-        "after_preds": [
-            "split == ori(split)"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(split) > 0",
-            "ori(split) == 500"
-        ],
-        "after_preds": [
-            "ori(split) == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) > 0",
-            "ori(convenienceFee) == 100"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split > 0",
-            "split == 500"
-        ],
-        "after_preds": [
-            "split == 500"
-        ]
-    },
-    {
-        "before_preds": [
-            "convenienceFee > 0",
-            "convenienceFee == 100"
-        ],
-        "after_preds": [
-            "convenienceFee == 100"
-        ]
-    },
-    {
-        "before_preds": [
-            "split == ori(split)",
-            "split >= ori(split)",
-            "split <= ori(split)"
-        ],
-        "after_preds": [
-            "split == ori(split)"
-        ]
-    },
-    {
-        "before_preds": [
-            "ori(convenienceFee) == convenienceFee",
-            "ori(convenienceFee) >= convenienceFee",
-            "ori(convenienceFee) <= convenienceFee"
-        ],
-        "after_preds": [
-            "ori(convenienceFee) == convenienceFee"
         ]
     }
 ]

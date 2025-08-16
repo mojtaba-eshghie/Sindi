@@ -40,8 +40,12 @@
             "length == 0",
             "length one of [0]",
             "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112",
             "e10 == ori(e10)",
-            "ori(length) == length"
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
         ],
         "falsified_preconditions": [],
         "falsified_postconditions": []
@@ -75,8 +79,12 @@
             "length == 0",
             "length one of [0]",
             "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112",
             "e10 == ori(e10)",
-            "ori(length) == length"
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
         ],
         "falsified_preconditions": [],
         "falsified_postconditions": []

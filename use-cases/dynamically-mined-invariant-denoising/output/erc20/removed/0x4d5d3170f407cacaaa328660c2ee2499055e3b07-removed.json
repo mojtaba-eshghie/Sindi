@@ -1,0 +1,138 @@
+[
+    {
+        "before_preds": [
+            "ori(balanceOf[_to]) <= ori(Sum(balanceOf[...]))",
+            "ori(balanceOf[_to]) < ori(Sum(balanceOf[...]))",
+            "ori(balanceOf[_to]) != ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "ori(balanceOf[_to]) < ori(Sum(balanceOf[...]))",
+            "ori(balanceOf[_to]) != ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "_value <= ori(Sum(balanceOf[...]))",
+            "_value < ori(Sum(balanceOf[...]))",
+            "_value != ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "_value != ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(balanceOf[_to]) <= Sum(balanceOf[...])",
+            "ori(balanceOf[_to]) < Sum(balanceOf[...])",
+            "ori(balanceOf[_to]) != Sum(balanceOf[...])"
+        ],
+        "after_preds": [
+            "ori(balanceOf[_to]) < Sum(balanceOf[...])",
+            "ori(balanceOf[_to]) != Sum(balanceOf[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "balanceOf[msg.sender] <= Sum(balanceOf[...])",
+            "balanceOf[msg.sender] < Sum(balanceOf[...])",
+            "balanceOf[msg.sender] != Sum(balanceOf[...])"
+        ],
+        "after_preds": [
+            "balanceOf[msg.sender] < Sum(balanceOf[...])",
+            "balanceOf[msg.sender] != Sum(balanceOf[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "balanceOf[msg.sender] <= ori(Sum(balanceOf[...]))",
+            "balanceOf[msg.sender] < ori(Sum(balanceOf[...]))",
+            "balanceOf[msg.sender] != ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "balanceOf[msg.sender] < ori(Sum(balanceOf[...]))",
+            "balanceOf[msg.sender] != ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "totalSupply == ori(totalSupply)",
+            "totalSupply >= ori(totalSupply)",
+            "totalSupply <= ori(totalSupply)"
+        ],
+        "after_preds": [
+            "totalSupply == ori(totalSupply)"
+        ]
+    },
+    {
+        "before_preds": [
+            "_value <= Sum(balanceOf[...])",
+            "_value < Sum(balanceOf[...])",
+            "_value != Sum(balanceOf[...])"
+        ],
+        "after_preds": [
+            "_value != Sum(balanceOf[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "balanceOf[_to] <= Sum(balanceOf[...])",
+            "balanceOf[_to] < Sum(balanceOf[...])",
+            "balanceOf[_to] != Sum(balanceOf[...])"
+        ],
+        "after_preds": [
+            "balanceOf[_to] < Sum(balanceOf[...])",
+            "balanceOf[_to] != Sum(balanceOf[...])"
+        ]
+    },
+    {
+        "before_preds": [
+            "balanceOf[_to] <= ori(Sum(balanceOf[...]))",
+            "balanceOf[_to] < ori(Sum(balanceOf[...]))",
+            "balanceOf[_to] != ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "balanceOf[_to] < ori(Sum(balanceOf[...]))",
+            "balanceOf[_to] != ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balanceOf[...]) == ori(Sum(balanceOf[...]))",
+            "Sum(balanceOf[...]) >= ori(Sum(balanceOf[...]))",
+            "Sum(balanceOf[...]) <= ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "Sum(balanceOf[...]) == ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals == ori(decimals)",
+            "decimals >= ori(decimals)",
+            "decimals <= ori(decimals)"
+        ],
+        "after_preds": [
+            "decimals == ori(decimals)"
+        ]
+    },
+    {
+        "before_preds": [
+            "Sum(balanceOf[...]) == ori(Sum(balanceOf[...]))",
+            "Sum(balanceOf[...]) >= ori(Sum(balanceOf[...]))",
+            "Sum(balanceOf[...]) <= ori(Sum(balanceOf[...]))"
+        ],
+        "after_preds": [
+            "Sum(balanceOf[...]) == ori(Sum(balanceOf[...]))"
+        ]
+    },
+    {
+        "before_preds": [
+            "decimals == ori(decimals)",
+            "decimals >= ori(decimals)",
+            "decimals <= ori(decimals)"
+        ],
+        "after_preds": [
+            "decimals == ori(decimals)"
+        ]
+    }
+]

@@ -1,6 +1,16 @@
 [
     {
         "before_preds": [
+            "ori(Sum(decimals[...])) > 0",
+            "ori(Sum(decimals[...])) == 81"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) > 0",
+            "ori(Sum(decimals[...])) == 81"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Sum(decimals[...])) one of [81]"
         ],
         "after_preds": [
@@ -73,6 +83,16 @@
     },
     {
         "before_preds": [
+            "amount > 0",
+            "amount == 40963957051"
+        ],
+        "after_preds": [
+            "amount > 0",
+            "amount == 40963957051"
+        ]
+    },
+    {
+        "before_preds": [
             "amount one of [40963957051]"
         ],
         "after_preds": [
@@ -121,6 +141,16 @@
     },
     {
         "before_preds": [
+            "Sum(decimals[...]) > 0",
+            "Sum(decimals[...]) == 81"
+        ],
+        "after_preds": [
+            "Sum(decimals[...]) > 0",
+            "Sum(decimals[...]) == 81"
+        ]
+    },
+    {
+        "before_preds": [
             "Sum(decimals[...]) one of [81]"
         ],
         "after_preds": [
@@ -133,6 +163,18 @@
         ],
         "after_preds": [
             "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
         ]
     },
     {
@@ -309,6 +351,18 @@
         ],
         "after_preds": [
             "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
         ]
     },
     {
@@ -505,6 +559,18 @@
     },
     {
         "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(pendingAdmin) == pendingAdmin"
         ],
         "after_preds": [
@@ -685,6 +751,18 @@
         ],
         "after_preds": [
             "kyberNetworkContract != 0"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
+        ],
+        "after_preds": [
+            "ori(Sum(decimals[...])) == Sum(decimals[...])",
+            "ori(Sum(decimals[...])) >= Sum(decimals[...])",
+            "ori(Sum(decimals[...])) <= Sum(decimals[...])"
         ]
     },
     {

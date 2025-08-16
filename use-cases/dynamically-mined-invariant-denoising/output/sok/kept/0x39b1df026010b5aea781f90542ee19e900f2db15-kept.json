@@ -121,6 +121,30 @@
     },
     {
         "before_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ],
+        "after_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ]
+    },
+    {
+        "before_preds": [
             "ori(Q112) == 0"
         ],
         "after_preds": [
@@ -213,6 +237,30 @@
         ],
         "after_preds": [
             "length one of [0]"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ],
+        "after_preds": [
+            "ori(Q112) == Q112",
+            "ori(Q112) >= Q112",
+            "ori(Q112) <= Q112"
+        ]
+    },
+    {
+        "before_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
+        ],
+        "after_preds": [
+            "ori(length) == length",
+            "ori(length) >= length",
+            "ori(length) <= length"
         ]
     }
 ]
