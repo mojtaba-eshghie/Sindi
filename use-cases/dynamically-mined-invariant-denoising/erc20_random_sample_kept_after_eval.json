@@ -1,0 +1,456 @@
+[
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_allowed[msg.sender][spender]) one of [0]"
+        ],
+        "after_preds": [
+            "ori(_allowed[msg.sender][spender]) one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_decimals one of [18]"
+        ],
+        "after_preds": [
+            "_decimals one of [18]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(owner) == owner"
+        ],
+        "after_preds": [
+            "ori(owner) == owner"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [9]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [9]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [4000000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [4000000000000000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "decimals one of [18]"
+        ],
+        "after_preds": [
+            "decimals one of [18]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [10000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [10000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) > 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_allowances[msg.sender][...])) one of [0,115792089237316195423570985008687907853269984665640564039457584007913129639935]"
+        ],
+        "after_preds": [
+            "ori(Sum(_allowances[msg.sender][...])) one of [0,115792089237316195423570985008687907853269984665640564039457584007913129639935]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(allowed[msg.sender][spender]) one of [0]"
+        ],
+        "after_preds": [
+            "ori(allowed[msg.sender][spender]) one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "basePercent one of [100]"
+        ],
+        "after_preds": [
+            "basePercent one of [100]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= _balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) >= _balances[msg.sender]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_to != 0"
+        ],
+        "after_preds": [
+            "_to != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(balances[msg.sender]) >= tokens"
+        ],
+        "after_preds": [
+            "ori(balances[msg.sender]) >= tokens"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_totalSupply one of [1000000000000000]"
+        ],
+        "after_preds": [
+            "_totalSupply one of [1000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(balances[msg.sender]) != balances[to]"
+        ],
+        "after_preds": [
+            "ori(balances[msg.sender]) != balances[to]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_balances[to] >= ori(_balances[to])"
+        ],
+        "after_preds": [
+            "_balances[to] >= ori(_balances[to])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "elem of _balances[...] is one of [4000000000000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of _balances[...] is one of [4000000000000000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(balances[to]) != balances[msg.sender]"
+        ],
+        "after_preds": [
+            "ori(balances[to]) != balances[msg.sender]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_paused == ori(_paused)"
+        ],
+        "after_preds": [
+            "_paused == ori(_paused)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_pendingowner) == _pendingowner"
+        ],
+        "after_preds": [
+            "ori(_pendingowner) == _pendingowner"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) >= ori(_balances[recipient])",
+            "ori(_balances[msg.sender]) > ori(_balances[recipient])",
+            "ori(_balances[msg.sender]) != ori(_balances[recipient])"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) >= ori(_balances[recipient])",
+            "ori(_balances[msg.sender]) > ori(_balances[recipient])",
+            "ori(_balances[msg.sender]) != ori(_balances[recipient])"
+        ],
+        "valid_output": false
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) > 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "basePercent one of [100]"
+        ],
+        "after_preds": [
+            "basePercent one of [100]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_owner == ori(_owner)"
+        ],
+        "after_preds": [
+            "_owner == ori(_owner)"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "Sum(_balances[...]) one of [1000000000000000]"
+        ],
+        "after_preds": [
+            "Sum(_balances[...]) one of [1000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "Sum(_allowances[msg.sender][...]) >= _allowances[msg.sender][spender]"
+        ],
+        "after_preds": [
+            "Sum(_allowances[msg.sender][...]) >= _allowances[msg.sender][spender]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "owner != 0"
+        ],
+        "after_preds": [
+            "owner != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.value == 0"
+        ],
+        "after_preds": [
+            "msg.value == 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[account]) <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "ori(_balances[account]) <= ori(Sum(_balances[...]))"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "after_preds": [
+            "ori(_decimals) one of [18]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_decimals one of [6]"
+        ],
+        "after_preds": [
+            "_decimals one of [6]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) <= _totalSupply"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) <= _totalSupply"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.value one of [0]"
+        ],
+        "after_preds": [
+            "msg.value one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(_balances[...])) one of [10000000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(_balances[...])) one of [10000000000000000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(totalSupply) one of [100000000000000]"
+        ],
+        "after_preds": [
+            "ori(totalSupply) one of [100000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "msg.sender != 0"
+        ],
+        "after_preds": [
+            "msg.sender != 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "decimals one of [0]"
+        ],
+        "after_preds": [
+            "decimals one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "_totalSupply <= ori(Sum(_balances[...]))"
+        ],
+        "after_preds": [
+            "_totalSupply <= ori(Sum(_balances[...]))"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_burnStopAmount) one of [0]"
+        ],
+        "after_preds": [
+            "ori(_burnStopAmount) one of [0]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "elem of balances[...] is one of [1000000000000000000000000000]"
+        ],
+        "after_preds": [
+            "elem of balances[...] is one of [1000000000000000000000000000]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ],
+        "after_preds": [
+            "ori(_balances[msg.sender]) > 0"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(decimals) one of [6]"
+        ],
+        "after_preds": [
+            "ori(decimals) one of [6]"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "balances[msg.sender] + tokens == ori(balances[msg.sender])"
+        ],
+        "after_preds": [
+            "balances[msg.sender] + tokens == ori(balances[msg.sender])"
+        ],
+        "valid_output": true
+    },
+    {
+        "before_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ],
+        "after_preds": [
+            "ori(Sum(balances[...])) one of [5000000000000000000000000]"
+        ],
+        "valid_output": true
+    }
+]

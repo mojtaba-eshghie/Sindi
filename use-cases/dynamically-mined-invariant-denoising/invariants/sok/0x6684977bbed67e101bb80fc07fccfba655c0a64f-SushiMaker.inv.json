@@ -1,0 +1,72 @@
+[
+    {
+        "func": "convert(token0,token1)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "msg.value == 0",
+            "msg.value one of [0]",
+            "ori(sushi) != 0",
+            "ori(factory) != 0",
+            "msg.sender != 0",
+            "ori(weth) != 0",
+            "token0 != 0",
+            "ori(bar) != 0",
+            "token1 != 0",
+            "ori(sushi) != ori(weth)",
+            "ori(sushi) != token0"
+        ],
+        "postconditions": [
+            "weth != 0",
+            "sushi != 0",
+            "bar != 0",
+            "factory != 0",
+            "ori(sushi) != weth",
+            "ori(sushi) == sushi",
+            "ori(factory) == factory",
+            "ori(weth) == weth",
+            "ori(weth) != sushi",
+            "weth != sushi",
+            "token0 != sushi",
+            "bar == ori(bar)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "convert(token0,token1)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "ori(sushi) != 0",
+            "ori(factory) != 0",
+            "ori(weth) != 0",
+            "ori(bar) != 0",
+            "ori(sushi) != ori(weth)"
+        ],
+        "postconditions": [
+            "weth != 0",
+            "sushi != 0",
+            "bar != 0",
+            "factory != 0",
+            "ori(sushi) != weth",
+            "ori(sushi) == sushi",
+            "ori(factory) == factory",
+            "ori(weth) == weth",
+            "ori(weth) != sushi",
+            "weth != sushi",
+            "bar == ori(bar)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

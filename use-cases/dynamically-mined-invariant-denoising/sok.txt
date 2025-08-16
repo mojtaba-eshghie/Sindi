@@ -1,0 +1,50 @@
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x3ec4a6cfe803ee84009ce6e1ecf419c9cb1e8af0-bVault.inv.json
+Predicates before reduction: 1491  
+Predicates after reduction:  924 
+Reduction ratio:  0.6197183098591549  
+Total parsing time:  0.004885196685791016 s 
+Total reduction time:  64.65608477592468 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x6b7a87899490ece95443e979ca9485cbe7e71522-AnyswapV4Router.inv.json
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x39b1df026010b5aea781f90542ee19e900f2db15-Keep3rV2Oracle.inv.json
+Predicates before reduction: 45  
+Predicates after reduction:  33 
+Reduction ratio:  0.7333333333333333  
+Total parsing time:  0.0003199577331542969 s 
+Total reduction time:  1.7243852615356445 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x67b66c99d3eb37fa76aa3ed1ff33e8e39f0b9c7a-Bank.inv.json
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x818e6fecd516ecc3849daf6845e3ec868087b755-KyberNetworkProxy.inv.json
+Predicates before reduction: 141  
+Predicates after reduction:  130 
+Reduction ratio:  0.9219858156028369  
+Total parsing time:  0.0007388591766357422 s 
+Total reduction time:  3.7112464904785156 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x6684977bbed67e101bb80fc07fccfba655c0a64f-SushiMaker.inv.json
+Predicates before reduction: 39  
+Predicates after reduction:  39 
+Reduction ratio:  1.0  
+Total parsing time:  0.00024080276489257812 s 
+Total reduction time:  1.3424432277679443 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x6847259b2b3a4c17e7c43c54409810af48ba5210-ControllerV4.inv.json
+Predicates before reduction: 330  
+Predicates after reduction:  274 
+Reduction ratio:  0.8303030303030303  
+Total parsing time:  0.001226663589477539 s 
+Total reduction time:  11.030735969543457 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0x88093840aad42d2621e1a452bf5d7076ff804d61-UFragments.inv.json
+Predicates before reduction: 299  
+Predicates after reduction:  220 
+Reduction ratio:  0.7357859531772575  
+Total parsing time:  0.0012552738189697266 s 
+Total reduction time:  13.606786012649536 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0xacd43e627e64355f1861cec6d3a6688b31a6f952-yVault.inv.json
+Predicates before reduction: 468  
+Predicates after reduction:  293 
+Reduction ratio:  0.6260683760683761  
+Total parsing time:  0.001814126968383789 s 
+Total reduction time:  20.23685646057129 s 
+/Users/gustavkasche/InvPurge/InvCon+/sok/0xe11fc0b43ab98eb91e9836129d1ee7c3bc95df50-SushiMaker.inv.json
+Predicates before reduction: 56  
+Predicates after reduction:  56 
+Reduction ratio:  1.0  
+Total parsing time:  0.0003132820129394531 s 
+Total reduction time:  2.064401149749756 s 

@@ -1,0 +1,154 @@
+[
+    {
+        "predicates_before_reduction": 95,
+        "predicates_after_reduction": 63,
+        "reduction_ratio": 0.6631578947368421,
+        "total_parsing_time": 0.0005500316619873047,
+        "total_reduction_time": 4.150881290435791,
+        "contract": "./invariants/erc20/0x1600c2e08acb830f2a4ee4d34b48594dade48651-TurexToken.inv.json"
+    },
+    {
+        "predicates_before_reduction": 78,
+        "predicates_after_reduction": 46,
+        "reduction_ratio": 0.5897435897435898,
+        "total_parsing_time": 0.0004525184631347656,
+        "total_reduction_time": 3.722658634185791,
+        "contract": "./invariants/erc20/0x1fee5588cb1de19c70b6ad5399152d8c643fae7b-PhunToken.inv.json"
+    },
+    {
+        "predicates_before_reduction": 175,
+        "predicates_after_reduction": 96,
+        "reduction_ratio": 0.5485714285714286,
+        "total_parsing_time": 0.0008111000061035156,
+        "total_reduction_time": 8.162627458572388,
+        "contract": "./invariants/erc20/0x28e57c27368d1475a3ce49a25c48c40b85e7f7e1-TetherUS.inv.json"
+    },
+    {
+        "predicates_before_reduction": 158,
+        "predicates_after_reduction": 96,
+        "reduction_ratio": 0.6075949367088608,
+        "total_parsing_time": 0.0007655620574951172,
+        "total_reduction_time": 7.1824915409088135,
+        "contract": "./invariants/erc20/0x37a15c92e67686aa268df03d4c881a76340907e8-PIXIUFINANCE.inv.json"
+    },
+    {
+        "predicates_before_reduction": 108,
+        "predicates_after_reduction": 68,
+        "reduction_ratio": 0.6296296296296297,
+        "total_parsing_time": 0.0006222724914550781,
+        "total_reduction_time": 5.119410514831543,
+        "contract": "./invariants/erc20/0x3b2833cd4cfce20c04d0279ccbb8cd827c8bcdbf-Soya.inv.json"
+    },
+    {
+        "predicates_before_reduction": 94,
+        "predicates_after_reduction": 54,
+        "reduction_ratio": 0.574468085106383,
+        "total_parsing_time": 0.0005612373352050781,
+        "total_reduction_time": 4.4623119831085205,
+        "contract": "./invariants/erc20/0x4d5d3170f407cacaaa328660c2ee2499055e3b07-Token.inv.json"
+    },
+    {
+        "predicates_before_reduction": 163,
+        "predicates_after_reduction": 95,
+        "reduction_ratio": 0.5828220858895705,
+        "total_parsing_time": 0.0008013248443603516,
+        "total_reduction_time": 7.675647258758545,
+        "contract": "./invariants/erc20/0x6f2a550259532f7429530dcb93d86269629e3f2a-CloudProtocol.inv.json"
+    },
+    {
+        "predicates_before_reduction": 282,
+        "predicates_after_reduction": 159,
+        "reduction_ratio": 0.5638297872340425,
+        "total_parsing_time": 0.0011723041534423828,
+        "total_reduction_time": 14.168088674545288,
+        "contract": "./invariants/erc20/0x8b68591fe802585a9713bd6ebe75d6c285236c54-DOGEVIPER.inv.json"
+    },
+    {
+        "predicates_before_reduction": 145,
+        "predicates_after_reduction": 93,
+        "reduction_ratio": 0.6413793103448275,
+        "total_parsing_time": 0.0007197856903076172,
+        "total_reduction_time": 6.957494020462036,
+        "contract": "./invariants/erc20/0x923f3fe77732ec3fc5327eb52327b06be4e472f8-KPopKorea.inv.json"
+    },
+    {
+        "predicates_before_reduction": 79,
+        "predicates_after_reduction": 47,
+        "reduction_ratio": 0.5949367088607594,
+        "total_parsing_time": 0.0005147457122802734,
+        "total_reduction_time": 3.806112766265869,
+        "contract": "./invariants/erc20/0x9fdbdd708b6f7247d57e9281e2073d2b88a67a42-FXCO.inv.json"
+    },
+    {
+        "predicates_before_reduction": 111,
+        "predicates_after_reduction": 67,
+        "reduction_ratio": 0.6036036036036037,
+        "total_parsing_time": 0.0005886554718017578,
+        "total_reduction_time": 5.197048187255859,
+        "contract": "./invariants/erc20/0xb2923909b5d8bbe01505121f15a4503b6617dae7-WrappedHeC.inv.json"
+    },
+    {
+        "predicates_before_reduction": 535,
+        "predicates_after_reduction": 311,
+        "reduction_ratio": 0.5813084112149532,
+        "total_parsing_time": 0.0018889904022216797,
+        "total_reduction_time": 25.105873584747314,
+        "contract": "./invariants/erc20/0xbc7d4fb8595f4b923ec53533f4bbd641c1910aca-YakuzaInu.inv.json"
+    },
+    {
+        "predicates_before_reduction": 181,
+        "predicates_after_reduction": 102,
+        "reduction_ratio": 0.56353591160221,
+        "total_parsing_time": 0.0008447170257568359,
+        "total_reduction_time": 8.532665967941284,
+        "contract": "./invariants/erc20/0xc382e04099a435439725bb40647e2b32dc136806-Cogecoin.inv.json"
+    },
+    {
+        "predicates_before_reduction": 164,
+        "predicates_after_reduction": 96,
+        "reduction_ratio": 0.5853658536585366,
+        "total_parsing_time": 0.0007402896881103516,
+        "total_reduction_time": 8.461816787719727,
+        "contract": "./invariants/erc20/0xcc494c97a5d4374ec35bda83570c461c6d6f6079-DFV.inv.json"
+    },
+    {
+        "predicates_before_reduction": 182,
+        "predicates_after_reduction": 99,
+        "reduction_ratio": 0.5439560439560439,
+        "total_parsing_time": 0.0009572505950927734,
+        "total_reduction_time": 8.861835479736328,
+        "contract": "./invariants/erc20/0xce90d1d98b5ca16b79c7eedada2454c2564da59e-TokenMintERC20MintableToken.inv.json"
+    },
+    {
+        "predicates_before_reduction": 160,
+        "predicates_after_reduction": 93,
+        "reduction_ratio": 0.58125,
+        "total_parsing_time": 0.0008347034454345703,
+        "total_reduction_time": 7.377439498901367,
+        "contract": "./invariants/erc20/0xd4ac90e33ac839c29a3d98c807eeef0c4508bee8-YCCToken.inv.json"
+    },
+    {
+        "predicates_before_reduction": 172,
+        "predicates_after_reduction": 97,
+        "reduction_ratio": 0.563953488372093,
+        "total_parsing_time": 0.000843048095703125,
+        "total_reduction_time": 8.214195966720581,
+        "contract": "./invariants/erc20/0xeeb690a0c9958e5375eda5694e754b125a6c972c-EnergyEfficientBitcoin.inv.json"
+    },
+    {
+        "predicates_before_reduction": 206,
+        "predicates_after_reduction": 115,
+        "reduction_ratio": 0.558252427184466,
+        "total_parsing_time": 0.0009043216705322266,
+        "total_reduction_time": 9.881560325622559,
+        "contract": "./invariants/erc20/0xf61ae54b74a37be4fc11e9f1a35021848d996afc-EmaxClassic.inv.json"
+    },
+    {
+        "predicates_before_reduction": 95,
+        "predicates_after_reduction": 63,
+        "reduction_ratio": 0.6631578947368421,
+        "total_parsing_time": 0.0008337497711181641,
+        "total_reduction_time": 6.636699199676514,
+        "contract": "./invariants/erc20/0x1600c2e08acb830f2a4ee4d34b48594dade48651-TurexToken.inv.json"
+    }
+]
