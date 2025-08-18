@@ -1,7 +1,6 @@
 import re
 from typing import List, Tuple
 
-
 class Tokenizer:
     def __init__(self):
         self.token_patterns = [
@@ -17,7 +16,7 @@ class Tokenizer:
             (r'&&', 'AND'),
             (r'\|\|', 'OR'),
             (r'\!', 'NOT'),
-            (r'&', 'BITWISE_AND'),
+            (r'\&', 'BITWISE_AND'),
             (r'\?', 'QUESTION'),
             (r':', 'COLON'),
             (r'\(', 'LPAREN'),
@@ -33,16 +32,19 @@ class Tokenizer:
             (r'\[', 'LBRACKET'),
             (r'\]', 'RBRACKET'),
             (r'\"[^\"]*\"', 'STRING_LITERAL'),
-            (r'\b\d+\.\d+\b', 'FLOAT'),
-            (r'\b\d+\b', 'INTEGER'),
+
+            # ---- Numbers (order matters: scientific before float/int) ----
+            (r'\b\d(?:_?\d)*(?:\.\d(?:_?\d)*)?[eE][+-]?\d+(?:_?\d)*\b', 'SCIENTIFIC'),
+            (r'\b\d(?:_?\d)*\.\d(?:_?\d)*\b', 'FLOAT'),
+            (r'\b\d(?:_?\d)*\b', 'INTEGER'),
+
             (r'\btrue\b', 'TRUE'),
             (r'\bfalse\b', 'FALSE'),
             (r'0x[0-9a-fA-F]{40}', 'ADDRESS_LITERAL'),
             (r'0x[0-9a-fA-F]+', 'BYTES_LITERAL'),
-            (r'\b\d+\s*(seconds|minutes|hours|days|weeks)\b', 'TIME_UNIT'),  # Handle time units
+            (r'\b\d(?:_?\d)*\s*(seconds|minutes|hours|days|weeks)\b', 'TIME_UNIT'),
             (r'[a-zA-Z_]\w*', 'IDENTIFIER'),
-            (r'\d+e\d+', 'SCIENTIFIC'),  # Handle scientific notation
-            (r'\s+', None),  # Let's ignore whitespace(s)
+            (r'\s+', None),
         ]
         self.time_units = {
             'seconds': 1,
@@ -74,13 +76,28 @@ class Tokenizer:
                 if match:
                     if tag:
                         value = match.group(0)
+
                         if tag == 'TIME_UNIT':
-                            number, unit = re.match(r'(\d+)\s*(\w+)', value).groups()
-                            value = str(int(number) * self.time_units[unit])
+                            num, unit = re.match(r'(\d(?:_?\d)*)\s*(\w+)', value).groups()
+                            num = int(num.replace('_', ''))
+                            value = str(num * self.time_units[unit])
                             tag = 'INTEGER'
-                        elif tag == 'SCIENTIFIC':
-                            value = str(int(float(value)))
-                            tag = 'INTEGER'
+
+                        elif tag in ('SCIENTIFIC', 'FLOAT', 'INTEGER'):
+                            # Strip underscores from numeric tokens
+                            value = value.replace('_', '')
+                            if tag == 'SCIENTIFIC':
+                                # Normalize to INTEGER by evaluating (safe enough for our use)
+                                # Example: 9e18 -> 9000000000000000000
+                                try:
+                                    from decimal import Decimal
+                                    value = str(int(Decimal(value)))
+                                    tag = 'INTEGER'
+                                except Exception:
+                                    # Fall back to float path if Decimal fails
+                                    value = str(int(float(value)))
+                                    tag = 'INTEGER'
+
                         tokens.append((value, tag))
                     position = match.end()
                     break
