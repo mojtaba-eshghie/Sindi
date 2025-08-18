@@ -88,7 +88,7 @@ class Parser:
         node = self.factor()
         #debug_print(f"Parsed factor in term: {node}")
 
-        while self.position < len(self.tokens) and self.tokens[self.position][1] in ('MULTIPLY', 'DIVIDE', 'MODULUS'):
+        while self.position < len(self.tokens) and self.tokens[self.position][1] in ('MULTIPLY', 'DIVIDE', 'MODULUS', 'BITWISE_AND'):
             operator = self.tokens[self.position]
             #debug_print(f"Parsing operator in term: {operator}")
             self.position += 1
