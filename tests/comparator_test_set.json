@@ -1,7 +1,12 @@
 [
     {
         "The first predicate is stronger.": [
+            ["x > (-1)", "x != (-10)"],
+            ["x > -1", "x != -1"],
+            ["x > 1", "x != 1"],
             ["a > b", "a >= b"], 
+            ["a > 0", "a >= 0"],
+            ["a > 0", "a != 0"],
             ["msg.sender == msg.origin && a >= b", "msg.sender == msg.origin"],
             ["msg.sender == msg.origin", "msg.sender == msg.origin || a < b"],
             ["a == 1", "a >= 1"],
@@ -55,6 +60,8 @@
             ["x == 0x80ac58cd", "x == type(IERC721).interfaceId"]
         ],
         "The predicates are not equivalent and neither is stronger.": [
+            ["a > 0", "a < 0"],
+            ["a > 0", "a != 1"],
             ["(a > b) && (a <= c)", "(a >= b) && (a < c)"],
             ["msg.sender != msg.origin", "a >= b"],
             ["ethBalances[_msgSender()]<=9e18", "tokens<=remainingTokens"],

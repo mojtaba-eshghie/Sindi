@@ -138,6 +138,11 @@ class Comparator:
             try:
                 return sp.Number(float(ast.value)) if '.' in ast.value else sp.Number(int(ast.value))
             except ValueError:
+                # Map booleans
+                if ast.value.lower() == 'true':
+                    return sp.true
+                if ast.value.lower() == 'false':
+                    return sp.false
                 return sp.Symbol(ast.value.replace('.', '_'))
 
         # Handle indexed attributes: a[b].c
@@ -157,6 +162,20 @@ class Comparator:
 
         args = [self._to_sympy_expr(child) for child in ast.children]
 
+
+        # Normalize ==/!= with boolean literals to X / !X
+        if ast.value in ('==', '!=') and len(args) == 2:
+            L, R = args
+            is_L_bool = L is sp.true or L is sp.false
+            is_R_bool = R is sp.true or R is sp.false
+            if is_L_bool or is_R_bool:
+                bval = True if (L is sp.true or R is sp.true) else False
+                expr = R if is_L_bool else L
+                if ast.value == '==':
+                    return expr if bval else sp.Not(expr)
+                else:  # '!='
+                    return sp.Not(expr) if bval else expr
+
         if ast.value in ('&&', '||', '!', '==', '!=', '>', '<', '>=', '<='):
             return getattr(sp, self._sympy_operator(ast.value))(*args)
         elif ast.value == '/':
@@ -164,9 +183,16 @@ class Comparator:
             # # Failed Use sympy.floor to correctly model Solidity's integer division
             # return sp.floor(args[0] / args[1])
         elif ast.value == '+':
-            return sp.Add(*args)
+            # unary plus: +x  →  x ; n-ary Add otherwise
+            return args[0] if len(args) == 1 else sp.Add(*args)
         elif ast.value == '-':
-            return sp.Add(args[0], -args[1])
+            # Support unary negation and binary subtraction
+            if len(args) == 1:
+                return sp.Mul(sp.Integer(-1), args[0])
+            elif len(args) == 2:
+                return sp.Add(args[0], sp.Mul(sp.Integer(-1), args[1]))
+            else:
+                raise ValueError(f"Invalid number of children for '-' node: {len(args)}")
         elif ast.value == '*':
             return sp.Mul(*args)
         elif '()' in ast.value:
@@ -363,15 +389,15 @@ class Comparator:
         if isinstance(expr1, relational_operators) and isinstance(expr2, relational_operators):
             printer(f'In relational base cases; expr1: {expr1}, expr2: {expr2}', level)
 
-            # Z3+nonneg fast-path before the other branches
-            # Prefer Z3 under non-negative domain if there are variables
-            try:
-                if expr1.free_symbols or expr2.free_symbols:
-                    z3_result = self._z3_implies_with_nonneg(expr1, expr2)
-                    printer(f"Z3 (nonneg) implication {expr1} -> {expr2}: {z3_result}", level)
-                    return z3_result
-            except Exception as e:
-                printer(f"Error (Z3 nonneg implication): {e}", level)
+            # # Z3+nonneg fast-path before the other branches
+            # # Prefer Z3 under non-negative domain if there are variables
+            # try:
+            #     if expr1.free_symbols or expr2.free_symbols:
+            #         z3_result = self._z3_implies_with_nonneg(expr1, expr2)
+            #         printer(f"Z3 (nonneg) implication {expr1} -> {expr2}: {z3_result}", level)
+            #         return z3_result
+            # except Exception as e:
+            #     printer(f"Error (Z3 nonneg implication): {e}", level)
 
             # Check for Eq vs non-Eq comparisons; we don't handle this well, let's return False
             if (isinstance(expr1, sp.Eq) and not isinstance(expr2, sp.Eq)) or (not isinstance(expr1, sp.Eq) and isinstance(expr2, sp.Eq)):
@@ -455,11 +481,33 @@ class Comparator:
                 printer(f'type of expr2.rhs: {type(expr2.rhs)}')
 
 
+                # Detect ANY non-trivial numeric scaling (not just fractions) anywhere:
+                #   - Multiplicative numeric factor != ±1 (e.g., *2, *1.5, *1e18, *1/2)
+                #   - Negative powers (division), e.g., 2**-1
+                def _has_numeric_scale(e) -> bool:
+                    try:
+                        # Direct negative power (e.g., 2**-1) => division
+                        if isinstance(e, sp.Pow) and e.exp.is_number and e.exp < 0:
+                            return True
+                        # Multiplicative factors with a numeric coefficient or negative powers
+                        if isinstance(e, sp.Mul):
+                            for aa in e.args:
+                                if isinstance(aa, sp.Pow) and aa.exp.is_number and aa.exp < 0:
+                                    return True
+                                # Any numeric factor not ±1 (covers integers, floats, rationals)
+                                if isinstance(aa, sp.Number) and aa not in (1, -1):
+                                    return True
+                            # Recurse within Mul arguments
+                            return any(_has_numeric_scale(aa) for aa in e.args)
+                        # Recurse through additive structures without flagging bare integers
+                        if isinstance(e, sp.Add):
+                            return any(_has_numeric_scale(aa) for aa in e.args)
+                    except Exception:
+                        pass
+                    return False
 
-                # even if one of the above lhs and rhs's is sympy.core.mul.Mul and then one of its args is a number or a float bigger or lower than 1, we should switch to z3; we are not handling "1" case since it is working with sympy already, don't want to break a working prototype
-                if any(isinstance(arg, sp.Mul) and any(isinstance(a, (sp.Number, sp.Float)) and (a > 1 or a < 1) for a in arg.args) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
-                    printer(f'One of the arguments is a Mul, switching to z3 ...', level)
-                    
+                if any(_has_numeric_scale(arg) for arg in [expr1.lhs, expr1.rhs, expr2.lhs, expr2.rhs]):
+                    printer(f'Numeric scaling detected; switching to z3 with non-negativity.', level)
 
                     z3_expr1 = self.sympy_to_z3(expr1)
                     z3_expr2 = self.sympy_to_z3(expr2)
@@ -467,26 +515,17 @@ class Comparator:
                     variables = {str(sym) for sym in expr1.free_symbols.union(expr2.free_symbols)}
                     z3_vars = {var: z3.Real(var) for var in variables}  # Convert to Z3 Reals
 
-
-
                     solver = z3.Solver()
-
-                    # Add constraints to ensure all variables are greater than 0
+                    # Solidity-like domains for this numeric monotonicity reasoning
                     for var in z3_vars.values():
-                        solver.add(var >= 0)  
+                        solver.add(var >= 0)
 
+                    # Check UNSAT of expr1 ∧ ¬expr2
                     solver.add(z3_expr1, z3.Not(z3_expr2))
-
-
-
-    
-                    # Check satisfiability
                     if solver.check() == z3.sat:
-                        # If satisfiable, implication does not hold
                         printer(f"Implies {expr1} to {expr2}: False", level=0)
                         return False
                     else:
-                        # If unsatisfiable, implication holds
                         printer(f"Implies {expr1} to {expr2}: True", level=0)
                         return True
                 else: 
