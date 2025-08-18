@@ -115,10 +115,6 @@ def main() -> int:
 
     out_f.close()
 
-    # Summary
-    if args.print-summary:  # typo-safe fallback will be corrected just below
-        pass
-    # argparse stores "--print-summary" as "print_summary"
     if getattr(args, "print_summary", False):
         print("\nVerdict summary:")
         for k, v in sorted(verdict_counts.items(), key=lambda kv: (-kv[1], kv[0])):
