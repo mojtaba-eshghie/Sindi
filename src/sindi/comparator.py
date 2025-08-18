@@ -161,7 +161,9 @@ class Comparator:
             return base[index]
 
         args = [self._to_sympy_expr(child) for child in ast.children]
-
+        
+        if ast.value == '&' and len(args) == 2:
+            return sp.Function('BITAND')(*args)
 
         # Normalize ==/!= with boolean literals to X / !X
         if ast.value in ('==', '!=') and len(args) == 2:
