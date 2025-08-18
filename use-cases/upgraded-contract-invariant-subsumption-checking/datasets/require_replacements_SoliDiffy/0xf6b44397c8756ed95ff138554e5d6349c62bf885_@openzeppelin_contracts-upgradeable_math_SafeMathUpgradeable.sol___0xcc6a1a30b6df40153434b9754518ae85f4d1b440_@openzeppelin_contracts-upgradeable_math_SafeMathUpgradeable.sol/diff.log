@@ -1,0 +1,1222 @@
+New cluster:
+MOVE from contract_body [658,7235]
+------------
+===
+move-tree
+---
+function_definition [4831,4979]
+    function: function [4831,4839]
+    identifier: mod [4840,4843]
+    parameter [4844,4853]
+        type_name: uint256 [4844,4851]
+        identifier: a [4852,4853]
+    parameter [4855,4864]
+        type_name: uint256 [4855,4862]
+        identifier: b [4863,4864]
+    visibility: internal [4866,4874]
+    state_mutability [4875,4879]
+        pure: pure [4875,4879]
+    return_type_definition [4880,4897]
+        returns: returns [4880,4887]
+        parameter [4889,4896]
+            type_name: uint256 [4889,4896]
+    function_body [4898,4979]
+        expression_statement [4908,4951]
+            call_expression [4908,4950]
+                identifier: require [4908,4915]
+                call_argument [4916,4921]
+                    binary_expression [4916,4921]
+                        identifier: b [4916,4917]
+                        comparison_operator: > [4918,4919]
+                        number_literal: 0 [4920,4921]
+                call_argument [4923,4949]
+                    string_literal [4923,4949]
+                        string: "SafeMath: modulo by zero" [4923,4949]
+        return_statement [4960,4973]
+            return: return [4960,4966]
+            binary_expression [4967,4972]
+                identifier: a [4967,4968]
+                %: % [4969,4970]
+                identifier: b [4971,4972]
+to
+contract_body [658,7235]
+at 11
+===
+move-tree
+---
+function_definition [5443,5606]
+    function: function [5443,5451]
+    identifier: sub [5452,5455]
+    parameter [5456,5465]
+        type_name: uint256 [5456,5463]
+        identifier: a [5464,5465]
+    parameter [5467,5476]
+        type_name: uint256 [5467,5474]
+        identifier: b [5475,5476]
+    parameter [5478,5504]
+        type_name: string [5478,5484]
+        memory: memory [5485,5491]
+        identifier: errorMessage [5492,5504]
+    visibility: internal [5506,5514]
+    state_mutability [5515,5519]
+        pure: pure [5515,5519]
+    return_type_definition [5520,5537]
+        returns: returns [5520,5527]
+        parameter [5529,5536]
+            type_name: uint256 [5529,5536]
+    function_body [5538,5606]
+        expression_statement [5548,5578]
+            call_expression [5548,5577]
+                identifier: require [5548,5555]
+                call_argument [5556,5562]
+                    binary_expression [5556,5562]
+                        identifier: b [5556,5557]
+                        comparison_operator: <= [5558,5560]
+                        identifier: a [5561,5562]
+                call_argument [5564,5576]
+                    identifier: errorMessage [5564,5576]
+        return_statement [5587,5600]
+            return: return [5587,5593]
+            binary_expression [5594,5599]
+                identifier: a [5594,5595]
+                arithmetic_operator: - [5596,5597]
+                identifier: b [5598,5599]
+to
+contract_body [658,7235]
+at 7
+
+New cluster:
+===
+insert-node
+---
+function_definition [4455,4583]
+to
+contract_body [658,7235]
+at 11
+------------
+===
+insert-node
+---
+function_body [4522,4583]
+to
+function_definition [4455,4583]
+at 7
+===
+insert-node
+---
+identifier: mod [4464,4467]
+to
+function_definition [4455,4583]
+at 1
+===
+insert-node
+---
+visibility: internal [4490,4498]
+to
+function_definition [4455,4583]
+at 4
+===
+insert-node
+---
+function_definition [4455,4583]
+to
+contract_body [658,7235]
+at 11
+===
+insert-node
+---
+function: function [4455,4463]
+to
+function_definition [4455,4583]
+at 0
+
+New cluster:
+MOVE from function_definition [4455,4583]
+------------
+===
+move-tree
+---
+parameter [7095,7104]
+    type_name: uint256 [7095,7102]
+    identifier: b [7103,7104]
+to
+function_definition [4455,4583]
+at 3
+===
+move-tree
+---
+parameter [7084,7093]
+    type_name: uint256 [7084,7091]
+    identifier: a [7092,7093]
+to
+function_definition [4455,4583]
+at 2
+===
+move-tree
+---
+parameter [7106,7132]
+    type_name: string [7106,7112]
+    memory: memory [7113,7119]
+    identifier: errorMessage [7120,7132]
+to
+function_definition [4831,4979]
+at 4
+===
+move-tree
+---
+return_type_definition [7148,7165]
+    returns: returns [7148,7155]
+    parameter [7157,7164]
+        type_name: uint256 [7157,7164]
+to
+function_definition [4455,4583]
+at 6
+===
+move-tree
+---
+state_mutability [7143,7147]
+    pure: pure [7143,7147]
+to
+function_definition [4455,4583]
+at 5
+
+New cluster:
+MOVE from function_body [3214,3302]
+------------
+===
+move-tree
+---
+return_statement [1244,1265]
+    return: return [1244,1250]
+    tuple_expression [1251,1264]
+        boolean_literal: true [1252,1256]
+        binary_expression [1258,1263]
+            identifier: a [1258,1259]
+            arithmetic_operator: - [1260,1261]
+            identifier: b [1262,1263]
+to
+function_body [3214,3302]
+at 0
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [1909,1927]
+to
+function_body [5538,5606]
+at 1
+------------
+===
+insert-node
+---
+affectation_operator: = [1919,1920]
+to
+variable_declaration_statement [1909,1927]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [1909,1927]
+to
+function_body [5538,5606]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [1937,1946]
+    return: return [1937,1943]
+    identifier: c [1944,1945]
+to
+function_body [5538,5606]
+at 2
+
+New cluster:
+===
+insert-node
+---
+return_statement [3197,3244]
+to
+function_body [4295,4378]
+at 0
+------------
+===
+insert-node
+---
+return_statement [3197,3244]
+to
+function_body [4295,4378]
+at 0
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [3875,3893]
+to
+function_body [6358,6425]
+at 1
+------------
+===
+insert-node
+---
+variable_declaration_statement [3875,3893]
+to
+function_body [6358,6425]
+at 1
+===
+insert-node
+---
+affectation_operator: = [3885,3886]
+to
+variable_declaration_statement [3875,3893]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [3989,3998]
+    return: return [3989,3995]
+    identifier: c [3996,3997]
+to
+function_body [6358,6425]
+at 2
+
+New cluster:
+MOVE from function_body [4522,4583]
+------------
+===
+move-tree
+---
+return_statement [6406,6419]
+    return: return [6406,6412]
+    binary_expression [6413,6418]
+        identifier: a [6413,6414]
+        arithmetic_operator: / [6415,6416]
+        identifier: b [6417,6418]
+to
+function_body [4522,4583]
+at 0
+
+New cluster:
+MOVE from return_statement [1244,1265]
+------------
+===
+move-tree
+---
+call_expression [3224,3273]
+    identifier: require [3224,3231]
+    call_argument [3232,3238]
+        binary_expression [3232,3238]
+            identifier: b [3232,3233]
+            comparison_operator: <= [3234,3236]
+            identifier: a [3237,3238]
+    call_argument [3240,3272]
+        string_literal [3240,3272]
+            string: "SafeMath: subtraction overflow" [3240,3272]
+to
+return_statement [1244,1265]
+at 1
+
+New cluster:
+MOVE from variable_declaration_statement [1909,1927]
+------------
+===
+move-tree
+---
+variable_declaration [886,895]
+    type_name: uint256 [886,893]
+    identifier: c [894,895]
+to
+variable_declaration_statement [1909,1927]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [1909,1927]
+------------
+===
+move-tree
+---
+binary_expression [3290,3295]
+    identifier: a [3290,3291]
+    arithmetic_operator: - [3292,3293]
+    identifier: b [3294,3295]
+to
+variable_declaration_statement [1909,1927]
+at 2
+
+New cluster:
+===
+insert-node
+---
+block_statement [2506,2539]
+to
+if_statement [3626,3647]
+at 2
+------------
+===
+insert-node
+---
+block_statement [2506,2539]
+to
+if_statement [3626,3647]
+at 2
+
+New cluster:
+MOVE from return_statement [3197,3244]
+------------
+===
+move-tree
+---
+return: return [4359,4365]
+to
+return_statement [3197,3244]
+at 0
+===
+move-tree
+---
+binary_expression [4366,4371]
+    identifier: a [4366,4367]
+    arithmetic_operator: / [4368,4369]
+    identifier: b [4370,4371]
+to
+variable_declaration_statement [3875,3893]
+at 2
+
+New cluster:
+MOVE from return_statement [3197,3244]
+------------
+===
+move-tree
+---
+call_expression [4305,4349]
+    identifier: require [4305,4312]
+    call_argument [4313,4318]
+        binary_expression [4313,4318]
+            identifier: b [4313,4314]
+            comparison_operator: > [4315,4316]
+            number_literal: 0 [4317,4318]
+    call_argument [4320,4348]
+        string_literal [4320,4348]
+            string: "SafeMath: division by zero" [4320,4348]
+to
+return_statement [3197,3244]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [3875,3884]
+    type_name: uint256 [3875,3882]
+    identifier: c [3883,3884]
+to
+variable_declaration_statement [3875,3893]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [4539,4576]
+to
+return_statement [6406,6419]
+at 1
+------------
+===
+insert-node
+---
+call_argument [4546,4547]
+to
+call_expression [4539,4576]
+at 2
+===
+insert-node
+---
+call_expression [4539,4576]
+to
+return_statement [6406,6419]
+at 1
+===
+insert-node
+---
+identifier: mod [4539,4542]
+to
+call_expression [4539,4576]
+at 0
+===
+insert-node
+---
+call_argument [4543,4544]
+to
+call_expression [4539,4576]
+at 1
+
+New cluster:
+UPDATE from require to sub
+------------
+===
+update-node
+---
+identifier: require [3224,3231]
+replace require by sub
+
+New cluster:
+===
+insert-node
+---
+call_argument [1431,1432]
+to
+call_expression [3224,3273]
+at 2
+------------
+===
+insert-node
+---
+call_argument [1431,1432]
+to
+call_expression [3224,3273]
+at 2
+
+New cluster:
+MOVE from block_statement [2506,2539]
+------------
+===
+move-tree
+---
+return_statement [3638,3647]
+    return: return [3638,3644]
+    number_literal: 0 [3645,3646]
+to
+block_statement [2506,2539]
+at 0
+
+New cluster:
+UPDATE from require to div
+------------
+===
+update-node
+---
+identifier: require [4305,4312]
+replace require by div
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [3208,3209]
+    identifier: a [3208,3209]
+to
+call_expression [4305,4349]
+at 1
+
+New cluster:
+MOVE from call_expression [4539,4576]
+------------
+===
+move-tree
+---
+call_argument [4923,4949]
+    string_literal [4923,4949]
+        string: "SafeMath: modulo by zero" [4923,4949]
+to
+call_expression [4539,4576]
+at 3
+
+New cluster:
+MOVE from call_expression [4908,4950]
+------------
+===
+move-tree
+---
+call_argument [7191,7203]
+    identifier: errorMessage [7191,7203]
+to
+call_expression [4908,4950]
+at 2
+
+New cluster:
+MOVE from call_argument [3232,3238]
+------------
+===
+move-tree
+---
+identifier: a [3237,3238]
+to
+call_argument [3232,3238]
+at 0
+
+New cluster:
+MOVE from call_argument [1431,1432]
+------------
+===
+move-tree
+---
+identifier: b [1262,1263]
+to
+call_argument [1431,1432]
+at 0
+
+New cluster:
+MOVE from call_argument [4313,4318]
+------------
+===
+move-tree
+---
+identifier: b [4313,4314]
+to
+call_argument [4313,4318]
+at 0
+
+New cluster:
+MOVE from call_argument [4546,4547]
+------------
+===
+move-tree
+---
+identifier: b [6417,6418]
+to
+call_argument [4546,4547]
+at 0
+===
+move-tree
+---
+identifier: a [6413,6414]
+to
+call_argument [4543,4544]
+at 0
+
+New cluster:
+UPDATE from > to !=
+------------
+===
+update-node
+---
+comparison_operator: > [4918,4919]
+replace > by !=
+
+New cluster:
+===
+delete-node
+---
+function_definition [800,974]
+===
+------------
+===
+delete-node
+---
+function_definition [800,974]
+===
+===
+delete-node
+---
+visibility: internal [838,846]
+===
+===
+delete-node
+---
+function: function [800,808]
+===
+===
+delete-node
+---
+identifier: tryAdd [809,815]
+===
+===
+delete-node
+---
+affectation_operator: = [896,897]
+===
+===
+delete-node
+---
+variable_declaration_statement [886,904]
+===
+===
+delete-node
+---
+function_body [876,974]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [816,825]
+    type_name: uint256 [816,823]
+    identifier: a [824,825]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [827,836]
+    type_name: uint256 [827,834]
+    identifier: b [835,836]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [847,851]
+    pure: pure [847,851]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [852,875]
+    returns: returns [852,859]
+    parameter [861,865]
+        type_name: bool [861,865]
+    parameter [867,874]
+        type_name: uint256 [867,874]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [898,903]
+    identifier: a [898,899]
+    arithmetic_operator: + [900,901]
+    identifier: b [902,903]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [913,942]
+    if: if [913,915]
+    binary_expression [917,922]
+        identifier: c [917,918]
+        comparison_operator: < [919,920]
+        identifier: a [921,922]
+    return_statement [924,942]
+        return: return [924,930]
+        tuple_expression [931,941]
+            boolean_literal: false [932,937]
+            number_literal: 0 [939,940]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [951,968]
+    return: return [951,957]
+    tuple_expression [958,967]
+        boolean_literal: true [959,963]
+        identifier: c [965,966]
+
+New cluster:
+===
+delete-node
+---
+function_definition [1120,1271]
+===
+------------
+===
+delete-node
+---
+function_definition [1120,1271]
+===
+===
+delete-node
+---
+visibility: internal [1158,1166]
+===
+===
+delete-node
+---
+identifier: trySub [1129,1135]
+===
+===
+delete-node
+---
+function: function [1120,1128]
+===
+===
+delete-node
+---
+function_body [1196,1271]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [1136,1145]
+    type_name: uint256 [1136,1143]
+    identifier: a [1144,1145]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [1147,1156]
+    type_name: uint256 [1147,1154]
+    identifier: b [1155,1156]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [1167,1171]
+    pure: pure [1167,1171]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [1172,1195]
+    returns: returns [1172,1179]
+    parameter [1181,1185]
+        type_name: bool [1181,1185]
+    parameter [1187,1194]
+        type_name: uint256 [1187,1194]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [1206,1235]
+    if: if [1206,1208]
+    binary_expression [1210,1215]
+        identifier: b [1210,1211]
+        comparison_operator: > [1212,1213]
+        identifier: a [1214,1215]
+    return_statement [1217,1235]
+        return: return [1217,1223]
+        tuple_expression [1224,1234]
+            boolean_literal: false [1225,1230]
+            number_literal: 0 [1232,1233]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [1419,1854]
+    function: function [1419,1427]
+    identifier: tryMul [1428,1434]
+    parameter [1435,1444]
+        type_name: uint256 [1435,1442]
+        identifier: a [1443,1444]
+    parameter [1446,1455]
+        type_name: uint256 [1446,1453]
+        identifier: b [1454,1455]
+    visibility: internal [1457,1465]
+    state_mutability [1466,1470]
+        pure: pure [1466,1470]
+    return_type_definition [1471,1494]
+        returns: returns [1471,1478]
+        parameter [1480,1484]
+            type_name: bool [1480,1484]
+        parameter [1486,1493]
+            type_name: uint256 [1486,1493]
+    function_body [1495,1854]
+        if_statement [1723,1752]
+            if: if [1723,1725]
+            binary_expression [1727,1733]
+                identifier: a [1727,1728]
+                comparison_operator: == [1729,1731]
+                number_literal: 0 [1732,1733]
+            return_statement [1735,1752]
+                return: return [1735,1741]
+                tuple_expression [1742,1751]
+                    boolean_literal: true [1743,1747]
+                    number_literal: 0 [1749,1750]
+        variable_declaration_statement [1761,1779]
+            variable_declaration [1761,1770]
+                type_name: uint256 [1761,1768]
+                identifier: c [1769,1770]
+            affectation_operator: = [1771,1772]
+            binary_expression [1773,1778]
+                identifier: a [1773,1774]
+                arithmetic_operator: * [1775,1776]
+                identifier: b [1777,1778]
+        if_statement [1788,1822]
+            if: if [1788,1790]
+            binary_expression [1792,1802]
+                binary_expression [1792,1797]
+                    identifier: c [1792,1793]
+                    arithmetic_operator: / [1794,1795]
+                    identifier: a [1796,1797]
+                comparison_operator: != [1798,1800]
+                identifier: b [1801,1802]
+            return_statement [1804,1822]
+                return: return [1804,1810]
+                tuple_expression [1811,1821]
+                    boolean_literal: false [1812,1817]
+                    number_literal: 0 [1819,1820]
+        return_statement [1831,1848]
+            return: return [1831,1837]
+            tuple_expression [1838,1847]
+                boolean_literal: true [1839,1843]
+                identifier: c [1845,1846]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2003,2155]
+    function: function [2003,2011]
+    identifier: tryDiv [2012,2018]
+    parameter [2019,2028]
+        type_name: uint256 [2019,2026]
+        identifier: a [2027,2028]
+    parameter [2030,2039]
+        type_name: uint256 [2030,2037]
+        identifier: b [2038,2039]
+    visibility: internal [2041,2049]
+    state_mutability [2050,2054]
+        pure: pure [2050,2054]
+    return_type_definition [2055,2078]
+        returns: returns [2055,2062]
+        parameter [2064,2068]
+            type_name: bool [2064,2068]
+        parameter [2070,2077]
+            type_name: uint256 [2070,2077]
+    function_body [2079,2155]
+        if_statement [2089,2119]
+            if: if [2089,2091]
+            binary_expression [2093,2099]
+                identifier: b [2093,2094]
+                comparison_operator: == [2095,2097]
+                number_literal: 0 [2098,2099]
+            return_statement [2101,2119]
+                return: return [2101,2107]
+                tuple_expression [2108,2118]
+                    boolean_literal: false [2109,2114]
+                    number_literal: 0 [2116,2117]
+        return_statement [2128,2149]
+            return: return [2128,2134]
+            tuple_expression [2135,2148]
+                boolean_literal: true [2136,2140]
+                binary_expression [2142,2147]
+                    identifier: a [2142,2143]
+                    arithmetic_operator: / [2144,2145]
+                    identifier: b [2146,2147]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2314,2466]
+    function: function [2314,2322]
+    identifier: tryMod [2323,2329]
+    parameter [2330,2339]
+        type_name: uint256 [2330,2337]
+        identifier: a [2338,2339]
+    parameter [2341,2350]
+        type_name: uint256 [2341,2348]
+        identifier: b [2349,2350]
+    visibility: internal [2352,2360]
+    state_mutability [2361,2365]
+        pure: pure [2361,2365]
+    return_type_definition [2366,2389]
+        returns: returns [2366,2373]
+        parameter [2375,2379]
+            type_name: bool [2375,2379]
+        parameter [2381,2388]
+            type_name: uint256 [2381,2388]
+    function_body [2390,2466]
+        if_statement [2400,2430]
+            if: if [2400,2402]
+            binary_expression [2404,2410]
+                identifier: b [2404,2405]
+                comparison_operator: == [2406,2408]
+                number_literal: 0 [2409,2410]
+            return_statement [2412,2430]
+                return: return [2412,2418]
+                tuple_expression [2419,2429]
+                    boolean_literal: false [2420,2425]
+                    number_literal: 0 [2427,2428]
+        return_statement [2439,2460]
+            return: return [2439,2445]
+            tuple_expression [2446,2459]
+                boolean_literal: true [2447,2451]
+                binary_expression [2453,2458]
+                    identifier: a [2453,2454]
+                    %: % [2455,2456]
+                    identifier: b [2457,2458]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [3232,3238]
+===
+------------
+===
+delete-node
+---
+comparison_operator: <= [3234,3236]
+===
+===
+delete-node
+---
+binary_expression [3232,3238]
+===
+===
+delete-node
+---
+identifier: b [3232,3233]
+===
+
+New cluster:
+===
+delete-node
+---
+tuple_expression [1251,1264]
+===
+------------
+===
+delete-node
+---
+tuple_expression [1251,1264]
+===
+===
+delete-node
+---
+binary_expression [1258,1263]
+===
+===
+delete-node
+---
+arithmetic_operator: - [1260,1261]
+===
+===
+delete-node
+---
+boolean_literal: true [1252,1256]
+===
+===
+delete-node
+---
+identifier: a [1258,1259]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3224,3274]
+===
+------------
+===
+delete-node
+---
+expression_statement [3224,3274]
+===
+
+New cluster:
+===
+delete-node
+---
+return_statement [3283,3296]
+===
+------------
+===
+delete-node
+---
+return_statement [3283,3296]
+===
+===
+delete-node
+---
+return: return [3283,3289]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [5587,5600]
+    return: return [5587,5593]
+    binary_expression [5594,5599]
+        identifier: a [5594,5595]
+        arithmetic_operator: - [5596,5597]
+        identifier: b [5598,5599]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [4313,4318]
+===
+------------
+===
+delete-node
+---
+comparison_operator: > [4315,4316]
+===
+===
+delete-node
+---
+number_literal: 0 [4317,4318]
+===
+===
+delete-node
+---
+binary_expression [4313,4318]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [4305,4350]
+===
+------------
+===
+delete-node
+---
+expression_statement [4305,4350]
+===
+
+New cluster:
+===
+delete-node
+---
+return_statement [4359,4372]
+===
+------------
+===
+delete-node
+---
+return_statement [4359,4372]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [6413,6418]
+===
+------------
+===
+delete-node
+---
+binary_expression [6413,6418]
+===
+===
+delete-node
+---
+arithmetic_operator: / [6415,6416]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [7071,7233]
+===
+------------
+===
+delete-node
+---
+visibility: internal [7134,7142]
+===
+===
+delete-node
+---
+identifier: mod [7080,7083]
+===
+===
+delete-node
+---
+call_expression [7176,7204]
+===
+===
+delete-node
+---
+function_body [7166,7233]
+===
+===
+delete-node
+---
+function: function [7071,7079]
+===
+===
+delete-node
+---
+function_definition [7071,7233]
+===
+===
+delete-node
+---
+identifier: require [7176,7183]
+===
+===
+delete-node
+---
+expression_statement [7176,7205]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7184,7189]
+    binary_expression [7184,7189]
+        identifier: b [7184,7185]
+        comparison_operator: > [7186,7187]
+        number_literal: 0 [7188,7189]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [7214,7227]
+    return: return [7214,7220]
+    binary_expression [7221,7226]
+        identifier: a [7221,7222]
+        %: % [7223,7224]
+        identifier: b [7225,7226]
+

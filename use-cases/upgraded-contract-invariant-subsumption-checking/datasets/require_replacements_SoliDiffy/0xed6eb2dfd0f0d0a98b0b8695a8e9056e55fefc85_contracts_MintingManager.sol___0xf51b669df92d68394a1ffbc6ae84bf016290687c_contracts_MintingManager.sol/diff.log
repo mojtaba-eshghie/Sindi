@@ -1,0 +1,2420 @@
+New cluster:
+===
+insert-node
+---
+identifier: MintingManager [545,559]
+to
+contract_declaration [536,12543]
+at 0
+------------
+===
+insert-node
+---
+identifier: MintingManager [545,559]
+to
+contract_declaration [536,12543]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [560,562]
+to
+contract_declaration [536,12543]
+at 1
+------------
+===
+insert-node
+---
+is: is [560,562]
+to
+contract_declaration [536,12543]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [718,759]
+    type_name: string [718,724]
+    visibility: public [725,731]
+    constant: constant [732,740]
+    identifier: VERSION [741,748]
+    affectation_operator: = [749,750]
+    string_literal [751,758]
+        string: '0.4.4' [751,758]
+to
+contract_body [628,12543]
+at 2
+
+New cluster:
+===
+insert-node
+---
+modifier_definition [1522,1634]
+to
+contract_body [628,12543]
+at 9
+------------
+===
+insert-node
+---
+identifier: onlyAllowedSLD [1531,1545]
+to
+modifier_definition [1522,1634]
+at 1
+===
+insert-node
+---
+modifier_definition [1522,1634]
+to
+contract_body [628,12543]
+at 9
+===
+insert-node
+---
+modifier: modifier [1522,1530]
+to
+modifier_definition [1522,1634]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [3922,4211]
+to
+contract_body [628,12543]
+at 16
+------------
+===
+insert-node
+---
+function_definition [3922,4211]
+to
+contract_body [628,12543]
+at 16
+===
+insert-node
+---
+identifier: issueWithRecords [3931,3947]
+to
+function_definition [3922,4211]
+at 1
+===
+insert-node
+---
+visibility: external [4074,4082]
+to
+function_definition [3922,4211]
+at 6
+===
+insert-node
+---
+function: function [3922,3930]
+to
+function_definition [3922,4211]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [4545,5090]
+to
+contract_body [628,12543]
+at 19
+------------
+===
+insert-node
+---
+function_definition [4545,5090]
+to
+contract_body [628,12543]
+at 19
+===
+insert-node
+---
+for: for [4644,4647]
+to
+for_statement [4644,5084]
+at 0
+===
+insert-node
+---
+function_body [4634,5090]
+to
+function_definition [4545,5090]
+at 6
+===
+insert-node
+---
+visibility: external [4605,4613]
+to
+function_definition [4545,5090]
+at 3
+===
+insert-node
+---
+unary_expression [4949,4977]
+to
+if_statement [4945,5074]
+at 1
+===
+insert-node
+---
+function: function [4545,4553]
+to
+function_definition [4545,5090]
+at 0
+===
+insert-node
+---
+for_statement [4644,5084]
+to
+function_body [4634,5090]
+at 0
+===
+insert-node
+---
+if: if [4945,4947]
+to
+if_statement [4945,5074]
+at 0
+===
+insert-node
+---
+if_statement [4945,5074]
+to
+block_statement [4690,5084]
+at 4
+===
+insert-node
+---
+identifier: bulkIssue [4554,4563]
+to
+function_definition [4545,5090]
+at 1
+===
+insert-node
+---
+block_statement [4690,5084]
+to
+for_statement [4644,5084]
+at 4
+===
+insert-node
+---
+!: ! [4949,4950]
+to
+unary_expression [4949,4977]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [9133,9657]
+to
+contract_body [628,12543]
+at 46
+------------
+===
+insert-node
+---
+visibility: private [9191,9198]
+to
+function_definition [9133,9657]
+at 4
+===
+insert-node
+---
+function_definition [9133,9657]
+to
+contract_body [628,12543]
+at 46
+===
+insert-node
+---
+identifier: _ensureAllowed [9142,9156]
+to
+function_definition [9133,9657]
+at 1
+===
+insert-node
+---
+function: function [9133,9141]
+to
+function_definition [9133,9657]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [11040,11702]
+to
+contract_body [628,12543]
+at 52
+------------
+===
+insert-node
+---
+function: function [11040,11048]
+to
+function_definition [11040,11702]
+at 0
+===
+insert-node
+---
+function_definition [11040,11702]
+to
+contract_body [628,12543]
+at 52
+===
+insert-node
+---
+identifier: _isValidLabel [11049,11062]
+to
+function_definition [11040,11702]
+at 1
+===
+insert-node
+---
+for_statement [11347,11675]
+to
+function_body [11110,11702]
+at 3
+===
+insert-node
+---
+for: for [11347,11350]
+to
+for_statement [11347,11675]
+at 0
+===
+insert-node
+---
+function_body [11110,11702]
+to
+function_definition [11040,11702]
+at 6
+===
+insert-node
+---
+visibility: private [11082,11089]
+to
+function_definition [11040,11702]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [11708,11986]
+    function: function [11708,11716]
+    identifier: _charAt [11717,11724]
+    parameter [11725,11736]
+        type_name: uint256 [11725,11732]
+        identifier: ptr [11733,11736]
+    parameter [11738,11751]
+        type_name: uint256 [11738,11745]
+        identifier: index [11746,11751]
+    visibility: private [11753,11760]
+    state_mutability [11761,11765]
+        pure: pure [11761,11765]
+    return_type_definition [11766,11781]
+        returns: returns [11766,11773]
+        parameter [11775,11780]
+            type_name: uint8 [11775,11780]
+    function_body [11782,11986]
+        variable_declaration_statement [11792,11807]
+            variable_declaration [11792,11806]
+                type_name: bytes1 [11792,11798]
+                identifier: ptrdata [11799,11806]
+        assembly_statement [11883,11949]
+            assembly: assembly [11883,11891]
+            yul_assignment [11906,11939]
+                yul_path [11906,11913]
+                    yul_identifier [11906,11913]
+                        identifier: ptrdata [11906,11913]
+                :=: := [11914,11916]
+                yul_function_call [11917,11939]
+                    yul_evm_builtin [11917,11922]
+                        mload: mload [11917,11922]
+                    yul_function_call [11923,11938]
+                        yul_evm_builtin [11923,11926]
+                            add: add [11923,11926]
+                        yul_path [11927,11930]
+                            yul_identifier [11927,11930]
+                                identifier: ptr [11927,11930]
+                        yul_path [11932,11937]
+                            yul_identifier [11932,11937]
+                                identifier: index [11932,11937]
+        return_statement [11958,11980]
+            return: return [11958,11964]
+            type_cast_expression [11965,11979]
+                primitive_type: uint8 [11965,11970]
+                call_argument [11971,11978]
+                    identifier: ptrdata [11971,11978]
+to
+contract_body [628,12543]
+at 53
+
+New cluster:
+MOVE from modifier_definition [1522,1634]
+------------
+===
+move-tree
+---
+function_body [4824,4902]
+    expression_statement [4834,4896]
+        call_expression [4834,4895]
+            identifier: _issueWithRecords [4834,4851]
+            call_argument [4852,4854]
+                identifier: to [4852,4854]
+            call_argument [4856,4880]
+                call_expression [4856,4880]
+                    identifier: _buildLabels [4856,4868]
+                    call_argument [4869,4872]
+                        identifier: tld [4869,4872]
+                    call_argument [4874,4879]
+                        identifier: label [4874,4879]
+            call_argument [4882,4886]
+                identifier: keys [4882,4886]
+            call_argument [4888,4894]
+                identifier: values [4888,4894]
+to
+modifier_definition [1522,1634]
+at 4
+===
+move-tree
+---
+parameter [4723,4747]
+    type_name: string[] [4723,4731]
+    calldata: calldata [4732,4740]
+    identifier: values [4741,4747]
+to
+function_definition [3922,4211]
+at 5
+===
+move-tree
+---
+parameter [4619,4629]
+    type_name: address [4619,4626]
+    identifier: to [4627,4629]
+to
+function_definition [3922,4211]
+at 2
+===
+move-tree
+---
+modifier_invocation [4772,4782]
+    identifier: onlyMinter [4772,4782]
+to
+function_definition [4545,5090]
+at 5
+===
+move-tree
+---
+override_specifier [4763,4771]
+    override: override [4763,4771]
+to
+function_definition [3922,4211]
+at 7
+===
+move-tree
+---
+parameter [4691,4713]
+    type_name: string[] [4691,4699]
+    calldata: calldata [4700,4708]
+    identifier: keys [4709,4713]
+to
+function_definition [3922,4211]
+at 4
+===
+move-tree
+---
+modifier_invocation [4810,4823]
+    identifier: whenNotPaused [4810,4823]
+to
+function_definition [3922,4211]
+at 10
+===
+move-tree
+---
+parameter [4639,4650]
+    type_name: uint256 [4639,4646]
+    identifier: tld [4647,4650]
+to
+modifier_definition [1522,1634]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1559,1578]
+    type_name: string [1559,1565]
+    memory: memory [1566,1572]
+    identifier: label [1573,1578]
+to
+modifier_definition [1522,1634]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [3977,4001]
+    type_name: string[] [3977,3985]
+    calldata: calldata [3986,3994]
+    identifier: labels [3995,4001]
+to
+function_definition [3922,4211]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [4092,4110]
+    identifier: onlyIssuer [4092,4102]
+    call_argument [4103,4109]
+        identifier: labels [4103,4109]
+to
+function_definition [3922,4211]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [4111,4130]
+    identifier: onlyAllowed [4111,4122]
+    call_argument [4123,4129]
+        identifier: labels [4123,4129]
+to
+function_definition [3922,4211]
+at 9
+
+New cluster:
+MOVE from function_definition [3922,4211]
+------------
+===
+move-tree
+---
+function_body [5131,5191]
+    expression_statement [5141,5185]
+        call_expression [5141,5184]
+            identifier: _issueWithRecords [5141,5158]
+            call_argument [5159,5161]
+                identifier: to [5159,5161]
+            call_argument [5163,5169]
+                identifier: labels [5163,5169]
+            call_argument [5171,5175]
+                identifier: keys [5171,5175]
+            call_argument [5177,5183]
+                identifier: values [5177,5183]
+to
+function_definition [3922,4211]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [4372,4388]
+    type_name: bool [4372,4376]
+    identifier: withReverse [4377,4388]
+to
+function_definition [4908,5191]
+at 6
+
+New cluster:
+===
+insert-node
+---
+function_body [4466,4539]
+to
+function_definition [4908,5191]
+at 12
+------------
+===
+insert-node
+---
+expression_statement [4476,4533]
+to
+function_body [4466,4539]
+at 0
+===
+insert-node
+---
+function_body [4466,4539]
+to
+function_definition [4908,5191]
+at 12
+===
+insert-node
+---
+call_expression [4476,4532]
+to
+expression_statement [4476,4533]
+at 0
+===
+insert-node
+---
+identifier: _issueWithRecords [4476,4493]
+to
+call_expression [4476,4532]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [4564,4603]
+    type_name: BulkSLDIssueRequest[] [4564,4585]
+    calldata: calldata [4586,4594]
+    identifier: requests [4595,4603]
+to
+function_definition [4545,5090]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [4614,4622]
+    override: override [4614,4622]
+to
+function_definition [4545,5090]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7177,7193]
+    type_name: bool [7177,7181]
+    identifier: withReverse [7182,7193]
+to
+function_definition [8582,9365]
+at 6
+
+New cluster:
+MOVE from function_definition [9133,9657]
+------------
+===
+move-tree
+---
+parameter [1546,1557]
+    type_name: uint256 [1546,1553]
+    identifier: tld [1554,1557]
+to
+function_definition [9133,9657]
+at 2
+===
+move-tree
+---
+parameter [1559,1578]
+    type_name: string [1559,1565]
+    memory: memory [1566,1572]
+    identifier: label [1573,1578]
+to
+function_definition [9133,9657]
+at 3
+===
+move-tree
+---
+function_body [1580,1972]
+    expression_statement [1590,1649]
+        call_expression [1590,1648]
+            identifier: require [1590,1597]
+            call_argument [1598,1609]
+                call_expression [1598,1609]
+                    identifier: _isTld [1598,1604]
+                    call_argument [1605,1608]
+                        identifier: tld [1605,1608]
+            call_argument [1611,1647]
+                string_literal [1611,1647]
+                    string: 'MintingManager: TLD_NOT_REGISTERED' [1611,1647]
+    variable_declaration_statement [1658,1704]
+        variable_declaration [1658,1685]
+            type_name: Strings.Slice [1658,1671]
+            memory: memory [1672,1678]
+            identifier: _label [1679,1685]
+        affectation_operator: = [1686,1687]
+        call_expression [1688,1703]
+            member_expression: label.toSlice [1688,1701]
+    if_statement [1713,1955]
+        if: if [1713,1715]
+        binary_expression [1717,1733]
+            member_expression: _label._len [1717,1728]
+            comparison_operator: > [1729,1730]
+            number_literal: 10 [1731,1733]
+        block_statement [1735,1955]
+            expression_statement [1749,1945]
+                call_expression [1749,1944]
+                    identifier: require [1749,1756]
+                    call_argument [1774,1872]
+                        binary_expression [1774,1872]
+                            call_expression [1774,1802]
+                                member_expression: _label.slice(0, 10).keccak [1774,1800]
+                            comparison_operator: != [1803,1805]
+                            number_literal: 0xb551e0305c8163b812374b8e78b577c77f226f6f10c5ad03e52699578fbc34b8 [1806,1872]
+                    call_argument [1890,1930]
+                        string_literal [1890,1930]
+                            string: 'MintingManager: TOKEN_LABEL_PROHIBITED' [1890,1930]
+    expression_statement [1964,1966]
+        identifier: _ [1964,1965]
+to
+function_definition [9133,9657]
+at 6
+
+New cluster:
+MOVE from function_definition [9133,9657]
+------------
+===
+move-tree
+---
+state_mutability [7339,7343]
+    view: view [7339,7343]
+to
+function_definition [9133,9657]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11063,11080]
+    type_name: string [11063,11069]
+    memory: memory [11070,11076]
+    identifier: str [11077,11080]
+to
+function_definition [11040,11702]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [11090,11094]
+    pure: pure [11090,11094]
+to
+function_definition [11040,11702]
+at 4
+
+New cluster:
+MOVE from function_definition [11040,11702]
+------------
+===
+move-tree
+---
+return_type_definition [11602,11616]
+    returns: returns [11602,11609]
+    parameter [11611,11615]
+        type_name: bool [11611,11615]
+to
+function_definition [11040,11702]
+at 5
+
+New cluster:
+MOVE from function_body [4824,4902]
+------------
+===
+move-tree
+---
+expression_statement [1964,1966]
+    identifier: _ [1964,1965]
+to
+function_body [4824,4902]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [5216,5238]
+    variable_declaration [5216,5237]
+        type_name: string[] [5216,5224]
+        memory: memory [5225,5231]
+        identifier: empty [5232,5237]
+to
+function_body [5307,5385]
+at 0
+
+New cluster:
+MOVE from function_body [5545,5613]
+------------
+===
+move-tree
+---
+variable_declaration_statement [8495,8517]
+    variable_declaration [8495,8516]
+        type_name: string[] [8495,8503]
+        memory: memory [8504,8510]
+        identifier: empty [8511,8516]
+to
+function_body [5545,5613]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9588,9651]
+    call_expression [9588,9650]
+        identifier: require [9588,9595]
+        call_argument [9596,9616]
+            call_expression [9596,9616]
+                identifier: _isValidLabel [9596,9609]
+                call_argument [9610,9615]
+                    identifier: label [9610,9615]
+        call_argument [9618,9649]
+            string_literal [9618,9649]
+                string: 'MintingManager: LABEL_INVALID' [9618,9649]
+to
+function_body [1580,1972]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [11120,11185]
+    if: if [11120,11122]
+    binary_expression [11124,11146]
+        member_expression: bytes(str).length [11124,11141]
+        comparison_operator: == [11142,11144]
+        number_literal: 0 [11145,11146]
+    block_statement [11148,11185]
+        return_statement [11162,11175]
+            return: return [11162,11168]
+            boolean_literal: false [11169,11174]
+to
+function_body [11110,11702]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [11195,11207]
+    variable_declaration [11195,11206]
+        type_name: uint256 [11195,11202]
+        identifier: ptr [11203,11206]
+to
+function_body [11110,11702]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+assembly_statement [11283,11337]
+    assembly: assembly [11283,11291]
+    yul_assignment [11306,11327]
+        yul_path [11306,11309]
+            yul_identifier [11306,11309]
+                identifier: ptr [11306,11309]
+        :=: := [11310,11312]
+        yul_function_call [11313,11327]
+            yul_evm_builtin [11313,11316]
+                add: add [11313,11316]
+            yul_path [11317,11320]
+                yul_identifier [11317,11320]
+                    identifier: str [11317,11320]
+            yul_hex_number: 0x20 [11322,11326]
+to
+function_body [11110,11702]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [11684,11696]
+    return: return [11684,11690]
+    boolean_literal: true [11691,11695]
+to
+function_body [11110,11702]
+at 4
+
+New cluster:
+MOVE from expression_statement [4834,4896]
+------------
+===
+move-tree
+---
+call_expression [4856,4880]
+    identifier: _buildLabels [4856,4868]
+    call_argument [4869,4872]
+        identifier: tld [4869,4872]
+    call_argument [4874,4879]
+        identifier: label [4874,4879]
+to
+expression_statement [4834,4896]
+at 0
+
+New cluster:
+MOVE from for_statement [4644,5084]
+------------
+===
+move-tree
+---
+update_expression [7707,7710]
+    identifier: i [7707,7708]
+    increment_operator: ++ [7708,7710]
+to
+for_statement [4644,5084]
+at 3
+===
+move-tree
+---
+variable_declaration_statement [7671,7685]
+    variable_declaration [7671,7680]
+        type_name: uint256 [7671,7678]
+        identifier: i [7679,7680]
+    affectation_operator: = [7681,7682]
+    number_literal: 0 [7683,7684]
+to
+for_statement [4644,5084]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4664,4684]
+    binary_expression [4664,4683]
+        identifier: i [4664,4665]
+        comparison_operator: < [4666,4667]
+        member_expression: requests.length [4668,4683]
+to
+for_statement [4644,5084]
+at 2
+
+New cluster:
+MOVE from for_statement [11347,11675]
+------------
+===
+move-tree
+---
+variable_declaration_statement [7969,7983]
+    variable_declaration [7969,7978]
+        type_name: uint256 [7969,7976]
+        identifier: i [7977,7978]
+    affectation_operator: = [7979,7980]
+    number_literal: 0 [7981,7982]
+to
+for_statement [11347,11675]
+at 1
+===
+move-tree
+---
+update_expression [8005,8008]
+    identifier: i [8005,8006]
+    increment_operator: ++ [8006,8008]
+to
+for_statement [11347,11675]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [11367,11389]
+    member_expression: i < bytes(str).length [11367,11388]
+to
+for_statement [11347,11675]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [11395,11675]
+    variable_declaration_statement [11409,11438]
+        variable_declaration [11409,11419]
+            type_name: uint8 [11409,11414]
+            identifier: data [11415,11419]
+        affectation_operator: = [11420,11421]
+        call_expression [11422,11437]
+            identifier: _charAt [11422,11429]
+            call_argument [11430,11433]
+                identifier: ptr [11430,11433]
+            call_argument [11435,11436]
+                identifier: i [11435,11436]
+    if_statement [11451,11665]
+        if: if [11451,11453]
+        binary_expression [11472,11598]
+            binary_expression [11472,11543]
+                binary_expression [11472,11482]
+                    identifier: data [11472,11476]
+                    comparison_operator: != [11477,11479]
+                    number_literal: 45 [11480,11482]
+                logical_operator: && [11483,11485]
+                unary_expression [11516,11543]
+                    !: ! [11516,11517]
+                    parenthesized_expression [11517,11543]
+                        binary_expression [11518,11542]
+                            binary_expression [11518,11528]
+                                identifier: data [11518,11522]
+                                comparison_operator: >= [11523,11525]
+                                number_literal: 48 [11526,11528]
+                            logical_operator: && [11529,11531]
+                            binary_expression [11532,11542]
+                                identifier: data [11532,11536]
+                                comparison_operator: <= [11537,11539]
+                                number_literal: 57 [11540,11542]
+            logical_operator: && [11544,11546]
+            unary_expression [11570,11598]
+                !: ! [11570,11571]
+                parenthesized_expression [11571,11598]
+                    binary_expression [11572,11597]
+                        binary_expression [11572,11582]
+                            identifier: data [11572,11576]
+                            comparison_operator: >= [11577,11579]
+                            number_literal: 97 [11580,11582]
+                        logical_operator: && [11583,11585]
+                        binary_expression [11586,11597]
+                            identifier: data [11586,11590]
+                            comparison_operator: <= [11591,11593]
+                            number_literal: 122 [11594,11597]
+        block_statement [11620,11665]
+            return_statement [11638,11651]
+                return: return [11638,11644]
+                boolean_literal: false [11645,11650]
+to
+for_statement [11347,11675]
+at 4
+
+New cluster:
+UPDATE from _buildLabels to _ensureAllowed
+------------
+===
+update-node
+---
+identifier: _buildLabels [4856,4868]
+replace _buildLabels by _ensureAllowed
+===
+update-node
+---
+identifier: require [2420,2427]
+replace require by _ensureAllowed
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4199,4203]
+    boolean_literal: true [4199,4203]
+to
+call_expression [5141,5184]
+at 5
+
+New cluster:
+MOVE from call_expression [5555,5606]
+------------
+===
+move-tree
+---
+call_argument [8563,8568]
+    identifier: empty [8563,8568]
+to
+call_expression [5555,5606]
+at 4
+===
+move-tree
+---
+call_argument [8544,8546]
+    identifier: to [8544,8546]
+to
+call_expression [4476,4532]
+at 1
+===
+move-tree
+---
+call_argument [8548,8554]
+    identifier: labels [8548,8554]
+to
+call_expression [4476,4532]
+at 2
+===
+move-tree
+---
+call_argument [8556,8561]
+    identifier: empty [8556,8561]
+to
+call_expression [5555,5606]
+at 3
+
+New cluster:
+MOVE from call_expression [4476,4532]
+------------
+===
+move-tree
+---
+call_argument [4888,4894]
+    identifier: values [4888,4894]
+to
+call_expression [4476,4532]
+at 4
+===
+move-tree
+---
+call_argument [4882,4886]
+    identifier: keys [4882,4886]
+to
+call_expression [4476,4532]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4520,4531]
+    identifier: withReverse [4520,4531]
+to
+call_expression [4476,4532]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4704,4755]
+    call_expression [4704,4754]
+        identifier: _ensureAllowed [4704,4718]
+        call_argument [4719,4734]
+            member_expression: requests[i].tld [4719,4734]
+        call_argument [4736,4753]
+            member_expression: requests[i].label [4736,4753]
+to
+block_statement [4690,5084]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [4769,4843]
+    variable_declaration [4769,4791]
+        type_name: string[] [4769,4777]
+        memory: memory [4778,4784]
+        identifier: labels [4785,4791]
+    affectation_operator: = [4792,4793]
+    call_expression [4794,4842]
+        identifier: _buildLabels [4794,4806]
+        call_argument [4807,4822]
+            member_expression: requests[i].tld [4807,4822]
+        call_argument [4824,4841]
+            member_expression: requests[i].label [4824,4841]
+to
+block_statement [4690,5084]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [4856,4896]
+    variable_declaration_tuple [4856,4875]
+        variable_declaration [4857,4872]
+            type_name: uint256 [4857,4864]
+            identifier: tokenId [4865,4872]
+    affectation_operator: = [4876,4877]
+    call_expression [4878,4895]
+        identifier: _namehash [4878,4887]
+        call_argument [4888,4894]
+            identifier: labels [4888,4894]
+to
+block_statement [4690,5084]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [4910,4932]
+    variable_declaration [4910,4931]
+        type_name: string[] [4910,4918]
+        memory: memory [4919,4925]
+        identifier: empty [4926,4931]
+to
+block_statement [4690,5084]
+at 3
+
+New cluster:
+UPDATE from _issue to _issueWithRecords
+------------
+===
+update-node
+---
+identifier: _issue [5317,5323]
+replace _issue by _issueWithRecords
+===
+update-node
+---
+identifier: _issue [5555,5561]
+replace _issue by _issueWithRecords
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5320,5325]
+    identifier: empty [5320,5325]
+to
+call_expression [5317,5378]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5327,5332]
+    identifier: empty [5327,5332]
+to
+call_expression [5317,5378]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5334,5338]
+    boolean_literal: true [5334,5338]
+to
+call_expression [5317,5378]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5624,5628]
+    boolean_literal: true [5624,5628]
+to
+call_expression [5555,5606]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5960,5964]
+    boolean_literal: true [5960,5964]
+to
+call_expression [5860,5936]
+at 5
+
+New cluster:
+===
+insert-node
+---
+array_access [2140,2165]
+to
+call_argument [2463,2499]
+at 0
+------------
+===
+insert-node
+---
+array_access [2140,2165]
+to
+call_argument [2463,2499]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [4979,5074]
+    expression_statement [4997,5060]
+        call_expression [4997,5059]
+            identifier: _issueWithRecords [4997,5014]
+            call_argument [5015,5029]
+                member_expression: requests[i].to [5015,5029]
+            call_argument [5031,5037]
+                identifier: labels [5031,5037]
+            call_argument [5039,5044]
+                identifier: empty [5039,5044]
+            call_argument [5046,5051]
+                identifier: empty [5046,5051]
+            call_argument [5053,5058]
+                boolean_literal: false [5053,5058]
+to
+if_statement [4945,5074]
+at 2
+
+New cluster:
+===
+insert-node
+---
+member_expression: unsRegistry.exists(tokenId) && unsRegistry.ownerOf [7272,7322]
+to
+call_expression [8801,8818]
+at 0
+------------
+===
+insert-node
+---
+member_expression: unsRegistry.exists(tokenId) && unsRegistry.ownerOf [7272,7322]
+to
+call_expression [8801,8818]
+at 0
+
+New cluster:
+UPDATE from _isTld to _namehash
+------------
+===
+update-node
+---
+identifier: _isTld [2428,2434]
+replace _isTld by _namehash
+
+New cluster:
+MOVE from call_expression [2428,2461]
+------------
+===
+move-tree
+---
+call_argument [11661,11664]
+    number_literal: 0x0 [11661,11664]
+to
+call_expression [2428,2461]
+at 1
+
+New cluster:
+UPDATE from _label to labels
+------------
+===
+update-node
+---
+identifier: _label [2531,2537]
+replace _label by labels
+
+New cluster:
+MOVE from array_access [2140,2165]
+------------
+===
+move-tree
+---
+identifier: _label [2531,2537]
+to
+array_access [2140,2165]
+at 0
+
+New cluster:
+MOVE from array_access [2140,2165]
+------------
+===
+move-tree
+---
+binary_expression [2589,2605]
+    member_expression: _label._len [2589,2600]
+    comparison_operator: > [2601,2602]
+    number_literal: 10 [2603,2605]
+to
+array_access [2140,2165]
+at 1
+
+New cluster:
+MOVE from unary_expression [4949,4977]
+------------
+===
+move-tree
+---
+call_expression [11880,11908]
+    member_expression: unsRegistry.ownerOf [11880,11899]
+    call_argument [11900,11907]
+        identifier: tokenId [11900,11907]
+to
+unary_expression [4949,4977]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7421,7432]
+    identifier: withReverse [7421,7432]
+to
+call_expression [8851,8907]
+at 5
+
+New cluster:
+UPDATE from _label._len to labels.length
+------------
+===
+update-node
+---
+member_expression: _label._len [2589,2600]
+replace _label._len by labels.length
+
+New cluster:
+===
+insert-node
+---
+arithmetic_operator: - [2161,2162]
+to
+binary_expression [2589,2605]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: - [2161,2162]
+to
+binary_expression [2589,2605]
+at 1
+
+New cluster:
+UPDATE from 10 to 2
+------------
+===
+update-node
+---
+number_literal: 10 [2603,2605]
+replace 10 by 2
+
+New cluster:
+UPDATE from unsRegistry.ownerOf to unsRegistry.exists
+------------
+===
+update-node
+---
+member_expression: unsRegistry.ownerOf [11880,11899]
+replace unsRegistry.ownerOf by unsRegistry.exists
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7861,7872]
+    identifier: withReverse [7861,7872]
+to
+call_expression [9281,9334]
+at 5
+
+New cluster:
+===
+delete-node
+---
+identifier: MintingManager [545,559]
+===
+------------
+===
+delete-node
+---
+identifier: MintingManager [545,559]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [560,562]
+===
+------------
+===
+delete-node
+---
+is: is [560,562]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [718,759]
+    type_name: string [718,724]
+    visibility: public [725,731]
+    constant: constant [732,740]
+    identifier: VERSION [741,748]
+    affectation_operator: = [749,750]
+    string_literal [751,758]
+        string: '0.4.0' [751,758]
+
+New cluster:
+===
+delete-node
+---
+call_expression [4834,4895]
+===
+------------
+===
+delete-node
+---
+call_argument [4856,4880]
+===
+===
+delete-node
+---
+identifier: _issueWithRecords [4834,4851]
+===
+===
+delete-node
+---
+call_expression [4834,4895]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4852,4854]
+    identifier: to [4852,4854]
+
+New cluster:
+===
+delete-node
+---
+modifier_definition [1522,1972]
+===
+------------
+===
+delete-node
+---
+modifier_definition [1522,1972]
+===
+===
+delete-node
+---
+identifier: onlyAllowedSLD [1531,1545]
+===
+===
+delete-node
+---
+modifier: modifier [1522,1530]
+===
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: > [2601,2602]
+===
+------------
+===
+delete-node
+---
+comparison_operator: > [2601,2602]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [2463,2499]
+    string: 'MintingManager: TLD_NOT_REGISTERED' [2463,2499]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [2510,2576]
+===
+------------
+===
+delete-node
+---
+type_name: Strings.Slice [2510,2523]
+===
+===
+delete-node
+---
+affectation_operator: = [2538,2539]
+===
+===
+delete-node
+---
+memory: memory [2524,2530]
+===
+===
+delete-node
+---
+variable_declaration [2510,2537]
+===
+===
+delete-node
+---
+variable_declaration_statement [2510,2576]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [2540,2575]
+    member_expression: labels[labels.length - 2].toSlice [2540,2573]
+
+New cluster:
+===
+delete-node
+---
+if_statement [2585,2827]
+===
+------------
+===
+delete-node
+---
+if_statement [2585,2827]
+===
+===
+delete-node
+---
+if: if [2585,2587]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [2607,2827]
+    expression_statement [2621,2817]
+        call_expression [2621,2816]
+            identifier: require [2621,2628]
+            call_argument [2646,2744]
+                binary_expression [2646,2744]
+                    call_expression [2646,2674]
+                        member_expression: _label.slice(0, 10).keccak [2646,2672]
+                    comparison_operator: != [2675,2677]
+                    number_literal: 0xb551e0305c8163b812374b8e78b577c77f226f6f10c5ad03e52699578fbc34b8 [2678,2744]
+            call_argument [2762,2802]
+                string_literal [2762,2802]
+                    string: 'MintingManager: TOKEN_LABEL_PROHIBITED' [2762,2802]
+
+New cluster:
+===
+delete-node
+---
+function_definition [4582,4902]
+===
+------------
+===
+delete-node
+---
+visibility: external [4754,4762]
+===
+===
+delete-node
+---
+function_definition [4582,4902]
+===
+===
+delete-node
+---
+function: function [4582,4590]
+===
+===
+delete-node
+---
+identifier: mintSLDWithRecords [4591,4609]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4660,4681]
+    type_name: string [4660,4666]
+    calldata: calldata [4667,4675]
+    identifier: label [4676,4681]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [4783,4809]
+    identifier: onlyAllowedSLD [4783,4797]
+    call_argument [4798,4801]
+        identifier: tld [4798,4801]
+    call_argument [4803,4808]
+        identifier: label [4803,4808]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [5949,6057]
+    function: function [5949,5957]
+    identifier: setResolver [5958,5969]
+    parameter [5970,5986]
+        type_name: address [5970,5977]
+        identifier: resolver [5978,5986]
+    visibility: external [5988,5996]
+    modifier_invocation [5997,6006]
+        identifier: onlyOwner [5997,6006]
+    function_body [6007,6057]
+        expression_statement [6017,6051]
+            assignment_expression [6017,6050]
+                identifier: cnsResolver [6017,6028]
+                affectation_operator: = [6029,6030]
+                call_expression [6031,6050]
+                    identifier: IResolver [6031,6040]
+                    call_argument [6041,6049]
+                        identifier: resolver [6041,6049]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [6444,6527]
+    function: function [6444,6452]
+    identifier: disableBlocklist [6453,6469]
+    visibility: external [6472,6480]
+    modifier_invocation [6481,6490]
+        identifier: onlyOwner [6481,6490]
+    function_body [6491,6527]
+        expression_statement [6501,6521]
+            call_expression [6501,6520]
+                identifier: _disableBlocklist [6501,6518]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [6533,6614]
+    function: function [6533,6541]
+    identifier: enableBlocklist [6542,6557]
+    visibility: external [6560,6568]
+    modifier_invocation [6569,6578]
+        identifier: onlyOwner [6569,6578]
+    function_body [6579,6614]
+        expression_statement [6589,6608]
+            call_expression [6589,6607]
+                identifier: _enableBlocklist [6589,6605]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [6714,6821]
+    function: function [6714,6722]
+    identifier: blocklistAll [6723,6735]
+    parameter [6736,6763]
+        type_name: uint256[] [6736,6745]
+        calldata: calldata [6746,6754]
+        identifier: tokenIds [6755,6763]
+    visibility: external [6765,6773]
+    modifier_invocation [6774,6784]
+        identifier: onlyMinter [6774,6784]
+    function_body [6785,6821]
+        expression_statement [6795,6815]
+            call_expression [6795,6814]
+                identifier: _blockAll [6795,6804]
+                call_argument [6805,6813]
+                    identifier: tokenIds [6805,6813]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [7161,7279]
+    function: function [7161,7169]
+    identifier: upgradeAll [7170,7180]
+    parameter [7181,7208]
+        type_name: uint256[] [7181,7190]
+        calldata: calldata [7191,7199]
+        identifier: tokenIds [7200,7208]
+    visibility: external [7210,7218]
+    modifier_invocation [7219,7229]
+        identifier: onlyMinter [7219,7229]
+    function_body [7230,7279]
+        expression_statement [7240,7273]
+            call_expression [7240,7272]
+                member_expression: unsRegistry.upgradeAll [7240,7262]
+                call_argument [7263,7271]
+                    identifier: tokenIds [7263,7271]
+
+New cluster:
+===
+delete-node
+---
+function_definition [7285,7583]
+===
+------------
+===
+delete-node
+---
+function_definition [7285,7583]
+===
+===
+delete-node
+---
+visibility: private [7331,7338]
+===
+===
+delete-node
+---
+function: function [7285,7293]
+===
+===
+delete-node
+---
+identifier: _isTldToChangeOwnership [7294,7317]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7318,7329]
+    type_name: uint256 [7318,7325]
+    identifier: tld [7326,7329]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [7344,7358]
+    returns: returns [7344,7351]
+    parameter [7353,7357]
+        type_name: bool [7353,7357]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [7359,7583]
+    return_statement [7464,7577]
+        return: return [7464,7470]
+        binary_expression [7471,7576]
+            binary_expression [7471,7499]
+                member_expression: bytes(_tlds[tld]).length [7471,7495]
+                comparison_operator: > [7496,7497]
+                number_literal: 0 [7498,7499]
+            logical_operator: || [7500,7502]
+            binary_expression [7503,7576]
+                identifier: tld [7503,7506]
+                comparison_operator: == [7507,7509]
+                number_literal: 0x7674e7282552c15f203b9c4a6025aeaf28176ef7f5451b280f9bada3f8bc98e2 [7510,7576]
+
+New cluster:
+===
+delete-node
+---
+function_definition [7589,7872]
+===
+------------
+===
+delete-node
+---
+for_statement [7666,7866]
+===
+===
+delete-node
+---
+function: function [7589,7597]
+===
+===
+delete-node
+---
+function_definition [7589,7872]
+===
+===
+delete-node
+---
+for: for [7666,7669]
+===
+===
+delete-node
+---
+identifier: burnTLDL1 [7598,7607]
+===
+===
+delete-node
+---
+function_body [7656,7872]
+===
+===
+delete-node
+---
+visibility: external [7637,7645]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7608,7635]
+    type_name: uint256[] [7608,7617]
+    calldata: calldata [7618,7626]
+    identifier: tokenIds [7627,7635]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [7646,7655]
+    identifier: onlyOwner [7646,7655]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7686,7706]
+    binary_expression [7686,7705]
+        identifier: i [7686,7687]
+        comparison_operator: < [7688,7689]
+        member_expression: tokenIds.length [7690,7705]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [7712,7866]
+    expression_statement [7726,7808]
+        call_expression [7726,7807]
+            identifier: require [7726,7733]
+            call_argument [7734,7770]
+                call_expression [7734,7770]
+                    identifier: _isTldToChangeOwnership [7734,7757]
+                    call_argument [7758,7769]
+                        array_access [7758,7769]
+                            identifier: tokenIds [7758,7766]
+                            identifier: i [7767,7768]
+            call_argument [7772,7806]
+                string_literal [7772,7806]
+                    string: 'MintingManager: TOKEN_ID_NOT_TLD' [7772,7806]
+    expression_statement [7821,7856]
+        call_expression [7821,7855]
+            member_expression: unsRegistry.burnTLDL1 [7821,7842]
+            call_argument [7843,7854]
+                array_access [7843,7854]
+                    identifier: tokenIds [7843,7851]
+                    identifier: i [7852,7853]
+
+New cluster:
+===
+delete-node
+---
+function_definition [7878,8179]
+===
+------------
+===
+delete-node
+---
+function: function [7878,7886]
+===
+===
+delete-node
+---
+for: for [7964,7967]
+===
+===
+delete-node
+---
+identifier: moveTLDOwnershipL2 [7887,7905]
+===
+===
+delete-node
+---
+for_statement [7964,8173]
+===
+===
+delete-node
+---
+function_definition [7878,8179]
+===
+===
+delete-node
+---
+function_body [7954,8179]
+===
+===
+delete-node
+---
+visibility: external [7935,7943]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7906,7933]
+    type_name: uint256[] [7906,7915]
+    calldata: calldata [7916,7924]
+    identifier: tokenIds [7925,7933]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [7944,7953]
+    identifier: onlyOwner [7944,7953]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7984,8004]
+    binary_expression [7984,8003]
+        identifier: i [7984,7985]
+        comparison_operator: < [7986,7987]
+        member_expression: tokenIds.length [7988,8003]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [8010,8173]
+    expression_statement [8024,8106]
+        call_expression [8024,8105]
+            identifier: require [8024,8031]
+            call_argument [8032,8068]
+                call_expression [8032,8068]
+                    identifier: _isTldToChangeOwnership [8032,8055]
+                    call_argument [8056,8067]
+                        array_access [8056,8067]
+                            identifier: tokenIds [8056,8064]
+                            identifier: i [8065,8066]
+            call_argument [8070,8104]
+                string_literal [8070,8104]
+                    string: 'MintingManager: TOKEN_ID_NOT_TLD' [8070,8104]
+    expression_statement [8119,8163]
+        call_expression [8119,8162]
+            member_expression: unsRegistry.moveTLDOwnershipL2 [8119,8149]
+            call_argument [8150,8161]
+                array_access [8150,8161]
+                    identifier: tokenIds [8150,8158]
+                    identifier: i [8159,8160]
+
+New cluster:
+===
+delete-node
+---
+function_definition [8425,8576]
+===
+------------
+===
+delete-node
+---
+identifier: _issue [8434,8440]
+===
+===
+delete-node
+---
+function_body [8485,8576]
+===
+===
+delete-node
+---
+expression_statement [8526,8570]
+===
+===
+delete-node
+---
+call_expression [8526,8569]
+===
+===
+delete-node
+---
+function_definition [8425,8576]
+===
+===
+delete-node
+---
+identifier: _issueWithRecords [8526,8543]
+===
+===
+delete-node
+---
+visibility: private [8477,8484]
+===
+===
+delete-node
+---
+function: function [8425,8433]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8441,8451]
+    type_name: address [8441,8448]
+    identifier: to [8449,8451]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8453,8475]
+    type_name: string[] [8453,8461]
+    memory: memory [8462,8468]
+    identifier: labels [8469,8475]
+
+New cluster:
+===
+delete-node
+---
+identifier: _ownerOf [8801,8809]
+===
+------------
+===
+delete-node
+---
+identifier: _ownerOf [8801,8809]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [11554,11708]
+===
+------------
+===
+delete-node
+---
+call_argument [11653,11665]
+===
+===
+delete-node
+---
+type_cast_expression [11653,11665]
+===
+===
+delete-node
+---
+variable_declaration_statement [11627,11672]
+===
+===
+delete-node
+---
+affectation_operator: = [11641,11642]
+===
+===
+delete-node
+---
+primitive_type: uint256 [11653,11660]
+===
+===
+delete-node
+---
+call_expression [11643,11671]
+===
+===
+delete-node
+---
+function: function [11554,11562]
+===
+===
+delete-node
+---
+visibility: private [11589,11596]
+===
+===
+delete-node
+---
+function_definition [11554,11708]
+===
+===
+delete-node
+---
+identifier: _isTld [11563,11569]
+===
+===
+delete-node
+---
+function_body [11617,11708]
+===
+===
+delete-node
+---
+identifier: _namehash [11643,11652]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [11570,11587]
+    type_name: string [11570,11576]
+    memory: memory [11577,11583]
+    identifier: tld [11584,11587]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [11597,11601]
+    view: view [11597,11601]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [11627,11640]
+    type_name: uint256 [11627,11634]
+    identifier: tldId [11635,11640]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11667,11670]
+    identifier: tld [11667,11670]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [11681,11702]
+    return: return [11681,11687]
+    call_expression [11688,11701]
+        identifier: _isTld [11688,11694]
+        call_argument [11695,11700]
+            identifier: tldId [11695,11700]
+
+New cluster:
+===
+delete-node
+---
+function_definition [11800,12027]
+===
+------------
+===
+delete-node
+---
+identifier: _ownerOf [11809,11817]
+===
+===
+delete-node
+---
+try_statement [11876,12021]
+===
+===
+delete-node
+---
+function_body [11866,12027]
+===
+===
+delete-node
+---
+visibility: private [11835,11842]
+===
+===
+delete-node
+---
+try: try [11876,11879]
+===
+===
+delete-node
+---
+returns: returns [11909,11916]
+===
+===
+delete-node
+---
+function_definition [11800,12027]
+===
+===
+delete-node
+---
+function: function [11800,11808]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [11818,11833]
+    type_name: uint256 [11818,11825]
+    identifier: tokenId [11826,11833]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [11843,11847]
+    view: view [11843,11847]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [11848,11865]
+    returns: returns [11848,11855]
+    parameter [11857,11864]
+        type_name: address [11857,11864]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [11918,11932]
+    type_name: address [11918,11925]
+    identifier: _owner [11926,11932]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [11934,11972]
+    return_statement [11948,11962]
+        return: return [11948,11954]
+        identifier: _owner [11955,11961]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+catch_clause [11973,12021]
+    catch: catch [11973,11978]
+    block_statement [11979,12021]
+        return_statement [11993,12011]
+            return: return [11993,11999]
+            type_cast_expression [12000,12010]
+                primitive_type: address [12000,12007]
+                call_argument [12008,12009]
+                    number_literal: 0 [12008,12009]
+

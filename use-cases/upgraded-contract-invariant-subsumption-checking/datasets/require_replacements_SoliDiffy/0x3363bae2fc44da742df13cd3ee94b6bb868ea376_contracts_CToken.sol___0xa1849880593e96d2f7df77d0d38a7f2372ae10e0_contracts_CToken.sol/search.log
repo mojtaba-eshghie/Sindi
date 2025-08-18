@@ -1,0 +1,5 @@
+results/differencing_results/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol.log:
+  11038  identifier: require [33124,33131]
+  11039: replace require by seizeError
+  11040  
+

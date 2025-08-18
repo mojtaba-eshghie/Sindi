@@ -1,0 +1,440 @@
+New cluster:
+UPDATE from mintBatch to exchangeRum
+------------
+===
+update-node
+---
+identifier: mintBatch [4968,4977]
+replace mintBatch by exchangeRum
+
+New cluster:
+UPDATE from public to external
+------------
+===
+update-node
+---
+visibility: public [5075,5081]
+replace public by external
+
+New cluster:
+MOVE from function_body [5098,5516]
+------------
+===
+move-tree
+---
+expression_statement [5104,5224]
+    call_expression [5104,5223]
+        identifier: require [5104,5111]
+        call_argument [5119,5185]
+            binary_expression [5119,5185]
+                member_expression: msg.value [5119,5128]
+                comparison_operator: >= [5129,5131]
+                parenthesized_expression [5132,5185]
+                    binary_expression [5133,5184]
+                        binary_expression [5133,5157]
+                            identifier: p1 [5133,5135]
+                            arithmetic_operator: * [5136,5137]
+                            identifier: PRICE_SMALL_PORTION [5138,5157]
+                        arithmetic_operator: + [5158,5159]
+                        binary_expression [5160,5184]
+                            identifier: p2 [5160,5162]
+                            arithmetic_operator: * [5163,5164]
+                            identifier: PRICE_LARGE_PORTION [5165,5184]
+        call_argument [5193,5217]
+            string_literal [5193,5217]
+                string: 'BAPC: Not enough funds' [5193,5217]
+to
+function_body [5098,5516]
+at 1
+
+New cluster:
+UPDATE from p1 to amount
+------------
+===
+update-node
+---
+identifier: p1 [4991,4993]
+replace p1 by amount
+===
+update-node
+---
+identifier: p1 [5316,5318]
+replace p1 by amount
+===
+update-node
+---
+identifier: p3 [5508,5510]
+replace p3 by amount
+
+New cluster:
+UPDATE from require to _burn
+------------
+===
+update-node
+---
+identifier: require [5426,5433]
+replace require by _burn
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4880,4886]
+    identifier: amount [4880,4886]
+to
+call_expression [5426,5479]
+at 3
+
+New cluster:
+UPDATE from _mintPortions to _mint
+------------
+===
+update-node
+---
+identifier: _mintPortions [5486,5499]
+replace _mintPortions by _mint
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4918,4920]
+    string_literal [4918,4920]
+        string: '' [4918,4920]
+to
+call_expression [5486,5511]
+at 4
+
+New cluster:
+MOVE from call_argument [5434,5454]
+------------
+===
+move-tree
+---
+identifier: wallet [5442,5448]
+to
+call_argument [5434,5454]
+at 0
+
+New cluster:
+===
+insert-node
+---
+number_literal: 1 [4877,4878]
+to
+call_argument [5456,5478]
+at 0
+------------
+===
+insert-node
+---
+number_literal: 1 [4877,4878]
+to
+call_argument [5456,5478]
+at 0
+
+New cluster:
+UPDATE from PRICE_SMALL_PORTION to wallet
+------------
+===
+update-node
+---
+identifier: PRICE_SMALL_PORTION [5138,5157]
+replace PRICE_SMALL_PORTION by wallet
+===
+update-node
+---
+identifier: p1 [5500,5502]
+replace p1 by wallet
+
+New cluster:
+===
+insert-node
+---
+number_literal: 4 [4907,4908]
+to
+call_argument [5504,5506]
+at 0
+------------
+===
+insert-node
+---
+number_literal: 4 [4907,4908]
+to
+call_argument [5504,5506]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: amount [4634,4640]
+to
+binary_expression [5119,5185]
+at 0
+------------
+===
+insert-node
+---
+identifier: amount [4634,4640]
+to
+binary_expression [5119,5185]
+at 0
+
+New cluster:
+UPDATE from >= to <=
+------------
+===
+update-node
+---
+comparison_operator: >= [5129,5131]
+replace >= by <=
+
+New cluster:
+===
+insert-node
+---
+call_expression [4644,4664]
+to
+binary_expression [5119,5185]
+at 3
+------------
+===
+insert-node
+---
+call_argument [4654,4660]
+to
+call_expression [4644,4664]
+at 1
+===
+insert-node
+---
+call_expression [4644,4664]
+to
+binary_expression [5119,5185]
+at 3
+
+New cluster:
+UPDATE from 'BAPC: Not enough funds' to 'BAPC: Not enough small portions'
+------------
+===
+update-node
+---
+string: 'BAPC: Not enough funds' [5193,5217]
+replace 'BAPC: Not enough funds' by 'BAPC: Not enough small portions'
+
+New cluster:
+UPDATE from p1 to balanceOf
+------------
+===
+update-node
+---
+identifier: p1 [5133,5135]
+replace p1 by balanceOf
+
+New cluster:
+MOVE from call_argument [4654,4660]
+------------
+===
+move-tree
+---
+identifier: PRICE_SMALL_PORTION [5138,5157]
+to
+call_argument [4654,4660]
+at 0
+===
+move-tree
+---
+identifier: p1 [5133,5135]
+to
+call_expression [4644,4664]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4662,4663]
+    number_literal: 1 [4662,4663]
+to
+call_expression [4644,4664]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4999,5009]
+    type_name: uint256 [4999,5006]
+    identifier: p2 [5007,5009]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5015,5025]
+    type_name: uint256 [5015,5022]
+    identifier: p3 [5023,5025]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [5082,5089]
+    payable: payable [5082,5089]
+
+New cluster:
+===
+delete-node
+---
+virtual: virtual [5090,5097]
+===
+------------
+===
+delete-node
+---
+virtual: virtual [5090,5097]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: msg.value [5119,5128]
+===
+------------
+===
+delete-node
+---
+member_expression: msg.value [5119,5128]
+===
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [5132,5185]
+===
+------------
+===
+delete-node
+---
+arithmetic_operator: * [5136,5137]
+===
+===
+delete-node
+---
+parenthesized_expression [5132,5185]
+===
+===
+delete-node
+---
+binary_expression [5133,5157]
+===
+===
+delete-node
+---
+arithmetic_operator: + [5158,5159]
+===
+===
+delete-node
+---
+binary_expression [5133,5184]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [5160,5184]
+    identifier: p2 [5160,5162]
+    arithmetic_operator: * [5163,5164]
+    identifier: PRICE_LARGE_PORTION [5165,5184]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5320,5322]
+    identifier: p2 [5320,5322]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5324,5326]
+    identifier: p3 [5324,5326]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [5434,5454]
+===
+------------
+===
+delete-node
+---
+binary_expression [5434,5454]
+===
+===
+delete-node
+---
+identifier: minters [5434,5441]
+===
+===
+delete-node
+---
+comparison_operator: == [5450,5452]
+===
+===
+delete-node
+---
+array_access [5434,5449]
+===
+===
+delete-node
+---
+number_literal: 0 [5453,5454]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [5456,5478]
+    string: 'BAPC: already minted' [5456,5478]
+
+New cluster:
+===
+delete-node
+---
+identifier: p2 [5504,5506]
+===
+------------
+===
+delete-node
+---
+identifier: p2 [5504,5506]
+===
+

@@ -1,0 +1,3677 @@
+New cluster:
+UPDATE from "MainGovernance.sol" to "MainStorage.sol"
+------------
+===
+update-node
+---
+string: "MainGovernance.sol" [716,736]
+replace "MainGovernance.sol" by "MainStorage.sol"
+
+New cluster:
+UPDATE from "Operator.sol" to "MainDispatcher.sol"
+------------
+===
+update-node
+---
+string: "Operator.sol" [745,759]
+replace "Operator.sol" by "MainDispatcher.sol"
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [862,900]
+    type_name: uint256 [862,869]
+    constant: constant [870,878]
+    identifier: SUBCONTRACT_BITS [879,895]
+    affectation_operator: = [896,897]
+    number_literal: 4 [898,899]
+to
+contract_body [1283,4811]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1075,1111]
+    type_name: uint256 [1075,1082]
+    constant: constant [1083,1091]
+    identifier: MAGIC_SALT [1092,1102]
+    affectation_operator: = [1103,1104]
+    number_literal: 45733 [1105,1110]
+to
+contract_body [1283,4811]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1116,1211]
+    type_name: uint256 [1116,1123]
+    constant: constant [1124,1132]
+    identifier: IDX_MAP_0 [1133,1142]
+    affectation_operator: = [1143,1144]
+    number_literal: 0x201220230201001000221220210222000000020303010211120120200003002 [1145,1210]
+to
+contract_body [1283,4811]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1216,1312]
+    type_name: uint256 [1216,1223]
+    constant: constant [1224,1232]
+    identifier: IDX_MAP_1 [1233,1242]
+    affectation_operator: = [1243,1244]
+    number_literal: 0x2100003000200010003000000300100220220203000020000101022100011100 [1245,1311]
+to
+contract_body [1283,4811]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [1375,1758]
+to
+contract_body [1283,4811]
+at 6
+------------
+===
+insert-node
+---
+variable_declaration_statement [1534,1617]
+to
+function_body [1458,1758]
+at 1
+===
+insert-node
+---
+call_argument [1679,1699]
+to
+call_expression [1669,1700]
+at 1
+===
+insert-node
+---
+identifier: validateSubContractIndex [1384,1408]
+to
+function_definition [1375,1758]
+at 1
+===
+insert-node
+---
+function_body [1458,1758]
+to
+function_definition [1375,1758]
+at 6
+===
+insert-node
+---
+call_expression [1626,1751]
+to
+expression_statement [1626,1752]
+at 0
+===
+insert-node
+---
+expression_statement [1626,1752]
+to
+function_body [1458,1758]
+at 2
+===
+insert-node
+---
+call_argument [1696,1698]
+to
+call_expression [1679,1699]
+at 1
+===
+insert-node
+---
+binary_expression [1647,1700]
+to
+call_argument [1647,1700]
+at 0
+===
+insert-node
+---
+call_expression [1669,1700]
+to
+binary_expression [1647,1700]
+at 2
+===
+insert-node
+---
+member_expression: abi.encodePacked [1679,1695]
+to
+call_expression [1679,1699]
+at 0
+===
+insert-node
+---
+function_definition [1375,1758]
+to
+contract_body [1283,4811]
+at 6
+===
+insert-node
+---
+comparison_operator: == [1666,1668]
+to
+binary_expression [1647,1700]
+at 1
+===
+insert-node
+---
+call_argument [1647,1700]
+to
+call_expression [1626,1751]
+at 1
+===
+insert-node
+---
+parameter [1409,1422]
+to
+function_definition [1375,1758]
+at 2
+===
+insert-node
+---
+type_name: uint256 [1409,1416]
+to
+parameter [1409,1422]
+at 0
+===
+insert-node
+---
+variable_declaration [1534,1560]
+to
+variable_declaration_statement [1534,1617]
+at 0
+===
+insert-node
+---
+call_expression [1679,1699]
+to
+call_argument [1679,1699]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [1764,2171]
+to
+contract_body [1283,4811]
+at 7
+------------
+===
+insert-node
+---
+function_definition [1764,2171]
+to
+contract_body [1283,4811]
+at 7
+===
+insert-node
+---
+function: function [1764,1772]
+to
+function_definition [1764,2171]
+at 0
+===
+insert-node
+---
+visibility: private [1814,1821]
+to
+function_definition [1764,2171]
+at 3
+===
+insert-node
+---
+return_type_definition [1827,1853]
+to
+function_definition [1764,2171]
+at 5
+===
+insert-node
+---
+returns: returns [1827,1834]
+to
+return_type_definition [1827,1853]
+at 0
+===
+insert-node
+---
+identifier: expectedIdByIndex [1773,1790]
+to
+function_definition [1764,2171]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [2177,2264]
+to
+contract_body [1283,4811]
+at 8
+------------
+===
+insert-node
+---
+function_definition [2177,2264]
+to
+contract_body [1283,4811]
+at 8
+===
+insert-node
+---
+visibility: internal [2207,2215]
+to
+function_definition [2177,2264]
+at 2
+===
+insert-node
+---
+returns: returns [2221,2228]
+to
+return_type_definition [2221,2238]
+at 0
+===
+insert-node
+---
+return_type_definition [2221,2238]
+to
+function_definition [2177,2264]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [2270,2761]
+to
+contract_body [1283,4811]
+at 9
+------------
+===
+insert-node
+---
+return_type_definition [2333,2350]
+to
+function_definition [2270,2761]
+at 5
+===
+insert-node
+---
+return: return [2719,2725]
+to
+return_statement [2719,2755]
+at 0
+===
+insert-node
+---
+bitwise_operator: & [2385,2386]
+to
+binary_expression [2380,2445]
+at 1
+===
+insert-node
+---
+visibility: internal [2319,2327]
+to
+function_definition [2270,2761]
+at 3
+===
+insert-node
+---
+expression_statement [2580,2625]
+to
+block_statement [2566,2635]
+at 0
+===
+insert-node
+---
+if_statement [2547,2710]
+to
+function_body [2351,2761]
+at 3
+===
+insert-node
+---
+binary_expression [2380,2445]
+to
+variable_declaration_statement [2361,2446]
+at 2
+===
+insert-node
+---
+function_body [2351,2761]
+to
+function_definition [2270,2761]
+at 6
+===
+insert-node
+---
+affectation_operator: = [2595,2596]
+to
+assignment_expression [2580,2624]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [2361,2446]
+to
+function_body [2351,2761]
+at 0
+===
+insert-node
+---
+returns: returns [2333,2340]
+to
+return_type_definition [2333,2350]
+at 0
+===
+insert-node
+---
+return_statement [2719,2755]
+to
+function_body [2351,2761]
+at 4
+===
+insert-node
+---
+variable_declaration [2361,2377]
+to
+variable_declaration_statement [2361,2446]
+at 0
+===
+insert-node
+---
+primitive_type: uint256 [2387,2394]
+to
+type_cast_expression [2387,2445]
+at 0
+===
+insert-node
+---
+assignment_expression [2580,2624]
+to
+expression_statement [2580,2625]
+at 0
+===
+insert-node
+---
+number_literal: 0x7F [2380,2384]
+to
+binary_expression [2380,2445]
+at 0
+===
+insert-node
+---
+array_access [2726,2754]
+to
+return_statement [2719,2755]
+at 1
+===
+insert-node
+---
+function_definition [2270,2761]
+to
+contract_body [1283,4811]
+at 9
+===
+insert-node
+---
+type_cast_expression [2387,2445]
+to
+binary_expression [2380,2445]
+at 2
+===
+insert-node
+---
+affectation_operator: = [2378,2379]
+to
+variable_declaration_statement [2361,2446]
+at 1
+===
+insert-node
+---
+block_statement [2641,2710]
+to
+if_statement [2547,2710]
+at 4
+===
+insert-node
+---
+identifier: subContractIdx [2580,2594]
+to
+assignment_expression [2580,2624]
+at 0
+===
+insert-node
+---
+function: function [2270,2278]
+to
+function_definition [2270,2761]
+at 0
+===
+insert-node
+---
+call_expression [2395,2444]
+to
+call_argument [2395,2444]
+at 0
+===
+insert-node
+---
+call_argument [2405,2443]
+to
+call_expression [2395,2444]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [2455,2478]
+to
+function_body [2351,2761]
+at 1
+===
+insert-node
+---
+else: else [2636,2640]
+to
+if_statement [2547,2710]
+at 3
+===
+insert-node
+---
+block_statement [2566,2635]
+to
+if_statement [2547,2710]
+at 2
+===
+insert-node
+---
+variable_declaration [2455,2477]
+to
+variable_declaration_statement [2455,2478]
+at 0
+===
+insert-node
+---
+call_argument [2395,2444]
+to
+type_cast_expression [2387,2445]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [2767,2907]
+to
+contract_body [1283,4811]
+at 10
+------------
+===
+insert-node
+---
+function_definition [2767,2907]
+to
+contract_body [1283,4811]
+at 10
+===
+insert-node
+---
+expression_statement [2860,2901]
+to
+function_body [2850,2907]
+at 0
+===
+insert-node
+---
+assignment_expression [2860,2900]
+to
+expression_statement [2860,2901]
+at 0
+===
+insert-node
+---
+visibility: internal [2841,2849]
+to
+function_definition [2767,2907]
+at 4
+===
+insert-node
+---
+affectation_operator: = [2880,2881]
+to
+assignment_expression [2860,2900]
+at 1
+===
+insert-node
+---
+parameter [2798,2811]
+to
+function_definition [2767,2907]
+at 2
+===
+insert-node
+---
+function: function [2767,2775]
+to
+function_definition [2767,2907]
+at 0
+===
+insert-node
+---
+parameter [2813,2839]
+to
+function_definition [2767,2907]
+at 3
+===
+insert-node
+---
+function_body [2850,2907]
+to
+function_definition [2767,2907]
+at 5
+===
+insert-node
+---
+array_access [2860,2879]
+to
+assignment_expression [2860,2900]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [2913,3366]
+to
+contract_body [1283,4811]
+at 11
+------------
+===
+insert-node
+---
+memory: memory [2986,2992]
+to
+variable_declaration [2979,3003]
+at 1
+===
+insert-node
+---
+call_expression [3318,3359]
+to
+expression_statement [3318,3360]
+at 0
+===
+insert-node
+---
+call_argument [3348,3358]
+to
+call_expression [3318,3359]
+at 2
+===
+insert-node
+---
+identifier: require [3318,3325]
+to
+call_expression [3318,3359]
+at 0
+===
+insert-node
+---
+visibility: internal [2955,2963]
+to
+function_definition [2913,3366]
+at 2
+===
+insert-node
+---
+type_name: string [2979,2985]
+to
+variable_declaration [2979,3003]
+at 0
+===
+insert-node
+---
+function: function [2913,2921]
+to
+function_definition [2913,3366]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [2979,3031]
+to
+function_body [2969,3366]
+at 0
+===
+insert-node
+---
+expression_statement [3177,3213]
+to
+function_body [2969,3366]
+at 1
+===
+insert-node
+---
+function_definition [2913,3366]
+to
+contract_body [1283,4811]
+at 11
+===
+insert-node
+---
+function_body [2969,3366]
+to
+function_definition [2913,3366]
+at 4
+===
+insert-node
+---
+expression_statement [3222,3264]
+to
+function_body [2969,3366]
+at 2
+===
+insert-node
+---
+expression_statement [3273,3309]
+to
+function_body [2969,3366]
+at 3
+===
+insert-node
+---
+variable_declaration [2979,3003]
+to
+variable_declaration_statement [2979,3031]
+at 0
+===
+insert-node
+---
+expression_statement [3318,3360]
+to
+function_body [2969,3366]
+at 4
+===
+insert-node
+---
+call_expression [3273,3308]
+to
+expression_statement [3273,3309]
+at 0
+===
+insert-node
+---
+call_expression [3222,3263]
+to
+expression_statement [3222,3264]
+at 0
+
+New cluster:
+UPDATE from MainGovernance to MainStorage
+------------
+===
+update-node
+---
+identifier: MainGovernance [1058,1072]
+replace MainGovernance by MainStorage
+
+New cluster:
+UPDATE from Operator to MainDispatcher
+------------
+===
+update-node
+---
+identifier: Operator [1124,1132]
+replace Operator by MainDispatcher
+
+New cluster:
+===
+insert-node
+---
+visibility: public [744,750]
+to
+state_variable_declaration [1289,1330]
+at 1
+------------
+===
+insert-node
+---
+visibility: public [744,750]
+to
+state_variable_declaration [1289,1330]
+at 1
+
+New cluster:
+MOVE from parameter [1409,1422]
+------------
+===
+move-tree
+---
+identifier: initKey [1483,1490]
+to
+parameter [1409,1422]
+at 1
+===
+move-tree
+---
+function: function [1474,1482]
+to
+function_definition [1375,1758]
+at 0
+===
+move-tree
+---
+visibility: internal [1493,1501]
+to
+function_definition [1375,1758]
+at 4
+===
+move-tree
+---
+state_mutability [1502,1506]
+    pure: pure [1502,1506]
+to
+function_definition [1375,1758]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1424,1443]
+    type_name: address [1424,1431]
+    identifier: subContract [1432,1443]
+to
+function_definition [1375,1758]
+at 3
+
+New cluster:
+MOVE from function_definition [1764,2171]
+------------
+===
+move-tree
+---
+parameter [1828,1858]
+    type_name: uint256 [1828,1835]
+    identifier: initialVaultTreeHeight [1836,1858]
+to
+function_definition [1764,2171]
+at 2
+===
+move-tree
+---
+parameter [1868,1898]
+    type_name: uint256 [1868,1875]
+    identifier: initialOrderTreeHeight [1876,1898]
+to
+return_type_definition [1827,1853]
+at 1
+===
+move-tree
+---
+function_body [1924,2470]
+    expression_statement [2240,2464]
+        call_expression [2240,2463]
+            identifier: internalInitialize [2240,2258]
+            call_argument [2272,2286]
+                identifier: escapeVerifier [2272,2286]
+            call_argument [2300,2321]
+                identifier: initialSequenceNumber [2300,2321]
+            call_argument [2335,2351]
+                identifier: initialVaultRoot [2335,2351]
+            call_argument [2365,2381]
+                identifier: initialOrderRoot [2365,2381]
+            call_argument [2395,2417]
+                identifier: initialVaultTreeHeight [2395,2417]
+            call_argument [2431,2453]
+                identifier: initialOrderTreeHeight [2431,2453]
+to
+function_definition [1764,2171]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [1822,1826]
+    pure: pure [1822,1826]
+to
+function_definition [1764,2171]
+at 4
+
+New cluster:
+MOVE from function_definition [2177,2264]
+------------
+===
+move-tree
+---
+function: function [2476,2484]
+to
+function_definition [2177,2264]
+at 0
+===
+move-tree
+---
+identifier: internalInitialize [2485,2503]
+to
+function_definition [2177,2264]
+at 1
+===
+move-tree
+---
+parameter [2551,2580]
+    type_name: uint256 [2551,2558]
+    identifier: initialSequenceNumber [2559,2580]
+to
+return_type_definition [2221,2238]
+at 1
+===
+move-tree
+---
+parameter [2624,2648]
+    type_name: uint256 [2624,2631]
+    identifier: initialOrderRoot [2632,2648]
+to
+function_definition [2270,2761]
+at 2
+===
+move-tree
+---
+parameter [2658,2688]
+    type_name: uint256 [2658,2665]
+    identifier: initialVaultTreeHeight [2666,2688]
+to
+return_type_definition [2333,2350]
+at 1
+
+New cluster:
+UPDATE from internalInitialize to getNumSubcontracts
+------------
+===
+update-node
+---
+identifier: internalInitialize [2485,2503]
+replace internalInitialize by getNumSubcontracts
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [2216,2220]
+    pure: pure [2216,2220]
+to
+function_definition [2177,2264]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [2239,2264]
+    return_statement [2249,2258]
+        return: return [2249,2255]
+        number_literal: 3 [2256,2257]
+to
+function_definition [2177,2264]
+at 5
+
+New cluster:
+UPDATE from initialVaultRoot to getSubContract
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [2598,2614]
+replace initialVaultRoot by getSubContract
+
+New cluster:
+MOVE from function_definition [2270,2761]
+------------
+===
+move-tree
+---
+identifier: initialVaultRoot [2598,2614]
+to
+function_definition [2270,2761]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [2328,2332]
+    view: view [2328,2332]
+to
+function_definition [2270,2761]
+at 4
+
+New cluster:
+UPDATE from initialVaultRoot to setSubContractAddress
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [3909,3925]
+replace initialVaultRoot by setSubContractAddress
+
+New cluster:
+MOVE from function_definition [2767,2907]
+------------
+===
+move-tree
+---
+identifier: initialVaultRoot [3909,3925]
+to
+function_definition [2767,2907]
+at 1
+
+New cluster:
+UPDATE from initialOrderRoot to initializationSentinel
+------------
+===
+update-node
+---
+identifier: initialOrderRoot [4220,4236]
+replace initialOrderRoot by initializationSentinel
+
+New cluster:
+MOVE from variable_declaration [2979,3003]
+------------
+===
+move-tree
+---
+identifier: initialVaultTreeHeight [4258,4280]
+to
+variable_declaration [2979,3003]
+at 2
+===
+move-tree
+---
+identifier: initialOrderRoot [4220,4236]
+to
+function_definition [2913,3366]
+at 1
+===
+move-tree
+---
+identifier: initialVaultRoot [4182,4198]
+to
+assignment_expression [2860,2900]
+at 2
+===
+move-tree
+---
+identifier: initialSequenceNumber [4139,4160]
+to
+array_access [2860,2879]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [2964,2968]
+    view: view [2964,2968]
+to
+function_definition [2913,3366]
+at 3
+
+New cluster:
+UPDATE from "1.0.1" to "2.0.1"
+------------
+===
+update-node
+---
+string: "1.0.1" [1322,1329]
+replace "1.0.1" by "2.0.1"
+
+New cluster:
+UPDATE from "INIT_TAG_Starkware.StarkExchange.2020" to "INIT_TAG_Starkware.StarkExchange.2020.2.0.1"
+------------
+===
+update-node
+---
+string: "INIT_TAG_Starkware.StarkExchange.2020" [1362,1401]
+replace "INIT_TAG_Starkware.StarkExchange.2020" by "INIT_TAG_Starkware.StarkExchange.2020.2.0.1"
+
+New cluster:
+UPDATE from initKey to index
+------------
+===
+update-node
+---
+identifier: initKey [1483,1490]
+replace initKey by index
+===
+update-node
+---
+identifier: initialOrderRoot [3951,3967]
+replace initialOrderRoot by index
+===
+update-node
+---
+identifier: internalInitialize [2240,2258]
+replace internalInitialize by index
+===
+update-node
+---
+identifier: initialVaultTreeHeight [1836,1858]
+replace initialVaultTreeHeight by index
+===
+update-node
+---
+identifier: initialVaultTreeHeight [2395,2417]
+replace initialVaultTreeHeight by index
+===
+update-node
+---
+identifier: VERSION [1574,1581]
+replace VERSION by index
+===
+update-node
+---
+identifier: initialVaultRoot [2335,2351]
+replace initialVaultRoot by index
+===
+update-node
+---
+identifier: initialSequenceNumber [4139,4160]
+replace initialSequenceNumber by index
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [1468,1525]
+    variable_declaration [1468,1484]
+        type_name: string [1468,1474]
+        memory: memory [1475,1481]
+        identifier: id [1482,1484]
+    affectation_operator: = [1485,1486]
+    call_expression [1487,1524]
+        member_expression: SubContractor(subContract).identify [1487,1522]
+to
+function_body [1458,1758]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [1864,2165]
+to
+function_body [1924,2470]
+at 0
+------------
+===
+insert-node
+---
+comparison_operator: == [1956,1958]
+to
+binary_expression [1950,1960]
+at 1
+===
+insert-node
+---
+affectation_operator: = [2064,2065]
+to
+assignment_expression [2061,2097]
+at 1
+===
+insert-node
+---
+binary_expression [1868,1878]
+to
+if_statement [1864,2165]
+at 1
+===
+insert-node
+---
+if_statement [2032,2165]
+to
+if_statement [1946,2165]
+at 4
+===
+insert-node
+---
+number_literal: 1 [1877,1878]
+to
+binary_expression [1868,1878]
+at 2
+===
+insert-node
+---
+affectation_operator: = [1978,1979]
+to
+assignment_expression [1975,2015]
+at 1
+===
+insert-node
+---
+else: else [2027,2031]
+to
+if_statement [1946,2165]
+at 3
+===
+insert-node
+---
+expression_statement [1893,1930]
+to
+block_statement [1879,1940]
+at 0
+===
+insert-node
+---
+assignment_expression [1975,2015]
+to
+expression_statement [1975,2016]
+at 0
+===
+insert-node
+---
+comparison_operator: == [2042,2044]
+to
+binary_expression [2036,2046]
+at 1
+===
+insert-node
+---
+if_statement [1946,2165]
+to
+if_statement [1864,2165]
+at 4
+===
+insert-node
+---
+block_statement [1879,1940]
+to
+if_statement [1864,2165]
+at 2
+===
+insert-node
+---
+assignment_expression [1893,1929]
+to
+expression_statement [1893,1930]
+at 0
+===
+insert-node
+---
+block_statement [1961,2026]
+to
+if_statement [1946,2165]
+at 2
+===
+insert-node
+---
+binary_expression [2036,2046]
+to
+if_statement [2032,2165]
+at 1
+===
+insert-node
+---
+else: else [1941,1945]
+to
+if_statement [1864,2165]
+at 3
+===
+insert-node
+---
+block_statement [2047,2108]
+to
+if_statement [2032,2165]
+at 2
+===
+insert-node
+---
+number_literal: 3 [2045,2046]
+to
+binary_expression [2036,2046]
+at 2
+===
+insert-node
+---
+binary_expression [1950,1960]
+to
+if_statement [1946,2165]
+at 1
+===
+insert-node
+---
+assignment_expression [2061,2097]
+to
+expression_statement [2061,2098]
+at 0
+===
+insert-node
+---
+if_statement [1864,2165]
+to
+function_body [1924,2470]
+at 0
+===
+insert-node
+---
+affectation_operator: = [1896,1897]
+to
+assignment_expression [1893,1929]
+at 1
+===
+insert-node
+---
+expression_statement [1975,2016]
+to
+block_statement [1961,2026]
+at 0
+===
+insert-node
+---
+expression_statement [2061,2098]
+to
+block_statement [2047,2108]
+at 0
+===
+insert-node
+---
+if: if [2032,2034]
+to
+if_statement [2032,2165]
+at 0
+===
+insert-node
+---
+comparison_operator: == [1874,1876]
+to
+binary_expression [1868,1878]
+at 1
+===
+insert-node
+---
+if: if [1946,1948]
+to
+if_statement [1946,2165]
+at 0
+===
+insert-node
+---
+else: else [2109,2113]
+to
+if_statement [2032,2165]
+at 3
+===
+insert-node
+---
+number_literal: 2 [1959,1960]
+to
+binary_expression [1950,1960]
+at 2
+===
+insert-node
+---
+if: if [1864,1866]
+to
+if_statement [1864,2165]
+at 0
+
+New cluster:
+UPDATE from uint256 to bytes4
+------------
+===
+update-node
+---
+type_name: uint256 [2624,2631]
+replace uint256 by bytes4
+
+New cluster:
+UPDATE from initialSequenceNumber to selector
+------------
+===
+update-node
+---
+identifier: initialSequenceNumber [2840,2861]
+replace initialSequenceNumber by selector
+===
+update-node
+---
+identifier: initialOrderRoot [2632,2648]
+replace initialOrderRoot by selector
+
+New cluster:
+MOVE from function_body [2351,2761]
+------------
+===
+move-tree
+---
+variable_declaration_statement [3372,3396]
+    variable_declaration [3372,3383]
+        type_name: bytes32 [3372,3379]
+        identifier: key [3380,3383]
+    affectation_operator: = [3384,3385]
+    call_expression [3386,3395]
+        identifier: initKey [3386,3393]
+to
+function_body [2351,2761]
+at 2
+
+New cluster:
+MOVE from parameter [2798,2811]
+------------
+===
+move-tree
+---
+identifier: initialOrderRoot [3951,3967]
+to
+parameter [2798,2811]
+at 1
+===
+move-tree
+---
+type_name: uint256 [3943,3950]
+to
+parameter [2798,2811]
+at 0
+
+New cluster:
+UPDATE from uint256 to address
+------------
+===
+update-node
+---
+type_name: uint256 [3985,3992]
+replace uint256 by address
+===
+update-node
+---
+type_name: uint256 [2658,2665]
+replace uint256 by address
+
+New cluster:
+MOVE from parameter [2813,2839]
+------------
+===
+move-tree
+---
+identifier: initialVaultTreeHeight [3993,4015]
+to
+parameter [2813,2839]
+at 1
+===
+move-tree
+---
+type_name: uint256 [3985,3992]
+to
+parameter [2813,2839]
+at 0
+
+New cluster:
+UPDATE from initialVaultRoot to subContractAddress
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [4182,4198]
+replace initialVaultRoot by subContractAddress
+===
+update-node
+---
+identifier: initialVaultTreeHeight [3993,4015]
+replace initialVaultTreeHeight by subContractAddress
+
+New cluster:
+MOVE from variable_declaration_statement [1534,1617]
+------------
+===
+move-tree
+---
+affectation_operator: = [1541,1542]
+to
+variable_declaration_statement [1534,1617]
+at 1
+===
+move-tree
+---
+call_expression [1543,1583]
+    identifier: keccak256 [1543,1552]
+    call_argument [1553,1582]
+        call_expression [1553,1582]
+            member_expression: abi.encode [1553,1563]
+            call_argument [1564,1572]
+                identifier: INIT_TAG [1564,1572]
+            call_argument [1574,1581]
+                identifier: VERSION [1574,1581]
+to
+variable_declaration_statement [1534,1617]
+at 2
+
+New cluster:
+UPDATE from uint256 to string
+------------
+===
+update-node
+---
+type_name: uint256 [1868,1875]
+replace uint256 by string
+
+New cluster:
+===
+insert-node
+---
+memory: memory [1843,1849]
+to
+parameter [1868,1898]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [1843,1849]
+to
+parameter [1868,1898]
+at 1
+
+New cluster:
+UPDATE from initialOrderRoot to id
+------------
+===
+update-node
+---
+identifier: initialOrderRoot [1802,1818]
+replace initialOrderRoot by id
+===
+update-node
+---
+identifier: initialSequenceNumber [2300,2321]
+replace initialSequenceNumber by id
+===
+update-node
+---
+identifier: initialOrderTreeHeight [2431,2453]
+replace initialOrderTreeHeight by id
+===
+update-node
+---
+identifier: initialOrderTreeHeight [1876,1898]
+replace initialOrderTreeHeight by id
+===
+update-node
+---
+identifier: initialOrderRoot [2365,2381]
+replace initialOrderRoot by id
+
+New cluster:
+===
+insert-node
+---
+binary_expression [2504,2537]
+to
+variable_declaration_statement [3372,3396]
+at 2
+------------
+===
+insert-node
+---
+number_literal: 256 [2534,2537]
+to
+binary_expression [2504,2537]
+at 2
+===
+insert-node
+---
+binary_expression [2504,2537]
+to
+variable_declaration_statement [3372,3396]
+at 2
+===
+insert-node
+---
+binary_expression [2504,2531]
+to
+binary_expression [2504,2537]
+at 0
+===
+insert-node
+---
+identifier: location [2523,2531]
+to
+binary_expression [2504,2531]
+at 2
+===
+insert-node
+---
+%: % [2532,2533]
+to
+binary_expression [2504,2537]
+at 1
+===
+insert-node
+---
+arithmetic_operator: * [2521,2522]
+to
+binary_expression [2504,2531]
+at 1
+
+New cluster:
+MOVE from if_statement [2547,2710]
+------------
+===
+move-tree
+---
+if: if [3462,3464]
+to
+if_statement [2547,2710]
+at 0
+===
+move-tree
+---
+binary_expression [3466,3491]
+    array_access [3466,3482]
+        identifier: initialized [3466,3477]
+        identifier: key [3478,3481]
+    comparison_operator: == [3483,3485]
+    boolean_literal: false [3486,3491]
+to
+if_statement [2547,2710]
+at 1
+
+New cluster:
+MOVE from expression_statement [3177,3213]
+------------
+===
+move-tree
+---
+call_expression [4345,4443]
+    member_expression: abi.decode [4345,4355]
+    call_argument [4356,4360]
+        identifier: data [4356,4360]
+    call_argument [4382,4442]
+        tuple_expression [4382,4442]
+            identifier: IFactRegistry [4383,4396]
+            primitive_type: uint256 [4398,4405]
+            primitive_type: uint256 [4407,4414]
+            primitive_type: uint256 [4416,4423]
+            primitive_type: uint256 [4425,4432]
+            primitive_type: uint256 [4434,4441]
+to
+expression_statement [3177,3213]
+at 0
+===
+move-tree
+---
+affectation_operator: = [4343,4344]
+to
+variable_declaration_statement [2979,3031]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [3006,3030]
+    string: "INITIALIZATION_BLOCKED" [3006,3030]
+to
+variable_declaration_statement [2979,3031]
+at 2
+
+New cluster:
+MOVE from variable_declaration [1534,1560]
+------------
+===
+move-tree
+---
+type_name: bytes32 [1515,1522]
+to
+variable_declaration [1534,1560]
+at 0
+===
+move-tree
+---
+identifier: key [1523,1526]
+to
+variable_declaration [1534,1560]
+at 1
+
+New cluster:
+UPDATE from initialSequenceNumber to hashed_expected_id
+------------
+===
+update-node
+---
+identifier: initialSequenceNumber [1729,1750]
+replace initialSequenceNumber by hashed_expected_id
+===
+update-node
+---
+identifier: key [1523,1526]
+replace key by hashed_expected_id
+
+New cluster:
+UPDATE from initialVaultRoot to require
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [4581,4597]
+replace initialVaultRoot by require
+===
+update-node
+---
+identifier: internalInitialize [4462,4480]
+replace internalInitialize by require
+===
+update-node
+---
+identifier: escapeVerifier [1697,1711]
+replace escapeVerifier by require
+
+New cluster:
+MOVE from call_expression [1626,1751]
+------------
+===
+move-tree
+---
+identifier: escapeVerifier [1697,1711]
+to
+call_expression [1626,1751]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [1714,1750]
+    string_literal [1714,1750]
+        string: "MISPLACED_INDEX_OR_BAD_CONTRACT_ID" [1714,1750]
+to
+call_expression [1626,1751]
+at 2
+
+New cluster:
+MOVE from binary_expression [1868,1878]
+------------
+===
+move-tree
+---
+identifier: internalInitialize [2240,2258]
+to
+binary_expression [1868,1878]
+at 0
+
+New cluster:
+MOVE from variable_declaration [2361,2377]
+------------
+===
+move-tree
+---
+identifier: initialOrderTreeHeight [2706,2728]
+to
+variable_declaration [2361,2377]
+at 1
+===
+move-tree
+---
+type_name: uint256 [2698,2705]
+to
+variable_declaration [2361,2377]
+at 0
+
+New cluster:
+UPDATE from initialized to location
+------------
+===
+update-node
+---
+identifier: initialized [3466,3477]
+replace initialized by location
+===
+update-node
+---
+identifier: initialOrderTreeHeight [2706,2728]
+replace initialOrderTreeHeight by location
+
+New cluster:
+UPDATE from bytes to uint256
+------------
+===
+update-node
+---
+type_name: bytes [3320,3325]
+replace bytes by uint256
+===
+update-node
+---
+type_name: bytes32 [3372,3379]
+replace bytes32 by uint256
+
+New cluster:
+MOVE from variable_declaration [2455,2477]
+------------
+===
+move-tree
+---
+identifier: data [3335,3339]
+to
+variable_declaration [2455,2477]
+at 1
+===
+move-tree
+---
+type_name: bytes [3320,3325]
+to
+variable_declaration [2455,2477]
+at 0
+
+New cluster:
+UPDATE from initialSequenceNumber to subContractIdx
+------------
+===
+update-node
+---
+identifier: initialSequenceNumber [3862,3883]
+replace initialSequenceNumber by subContractIdx
+===
+update-node
+---
+identifier: data [3335,3339]
+replace data by subContractIdx
+===
+update-node
+---
+identifier: require [3735,3742]
+replace require by subContractIdx
+
+New cluster:
+UPDATE from key to offset
+------------
+===
+update-node
+---
+identifier: key [3380,3383]
+replace key by offset
+
+New cluster:
+MOVE from binary_expression [3466,3491]
+------------
+===
+move-tree
+---
+identifier: initialized [3466,3477]
+to
+binary_expression [3466,3491]
+at 0
+
+New cluster:
+UPDATE from == to <
+------------
+===
+update-node
+---
+comparison_operator: == [3483,3485]
+replace == by <
+
+New cluster:
+===
+insert-node
+---
+number_literal: 64 [2562,2564]
+to
+binary_expression [3466,3491]
+at 3
+------------
+===
+insert-node
+---
+number_literal: 64 [2562,2564]
+to
+binary_expression [3466,3491]
+at 3
+
+New cluster:
+MOVE from block_statement [2641,2710]
+------------
+===
+move-tree
+---
+expression_statement [3735,3791]
+    call_expression [3735,3790]
+        identifier: require [3735,3742]
+        call_argument [3743,3761]
+            binary_expression [3743,3761]
+                member_expression: data.length [3743,3754]
+                comparison_operator: == [3755,3757]
+                number_literal: 192 [3758,3761]
+        call_argument [3763,3789]
+            string_literal [3763,3789]
+                string: "INCORRECT_INIT_DATA_SIZE" [3763,3789]
+to
+block_statement [2641,2710]
+at 0
+
+New cluster:
+UPDATE from escapeVerifier to subContracts
+------------
+===
+update-node
+---
+identifier: escapeVerifier [3822,3836]
+replace escapeVerifier by subContracts
+===
+update-node
+---
+identifier: initialOrderTreeHeight [4041,4063]
+replace initialOrderTreeHeight by subContracts
+
+New cluster:
+MOVE from array_access [2726,2754]
+------------
+===
+move-tree
+---
+identifier: escapeVerifier [3822,3836]
+to
+array_access [2726,2754]
+at 0
+
+New cluster:
+MOVE from array_access [2726,2754]
+------------
+===
+move-tree
+---
+identifier: initialSequenceNumber [3862,3883]
+to
+array_access [2726,2754]
+at 1
+
+New cluster:
+UPDATE from IFactRegistry to REVERT_MSG
+------------
+===
+update-node
+---
+identifier: IFactRegistry [4383,4396]
+replace IFactRegistry by REVERT_MSG
+===
+update-node
+---
+identifier: initialVaultTreeHeight [4657,4679]
+replace initialVaultTreeHeight by REVERT_MSG
+===
+update-node
+---
+identifier: initialVaultTreeHeight [4258,4280]
+replace initialVaultTreeHeight by REVERT_MSG
+===
+update-node
+---
+identifier: initialSequenceNumber [4538,4559]
+replace initialSequenceNumber by REVERT_MSG
+===
+update-node
+---
+identifier: initialized [4769,4780]
+replace initialized by REVERT_MSG
+
+New cluster:
+===
+insert-node
+---
+identifier: require [3177,3184]
+to
+call_expression [4345,4443]
+at 0
+------------
+===
+insert-node
+---
+identifier: require [3177,3184]
+to
+call_expression [4345,4443]
+at 0
+
+New cluster:
+MOVE from call_expression [3318,3359]
+------------
+===
+move-tree
+---
+call_argument [4701,4723]
+    identifier: initialOrderTreeHeight [4701,4723]
+to
+call_expression [3318,3359]
+at 1
+===
+move-tree
+---
+call_argument [4538,4559]
+    identifier: initialSequenceNumber [4538,4559]
+to
+call_expression [3222,3263]
+at 2
+===
+move-tree
+---
+call_argument [4619,4635]
+    identifier: initialOrderRoot [4619,4635]
+to
+call_expression [3273,3308]
+at 1
+===
+move-tree
+---
+identifier: internalInitialize [4462,4480]
+to
+call_expression [3222,3263]
+at 0
+===
+move-tree
+---
+call_argument [4502,4516]
+    identifier: escapeVerifier [4502,4516]
+to
+call_expression [3222,3263]
+at 1
+===
+move-tree
+---
+call_argument [4657,4679]
+    identifier: initialVaultTreeHeight [4657,4679]
+to
+call_expression [3273,3308]
+at 2
+
+New cluster:
+MOVE from call_expression [3273,3308]
+------------
+===
+move-tree
+---
+identifier: initialVaultRoot [4581,4597]
+to
+call_expression [3273,3308]
+at 0
+
+New cluster:
+MOVE from binary_expression [1950,1960]
+------------
+===
+move-tree
+---
+identifier: initialVaultRoot [2335,2351]
+to
+binary_expression [1950,1960]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [2114,2165]
+    revert_statement [2128,2155]
+        revert: revert [2128,2134]
+        parenthesized_expression [2134,2154]
+            string_literal [2135,2153]
+                string: "UNEXPECTED_INDEX" [2135,2153]
+to
+if_statement [2032,2165]
+at 4
+
+New cluster:
+UPDATE from initKey to SUBCONTRACT_BITS
+------------
+===
+update-node
+---
+identifier: initKey [3386,3393]
+replace initKey by SUBCONTRACT_BITS
+
+New cluster:
+MOVE from binary_expression [2504,2531]
+------------
+===
+move-tree
+---
+identifier: initKey [3386,3393]
+to
+binary_expression [2504,2531]
+at 0
+
+New cluster:
+===
+insert-node
+---
+assignment_expression [2655,2699]
+to
+expression_statement [3735,3791]
+at 0
+------------
+===
+insert-node
+---
+affectation_operator: = [2670,2671]
+to
+assignment_expression [2655,2699]
+at 1
+===
+insert-node
+---
+assignment_expression [2655,2699]
+to
+expression_statement [3735,3791]
+at 0
+
+New cluster:
+MOVE from array_access [2860,2879]
+------------
+===
+move-tree
+---
+identifier: initialOrderTreeHeight [4041,4063]
+to
+array_access [2860,2879]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [3185,3199]
+to
+call_argument [4356,4360]
+at 0
+------------
+===
+insert-node
+---
+comparison_operator: == [3195,3197]
+to
+binary_expression [3185,3199]
+at 1
+===
+insert-node
+---
+binary_expression [3185,3199]
+to
+call_argument [4356,4360]
+at 0
+===
+insert-node
+---
+number_literal: 0 [3198,3199]
+to
+binary_expression [3185,3199]
+at 2
+
+New cluster:
+MOVE from call_argument [4382,4442]
+------------
+===
+move-tree
+---
+identifier: IFactRegistry [4383,4396]
+to
+call_argument [4382,4442]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [3230,3250]
+to
+call_argument [4502,4516]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [3230,3250]
+to
+call_argument [4502,4516]
+at 0
+===
+insert-node
+---
+comparison_operator: == [3246,3248]
+to
+binary_expression [3230,3250]
+at 1
+===
+insert-node
+---
+number_literal: 0 [3249,3250]
+to
+binary_expression [3230,3250]
+at 2
+
+New cluster:
+===
+insert-node
+---
+binary_expression [3281,3295]
+to
+call_argument [4619,4635]
+at 0
+------------
+===
+insert-node
+---
+number_literal: 0 [3294,3295]
+to
+binary_expression [3281,3295]
+at 2
+===
+insert-node
+---
+comparison_operator: == [3291,3293]
+to
+binary_expression [3281,3295]
+at 1
+===
+insert-node
+---
+binary_expression [3281,3295]
+to
+call_argument [4619,4635]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [3326,3346]
+to
+call_argument [4701,4723]
+at 0
+------------
+===
+insert-node
+---
+number_literal: 0 [3345,3346]
+to
+binary_expression [3326,3346]
+at 2
+===
+insert-node
+---
+comparison_operator: == [3342,3344]
+to
+binary_expression [3326,3346]
+at 1
+===
+insert-node
+---
+binary_expression [3326,3346]
+to
+call_argument [4701,4723]
+at 0
+
+New cluster:
+MOVE from call_argument [3348,3358]
+------------
+===
+move-tree
+---
+identifier: initialized [4769,4780]
+to
+call_argument [3348,3358]
+at 0
+
+New cluster:
+UPDATE from abi.encode to abi.encodePacked
+------------
+===
+update-node
+---
+member_expression: abi.encode [1553,1563]
+replace abi.encode by abi.encodePacked
+===
+update-node
+---
+member_expression: StateRoot.initialize [2819,2839]
+replace StateRoot.initialize by abi.encodePacked
+
+New cluster:
+===
+insert-node
+---
+call_argument [1590,1614]
+to
+call_expression [1553,1582]
+at 1
+------------
+===
+insert-node
+---
+call_argument [1590,1614]
+to
+call_expression [1553,1582]
+at 1
+===
+insert-node
+---
+call_expression [1590,1614]
+to
+call_argument [1590,1614]
+at 0
+
+New cluster:
+MOVE from binary_expression [1647,1700]
+------------
+===
+move-tree
+---
+identifier: initialSequenceNumber [1729,1750]
+to
+binary_expression [1647,1700]
+at 0
+
+New cluster:
+MOVE from assignment_expression [1893,1929]
+------------
+===
+move-tree
+---
+identifier: initialSequenceNumber [2300,2321]
+to
+assignment_expression [1893,1929]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [1898,1929]
+    string: "StarkWare_AllVerifiers_2020_1" [1898,1929]
+to
+assignment_expression [1893,1929]
+at 2
+
+New cluster:
+MOVE from binary_expression [2036,2046]
+------------
+===
+move-tree
+---
+identifier: initialVaultTreeHeight [2395,2417]
+to
+binary_expression [2036,2046]
+at 0
+
+New cluster:
+MOVE from assignment_expression [2580,2624]
+------------
+===
+move-tree
+---
+binary_expression [3570,3585]
+    member_expression: data.length [3570,3581]
+    comparison_operator: > [3582,3583]
+    number_literal: 0 [3584,3585]
+to
+assignment_expression [2580,2624]
+at 2
+
+New cluster:
+MOVE from assignment_expression [2655,2699]
+------------
+===
+move-tree
+---
+identifier: require [3735,3742]
+to
+assignment_expression [2655,2699]
+at 0
+
+New cluster:
+MOVE from assignment_expression [2655,2699]
+------------
+===
+move-tree
+---
+binary_expression [3743,3761]
+    member_expression: data.length [3743,3754]
+    comparison_operator: == [3755,3757]
+    number_literal: 192 [3758,3761]
+to
+assignment_expression [2655,2699]
+at 2
+
+New cluster:
+UPDATE from data to vaultRoot
+------------
+===
+update-node
+---
+identifier: data [4356,4360]
+replace data by vaultRoot
+
+New cluster:
+MOVE from binary_expression [3185,3199]
+------------
+===
+move-tree
+---
+identifier: data [4356,4360]
+to
+binary_expression [3185,3199]
+at 0
+
+New cluster:
+UPDATE from escapeVerifier to vaultTreeHeight
+------------
+===
+update-node
+---
+identifier: escapeVerifier [4502,4516]
+replace escapeVerifier by vaultTreeHeight
+
+New cluster:
+MOVE from binary_expression [3230,3250]
+------------
+===
+move-tree
+---
+identifier: escapeVerifier [4502,4516]
+to
+binary_expression [3230,3250]
+at 0
+
+New cluster:
+UPDATE from initialOrderRoot to orderRoot
+------------
+===
+update-node
+---
+identifier: initialOrderRoot [4619,4635]
+replace initialOrderRoot by orderRoot
+
+New cluster:
+MOVE from binary_expression [3281,3295]
+------------
+===
+move-tree
+---
+identifier: initialOrderRoot [4619,4635]
+to
+binary_expression [3281,3295]
+at 0
+
+New cluster:
+UPDATE from initialOrderTreeHeight to orderTreeHeight
+------------
+===
+update-node
+---
+identifier: initialOrderTreeHeight [4701,4723]
+replace initialOrderTreeHeight by orderTreeHeight
+
+New cluster:
+MOVE from binary_expression [3326,3346]
+------------
+===
+move-tree
+---
+identifier: initialOrderTreeHeight [4701,4723]
+to
+binary_expression [3326,3346]
+at 0
+
+New cluster:
+UPDATE from initialVaultRoot to keccak256
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [1768,1784]
+replace initialVaultRoot by keccak256
+===
+update-node
+---
+identifier: initGovernance [2762,2776]
+replace initGovernance by keccak256
+
+New cluster:
+MOVE from call_expression [1669,1700]
+------------
+===
+move-tree
+---
+identifier: initialVaultRoot [1768,1784]
+to
+call_expression [1669,1700]
+at 0
+
+New cluster:
+MOVE from assignment_expression [1975,2015]
+------------
+===
+move-tree
+---
+identifier: initialOrderRoot [2365,2381]
+to
+assignment_expression [1975,2015]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [1980,2015]
+    string: "StarkWare_TokensAndRamping_2020_1" [1980,2015]
+to
+assignment_expression [1975,2015]
+at 2
+
+New cluster:
+MOVE from call_expression [2395,2444]
+------------
+===
+move-tree
+---
+identifier: initGovernance [2762,2776]
+to
+call_expression [2395,2444]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [2597,2618]
+    binary_expression [2598,2617]
+        identifier: IDX_MAP_0 [2598,2607]
+        >>: >> [2608,2610]
+        identifier: offset [2611,2617]
+to
+binary_expression [3570,3585]
+at 0
+
+New cluster:
+===
+insert-node
+---
+bitwise_operator: & [2619,2620]
+to
+binary_expression [3570,3585]
+at 1
+------------
+===
+insert-node
+---
+bitwise_operator: & [2619,2620]
+to
+binary_expression [3570,3585]
+at 1
+
+New cluster:
+UPDATE from 0 to 0xF
+------------
+===
+update-node
+---
+number_literal: 0 [3584,3585]
+replace 0 by 0xF
+===
+update-node
+---
+number_literal: 192 [3758,3761]
+replace 192 by 0xF
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [2672,2693]
+    binary_expression [2673,2692]
+        identifier: IDX_MAP_1 [2673,2682]
+        >>: >> [2683,2685]
+        identifier: offset [2686,2692]
+to
+binary_expression [3743,3761]
+at 0
+
+New cluster:
+===
+insert-node
+---
+bitwise_operator: & [2694,2695]
+to
+binary_expression [3743,3761]
+at 1
+------------
+===
+insert-node
+---
+bitwise_operator: & [2694,2695]
+to
+binary_expression [3743,3761]
+at 1
+
+New cluster:
+UPDATE from INIT_TAG to expectedIdByIndex
+------------
+===
+update-node
+---
+identifier: INIT_TAG [1564,1572]
+replace INIT_TAG by expectedIdByIndex
+
+New cluster:
+MOVE from call_expression [1590,1614]
+------------
+===
+move-tree
+---
+identifier: INIT_TAG [1564,1572]
+to
+call_expression [1590,1614]
+at 0
+
+New cluster:
+MOVE from call_expression [1590,1614]
+------------
+===
+move-tree
+---
+call_argument [1574,1581]
+    identifier: VERSION [1574,1581]
+to
+call_expression [1590,1614]
+at 1
+
+New cluster:
+MOVE from assignment_expression [2061,2097]
+------------
+===
+move-tree
+---
+identifier: initialOrderTreeHeight [2431,2453]
+to
+assignment_expression [2061,2097]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [2066,2097]
+    string: "StarkWare_StarkExState_2020_1" [2066,2097]
+to
+assignment_expression [2061,2097]
+at 2
+
+New cluster:
+MOVE from call_argument [2405,2443]
+------------
+===
+move-tree
+---
+call_expression [2819,2958]
+    member_expression: StateRoot.initialize [2819,2839]
+    call_argument [2840,2861]
+        identifier: initialSequenceNumber [2840,2861]
+    call_argument [2863,2879]
+        identifier: initialVaultRoot [2863,2879]
+    call_argument [2893,2909]
+        identifier: initialOrderRoot [2893,2909]
+    call_argument [2911,2933]
+        identifier: initialVaultTreeHeight [2911,2933]
+    call_argument [2935,2957]
+        identifier: initialOrderTreeHeight [2935,2957]
+to
+call_argument [2405,2443]
+at 0
+
+New cluster:
+MOVE from call_argument [1696,1698]
+------------
+===
+move-tree
+---
+identifier: initialOrderRoot [1802,1818]
+to
+call_argument [1696,1698]
+at 0
+
+New cluster:
+UPDATE from initialVaultRoot to MAGIC_SALT
+------------
+===
+update-node
+---
+identifier: initialVaultRoot [2863,2879]
+replace initialVaultRoot by MAGIC_SALT
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [621,648]
+    import: import [621,627]
+    string: "ApprovalChain.sol" [628,647]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [649,684]
+    import: import [649,655]
+    string: "AvailabilityVerifiers.sol" [656,683]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [685,708]
+    import: import [685,691]
+    string: "Freezable.sol" [692,707]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [761,781]
+    import: import [761,767]
+    string: "Tokens.sol" [768,780]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [782,801]
+    import: import [782,788]
+    string: "Users.sol" [789,800]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [802,825]
+    import: import [802,808]
+    string: "Verifiers.sol" [809,824]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [826,848]
+    import: import [826,832]
+    string: "Deposits.sol" [833,847]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [849,870]
+    import: import [849,855]
+    string: "Escapes.sol" [856,869]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [871,900]
+    import: import [871,877]
+    string: "FullWithdrawals.sol" [878,899]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [901,924]
+    import: import [901,907]
+    string: "StateRoot.sol" [908,923]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [925,950]
+    import: import [925,931]
+    string: "UpdateState.sol" [932,949]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [951,976]
+    import: import [951,957]
+    string: "Withdrawals.sol" [958,975]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [977,1004]
+    import: import [977,983]
+    string: "IFactRegistry.sol" [984,1003]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1036,1052]
+    user_defined_type [1036,1052]
+        identifier: IVerifierActions [1036,1052]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1078,1091]
+    user_defined_type [1078,1091]
+        identifier: ApprovalChain [1078,1091]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1097,1118]
+    user_defined_type [1097,1118]
+        identifier: AvailabilityVerifiers [1097,1118]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1138,1147]
+    user_defined_type [1138,1147]
+        identifier: Freezable [1138,1147]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1153,1159]
+    user_defined_type [1153,1159]
+        identifier: Tokens [1153,1159]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1165,1170]
+    user_defined_type [1165,1170]
+        identifier: Users [1165,1170]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1176,1185]
+    user_defined_type [1176,1185]
+        identifier: StateRoot [1176,1185]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1191,1199]
+    user_defined_type [1191,1199]
+        identifier: Deposits [1191,1199]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1205,1214]
+    user_defined_type [1205,1214]
+        identifier: Verifiers [1205,1214]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1220,1231]
+    user_defined_type [1220,1231]
+        identifier: Withdrawals [1220,1231]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1237,1252]
+    user_defined_type [1237,1252]
+        identifier: FullWithdrawals [1237,1252]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1258,1265]
+    user_defined_type [1258,1265]
+        identifier: Escapes [1258,1265]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [1271,1282]
+    user_defined_type [1271,1282]
+        identifier: UpdateState [1271,1282]
+
+New cluster:
+===
+delete-node
+---
+visibility: public [1305,1311]
+===
+------------
+===
+delete-node
+---
+visibility: public [1305,1311]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [1564,1572]
+===
+------------
+===
+delete-node
+---
+call_argument [1564,1572]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2272,2286]
+    identifier: escapeVerifier [2272,2286]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2240,2464]
+===
+------------
+===
+delete-node
+---
+call_argument [2431,2453]
+===
+===
+delete-node
+---
+call_expression [2240,2463]
+===
+===
+delete-node
+---
+expression_statement [2240,2464]
+===
+===
+delete-node
+---
+call_argument [2300,2321]
+===
+===
+delete-node
+---
+call_argument [2395,2417]
+===
+===
+delete-node
+---
+call_argument [2335,2351]
+===
+===
+delete-node
+---
+call_argument [2365,2381]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: initialSequenceNumber [2559,2580]
+===
+------------
+===
+delete-node
+---
+identifier: initialSequenceNumber [2559,2580]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: initialVaultTreeHeight [2666,2688]
+===
+------------
+===
+delete-node
+---
+identifier: initialVaultTreeHeight [2666,2688]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2893,2909]
+    identifier: initialOrderRoot [2893,2909]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2911,2933]
+    identifier: initialVaultTreeHeight [2911,2933]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2935,2957]
+    identifier: initialOrderTreeHeight [2935,2957]
+
+New cluster:
+===
+delete-node
+---
+call_expression [3386,3395]
+===
+------------
+===
+delete-node
+---
+call_expression [3386,3395]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [3466,3482]
+===
+------------
+===
+delete-node
+---
+identifier: key [3478,3481]
+===
+===
+delete-node
+---
+array_access [3466,3482]
+===
+
+New cluster:
+===
+delete-node
+---
+boolean_literal: false [3486,3491]
+===
+------------
+===
+delete-node
+---
+boolean_literal: false [3486,3491]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: data.length [3570,3581]
+===
+------------
+===
+delete-node
+---
+member_expression: data.length [3570,3581]
+===
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: > [3582,3583]
+===
+------------
+===
+delete-node
+---
+comparison_operator: > [3582,3583]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: data.length [3743,3754]
+===
+------------
+===
+delete-node
+---
+member_expression: data.length [3743,3754]
+===
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: == [3755,3757]
+===
+------------
+===
+delete-node
+---
+comparison_operator: == [3755,3757]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [3735,3790]
+===
+------------
+===
+delete-node
+---
+call_expression [3735,3790]
+===
+===
+delete-node
+---
+call_argument [3743,3761]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3763,3789]
+    string_literal [3763,3789]
+        string: "INCORRECT_INIT_DATA_SIZE" [3763,3789]
+
+New cluster:
+===
+delete-node
+---
+member_expression: abi.decode [4345,4355]
+===
+------------
+===
+delete-node
+---
+member_expression: abi.decode [4345,4355]
+===
+
+New cluster:
+===
+delete-node
+---
+tuple_expression [4382,4442]
+===
+------------
+===
+delete-node
+---
+primitive_type: uint256 [4398,4405]
+===
+===
+delete-node
+---
+tuple_expression [4382,4442]
+===
+===
+delete-node
+---
+primitive_type: uint256 [4434,4441]
+===
+===
+delete-node
+---
+primitive_type: uint256 [4416,4423]
+===
+===
+delete-node
+---
+primitive_type: uint256 [4407,4414]
+===
+===
+delete-node
+---
+primitive_type: uint256 [4425,4432]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [1474,1590]
+===
+------------
+===
+delete-node
+---
+return_type_definition [1507,1527]
+===
+===
+delete-node
+---
+returns: returns [1507,1514]
+===
+===
+delete-node
+---
+identifier: key [1537,1540]
+===
+===
+delete-node
+---
+expression_statement [1537,1584]
+===
+===
+delete-node
+---
+function_body [1527,1590]
+===
+===
+delete-node
+---
+assignment_expression [1537,1583]
+===
+===
+delete-node
+---
+function_definition [1474,1590]
+===
+===
+delete-node
+---
+parameter [1515,1526]
+===
+
+New cluster:
+===
+delete-node
+---
+constructor_definition [1661,2470]
+===
+------------
+===
+delete-node
+---
+type_name: uint256 [1794,1801]
+===
+===
+delete-node
+---
+constructor: constructor [1661,1672]
+===
+===
+delete-node
+---
+type_name: IFactRegistry [1683,1696]
+===
+===
+delete-node
+---
+type_name: uint256 [1760,1767]
+===
+===
+delete-node
+---
+type_name: uint256 [1721,1728]
+===
+===
+delete-node
+---
+parameter [1794,1818]
+===
+===
+delete-node
+---
+parameter [1683,1711]
+===
+===
+delete-node
+---
+public: public [1913,1919]
+===
+===
+delete-node
+---
+constructor_definition [1661,2470]
+===
+===
+delete-node
+---
+parameter [1721,1750]
+===
+===
+delete-node
+---
+parameter [1760,1784]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2513,2541]
+    type_name: IFactRegistry [2513,2526]
+    identifier: escapeVerifier [2527,2541]
+
+New cluster:
+===
+delete-node
+---
+function_definition [2476,3009]
+===
+------------
+===
+delete-node
+---
+parameter [2698,2728]
+===
+===
+delete-node
+---
+function_definition [2476,3009]
+===
+===
+delete-node
+---
+expression_statement [2762,2779]
+===
+===
+delete-node
+---
+parameter [2590,2614]
+===
+===
+delete-node
+---
+function_body [2752,3009]
+===
+===
+delete-node
+---
+type_name: uint256 [2590,2597]
+===
+===
+delete-node
+---
+visibility: internal [2739,2747]
+===
+===
+delete-node
+---
+call_expression [2762,2778]
+===
+===
+delete-node
+---
+expression_statement [2819,2959]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [2788,2810]
+    call_expression [2788,2809]
+        member_expression: Operator.initialize [2788,2807]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [2968,3003]
+    call_expression [2968,3002]
+        member_expression: Escapes.initialize [2968,2986]
+        call_argument [2987,3001]
+            identifier: escapeVerifier [2987,3001]
+
+New cluster:
+===
+delete-node
+---
+function_definition [3300,4809]
+===
+------------
+===
+delete-node
+---
+function_body [3362,4809]
+===
+===
+delete-node
+---
+identifier: key [4781,4784]
+===
+===
+delete-node
+---
+variable_declaration [3985,4015]
+===
+===
+delete-node
+---
+if_statement [3462,4803]
+===
+===
+delete-node
+---
+expression_statement [4769,4793]
+===
+===
+delete-node
+---
+variable_declaration_statement [3985,4016]
+===
+===
+delete-node
+---
+variable_declaration_statement [3854,3884]
+===
+===
+delete-node
+---
+block_statement [3492,4803]
+===
+===
+delete-node
+---
+block_statement [3586,4756]
+===
+===
+delete-node
+---
+assignment_expression [4769,4792]
+===
+===
+delete-node
+---
+variable_declaration [3854,3883]
+===
+===
+delete-node
+---
+variable_declaration [3901,3925]
+===
+===
+delete-node
+---
+expression_statement [4462,4742]
+===
+===
+delete-node
+---
+variable_declaration [3808,3836]
+===
+===
+delete-node
+---
+identifier: initialOrderTreeHeight [4302,4324]
+===
+===
+delete-node
+---
+visibility: external [3349,3357]
+===
+===
+delete-node
+---
+tuple_expression [4081,4342]
+===
+===
+delete-node
+---
+function: function [3300,3308]
+===
+===
+delete-node
+---
+expression_statement [4081,4444]
+===
+===
+delete-node
+---
+if: if [3566,3568]
+===
+===
+delete-node
+---
+variable_declaration_statement [4033,4064]
+===
+===
+delete-node
+---
+call_expression [4462,4741]
+===
+===
+delete-node
+---
+array_access [4769,4785]
+===
+===
+delete-node
+---
+variable_declaration_statement [3901,3926]
+===
+===
+delete-node
+---
+type_name: uint256 [4033,4040]
+===
+===
+delete-node
+---
+call_argument [4581,4597]
+===
+===
+delete-node
+---
+affectation_operator: = [4786,4787]
+===
+===
+delete-node
+---
+identifier: initialize [3309,3319]
+===
+===
+delete-node
+---
+boolean_literal: true [4788,4792]
+===
+===
+delete-node
+---
+type_name: IFactRegistry [3808,3821]
+===
+===
+delete-node
+---
+type_name: uint256 [3901,3908]
+===
+===
+delete-node
+---
+variable_declaration_statement [3808,3837]
+===
+===
+delete-node
+---
+variable_declaration [4033,4063]
+===
+===
+delete-node
+---
+parameter [3320,3339]
+===
+===
+delete-node
+---
+calldata: calldata [3326,3334]
+===
+===
+delete-node
+---
+if_statement [3566,4756]
+===
+===
+delete-node
+---
+assignment_expression [4081,4443]
+===
+===
+delete-node
+---
+type_name: uint256 [3854,3861]
+===
+===
+delete-node
+---
+variable_declaration_statement [3943,3968]
+===
+===
+delete-node
+---
+function_definition [3300,4809]
+===
+===
+delete-node
+---
+variable_declaration [3943,3967]
+===
+===
+delete-node
+---
+identifier: escapeVerifier [4103,4117]
+===
+

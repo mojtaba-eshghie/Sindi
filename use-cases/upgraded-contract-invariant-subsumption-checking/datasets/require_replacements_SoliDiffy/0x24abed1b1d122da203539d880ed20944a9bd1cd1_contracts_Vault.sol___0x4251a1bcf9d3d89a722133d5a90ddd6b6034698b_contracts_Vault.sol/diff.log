@@ -1,0 +1,1168 @@
+New cluster:
+===
+insert-node
+---
+identifier: Vault [382,387]
+to
+contract_declaration [373,7898]
+at 0
+------------
+===
+insert-node
+---
+identifier: Vault [382,387]
+to
+contract_declaration [373,7898]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [388,390]
+to
+contract_declaration [373,7898]
+at 1
+------------
+===
+insert-node
+---
+is: is [388,390]
+to
+contract_declaration [373,7898]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1789,1842]
+    identifier: Burn [1795,1799]
+    event_paramater [1800,1812]
+        type_name: address [1800,1807]
+        identifier: acct [1808,1812]
+    event_paramater [1814,1825]
+        type_name: uint [1814,1818]
+        identifier: oneVol [1819,1825]
+    event_paramater [1827,1840]
+        type_name: address [1827,1834]
+        identifier: token [1835,1840]
+to
+contract_body [414,7898]
+at 27
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1850,1925]
+    type_name: bytes32 [1850,1857]
+    visibility: internal [1858,1866]
+    constant: constant [1867,1875]
+    identifier: _mintMaxPoolPercent_ [1876,1896]
+    affectation_operator: = [1902,1903]
+    string_literal [1904,1924]
+        string: 'mintMaxPoolPercent' [1904,1924]
+to
+contract_body [414,7898]
+at 28
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1947,2005]
+    type_name: uint [1947,1951]
+    visibility: internal [1952,1960]
+    constant: constant [1961,1969]
+    identifier: _mintMaxPoolPercentDecimals_ [1970,1998]
+    affectation_operator: = [1999,2000]
+    number_literal: 1e5 [2001,2004]
+to
+contract_body [414,7898]
+at 29
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3643,3757]
+    function: function [3643,3651]
+    identifier: getMintMaxPoolPercent [3652,3673]
+    visibility: public [3676,3682]
+    state_mutability [3683,3687]
+        view: view [3683,3687]
+    return_type_definition [3688,3702]
+        returns: returns [3688,3695]
+        parameter [3697,3701]
+            type_name: uint [3697,3701]
+    function_body [3703,3757]
+        return_statement [3714,3750]
+            return: return [3714,3720]
+            array_access [3721,3749]
+                identifier: config [3721,3727]
+                identifier: _mintMaxPoolPercent_ [3728,3748]
+to
+contract_body [414,7898]
+at 35
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3765,3890]
+    function: function [3765,3773]
+    identifier: getTokenPoolWeight [3774,3792]
+    parameter [3793,3805]
+        type_name: IERC20 [3793,3799]
+        identifier: token [3800,3805]
+    visibility: public [3807,3813]
+    state_mutability [3814,3818]
+        view: view [3814,3818]
+    return_type_definition [3819,3833]
+        returns: returns [3819,3826]
+        parameter [3828,3832]
+            type_name: uint [3828,3832]
+    function_body [3834,3890]
+        return_statement [3845,3883]
+            return: return [3845,3851]
+            call_expression [3852,3882]
+                member_expression: token.balanceOf [3852,3867]
+                call_argument [3868,3881]
+                    type_cast_expression [3868,3881]
+                        primitive_type: address [3868,3875]
+                        call_argument [3876,3880]
+                            identifier: this [3876,3880]
+to
+contract_body [414,7898]
+at 36
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3898,4034]
+    function: function [3898,3906]
+    identifier: getMaxPoolWeight [3907,3923]
+    visibility: public [3926,3932]
+    state_mutability [3933,3937]
+        view: view [3933,3937]
+    return_type_definition [3938,3952]
+        returns: returns [3938,3945]
+        parameter [3947,3951]
+            type_name: uint [3947,3951]
+    function_body [3953,4034]
+        return_statement [3964,4027]
+            return: return [3964,3970]
+            call_expression [3971,4026]
+                member_expression: getTokenPoolWeight(aEth).add [3971,3999]
+                call_argument [4000,4025]
+                    call_expression [4000,4025]
+                        identifier: getTokenPoolWeight [4000,4018]
+                        call_argument [4019,4024]
+                            identifier: aETHb [4019,4024]
+to
+contract_body [414,7898]
+at 37
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [4330,4474]
+    function: function [4330,4338]
+    identifier: setMintMaxPoolPercent [4339,4360]
+    parameter [4361,4384]
+        type_name: uint [4361,4365]
+        identifier: mintMaxPoolPercent [4366,4384]
+    visibility: external [4386,4394]
+    modifier_invocation [4395,4405]
+        identifier: governance [4395,4405]
+    function_body [4406,4474]
+        expression_statement [4417,4467]
+            assignment_expression [4417,4466]
+                array_access [4417,4445]
+                    identifier: config [4417,4423]
+                    identifier: _mintMaxPoolPercent_ [4424,4444]
+                affectation_operator: = [4446,4447]
+                identifier: mintMaxPoolPercent [4448,4466]
+to
+contract_body [414,7898]
+at 40
+
+New cluster:
+===
+insert-node
+---
+modifier_definition [5118,5260]
+to
+contract_body [414,7898]
+at 43
+------------
+===
+insert-node
+---
+modifier_definition [5118,5260]
+to
+contract_body [414,7898]
+at 43
+===
+insert-node
+---
+function_body [5144,5260]
+to
+modifier_definition [5118,5260]
+at 2
+===
+insert-node
+---
+call_argument [5163,5199]
+to
+call_expression [5155,5240]
+at 1
+===
+insert-node
+---
+identifier: require [5155,5162]
+to
+call_expression [5155,5240]
+at 0
+===
+insert-node
+---
+comparison_operator: > [5176,5177]
+to
+binary_expression [5163,5199]
+at 1
+===
+insert-node
+---
+modifier: modifier [5118,5126]
+to
+modifier_definition [5118,5260]
+at 0
+===
+insert-node
+---
+expression_statement [5155,5241]
+to
+function_body [5144,5260]
+at 0
+===
+insert-node
+---
+call_expression [5155,5240]
+to
+expression_statement [5155,5241]
+at 0
+===
+insert-node
+---
+binary_expression [5163,5199]
+to
+call_argument [5163,5199]
+at 0
+===
+insert-node
+---
+identifier: oneMinPriceCheck [5127,5143]
+to
+modifier_definition [5118,5260]
+at 1
+
+New cluster:
+===
+insert-node
+---
+modifier_definition [5268,5409]
+to
+contract_body [414,7898]
+at 44
+------------
+===
+insert-node
+---
+identifier: oneMaxPriceCheck [5277,5293]
+to
+modifier_definition [5268,5409]
+at 1
+===
+insert-node
+---
+comparison_operator: < [5326,5327]
+to
+binary_expression [5313,5349]
+at 1
+===
+insert-node
+---
+expression_statement [5305,5390]
+to
+function_body [5294,5409]
+at 0
+===
+insert-node
+---
+call_argument [5313,5349]
+to
+call_expression [5305,5389]
+at 1
+===
+insert-node
+---
+call_expression [5305,5389]
+to
+expression_statement [5305,5390]
+at 0
+===
+insert-node
+---
+binary_expression [5313,5349]
+to
+call_argument [5313,5349]
+at 0
+===
+insert-node
+---
+function_body [5294,5409]
+to
+modifier_definition [5268,5409]
+at 2
+===
+insert-node
+---
+identifier: require [5305,5312]
+to
+call_expression [5305,5389]
+at 0
+===
+insert-node
+---
+modifier_definition [5268,5409]
+to
+contract_body [414,7898]
+at 44
+===
+insert-node
+---
+modifier: modifier [5268,5276]
+to
+modifier_definition [5268,5409]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [5417,5859]
+    modifier: modifier [5417,5425]
+    identifier: mintMaxPoolPercentCheck [5426,5449]
+    parameter [5450,5462]
+        type_name: IERC20 [5450,5456]
+        identifier: token [5457,5462]
+    parameter [5464,5481]
+        type_name: uint [5464,5468]
+        identifier: amountToMint [5469,5481]
+    function_body [5483,5859]
+        variable_declaration_statement [5494,5534]
+            variable_declaration [5494,5512]
+                type_name: uint [5494,5498]
+                identifier: maxPoolWeight [5499,5512]
+            affectation_operator: = [5513,5514]
+            call_expression [5515,5533]
+                identifier: getMaxPoolWeight [5515,5531]
+        if_statement [5544,5840]
+            if: if [5544,5546]
+            binary_expression [5548,5598]
+                binary_expression [5548,5576]
+                    call_expression [5548,5571]
+                        identifier: getMintMaxPoolPercent [5548,5569]
+                    comparison_operator: != [5572,5574]
+                    number_literal: 0 [5575,5576]
+                logical_operator: && [5577,5579]
+                binary_expression [5580,5598]
+                    identifier: maxPoolWeight [5580,5593]
+                    comparison_operator: != [5594,5596]
+                    number_literal: 0 [5597,5598]
+            block_statement [5600,5840]
+                variable_declaration_statement [5615,5743]
+                    variable_declaration [5615,5625]
+                        type_name: uint [5615,5619]
+                        identifier: ratio [5620,5625]
+                    affectation_operator: = [5626,5627]
+                    call_expression [5628,5742]
+                        member_expression: getTokenPoolWeight(token).add(amountToMint).mul(_mintMaxPoolPercentDecimals_).div [5628,5709]
+                        call_argument [5710,5741]
+                            call_expression [5710,5741]
+                                member_expression: maxPoolWeight.add [5710,5727]
+                                call_argument [5728,5740]
+                                    identifier: amountToMint [5728,5740]
+                expression_statement [5757,5829]
+                    call_expression [5757,5828]
+                        identifier: require [5757,5764]
+                        call_argument [5765,5796]
+                            binary_expression [5765,5796]
+                                identifier: ratio [5765,5770]
+                                comparison_operator: < [5771,5772]
+                                call_expression [5773,5796]
+                                    identifier: getMintMaxPoolPercent [5773,5794]
+                        call_argument [5798,5827]
+                            string_literal [5798,5827]
+                                string: "Too many tokens in the pool" [5798,5827]
+        expression_statement [5850,5852]
+            identifier: _ [5850,5851]
+to
+contract_body [414,7898]
+at 45
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [5867,6350]
+    modifier: modifier [5867,5875]
+    identifier: redeemMaxPoolPercentCheck [5876,5901]
+    parameter [5902,5914]
+        type_name: IERC20 [5902,5908]
+        identifier: token [5909,5914]
+    parameter [5916,5935]
+        type_name: uint [5916,5920]
+        identifier: amountToRedeem [5921,5935]
+    function_body [5937,6350]
+        variable_declaration_statement [5948,5988]
+            variable_declaration [5948,5966]
+                type_name: uint [5948,5952]
+                identifier: maxPoolWeight [5953,5966]
+            affectation_operator: = [5967,5968]
+            call_expression [5969,5987]
+                identifier: getMaxPoolWeight [5969,5985]
+        if_statement [5998,6331]
+            if: if [5998,6000]
+            binary_expression [6002,6052]
+                binary_expression [6002,6030]
+                    call_expression [6002,6025]
+                        identifier: getMintMaxPoolPercent [6002,6023]
+                    comparison_operator: != [6026,6028]
+                    number_literal: 0 [6029,6030]
+                logical_operator: && [6031,6033]
+                binary_expression [6034,6052]
+                    identifier: maxPoolWeight [6034,6047]
+                    comparison_operator: != [6048,6050]
+                    number_literal: 0 [6051,6052]
+            block_statement [6054,6331]
+                variable_declaration_statement [6069,6201]
+                    variable_declaration [6069,6079]
+                        type_name: uint [6069,6073]
+                        identifier: ratio [6074,6079]
+                    affectation_operator: = [6080,6081]
+                    call_expression [6082,6200]
+                        member_expression: getTokenPoolWeight(token).sub(amountToRedeem).mul(_mintMaxPoolPercentDecimals_).div [6082,6165]
+                        call_argument [6166,6199]
+                            call_expression [6166,6199]
+                                member_expression: maxPoolWeight.sub [6166,6183]
+                                call_argument [6184,6198]
+                                    identifier: amountToRedeem [6184,6198]
+                expression_statement [6215,6320]
+                    call_expression [6215,6319]
+                        identifier: require [6215,6222]
+                        call_argument [6223,6288]
+                            binary_expression [6223,6288]
+                                identifier: ratio [6223,6228]
+                                comparison_operator: > [6229,6230]
+                                call_expression [6231,6288]
+                                    member_expression: _mintMaxPoolPercentDecimals_.sub [6231,6263]
+                                    call_argument [6264,6287]
+                                        call_expression [6264,6287]
+                                            identifier: getMintMaxPoolPercent [6264,6285]
+                        call_argument [6290,6318]
+                            string_literal [6290,6318]
+                                string: "Too low tokens in the pool" [6290,6318]
+        expression_statement [6341,6343]
+            identifier: _ [6341,6342]
+to
+contract_body [414,7898]
+at 46
+
+New cluster:
+===
+insert-node
+---
+function_definition [6458,6580]
+to
+contract_body [414,7898]
+at 50
+------------
+===
+insert-node
+---
+function: function [6458,6466]
+to
+function_definition [6458,6580]
+at 0
+===
+insert-node
+---
+identifier: onsValueOnlyPercentage [6467,6489]
+to
+function_definition [6458,6580]
+at 1
+===
+insert-node
+---
+visibility: public [6503,6509]
+to
+function_definition [6458,6580]
+at 3
+===
+insert-node
+---
+function_definition [6458,6580]
+to
+contract_body [414,7898]
+at 50
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [7652,7949]
+    function: function [7652,7660]
+    identifier: burnONEaETHb [7661,7673]
+    parameter [7674,7682]
+        type_name: uint [7674,7678]
+        identifier: amt [7679,7682]
+    visibility: external [7684,7692]
+    modifier_invocation [7693,7703]
+        identifier: updateTwap [7693,7703]
+    modifier_invocation [7704,7720]
+        identifier: oneMaxPriceCheck [7704,7720]
+    modifier_invocation [7721,7758]
+        identifier: redeemMaxPoolPercentCheck [7721,7746]
+        call_argument [7747,7752]
+            identifier: aETHb [7747,7752]
+        call_argument [7754,7757]
+            identifier: amt [7754,7757]
+    function_body [7759,7949]
+        emit_statement [7770,7813]
+            identifier: Burn [7775,7779]
+            call_argument [7780,7790]
+                member_expression: msg.sender [7780,7790]
+            call_argument [7792,7795]
+                identifier: amt [7792,7795]
+            call_argument [7797,7811]
+                type_cast_expression [7797,7811]
+                    primitive_type: address [7797,7804]
+                    call_argument [7805,7810]
+                        identifier: aETHb [7805,7810]
+        expression_statement [7825,7852]
+            call_expression [7825,7851]
+                member_expression: one.burn_ [7825,7834]
+                call_argument [7835,7845]
+                    member_expression: msg.sender [7835,7845]
+                call_argument [7847,7850]
+                    identifier: amt [7847,7850]
+        expression_statement [7862,7902]
+            call_expression [7862,7901]
+                identifier: receiveOnsInPercentage [7862,7884]
+                call_argument [7885,7895]
+                    member_expression: msg.sender [7885,7895]
+                call_argument [7897,7900]
+                    identifier: amt [7897,7900]
+        expression_statement [7912,7942]
+            call_expression [7912,7941]
+                identifier: _sendAETHbTo [7912,7924]
+                call_argument [7925,7935]
+                    member_expression: msg.sender [7925,7935]
+                call_argument [7937,7940]
+                    identifier: amt [7937,7940]
+to
+contract_body [414,7898]
+at 56
+
+New cluster:
+UPDATE from external to public
+------------
+===
+update-node
+---
+visibility: external [3208,3216]
+replace external by public
+===
+update-node
+---
+visibility: external [3328,3336]
+replace external by public
+
+New cluster:
+MOVE from function_definition [6458,6580]
+------------
+===
+move-tree
+---
+state_mutability [4650,4654]
+    pure: pure [4650,4654]
+to
+function_definition [6458,6580]
+at 4
+===
+move-tree
+---
+parameter [4630,4641]
+    type_name: uint [4630,4634]
+    identifier: amount [4635,4641]
+to
+function_definition [6458,6580]
+at 2
+===
+move-tree
+---
+return_type_definition [4655,4669]
+    returns: returns [4655,4662]
+    parameter [4664,4668]
+        type_name: uint [4664,4668]
+to
+function_definition [6458,6580]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [6529,6580]
+    return_statement [6540,6573]
+        return: return [6540,6546]
+        call_expression [6547,6572]
+            member_expression: amount.mul(45).div [6547,6565]
+            call_argument [6566,6571]
+                number_literal: 10000 [6566,6571]
+to
+function_definition [6458,6580]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [6831,6865]
+    identifier: mintMaxPoolPercentCheck [6831,6854]
+    call_argument [6855,6859]
+        identifier: aEth [6855,6859]
+    call_argument [6861,6864]
+        identifier: amt [6861,6864]
+to
+function_definition [4896,5148]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [7124,7159]
+    identifier: mintMaxPoolPercentCheck [7124,7147]
+    call_argument [7148,7153]
+        identifier: aETHb [7148,7153]
+    call_argument [7155,7158]
+        identifier: amt [7155,7158]
+to
+function_definition [5156,5408]
+at 6
+
+New cluster:
+UPDATE from burnONE to burnONEaETHc
+------------
+===
+update-node
+---
+identifier: burnONE [5425,5432]
+replace burnONE by burnONEaETHc
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [7401,7417]
+    identifier: oneMaxPriceCheck [7401,7417]
+to
+function_definition [5416,5698]
+at 5
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [7418,7454]
+to
+function_definition [5416,5698]
+at 6
+------------
+===
+insert-node
+---
+modifier_invocation [7418,7454]
+to
+function_definition [5416,5698]
+at 6
+===
+insert-node
+---
+call_argument [7450,7453]
+to
+modifier_invocation [7418,7454]
+at 2
+===
+insert-node
+---
+identifier: redeemMaxPoolPercentCheck [7418,7443]
+to
+modifier_invocation [7418,7454]
+at 0
+
+New cluster:
+MOVE from function_body [5144,5260]
+------------
+===
+move-tree
+---
+expression_statement [4481,4483]
+    identifier: _ [4481,4482]
+to
+function_body [5144,5260]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [5400,5402]
+    identifier: _ [5400,5401]
+to
+function_body [5294,5409]
+at 1
+
+New cluster:
+UPDATE from oneMinBalanceCheck to oneMinPriceCheck
+------------
+===
+update-node
+---
+identifier: oneMinBalanceCheck [5208,5226]
+replace oneMinBalanceCheck by oneMinPriceCheck
+===
+update-node
+---
+identifier: oneMinBalanceCheck [4948,4966]
+replace oneMinBalanceCheck by oneMinPriceCheck
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7444,7448]
+    identifier: aEth [7444,7448]
+to
+modifier_invocation [7418,7454]
+at 1
+
+New cluster:
+===
+insert-node
+---
+emit_statement [7466,7508]
+to
+function_body [5463,5698]
+at 0
+------------
+===
+insert-node
+---
+emit_statement [7466,7508]
+to
+function_body [5463,5698]
+at 0
+
+New cluster:
+UPDATE from config to amt
+------------
+===
+update-node
+---
+identifier: config [5497,5503]
+replace config by amt
+
+New cluster:
+MOVE from call_argument [7450,7453]
+------------
+===
+move-tree
+---
+identifier: config [5497,5503]
+to
+call_argument [7450,7453]
+at 0
+===
+move-tree
+---
+call_expression [5482,5494]
+    identifier: onePriceHi [5482,5492]
+to
+binary_expression [5313,5349]
+at 0
+
+New cluster:
+UPDATE from require to Burn
+------------
+===
+update-node
+---
+identifier: require [5474,5481]
+replace require by Burn
+
+New cluster:
+MOVE from emit_statement [7466,7508]
+------------
+===
+move-tree
+---
+call_argument [5482,5523]
+    array_access [5482,5523]
+        binary_expression [5482,5503]
+            call_expression [5482,5494]
+                identifier: onePriceHi [5482,5492]
+            comparison_operator: < [5495,5496]
+            identifier: config [5497,5503]
+        identifier: _burnOneThreshold_ [5504,5522]
+to
+emit_statement [7466,7508]
+at 2
+===
+move-tree
+---
+call_argument [5525,5562]
+    string_literal [5525,5562]
+        string: 'ONE price is not low enough to burn' [5525,5562]
+to
+call_expression [5305,5389]
+at 2
+===
+move-tree
+---
+identifier: require [5474,5481]
+to
+emit_statement [7466,7508]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7476,7486]
+    member_expression: msg.sender [7476,7486]
+to
+emit_statement [7466,7508]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7493,7506]
+    type_cast_expression [7493,7506]
+        primitive_type: address [7493,7500]
+        call_argument [7501,7505]
+            identifier: aEth [7501,7505]
+to
+emit_statement [7466,7508]
+at 3
+
+New cluster:
+MOVE from call_expression [5155,5240]
+------------
+===
+move-tree
+---
+call_argument [4431,4469]
+    string_literal [4431,4469]
+        string: 'ONE price is not high enough to mint' [4431,4469]
+to
+call_expression [5155,5240]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: amt [7488,7491]
+to
+call_argument [5482,5523]
+at 0
+------------
+===
+insert-node
+---
+identifier: amt [7488,7491]
+to
+call_argument [5482,5523]
+at 0
+
+New cluster:
+MOVE from binary_expression [5163,5199]
+------------
+===
+move-tree
+---
+call_expression [4388,4400]
+    identifier: onePriceLo [4388,4398]
+to
+binary_expression [5163,5199]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [5178,5199]
+    identifier: getMintOneThreshold [5178,5197]
+to
+binary_expression [5163,5199]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [5328,5349]
+    identifier: getBurnOneThreshold [5328,5347]
+to
+binary_expression [5313,5349]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: Vault [382,387]
+===
+------------
+===
+delete-node
+---
+identifier: Vault [382,387]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [388,390]
+===
+------------
+===
+delete-node
+---
+is: is [388,390]
+===
+
+New cluster:
+===
+delete-node
+---
+modifier_definition [4341,4490]
+===
+------------
+===
+delete-node
+---
+identifier: require [4380,4387]
+===
+===
+delete-node
+---
+expression_statement [4380,4471]
+===
+===
+delete-node
+---
+identifier: oneMinBalanceCheck [4350,4368]
+===
+===
+delete-node
+---
+comparison_operator: > [4401,4402]
+===
+===
+delete-node
+---
+function_body [4369,4490]
+===
+===
+delete-node
+---
+call_argument [4388,4429]
+===
+===
+delete-node
+---
+modifier_definition [4341,4490]
+===
+===
+delete-node
+---
+identifier: _mintOneThreshold_ [4410,4428]
+===
+===
+delete-node
+---
+modifier: modifier [4341,4349]
+===
+===
+delete-node
+---
+call_expression [4380,4470]
+===
+===
+delete-node
+---
+array_access [4388,4429]
+===
+===
+delete-node
+---
+identifier: config [4403,4409]
+===
+===
+delete-node
+---
+binary_expression [4388,4409]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [4598,4714]
+===
+------------
+===
+delete-node
+---
+function_definition [4598,4714]
+===
+===
+delete-node
+---
+function: function [4598,4606]
+===
+===
+delete-node
+---
+identifier: onsValueOnlyPercentage [4607,4629]
+===
+===
+delete-node
+---
+visibility: public [4643,4649]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [4669,4714]
+    return_statement [4680,4707]
+        return: return [4680,4686]
+        binary_expression [4687,4706]
+            binary_expression [4687,4698]
+                identifier: amount [4687,4693]
+                arithmetic_operator: * [4694,4695]
+                number_literal: 45 [4696,4698]
+            arithmetic_operator: / [4699,4700]
+            number_literal: 10000 [4701,4706]
+
+New cluster:
+===
+delete-node
+---
+array_access [5482,5523]
+===
+------------
+===
+delete-node
+---
+identifier: _burnOneThreshold_ [5504,5522]
+===
+===
+delete-node
+---
+binary_expression [5482,5503]
+===
+===
+delete-node
+---
+array_access [5482,5523]
+===
+===
+delete-node
+---
+comparison_operator: < [5495,5496]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [5474,5564]
+===
+------------
+===
+delete-node
+---
+expression_statement [5474,5564]
+===
+===
+delete-node
+---
+call_expression [5474,5563]
+===
+

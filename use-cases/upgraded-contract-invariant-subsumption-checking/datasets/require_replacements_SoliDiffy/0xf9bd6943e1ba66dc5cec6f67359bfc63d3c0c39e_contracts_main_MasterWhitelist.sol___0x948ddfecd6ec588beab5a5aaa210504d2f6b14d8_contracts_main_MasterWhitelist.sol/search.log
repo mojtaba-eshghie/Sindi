@@ -1,0 +1,5 @@
+results/differencing_results/0xf9bd6943e1ba66dc5cec6f67359bfc63d3c0c39e_contracts_main_MasterWhitelist.sol___0x948ddfecd6ec588beab5a5aaa210504d2f6b14d8_contracts_main_MasterWhitelist.sol.log:
+  3834  identifier: require [16916,16923]
+  3835: replace require by risk
+  3836  
+

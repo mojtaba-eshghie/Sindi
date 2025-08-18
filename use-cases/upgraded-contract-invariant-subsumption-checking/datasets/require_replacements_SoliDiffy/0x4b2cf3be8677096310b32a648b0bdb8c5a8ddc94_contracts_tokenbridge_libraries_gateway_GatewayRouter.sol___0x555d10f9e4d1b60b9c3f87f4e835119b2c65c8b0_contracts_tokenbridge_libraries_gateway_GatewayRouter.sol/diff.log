@@ -1,0 +1,765 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [670,728]
+    import: import [670,676]
+    string: "arb-bridge-eth/contracts/libraries/ProxyUtil.sol" [677,727]
+to
+source_file [0,3860]
+at 1
+
+New cluster:
+UPDATE from "./IGatewayRouter.sol" to "./GatewayMessageHandler.sol"
+------------
+===
+update-node
+---
+string: "./IGatewayRouter.sol" [758,780]
+replace "./IGatewayRouter.sol" by "./GatewayMessageHandler.sol"
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [1491,1915]
+    function: function [1491,1499]
+    identifier: postUpgradeInit [1500,1515]
+    visibility: external [1518,1526]
+    function_body [1527,1915]
+        variable_declaration_statement [1713,1760]
+            variable_declaration [1713,1731]
+                type_name: address [1713,1720]
+                identifier: proxyAdmin [1721,1731]
+            affectation_operator: = [1732,1733]
+            call_expression [1734,1759]
+                member_expression: ProxyUtil.getProxyAdmin [1734,1757]
+        expression_statement [1769,1821]
+            call_expression [1769,1820]
+                identifier: require [1769,1776]
+                call_argument [1777,1801]
+                    binary_expression [1777,1801]
+                        member_expression: msg.sender [1777,1787]
+                        comparison_operator: == [1788,1790]
+                        identifier: proxyAdmin [1791,1801]
+                call_argument [1803,1819]
+                    string_literal [1803,1819]
+                        string: "NOT_FROM_ADMIN" [1803,1819]
+to
+contract_body [912,3859]
+at 8
+
+New cluster:
+UPDATE from BLACKLISTED to DISABLED
+------------
+===
+update-node
+---
+identifier: BLACKLISTED [1030,1041]
+replace BLACKLISTED by DISABLED
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1988,2003]
+    type_name: address [1988,1995]
+    identifier: _router [1996,2003]
+to
+function_definition [1444,1689]
+at 3
+
+New cluster:
+MOVE from function_definition [1787,2082]
+------------
+===
+move-tree
+---
+override_specifier [1560,1568]
+    override: override [1560,1568]
+to
+function_definition [1787,2082]
+at 10
+
+New cluster:
+MOVE from function_definition [2088,2829]
+------------
+===
+move-tree
+---
+override_specifier [3154,3162]
+    override: override [3154,3162]
+to
+function_definition [2088,2829]
+at 11
+
+New cluster:
+UPDATE from _calculateL2TokenAddress to calculateL2TokenAddress
+------------
+===
+update-node
+---
+identifier: _calculateL2TokenAddress [3632,3656]
+replace _calculateL2TokenAddress by calculateL2TokenAddress
+
+New cluster:
+UPDATE from internal to public
+------------
+===
+update-node
+---
+visibility: internal [3682,3690]
+replace internal by public
+
+New cluster:
+===
+insert-node
+---
+expression_statement [2172,2227]
+to
+function_body [1573,1689]
+at 1
+------------
+===
+insert-node
+---
+member_expression: TokenGateway._initialize [2172,2196]
+to
+call_expression [2172,2226]
+at 0
+===
+insert-node
+---
+expression_statement [2172,2227]
+to
+function_body [1573,1689]
+at 1
+===
+insert-node
+---
+call_expression [2172,2226]
+to
+expression_statement [2172,2227]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [3575,3612]
+    variable_declaration [3575,3590]
+        type_name: address [3575,3582]
+        identifier: gateway [3583,3590]
+    affectation_operator: = [3591,3592]
+    call_expression [3593,3611]
+        identifier: getGateway [3593,3603]
+        call_argument [3604,3610]
+            identifier: _token [3604,3610]
+to
+function_body [3043,3091]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [4000,4126]
+to
+function_body [3339,3617]
+at 3
+------------
+===
+insert-node
+---
+unary_expression [4027,4048]
+to
+binary_expression [4004,4048]
+at 2
+===
+insert-node
+---
+binary_expression [4004,4048]
+to
+if_statement [4000,4126]
+at 1
+===
+insert-node
+---
+if: if [4000,4002]
+to
+if_statement [4000,4126]
+at 0
+===
+insert-node
+---
+identifier: DISABLED [4015,4023]
+to
+binary_expression [4004,4023]
+at 2
+===
+insert-node
+---
+comparison_operator: == [4012,4014]
+to
+binary_expression [4004,4023]
+at 1
+===
+insert-node
+---
+binary_expression [4004,4023]
+to
+binary_expression [4004,4048]
+at 0
+===
+insert-node
+---
+if_statement [4000,4126]
+to
+function_body [3339,3617]
+at 3
+===
+insert-node
+---
+!: ! [4027,4028]
+to
+unary_expression [4027,4048]
+at 0
+===
+insert-node
+---
+logical_operator: || [4024,4026]
+to
+binary_expression [4004,4048]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [4314,4352]
+    variable_declaration [4314,4329]
+        type_name: address [4314,4321]
+        identifier: gateway [4322,4329]
+    affectation_operator: = [4330,4331]
+    call_expression [4332,4351]
+        identifier: getGateway [4332,4342]
+        call_argument [4343,4350]
+            identifier: l1ERC20 [4343,4350]
+to
+function_body [3767,3857]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [4361,4428]
+    if: if [4361,4363]
+    binary_expression [4365,4385]
+        identifier: gateway [4365,4372]
+        comparison_operator: == [4373,4375]
+        identifier: ZERO_ADDR [4376,4385]
+    block_statement [4387,4428]
+        return_statement [4401,4418]
+            return: return [4401,4407]
+            identifier: ZERO_ADDR [4408,4417]
+to
+function_body [3767,3857]
+at 1
+
+New cluster:
+===
+insert-node
+---
+call_expression [2924,3024]
+to
+variable_declaration_statement [2415,2503]
+at 2
+------------
+===
+insert-node
+---
+call_expression [2924,3024]
+to
+variable_declaration_statement [2415,2503]
+at 2
+===
+insert-node
+---
+member_expression: GatewayMessageHandler.encodeFromRouterToGateway [2924,2971]
+to
+call_expression [2924,3024]
+at 0
+
+New cluster:
+MOVE from return_statement [3053,3085]
+------------
+===
+move-tree
+---
+call_expression [2442,2502]
+    identifier: getOutboundCalldata [2442,2461]
+    call_argument [2462,2468]
+        identifier: _token [2462,2468]
+    call_argument [2470,2480]
+        member_expression: msg.sender [2470,2480]
+    call_argument [2482,2485]
+        identifier: _to [2482,2485]
+    call_argument [2487,2494]
+        identifier: _amount [2487,2494]
+    call_argument [2496,2501]
+        identifier: _data [2496,2501]
+to
+return_statement [3053,3085]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [4050,4126]
+    return_statement [4099,4116]
+        return: return [4099,4105]
+        identifier: ZERO_ADDR [4106,4115]
+to
+if_statement [4000,4126]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: require [2118,2125]
+to
+call_expression [1583,1640]
+at 0
+------------
+===
+insert-node
+---
+identifier: require [2118,2125]
+to
+call_expression [1583,1640]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2149,2161]
+    string_literal [2149,2161]
+        string: "BAD_ROUTER" [2149,2161]
+to
+call_expression [1583,1640]
+at 4
+
+New cluster:
+MOVE from call_expression [2172,2226]
+------------
+===
+move-tree
+---
+call_argument [1608,1627]
+    identifier: _counterpartGateway [1608,1627]
+to
+call_expression [2172,2226]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2218,2225]
+    identifier: _router [2218,2225]
+to
+call_expression [2172,2226]
+at 2
+
+New cluster:
+MOVE from call_expression [2924,3024]
+------------
+===
+move-tree
+---
+call_argument [2470,2480]
+    member_expression: msg.sender [2470,2480]
+to
+call_expression [2924,3024]
+at 1
+
+New cluster:
+MOVE from call_expression [2442,2502]
+------------
+===
+move-tree
+---
+member_expression: abi.encode [3060,3070]
+to
+call_expression [2442,2502]
+at 0
+===
+move-tree
+---
+call_argument [3071,3076]
+    identifier: _from [3071,3076]
+to
+call_expression [2442,2502]
+at 3
+===
+move-tree
+---
+call_argument [3078,3083]
+    identifier: _data [3078,3083]
+to
+call_expression [2924,3024]
+at 2
+
+New cluster:
+UPDATE from abi.encode to TokenGateway(gateway).getOutboundCalldata
+------------
+===
+update-node
+---
+member_expression: abi.encode [3060,3070]
+replace abi.encode by TokenGateway(gateway).getOutboundCalldata
+
+New cluster:
+UPDATE from TokenGateway(getGateway(l1ERC20)).calculateL2TokenAddress to TokenGateway(gateway).calculateL2TokenAddress
+------------
+===
+update-node
+---
+member_expression: TokenGateway(getGateway(l1ERC20)).calculateL2TokenAddress [3784,3841]
+replace TokenGateway(getGateway(l1ERC20)).calculateL2TokenAddress by TokenGateway(gateway).calculateL2TokenAddress
+
+New cluster:
+===
+insert-node
+---
+binary_expression [2126,2147]
+to
+call_argument [1629,1639]
+at 0
+------------
+===
+insert-node
+---
+comparison_operator: == [2134,2136]
+to
+binary_expression [2126,2147]
+at 1
+===
+insert-node
+---
+binary_expression [2126,2147]
+to
+call_argument [1629,1639]
+at 0
+===
+insert-node
+---
+identifier: _router [2126,2133]
+to
+binary_expression [2126,2147]
+at 0
+
+New cluster:
+UPDATE from require to gateway
+------------
+===
+update-node
+---
+identifier: require [3533,3540]
+replace require by gateway
+
+New cluster:
+MOVE from binary_expression [4004,4023]
+------------
+===
+move-tree
+---
+identifier: require [3533,3540]
+to
+binary_expression [4004,4023]
+at 0
+
+New cluster:
+MOVE from unary_expression [4027,4048]
+------------
+===
+move-tree
+---
+call_expression [3541,3561]
+    member_expression: gateway.isContract [3541,3559]
+to
+unary_expression [4027,4048]
+at 1
+
+New cluster:
+MOVE from binary_expression [2126,2147]
+------------
+===
+move-tree
+---
+type_cast_expression [1629,1639]
+    primitive_type: address [1629,1636]
+    call_argument [1637,1638]
+        number_literal: 0 [1637,1638]
+to
+binary_expression [2126,2147]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [897,911]
+    user_defined_type [897,911]
+        identifier: IGatewayRouter [897,911]
+
+New cluster:
+===
+delete-node
+---
+virtual: virtual [1544,1551]
+===
+------------
+===
+delete-node
+---
+virtual: virtual [1544,1551]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: TokenGateway._initialize [1583,1607]
+===
+------------
+===
+delete-node
+---
+member_expression: TokenGateway._initialize [1583,1607]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [1695,1781]
+    function: function [1695,1703]
+    identifier: isRouter [1704,1712]
+    visibility: external [1715,1723]
+    state_mutability [1724,1728]
+        view: view [1724,1728]
+    override_specifier [1729,1737]
+        override: override [1729,1737]
+    return_type_definition [1738,1752]
+        returns: returns [1738,1745]
+        parameter [1747,1751]
+            type_name: bool [1747,1751]
+    function_body [1753,1781]
+        return_statement [1763,1775]
+            return: return [1763,1769]
+            boolean_literal: true [1770,1774]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [1974,2011]
+    override: override [1974,1982]
+    user_defined_type [1983,1995]
+        identifier: TokenGateway [1983,1995]
+    user_defined_type [1997,2010]
+        identifier: ITokenGateway [1997,2010]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [2298,2335]
+    override: override [2298,2306]
+    user_defined_type [2307,2319]
+        identifier: TokenGateway [2307,2319]
+    user_defined_type [2321,2334]
+        identifier: ITokenGateway [2321,2334]
+
+New cluster:
+===
+delete-node
+---
+identifier: getOutboundCalldata [2442,2461]
+===
+------------
+===
+delete-node
+---
+identifier: getOutboundCalldata [2442,2461]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [3060,3084]
+===
+------------
+===
+delete-node
+---
+call_expression [3060,3084]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [3097,3251]
+===
+------------
+===
+delete-node
+---
+identifier: isRouter [3106,3114]
+===
+===
+delete-node
+---
+function: function [3097,3105]
+===
+===
+delete-node
+---
+function_definition [3097,3251]
+===
+===
+delete-node
+---
+visibility: internal [3132,3140]
+===
+===
+delete-node
+---
+virtual: virtual [3146,3153]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [3115,3130]
+    type_name: address [3115,3122]
+    identifier: _target [3123,3130]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [3141,3145]
+    view: view [3141,3145]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [3163,3177]
+    returns: returns [3163,3170]
+    parameter [3172,3176]
+        type_name: bool [3172,3176]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [3178,3251]
+    return_statement [3232,3245]
+        return: return [3232,3238]
+        boolean_literal: false [3239,3244]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3393,3438]
+    call_expression [3393,3437]
+        identifier: require [3393,3400]
+        call_argument [3401,3423]
+            binary_expression [3401,3423]
+                identifier: gateway [3401,3408]
+                comparison_operator: != [3409,3411]
+                identifier: BLACKLISTED [3412,3423]
+        call_argument [3425,3436]
+            string_literal [3425,3436]
+                string: "BLACKLIST" [3425,3436]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3533,3586]
+===
+------------
+===
+delete-node
+---
+expression_statement [3533,3586]
+===
+===
+delete-node
+---
+call_expression [3533,3585]
+===
+===
+delete-node
+---
+call_argument [3541,3561]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3563,3584]
+    string_literal [3563,3584]
+        string: "NO_GATEWAY_DEPLOYED" [3563,3584]
+

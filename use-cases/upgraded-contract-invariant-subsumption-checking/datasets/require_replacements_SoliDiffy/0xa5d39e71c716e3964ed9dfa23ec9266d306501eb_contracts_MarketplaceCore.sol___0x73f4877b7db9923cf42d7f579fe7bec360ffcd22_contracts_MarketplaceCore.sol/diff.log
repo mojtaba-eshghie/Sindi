@@ -1,0 +1,6883 @@
+New cluster:
+===
+insert-node
+---
+abstract: abstract [470,478]
+to
+contract_declaration [502,21790]
+at 0
+------------
+===
+insert-node
+---
+abstract: abstract [470,478]
+to
+contract_declaration [502,21790]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: MarketplaceCore [488,503]
+to
+contract_declaration [502,21790]
+at 1
+------------
+===
+insert-node
+---
+identifier: MarketplaceCore [488,503]
+to
+contract_declaration [502,21790]
+at 1
+
+New cluster:
+===
+insert-node
+---
+is: is [504,506]
+to
+contract_declaration [502,21790]
+at 2
+------------
+===
+insert-node
+---
+is: is [504,506]
+to
+contract_declaration [502,21790]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [774,859]
+    type_name: mapping (uint40 => mapping (address => MarketplaceLib.Offer)) [774,835]
+    visibility: private [836,843]
+    identifier: _listingOffers [844,858]
+to
+contract_body [573,21790]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [864,940]
+    type_name: mapping (uint40 => EnumerableSet.AddressSet) [864,908]
+    visibility: private [909,916]
+    identifier: _listingOfferAddresses [917,939]
+to
+contract_body [573,21790]
+at 7
+
+New cluster:
+===
+insert-node
+---
+function_definition [11184,11483]
+to
+contract_body [573,21790]
+at 44
+------------
+===
+insert-node
+---
+affectation_operator: = [11352,11353]
+to
+variable_declaration_statement [11313,11377]
+at 1
+===
+insert-node
+---
+function: function [11184,11192]
+to
+function_definition [11184,11483]
+at 0
+===
+insert-node
+---
+identifier: _bid [11193,11197]
+to
+function_definition [11184,11483]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [11313,11377]
+to
+function_body [11303,11483]
+at 0
+===
+insert-node
+---
+function_definition [11184,11483]
+to
+contract_body [573,21790]
+at 44
+===
+insert-node
+---
+function_body [11303,11483]
+to
+function_definition [11184,11483]
+at 8
+===
+insert-node
+---
+visibility: private [11295,11302]
+to
+function_definition [11184,11483]
+at 7
+
+New cluster:
+===
+insert-node
+---
+function_definition [11547,11709]
+to
+contract_body [573,21790]
+at 45
+------------
+===
+insert-node
+---
+call_argument [11657,11676]
+to
+call_expression [11639,11702]
+at 2
+===
+insert-node
+---
+payable_conversion_expression [11657,11676]
+to
+call_argument [11657,11676]
+at 0
+===
+insert-node
+---
+function_body [11629,11709]
+to
+function_definition [11547,11709]
+at 8
+===
+insert-node
+---
+call_argument [11665,11675]
+to
+payable_conversion_expression [11657,11676]
+at 1
+===
+insert-node
+---
+identifier: _offer [11639,11645]
+to
+call_expression [11639,11702]
+at 0
+===
+insert-node
+---
+identifier: offer [11556,11561]
+to
+function_definition [11547,11709]
+at 1
+===
+insert-node
+---
+virtual: virtual [11612,11619]
+to
+function_definition [11547,11709]
+at 6
+===
+insert-node
+---
+expression_statement [11639,11703]
+to
+function_body [11629,11709]
+at 0
+===
+insert-node
+---
+payable: payable [11657,11664]
+to
+payable_conversion_expression [11657,11676]
+at 0
+===
+insert-node
+---
+function_definition [11547,11709]
+to
+contract_body [573,21790]
+at 45
+===
+insert-node
+---
+function: function [11547,11555]
+to
+function_definition [11547,11709]
+at 0
+===
+insert-node
+---
+call_expression [11639,11702]
+to
+expression_statement [11639,11703]
+at 0
+===
+insert-node
+---
+visibility: external [11595,11603]
+to
+function_definition [11547,11709]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [11714,11899]
+to
+contract_body [573,21790]
+at 46
+------------
+===
+insert-node
+---
+virtual: virtual [11800,11807]
+to
+function_definition [11714,11899]
+at 7
+===
+insert-node
+---
+payable_conversion_expression [11845,11864]
+to
+call_argument [11845,11864]
+at 0
+===
+insert-node
+---
+function_body [11817,11899]
+to
+function_definition [11714,11899]
+at 9
+===
+insert-node
+---
+payable: payable [11845,11852]
+to
+payable_conversion_expression [11845,11864]
+at 0
+===
+insert-node
+---
+expression_statement [11827,11893]
+to
+function_body [11817,11899]
+at 0
+===
+insert-node
+---
+identifier: _offer [11827,11833]
+to
+call_expression [11827,11892]
+at 0
+===
+insert-node
+---
+call_argument [11845,11864]
+to
+call_expression [11827,11892]
+at 2
+===
+insert-node
+---
+identifier: offer [11723,11728]
+to
+function_definition [11714,11899]
+at 1
+===
+insert-node
+---
+function_definition [11714,11899]
+to
+contract_body [573,21790]
+at 46
+===
+insert-node
+---
+function: function [11714,11722]
+to
+function_definition [11714,11899]
+at 0
+===
+insert-node
+---
+call_expression [11827,11892]
+to
+expression_statement [11827,11893]
+at 0
+===
+insert-node
+---
+visibility: external [11783,11791]
+to
+function_definition [11714,11899]
+at 5
+===
+insert-node
+---
+call_argument [11853,11863]
+to
+payable_conversion_expression [11845,11864]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [11963,12140]
+    function: function [11963,11971]
+    identifier: offer [11972,11977]
+    parameter [11978,12002]
+        type_name: address payable [11978,11993]
+        identifier: referrer [11994,12002]
+    parameter [12004,12020]
+        type_name: uint40 [12004,12010]
+        identifier: listingId [12011,12020]
+    parameter [12022,12035]
+        type_name: bool [12022,12026]
+        identifier: increase [12027,12035]
+    visibility: external [12037,12045]
+    state_mutability [12046,12053]
+        payable: payable [12046,12053]
+    virtual: virtual [12054,12061]
+    override_specifier [12062,12070]
+        override: override [12062,12070]
+    function_body [12071,12140]
+        expression_statement [12081,12134]
+            call_expression [12081,12133]
+                identifier: _offer [12081,12087]
+                call_argument [12088,12097]
+                    member_expression: msg.value [12088,12097]
+                call_argument [12099,12107]
+                    identifier: referrer [12099,12107]
+                call_argument [12109,12118]
+                    identifier: listingId [12109,12118]
+                call_argument [12120,12128]
+                    identifier: increase [12120,12128]
+                call_argument [12130,12132]
+                    string_literal [12130,12132]
+                        string: "" [12130,12132]
+to
+contract_body [573,21790]
+at 47
+
+New cluster:
+===
+insert-node
+---
+function_definition [12145,12345]
+to
+contract_body [573,21790]
+at 48
+------------
+===
+insert-node
+---
+virtual: virtual [12257,12264]
+to
+function_definition [12145,12345]
+at 8
+===
+insert-node
+---
+function: function [12145,12153]
+to
+function_definition [12145,12345]
+at 0
+===
+insert-node
+---
+function_definition [12145,12345]
+to
+contract_body [573,21790]
+at 48
+===
+insert-node
+---
+identifier: offer [12154,12159]
+to
+function_definition [12145,12345]
+at 1
+===
+insert-node
+---
+visibility: external [12240,12248]
+to
+function_definition [12145,12345]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [12409,12586]
+    function: function [12409,12417]
+    identifier: offer [12418,12423]
+    parameter [12424,12440]
+        type_name: uint40 [12424,12430]
+        identifier: listingId [12431,12440]
+    parameter [12442,12461]
+        type_name: uint256 [12442,12449]
+        identifier: offerAmount [12450,12461]
+    parameter [12463,12476]
+        type_name: bool [12463,12467]
+        identifier: increase [12468,12476]
+    visibility: external [12478,12486]
+    virtual: virtual [12487,12494]
+    override_specifier [12495,12503]
+        override: override [12495,12503]
+    function_body [12504,12586]
+        expression_statement [12514,12580]
+            call_expression [12514,12579]
+                identifier: _offer [12514,12520]
+                call_argument [12521,12532]
+                    identifier: offerAmount [12521,12532]
+                call_argument [12534,12553]
+                    payable_conversion_expression [12534,12553]
+                        payable: payable [12534,12541]
+                        call_argument [12542,12552]
+                            type_cast_expression [12542,12552]
+                                primitive_type: address [12542,12549]
+                                call_argument [12550,12551]
+                                    number_literal: 0 [12550,12551]
+                call_argument [12555,12564]
+                    identifier: listingId [12555,12564]
+                call_argument [12566,12574]
+                    identifier: increase [12566,12574]
+                call_argument [12576,12578]
+                    string_literal [12576,12578]
+                        string: "" [12576,12578]
+to
+contract_body [573,21790]
+at 49
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [12591,12791]
+    function: function [12591,12599]
+    identifier: offer [12600,12605]
+    parameter [12606,12622]
+        type_name: uint40 [12606,12612]
+        identifier: listingId [12613,12622]
+    parameter [12624,12643]
+        type_name: uint256 [12624,12631]
+        identifier: offerAmount [12632,12643]
+    parameter [12645,12658]
+        type_name: bool [12645,12649]
+        identifier: increase [12650,12658]
+    parameter [12660,12679]
+        type_name: bytes [12660,12665]
+        calldata: calldata [12666,12674]
+        identifier: data [12675,12679]
+    visibility: external [12681,12689]
+    virtual: virtual [12690,12697]
+    override_specifier [12698,12706]
+        override: override [12698,12706]
+    function_body [12707,12791]
+        expression_statement [12717,12785]
+            call_expression [12717,12784]
+                identifier: _offer [12717,12723]
+                call_argument [12724,12735]
+                    identifier: offerAmount [12724,12735]
+                call_argument [12737,12756]
+                    payable_conversion_expression [12737,12756]
+                        payable: payable [12737,12744]
+                        call_argument [12745,12755]
+                            type_cast_expression [12745,12755]
+                                primitive_type: address [12745,12752]
+                                call_argument [12753,12754]
+                                    number_literal: 0 [12753,12754]
+                call_argument [12758,12767]
+                    identifier: listingId [12758,12767]
+                call_argument [12769,12777]
+                    identifier: increase [12769,12777]
+                call_argument [12779,12783]
+                    identifier: data [12779,12783]
+to
+contract_body [573,21790]
+at 50
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [12855,13047]
+    function: function [12855,12863]
+    identifier: offer [12864,12869]
+    parameter [12870,12894]
+        type_name: address payable [12870,12885]
+        identifier: referrer [12886,12894]
+    parameter [12896,12912]
+        type_name: uint40 [12896,12902]
+        identifier: listingId [12903,12912]
+    parameter [12914,12933]
+        type_name: uint256 [12914,12921]
+        identifier: offerAmount [12922,12933]
+    parameter [12935,12948]
+        type_name: bool [12935,12939]
+        identifier: increase [12940,12948]
+    visibility: external [12950,12958]
+    virtual: virtual [12959,12966]
+    override_specifier [12967,12975]
+        override: override [12967,12975]
+    function_body [12976,13047]
+        expression_statement [12986,13041]
+            call_expression [12986,13040]
+                identifier: _offer [12986,12992]
+                call_argument [12993,13004]
+                    identifier: offerAmount [12993,13004]
+                call_argument [13006,13014]
+                    identifier: referrer [13006,13014]
+                call_argument [13016,13025]
+                    identifier: listingId [13016,13025]
+                call_argument [13027,13035]
+                    identifier: increase [13027,13035]
+                call_argument [13037,13039]
+                    string_literal [13037,13039]
+                        string: "" [13037,13039]
+to
+contract_body [573,21790]
+at 51
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [13052,13267]
+    function: function [13052,13060]
+    identifier: offer [13061,13066]
+    parameter [13067,13091]
+        type_name: address payable [13067,13082]
+        identifier: referrer [13083,13091]
+    parameter [13093,13109]
+        type_name: uint40 [13093,13099]
+        identifier: listingId [13100,13109]
+    parameter [13111,13130]
+        type_name: uint256 [13111,13118]
+        identifier: offerAmount [13119,13130]
+    parameter [13132,13145]
+        type_name: bool [13132,13136]
+        identifier: increase [13137,13145]
+    parameter [13147,13166]
+        type_name: bytes [13147,13152]
+        calldata: calldata [13153,13161]
+        identifier: data [13162,13166]
+    visibility: external [13168,13176]
+    virtual: virtual [13177,13184]
+    override_specifier [13185,13193]
+        override: override [13185,13193]
+    function_body [13194,13267]
+        expression_statement [13204,13261]
+            call_expression [13204,13260]
+                identifier: _offer [13204,13210]
+                call_argument [13211,13222]
+                    identifier: offerAmount [13211,13222]
+                call_argument [13224,13232]
+                    identifier: referrer [13224,13232]
+                call_argument [13234,13243]
+                    identifier: listingId [13234,13243]
+                call_argument [13245,13253]
+                    identifier: increase [13245,13253]
+                call_argument [13255,13259]
+                    identifier: data [13255,13259]
+to
+contract_body [573,21790]
+at 52
+
+New cluster:
+===
+insert-node
+---
+function_definition [13273,13630]
+to
+contract_body [573,21790]
+at 53
+------------
+===
+insert-node
+---
+expression_statement [13479,13624]
+to
+function_body [13396,13630]
+at 1
+===
+insert-node
+---
+affectation_operator: = [13445,13446]
+to
+variable_declaration_statement [13406,13470]
+at 1
+===
+insert-node
+---
+visibility: private [13388,13395]
+to
+function_definition [13273,13630]
+at 7
+===
+insert-node
+---
+function_body [13396,13630]
+to
+function_definition [13273,13630]
+at 8
+===
+insert-node
+---
+function: function [13273,13281]
+to
+function_definition [13273,13630]
+at 0
+===
+insert-node
+---
+call_expression [13479,13623]
+to
+expression_statement [13479,13624]
+at 0
+===
+insert-node
+---
+function_definition [13273,13630]
+to
+contract_body [573,21790]
+at 53
+===
+insert-node
+---
+variable_declaration_statement [13406,13470]
+to
+function_body [13396,13630]
+at 0
+===
+insert-node
+---
+identifier: _offer [13282,13288]
+to
+function_definition [13273,13630]
+at 1
+===
+insert-node
+---
+member_expression: SettlementLib.makeOffer [13479,13502]
+to
+call_expression [13479,13623]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [13696,14584]
+to
+contract_body [573,21790]
+at 54
+------------
+===
+insert-node
+---
+function_definition [13696,14584]
+to
+contract_body [573,21790]
+at 54
+===
+insert-node
+---
+function: function [13696,13704]
+to
+function_definition [13696,14584]
+at 0
+===
+insert-node
+---
+visibility: public [13731,13737]
+to
+function_definition [13696,14584]
+at 3
+===
+insert-node
+---
+affectation_operator: = [13804,13805]
+to
+variable_declaration_statement [13765,13829]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [13765,13829]
+to
+function_body [13755,14584]
+at 0
+===
+insert-node
+---
+expression_statement [14457,14578]
+to
+function_body [13755,14584]
+at 3
+===
+insert-node
+---
+call_expression [14457,14577]
+to
+expression_statement [14457,14578]
+at 0
+===
+insert-node
+---
+identifier: rescind [13705,13712]
+to
+function_definition [13696,14584]
+at 1
+===
+insert-node
+---
+virtual: virtual [13738,13745]
+to
+function_definition [13696,14584]
+at 4
+===
+insert-node
+---
+member_expression: SettlementLib.rescindOffer [14457,14483]
+to
+call_expression [14457,14577]
+at 0
+===
+insert-node
+---
+function_body [13755,14584]
+to
+function_definition [13696,14584]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [14589,14793]
+    function: function [14589,14597]
+    identifier: rescind [14598,14605]
+    parameter [14606,14634]
+        type_name: uint40[] [14606,14614]
+        calldata: calldata [14615,14623]
+        identifier: listingIds [14624,14634]
+    visibility: external [14636,14644]
+    virtual: virtual [14645,14652]
+    override_specifier [14653,14661]
+        override: override [14653,14661]
+    function_body [14662,14793]
+        for_statement [14672,14787]
+            for: for [14672,14675]
+            variable_declaration_statement [14677,14684]
+                variable_declaration [14677,14683]
+                    type_name: uint [14677,14681]
+                    identifier: i [14682,14683]
+            expression_statement [14685,14707]
+                binary_expression [14685,14706]
+                    identifier: i [14685,14686]
+                    comparison_operator: < [14687,14688]
+                    member_expression: listingIds.length [14689,14706]
+            block_statement [14709,14787]
+                expression_statement [14723,14746]
+                    call_expression [14723,14745]
+                        identifier: rescind [14723,14730]
+                        call_argument [14731,14744]
+                            array_access [14731,14744]
+                                identifier: listingIds [14731,14741]
+                                identifier: i [14742,14743]
+                block_statement [14759,14777]
+                    unchecked: unchecked [14759,14768]
+                    expression_statement [14771,14775]
+                        update_expression [14771,14774]
+                            increment_operator: ++ [14771,14773]
+                            identifier: i [14773,14774]
+to
+contract_body [573,21790]
+at 55
+
+New cluster:
+===
+insert-node
+---
+function_definition [14798,15275]
+to
+contract_body [573,21790]
+at 56
+------------
+===
+insert-node
+---
+function_definition [14798,15275]
+to
+contract_body [573,21790]
+at 56
+===
+insert-node
+---
+variable_declaration_statement [14904,14968]
+to
+function_body [14894,15275]
+at 0
+===
+insert-node
+---
+virtual: virtual [14877,14884]
+to
+function_definition [14798,15275]
+at 5
+===
+insert-node
+---
+affectation_operator: = [14943,14944]
+to
+variable_declaration_statement [14904,14968]
+at 1
+===
+insert-node
+---
+visibility: external [14868,14876]
+to
+function_definition [14798,15275]
+at 4
+===
+insert-node
+---
+identifier: rescind [14807,14814]
+to
+function_definition [14798,15275]
+at 1
+===
+insert-node
+---
+function: function [14798,14806]
+to
+function_definition [14798,15275]
+at 0
+===
+insert-node
+---
+function_body [14894,15275]
+to
+function_definition [14798,15275]
+at 7
+
+New cluster:
+===
+insert-node
+---
+function_definition [15340,17073]
+to
+contract_body [573,21790]
+at 57
+------------
+===
+insert-node
+---
+visibility: external [15451,15459]
+to
+function_definition [15340,17073]
+at 6
+===
+insert-node
+---
+if: if [16272,16274]
+to
+if_statement [16272,17067]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [15604,15668]
+to
+function_body [15477,17073]
+at 2
+===
+insert-node
+---
+for_statement [16880,17057]
+to
+block_statement [16686,17067]
+at 2
+===
+insert-node
+---
+call_expression [16931,17007]
+to
+expression_statement [16931,17008]
+at 0
+===
+insert-node
+---
+identifier: accept [15349,15355]
+to
+function_definition [15340,17073]
+at 1
+===
+insert-node
+---
+function: function [15340,15348]
+to
+function_definition [15340,17073]
+at 0
+===
+insert-node
+---
+call_expression [15537,15594]
+to
+expression_statement [15537,15595]
+at 0
+===
+insert-node
+---
+identifier: require [15537,15544]
+to
+call_expression [15537,15594]
+at 0
+===
+insert-node
+---
+block_statement [16686,17067]
+to
+if_statement [16645,17067]
+at 2
+===
+insert-node
+---
+function_definition [15340,17073]
+to
+contract_body [573,21790]
+at 57
+===
+insert-node
+---
+function_body [15477,17073]
+to
+function_definition [15340,17073]
+at 9
+===
+insert-node
+---
+expression_statement [15749,15852]
+to
+function_body [15477,17073]
+at 4
+===
+insert-node
+---
+block_statement [16315,16639]
+to
+if_statement [16272,17067]
+at 2
+===
+insert-node
+---
+for: for [16880,16883]
+to
+for_statement [16880,17057]
+at 0
+===
+insert-node
+---
+expression_statement [16931,17008]
+to
+block_statement [16913,17057]
+at 0
+===
+insert-node
+---
+virtual: virtual [15460,15467]
+to
+function_definition [15340,17073]
+at 7
+===
+insert-node
+---
+affectation_operator: = [15643,15644]
+to
+variable_declaration_statement [15604,15668]
+at 1
+===
+insert-node
+---
+identifier: require [15749,15756]
+to
+call_expression [15749,15851]
+at 0
+===
+insert-node
+---
+call_expression [16552,16628]
+to
+expression_statement [16552,16629]
+at 0
+===
+insert-node
+---
+if: if [16645,16647]
+to
+if_statement [16645,17067]
+at 0
+===
+insert-node
+---
+identifier: _accept [16552,16559]
+to
+call_expression [16552,16628]
+at 0
+===
+insert-node
+---
+else: else [16640,16644]
+to
+if_statement [16272,17067]
+at 3
+===
+insert-node
+---
+expression_statement [16552,16629]
+to
+block_statement [16315,16639]
+at 3
+===
+insert-node
+---
+if_statement [16272,17067]
+to
+function_body [15477,17073]
+at 9
+===
+insert-node
+---
+expression_statement [15537,15595]
+to
+function_body [15477,17073]
+at 1
+===
+insert-node
+---
+block_statement [16913,17057]
+to
+for_statement [16880,17057]
+at 3
+===
+insert-node
+---
+if_statement [16645,17067]
+to
+if_statement [16272,17067]
+at 4
+===
+insert-node
+---
+call_expression [15749,15851]
+to
+expression_statement [15749,15852]
+at 0
+===
+insert-node
+---
+identifier: _accept [16931,16938]
+to
+call_expression [16931,17007]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [17079,17932]
+to
+contract_body [573,21790]
+at 58
+------------
+===
+insert-node
+---
+else: else [17660,17664]
+to
+if_statement [17520,17765]
+at 3
+===
+insert-node
+---
+if_statement [17520,17765]
+to
+function_body [17250,17932]
+at 3
+===
+insert-node
+---
+expression_statement [17679,17755]
+to
+block_statement [17665,17765]
+at 0
+===
+insert-node
+---
+function_body [17250,17932]
+to
+function_definition [17079,17932]
+at 9
+===
+insert-node
+---
+block_statement [17665,17765]
+to
+if_statement [17520,17765]
+at 4
+===
+insert-node
+---
+member_expression: SettlementLib.settleOffer [17798,17823]
+to
+call_expression [17798,17925]
+at 0
+===
+insert-node
+---
+identifier: require [17447,17454]
+to
+call_expression [17447,17510]
+at 0
+===
+insert-node
+---
+member_expression: listing.token.lazy [17524,17542]
+to
+if_statement [17520,17765]
+at 1
+===
+insert-node
+---
+call_expression [17798,17925]
+to
+expression_statement [17798,17926]
+at 0
+===
+insert-node
+---
+expression_statement [17798,17926]
+to
+function_body [17250,17932]
+at 4
+===
+insert-node
+---
+expression_statement [17447,17511]
+to
+function_body [17250,17932]
+at 2
+===
+insert-node
+---
+call_expression [17447,17510]
+to
+expression_statement [17447,17511]
+at 0
+===
+insert-node
+---
+call_expression [17679,17754]
+to
+expression_statement [17679,17755]
+at 0
+===
+insert-node
+---
+visibility: private [17242,17249]
+to
+function_definition [17079,17932]
+at 8
+===
+insert-node
+---
+if: if [17520,17522]
+to
+if_statement [17520,17765]
+at 0
+===
+insert-node
+---
+member_expression: SettlementLib.deliverToken [17679,17705]
+to
+call_expression [17679,17754]
+at 0
+===
+insert-node
+---
+function_definition [17079,17932]
+to
+contract_body [573,21790]
+at 58
+===
+insert-node
+---
+identifier: _accept [17088,17095]
+to
+function_definition [17079,17932]
+at 1
+===
+insert-node
+---
+function: function [17079,17087]
+to
+function_definition [17079,17932]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [23122,23351]
+to
+contract_body [573,21790]
+at 65
+------------
+===
+insert-node
+---
+function_body [23212,23351]
+to
+function_definition [23122,23351]
+at 7
+===
+insert-node
+---
+return: return [23295,23301]
+to
+return_statement [23295,23345]
+at 0
+===
+insert-node
+---
+identifier: getListingCurrentPrice [23131,23153]
+to
+function_definition [23122,23351]
+at 1
+===
+insert-node
+---
+visibility: external [23172,23180]
+to
+function_definition [23122,23351]
+at 3
+===
+insert-node
+---
+function_definition [23122,23351]
+to
+contract_body [573,21790]
+at 65
+===
+insert-node
+---
+affectation_operator: = [23261,23262]
+to
+variable_declaration_statement [23222,23286]
+at 1
+===
+insert-node
+---
+call_expression [23302,23344]
+to
+return_statement [23295,23345]
+at 1
+===
+insert-node
+---
+return_statement [23295,23345]
+to
+function_body [23212,23351]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [23222,23286]
+to
+function_body [23212,23351]
+at 0
+===
+insert-node
+---
+member_expression: SettlementLib.computeListingPrice [23302,23335]
+to
+call_expression [23302,23344]
+at 0
+===
+insert-node
+---
+function: function [23122,23130]
+to
+function_definition [23122,23351]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [24067,24400]
+to
+contract_body [573,21790]
+at 69
+------------
+===
+insert-node
+---
+function_definition [24067,24400]
+to
+contract_body [573,21790]
+at 69
+===
+insert-node
+---
+virtual: virtual [24116,24123]
+to
+function_definition [24067,24400]
+at 5
+===
+insert-node
+---
+identifier: getBids [24076,24083]
+to
+function_definition [24067,24400]
+at 1
+===
+insert-node
+---
+function: function [24067,24075]
+to
+function_definition [24067,24400]
+at 0
+===
+insert-node
+---
+visibility: external [24102,24110]
+to
+function_definition [24067,24400]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [24467,25189]
+    function: function [24467,24475]
+    identifier: getOffers [24476,24485]
+    parameter [24486,24502]
+        type_name: uint40 [24486,24492]
+        identifier: listingId [24493,24502]
+    visibility: external [24504,24512]
+    state_mutability [24513,24517]
+        view: view [24513,24517]
+    override_specifier [24518,24526]
+        override: override [24518,24526]
+    return_type_definition [24527,24557]
+        returns: returns [24527,24534]
+        parameter [24535,24556]
+            type_name: Offer[] [24535,24542]
+            memory: memory [24543,24549]
+            identifier: offers [24550,24556]
+    function_body [24558,25189]
+        variable_declaration_statement [24568,24652]
+            variable_declaration [24568,24615]
+                type_name: EnumerableSet.AddressSet [24568,24592]
+                storage: storage [24593,24600]
+                identifier: offerAddresses [24601,24615]
+            affectation_operator: = [24616,24617]
+            array_access [24618,24651]
+                identifier: _listingOfferAddresses [24618,24640]
+                identifier: listingId [24641,24650]
+        variable_declaration_statement [24661,24706]
+            variable_declaration [24661,24679]
+                type_name: uint256 [24661,24668]
+                identifier: offerCount [24669,24679]
+            affectation_operator: = [24680,24681]
+            call_expression [24682,24705]
+                member_expression: offerAddresses.length [24682,24703]
+        expression_statement [24715,24748]
+            assignment_expression [24715,24747]
+                identifier: offers [24715,24721]
+                affectation_operator: = [24722,24723]
+                call_expression [24724,24747]
+                    new_expression [24724,24735]
+                        new: new [24724,24727]
+                        type_name: Offer[] [24728,24735]
+                    call_argument [24736,24746]
+                        identifier: offerCount [24736,24746]
+        for_statement [24757,25183]
+            for: for [24757,24760]
+            variable_declaration_statement [24762,24769]
+                variable_declaration [24762,24768]
+                    type_name: uint [24762,24766]
+                    identifier: i [24767,24768]
+            expression_statement [24770,24785]
+                binary_expression [24770,24784]
+                    identifier: i [24770,24771]
+                    comparison_operator: < [24772,24773]
+                    identifier: offerCount [24774,24784]
+            block_statement [24787,25183]
+                variable_declaration_statement [24801,24840]
+                    variable_declaration [24801,24816]
+                        type_name: address [24801,24808]
+                        identifier: offerer [24809,24816]
+                    affectation_operator: = [24817,24818]
+                    call_expression [24819,24839]
+                        member_expression: offerAddresses.at [24819,24836]
+                        call_argument [24837,24838]
+                            identifier: i [24837,24838]
+                variable_declaration_statement [24853,24932]
+                    variable_declaration [24853,24894]
+                        type_name: MarketplaceLib.Offer [24853,24873]
+                        memory: memory [24874,24880]
+                        identifier: internalOffer [24881,24894]
+                    affectation_operator: = [24895,24896]
+                    array_access [24897,24931]
+                        array_access [24897,24922]
+                            identifier: _listingOffers [24897,24911]
+                            identifier: listingId [24912,24921]
+                        identifier: offerer [24923,24930]
+                expression_statement [24945,24973]
+                    assignment_expression [24945,24972]
+                        member_expression: offers[i].offerer [24945,24962]
+                        affectation_operator: = [24963,24964]
+                        identifier: offerer [24965,24972]
+                expression_statement [24986,25026]
+                    assignment_expression [24986,25025]
+                        member_expression: offers[i].amount [24986,25002]
+                        affectation_operator: = [25003,25004]
+                        member_expression: internalOffer.amount [25005,25025]
+                expression_statement [25039,25085]
+                    assignment_expression [25039,25084]
+                        member_expression: offers[i].timestamp [25039,25058]
+                        affectation_operator: = [25059,25060]
+                        member_expression: internalOffer.timestamp [25061,25084]
+                expression_statement [25098,25142]
+                    assignment_expression [25098,25141]
+                        member_expression: offers[i].accepted [25098,25116]
+                        affectation_operator: = [25117,25118]
+                        member_expression: internalOffer.accepted [25119,25141]
+                block_statement [25155,25173]
+                    unchecked: unchecked [25155,25164]
+                    expression_statement [25167,25171]
+                        update_expression [25167,25170]
+                            identifier: i [25167,25168]
+                            increment_operator: ++ [25168,25170]
+to
+contract_body [573,21790]
+at 70
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [5969,5986]
+    type_name: bool [5969,5973]
+    identifier: acceptOffers [5974,5986]
+to
+function_definition [5645,6110]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [6482,6499]
+    type_name: bool [6482,6486]
+    identifier: acceptOffers [6487,6499]
+to
+function_definition [6116,7038]
+at 8
+
+New cluster:
+MOVE from function_definition [11184,11483]
+------------
+===
+move-tree
+---
+parameter [11388,11405]
+    type_name: bytes [11388,11393]
+    memory: memory [11394,11400]
+    identifier: data [11401,11405]
+to
+function_definition [11184,11483]
+at 6
+===
+move-tree
+---
+parameter [11310,11327]
+    type_name: uint256 [11310,11317]
+    identifier: bidAmount [11318,11327]
+to
+function_definition [11184,11483]
+at 2
+===
+move-tree
+---
+parameter [11355,11371]
+    type_name: uint40 [11355,11361]
+    identifier: listingId [11362,11371]
+to
+function_definition [13696,14584]
+at 2
+===
+move-tree
+---
+parameter [11329,11353]
+    type_name: address payable [11329,11344]
+    identifier: referrer [11345,11353]
+to
+function_definition [11184,11483]
+at 3
+===
+move-tree
+---
+parameter [11373,11386]
+    type_name: bool [11373,11377]
+    identifier: increase [11378,11386]
+to
+function_definition [11184,11483]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11243,11259]
+    type_name: uint40 [11243,11249]
+    identifier: listingId [11250,11259]
+to
+function_definition [11184,11483]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11562,11578]
+    type_name: uint40 [11562,11568]
+    identifier: listingId [11569,11578]
+to
+function_definition [11547,11709]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11580,11593]
+    type_name: bool [11580,11584]
+    identifier: increase [11585,11593]
+to
+function_definition [11547,11709]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [11604,11611]
+    payable: payable [11604,11611]
+to
+function_definition [11547,11709]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [11620,11628]
+    override: override [11620,11628]
+to
+function_definition [11547,11709]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11729,11745]
+    type_name: uint40 [11729,11735]
+    identifier: listingId [11736,11745]
+to
+function_definition [11714,11899]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11747,11760]
+    type_name: bool [11747,11751]
+    identifier: increase [11752,11760]
+to
+function_definition [11714,11899]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11762,11781]
+    type_name: bytes [11762,11767]
+    calldata: calldata [11768,11776]
+    identifier: data [11777,11781]
+to
+function_definition [11714,11899]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [11792,11799]
+    payable: payable [11792,11799]
+to
+function_definition [11714,11899]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [11808,11816]
+    override: override [11808,11816]
+to
+function_definition [11714,11899]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12160,12184]
+    type_name: address payable [12160,12175]
+    identifier: referrer [12176,12184]
+to
+function_definition [12145,12345]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12186,12202]
+    type_name: uint40 [12186,12192]
+    identifier: listingId [12193,12202]
+to
+function_definition [12145,12345]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12204,12217]
+    type_name: bool [12204,12208]
+    identifier: increase [12209,12217]
+to
+function_definition [12145,12345]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12219,12238]
+    type_name: bytes [12219,12224]
+    calldata: calldata [12225,12233]
+    identifier: data [12234,12238]
+to
+function_definition [12145,12345]
+at 5
+
+New cluster:
+MOVE from function_definition [13696,14584]
+------------
+===
+move-tree
+---
+override_specifier [17778,17786]
+    override: override [17778,17786]
+to
+function_definition [13696,14584]
+at 5
+===
+move-tree
+---
+state_mutability [17770,17777]
+    payable: payable [17770,17777]
+to
+function_definition [12145,12345]
+at 7
+===
+move-tree
+---
+parameter [17725,17741]
+    type_name: uint40 [17725,17731]
+    identifier: listingId [17732,17741]
+to
+function_definition [17079,17932]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [12265,12273]
+    override: override [12265,12273]
+to
+function_definition [12145,12345]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [12274,12345]
+    expression_statement [12284,12339]
+        call_expression [12284,12338]
+            identifier: _offer [12284,12290]
+            call_argument [12291,12300]
+                member_expression: msg.value [12291,12300]
+            call_argument [12302,12310]
+                identifier: referrer [12302,12310]
+            call_argument [12312,12321]
+                identifier: listingId [12312,12321]
+            call_argument [12323,12331]
+                identifier: increase [12323,12331]
+            call_argument [12333,12337]
+                identifier: data [12333,12337]
+to
+function_definition [12145,12345]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13289,13308]
+    type_name: uint256 [13289,13296]
+    identifier: offerAmount [13297,13308]
+to
+function_definition [13273,13630]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13310,13334]
+    type_name: address payable [13310,13325]
+    identifier: referrer [13326,13334]
+to
+function_definition [13273,13630]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13336,13352]
+    type_name: uint40 [13336,13342]
+    identifier: listingId [13343,13352]
+to
+function_definition [13273,13630]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13354,13367]
+    type_name: bool [13354,13358]
+    identifier: increase [13359,13367]
+to
+function_definition [13273,13630]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13369,13386]
+    type_name: bytes [13369,13374]
+    memory: memory [13375,13381]
+    identifier: data [13382,13386]
+to
+function_definition [13273,13630]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [14815,14831]
+    type_name: uint40 [14815,14821]
+    identifier: listingId [14822,14831]
+to
+function_definition [14798,15275]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [14833,14866]
+    type_name: address[] [14833,14842]
+    calldata: calldata [14843,14851]
+    identifier: offerAddresses [14852,14866]
+to
+function_definition [14798,15275]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [14885,14893]
+    override: override [14885,14893]
+to
+function_definition [14798,15275]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [15356,15372]
+    type_name: uint40 [15356,15362]
+    identifier: listingId [15363,15372]
+to
+function_definition [15340,17073]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [15374,15402]
+    type_name: address[] [15374,15383]
+    calldata: calldata [15384,15392]
+    identifier: addresses [15393,15402]
+to
+function_definition [15340,17073]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [15404,15430]
+    type_name: uint256[] [15404,15413]
+    calldata: calldata [15414,15422]
+    identifier: amounts [15423,15430]
+to
+function_definition [15340,17073]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [15432,15449]
+    type_name: uint256 [15432,15439]
+    identifier: maxAmount [15440,15449]
+to
+function_definition [15340,17073]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [15468,15476]
+    override: override [15468,15476]
+to
+function_definition [15340,17073]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17114,17152]
+    type_name: MarketplaceLib.Listing [17114,17136]
+    storage: storage [17137,17144]
+    identifier: listing [17145,17152]
+to
+function_definition [17079,17932]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17154,17182]
+    type_name: address payable [17154,17169]
+    identifier: offerAddress [17170,17182]
+to
+function_definition [17079,17932]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17184,17206]
+    type_name: uint256 [17184,17191]
+    identifier: expectedAmount [17192,17206]
+to
+function_definition [17079,17932]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17208,17225]
+    type_name: uint256 [17208,17215]
+    identifier: maxAmount [17216,17225]
+to
+function_definition [17079,17932]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17227,17240]
+    type_name: uint256 [17227,17234]
+    identifier: index [17235,17240]
+to
+function_definition [17079,17932]
+at 7
+
+New cluster:
+MOVE from function_definition [23122,23351]
+------------
+===
+move-tree
+---
+override_specifier [20263,20271]
+    override: override [20263,20271]
+to
+function_definition [23122,23351]
+at 5
+===
+move-tree
+---
+parameter [20231,20247]
+    type_name: uint40 [20231,20237]
+    identifier: listingId [20238,20247]
+to
+function_definition [23122,23351]
+at 2
+===
+move-tree
+---
+return_type_definition [20272,20288]
+    returns: returns [20272,20279]
+    parameter [20280,20287]
+        type_name: uint256 [20280,20287]
+to
+function_definition [23122,23351]
+at 6
+===
+move-tree
+---
+state_mutability [20258,20262]
+    view: view [20258,20262]
+to
+function_definition [23122,23351]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [24084,24100]
+    type_name: uint40 [24084,24090]
+    identifier: listingId [24091,24100]
+to
+function_definition [24067,24400]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [24111,24115]
+    view: view [24111,24115]
+to
+function_definition [24067,24400]
+at 4
+
+New cluster:
+MOVE from function_definition [24067,24400]
+------------
+===
+move-tree
+---
+override_specifier [21472,21480]
+    override: override [21472,21480]
+to
+function_definition [24067,24400]
+at 6
+===
+move-tree
+---
+return_type_definition [21481,21522]
+    returns: returns [21481,21488]
+    parameter [21489,21521]
+        type_name: MarketplaceLib.Bid[] [21489,21509]
+        memory: memory [21510,21516]
+        identifier: bids [21517,21521]
+to
+function_definition [24067,24400]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [24175,24400]
+    variable_declaration_statement [24185,24249]
+        variable_declaration [24185,24223]
+            type_name: MarketplaceLib.Listing [24185,24207]
+            storage: storage [24208,24215]
+            identifier: listing [24216,24223]
+        affectation_operator: = [24224,24225]
+        call_expression [24226,24248]
+            identifier: _getListing [24226,24237]
+            call_argument [24238,24247]
+                identifier: listingId [24238,24247]
+    if_statement [24258,24394]
+        if: if [24258,24260]
+        call_expression [24262,24298]
+            member_expression: MarketplaceLib.hasBid [24262,24283]
+            call_argument [24284,24297]
+                member_expression: listing.flags [24284,24297]
+        block_statement [24300,24394]
+            expression_statement [24314,24349]
+                assignment_expression [24314,24348]
+                    identifier: bids [24314,24318]
+                    affectation_operator: = [24319,24320]
+                    call_expression [24321,24348]
+                        array_access [24321,24345]
+                            member_expression: new MarketplaceLib.Bid [24321,24343]
+                        call_argument [24346,24347]
+                            number_literal: 1 [24346,24347]
+            expression_statement [24362,24384]
+                assignment_expression [24362,24383]
+                    array_access [24362,24369]
+                        identifier: bids [24362,24366]
+                        number_literal: 0 [24367,24368]
+                    affectation_operator: = [24370,24371]
+                    member_expression: listing.bid [24372,24383]
+to
+function_definition [24067,24400]
+at 8
+
+New cluster:
+UPDATE from _listings to _getListing
+------------
+===
+update-node
+---
+identifier: _listings [20852,20861]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [21258,21267]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [9323,9332]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [13489,13498]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [7351,7360]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [12432,12441]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: _listings [19495,19504]
+replace _listings by _getListing
+===
+update-node
+---
+identifier: require [15495,15502]
+replace require by _getListing
+===
+update-node
+---
+identifier: getBids [21424,21431]
+replace getBids by _getListing
+
+New cluster:
+UPDATE from external to private
+------------
+===
+update-node
+---
+visibility: external [21450,21458]
+replace external by private
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [25247,25286]
+    returns: returns [25247,25254]
+    parameter [25255,25285]
+        type_name: MarketplaceLib.Listing [25255,25277]
+        storage: storage [25278,25285]
+to
+function_definition [21415,21787]
+at 5
+
+New cluster:
+MOVE from function_body [11303,11483]
+------------
+===
+move-tree
+---
+expression_statement [11733,11834]
+    call_expression [11733,11833]
+        member_expression: SettlementLib.performBidIndividual [11733,11767]
+        call_argument [11768,11777]
+            identifier: listingId [11768,11777]
+        call_argument [11779,11786]
+            identifier: listing [11779,11786]
+        call_argument [11788,11797]
+            identifier: bidAmount [11788,11797]
+        call_argument [11799,11807]
+            identifier: referrer [11799,11807]
+        call_argument [11809,11817]
+            identifier: increase [11809,11817]
+        call_argument [11819,11826]
+            identifier: _escrow [11819,11826]
+        call_argument [11828,11832]
+            identifier: data [11828,11832]
+to
+function_body [11303,11483]
+at 1
+
+New cluster:
+MOVE from function_body [13755,14584]
+------------
+===
+move-tree
+---
+variable_declaration_statement [11579,11642]
+    variable_declaration [11579,11617]
+        type_name: MarketplaceLib.ListingType [11579,11605]
+        identifier: listingType [11606,11617]
+    affectation_operator: = [11618,11619]
+    member_expression: listing.details.type_ [11620,11641]
+to
+function_body [13755,14584]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [14202,14448]
+    call_expression [14202,14447]
+        identifier: require [14202,14209]
+        call_argument [14223,14398]
+            binary_expression [14223,14398]
+                binary_expression [14223,14333]
+                    member_expression: listingType != MarketplaceLib.ListingType.OFFERS_ONLY [14223,14276]
+                    logical_operator: || [14277,14279]
+                    call_expression [14292,14333]
+                        member_expression: MarketplaceLib.isFinalized [14292,14318]
+                        call_argument [14319,14332]
+                            member_expression: listing.flags [14319,14332]
+                logical_operator: || [14334,14336]
+                binary_expression [14349,14398]
+                    parenthesized_expression [14349,14380]
+                        binary_expression [14350,14379]
+                            member_expression: listing.details.endTime [14350,14373]
+                            arithmetic_operator: + [14373,14374]
+                            number_literal: 86400 [14374,14379]
+                    comparison_operator: < [14381,14382]
+                    member_expression: block.timestamp [14383,14398]
+        call_argument [14412,14437]
+            string_literal [14412,14437]
+                string: "Cannot be rescinded yet" [14412,14437]
+to
+function_body [13755,14584]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [14977,15036]
+    call_expression [14977,15035]
+        identifier: require [14977,14984]
+        call_argument [14985,15013]
+            binary_expression [14985,15013]
+                member_expression: listing.seller [14985,14999]
+                comparison_operator: == [15000,15002]
+                member_expression: msg.sender [15003,15013]
+        call_argument [15015,15034]
+            string_literal [15015,15034]
+                string: "Permission denied" [15015,15034]
+to
+function_body [14894,15275]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+for_statement [15045,15269]
+    for: for [15045,15048]
+    variable_declaration_statement [15050,15057]
+        variable_declaration [15050,15056]
+            type_name: uint [15050,15054]
+            identifier: i [15055,15056]
+    expression_statement [15058,15084]
+        binary_expression [15058,15083]
+            identifier: i [15058,15059]
+            comparison_operator: < [15060,15061]
+            member_expression: offerAddresses.length [15062,15083]
+    block_statement [15086,15269]
+        expression_statement [15100,15228]
+            call_expression [15100,15227]
+                member_expression: SettlementLib.rescindOffer [15100,15126]
+                call_argument [15127,15136]
+                    identifier: listingId [15127,15136]
+                call_argument [15138,15145]
+                    identifier: listing [15138,15145]
+                call_argument [15147,15164]
+                    array_access [15147,15164]
+                        identifier: offerAddresses [15147,15161]
+                        identifier: i [15162,15163]
+                call_argument [15166,15191]
+                    array_access [15166,15191]
+                        identifier: _listingOffers [15166,15180]
+                        identifier: listingId [15181,15190]
+                call_argument [15193,15226]
+                    array_access [15193,15226]
+                        identifier: _listingOfferAddresses [15193,15215]
+                        identifier: listingId [15216,15225]
+        block_statement [15241,15259]
+            unchecked: unchecked [15241,15250]
+            expression_statement [15253,15257]
+                update_expression [15253,15256]
+                    increment_operator: ++ [15253,15255]
+                    identifier: i [15255,15256]
+to
+function_body [14894,15275]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [15487,15528]
+    variable_declaration [15487,15508]
+        type_name: uint256 [15487,15494]
+        identifier: addressLength [15495,15508]
+    affectation_operator: = [15509,15510]
+    member_expression: addresses.length [15511,15527]
+to
+function_body [15477,17073]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [15677,15740]
+    variable_declaration [15677,15715]
+        type_name: MarketplaceLib.ListingType [15677,15703]
+        identifier: listingType [15704,15715]
+    affectation_operator: = [15716,15717]
+    member_expression: listing.details.type_ [15718,15739]
+to
+function_body [15477,17073]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [15920,15972]
+    augmented_assignment_expression [15920,15971]
+        member_expression: listing.flags [15920,15933]
+        affectation_operator: |= [15934,15936]
+        member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [15937,15971]
+to
+function_body [15477,17073]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [16008,16096]
+    if: if [16008,16010]
+    binary_expression [16012,16042]
+        member_expression: listing.details.startTime [16012,16037]
+        comparison_operator: == [16038,16040]
+        number_literal: 0 [16041,16042]
+    expression_statement [16044,16096]
+        assignment_expression [16044,16095]
+            member_expression: listing.details.startTime [16044,16069]
+            affectation_operator: = [16070,16071]
+            type_cast_expression [16072,16095]
+                primitive_type: uint48 [16072,16078]
+                call_argument [16079,16094]
+                    member_expression: block.timestamp [16079,16094]
+to
+function_body [15477,17073]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [16105,16202]
+    if: if [16105,16107]
+    binary_expression [16109,16150]
+        member_expression: listing.details.endTime [16109,16132]
+        comparison_operator: > [16133,16134]
+        member_expression: block.timestamp [16135,16150]
+    expression_statement [16152,16202]
+        assignment_expression [16152,16201]
+            member_expression: listing.details.endTime [16152,16175]
+            affectation_operator: = [16176,16177]
+            type_cast_expression [16178,16201]
+                primitive_type: uint48 [16178,16184]
+                call_argument [16185,16200]
+                    member_expression: block.timestamp [16185,16200]
+to
+function_body [15477,17073]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [16211,16262]
+    variable_declaration [16211,16230]
+        type_name: uint24 [16211,16217]
+        identifier: totalPerSale [16218,16230]
+    affectation_operator: = [16231,16232]
+    member_expression: listing.details.totalPerSale [16233,16261]
+to
+function_body [15477,17073]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [17260,17345]
+    call_expression [17260,17344]
+        identifier: require [17260,17267]
+        call_argument [17268,17324]
+            call_expression [17268,17324]
+                member_expression: _listingOfferAddresses[listingId].contains [17268,17310]
+                call_argument [17311,17323]
+                    identifier: offerAddress [17311,17323]
+        call_argument [17326,17343]
+            string_literal [17326,17343]
+                string: "Invalid address" [17326,17343]
+to
+function_body [17250,17932]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [17354,17438]
+    variable_declaration [17354,17395]
+        type_name: MarketplaceLib.Offer [17354,17374]
+        storage: storage [17375,17382]
+        identifier: currentOffer [17383,17395]
+    affectation_operator: = [17396,17397]
+    array_access [17398,17437]
+        array_access [17398,17423]
+            identifier: _listingOffers [17398,17412]
+            identifier: listingId [17413,17422]
+        identifier: offerAddress [17424,17436]
+to
+function_body [17250,17932]
+at 1
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [20501,20565]
+to
+function_body [15485,17646]
+at 0
+------------
+===
+insert-node
+---
+variable_declaration_statement [20501,20565]
+to
+function_body [15485,17646]
+at 0
+===
+insert-node
+---
+affectation_operator: = [20540,20541]
+to
+variable_declaration_statement [20501,20565]
+at 1
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [20574,20637]
+to
+function_body [15485,17646]
+at 1
+------------
+===
+insert-node
+---
+variable_declaration_statement [20574,20637]
+to
+function_body [15485,17646]
+at 1
+===
+insert-node
+---
+member_expression: listing.details.type_ [20615,20636]
+to
+variable_declaration_statement [20574,20637]
+at 2
+
+New cluster:
+===
+insert-node
+---
+expression_statement [20646,20708]
+to
+function_body [15485,17646]
+at 2
+------------
+===
+insert-node
+---
+call_expression [20655,20690]
+to
+unary_expression [20654,20690]
+at 1
+===
+insert-node
+---
+call_argument [20678,20689]
+to
+call_expression [20655,20690]
+at 1
+===
+insert-node
+---
+expression_statement [20646,20708]
+to
+function_body [15485,17646]
+at 2
+===
+insert-node
+---
+call_argument [20654,20690]
+to
+call_expression [20646,20707]
+at 1
+===
+insert-node
+---
+member_expression: MarketplaceLib.isOffer [20655,20677]
+to
+call_expression [20655,20690]
+at 0
+===
+insert-node
+---
+call_expression [20646,20707]
+to
+expression_statement [20646,20708]
+at 0
+===
+insert-node
+---
+unary_expression [20654,20690]
+to
+call_argument [20654,20690]
+at 0
+===
+insert-node
+---
+!: ! [20654,20655]
+to
+unary_expression [20654,20690]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [22940,23035]
+    assignment_expression [22940,23034]
+        member_expression: listing.offersAccepted [22940,22962]
+        affectation_operator: = [22963,22964]
+        binary_expression [22965,23034]
+            parenthesized_expression [22965,23029]
+                binary_expression [22966,23028]
+                    member_expression: internalListing.flags [22966,22987]
+                    bitwise_operator: & [22988,22989]
+                    member_expression: MarketplaceLib.FLAG_MASK_ACCEPT_OFFERS [22990,23028]
+            comparison_operator: != [23030,23032]
+            number_literal: 0 [23033,23034]
+to
+function_body [19354,20118]
+at 13
+
+New cluster:
+===
+insert-node
+---
+call_expression [7414,7436]
+to
+variable_declaration_statement [7310,7372]
+at 2
+------------
+===
+insert-node
+---
+call_argument [7426,7435]
+to
+call_expression [7414,7436]
+at 1
+===
+insert-node
+---
+call_expression [7414,7436]
+to
+variable_declaration_statement [7310,7372]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_expression [9305,9327]
+to
+variable_declaration_statement [9282,9344]
+at 2
+------------
+===
+insert-node
+---
+call_argument [9317,9326]
+to
+call_expression [9305,9327]
+at 1
+===
+insert-node
+---
+call_expression [9305,9327]
+to
+variable_declaration_statement [9282,9344]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [11313,11377]
+------------
+===
+move-tree
+---
+variable_declaration [11508,11546]
+    type_name: MarketplaceLib.Listing [11508,11530]
+    storage: storage [11531,11538]
+    identifier: listing [11539,11546]
+to
+variable_declaration_statement [11313,11377]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [11354,11376]
+    identifier: _getListing [11354,11365]
+    call_argument [11366,11375]
+        identifier: listingId [11366,11375]
+to
+variable_declaration_statement [11313,11377]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [13406,13470]
+------------
+===
+move-tree
+---
+variable_declaration [21217,21255]
+    type_name: MarketplaceLib.Listing [21217,21239]
+    storage: storage [21240,21247]
+    identifier: listing [21248,21255]
+to
+variable_declaration_statement [13406,13470]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [13447,13469]
+    identifier: _getListing [13447,13458]
+    call_argument [13459,13468]
+        identifier: listingId [13459,13468]
+to
+variable_declaration_statement [13406,13470]
+at 2
+
+New cluster:
+MOVE from return_statement [21687,21781]
+------------
+===
+move-tree
+---
+array_access [21657,21677]
+    identifier: _listings [21657,21666]
+    identifier: listingId [21667,21676]
+to
+return_statement [21687,21781]
+at 1
+===
+move-tree
+---
+variable_declaration [21616,21654]
+    type_name: MarketplaceLib.Listing [21616,21638]
+    storage: storage [21639,21646]
+    identifier: listing [21647,21654]
+to
+variable_declaration_statement [13765,13829]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [13806,13828]
+    identifier: _getListing [13806,13817]
+    call_argument [13818,13827]
+        identifier: listingId [13818,13827]
+to
+variable_declaration_statement [13765,13829]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [14904,14968]
+------------
+===
+move-tree
+---
+variable_declaration [20811,20849]
+    type_name: MarketplaceLib.Listing [20811,20833]
+    storage: storage [20834,20841]
+    identifier: listing [20842,20849]
+to
+variable_declaration_statement [14904,14968]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [14945,14967]
+    identifier: _getListing [14945,14956]
+    call_argument [14957,14966]
+        identifier: listingId [14957,14966]
+to
+variable_declaration_statement [14904,14968]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [15604,15668]
+------------
+===
+move-tree
+---
+variable_declaration [20382,20420]
+    type_name: MarketplaceLib.Listing [20382,20404]
+    storage: storage [20405,20412]
+    identifier: listing [20413,20420]
+to
+variable_declaration_statement [15604,15668]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [15645,15667]
+    identifier: _getListing [15645,15656]
+    call_argument [15657,15666]
+        identifier: listingId [15657,15666]
+to
+variable_declaration_statement [15604,15668]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [16276,16313]
+    member_expression: MarketplaceLib.isAuction [16276,16300]
+    call_argument [16301,16312]
+        identifier: listingType [16301,16312]
+to
+if_statement [16272,17067]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [17544,17659]
+    expression_statement [17558,17649]
+        call_expression [17558,17648]
+            member_expression: SettlementLib.deliverTokenLazy [17558,17588]
+            call_argument [17589,17598]
+                identifier: listingId [17589,17598]
+            call_argument [17600,17607]
+                identifier: listing [17600,17607]
+            call_argument [17609,17621]
+                identifier: offerAddress [17609,17621]
+            call_argument [17623,17624]
+                number_literal: 1 [17623,17624]
+            call_argument [17626,17640]
+                identifier: expectedAmount [17626,17640]
+            call_argument [17642,17647]
+                identifier: index [17642,17647]
+to
+if_statement [17520,17765]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [12391,12453]
+------------
+===
+move-tree
+---
+variable_declaration [17880,17918]
+    type_name: MarketplaceLib.Listing [17880,17902]
+    storage: storage [17903,17910]
+    identifier: listing [17911,17918]
+to
+variable_declaration_statement [12391,12453]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [18110,18132]
+to
+variable_declaration_statement [12391,12453]
+at 3
+------------
+===
+insert-node
+---
+call_argument [18122,18131]
+to
+call_expression [18110,18132]
+at 1
+===
+insert-node
+---
+call_expression [18110,18132]
+to
+variable_declaration_statement [12391,12453]
+at 3
+
+New cluster:
+MOVE from variable_declaration_statement [20574,20637]
+------------
+===
+move-tree
+---
+affectation_operator: = [15617,15618]
+to
+variable_declaration_statement [20574,20637]
+at 1
+===
+move-tree
+---
+variable_declaration [15578,15616]
+    type_name: MarketplaceLib.Listing [15578,15600]
+    storage: storage [15601,15608]
+    identifier: listing [15609,15616]
+to
+variable_declaration_statement [13448,13510]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [19035,19057]
+to
+variable_declaration_statement [13448,13510]
+at 3
+------------
+===
+insert-node
+---
+call_argument [19047,19056]
+to
+call_expression [19035,19057]
+at 1
+===
+insert-node
+---
+call_expression [19035,19057]
+to
+variable_declaration_statement [13448,13510]
+at 3
+
+New cluster:
+===
+insert-node
+---
+call_expression [19860,19896]
+to
+if_statement [14318,15092]
+at 1
+------------
+===
+insert-node
+---
+member_expression: MarketplaceLib.hasBid [19860,19881]
+to
+call_expression [19860,19896]
+at 0
+===
+insert-node
+---
+call_expression [19860,19896]
+to
+if_statement [14318,15092]
+at 1
+===
+insert-node
+---
+call_argument [19882,19895]
+to
+call_expression [19860,19896]
+at 1
+
+New cluster:
+MOVE from variable_declaration_statement [20501,20565]
+------------
+===
+move-tree
+---
+variable_declaration [13448,13486]
+    type_name: MarketplaceLib.Listing [13448,13470]
+    storage: storage [13471,13478]
+    identifier: listing [13479,13486]
+to
+variable_declaration_statement [20501,20565]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [20501,20565]
+------------
+===
+move-tree
+---
+call_expression [15495,15568]
+    identifier: require [15495,15502]
+    call_argument [15503,15548]
+        binary_expression [15503,15548]
+            binary_expression [15503,15516]
+                identifier: listingId [15503,15512]
+                comparison_operator: > [15513,15514]
+                number_literal: 0 [15515,15516]
+            logical_operator: && [15517,15519]
+            binary_expression [15520,15548]
+                identifier: listingId [15520,15529]
+                comparison_operator: <= [15530,15532]
+                identifier: _listingCounter [15533,15548]
+    call_argument [15550,15567]
+        string_literal [15550,15567]
+            string: "Invalid listing" [15550,15567]
+to
+variable_declaration_statement [20501,20565]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [20574,20612]
+    type_name: MarketplaceLib.ListingType [20574,20600]
+    identifier: listingType [20601,20612]
+to
+variable_declaration_statement [20574,20637]
+at 0
+
+New cluster:
+===
+insert-node
+---
+unary_expression [21033,21070]
+to
+if_statement [15976,17583]
+at 1
+------------
+===
+insert-node
+---
+member_expression: MarketplaceLib.hasBid [21034,21055]
+to
+call_expression [21034,21070]
+at 0
+===
+insert-node
+---
+call_expression [21034,21070]
+to
+unary_expression [21033,21070]
+at 1
+===
+insert-node
+---
+unary_expression [21033,21070]
+to
+if_statement [15976,17583]
+at 1
+===
+insert-node
+---
+!: ! [21033,21034]
+to
+unary_expression [21033,21070]
+at 0
+===
+insert-node
+---
+call_argument [21056,21069]
+to
+call_expression [21034,21070]
+at 1
+
+New cluster:
+===
+insert-node
+---
+call_expression [22328,22350]
+to
+variable_declaration_statement [19447,19516]
+at 2
+------------
+===
+insert-node
+---
+call_expression [22328,22350]
+to
+variable_declaration_statement [19447,19516]
+at 2
+===
+insert-node
+---
+call_argument [22340,22349]
+to
+call_expression [22328,22350]
+at 1
+
+New cluster:
+MOVE from variable_declaration_statement [23222,23286]
+------------
+===
+move-tree
+---
+variable_declaration [12391,12429]
+    type_name: MarketplaceLib.Listing [12391,12413]
+    storage: storage [12414,12421]
+    identifier: listing [12422,12429]
+to
+variable_declaration_statement [23222,23286]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [23263,23285]
+    identifier: _getListing [23263,23274]
+    call_argument [23275,23284]
+        identifier: listingId [23275,23284]
+to
+variable_declaration_statement [23222,23286]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [23542,23580]
+    type_name: MarketplaceLib.Listing [23542,23564]
+    storage: storage [23565,23572]
+    identifier: listing [23573,23580]
+to
+variable_declaration_statement [20811,20873]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [23583,23605]
+to
+variable_declaration_statement [20811,20873]
+at 2
+------------
+===
+insert-node
+---
+call_argument [23595,23604]
+to
+call_expression [23583,23605]
+at 1
+===
+insert-node
+---
+call_expression [23583,23605]
+to
+variable_declaration_statement [20811,20873]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [23867,23905]
+    type_name: MarketplaceLib.Listing [23867,23889]
+    storage: storage [23890,23897]
+    identifier: listing [23898,23905]
+to
+variable_declaration_statement [21217,21279]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [23908,23930]
+to
+variable_declaration_statement [21217,21279]
+at 2
+------------
+===
+insert-node
+---
+call_argument [23920,23929]
+to
+call_expression [23908,23930]
+at 1
+===
+insert-node
+---
+call_expression [23908,23930]
+to
+variable_declaration_statement [21217,21279]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [3766,3783]
+    type_name: bool [3766,3770]
+    identifier: acceptOffers [3771,3783]
+to
+variable_declaration_tuple [3505,3843]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4250,4262]
+    identifier: acceptOffers [4250,4262]
+to
+call_expression [4157,4275]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6174,6186]
+    identifier: acceptOffers [6174,6186]
+to
+call_expression [5987,6103]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7106,7118]
+    identifier: acceptOffers [7106,7118]
+to
+call_expression [6863,6998]
+at 8
+
+New cluster:
+MOVE from call_expression [7414,7436]
+------------
+===
+move-tree
+---
+identifier: _listings [7351,7360]
+to
+call_expression [7414,7436]
+at 0
+===
+move-tree
+---
+identifier: listingId [7361,7370]
+to
+call_argument [7426,7435]
+at 0
+
+New cluster:
+MOVE from call_expression [9305,9327]
+------------
+===
+move-tree
+---
+identifier: _listings [9323,9332]
+to
+call_expression [9305,9327]
+at 0
+===
+move-tree
+---
+identifier: listingId [9333,9342]
+to
+call_argument [9317,9326]
+at 0
+
+New cluster:
+UPDATE from SettlementLib.performBidIndividual to SettlementLib.performBid
+------------
+===
+update-node
+---
+member_expression: SettlementLib.performBidIndividual [11733,11767]
+replace SettlementLib.performBidIndividual by SettlementLib.performBid
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11646,11655]
+    member_expression: msg.value [11646,11655]
+to
+call_expression [11639,11702]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11678,11687]
+    identifier: listingId [11678,11687]
+to
+call_expression [11639,11702]
+at 3
+
+New cluster:
+MOVE from call_expression [16552,16628]
+------------
+===
+move-tree
+---
+call_argument [12034,12043]
+    identifier: listingId [12034,12043]
+to
+call_expression [16552,16628]
+at 1
+===
+move-tree
+---
+call_argument [12045,12052]
+    identifier: listing [12045,12052]
+to
+call_expression [16552,16628]
+at 2
+===
+move-tree
+---
+call_argument [12093,12097]
+    identifier: data [12093,12097]
+to
+call_expression [11827,11892]
+at 5
+===
+move-tree
+---
+call_argument [12074,12082]
+    identifier: increase [12074,12082]
+to
+call_expression [11639,11702]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11699,11701]
+    string_literal [11699,11701]
+        string: "" [11699,11701]
+to
+call_expression [11639,11702]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11834,11843]
+    member_expression: msg.value [11834,11843]
+to
+call_expression [11827,11892]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11866,11875]
+    identifier: listingId [11866,11875]
+to
+call_expression [11827,11892]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11877,11885]
+    identifier: increase [11877,11885]
+to
+call_expression [11827,11892]
+at 4
+
+New cluster:
+MOVE from call_expression [23302,23344]
+------------
+===
+move-tree
+---
+call_argument [21728,21735]
+    identifier: listing [21728,21735]
+to
+call_expression [23302,23344]
+at 1
+===
+move-tree
+---
+call_argument [21717,21726]
+    identifier: listingId [21717,21726]
+to
+call_expression [13479,13623]
+at 1
+
+New cluster:
+MOVE from call_expression [13479,13623]
+------------
+===
+move-tree
+---
+call_argument [20494,20501]
+    identifier: listing [20494,20501]
+to
+call_expression [13479,13623]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13523,13534]
+    identifier: offerAmount [13523,13534]
+to
+call_expression [13479,13623]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13536,13544]
+    identifier: referrer [13536,13544]
+to
+call_expression [13479,13623]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13546,13571]
+    array_access [13546,13571]
+        identifier: _listingOffers [13546,13560]
+        identifier: listingId [13561,13570]
+to
+call_expression [13479,13623]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13573,13606]
+    array_access [13573,13606]
+        identifier: _listingOfferAddresses [13573,13595]
+        identifier: listingId [13596,13605]
+to
+call_expression [13479,13623]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13608,13616]
+    identifier: increase [13608,13616]
+to
+call_expression [13479,13623]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13618,13622]
+    identifier: data [13618,13622]
+to
+call_expression [13479,13623]
+at 8
+
+New cluster:
+MOVE from call_expression [17679,17754]
+------------
+===
+move-tree
+---
+call_argument [18799,18800]
+    number_literal: 1 [18799,18800]
+to
+call_expression [17679,17754]
+at 3
+===
+move-tree
+---
+call_argument [18774,18783]
+    identifier: listingId [18774,18783]
+to
+call_expression [14457,14577]
+at 1
+===
+move-tree
+---
+call_argument [18785,18792]
+    identifier: listing [18785,18792]
+to
+call_expression [14457,14577]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14504,14514]
+    member_expression: msg.sender [14504,14514]
+to
+call_expression [14457,14577]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14516,14541]
+    array_access [14516,14541]
+        identifier: _listingOffers [14516,14530]
+        identifier: listingId [14531,14540]
+to
+call_expression [14457,14577]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14543,14576]
+    array_access [14543,14576]
+        identifier: _listingOfferAddresses [14543,14565]
+        identifier: listingId [14566,14575]
+to
+call_expression [14457,14577]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [15545,15576]
+    binary_expression [15545,15576]
+        identifier: addressLength [15545,15558]
+        comparison_operator: == [15559,15561]
+        member_expression: amounts.length [15562,15576]
+to
+call_expression [15537,15594]
+at 1
+
+New cluster:
+MOVE from call_expression [15537,15594]
+------------
+===
+move-tree
+---
+call_argument [18870,18885]
+    string_literal [18870,18885]
+        string: "Invalid input" [18870,18885]
+to
+call_expression [15537,15594]
+at 2
+
+New cluster:
+MOVE from call_expression [15749,15851]
+------------
+===
+move-tree
+---
+call_argument [12676,12704]
+    binary_expression [12676,12704]
+        member_expression: msg.sender [12676,12686]
+        comparison_operator: == [12687,12689]
+        member_expression: listing.seller [12690,12704]
+to
+call_expression [15749,15851]
+at 1
+
+New cluster:
+MOVE from call_expression [15749,15851]
+------------
+===
+move-tree
+---
+call_argument [18018,18035]
+    string_literal [18018,18035]
+        string: "Invalid listing" [18018,18035]
+to
+call_expression [15749,15851]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16329,16423]
+    call_expression [16329,16422]
+        identifier: require [16329,16336]
+        call_argument [16337,16374]
+            unary_expression [16337,16374]
+                !: ! [16337,16338]
+                call_expression [16338,16374]
+                    member_expression: MarketplaceLib.hasBid [16338,16359]
+                    call_argument [16360,16373]
+                        member_expression: listing.flags [16360,16373]
+        call_argument [16376,16421]
+            string_literal [16376,16421]
+                string: "Cannot accept offers when bid has been made" [16376,16421]
+to
+block_statement [16315,16639]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16436,16492]
+    call_expression [16436,16491]
+        identifier: require [16436,16443]
+        call_argument [16444,16462]
+            binary_expression [16444,16462]
+                identifier: addressLength [16444,16457]
+                comparison_operator: == [16458,16460]
+                number_literal: 1 [16461,16462]
+        call_argument [16464,16490]
+            string_literal [16464,16490]
+                string: "Too many offers accepted" [16464,16490]
+to
+block_statement [16315,16639]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16505,16539]
+    augmented_assignment_expression [16505,16538]
+        member_expression: listing.totalSold [16505,16522]
+        affectation_operator: += [16523,16525]
+        identifier: totalPerSale [16526,16538]
+to
+block_statement [16315,16639]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [16649,16684]
+    member_expression: MarketplaceLib.isOffer [16649,16671]
+    call_argument [16672,16683]
+        identifier: listingType [16672,16683]
+to
+if_statement [16645,17067]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17455,17492]
+    binary_expression [17455,17492]
+        member_expression: currentOffer.amount [17455,17474]
+        comparison_operator: == [17475,17477]
+        identifier: expectedAmount [17478,17492]
+to
+call_expression [17447,17510]
+at 1
+
+New cluster:
+MOVE from call_expression [17447,17510]
+------------
+===
+move-tree
+---
+call_argument [18582,18597]
+    string_literal [18582,18597]
+        string: "Invalid state" [18582,18597]
+to
+call_expression [17447,17510]
+at 2
+
+New cluster:
+MOVE from call_expression [17798,17925]
+------------
+===
+move-tree
+---
+call_argument [19147,19154]
+    identifier: listing [19147,19154]
+to
+call_expression [17798,17925]
+at 3
+===
+move-tree
+---
+call_argument [19170,19184]
+    identifier: _feesCollected [19170,19184]
+to
+call_expression [17798,17925]
+at 6
+===
+move-tree
+---
+call_argument [19123,19139]
+    identifier: _royaltyEngineV1 [19123,19139]
+to
+call_expression [17798,17925]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17842,17851]
+    identifier: listingId [17842,17851]
+to
+call_expression [17798,17925]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17862,17874]
+    identifier: currentOffer [17862,17874]
+to
+call_expression [17798,17925]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17876,17888]
+    identifier: offerAddress [17876,17888]
+to
+call_expression [17798,17925]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17906,17915]
+    identifier: maxAmount [17906,17915]
+to
+call_expression [17798,17925]
+at 7
+
+New cluster:
+MOVE from call_expression [17798,17925]
+------------
+===
+move-tree
+---
+call_argument [19049,19056]
+    identifier: _escrow [19049,19056]
+to
+call_expression [17798,17925]
+at 8
+
+New cluster:
+MOVE from call_expression [18110,18132]
+------------
+===
+move-tree
+---
+identifier: _listings [12432,12441]
+to
+call_expression [18110,18132]
+at 0
+===
+move-tree
+---
+identifier: listingId [12442,12451]
+to
+call_argument [18122,18131]
+at 0
+
+New cluster:
+MOVE from call_expression [12462,12547]
+------------
+===
+move-tree
+---
+call_argument [15716,15733]
+    string_literal [15716,15733]
+        string: "Invalid listing" [15716,15733]
+to
+call_expression [12462,12547]
+at 2
+===
+move-tree
+---
+call_argument [15657,15714]
+    binary_expression [15657,15714]
+        parenthesized_expression [15657,15709]
+            binary_expression [15658,15708]
+                member_expression: listing.flags [15658,15671]
+                bitwise_operator: & [15672,15673]
+                member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [15674,15708]
+        comparison_operator: == [15710,15712]
+        number_literal: 0 [15713,15714]
+to
+call_expression [20726,20767]
+at 1
+
+New cluster:
+MOVE from call_argument [19047,19056]
+------------
+===
+move-tree
+---
+identifier: listingId [13499,13508]
+to
+call_argument [19047,19056]
+at 0
+===
+move-tree
+---
+identifier: _listings [13489,13498]
+to
+call_expression [19035,19057]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_argument [19075,19117]
+to
+call_expression [13519,13604]
+at 1
+------------
+===
+insert-node
+---
+!: ! [19075,19076]
+to
+unary_expression [19075,19117]
+at 0
+===
+insert-node
+---
+call_expression [19076,19117]
+to
+unary_expression [19075,19117]
+at 1
+===
+insert-node
+---
+call_argument [19075,19117]
+to
+call_expression [13519,13604]
+at 1
+===
+insert-node
+---
+unary_expression [19075,19117]
+to
+call_argument [19075,19117]
+at 0
+===
+insert-node
+---
+member_expression: MarketplaceLib.isFinalized [19076,19102]
+to
+call_expression [19076,19117]
+at 0
+
+New cluster:
+UPDATE from _listings to require
+------------
+===
+update-node
+---
+identifier: _listings [15619,15628]
+replace _listings by require
+
+New cluster:
+MOVE from call_argument [20678,20689]
+------------
+===
+move-tree
+---
+identifier: listingId [15629,15638]
+to
+call_argument [20678,20689]
+at 0
+===
+move-tree
+---
+identifier: _listings [15619,15628]
+to
+call_expression [20646,20707]
+at 0
+
+New cluster:
+MOVE from call_expression [20646,20707]
+------------
+===
+move-tree
+---
+call_argument [18144,18158]
+    string_literal [18144,18158]
+        string: "Invalid type" [18144,18158]
+to
+call_expression [20646,20707]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [20725,20767]
+to
+call_expression [15649,15734]
+at 1
+------------
+===
+insert-node
+---
+unary_expression [20725,20767]
+to
+call_argument [20725,20767]
+at 0
+===
+insert-node
+---
+member_expression: MarketplaceLib.isFinalized [20726,20752]
+to
+call_expression [20726,20767]
+at 0
+===
+insert-node
+---
+!: ! [20725,20726]
+to
+unary_expression [20725,20767]
+at 0
+===
+insert-node
+---
+call_expression [20726,20767]
+to
+unary_expression [20725,20767]
+at 1
+===
+insert-node
+---
+call_argument [20725,20767]
+to
+call_expression [15649,15734]
+at 1
+
+New cluster:
+MOVE from call_expression [15649,15734]
+------------
+===
+move-tree
+---
+call_argument [12529,12546]
+    string_literal [12529,12546]
+        string: "Invalid listing" [12529,12546]
+to
+call_expression [15649,15734]
+at 2
+
+New cluster:
+UPDATE from listing.details.type_ == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION to listingType == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION
+------------
+===
+update-node
+---
+member_expression: listing.details.type_ == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION [16238,16308]
+replace listing.details.type_ == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION by listingType == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION
+
+New cluster:
+MOVE from if_statement [16234,17583]
+------------
+===
+move-tree
+---
+block_statement [17508,17583]
+    revert_statement [17550,17573]
+        revert: revert [17550,17556]
+        parenthesized_expression [17556,17572]
+            string_literal [17557,17571]
+                string: "Invalid type" [17557,17571]
+to
+if_statement [16234,17583]
+at 4
+
+New cluster:
+===
+insert-node
+---
+storage: storage [22302,22309]
+to
+variable_declaration [19447,19492]
+at 1
+------------
+===
+insert-node
+---
+storage: storage [22302,22309]
+to
+variable_declaration [19447,19492]
+at 1
+
+New cluster:
+MOVE from call_expression [22328,22350]
+------------
+===
+move-tree
+---
+identifier: _listings [19495,19504]
+to
+call_expression [22328,22350]
+at 0
+===
+move-tree
+---
+identifier: listingId [19505,19514]
+to
+call_argument [22340,22349]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [22461,22510]
+to
+assignment_expression [19606,19691]
+at 2
+------------
+===
+insert-node
+---
+call_argument [22488,22509]
+to
+call_expression [22461,22510]
+at 1
+===
+insert-node
+---
+call_expression [22461,22510]
+to
+assignment_expression [19606,19691]
+at 2
+
+New cluster:
+MOVE from call_expression [23583,23605]
+------------
+===
+move-tree
+---
+identifier: _listings [20852,20861]
+to
+call_expression [23583,23605]
+at 0
+===
+move-tree
+---
+identifier: listingId [20862,20871]
+to
+call_argument [23595,23604]
+at 0
+
+New cluster:
+MOVE from call_expression [23908,23930]
+------------
+===
+move-tree
+---
+identifier: _listings [21258,21267]
+to
+call_expression [23908,23930]
+at 0
+===
+move-tree
+---
+identifier: listingId [21268,21277]
+to
+call_argument [23920,23929]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [15757,15831]
+to
+call_argument [12676,12704]
+at 0
+------------
+===
+insert-node
+---
+logical_operator: && [15786,15788]
+to
+binary_expression [15757,15831]
+at 1
+===
+insert-node
+---
+binary_expression [15757,15831]
+to
+call_argument [12676,12704]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16700,16798]
+    call_expression [16700,16797]
+        identifier: require [16700,16707]
+        call_argument [16708,16768]
+            member_expression: addressLength*totalPerSale <= listing.details.totalAvailable [16708,16768]
+        call_argument [16770,16796]
+            string_literal [16770,16796]
+                string: "Too many offers accepted" [16770,16796]
+to
+block_statement [16686,17067]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16811,16867]
+    augmented_assignment_expression [16811,16866]
+        member_expression: listing.totalSold [16811,16828]
+        affectation_operator: += [16829,16831]
+        type_cast_expression [16832,16866]
+            primitive_type: uint24 [16832,16838]
+            call_argument [16839,16865]
+                binary_expression [16839,16865]
+                    identifier: totalPerSale [16839,16851]
+                    arithmetic_operator: * [16851,16852]
+                    identifier: addressLength [16852,16865]
+to
+block_statement [16686,17067]
+at 1
+
+New cluster:
+===
+insert-node
+---
+binary_expression [18150,18224]
+to
+call_argument [12470,12527]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [18150,18224]
+to
+call_argument [12470,12527]
+at 0
+===
+insert-node
+---
+logical_operator: && [18179,18181]
+to
+binary_expression [18150,18224]
+at 1
+
+New cluster:
+MOVE from call_argument [19882,19895]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [14323,14336]
+to
+call_argument [19882,19895]
+at 0
+
+New cluster:
+MOVE from call_argument [15503,15548]
+------------
+===
+move-tree
+---
+identifier: listingId [15503,15512]
+to
+call_argument [15503,15548]
+at 0
+
+New cluster:
+UPDATE from internalListing.flags to MarketplaceLib.isFinalized
+------------
+===
+update-node
+---
+member_expression: internalListing.flags [19627,19648]
+replace internalListing.flags by MarketplaceLib.isFinalized
+
+New cluster:
+MOVE from call_expression [22461,22510]
+------------
+===
+move-tree
+---
+member_expression: internalListing.flags [19627,19648]
+to
+call_expression [22461,22510]
+at 0
+===
+move-tree
+---
+member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [19651,19685]
+to
+call_argument [22488,22509]
+at 0
+
+New cluster:
+===
+insert-node
+---
+primitive_type: bool [3981,3985]
+to
+tuple_expression [3863,3999]
+at 5
+------------
+===
+insert-node
+---
+primitive_type: bool [3981,3985]
+to
+tuple_expression [3863,3999]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [4995,5012]
+    type_name: bool [4995,4999]
+    identifier: acceptOffers [5000,5012]
+to
+variable_declaration_tuple [4659,5025]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5538,5550]
+    identifier: acceptOffers [5538,5550]
+to
+call_expression [5390,5508]
+at 7
+
+New cluster:
+MOVE from binary_expression [15757,15831]
+------------
+===
+move-tree
+---
+binary_expression [12676,12704]
+    member_expression: msg.sender [12676,12686]
+    comparison_operator: == [12687,12689]
+    member_expression: listing.seller [12690,12704]
+to
+binary_expression [15757,15831]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [15789,15831]
+    !: ! [15789,15790]
+    call_expression [15790,15831]
+        member_expression: MarketplaceLib.isFinalized [15790,15816]
+        call_argument [15817,15830]
+            member_expression: listing.flags [15817,15830]
+to
+binary_expression [15757,15831]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16580,16601]
+    payable_conversion_expression [16580,16601]
+        payable: payable [16580,16587]
+        call_argument [16588,16600]
+            array_access [16588,16600]
+                identifier: addresses [16588,16597]
+                number_literal: 0 [16598,16599]
+to
+call_expression [16552,16628]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16603,16613]
+    array_access [16603,16613]
+        identifier: amounts [16603,16610]
+        number_literal: 0 [16611,16612]
+to
+call_expression [16552,16628]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16615,16624]
+    identifier: maxAmount [16615,16624]
+to
+call_expression [16552,16628]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16626,16627]
+    number_literal: 0 [16626,16627]
+to
+call_expression [16552,16628]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [16885,16892]
+    variable_declaration [16885,16891]
+        type_name: uint [16885,16889]
+        identifier: i [16890,16891]
+to
+for_statement [16880,17057]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16893,16911]
+    binary_expression [16893,16910]
+        identifier: i [16893,16894]
+        comparison_operator: < [16895,16896]
+        identifier: addressLength [16897,16910]
+to
+for_statement [16880,17057]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17706,17713]
+    identifier: listing [17706,17713]
+to
+call_expression [17679,17754]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17715,17727]
+    identifier: offerAddress [17715,17727]
+to
+call_expression [17679,17754]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17732,17746]
+    identifier: expectedAmount [17732,17746]
+to
+call_expression [17679,17754]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17748,17753]
+    boolean_literal: false [17748,17753]
+to
+call_expression [17679,17754]
+at 5
+
+New cluster:
+MOVE from binary_expression [18150,18224]
+------------
+===
+move-tree
+---
+binary_expression [12470,12527]
+    parenthesized_expression [12470,12522]
+        binary_expression [12471,12521]
+            member_expression: listing.flags [12471,12484]
+            bitwise_operator: & [12485,12486]
+            member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [12487,12521]
+    comparison_operator: == [12523,12525]
+    number_literal: 0 [12526,12527]
+to
+binary_expression [18150,18224]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [18182,18224]
+    !: ! [18182,18183]
+    call_expression [18183,18224]
+        member_expression: MarketplaceLib.isFinalized [18183,18209]
+        call_argument [18210,18223]
+            member_expression: listing.flags [18210,18223]
+to
+binary_expression [18150,18224]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [19463,19500]
+to
+call_expression [13922,14003]
+at 1
+------------
+===
+insert-node
+---
+!: ! [19463,19464]
+to
+unary_expression [19463,19500]
+at 0
+===
+insert-node
+---
+unary_expression [19463,19500]
+to
+call_argument [19463,19500]
+at 0
+===
+insert-node
+---
+member_expression: MarketplaceLib.hasBid [19464,19485]
+to
+call_expression [19464,19500]
+at 0
+===
+insert-node
+---
+call_argument [19463,19500]
+to
+call_expression [13922,14003]
+at 1
+===
+insert-node
+---
+call_expression [19464,19500]
+to
+unary_expression [19463,19500]
+at 1
+
+New cluster:
+MOVE from call_argument [21056,21069]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [15981,15994]
+to
+call_argument [21056,21069]
+at 0
+
+New cluster:
+UPDATE from MarketplaceLib.FLAG_MASK_FINALIZED to internalListing.flags
+------------
+===
+update-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [19651,19685]
+replace MarketplaceLib.FLAG_MASK_FINALIZED by internalListing.flags
+
+New cluster:
+MOVE from call_argument [11665,11675]
+------------
+===
+move-tree
+---
+type_cast_expression [17284,17294]
+    primitive_type: address [17284,17291]
+    call_argument [17292,17293]
+        number_literal: 0 [17292,17293]
+to
+call_argument [11665,11675]
+at 0
+
+New cluster:
+MOVE from call_argument [11853,11863]
+------------
+===
+move-tree
+---
+type_cast_expression [14813,14823]
+    primitive_type: address [14813,14820]
+    call_argument [14821,14822]
+        number_literal: 0 [14821,14822]
+to
+call_argument [11853,11863]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [17025,17043]
+    unchecked: unchecked [17025,17034]
+    expression_statement [17037,17041]
+        update_expression [17037,17040]
+            increment_operator: ++ [17037,17039]
+            identifier: i [17039,17040]
+to
+block_statement [16913,17057]
+at 1
+
+New cluster:
+UPDATE from listing.flags to msg.sender
+------------
+===
+update-node
+---
+member_expression: listing.flags [12471,12484]
+replace listing.flags by msg.sender
+
+New cluster:
+MOVE from binary_expression [12470,12527]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [12471,12484]
+to
+binary_expression [12470,12527]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: listing.seller [18164,18178]
+to
+binary_expression [12470,12527]
+at 3
+------------
+===
+insert-node
+---
+member_expression: listing.seller [18164,18178]
+to
+binary_expression [12470,12527]
+at 3
+
+New cluster:
+MOVE from call_expression [19076,19117]
+------------
+===
+move-tree
+---
+call_argument [13527,13584]
+    binary_expression [13527,13584]
+        parenthesized_expression [13527,13579]
+            binary_expression [13528,13578]
+                member_expression: listing.flags [13528,13541]
+                bitwise_operator: & [13542,13543]
+                member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [13544,13578]
+        comparison_operator: == [13580,13582]
+        number_literal: 0 [13583,13584]
+to
+call_expression [19076,19117]
+at 1
+
+New cluster:
+===
+insert-node
+---
+primitive_type: bool [5218,5222]
+to
+tuple_expression [5045,5181]
+at 5
+------------
+===
+insert-node
+---
+primitive_type: bool [5218,5222]
+to
+tuple_expression [5045,5181]
+at 5
+
+New cluster:
+MOVE from call_argument [13527,13584]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [13528,13541]
+to
+call_argument [13527,13584]
+at 0
+
+New cluster:
+UPDATE from listingId to listingType
+------------
+===
+update-node
+---
+identifier: listingId [15629,15638]
+replace listingId by listingType
+
+New cluster:
+MOVE from call_argument [15657,15714]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [15658,15671]
+to
+call_argument [15657,15714]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16939,16948]
+    identifier: listingId [16939,16948]
+to
+call_expression [16931,17007]
+at 1
+
+New cluster:
+MOVE from call_expression [16931,17007]
+------------
+===
+move-tree
+---
+call_argument [14968,14975]
+    identifier: listing [14968,14975]
+to
+call_expression [16931,17007]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16959,16980]
+    payable_conversion_expression [16959,16980]
+        payable: payable [16959,16966]
+        call_argument [16967,16979]
+            array_access [16967,16979]
+                identifier: addresses [16967,16976]
+                identifier: i [16977,16978]
+to
+call_expression [16931,17007]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16982,16992]
+    array_access [16982,16992]
+        identifier: amounts [16982,16989]
+        identifier: i [16990,16991]
+to
+call_expression [16931,17007]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16994,17003]
+    identifier: maxAmount [16994,17003]
+to
+call_expression [16931,17007]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17005,17006]
+    identifier: i [17005,17006]
+to
+call_expression [16931,17007]
+at 6
+
+New cluster:
+MOVE from call_expression [19464,19500]
+------------
+===
+move-tree
+---
+call_argument [13930,13985]
+    binary_expression [13930,13985]
+        parenthesized_expression [13930,13980]
+            binary_expression [13931,13979]
+                member_expression: listing.flags [13931,13944]
+                bitwise_operator: & [13945,13946]
+                member_expression: MarketplaceLib.FLAG_MASK_HAS_BID [13947,13979]
+        comparison_operator: == [13981,13983]
+        number_literal: 0 [13984,13985]
+to
+call_expression [19464,19500]
+at 1
+
+New cluster:
+MOVE from call_argument [13930,13985]
+------------
+===
+move-tree
+---
+member_expression: listing.flags [13931,13944]
+to
+call_argument [13930,13985]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [469,500]
+    import: import [469,475]
+    string: "./libs/BidTreeLib.sol" [476,499]
+
+New cluster:
+===
+delete-node
+---
+abstract: abstract [502,510]
+===
+------------
+===
+delete-node
+---
+abstract: abstract [502,510]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: MarketplaceCore [520,535]
+===
+------------
+===
+delete-node
+---
+identifier: MarketplaceCore [520,535]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [536,538]
+===
+------------
+===
+delete-node
+---
+is: is [536,538]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+using_directive [633,673]
+    using: using [633,638]
+    type_alias [639,649]
+        identifier: BidTreeLib [639,649]
+    for: for [650,653]
+    type_name: BidTreeLib.BidTree [654,672]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [851,914]
+    type_name: mapping (uint40 => BidTreeLib.BidTree) [851,889]
+    visibility: private [890,897]
+    identifier: _listingBidTree [898,913]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [919,983]
+    type_name: mapping (uint40 => address[]) [919,948]
+    visibility: private [949,956]
+    identifier: _listingBidTreeFinalOrder [957,982]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7244,7301]
+    call_expression [7244,7300]
+        identifier: require [7244,7251]
+        call_argument [7252,7280]
+            binary_expression [7252,7280]
+                identifier: listingId [7252,7261]
+                comparison_operator: <= [7262,7264]
+                identifier: _listingCounter [7265,7280]
+        call_argument [7282,7299]
+            string_literal [7282,7299]
+                string: "Invalid listing" [7282,7299]
+
+New cluster:
+===
+delete-node
+---
+array_access [7351,7371]
+===
+------------
+===
+delete-node
+---
+array_access [7351,7371]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [9199,9273]
+    call_expression [9199,9272]
+        identifier: require [9199,9206]
+        call_argument [9207,9252]
+            binary_expression [9207,9252]
+                binary_expression [9207,9220]
+                    identifier: listingId [9207,9216]
+                    comparison_operator: > [9217,9218]
+                    number_literal: 0 [9219,9220]
+                logical_operator: && [9221,9223]
+                binary_expression [9224,9252]
+                    identifier: listingId [9224,9233]
+                    comparison_operator: <= [9234,9236]
+                    identifier: _listingCounter [9237,9252]
+        call_argument [9254,9271]
+            string_literal [9254,9271]
+                string: "Invalid listing" [9254,9271]
+
+New cluster:
+===
+delete-node
+---
+array_access [9323,9343]
+===
+------------
+===
+delete-node
+---
+array_access [9323,9343]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [9353,9440]
+    call_expression [9353,9439]
+        identifier: require [9353,9360]
+        call_argument [9361,9409]
+            unary_expression [9361,9409]
+                !: ! [9361,9362]
+                call_expression [9362,9409]
+                    member_expression: MarketplaceLib.isAuction [9362,9386]
+                    call_argument [9387,9408]
+                        member_expression: listing.details.type_ [9387,9408]
+        call_argument [9411,9438]
+            string_literal [9411,9438]
+                string: "Not available to purchase" [9411,9438]
+
+New cluster:
+===
+delete-node
+---
+function_definition [11296,12171]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [11508,11570]
+===
+===
+delete-node
+---
+function: function [11296,11304]
+===
+===
+delete-node
+---
+call_expression [12003,12098]
+===
+===
+delete-node
+---
+function_definition [11296,12171]
+===
+===
+delete-node
+---
+block_statement [11912,12109]
+===
+===
+delete-node
+---
+if_statement [11652,12165]
+===
+===
+delete-node
+---
+if: if [11850,11852]
+===
+===
+delete-node
+---
+if: if [11652,11654]
+===
+===
+delete-node
+---
+affectation_operator: = [11547,11548]
+===
+===
+delete-node
+---
+else: else [12110,12114]
+===
+===
+delete-node
+---
+visibility: private [11407,11414]
+===
+===
+delete-node
+---
+member_expression: listingType == MarketplaceLib.ListingType.INDIVIDUAL_AUCTION [11656,11716]
+===
+===
+delete-node
+---
+block_statement [11718,11844]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.performBidRanked [12003,12033]
+===
+===
+delete-node
+---
+identifier: _bid [11305,11309]
+===
+===
+delete-node
+---
+function_body [11415,12171]
+===
+===
+delete-node
+---
+if_statement [11850,12165]
+===
+===
+delete-node
+---
+else: else [11845,11849]
+===
+===
+delete-node
+---
+member_expression: listingType == MarketplaceLib.ListingType.RANKED_AUCTION [11854,11910]
+===
+===
+delete-node
+---
+expression_statement [12003,12099]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [11425,11499]
+    call_expression [11425,11498]
+        identifier: require [11425,11432]
+        call_argument [11433,11478]
+            binary_expression [11433,11478]
+                binary_expression [11433,11446]
+                    identifier: listingId [11433,11442]
+                    comparison_operator: > [11443,11444]
+                    number_literal: 0 [11445,11446]
+                logical_operator: && [11447,11449]
+                binary_expression [11450,11478]
+                    identifier: listingId [11450,11459]
+                    comparison_operator: <= [11460,11462]
+                    identifier: _listingCounter [11463,11478]
+        call_argument [11480,11497]
+            string_literal [11480,11497]
+                string: "Invalid listing" [11480,11497]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [11549,11569]
+    identifier: _listings [11549,11558]
+    identifier: listingId [11559,11568]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [11926,11990]
+    variable_declaration [11926,11960]
+        type_name: BidTreeLib.BidTree [11926,11944]
+        storage: storage [11945,11952]
+        identifier: bidTree [11953,11960]
+    affectation_operator: = [11961,11962]
+    array_access [11963,11989]
+        identifier: _listingBidTree [11963,11978]
+        identifier: listingId [11979,11988]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12054,12061]
+    identifier: bidTree [12054,12061]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12063,12072]
+    identifier: bidAmount [12063,12072]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12084,12091]
+    identifier: _escrow [12084,12091]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [12115,12165]
+    revert_statement [12129,12155]
+        revert: revert [12129,12135]
+        parenthesized_expression [12135,12154]
+            string_literal [12136,12153]
+                string: "Invalid listing" [12136,12153]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [12308,12382]
+    call_expression [12308,12381]
+        identifier: require [12308,12315]
+        call_argument [12316,12361]
+            binary_expression [12316,12361]
+                binary_expression [12316,12329]
+                    identifier: listingId [12316,12325]
+                    comparison_operator: > [12326,12327]
+                    number_literal: 0 [12328,12329]
+                logical_operator: && [12330,12332]
+                binary_expression [12333,12361]
+                    identifier: listingId [12333,12342]
+                    comparison_operator: <= [12343,12345]
+                    identifier: _listingCounter [12346,12361]
+        call_argument [12363,12380]
+            string_literal [12363,12380]
+                string: "Invalid listing" [12363,12380]
+
+New cluster:
+===
+delete-node
+---
+array_access [12432,12452]
+===
+------------
+===
+delete-node
+---
+array_access [12432,12452]
+===
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [12470,12522]
+===
+------------
+===
+delete-node
+---
+parenthesized_expression [12470,12522]
+===
+===
+delete-node
+---
+bitwise_operator: & [12485,12486]
+===
+===
+delete-node
+---
+binary_expression [12471,12521]
+===
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [12487,12521]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [12526,12527]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [12526,12527]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [12668,12727]
+===
+------------
+===
+delete-node
+---
+identifier: require [12668,12675]
+===
+===
+delete-node
+---
+expression_statement [12668,12727]
+===
+===
+delete-node
+---
+call_expression [12668,12726]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12706,12725]
+    string_literal [12706,12725]
+        string: "Permission denied" [12706,12725]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [13365,13439]
+    call_expression [13365,13438]
+        identifier: require [13365,13372]
+        call_argument [13373,13418]
+            binary_expression [13373,13418]
+                binary_expression [13373,13386]
+                    identifier: listingId [13373,13382]
+                    comparison_operator: > [13383,13384]
+                    number_literal: 0 [13385,13386]
+                logical_operator: && [13387,13389]
+                binary_expression [13390,13418]
+                    identifier: listingId [13390,13399]
+                    comparison_operator: <= [13400,13402]
+                    identifier: _listingCounter [13403,13418]
+        call_argument [13420,13437]
+            string_literal [13420,13437]
+                string: "Invalid listing" [13420,13437]
+
+New cluster:
+===
+delete-node
+---
+array_access [13489,13509]
+===
+------------
+===
+delete-node
+---
+array_access [13489,13509]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [13527,13584]
+===
+------------
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [13544,13578]
+===
+===
+delete-node
+---
+parenthesized_expression [13527,13579]
+===
+===
+delete-node
+---
+bitwise_operator: & [13542,13543]
+===
+===
+delete-node
+---
+binary_expression [13528,13578]
+===
+===
+delete-node
+---
+number_literal: 0 [13583,13584]
+===
+===
+delete-node
+---
+binary_expression [13527,13584]
+===
+===
+delete-node
+---
+comparison_operator: == [13580,13582]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [13930,13985]
+===
+------------
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_HAS_BID [13947,13979]
+===
+===
+delete-node
+---
+comparison_operator: == [13981,13983]
+===
+===
+delete-node
+---
+binary_expression [13931,13979]
+===
+===
+delete-node
+---
+bitwise_operator: & [13945,13946]
+===
+===
+delete-node
+---
+parenthesized_expression [13930,13980]
+===
+===
+delete-node
+---
+binary_expression [13930,13985]
+===
+===
+delete-node
+---
+number_literal: 0 [13984,13985]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [14322,14377]
+===
+------------
+===
+delete-node
+---
+bitwise_operator: & [14337,14338]
+===
+===
+delete-node
+---
+parenthesized_expression [14322,14372]
+===
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_HAS_BID [14339,14371]
+===
+===
+delete-node
+---
+comparison_operator: != [14373,14375]
+===
+===
+delete-node
+---
+binary_expression [14323,14371]
+===
+===
+delete-node
+---
+binary_expression [14322,14377]
+===
+===
+delete-node
+---
+number_literal: 0 [14376,14377]
+===
+
+New cluster:
+===
+delete-node
+---
+else: else [14570,14574]
+===
+------------
+===
+delete-node
+---
+else: else [14570,14574]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [14575,15082]
+===
+------------
+===
+delete-node
+---
+call_expression [14921,14998]
+===
+===
+delete-node
+---
+block_statement [14825,15068]
+===
+===
+delete-node
+---
+expression_statement [14921,14999]
+===
+===
+delete-node
+---
+block_statement [14647,15082]
+===
+===
+delete-node
+---
+identifier: bidder [14803,14809]
+===
+===
+delete-node
+---
+comparison_operator: != [14810,14812]
+===
+===
+delete-node
+---
+while_statement [14796,15068]
+===
+===
+delete-node
+---
+while: while [14796,14801]
+===
+===
+delete-node
+---
+if: if [14575,14577]
+===
+===
+delete-node
+---
+binary_expression [14803,14823]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.refundBid [14921,14944]
+===
+===
+delete-node
+---
+if_statement [14575,15082]
+===
+===
+delete-node
+---
+member_expression: listing.details.type_ == MarketplaceLib.ListingType.RANKED_AUCTION [14579,14645]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14665,14729]
+    variable_declaration [14665,14699]
+        type_name: BidTreeLib.BidTree [14665,14683]
+        storage: storage [14684,14691]
+        identifier: bidTree [14692,14699]
+    affectation_operator: = [14700,14701]
+    array_access [14702,14728]
+        identifier: _listingBidTree [14702,14717]
+        identifier: listingId [14718,14727]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14746,14779]
+    variable_declaration [14746,14760]
+        type_name: address [14746,14753]
+        identifier: bidder [14754,14760]
+    affectation_operator: = [14761,14762]
+    call_expression [14763,14778]
+        member_expression: bidTree.first [14763,14776]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14847,14900]
+    variable_declaration [14847,14874]
+        type_name: BidTreeLib.Bid [14847,14861]
+        storage: storage [14862,14869]
+        identifier: bid_ [14870,14874]
+    affectation_operator: = [14875,14876]
+    call_expression [14877,14899]
+        member_expression: bidTree.getBid [14877,14891]
+        call_argument [14892,14898]
+            identifier: bidder [14892,14898]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14945,14960]
+    payable_conversion_expression [14945,14960]
+        payable: payable [14945,14952]
+        call_argument [14953,14959]
+            identifier: bidder [14953,14959]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14962,14966]
+    identifier: bid_ [14962,14966]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14977,14988]
+    identifier: holdbackBPS [14977,14988]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14990,14997]
+    identifier: _escrow [14990,14997]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [15020,15050]
+    assignment_expression [15020,15049]
+        identifier: bidder [15020,15026]
+        affectation_operator: = [15027,15028]
+        call_expression [15029,15049]
+            member_expression: bidTree.next [15029,15041]
+            call_argument [15042,15048]
+                identifier: bidder [15042,15048]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [15503,15548]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [15515,15516]
+===
+===
+delete-node
+---
+logical_operator: && [15517,15519]
+===
+===
+delete-node
+---
+binary_expression [15503,15548]
+===
+===
+delete-node
+---
+comparison_operator: > [15513,15514]
+===
+===
+delete-node
+---
+binary_expression [15503,15516]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [15520,15548]
+    identifier: listingId [15520,15529]
+    comparison_operator: <= [15530,15532]
+    identifier: _listingCounter [15533,15548]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [15550,15567]
+    string_literal [15550,15567]
+        string: "Invalid listing" [15550,15567]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [15495,15569]
+===
+------------
+===
+delete-node
+---
+expression_statement [15495,15569]
+===
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [15578,15640]
+===
+------------
+===
+delete-node
+---
+array_access [15619,15639]
+===
+===
+delete-node
+---
+variable_declaration_statement [15578,15640]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [15657,15714]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [15713,15714]
+===
+===
+delete-node
+---
+binary_expression [15657,15714]
+===
+===
+delete-node
+---
+binary_expression [15658,15708]
+===
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [15674,15708]
+===
+===
+delete-node
+---
+bitwise_operator: & [15672,15673]
+===
+===
+delete-node
+---
+parenthesized_expression [15657,15709]
+===
+===
+delete-node
+---
+comparison_operator: == [15710,15712]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [15980,16035]
+===
+------------
+===
+delete-node
+---
+parenthesized_expression [15980,16030]
+===
+===
+delete-node
+---
+binary_expression [15981,16029]
+===
+===
+delete-node
+---
+member_expression: MarketplaceLib.FLAG_MASK_HAS_BID [15997,16029]
+===
+===
+delete-node
+---
+binary_expression [15980,16035]
+===
+===
+delete-node
+---
+bitwise_operator: & [15995,15996]
+===
+===
+delete-node
+---
+comparison_operator: == [16031,16033]
+===
+===
+delete-node
+---
+number_literal: 0 [16034,16035]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [16944,17583]
+===
+------------
+===
+delete-node
+---
+member_expression: listing.details.type_ == MarketplaceLib.ListingType.RANKED_AUCTION [16948,17014]
+===
+===
+delete-node
+---
+binary_expression [17277,17294]
+===
+===
+delete-node
+---
+while_statement [17270,17397]
+===
+===
+delete-node
+---
+while: while [17270,17275]
+===
+===
+delete-node
+---
+identifier: key [17277,17280]
+===
+===
+delete-node
+---
+block_statement [17016,17502]
+===
+===
+delete-node
+---
+if: if [16944,16946]
+===
+===
+delete-node
+---
+if_statement [16944,17583]
+===
+===
+delete-node
+---
+comparison_operator: != [17281,17283]
+===
+===
+delete-node
+---
+else: else [17503,17507]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [17062,17126]
+    variable_declaration [17062,17096]
+        type_name: BidTreeLib.BidTree [17062,17080]
+        storage: storage [17081,17088]
+        identifier: bidTree [17089,17096]
+    affectation_operator: = [17097,17098]
+    array_access [17099,17125]
+        identifier: _listingBidTree [17099,17114]
+        identifier: listingId [17115,17124]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [17139,17214]
+    variable_declaration [17139,17174]
+        type_name: address[] [17139,17148]
+        storage: storage [17149,17156]
+        identifier: bidTreeFinalOrder [17157,17174]
+    affectation_operator: = [17175,17176]
+    array_access [17177,17213]
+        identifier: _listingBidTreeFinalOrder [17177,17202]
+        identifier: listingId [17203,17212]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [17227,17257]
+    variable_declaration [17227,17238]
+        type_name: address [17227,17234]
+        identifier: key [17235,17238]
+    affectation_operator: = [17239,17240]
+    call_expression [17241,17256]
+        member_expression: bidTree.first [17241,17254]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [17296,17397]
+    expression_statement [17314,17342]
+        call_expression [17314,17341]
+            member_expression: bidTreeFinalOrder.push [17314,17336]
+            call_argument [17337,17340]
+                identifier: key [17337,17340]
+    expression_statement [17359,17383]
+        assignment_expression [17359,17382]
+            identifier: key [17359,17362]
+            affectation_operator: = [17363,17364]
+            call_expression [17365,17382]
+                member_expression: bidTree.next [17365,17377]
+                call_argument [17378,17381]
+                    identifier: key [17378,17381]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [17409,17492]
+    augmented_assignment_expression [17409,17491]
+        member_expression: listing.totalSold [17409,17426]
+        affectation_operator: += [17427,17429]
+        type_cast_expression [17430,17491]
+            primitive_type: uint24 [17430,17436]
+            call_argument [17437,17490]
+                member_expression: bidTreeFinalOrder.length*listing.details.totalPerSale [17437,17490]
+
+New cluster:
+===
+delete-node
+---
+function_definition [17708,19192]
+===
+------------
+===
+delete-node
+---
+block_statement [18957,19068]
+===
+===
+delete-node
+---
+expression_statement [17951,18037]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.refundTokens [18971,18997]
+===
+===
+delete-node
+---
+expression_statement [18539,18599]
+===
+===
+delete-node
+---
+expression_statement [19099,19186]
+===
+===
+delete-node
+---
+variable_declaration_statement [18720,18825]
+===
+===
+delete-node
+---
+variable_declaration_statement [17880,17942]
+===
+===
+delete-node
+---
+expression_statement [18971,19058]
+===
+===
+delete-node
+---
+function_definition [17708,19192]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.deliverTokenLazy [18743,18773]
+===
+===
+delete-node
+---
+identifier: require [18046,18053]
+===
+===
+delete-node
+---
+call_expression [17951,18036]
+===
+===
+delete-node
+---
+affectation_operator: = [17919,17920]
+===
+===
+delete-node
+---
+visibility: external [17761,17769]
+===
+===
+delete-node
+---
+function_body [17787,19192]
+===
+===
+delete-node
+---
+identifier: require [17951,17958]
+===
+===
+delete-node
+---
+call_expression [18046,18159]
+===
+===
+delete-node
+---
+affectation_operator: = [18741,18742]
+===
+===
+delete-node
+---
+call_expression [18743,18824]
+===
+===
+delete-node
+---
+if: if [18935,18937]
+===
+===
+delete-node
+---
+call_expression [19099,19185]
+===
+===
+delete-node
+---
+if_statement [18935,19068]
+===
+===
+delete-node
+---
+expression_statement [18834,18887]
+===
+===
+delete-node
+---
+function: function [17708,17716]
+===
+===
+delete-node
+---
+expression_statement [18046,18160]
+===
+===
+delete-node
+---
+call_expression [18834,18886]
+===
+===
+delete-node
+---
+identifier: require [18539,18546]
+===
+===
+delete-node
+---
+identifier: require [18834,18841]
+===
+===
+delete-node
+---
+call_expression [18971,19057]
+===
+===
+delete-node
+---
+call_expression [18539,18598]
+===
+===
+delete-node
+---
+identifier: deliver [17717,17724]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.settleBid [19099,19122]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [17743,17759]
+    type_name: uint256 [17743,17750]
+    identifier: bidIndex [17751,17759]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [17797,17871]
+    call_expression [17797,17870]
+        identifier: require [17797,17804]
+        call_argument [17805,17850]
+            binary_expression [17805,17850]
+                binary_expression [17805,17818]
+                    identifier: listingId [17805,17814]
+                    comparison_operator: > [17815,17816]
+                    number_literal: 0 [17817,17818]
+                logical_operator: && [17819,17821]
+                binary_expression [17822,17850]
+                    identifier: listingId [17822,17831]
+                    comparison_operator: <= [17832,17834]
+                    identifier: _listingCounter [17835,17850]
+        call_argument [17852,17869]
+            string_literal [17852,17869]
+                string: "Invalid listing" [17852,17869]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [17921,17941]
+    identifier: _listings [17921,17930]
+    identifier: listingId [17931,17940]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17959,18016]
+    binary_expression [17959,18016]
+        parenthesized_expression [17959,18011]
+            binary_expression [17960,18010]
+                member_expression: listing.flags [17960,17973]
+                bitwise_operator: & [17974,17975]
+                member_expression: MarketplaceLib.FLAG_MASK_FINALIZED [17976,18010]
+        comparison_operator: != [18012,18014]
+        number_literal: 0 [18015,18016]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18054,18142]
+    member_expression: listing.token.lazy && listing.details.type_ == MarketplaceLib.ListingType.RANKED_AUCTION [18054,18142]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [18170,18234]
+    variable_declaration [18170,18204]
+        type_name: BidTreeLib.BidTree [18170,18188]
+        storage: storage [18189,18196]
+        identifier: bidTree [18197,18204]
+    affectation_operator: = [18205,18206]
+    array_access [18207,18233]
+        identifier: _listingBidTree [18207,18222]
+        identifier: listingId [18223,18232]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [18244,18293]
+    call_expression [18244,18292]
+        identifier: require [18244,18251]
+        call_argument [18252,18275]
+            binary_expression [18252,18275]
+                identifier: bidIndex [18252,18260]
+                comparison_operator: < [18261,18262]
+                member_expression: bidTree.size [18263,18275]
+        call_argument [18277,18291]
+            string_literal [18277,18291]
+                string: "Out of range" [18277,18291]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [18302,18332]
+    variable_declaration [18302,18313]
+        type_name: address [18302,18309]
+        identifier: key [18310,18313]
+    affectation_operator: = [18314,18315]
+    call_expression [18316,18331]
+        member_expression: bidTree.first [18316,18329]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [18341,18362]
+    variable_declaration [18341,18357]
+        type_name: uint256 [18341,18348]
+        identifier: keyIndex [18349,18357]
+    affectation_operator: = [18358,18359]
+    number_literal: 0 [18360,18361]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+while_statement [18371,18471]
+    while: while [18371,18376]
+    binary_expression [18378,18397]
+        identifier: keyIndex [18378,18386]
+        comparison_operator: < [18387,18388]
+        identifier: bidIndex [18389,18397]
+    block_statement [18399,18471]
+        expression_statement [18413,18437]
+            assignment_expression [18413,18436]
+                identifier: key [18413,18416]
+                affectation_operator: = [18417,18418]
+                call_expression [18419,18436]
+                    member_expression: bidTree.next [18419,18431]
+                    call_argument [18432,18435]
+                        identifier: key [18432,18435]
+        expression_statement [18450,18461]
+            update_expression [18450,18460]
+                identifier: keyIndex [18450,18458]
+                increment_operator: ++ [18458,18460]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [18480,18530]
+    variable_declaration [18480,18507]
+        type_name: BidTreeLib.Bid [18480,18494]
+        storage: storage [18495,18502]
+        identifier: bid_ [18503,18507]
+    affectation_operator: = [18508,18509]
+    call_expression [18510,18529]
+        member_expression: bidTree.getBid [18510,18524]
+        call_argument [18525,18528]
+            identifier: key [18525,18528]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18547,18580]
+    binary_expression [18547,18580]
+        unary_expression [18547,18561]
+            !: ! [18547,18548]
+            member_expression: bid_.refunded [18548,18561]
+        logical_operator: && [18562,18564]
+        unary_expression [18565,18580]
+            !: ! [18565,18566]
+            member_expression: bid_.delivered [18566,18580]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [18664,18686]
+    assignment_expression [18664,18685]
+        member_expression: bid_.delivered [18664,18678]
+        affectation_operator: = [18679,18680]
+        boolean_literal: true [18681,18685]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [18720,18740]
+    type_name: uint256 [18720,18727]
+    identifier: refundAmount [18728,18740]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18794,18797]
+    identifier: key [18794,18797]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18802,18813]
+    member_expression: bid_.amount [18802,18813]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18815,18823]
+    identifier: bidIndex [18815,18823]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18842,18868]
+    binary_expression [18842,18868]
+        identifier: refundAmount [18842,18854]
+        comparison_operator: < [18855,18856]
+        member_expression: bid_.amount [18857,18868]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [18939,18955]
+    identifier: refundAmount [18939,18951]
+    comparison_operator: > [18952,18953]
+    number_literal: 0 [18954,18955]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18998,19019]
+    member_expression: listing.details.erc20 [18998,19019]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19021,19033]
+    payable_conversion_expression [19021,19033]
+        payable: payable [19021,19028]
+        call_argument [19029,19032]
+            identifier: key [19029,19032]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19035,19047]
+    identifier: refundAmount [19035,19047]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19141,19145]
+    identifier: bid_ [19141,19145]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19156,19168]
+    identifier: refundAmount [19156,19168]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [19364,19438]
+    call_expression [19364,19437]
+        identifier: require [19364,19371]
+        call_argument [19372,19417]
+            binary_expression [19372,19417]
+                binary_expression [19372,19385]
+                    identifier: listingId [19372,19381]
+                    comparison_operator: > [19382,19383]
+                    number_literal: 0 [19384,19385]
+                logical_operator: && [19386,19388]
+                binary_expression [19389,19417]
+                    identifier: listingId [19389,19398]
+                    comparison_operator: <= [19399,19401]
+                    identifier: _listingCounter [19402,19417]
+        call_argument [19419,19436]
+            string_literal [19419,19436]
+                string: "Invalid listing" [19419,19436]
+
+New cluster:
+===
+delete-node
+---
+memory: memory [19470,19476]
+===
+------------
+===
+delete-node
+---
+memory: memory [19470,19476]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [19495,19515]
+===
+------------
+===
+delete-node
+---
+array_access [19495,19515]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [19626,19691]
+===
+------------
+===
+delete-node
+---
+binary_expression [19627,19685]
+===
+===
+delete-node
+---
+number_literal: 0 [19690,19691]
+===
+===
+delete-node
+---
+parenthesized_expression [19626,19686]
+===
+===
+delete-node
+---
+comparison_operator: != [19687,19689]
+===
+===
+delete-node
+---
+binary_expression [19626,19691]
+===
+===
+delete-node
+---
+bitwise_operator: & [19649,19650]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [20199,20537]
+===
+------------
+===
+delete-node
+---
+function: function [20199,20207]
+===
+===
+delete-node
+---
+function_body [20289,20537]
+===
+===
+delete-node
+---
+affectation_operator: = [20421,20422]
+===
+===
+delete-node
+---
+return: return [20453,20459]
+===
+===
+delete-node
+---
+call_expression [20460,20530]
+===
+===
+delete-node
+---
+variable_declaration_statement [20382,20444]
+===
+===
+delete-node
+---
+member_expression: SettlementLib.computeListingPrice [20460,20493]
+===
+===
+delete-node
+---
+function_definition [20199,20537]
+===
+===
+delete-node
+---
+identifier: getListingCurrentPrice [20208,20230]
+===
+===
+delete-node
+---
+visibility: external [20249,20257]
+===
+===
+delete-node
+---
+return_statement [20453,20531]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [20299,20373]
+    call_expression [20299,20372]
+        identifier: require [20299,20306]
+        call_argument [20307,20352]
+            binary_expression [20307,20352]
+                binary_expression [20307,20320]
+                    identifier: listingId [20307,20316]
+                    comparison_operator: > [20317,20318]
+                    number_literal: 0 [20319,20320]
+                logical_operator: && [20321,20323]
+                binary_expression [20324,20352]
+                    identifier: listingId [20324,20333]
+                    comparison_operator: <= [20334,20336]
+                    identifier: _listingCounter [20337,20352]
+        call_argument [20354,20371]
+            string_literal [20354,20371]
+                string: "Invalid listing" [20354,20371]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [20423,20443]
+    identifier: _listings [20423,20432]
+    identifier: listingId [20433,20442]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20503,20529]
+    array_access [20503,20529]
+        identifier: _listingBidTree [20503,20518]
+        identifier: listingId [20519,20528]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [20728,20802]
+    call_expression [20728,20801]
+        identifier: require [20728,20735]
+        call_argument [20736,20781]
+            binary_expression [20736,20781]
+                binary_expression [20736,20749]
+                    identifier: listingId [20736,20745]
+                    comparison_operator: > [20746,20747]
+                    number_literal: 0 [20748,20749]
+                logical_operator: && [20750,20752]
+                binary_expression [20753,20781]
+                    identifier: listingId [20753,20762]
+                    comparison_operator: <= [20763,20765]
+                    identifier: _listingCounter [20766,20781]
+        call_argument [20783,20800]
+            string_literal [20783,20800]
+                string: "Invalid listing" [20783,20800]
+
+New cluster:
+===
+delete-node
+---
+array_access [20852,20872]
+===
+------------
+===
+delete-node
+---
+array_access [20852,20872]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [21134,21208]
+    call_expression [21134,21207]
+        identifier: require [21134,21141]
+        call_argument [21142,21187]
+            binary_expression [21142,21187]
+                binary_expression [21142,21155]
+                    identifier: listingId [21142,21151]
+                    comparison_operator: > [21152,21153]
+                    number_literal: 0 [21154,21155]
+                logical_operator: && [21156,21158]
+                binary_expression [21159,21187]
+                    identifier: listingId [21159,21168]
+                    comparison_operator: <= [21169,21171]
+                    identifier: _listingCounter [21172,21187]
+        call_argument [21189,21206]
+            string_literal [21189,21206]
+                string: "Invalid listing" [21189,21206]
+
+New cluster:
+===
+delete-node
+---
+array_access [21258,21278]
+===
+------------
+===
+delete-node
+---
+array_access [21258,21278]
+===
+
+New cluster:
+===
+delete-node
+---
+virtual: virtual [21464,21471]
+===
+------------
+===
+delete-node
+---
+virtual: virtual [21464,21471]
+===
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [21616,21678]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [21616,21678]
+===
+===
+delete-node
+---
+affectation_operator: = [21655,21656]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [21694,21780]
+===
+------------
+===
+delete-node
+---
+member_expression: MarketplaceLib.getBids [21694,21716]
+===
+===
+delete-node
+---
+call_expression [21694,21780]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [21737,21752]
+    identifier: _listingBidTree [21737,21752]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [21754,21779]
+    identifier: _listingBidTreeFinalOrder [21754,21779]
+

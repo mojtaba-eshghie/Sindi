@@ -1,0 +1,5 @@
+results/differencing_results/0xe5862651a033cddcb8f3b4af9c063db2baec39d0_LendingPair.sol___0xe5b0974a457698b171e5541378dbec55e0e2ee62_LendingPair.sol.log:
+  178  identifier: require [27630,27637]
+  179: replace require by accountDebt
+  180  
+

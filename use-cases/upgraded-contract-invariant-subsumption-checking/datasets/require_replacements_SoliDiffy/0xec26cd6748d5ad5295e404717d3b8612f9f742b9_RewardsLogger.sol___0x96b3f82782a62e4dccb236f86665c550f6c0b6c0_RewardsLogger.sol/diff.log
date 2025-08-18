@@ -1,0 +1,67 @@
+New cluster:
+===
+insert-node
+---
+modifier_invocation [28485,28496]
+to
+function_definition [28258,28818]
+at 10
+------------
+===
+insert-node
+---
+modifier_invocation [28485,28496]
+to
+function_definition [28258,28818]
+at 10
+
+New cluster:
+UPDATE from require to onlyManager
+------------
+===
+update-node
+---
+identifier: require [28496,28503]
+replace require by onlyManager
+
+New cluster:
+MOVE from modifier_invocation [28485,28496]
+------------
+===
+move-tree
+---
+identifier: require [28496,28503]
+to
+modifier_invocation [28485,28496]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [28504,28560]
+    binary_expression [28504,28560]
+        member_expression: msg.sender [28504,28514]
+        comparison_operator: == [28515,28517]
+        number_literal: 0xDA25ee226E534d868f0Dd8a459536b03fEE9079b [28518,28560]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [28496,28562]
+===
+------------
+===
+delete-node
+---
+expression_statement [28496,28562]
+===
+===
+delete-node
+---
+call_expression [28496,28561]
+===
+

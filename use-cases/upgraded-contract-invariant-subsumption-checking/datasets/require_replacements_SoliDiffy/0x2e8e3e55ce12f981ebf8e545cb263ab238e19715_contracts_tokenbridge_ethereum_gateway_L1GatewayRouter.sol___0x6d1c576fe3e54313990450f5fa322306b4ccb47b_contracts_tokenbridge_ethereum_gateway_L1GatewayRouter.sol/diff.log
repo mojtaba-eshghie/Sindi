@@ -1,0 +1,1187 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [932,968]
+    import: import [932,938]
+    string: "../../libraries/ERC165.sol" [939,967]
+to
+source_file [0,8904]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [969,1001]
+    import: import [969,975]
+    string: "./IL1GatewayRouter.sol" [976,1000]
+to
+source_file [0,8904]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [1002,1036]
+    import: import [1002,1008]
+    string: "./IL1ArbitrumGateway.sol" [1009,1035]
+to
+source_file [0,8904]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [1373,1379]
+    user_defined_type [1373,1379]
+        identifier: ERC165 [1373,1379]
+to
+contract_declaration [1169,8903]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [1385,1401]
+    user_defined_type [1385,1401]
+        identifier: IL1GatewayRouter [1385,1401]
+to
+contract_declaration [1169,8903]
+at 6
+
+New cluster:
+===
+insert-node
+---
+function_definition [7931,8712]
+to
+contract_body [1251,8903]
+at 10
+------------
+===
+insert-node
+---
+function: function [7931,7939]
+to
+function_definition [7931,8712]
+at 0
+===
+insert-node
+---
+expression_statement [8619,8706]
+to
+function_body [8069,8712]
+at 2
+===
+insert-node
+---
+call_expression [8555,8609]
+to
+expression_statement [8555,8610]
+at 0
+===
+insert-node
+---
+visibility: internal [8055,8063]
+to
+function_definition [7931,8712]
+at 5
+===
+insert-node
+---
+variable_declaration_statement [8358,8416]
+to
+function_body [8069,8712]
+at 0
+===
+insert-node
+---
+member_expression: msg.value [8627,8636]
+to
+binary_expression [8627,8685]
+at 0
+===
+insert-node
+---
+identifier: _outboundTransferChecks [7940,7963]
+to
+function_definition [7931,8712]
+at 1
+===
+insert-node
+---
+identifier: require [8555,8562]
+to
+call_expression [8555,8609]
+at 0
+===
+insert-node
+---
+affectation_operator: = [8385,8386]
+to
+variable_declaration_statement [8358,8416]
+at 1
+===
+insert-node
+---
+identifier: require [8619,8626]
+to
+call_expression [8619,8705]
+at 0
+===
+insert-node
+---
+comparison_operator: == [8637,8639]
+to
+binary_expression [8627,8685]
+at 1
+===
+insert-node
+---
+call_argument [8627,8685]
+to
+call_expression [8619,8705]
+at 1
+===
+insert-node
+---
+function_definition [7931,8712]
+to
+contract_body [1251,8903]
+at 10
+===
+insert-node
+---
+function_body [8069,8712]
+to
+function_definition [7931,8712]
+at 7
+===
+insert-node
+---
+expression_statement [8555,8610]
+to
+function_body [8069,8712]
+at 1
+===
+insert-node
+---
+binary_expression [8627,8685]
+to
+call_argument [8627,8685]
+at 0
+===
+insert-node
+---
+call_expression [8619,8705]
+to
+expression_statement [8619,8706]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [10451,11404]
+to
+contract_body [1251,8903]
+at 12
+------------
+===
+insert-node
+---
+emit_statement [10918,10972]
+to
+function_body [10724,11404]
+at 2
+===
+insert-node
+---
+call_argument [10958,10961]
+to
+emit_statement [10918,10972]
+at 3
+===
+insert-node
+---
+visibility: public [10677,10683]
+to
+function_definition [10451,11404]
+at 9
+===
+insert-node
+---
+function: function [10451,10459]
+to
+function_definition [10451,11404]
+at 0
+===
+insert-node
+---
+function_body [10724,11404]
+to
+function_definition [10451,11404]
+at 13
+===
+insert-node
+---
+function_definition [10451,11404]
+to
+contract_body [1251,8903]
+at 12
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [11569,12024]
+    function: function [11569,11577]
+    identifier: supportsInterface [11578,11595]
+    parameter [11596,11614]
+        type_name: bytes4 [11596,11602]
+        identifier: interfaceId [11603,11614]
+    visibility: public [11624,11630]
+    state_mutability [11639,11643]
+        view: view [11639,11643]
+    override_specifier [11652,11677]
+        override: override [11652,11660]
+        user_defined_type [11661,11667]
+            identifier: ERC165 [11661,11667]
+        user_defined_type [11669,11676]
+            identifier: IERC165 [11669,11676]
+    return_type_definition [11686,11700]
+        returns: returns [11686,11693]
+        parameter [11695,11699]
+            type_name: bool [11695,11699]
+    function_body [11705,12024]
+        return_statement [11889,12018]
+            return: return [11889,11895]
+            binary_expression [11908,12017]
+                member_expression: interfaceId == this.outboundTransferCustomRefund.selector [11908,11965]
+                logical_operator: || [11966,11968]
+                call_expression [11981,12017]
+                    member_expression: super.supportsInterface [11981,12004]
+                    call_argument [12005,12016]
+                        identifier: interfaceId [12005,12016]
+to
+contract_body [1251,8903]
+at 14
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [1423,1431]
+    override: override [1423,1431]
+to
+state_variable_declaration [1257,1278]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [1458,1466]
+    override: override [1458,1466]
+to
+state_variable_declaration [1283,1304]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [5635,5643]
+    override: override [5635,5643]
+to
+function_definition [5291,5568]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [6421,6429]
+    override: override [6421,6429]
+to
+function_definition [6028,7204]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7973,7988]
+    type_name: uint256 [7973,7980]
+    identifier: _maxGas [7981,7988]
+to
+function_definition [7931,8712]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7998,8018]
+    type_name: uint256 [7998,8005]
+    identifier: _gasPriceBid [8006,8018]
+to
+function_definition [7931,8712]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [8028,8048]
+    type_name: bytes [8028,8033]
+    calldata: calldata [8034,8042]
+    identifier: _data [8043,8048]
+to
+function_definition [7931,8712]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [8064,8068]
+    view: view [8064,8068]
+to
+function_definition [7931,8712]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [8920,8958]
+    override: override [8920,8928]
+    user_defined_type [8929,8942]
+        identifier: GatewayRouter [8929,8942]
+    user_defined_type [8944,8957]
+        identifier: ITokenGateway [8944,8957]
+to
+function_definition [7723,8742]
+at 10
+
+New cluster:
+UPDATE from onlyWhitelisted to outboundTransferCustomRefund
+------------
+===
+update-node
+---
+identifier: onlyWhitelisted [7934,7949]
+replace onlyWhitelisted by outboundTransferCustomRefund
+
+New cluster:
+MOVE from function_definition [10451,11404]
+------------
+===
+move-tree
+---
+identifier: onlyWhitelisted [7934,7949]
+to
+function_definition [10451,11404]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10498,10512]
+    type_name: address [10498,10505]
+    identifier: _token [10506,10512]
+to
+function_definition [10451,11404]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10522,10539]
+    type_name: address [10522,10529]
+    identifier: _refundTo [10530,10539]
+to
+function_definition [10451,11404]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10549,10560]
+    type_name: address [10549,10556]
+    identifier: _to [10557,10560]
+to
+function_definition [10451,11404]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10570,10585]
+    type_name: uint256 [10570,10577]
+    identifier: _amount [10578,10585]
+to
+function_definition [10451,11404]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10595,10610]
+    type_name: uint256 [10595,10602]
+    identifier: _maxGas [10603,10610]
+to
+function_definition [10451,11404]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10620,10640]
+    type_name: uint256 [10620,10627]
+    identifier: _gasPriceBid [10628,10640]
+to
+function_definition [10451,11404]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [10650,10670]
+    type_name: bytes [10650,10655]
+    calldata: calldata [10656,10664]
+    identifier: _data [10665,10670]
+to
+function_definition [10451,11404]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [10684,10691]
+    payable: payable [10684,10691]
+to
+function_definition [10451,11404]
+at 10
+
+New cluster:
+MOVE from function_definition [10451,11404]
+------------
+===
+move-tree
+---
+override_specifier [7925,7933]
+    override: override [7925,7933]
+to
+function_definition [10451,11404]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [10701,10723]
+    returns: returns [10701,10708]
+    parameter [10710,10722]
+        type_name: bytes [10710,10715]
+        memory: memory [10716,10722]
+to
+function_definition [10451,11404]
+at 12
+
+New cluster:
+===
+insert-node
+---
+expression_statement [8992,9046]
+to
+function_body [7973,8742]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [8992,9046]
+to
+function_body [7973,8742]
+at 0
+===
+insert-node
+---
+identifier: _outboundTransferChecks [8992,9015]
+to
+call_expression [8992,9045]
+at 0
+===
+insert-node
+---
+call_expression [8992,9045]
+to
+expression_statement [8992,9046]
+at 0
+
+New cluster:
+MOVE from function_body [10724,11404]
+------------
+===
+move-tree
+---
+variable_declaration_statement [8395,8463]
+    variable_declaration [8395,8414]
+        type_name: uint256 [8395,8402]
+        identifier: expectedEth [8403,8414]
+    affectation_operator: = [8415,8416]
+    binary_expression [8417,8462]
+        identifier: _maxSubmissionCost [8417,8435]
+        arithmetic_operator: + [8436,8437]
+        parenthesized_expression [8438,8462]
+            binary_expression [8439,8461]
+                identifier: _maxGas [8439,8446]
+                arithmetic_operator: * [8447,8448]
+                identifier: _gasPriceBid [8449,8461]
+to
+function_body [10724,11404]
+at 1
+===
+move-tree
+---
+variable_declaration_statement [8187,8256]
+    variable_declaration_tuple [8187,8217]
+        variable_declaration [8188,8214]
+            type_name: uint256 [8188,8195]
+            identifier: _maxSubmissionCost [8196,8214]
+    affectation_operator: = [8218,8219]
+    call_expression [8220,8255]
+        member_expression: abi.decode [8220,8230]
+        call_argument [8231,8236]
+            identifier: _data [8231,8236]
+        call_argument [8238,8254]
+            tuple_expression [8238,8254]
+                primitive_type: uint256 [8239,8246]
+                primitive_type: bytes [8248,8253]
+to
+function_body [10724,11404]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [11107,11398]
+    return: return [11107,11113]
+    call_expression [11126,11397]
+        struct_expression [11126,11202]
+            member_expression: IL1ArbitrumGateway(gateway).outboundTransferCustomRefund [11126,11182]
+            struct_field_assignment [11184,11200]
+                identifier: value [11184,11189]
+                :: : [11189,11190]
+                member_expression: msg.value [11191,11200]
+        call_argument [11220,11226]
+            identifier: _token [11220,11226]
+        call_argument [11244,11253]
+            identifier: _refundTo [11244,11253]
+        call_argument [11271,11274]
+            identifier: _to [11271,11274]
+        call_argument [11292,11299]
+            identifier: _amount [11292,11299]
+        call_argument [11317,11324]
+            identifier: _maxGas [11317,11324]
+        call_argument [11342,11354]
+            identifier: _gasPriceBid [11342,11354]
+        call_argument [11372,11383]
+            identifier: gatewayData [11372,11383]
+to
+function_body [10724,11404]
+at 3
+
+New cluster:
+MOVE from variable_declaration_statement [8358,8416]
+------------
+===
+move-tree
+---
+variable_declaration [8188,8214]
+    type_name: uint256 [8188,8195]
+    identifier: _maxSubmissionCost [8196,8214]
+to
+variable_declaration_statement [8358,8416]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [8387,8415]
+    member_expression: abi.decode [8387,8397]
+    call_argument [8398,8403]
+        identifier: _data [8398,8403]
+    call_argument [8405,8414]
+        parenthesized_expression [8405,8414]
+            primitive_type: uint256 [8406,8413]
+to
+variable_declaration_statement [8358,8416]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [10734,10749]
+    type_name: address [10734,10741]
+    identifier: gateway [10742,10749]
+to
+variable_declaration_statement [8187,8256]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [10807,10907]
+to
+variable_declaration_statement [8395,8463]
+at 2
+------------
+===
+insert-node
+---
+call_expression [10807,10907]
+to
+variable_declaration_statement [8395,8463]
+at 2
+===
+insert-node
+---
+member_expression: GatewayMessageHandler.encodeFromRouterToGateway [10807,10854]
+to
+call_expression [10807,10907]
+at 0
+
+New cluster:
+UPDATE from require to TransferRouted
+------------
+===
+update-node
+---
+identifier: require [8472,8479]
+replace require by TransferRouted
+
+New cluster:
+MOVE from call_expression [8992,9045]
+------------
+===
+move-tree
+---
+call_argument [8480,8502]
+    binary_expression [8480,8502]
+        identifier: _maxSubmissionCost [8480,8498]
+        comparison_operator: > [8499,8500]
+        number_literal: 0 [8501,8502]
+to
+call_expression [8992,9045]
+at 3
+===
+move-tree
+---
+identifier: require [8472,8479]
+to
+emit_statement [10918,10972]
+at 0
+===
+move-tree
+---
+call_argument [8504,8524]
+    string_literal [8504,8524]
+        string: "NO_SUBMISSION_COST" [8504,8524]
+to
+call_expression [8555,8609]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10938,10944]
+    identifier: _token [10938,10944]
+to
+emit_statement [10918,10972]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10946,10956]
+    member_expression: msg.sender [10946,10956]
+to
+emit_statement [10918,10972]
+at 2
+
+New cluster:
+MOVE from emit_statement [10918,10972]
+------------
+===
+move-tree
+---
+call_argument [8543,8567]
+    binary_expression [8543,8567]
+        member_expression: msg.value [8543,8552]
+        comparison_operator: == [8553,8555]
+        identifier: expectedEth [8556,8567]
+to
+emit_statement [10918,10972]
+at 4
+===
+move-tree
+---
+identifier: require [8535,8542]
+to
+call_argument [10958,10961]
+at 0
+===
+move-tree
+---
+call_argument [8569,8586]
+    string_literal [8569,8586]
+        string: "WRONG_ETH_VALUE" [8569,8586]
+to
+call_expression [8619,8705]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_cast_expression [1923,1933]
+    primitive_type: address [1923,1930]
+    call_argument [1931,1932]
+        number_literal: 0 [1931,1932]
+to
+assignment_expression [1705,1745]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [8563,8586]
+    binary_expression [8563,8586]
+        identifier: _maxSubmissionCost [8563,8581]
+        comparison_operator: != [8582,8584]
+        number_literal: 0 [8585,8586]
+to
+call_expression [8555,8609]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [9016,9023]
+    identifier: _maxGas [9016,9023]
+to
+call_expression [8992,9045]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [9025,9037]
+    identifier: _gasPriceBid [9025,9037]
+to
+call_expression [8992,9045]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: getGateway [10752,10762]
+to
+call_expression [8220,8255]
+at 0
+------------
+===
+insert-node
+---
+identifier: getGateway [10752,10762]
+to
+call_expression [8220,8255]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10763,10769]
+    identifier: _token [10763,10769]
+to
+call_expression [8220,8255]
+at 1
+
+New cluster:
+UPDATE from uint256 to bytes
+------------
+===
+update-node
+---
+type_name: uint256 [8395,8402]
+replace uint256 by bytes
+
+New cluster:
+===
+insert-node
+---
+memory: memory [10786,10792]
+to
+variable_declaration [8395,8414]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [10786,10792]
+to
+variable_declaration [8395,8414]
+at 1
+
+New cluster:
+UPDATE from expectedEth to gatewayData
+------------
+===
+update-node
+---
+identifier: expectedEth [8403,8414]
+replace expectedEth by gatewayData
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10868,10878]
+    member_expression: msg.sender [10868,10878]
+to
+call_expression [10807,10907]
+at 1
+
+New cluster:
+MOVE from call_expression [10807,10907]
+------------
+===
+move-tree
+---
+call_argument [8231,8236]
+    identifier: _data [8231,8236]
+to
+call_expression [10807,10907]
+at 2
+
+New cluster:
+UPDATE from require to _to
+------------
+===
+update-node
+---
+identifier: require [8535,8542]
+replace require by _to
+
+New cluster:
+UPDATE from expectedEth to gateway
+------------
+===
+update-node
+---
+identifier: expectedEth [8556,8567]
+replace expectedEth by gateway
+
+New cluster:
+MOVE from call_argument [8543,8567]
+------------
+===
+move-tree
+---
+identifier: expectedEth [8556,8567]
+to
+call_argument [8543,8567]
+at 0
+
+New cluster:
+UPDATE from _maxSubmissionCost to _data
+------------
+===
+update-node
+---
+identifier: _maxSubmissionCost [8480,8498]
+replace _maxSubmissionCost by _data
+
+New cluster:
+MOVE from call_argument [8480,8502]
+------------
+===
+move-tree
+---
+identifier: _maxSubmissionCost [8480,8498]
+to
+call_argument [8480,8502]
+at 0
+
+New cluster:
+MOVE from binary_expression [8627,8685]
+------------
+===
+move-tree
+---
+binary_expression [8417,8462]
+    identifier: _maxSubmissionCost [8417,8435]
+    arithmetic_operator: + [8436,8437]
+    parenthesized_expression [8438,8462]
+        binary_expression [8439,8461]
+            identifier: _maxGas [8439,8446]
+            arithmetic_operator: * [8447,8448]
+            identifier: _gasPriceBid [8449,8461]
+to
+binary_expression [8627,8685]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: _whitelist [1501,1511]
+===
+------------
+===
+delete-node
+---
+identifier: _whitelist [1501,1511]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: _whitelist [1735,1745]
+===
+------------
+===
+delete-node
+---
+identifier: _whitelist [1735,1745]
+===
+
+New cluster:
+===
+delete-node
+---
+modifier_invocation [7934,7949]
+===
+------------
+===
+delete-node
+---
+modifier_invocation [7934,7949]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [8480,8502]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [8501,8502]
+===
+===
+delete-node
+---
+binary_expression [8480,8502]
+===
+===
+delete-node
+---
+comparison_operator: > [8499,8500]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8472,8526]
+===
+------------
+===
+delete-node
+---
+call_expression [8472,8525]
+===
+===
+delete-node
+---
+expression_statement [8472,8526]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8535,8588]
+===
+------------
+===
+delete-node
+---
+call_expression [8535,8587]
+===
+===
+delete-node
+---
+expression_statement [8535,8588]
+===
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_tuple [8187,8217]
+===
+------------
+===
+delete-node
+---
+variable_declaration_tuple [8187,8217]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: abi.decode [8220,8230]
+===
+------------
+===
+delete-node
+---
+member_expression: abi.decode [8220,8230]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8238,8254]
+    tuple_expression [8238,8254]
+        primitive_type: uint256 [8239,8246]
+        primitive_type: bytes [8248,8253]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [8543,8567]
+===
+------------
+===
+delete-node
+---
+comparison_operator: == [8553,8555]
+===
+===
+delete-node
+---
+member_expression: msg.value [8543,8552]
+===
+===
+delete-node
+---
+binary_expression [8543,8567]
+===
+

@@ -1,0 +1,9 @@
+results/differencing_results/0xf09343db701446df0ce6d3b63b6370a64e9ce238_contracts_BAGC.sol___0xcbb2058683d56cc3d512573bc564de69248c0fbd_contracts_BAGC.sol.log:
+  1434  identifier: require [5216,5223]
+  1435: replace require by poolInfo
+  1436  
+
+  1581  identifier: require [5284,5291]
+  1582: replace require by BAGC_Pool_Not_Exist
+  1583  
+

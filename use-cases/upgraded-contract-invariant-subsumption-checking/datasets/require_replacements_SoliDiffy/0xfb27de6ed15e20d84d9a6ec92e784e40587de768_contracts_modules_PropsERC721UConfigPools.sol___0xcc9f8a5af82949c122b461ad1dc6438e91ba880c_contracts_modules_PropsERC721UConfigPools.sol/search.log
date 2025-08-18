@@ -1,0 +1,5 @@
+results/differencing_results/0xfb27de6ed15e20d84d9a6ec92e784e40587de768_contracts_modules_PropsERC721UConfigPools.sol___0xcc9f8a5af82949c122b461ad1dc6438e91ba880c_contracts_modules_PropsERC721UConfigPools.sol.log:
+  402  identifier: require [8857,8864]
+  403: replace require by minted
+  404  
+

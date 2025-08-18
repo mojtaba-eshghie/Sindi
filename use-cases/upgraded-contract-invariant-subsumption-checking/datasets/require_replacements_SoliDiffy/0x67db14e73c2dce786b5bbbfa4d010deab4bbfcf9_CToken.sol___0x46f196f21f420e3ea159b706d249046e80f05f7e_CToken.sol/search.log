@@ -1,0 +1,5 @@
+results/differencing_results/0x67db14e73c2dce786b5bbbfa4d010deab4bbfcf9_CToken.sol___0x46f196f21f420e3ea159b706d249046e80f05f7e_CToken.sol.log:
+  2469  identifier: require [14604,14611]
+  2470: replace require by latestCErc20Delegate
+  2471  
+

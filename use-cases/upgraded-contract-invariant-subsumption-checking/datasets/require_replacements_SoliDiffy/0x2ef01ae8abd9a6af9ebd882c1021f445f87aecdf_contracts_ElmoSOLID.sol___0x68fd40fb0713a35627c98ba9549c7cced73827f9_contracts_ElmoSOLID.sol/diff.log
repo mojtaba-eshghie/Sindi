@@ -1,0 +1,77 @@
+New cluster:
+===
+insert-node
+---
+modifier_invocation [2127,2140]
+to
+function_definition [1974,2310]
+at 9
+------------
+===
+insert-node
+---
+modifier_invocation [2127,2140]
+to
+function_definition [1974,2310]
+at 9
+
+New cluster:
+UPDATE from require to whenNotPaused
+------------
+===
+update-node
+---
+identifier: require [2138,2145]
+replace require by whenNotPaused
+
+New cluster:
+MOVE from modifier_invocation [2127,2140]
+------------
+===
+move-tree
+---
+identifier: require [2138,2145]
+to
+modifier_invocation [2127,2140]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2146,2174]
+    binary_expression [2146,2174]
+        member_expression: block.timestamp [2146,2161]
+        comparison_operator: < [2162,2163]
+        number_literal: 1673020800 [2164,2174]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2176,2194]
+    string_literal [2176,2194]
+        string: "Pausable: paused" [2176,2194]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2138,2196]
+===
+------------
+===
+delete-node
+---
+call_expression [2138,2195]
+===
+===
+delete-node
+---
+expression_statement [2138,2196]
+===
+

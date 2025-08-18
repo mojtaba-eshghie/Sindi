@@ -1,0 +1,5 @@
+results/differencing_results/0x034031e261e00e1ae1f749724e4673ab30a7ca35_contracts_KubzTreasure.sol___0x8f401f32eeeede1f8465aed1d65daeab0ac3bba7_contracts_KubzTreasure.sol.log:
+  290  identifier: require [2814,2821]
+  291: replace require by onlyOwner
+  292  
+

@@ -1,0 +1,5 @@
+results/differencing_results/0x2a0b88f5e1fba2909843a46877a9369d8ae8b5b5_contracts_vaults_BaseVaults_RibbonThetaVault.sol___0xc51d4db54ee9b06fe173f701a69633a0b939253e_contracts_vaults_BaseVaults_RibbonThetaVault.sol.log:
+  461  identifier: require [14640,14647]
+  462: replace require by currentOtoken
+  463  
+

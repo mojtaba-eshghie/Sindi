@@ -1,0 +1,5396 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [614,679]
+    import: import [614,620]
+    identifier: OperatorFilterer [622,638]
+    from: from [640,644]
+    string: "../opensea/OperatorFilterer.sol" [645,678]
+to
+source_file [0,21604]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [681,732]
+    import: import [681,687]
+    identifier: CustomStrings [689,702]
+    from: from [704,708]
+    string: "../CustomStrings.sol" [709,731]
+to
+source_file [0,21604]
+at 8
+
+New cluster:
+===
+insert-node
+---
+identifier: Registrar [745,754]
+to
+contract_declaration [616,21602]
+at 0
+------------
+===
+insert-node
+---
+identifier: Registrar [745,754]
+to
+contract_declaration [616,21602]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [755,757]
+to
+contract_declaration [616,21602]
+at 1
+------------
+===
+insert-node
+---
+is: is [755,757]
+to
+contract_declaration [616,21602]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [829,845]
+    user_defined_type [829,845]
+        identifier: OperatorFilterer [829,845]
+to
+contract_declaration [616,21602]
+at 7
+
+New cluster:
+MOVE from contract_body [706,21602]
+------------
+===
+move-tree
+---
+function_definition [13098,13268]
+    function: function [13098,13106]
+    identifier: isController [13107,13119]
+    parameter [13120,13135]
+        type_name: address [13120,13127]
+        identifier: account [13128,13135]
+    visibility: external [13137,13145]
+    state_mutability [13146,13150]
+        view: view [13146,13150]
+    override_specifier [13151,13159]
+        override: override [13151,13159]
+    return_type_definition [13160,13174]
+        returns: returns [13160,13167]
+        parameter [13169,13173]
+            type_name: bool [13169,13173]
+    function_body [13175,13268]
+        variable_declaration_statement [13182,13230]
+            variable_declaration [13182,13206]
+                type_name: bool [13182,13186]
+                identifier: accountIsController [13187,13206]
+            affectation_operator: = [13207,13208]
+            array_access [13209,13229]
+                identifier: controllers [13209,13220]
+                identifier: account [13221,13228]
+        return_statement [13236,13263]
+            return: return [13236,13242]
+            identifier: accountIsController [13243,13262]
+to
+contract_body [706,21602]
+at 17
+===
+move-tree
+---
+function_definition [14466,14623]
+    function: function [14466,14474]
+    identifier: domainController [14475,14491]
+    parameter [14492,14502]
+        type_name: uint256 [14492,14499]
+        identifier: id [14500,14502]
+    visibility: public [14504,14510]
+    state_mutability [14511,14515]
+        view: view [14511,14515]
+    override_specifier [14516,14524]
+        override: override [14516,14524]
+    return_type_definition [14525,14542]
+        returns: returns [14525,14532]
+        parameter [14534,14541]
+            type_name: address [14534,14541]
+    function_body [14543,14623]
+        variable_declaration_statement [14550,14594]
+            variable_declaration [14550,14568]
+                type_name: address [14550,14557]
+                identifier: controller [14558,14568]
+            affectation_operator: = [14569,14570]
+            member_expression: records[id].controller [14571,14593]
+        return_statement [14600,14618]
+            return: return [14600,14606]
+            identifier: controller [14607,14617]
+to
+contract_body [706,21602]
+at 38
+===
+move-tree
+---
+function_definition [13618,13755]
+    function: function [13618,13626]
+    identifier: minterOf [13627,13635]
+    parameter [13636,13646]
+        type_name: uint256 [13636,13643]
+        identifier: id [13644,13646]
+    visibility: public [13648,13654]
+    state_mutability [13655,13659]
+        view: view [13655,13659]
+    override_specifier [13660,13668]
+        override: override [13660,13668]
+    return_type_definition [13669,13686]
+        returns: returns [13669,13676]
+        parameter [13678,13685]
+            type_name: address [13678,13685]
+    function_body [13687,13755]
+        variable_declaration_statement [13694,13730]
+            variable_declaration [13694,13708]
+                type_name: address [13694,13701]
+                identifier: minter [13702,13708]
+            affectation_operator: = [13709,13710]
+            member_expression: records[id].minter [13711,13729]
+        return_statement [13736,13750]
+            return: return [13736,13742]
+            identifier: minter [13743,13749]
+to
+contract_body [706,21602]
+at 41
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [935,962]
+    error: error [935,940]
+    identifier: InvalidFolderGroup [941,959]
+to
+contract_body [706,21602]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [966,990]
+    error: error [966,971]
+    identifier: SameFolderGroup [972,987]
+to
+contract_body [706,21602]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [994,1016]
+    error: error [994,999]
+    identifier: NotAuthorized [1000,1013]
+to
+contract_body [706,21602]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1020,1051]
+    error: error [1020,1025]
+    identifier: ControllerAlreadyAdded [1026,1048]
+to
+contract_body [706,21602]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1055,1083]
+    error: error [1055,1060]
+    identifier: ControllerNotExists [1061,1080]
+to
+contract_body [706,21602]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1087,1109]
+    error: error [1087,1092]
+    identifier: NotController [1093,1106]
+to
+contract_body [706,21602]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1113,1137]
+    error: error [1113,1118]
+    identifier: EmptyDomainName [1119,1134]
+to
+contract_body [706,21602]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1141,1165]
+    error: error [1141,1146]
+    identifier: SubdomainParent [1147,1162]
+to
+contract_body [706,21602]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1169,1198]
+    error: error [1169,1174]
+    identifier: DomainGroupNotExists [1175,1195]
+to
+contract_body [706,21602]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1202,1237]
+    error: error [1202,1207]
+    identifier: ShouldUpdateViaDomainGroup [1208,1234]
+to
+contract_body [706,21602]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1241,1265]
+    error: error [1241,1246]
+    identifier: SameMetadataUri [1247,1262]
+to
+contract_body [706,21602]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1269,1292]
+    error: error [1269,1274]
+    identifier: NoParentDomain [1275,1289]
+to
+contract_body [706,21602]
+at 12
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1296,1319]
+    error: error [1296,1301]
+    identifier: LockedMetadata [1302,1316]
+to
+contract_body [706,21602]
+at 13
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1323,1349]
+    error: error [1323,1328]
+    identifier: NotLockedMetadata [1329,1346]
+to
+contract_body [706,21602]
+at 14
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1353,1379]
+    error: error [1353,1358]
+    identifier: NotMetadataLocker [1359,1376]
+to
+contract_body [706,21602]
+at 15
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1383,1410]
+    error: error [1383,1388]
+    identifier: NotApprovedOrOwner [1389,1407]
+to
+contract_body [706,21602]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1414,1438]
+    error: error [1414,1419]
+    identifier: DomainNotExists [1420,1435]
+to
+contract_body [706,21602]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1442,1465]
+    error: error [1442,1447]
+    identifier: NotDomainOwner [1448,1462]
+to
+contract_body [706,21602]
+at 18
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1469,1496]
+    error: error [1469,1474]
+    identifier: InvalidDomainIndex [1475,1493]
+to
+contract_body [706,21602]
+at 19
+
+New cluster:
+===
+insert-node
+---
+function_definition [5503,5825]
+to
+contract_body [706,21602]
+at 41
+------------
+===
+insert-node
+---
+identifier: addController [5512,5525]
+to
+function_definition [5503,5825]
+at 1
+===
+insert-node
+---
+if: if [5667,5669]
+to
+if_statement [5667,5744]
+at 0
+===
+insert-node
+---
+function_body [5555,5825]
+to
+function_definition [5503,5825]
+at 4
+===
+insert-node
+---
+function: function [5503,5511]
+to
+function_definition [5503,5825]
+at 0
+===
+insert-node
+---
+visibility: external [5546,5554]
+to
+function_definition [5503,5825]
+at 3
+===
+insert-node
+---
+if_statement [5667,5744]
+to
+function_body [5555,5825]
+at 1
+===
+insert-node
+---
+function_definition [5503,5825]
+to
+contract_body [706,21602]
+at 41
+
+New cluster:
+===
+insert-node
+---
+function_definition [5964,6309]
+to
+contract_body [706,21602]
+at 42
+------------
+===
+insert-node
+---
+identifier: removeController [5973,5989]
+to
+function_definition [5964,6309]
+at 1
+===
+insert-node
+---
+if: if [6150,6152]
+to
+if_statement [6150,6225]
+at 0
+===
+insert-node
+---
+visibility: external [6010,6018]
+to
+function_definition [5964,6309]
+at 3
+===
+insert-node
+---
+if_statement [6150,6225]
+to
+function_body [6038,6309]
+at 1
+===
+insert-node
+---
+function_definition [5964,6309]
+to
+contract_body [706,21602]
+at 42
+===
+insert-node
+---
+function_body [6038,6309]
+to
+function_definition [5964,6309]
+at 6
+===
+insert-node
+---
+function: function [5964,5972]
+to
+function_definition [5964,6309]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [12259,12497]
+to
+contract_body [706,21602]
+at 54
+------------
+===
+insert-node
+---
+call_expression [12360,12376]
+to
+expression_statement [12360,12377]
+at 0
+===
+insert-node
+---
+visibility: external [12335,12343]
+to
+function_definition [12259,12497]
+at 4
+===
+insert-node
+---
+function_body [12353,12497]
+to
+function_definition [12259,12497]
+at 6
+===
+insert-node
+---
+function_definition [12259,12497]
+to
+contract_body [706,21602]
+at 54
+===
+insert-node
+---
+identifier: setDomainMetadataUri [12268,12288]
+to
+function_definition [12259,12497]
+at 1
+===
+insert-node
+---
+identifier: _onlyOwnerOf [12360,12372]
+to
+call_expression [12360,12376]
+at 0
+===
+insert-node
+---
+function: function [12259,12267]
+to
+function_definition [12259,12497]
+at 0
+===
+insert-node
+---
+expression_statement [12360,12377]
+to
+function_body [12353,12497]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [13381,13612]
+    function: function [13381,13389]
+    identifier: setApprovalForAll [13390,13407]
+    parameter [13414,13430]
+        type_name: address [13414,13421]
+        identifier: operator [13422,13430]
+    parameter [13437,13450]
+        type_name: bool [13437,13441]
+        identifier: approved [13442,13450]
+    visibility: public [13456,13462]
+    override_specifier [13463,13510]
+        override: override [13463,13471]
+        user_defined_type [13472,13489]
+            identifier: ERC721Upgradeable [13472,13489]
+        user_defined_type [13491,13509]
+            identifier: IERC721Upgradeable [13491,13509]
+    function_body [13511,13612]
+        expression_statement [13518,13557]
+            call_expression [13518,13556]
+                identifier: _onlyAllowedOperatorApproval [13518,13546]
+                call_argument [13547,13555]
+                    identifier: operator [13547,13555]
+        expression_statement [13563,13607]
+            call_expression [13563,13606]
+                member_expression: super.setApprovalForAll [13563,13586]
+                call_argument [13587,13595]
+                    identifier: operator [13587,13595]
+                call_argument [13597,13605]
+                    identifier: approved [13597,13605]
+to
+contract_body [706,21602]
+at 58
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [13618,13830]
+    function: function [13618,13626]
+    identifier: approve [13627,13634]
+    parameter [13641,13657]
+        type_name: address [13641,13648]
+        identifier: operator [13649,13657]
+    parameter [13664,13679]
+        type_name: uint256 [13664,13671]
+        identifier: tokenId [13672,13679]
+    visibility: public [13685,13691]
+    override_specifier [13692,13739]
+        override: override [13692,13700]
+        user_defined_type [13701,13718]
+            identifier: ERC721Upgradeable [13701,13718]
+        user_defined_type [13720,13738]
+            identifier: IERC721Upgradeable [13720,13738]
+    function_body [13740,13830]
+        expression_statement [13747,13786]
+            call_expression [13747,13785]
+                identifier: _onlyAllowedOperatorApproval [13747,13775]
+                call_argument [13776,13784]
+                    identifier: operator [13776,13784]
+        expression_statement [13792,13825]
+            call_expression [13792,13824]
+                member_expression: super.approve [13792,13805]
+                call_argument [13806,13814]
+                    identifier: operator [13806,13814]
+                call_argument [13816,13823]
+                    identifier: tokenId [13816,13823]
+to
+contract_body [706,21602]
+at 59
+
+New cluster:
+===
+insert-node
+---
+function_definition [15755,15929]
+to
+contract_body [706,21602]
+at 67
+------------
+===
+insert-node
+---
+function_body [15824,15929]
+to
+function_definition [15755,15929]
+at 7
+===
+insert-node
+---
+if_statement [15831,15890]
+to
+function_body [15824,15929]
+at 0
+===
+insert-node
+---
+visibility: public [15785,15791]
+to
+function_definition [15755,15929]
+at 3
+===
+insert-node
+---
+identifier: parentOf [15764,15772]
+to
+function_definition [15755,15929]
+at 1
+===
+insert-node
+---
+function: function [15755,15763]
+to
+function_definition [15755,15929]
+at 0
+===
+insert-node
+---
+if: if [15831,15833]
+to
+if_statement [15831,15890]
+at 0
+===
+insert-node
+---
+!: ! [15835,15836]
+to
+unary_expression [15835,15847]
+at 0
+===
+insert-node
+---
+unary_expression [15835,15847]
+to
+if_statement [15831,15890]
+at 1
+===
+insert-node
+---
+function_definition [15755,15929]
+to
+contract_body [706,21602]
+at 67
+
+New cluster:
+===
+insert-node
+---
+function_definition [15935,16556]
+to
+contract_body [706,21602]
+at 68
+------------
+===
+insert-node
+---
+visibility: public [15985,15991]
+to
+function_definition [15935,16556]
+at 3
+===
+insert-node
+---
+function_body [16108,16556]
+to
+function_definition [15935,16556]
+at 8
+===
+insert-node
+---
+if: if [16115,16117]
+to
+if_statement [16115,16179]
+at 0
+===
+insert-node
+---
+function: function [15935,15943]
+to
+function_definition [15935,16556]
+at 0
+===
+insert-node
+---
+virtual: virtual [16007,16014]
+to
+function_definition [15935,16556]
+at 5
+===
+insert-node
+---
+if_statement [16115,16179]
+to
+function_body [16108,16556]
+at 0
+===
+insert-node
+---
+unary_expression [16119,16136]
+to
+if_statement [16115,16179]
+at 1
+===
+insert-node
+---
+!: ! [16119,16120]
+to
+unary_expression [16119,16136]
+at 0
+===
+insert-node
+---
+function_definition [15935,16556]
+to
+contract_body [706,21602]
+at 68
+===
+insert-node
+---
+identifier: tokenURI [15944,15952]
+to
+function_definition [15935,16556]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [16898,17029]
+to
+contract_body [706,21602]
+at 72
+------------
+===
+insert-node
+---
+identifier: _onlyOwnerOf [16907,16919]
+to
+function_definition [16898,17029]
+at 1
+===
+insert-node
+---
+function_body [16946,17029]
+to
+function_definition [16898,17029]
+at 5
+===
+insert-node
+---
+function_definition [16898,17029]
+to
+contract_body [706,21602]
+at 72
+===
+insert-node
+---
+if_statement [16953,17024]
+to
+function_body [16946,17029]
+at 0
+===
+insert-node
+---
+function: function [16898,16906]
+to
+function_definition [16898,17029]
+at 0
+===
+insert-node
+---
+visibility: internal [16932,16940]
+to
+function_definition [16898,17029]
+at 3
+===
+insert-node
+---
+if: if [16953,16955]
+to
+if_statement [16953,17024]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [17035,17188]
+to
+contract_body [706,21602]
+at 73
+------------
+===
+insert-node
+---
+identifier: _onlyController [17044,17059]
+to
+function_definition [17035,17188]
+at 1
+===
+insert-node
+---
+function_definition [17035,17188]
+to
+contract_body [706,21602]
+at 73
+===
+insert-node
+---
+function: function [17035,17043]
+to
+function_definition [17035,17188]
+at 0
+===
+insert-node
+---
+visibility: internal [17062,17070]
+to
+function_definition [17035,17188]
+at 2
+
+New cluster:
+===
+insert-node
+---
+function_definition [17194,17688]
+to
+contract_body [706,21602]
+at 74
+------------
+===
+insert-node
+---
+visibility: internal [17256,17264]
+to
+function_definition [17194,17688]
+at 4
+===
+insert-node
+---
+function_definition [17194,17688]
+to
+contract_body [706,21602]
+at 74
+===
+insert-node
+---
+function: function [17194,17202]
+to
+function_definition [17194,17688]
+at 0
+===
+insert-node
+---
+identifier: _setDomainMetadataUri [17203,17224]
+to
+function_definition [17194,17688]
+at 1
+===
+insert-node
+---
+function_body [17265,17688]
+to
+function_definition [17194,17688]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [17694,18172]
+to
+contract_body [706,21602]
+at 75
+------------
+===
+insert-node
+---
+function: function [17694,17702]
+to
+function_definition [17694,18172]
+at 0
+===
+insert-node
+---
+if_statement [17881,17957]
+to
+block_statement [17789,17964]
+at 1
+===
+insert-node
+---
+if: if [17881,17883]
+to
+if_statement [17881,17957]
+at 0
+===
+insert-node
+---
+identifier: toLock [17781,17787]
+to
+if_statement [17777,18167]
+at 1
+===
+insert-node
+---
+if_statement [18067,18160]
+to
+block_statement [17970,18167]
+at 1
+===
+insert-node
+---
+function_definition [17694,18172]
+to
+contract_body [706,21602]
+at 75
+===
+insert-node
+---
+block_statement [17789,17964]
+to
+if_statement [17777,18167]
+at 2
+===
+insert-node
+---
+if_statement [17979,18059]
+to
+block_statement [17970,18167]
+at 0
+===
+insert-node
+---
+else: else [17965,17969]
+to
+if_statement [17777,18167]
+at 3
+===
+insert-node
+---
+if_statement [17777,18167]
+to
+function_body [17770,18172]
+at 0
+===
+insert-node
+---
+function_body [17770,18172]
+to
+function_definition [17694,18172]
+at 6
+===
+insert-node
+---
+if: if [18067,18069]
+to
+if_statement [18067,18160]
+at 0
+===
+insert-node
+---
+identifier: _validateLockDomainMetadata [17703,17730]
+to
+function_definition [17694,18172]
+at 1
+===
+insert-node
+---
+if: if [17979,17981]
+to
+if_statement [17979,18059]
+at 0
+===
+insert-node
+---
+if: if [17798,17800]
+to
+if_statement [17798,17873]
+at 0
+===
+insert-node
+---
+if: if [17777,17779]
+to
+if_statement [17777,18167]
+at 0
+===
+insert-node
+---
+block_statement [17970,18167]
+to
+if_statement [17777,18167]
+at 4
+===
+insert-node
+---
+if_statement [17798,17873]
+to
+block_statement [17789,17964]
+at 0
+===
+insert-node
+---
+visibility: internal [17756,17764]
+to
+function_definition [17694,18172]
+at 4
+
+New cluster:
+MOVE from function_definition [5503,5825]
+------------
+===
+move-tree
+---
+parameter [4683,4701]
+    type_name: address [4683,4690]
+    identifier: controller [4691,4701]
+to
+function_definition [5503,5825]
+at 2
+
+New cluster:
+MOVE from function_definition [5964,6309]
+------------
+===
+move-tree
+---
+override_specifier [5176,5184]
+    override: override [5176,5184]
+to
+function_definition [5964,6309]
+at 4
+===
+move-tree
+---
+parameter [5147,5165]
+    type_name: address [5147,5154]
+    identifier: controller [5155,5165]
+to
+function_definition [5964,6309]
+at 2
+===
+move-tree
+---
+modifier_invocation [5185,5194]
+    identifier: onlyOwner [5185,5194]
+to
+function_definition [5964,6309]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_body [11486,11684]
+to
+function_definition [10542,10817]
+at 6
+------------
+===
+insert-node
+---
+if: if [11516,11518]
+to
+if_statement [11516,11588]
+at 0
+===
+insert-node
+---
+function_body [11486,11684]
+to
+function_definition [10542,10817]
+at 6
+===
+insert-node
+---
+if_statement [11516,11588]
+to
+function_body [11486,11684]
+at 1
+===
+insert-node
+---
+call_expression [11493,11509]
+to
+expression_statement [11493,11510]
+at 0
+===
+insert-node
+---
+expression_statement [11493,11510]
+to
+function_body [11486,11684]
+at 0
+
+New cluster:
+MOVE from function_definition [12259,12497]
+------------
+===
+move-tree
+---
+parameter [11418,11435]
+    type_name: string [11418,11424]
+    memory: memory [11425,11431]
+    identifier: uri [11432,11435]
+to
+function_definition [12259,12497]
+at 3
+===
+move-tree
+---
+override_specifier [11456,11464]
+    override: override [11456,11464]
+to
+function_definition [12259,12497]
+at 5
+===
+move-tree
+---
+parameter [11406,11416]
+    type_name: uint256 [11406,11413]
+    identifier: id [11414,11416]
+to
+function_definition [12259,12497]
+at 2
+
+New cluster:
+UPDATE from domainController to minterOf
+------------
+===
+update-node
+---
+identifier: domainController [14475,14491]
+replace domainController by minterOf
+
+New cluster:
+UPDATE from minterOf to domainController
+------------
+===
+update-node
+---
+identifier: minterOf [13627,13635]
+replace minterOf by domainController
+
+New cluster:
+MOVE from function_definition [15755,15929]
+------------
+===
+move-tree
+---
+override_specifier [15048,15056]
+    override: override [15048,15056]
+to
+function_definition [15755,15929]
+at 5
+===
+move-tree
+---
+parameter [15024,15034]
+    type_name: uint256 [15024,15031]
+    identifier: id [15032,15034]
+to
+function_definition [15755,15929]
+at 2
+===
+move-tree
+---
+return_type_definition [15057,15074]
+    returns: returns [15057,15064]
+    parameter [15066,15073]
+        type_name: uint256 [15066,15073]
+to
+function_definition [15755,15929]
+at 6
+===
+move-tree
+---
+state_mutability [15043,15047]
+    view: view [15043,15047]
+to
+function_definition [15755,15929]
+at 4
+
+New cluster:
+MOVE from function_definition [15935,16556]
+------------
+===
+move-tree
+---
+state_mutability [15258,15262]
+    view: view [15258,15262]
+to
+function_definition [15935,16556]
+at 4
+===
+move-tree
+---
+return_type_definition [15342,15365]
+    returns: returns [15342,15349]
+    parameter [15351,15364]
+        type_name: string [15351,15357]
+        memory: memory [15358,15364]
+to
+function_definition [15935,16556]
+at 7
+===
+move-tree
+---
+parameter [15224,15239]
+    type_name: uint256 [15224,15231]
+    identifier: tokenId [15232,15239]
+to
+function_definition [15935,16556]
+at 2
+===
+move-tree
+---
+override_specifier [15281,15336]
+    override: override [15281,15289]
+    user_defined_type [15290,15316]
+        identifier: IERC721MetadataUpgradeable [15290,15316]
+    user_defined_type [15318,15335]
+        identifier: ERC721Upgradeable [15318,15335]
+to
+function_definition [15935,16556]
+at 6
+
+New cluster:
+MOVE from function_definition [16898,17029]
+------------
+===
+move-tree
+---
+parameter [3645,3655]
+    type_name: uint256 [3645,3652]
+    identifier: id [3653,3655]
+to
+function_definition [16898,17029]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [16941,16945]
+    view: view [16941,16945]
+to
+function_definition [16898,17029]
+at 4
+
+New cluster:
+MOVE from function_definition [17035,17188]
+------------
+===
+move-tree
+---
+function_body [3487,3618]
+    if_statement [3494,3605]
+        if: if [3494,3496]
+        binary_expression [3498,3558]
+            array_access [3498,3522]
+                unary_expression [3498,3510]
+                    !: ! [3498,3499]
+                    identifier: controllers [3499,3510]
+                member_expression: msg.sender [3511,3521]
+            logical_operator: && [3523,3525]
+            unary_expression [3526,3558]
+                !: ! [3526,3527]
+                call_expression [3527,3558]
+                    member_expression: zNSHub.isController [3527,3546]
+                    call_argument [3547,3557]
+                        member_expression: msg.sender [3547,3557]
+        block_statement [3560,3605]
+            revert_statement [3569,3598]
+                revert: revert [3569,3575]
+                parenthesized_expression [3575,3597]
+                    string_literal [3576,3596]
+                        string: "ZR: Not controller" [3576,3596]
+    expression_statement [3611,3613]
+        identifier: _ [3611,3612]
+to
+function_definition [17035,17188]
+at 3
+
+New cluster:
+MOVE from function_definition [17194,17688]
+------------
+===
+move-tree
+---
+parameter [16203,16213]
+    type_name: uint256 [16203,16210]
+    identifier: id [16211,16213]
+to
+function_definition [17194,17688]
+at 2
+===
+move-tree
+---
+parameter [16215,16232]
+    type_name: string [16215,16221]
+    memory: memory [16222,16228]
+    identifier: uri [16229,16232]
+to
+function_definition [17194,17688]
+at 3
+
+New cluster:
+MOVE from function_definition [17694,18172]
+------------
+===
+move-tree
+---
+parameter [16446,16457]
+    type_name: bool [16446,16450]
+    identifier: toLock [16451,16457]
+to
+function_definition [17694,18172]
+at 3
+===
+move-tree
+---
+state_mutability [16468,16472]
+    view: view [16468,16472]
+to
+function_definition [17694,18172]
+at 5
+===
+move-tree
+---
+parameter [16434,16444]
+    type_name: uint256 [16434,16441]
+    identifier: id [16442,16444]
+to
+function_definition [17694,18172]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [3114,3132]
+    call_expression [3114,3131]
+        identifier: _onlyController [3114,3129]
+to
+function_body [2422,2686]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [3659,3677]
+to
+function_body [2956,3331]
+at 0
+------------
+===
+insert-node
+---
+call_expression [3659,3676]
+to
+expression_statement [3659,3677]
+at 0
+===
+insert-node
+---
+expression_statement [3659,3677]
+to
+function_body [2956,3331]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [3683,3764]
+to
+function_body [2956,3331]
+at 1
+------------
+===
+insert-node
+---
+if_statement [3683,3764]
+to
+function_body [2956,3331]
+at 1
+===
+insert-node
+---
+block_statement [3720,3764]
+to
+if_statement [3683,3764]
+at 2
+===
+insert-node
+---
+revert: revert [3729,3735]
+to
+revert_statement [3729,3757]
+at 0
+===
+insert-node
+---
+revert_arguments [3754,3756]
+to
+revert_statement [3729,3757]
+at 2
+===
+insert-node
+---
+revert_statement [3729,3757]
+to
+block_statement [3720,3764]
+at 0
+===
+insert-node
+---
+if: if [3683,3685]
+to
+if_statement [3683,3764]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [3770,3947]
+to
+function_body [2956,3331]
+at 2
+------------
+===
+insert-node
+---
+if_statement [3770,3947]
+to
+function_body [2956,3331]
+at 2
+===
+insert-node
+---
+if: if [3770,3772]
+to
+if_statement [3770,3947]
+at 0
+
+New cluster:
+===
+insert-node
+---
+return_statement [4435,4463]
+to
+function_body [13175,13268]
+at 0
+------------
+===
+insert-node
+---
+return: return [4435,4441]
+to
+return_statement [4435,4463]
+at 0
+===
+insert-node
+---
+return_statement [4435,4463]
+to
+function_body [13175,13268]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [5129,5227]
+    call_expression [5129,5226]
+        identifier: _initializeFilter [5129,5146]
+        call_argument [5155,5206]
+            type_cast_expression [5155,5206]
+                primitive_type: address [5155,5162]
+                call_argument [5163,5205]
+                    number_literal: 0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6 [5163,5205]
+        call_argument [5215,5219]
+            boolean_literal: true [5215,5219]
+to
+function_body [3936,4389]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [5562,5661]
+    if: if [5562,5564]
+    binary_expression [5566,5620]
+        member_expression: msg.sender != owner() && msg.sender [5566,5601]
+        comparison_operator: != [5602,5604]
+        identifier: parentRegistrar [5605,5620]
+    block_statement [5622,5661]
+        revert_statement [5631,5654]
+            revert: revert [5631,5637]
+            identifier: NotAuthorized [5638,5651]
+            revert_arguments [5651,5653]
+to
+function_body [5555,5825]
+at 0
+
+New cluster:
+MOVE from function_body [5555,5825]
+------------
+===
+move-tree
+---
+expression_statement [4907,4938]
+    assignment_expression [4907,4937]
+        array_access [4907,4930]
+            identifier: controllers [4907,4918]
+            identifier: controller [4919,4929]
+        affectation_operator: = [4931,4932]
+        boolean_literal: true [4933,4937]
+to
+function_body [5555,5825]
+at 2
+===
+move-tree
+---
+emit_statement [4944,4977]
+    identifier: ControllerAdded [4949,4964]
+    call_argument [4965,4975]
+        identifier: controller [4965,4975]
+to
+function_body [5555,5825]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [6045,6144]
+    if: if [6045,6047]
+    binary_expression [6049,6103]
+        member_expression: msg.sender != owner() && msg.sender [6049,6084]
+        comparison_operator: != [6085,6087]
+        identifier: parentRegistrar [6088,6103]
+    block_statement [6105,6144]
+        revert_statement [6114,6137]
+            revert: revert [6114,6120]
+            identifier: NotAuthorized [6121,6134]
+            revert_arguments [6134,6136]
+to
+function_body [6038,6309]
+at 0
+
+New cluster:
+MOVE from function_body [6038,6309]
+------------
+===
+move-tree
+---
+expression_statement [5387,5419]
+    assignment_expression [5387,5418]
+        array_access [5387,5410]
+            identifier: controllers [5387,5398]
+            identifier: controller [5399,5409]
+        affectation_operator: = [5411,5412]
+        boolean_literal: false [5413,5418]
+to
+function_body [6038,6309]
+at 2
+===
+move-tree
+---
+emit_statement [5425,5460]
+    identifier: ControllerRemoved [5430,5447]
+    call_argument [5448,5458]
+        identifier: controller [5448,5458]
+to
+function_body [6038,6309]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [7195,7213]
+    call_expression [7195,7212]
+        identifier: _onlyController [7195,7210]
+to
+function_body [6359,6525]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [7636,7654]
+    call_expression [7636,7653]
+        identifier: _onlyController [7636,7651]
+to
+function_body [6791,7078]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8193,8211]
+    call_expression [8193,8210]
+        identifier: _onlyController [8193,8208]
+to
+function_body [7339,8208]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [9793,9864]
+to
+function_body [8915,10401]
+at 0
+------------
+===
+insert-node
+---
+block_statement [9823,9864]
+to
+if_statement [9793,9864]
+at 2
+===
+insert-node
+---
+if: if [9793,9795]
+to
+if_statement [9793,9864]
+at 0
+===
+insert-node
+---
+revert: revert [9832,9838]
+to
+revert_statement [9832,9857]
+at 0
+===
+insert-node
+---
+revert_statement [9832,9857]
+to
+block_statement [9823,9864]
+at 0
+===
+insert-node
+---
+if_statement [9793,9864]
+to
+function_body [8915,10401]
+at 0
+===
+insert-node
+---
+revert_arguments [9854,9856]
+to
+revert_statement [9832,9857]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [9946,10042]
+to
+function_body [8915,10401]
+at 1
+------------
+===
+insert-node
+---
+revert_statement [10010,10035]
+to
+block_statement [10001,10042]
+at 0
+===
+insert-node
+---
+revert_arguments [10032,10034]
+to
+revert_statement [10010,10035]
+at 2
+===
+insert-node
+---
+if_statement [9946,10042]
+to
+function_body [8915,10401]
+at 1
+===
+insert-node
+---
+if: if [9946,9948]
+to
+if_statement [9946,10042]
+at 0
+===
+insert-node
+---
+revert: revert [10010,10016]
+to
+revert_statement [10010,10035]
+at 0
+===
+insert-node
+---
+block_statement [10001,10042]
+to
+if_statement [9946,10042]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [10048,10125]
+to
+function_body [8915,10401]
+at 2
+------------
+===
+insert-node
+---
+if: if [10048,10050]
+to
+if_statement [10048,10125]
+at 0
+===
+insert-node
+---
+if_statement [10048,10125]
+to
+function_body [8915,10401]
+at 2
+
+New cluster:
+MOVE from function_body [11486,11684]
+------------
+===
+move-tree
+---
+expression_statement [10729,10764]
+    assignment_expression [10729,10763]
+        member_expression: records[id].royaltyAmount [10729,10754]
+        affectation_operator: = [10755,10756]
+        identifier: amount [10757,10763]
+to
+function_body [11486,11684]
+at 2
+===
+move-tree
+---
+expression_statement [10770,10812]
+    call_expression [10770,10811]
+        member_expression: zNSHub.royaltiesAmountChanged [10770,10799]
+        call_argument [10800,10802]
+            identifier: id [10800,10802]
+        call_argument [10804,10810]
+            identifier: amount [10804,10810]
+to
+function_body [11486,11684]
+at 3
+
+New cluster:
+===
+insert-node
+---
+expression_statement [11947,11964]
+to
+function_body [11092,11244]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [11947,11964]
+to
+function_body [11092,11244]
+at 0
+===
+insert-node
+---
+call_expression [11947,11963]
+to
+expression_statement [11947,11964]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [11970,12042]
+to
+function_body [11092,11244]
+at 1
+------------
+===
+insert-node
+---
+if_statement [11970,12042]
+to
+function_body [11092,11244]
+at 1
+===
+insert-node
+---
+if: if [11970,11972]
+to
+if_statement [11970,12042]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [12383,12455]
+    if: if [12383,12385]
+    call_expression [12387,12413]
+        identifier: isDomainMetadataLocked [12387,12409]
+        call_argument [12410,12412]
+            identifier: id [12410,12412]
+    block_statement [12415,12455]
+        revert_statement [12424,12448]
+            revert: revert [12424,12430]
+            identifier: LockedMetadata [12431,12445]
+            revert_arguments [12445,12447]
+to
+function_body [12353,12497]
+at 1
+
+New cluster:
+MOVE from function_body [12353,12497]
+------------
+===
+move-tree
+---
+expression_statement [11562,11593]
+    call_expression [11562,11592]
+        identifier: _setDomainMetadataUri [11562,11583]
+        call_argument [11584,11586]
+            identifier: id [11584,11586]
+        call_argument [11588,11591]
+            identifier: uri [11588,11591]
+to
+function_body [12353,12497]
+at 2
+
+New cluster:
+===
+insert-node
+---
+return_statement [14444,14463]
+to
+function_body [13441,13517]
+at 0
+------------
+===
+insert-node
+---
+return_statement [14444,14463]
+to
+function_body [13441,13517]
+at 0
+===
+insert-node
+---
+return: return [14444,14450]
+to
+return_statement [14444,14463]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [15896,15924]
+    return: return [15896,15902]
+    member_expression: records[id].parentId [15903,15923]
+to
+function_body [15824,15929]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [16232,16512]
+    if: if [16232,16234]
+    binary_expression [16236,16269]
+        member_expression: records[tokenId].domainGroup [16236,16264]
+        comparison_operator: != [16265,16267]
+        number_literal: 0 [16268,16269]
+    block_statement [16271,16512]
+        return_statement [16280,16505]
+            return: return [16280,16286]
+            type_cast_expression [16296,16504]
+                primitive_type: string [16296,16302]
+                call_argument [16315,16493]
+                    call_expression [16315,16493]
+                        member_expression: abi.encodePacked [16315,16331]
+                        call_argument [16346,16404]
+                            member_expression: domainGroups[records[tokenId].domainGroup].baseMetadataUri [16346,16404]
+                        call_argument [16419,16480]
+                            call_expression [16419,16480]
+                                member_expression: CustomStrings.toString [16419,16441]
+                                call_argument [16442,16479]
+                                    member_expression: records[tokenId].domainGroupFileIndex [16442,16479]
+to
+function_body [16108,16556]
+at 1
+
+New cluster:
+MOVE from function_body [16108,16556]
+------------
+===
+move-tree
+---
+return_statement [15827,15858]
+    return: return [15827,15833]
+    call_expression [15834,15857]
+        member_expression: super.tokenURI [15834,15848]
+        call_argument [15849,15856]
+            identifier: tokenId [15849,15856]
+to
+function_body [16108,16556]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [16715,16742]
+    call_expression [16715,16741]
+        identifier: _onlyAllowedOperator [16715,16735]
+        call_argument [16736,16740]
+            identifier: from [16736,16740]
+to
+function_body [16015,16166]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [17272,17358]
+    if: if [17272,17274]
+    binary_expression [17276,17304]
+        member_expression: records[id].domainGroup [17276,17299]
+        comparison_operator: != [17300,17302]
+        number_literal: 0 [17303,17304]
+    block_statement [17306,17358]
+        revert_statement [17315,17351]
+            revert: revert [17315,17321]
+            identifier: ShouldUpdateViaDomainGroup [17322,17348]
+            revert_arguments [17348,17350]
+to
+function_body [17265,17688]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [17364,17617]
+    if: if [17364,17366]
+    binary_expression [17376,17460]
+        call_expression [17376,17417]
+            identifier: keccak256 [17376,17385]
+            call_argument [17386,17416]
+                call_expression [17386,17416]
+                    member_expression: abi.encodePacked [17386,17402]
+                    call_argument [17403,17415]
+                        call_expression [17403,17415]
+                            identifier: tokenURI [17403,17411]
+                            call_argument [17412,17414]
+                                identifier: id [17412,17414]
+        comparison_operator: == [17418,17420]
+        call_expression [17428,17460]
+            identifier: keccak256 [17428,17437]
+            call_argument [17438,17459]
+                call_expression [17438,17459]
+                    member_expression: abi.encodePacked [17438,17454]
+                    call_argument [17455,17458]
+                        identifier: uri [17455,17458]
+    block_statement [17468,17617]
+        revert_statement [17558,17583]
+            revert: revert [17558,17564]
+            identifier: SameMetadataUri [17565,17580]
+            revert_arguments [17580,17582]
+to
+function_body [17265,17688]
+at 1
+
+New cluster:
+MOVE from function_body [17265,17688]
+------------
+===
+move-tree
+---
+expression_statement [16354,16386]
+    call_expression [16354,16385]
+        member_expression: zNSHub.metadataChanged [16354,16376]
+        call_argument [16377,16379]
+            identifier: id [16377,16379]
+        call_argument [16381,16384]
+            identifier: uri [16381,16384]
+to
+function_body [17265,17688]
+at 3
+===
+move-tree
+---
+expression_statement [16326,16348]
+    call_expression [16326,16347]
+        identifier: _setTokenURI [16326,16338]
+        call_argument [16339,16341]
+            identifier: id [16339,16341]
+        call_argument [16343,16346]
+            identifier: uri [16343,16346]
+to
+function_body [17265,17688]
+at 2
+
+New cluster:
+===
+insert-node
+---
+expression_statement [21350,21368]
+to
+function_body [19941,20338]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [21350,21368]
+to
+function_body [19941,20338]
+at 0
+===
+insert-node
+---
+call_expression [21350,21367]
+to
+expression_statement [21350,21368]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [21374,21452]
+to
+function_body [19941,20338]
+at 1
+------------
+===
+insert-node
+---
+if: if [21374,21376]
+to
+if_statement [21374,21452]
+at 0
+===
+insert-node
+---
+if_statement [21374,21452]
+to
+function_body [19941,20338]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [22080,22098]
+to
+function_body [20604,21080]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [22080,22098]
+to
+function_body [20604,21080]
+at 0
+===
+insert-node
+---
+call_expression [22080,22097]
+to
+expression_statement [22080,22098]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [22104,22182]
+to
+function_body [20604,21080]
+at 1
+------------
+===
+insert-node
+---
+if: if [22104,22106]
+to
+if_statement [22104,22182]
+at 0
+===
+insert-node
+---
+if_statement [22104,22182]
+to
+function_body [20604,21080]
+at 1
+
+New cluster:
+MOVE from if_statement [3683,3764]
+------------
+===
+move-tree
+---
+binary_expression [2971,3003]
+    binary_expression [2971,2978]
+        identifier: id [2971,2973]
+        comparison_operator: != [2974,2976]
+        number_literal: 0 [2977,2978]
+    logical_operator: && [2979,2981]
+    binary_expression [2982,3003]
+        identifier: id [2982,2984]
+        comparison_operator: <= [2985,2987]
+        identifier: numDomainGroups [2988,3003]
+to
+if_statement [3683,3764]
+at 1
+
+New cluster:
+MOVE from if_statement [3770,3947]
+------------
+===
+move-tree
+---
+binary_expression [3051,3169]
+    call_expression [3051,3112]
+        identifier: keccak256 [3051,3060]
+        call_argument [3061,3111]
+            call_expression [3061,3111]
+                member_expression: abi.encodePacked [3061,3077]
+                call_argument [3078,3110]
+                    member_expression: domainGroups[id].baseMetadataUri [3078,3110]
+    comparison_operator: != [3113,3115]
+    call_expression [3125,3169]
+        identifier: keccak256 [3125,3134]
+        call_argument [3135,3168]
+            call_expression [3135,3168]
+                member_expression: abi.encodePacked [3135,3151]
+                call_argument [3152,3167]
+                    identifier: baseMetadataUri [3152,3167]
+to
+if_statement [3770,3947]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [3906,3947]
+    revert_statement [3915,3940]
+        revert: revert [3915,3921]
+        identifier: SameFolderGroup [3922,3937]
+        revert_arguments [3937,3939]
+to
+if_statement [3770,3947]
+at 2
+
+New cluster:
+MOVE from return_statement [4435,4463]
+------------
+===
+move-tree
+---
+array_access [13209,13229]
+    identifier: controllers [13209,13220]
+    identifier: account [13221,13228]
+to
+return_statement [4435,4463]
+at 1
+
+New cluster:
+MOVE from if_statement [5667,5744]
+------------
+===
+move-tree
+---
+array_access [5323,5346]
+    identifier: controllers [5323,5334]
+    identifier: controller [5335,5345]
+to
+if_statement [5667,5744]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [5696,5744]
+    revert_statement [5705,5737]
+        revert: revert [5705,5711]
+        identifier: ControllerAlreadyAdded [5712,5734]
+        revert_arguments [5734,5736]
+to
+if_statement [5667,5744]
+at 2
+
+New cluster:
+MOVE from if_statement [6150,6225]
+------------
+===
+move-tree
+---
+array_access [4840,4864]
+    unary_expression [4840,4852]
+        !: ! [4840,4841]
+        identifier: controllers [4841,4852]
+    identifier: controller [4853,4863]
+to
+if_statement [6150,6225]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [6180,6225]
+    revert_statement [6189,6218]
+        revert: revert [6189,6195]
+        identifier: ControllerNotExists [6196,6215]
+        revert_arguments [6215,6217]
+to
+if_statement [6150,6225]
+at 2
+
+New cluster:
+MOVE from if_statement [9793,9864]
+------------
+===
+move-tree
+---
+binary_expression [8930,8953]
+    member_expression: bytes(label).length [8930,8949]
+    comparison_operator: > [8950,8951]
+    number_literal: 0 [8952,8953]
+to
+if_statement [9793,9864]
+at 1
+
+New cluster:
+MOVE from if_statement [9946,10042]
+------------
+===
+move-tree
+---
+binary_expression [9071,9120]
+    member_expression: records[parentId].subdomainContract [9071,9106]
+    comparison_operator: == [9107,9109]
+    type_cast_expression [9110,9120]
+        primitive_type: address [9110,9117]
+        call_argument [9118,9119]
+            number_literal: 0 [9118,9119]
+to
+if_statement [9946,10042]
+at 1
+
+New cluster:
+MOVE from if_statement [10048,10125]
+------------
+===
+move-tree
+---
+binary_expression [9178,9204]
+    identifier: groupId [9178,9185]
+    comparison_operator: <= [9186,9188]
+    identifier: numDomainGroups [9189,9204]
+to
+if_statement [10048,10125]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [10079,10125]
+    revert_statement [10088,10118]
+        revert: revert [10088,10094]
+        identifier: DomainGroupNotExists [10095,10115]
+        revert_arguments [10115,10117]
+to
+if_statement [10048,10125]
+at 2
+
+New cluster:
+===
+insert-node
+---
+binary_expression [10135,10181]
+to
+if_statement [9246,9372]
+at 1
+------------
+===
+insert-node
+---
+!: ! [10163,10164]
+to
+unary_expression [10163,10181]
+at 0
+===
+insert-node
+---
+logical_operator: && [10160,10162]
+to
+binary_expression [10135,10181]
+at 1
+===
+insert-node
+---
+binary_expression [10135,10181]
+to
+if_statement [9246,9372]
+at 1
+===
+insert-node
+---
+unary_expression [10163,10181]
+to
+binary_expression [10135,10181]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [10183,10223]
+    revert_statement [10192,10216]
+        revert: revert [10192,10198]
+        identifier: NoParentDomain [10199,10213]
+        revert_arguments [10213,10215]
+to
+if_statement [9246,9372]
+at 2
+
+New cluster:
+MOVE from if_statement [11516,11588]
+------------
+===
+move-tree
+---
+call_expression [10670,10696]
+    identifier: isDomainMetadataLocked [10670,10692]
+    call_argument [10693,10695]
+        identifier: id [10693,10695]
+to
+if_statement [11516,11588]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [11548,11588]
+    revert_statement [11557,11581]
+        revert: revert [11557,11563]
+        identifier: LockedMetadata [11564,11578]
+        revert_arguments [11578,11580]
+to
+if_statement [11516,11588]
+at 2
+
+New cluster:
+MOVE from if_statement [11970,12042]
+------------
+===
+move-tree
+---
+call_expression [11108,11134]
+    identifier: isDomainMetadataLocked [11108,11130]
+    call_argument [11131,11133]
+        identifier: id [11131,11133]
+to
+if_statement [11970,12042]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [12002,12042]
+    revert_statement [12011,12035]
+        revert: revert [12011,12017]
+        identifier: LockedMetadata [12018,12032]
+        revert_arguments [12032,12034]
+to
+if_statement [11970,12042]
+at 2
+
+New cluster:
+MOVE from return_statement [14444,14463]
+------------
+===
+move-tree
+---
+call_expression [13471,13482]
+    identifier: _exists [13471,13478]
+    call_argument [13479,13481]
+        identifier: id [13479,13481]
+to
+return_statement [14444,14463]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: records[id].minter [14652,14670]
+to
+return_statement [14600,14618]
+at 1
+------------
+===
+insert-node
+---
+member_expression: records[id].minter [14652,14670]
+to
+return_statement [14600,14618]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: records[id].metadataLocked [14894,14920]
+to
+return_statement [14028,14044]
+at 1
+------------
+===
+insert-node
+---
+member_expression: records[id].metadataLocked [14894,14920]
+to
+return_statement [14028,14044]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: records[id].metadataLockedBy [15133,15161]
+to
+return_statement [14316,14332]
+at 1
+------------
+===
+insert-node
+---
+member_expression: records[id].metadataLockedBy [15133,15161]
+to
+return_statement [14316,14332]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: records[id].controller [15387,15409]
+to
+return_statement [13736,13750]
+at 1
+------------
+===
+insert-node
+---
+member_expression: records[id].controller [15387,15409]
+to
+return_statement [13736,13750]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: records[id].royaltyAmount [15628,15653]
+to
+return_statement [14891,14905]
+at 1
+------------
+===
+insert-node
+---
+member_expression: records[id].royaltyAmount [15628,15653]
+to
+return_statement [14891,14905]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [15849,15890]
+    revert_statement [15858,15883]
+        revert: revert [15858,15864]
+        identifier: DomainNotExists [15865,15880]
+        revert_arguments [15880,15882]
+to
+if_statement [15831,15890]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [16138,16179]
+    revert_statement [16147,16172]
+        revert: revert [16147,16153]
+        identifier: DomainNotExists [16154,16169]
+        revert_arguments [16169,16171]
+to
+if_statement [16115,16179]
+at 2
+
+New cluster:
+MOVE from if_statement [16953,17024]
+------------
+===
+move-tree
+---
+binary_expression [3672,3697]
+    call_expression [3672,3683]
+        identifier: ownerOf [3672,3679]
+        call_argument [3680,3682]
+            identifier: id [3680,3682]
+    comparison_operator: == [3684,3686]
+    member_expression: msg.sender [3687,3697]
+to
+if_statement [16953,17024]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [16984,17024]
+    revert_statement [16993,17017]
+        revert: revert [16993,16999]
+        identifier: NotDomainOwner [17000,17014]
+        revert_arguments [17014,17016]
+to
+if_statement [16953,17024]
+at 2
+
+New cluster:
+MOVE from if_statement [21374,21452]
+------------
+===
+move-tree
+---
+binary_expression [19956,19983]
+    identifier: endingIndex [19956,19967]
+    arithmetic_operator: - [19968,19969]
+    identifier: startingIndex [19970,19983]
+to
+if_statement [21374,21452]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [21408,21452]
+    revert_statement [21417,21445]
+        revert: revert [21417,21423]
+        identifier: InvalidDomainIndex [21424,21442]
+        revert_arguments [21442,21444]
+to
+if_statement [21374,21452]
+at 2
+
+New cluster:
+MOVE from if_statement [22104,22182]
+------------
+===
+move-tree
+---
+binary_expression [20619,20646]
+    identifier: endingIndex [20619,20630]
+    arithmetic_operator: - [20631,20632]
+    identifier: startingIndex [20633,20646]
+to
+if_statement [22104,22182]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [22138,22182]
+    revert_statement [22147,22175]
+        revert: revert [22147,22153]
+        identifier: InvalidDomainIndex [22154,22172]
+        revert_arguments [22172,22174]
+to
+if_statement [22104,22182]
+at 2
+
+New cluster:
+===
+insert-node
+---
+increment_operator: ++ [3242,3244]
+to
+update_expression [2533,2550]
+at 0
+------------
+===
+insert-node
+---
+increment_operator: ++ [3242,3244]
+to
+update_expression [2533,2550]
+at 0
+
+New cluster:
+UPDATE from require to _onlyController
+------------
+===
+update-node
+---
+identifier: require [19948,19955]
+replace require by _onlyController
+===
+update-node
+---
+identifier: require [20611,20618]
+replace require by _onlyController
+===
+update-node
+---
+identifier: require [2963,2970]
+replace require by _onlyController
+
+New cluster:
+MOVE from call_expression [3659,3676]
+------------
+===
+move-tree
+---
+identifier: require [2963,2970]
+to
+call_expression [3659,3676]
+at 0
+
+New cluster:
+UPDATE from && to ||
+------------
+===
+update-node
+---
+logical_operator: && [2979,2981]
+replace && by ||
+
+New cluster:
+UPDATE from != to ==
+------------
+===
+update-node
+---
+comparison_operator: != [3113,3115]
+replace != by ==
+===
+update-node
+---
+comparison_operator: > [8950,8951]
+replace > by ==
+===
+update-node
+---
+comparison_operator: != [2974,2976]
+replace != by ==
+
+New cluster:
+UPDATE from == to !=
+------------
+===
+update-node
+---
+comparison_operator: == [3684,3686]
+replace == by !=
+===
+update-node
+---
+comparison_operator: == [9107,9109]
+replace == by !=
+===
+update-node
+---
+comparison_operator: == [16740,16742]
+replace == by !=
+===
+update-node
+---
+comparison_operator: == [16521,16523]
+replace == by !=
+
+New cluster:
+UPDATE from <= to >
+------------
+===
+update-node
+---
+comparison_operator: <= [9186,9188]
+replace <= by >
+===
+update-node
+---
+comparison_operator: <= [2985,2987]
+replace <= by >
+
+New cluster:
+MOVE from binary_expression [10135,10181]
+------------
+===
+move-tree
+---
+binary_expression [9250,9274]
+    identifier: parentId [9250,9258]
+    comparison_operator: != [9259,9261]
+    identifier: rootDomainId [9262,9274]
+to
+binary_expression [10135,10181]
+at 0
+
+New cluster:
+UPDATE from onlyOwnerOf to _onlyOwnerOf
+------------
+===
+update-node
+---
+identifier: onlyOwnerOf [10635,10646]
+replace onlyOwnerOf by _onlyOwnerOf
+===
+update-node
+---
+identifier: require [11099,11106]
+replace require by _onlyOwnerOf
+
+New cluster:
+MOVE from call_expression [11493,11509]
+------------
+===
+move-tree
+---
+identifier: onlyOwnerOf [10635,10646]
+to
+call_expression [11493,11509]
+at 0
+===
+move-tree
+---
+call_argument [10647,10649]
+    identifier: id [10647,10649]
+to
+call_expression [11493,11509]
+at 1
+
+New cluster:
+MOVE from call_expression [11947,11963]
+------------
+===
+move-tree
+---
+identifier: require [11099,11106]
+to
+call_expression [11947,11963]
+at 0
+
+New cluster:
+MOVE from call_expression [11947,11963]
+------------
+===
+move-tree
+---
+call_argument [11085,11087]
+    identifier: id [11085,11087]
+to
+call_expression [11947,11963]
+at 1
+
+New cluster:
+MOVE from call_expression [12360,12376]
+------------
+===
+move-tree
+---
+call_argument [11482,11484]
+    identifier: id [11482,11484]
+to
+call_expression [12360,12376]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [13228,13324]
+to
+block_statement [12282,12506]
+at 1
+------------
+===
+insert-node
+---
+!: ! [13232,13233]
+to
+unary_expression [13232,13274]
+at 0
+===
+insert-node
+---
+if_statement [13228,13324]
+to
+block_statement [12282,12506]
+at 1
+===
+insert-node
+---
+if: if [13228,13230]
+to
+if_statement [13228,13324]
+at 0
+===
+insert-node
+---
+unary_expression [13232,13274]
+to
+if_statement [13228,13324]
+at 1
+
+New cluster:
+MOVE from unary_expression [15835,15847]
+------------
+===
+move-tree
+---
+call_expression [15090,15101]
+    identifier: _exists [15090,15097]
+    call_argument [15098,15100]
+        identifier: id [15098,15100]
+to
+unary_expression [15835,15847]
+at 1
+
+New cluster:
+MOVE from unary_expression [16119,16136]
+------------
+===
+move-tree
+---
+call_expression [15392,15408]
+    identifier: _exists [15392,15399]
+    call_argument [15400,15407]
+        identifier: tokenId [15400,15407]
+to
+unary_expression [16119,16136]
+at 1
+
+New cluster:
+===
+insert-node
+---
+increment_operator: ++ [19442,19444]
+to
+update_expression [18055,18058]
+at 0
+------------
+===
+insert-node
+---
+increment_operator: ++ [19442,19444]
+to
+update_expression [18055,18058]
+at 0
+
+New cluster:
+===
+insert-node
+---
+increment_operator: ++ [20316,20318]
+to
+update_expression [18915,18918]
+at 0
+------------
+===
+insert-node
+---
+increment_operator: ++ [20316,20318]
+to
+update_expression [18915,18918]
+at 0
+
+New cluster:
+MOVE from call_expression [21350,21367]
+------------
+===
+move-tree
+---
+identifier: require [19948,19955]
+to
+call_expression [21350,21367]
+at 0
+
+New cluster:
+===
+insert-node
+---
+comparison_operator: <= [21390,21392]
+to
+binary_expression [19956,19983]
+at 1
+------------
+===
+insert-node
+---
+comparison_operator: <= [21390,21392]
+to
+binary_expression [19956,19983]
+at 1
+
+New cluster:
+===
+insert-node
+---
+increment_operator: ++ [21528,21530]
+to
+update_expression [20094,20097]
+at 0
+------------
+===
+insert-node
+---
+increment_operator: ++ [21528,21530]
+to
+update_expression [20094,20097]
+at 0
+
+New cluster:
+MOVE from call_expression [22080,22097]
+------------
+===
+move-tree
+---
+identifier: require [20611,20618]
+to
+call_expression [22080,22097]
+at 0
+
+New cluster:
+===
+insert-node
+---
+comparison_operator: <= [22120,22122]
+to
+binary_expression [20619,20646]
+at 1
+------------
+===
+insert-node
+---
+comparison_operator: <= [22120,22122]
+to
+binary_expression [20619,20646]
+at 1
+
+New cluster:
+===
+insert-node
+---
+increment_operator: ++ [22259,22261]
+to
+update_expression [20758,20761]
+at 0
+------------
+===
+insert-node
+---
+increment_operator: ++ [22259,22261]
+to
+update_expression [20758,20761]
+at 0
+
+New cluster:
+UPDATE from require to InvalidFolderGroup
+------------
+===
+update-node
+---
+identifier: require [3035,3042]
+replace require by InvalidFolderGroup
+
+New cluster:
+MOVE from revert_statement [3729,3757]
+------------
+===
+move-tree
+---
+identifier: require [3035,3042]
+to
+revert_statement [3729,3757]
+at 1
+
+New cluster:
+UPDATE from require to EmptyDomainName
+------------
+===
+update-node
+---
+identifier: require [9055,9062]
+replace require by EmptyDomainName
+
+New cluster:
+MOVE from revert_statement [9832,9857]
+------------
+===
+move-tree
+---
+identifier: require [9055,9062]
+to
+revert_statement [9832,9857]
+at 1
+
+New cluster:
+UPDATE from require to SubdomainParent
+------------
+===
+update-node
+---
+identifier: require [9170,9177]
+replace require by SubdomainParent
+
+New cluster:
+MOVE from revert_statement [10010,10035]
+------------
+===
+move-tree
+---
+identifier: require [9170,9177]
+to
+revert_statement [10010,10035]
+at 1
+
+New cluster:
+MOVE from unary_expression [10163,10181]
+------------
+===
+move-tree
+---
+call_expression [9329,9346]
+    identifier: _exists [9329,9336]
+    call_argument [9337,9345]
+        identifier: parentId [9337,9345]
+to
+unary_expression [10163,10181]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [13276,13324]
+    revert_statement [13287,13315]
+        revert: revert [13287,13293]
+        identifier: NotApprovedOrOwner [13294,13312]
+        revert_arguments [13312,13314]
+to
+if_statement [13228,13324]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: NotController [17160,17173]
+to
+revert_statement [3569,3598]
+at 1
+------------
+===
+insert-node
+---
+identifier: NotController [17160,17173]
+to
+revert_statement [3569,3598]
+at 1
+
+New cluster:
+===
+insert-node
+---
+revert_arguments [17173,17175]
+to
+revert_statement [3569,3598]
+at 2
+------------
+===
+insert-node
+---
+revert_arguments [17173,17175]
+to
+revert_statement [3569,3598]
+at 2
+
+New cluster:
+MOVE from if_statement [17798,17873]
+------------
+===
+move-tree
+---
+binary_expression [16509,16534]
+    call_expression [16509,16520]
+        identifier: ownerOf [16509,16516]
+        call_argument [16517,16519]
+            identifier: id [16517,16519]
+    comparison_operator: == [16521,16523]
+    member_expression: msg.sender [16524,16534]
+to
+if_statement [17798,17873]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [17829,17873]
+    revert_statement [17840,17864]
+        revert: revert [17840,17846]
+        identifier: NotDomainOwner [17847,17861]
+        revert_arguments [17861,17863]
+to
+if_statement [17798,17873]
+at 2
+
+New cluster:
+MOVE from if_statement [17881,17957]
+------------
+===
+move-tree
+---
+call_expression [16651,16677]
+    identifier: isDomainMetadataLocked [16651,16673]
+    call_argument [16674,16676]
+        identifier: id [16674,16676]
+to
+if_statement [17881,17957]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [17913,17957]
+    revert_statement [17924,17948]
+        revert: revert [17924,17930]
+        identifier: LockedMetadata [17931,17945]
+        revert_arguments [17945,17947]
+to
+if_statement [17881,17957]
+at 2
+
+New cluster:
+MOVE from if_statement [17979,18059]
+------------
+===
+move-tree
+---
+unary_expression [16569,16596]
+    !: ! [16569,16570]
+    call_expression [16570,16596]
+        identifier: isDomainMetadataLocked [16570,16592]
+        call_argument [16593,16595]
+            identifier: id [16593,16595]
+to
+if_statement [17979,18059]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [18012,18059]
+    revert_statement [18023,18050]
+        revert: revert [18023,18029]
+        identifier: NotLockedMetadata [18030,18047]
+        revert_arguments [18047,18049]
+to
+if_statement [17979,18059]
+at 2
+
+New cluster:
+MOVE from if_statement [18067,18160]
+------------
+===
+move-tree
+---
+binary_expression [16713,16753]
+    call_expression [16713,16739]
+        identifier: domainMetadataLockedBy [16713,16735]
+        call_argument [16736,16738]
+            identifier: id [16736,16738]
+    comparison_operator: == [16740,16742]
+    member_expression: msg.sender [16743,16753]
+to
+if_statement [18067,18160]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [18113,18160]
+    revert_statement [18124,18151]
+        revert: revert [18124,18130]
+        identifier: NotMetadataLocker [18131,18148]
+        revert_arguments [18148,18150]
+to
+if_statement [18067,18160]
+at 2
+
+New cluster:
+MOVE from unary_expression [13232,13274]
+------------
+===
+move-tree
+---
+call_expression [12347,12388]
+    identifier: _isApprovedOrOwner [12347,12365]
+    call_argument [12366,12378]
+        call_expression [12366,12378]
+            identifier: _msgSender [12366,12376]
+    call_argument [12380,12387]
+        identifier: tokenId [12380,12387]
+to
+unary_expression [13232,13274]
+at 1
+
+New cluster:
+MOVE from call_expression [20117,20325]
+------------
+===
+move-tree
+---
+call_argument [20829,20855]
+    call_expression [20829,20855]
+        identifier: uint2str [20829,20837]
+        call_argument [20838,20854]
+            binary_expression [20838,20854]
+                identifier: i [20838,20839]
+                arithmetic_operator: + [20840,20841]
+                identifier: namingOffset [20842,20854]
+to
+call_expression [20117,20325]
+at 2
+
+New cluster:
+MOVE from call_expression [20782,20980]
+------------
+===
+move-tree
+---
+call_argument [20162,20188]
+    call_expression [20162,20188]
+        identifier: uint2str [20162,20170]
+        call_argument [20171,20187]
+            binary_expression [20171,20187]
+                identifier: i [20171,20172]
+                arithmetic_operator: + [20173,20174]
+                identifier: namingOffset [20175,20187]
+to
+call_expression [20782,20980]
+at 2
+
+New cluster:
+===
+insert-node
+---
+member_expression: CustomStrings.toString [21596,21618]
+to
+call_expression [20829,20855]
+at 0
+------------
+===
+insert-node
+---
+member_expression: CustomStrings.toString [21596,21618]
+to
+call_expression [20829,20855]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: CustomStrings.toString [22330,22352]
+to
+call_expression [20162,20188]
+at 0
+------------
+===
+insert-node
+---
+member_expression: CustomStrings.toString [22330,22352]
+to
+call_expression [20162,20188]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: CustomStrings.toString [19597,19619]
+to
+call_expression [18210,18245]
+at 0
+------------
+===
+insert-node
+---
+member_expression: CustomStrings.toString [19597,19619]
+to
+call_expression [18210,18245]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: CustomStrings.toString [20491,20513]
+to
+call_expression [19090,19124]
+at 0
+------------
+===
+insert-node
+---
+member_expression: CustomStrings.toString [20491,20513]
+to
+call_expression [19090,19124]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: CustomStrings.toString [21722,21744]
+to
+call_expression [20262,20273]
+at 0
+------------
+===
+insert-node
+---
+member_expression: CustomStrings.toString [21722,21744]
+to
+call_expression [20262,20273]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: Registrar [625,634]
+===
+------------
+===
+delete-node
+---
+identifier: Registrar [625,634]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [635,637]
+===
+------------
+===
+delete-node
+---
+is: is [635,637]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [2381,2395]
+    identifier: onlyController [2381,2395]
+
+New cluster:
+===
+delete-node
+---
+increment_operator: ++ [2548,2550]
+===
+------------
+===
+delete-node
+---
+increment_operator: ++ [2548,2550]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [2938,2952]
+    identifier: onlyController [2938,2952]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2963,3029]
+===
+------------
+===
+delete-node
+---
+call_argument [2971,3003]
+===
+===
+delete-node
+---
+expression_statement [2963,3029]
+===
+===
+delete-node
+---
+call_expression [2963,3028]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3005,3027]
+    string_literal [3005,3027]
+        string: "Folder group invalid" [3005,3027]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3035,3214]
+===
+------------
+===
+delete-node
+---
+call_argument [3051,3169]
+===
+===
+delete-node
+---
+call_expression [3035,3213]
+===
+===
+delete-node
+---
+expression_statement [3035,3214]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3178,3206]
+    string_literal [3178,3206]
+        string: "Folder groups are the same" [3178,3206]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [13182,13206]
+    type_name: bool [13182,13186]
+    identifier: accountIsController [13187,13206]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [13182,13230]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [13182,13230]
+===
+===
+delete-node
+---
+affectation_operator: = [13207,13208]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [13236,13263]
+    return: return [13236,13242]
+    identifier: accountIsController [13243,13262]
+
+New cluster:
+===
+delete-node
+---
+modifier_definition [3461,3618]
+===
+------------
+===
+delete-node
+---
+modifier_definition [3461,3618]
+===
+===
+delete-node
+---
+modifier: modifier [3461,3469]
+===
+===
+delete-node
+---
+identifier: onlyController [3470,3484]
+===
+
+New cluster:
+===
+delete-node
+---
+modifier_definition [3624,3729]
+===
+------------
+===
+delete-node
+---
+modifier_definition [3624,3729]
+===
+===
+delete-node
+---
+expression_statement [3664,3716]
+===
+===
+delete-node
+---
+call_argument [3672,3697]
+===
+===
+delete-node
+---
+modifier: modifier [3624,3632]
+===
+===
+delete-node
+---
+call_expression [3664,3715]
+===
+===
+delete-node
+---
+identifier: require [3664,3671]
+===
+===
+delete-node
+---
+identifier: onlyOwnerOf [3633,3644]
+===
+===
+delete-node
+---
+function_body [3657,3729]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3699,3714]
+    string_literal [3699,3714]
+        string: "ZR: Not owner" [3699,3714]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3722,3724]
+    identifier: _ [3722,3723]
+
+New cluster:
+===
+delete-node
+---
+function_definition [4660,4982]
+===
+------------
+===
+delete-node
+---
+call_argument [4840,4864]
+===
+===
+delete-node
+---
+identifier: require [4832,4839]
+===
+===
+delete-node
+---
+function: function [4660,4668]
+===
+===
+delete-node
+---
+function_definition [4660,4982]
+===
+===
+delete-node
+---
+function_body [4712,4982]
+===
+===
+delete-node
+---
+identifier: addController [4669,4682]
+===
+===
+delete-node
+---
+visibility: external [4703,4711]
+===
+===
+delete-node
+---
+expression_statement [4832,4901]
+===
+===
+delete-node
+---
+call_expression [4832,4900]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4719,4826]
+    call_expression [4719,4825]
+        identifier: require [4719,4726]
+        call_argument [4735,4789]
+            binary_expression [4735,4789]
+                member_expression: msg.sender == owner() || msg.sender [4735,4770]
+                comparison_operator: == [4771,4773]
+                identifier: parentRegistrar [4774,4789]
+        call_argument [4798,4818]
+            string_literal [4798,4818]
+                string: "ZR: Not authorized" [4798,4818]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4866,4899]
+    string_literal [4866,4899]
+        string: "ZR: Controller is already added" [4866,4899]
+
+New cluster:
+===
+delete-node
+---
+function_definition [5121,5465]
+===
+------------
+===
+delete-node
+---
+visibility: external [5167,5175]
+===
+===
+delete-node
+---
+call_argument [5323,5346]
+===
+===
+delete-node
+---
+expression_statement [5315,5381]
+===
+===
+delete-node
+---
+function_body [5195,5465]
+===
+===
+delete-node
+---
+function: function [5121,5129]
+===
+===
+delete-node
+---
+identifier: removeController [5130,5146]
+===
+===
+delete-node
+---
+call_expression [5315,5380]
+===
+===
+delete-node
+---
+identifier: require [5315,5322]
+===
+===
+delete-node
+---
+function_definition [5121,5465]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [5202,5309]
+    call_expression [5202,5308]
+        identifier: require [5202,5209]
+        call_argument [5218,5272]
+            binary_expression [5218,5272]
+                member_expression: msg.sender == owner() || msg.sender [5218,5253]
+                comparison_operator: == [5254,5256]
+                identifier: parentRegistrar [5257,5272]
+        call_argument [5281,5301]
+            string_literal [5281,5301]
+                string: "ZR: Not authorized" [5281,5301]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5348,5379]
+    string_literal [5348,5379]
+        string: "ZR: Controller does not exist" [5348,5379]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [6326,6340]
+    identifier: onlyController [6326,6340]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [6758,6772]
+    identifier: onlyController [6758,6772]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [7306,7320]
+    identifier: onlyController [7306,7320]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8922,8973]
+===
+------------
+===
+delete-node
+---
+expression_statement [8922,8973]
+===
+===
+delete-node
+---
+call_expression [8922,8972]
+===
+===
+delete-node
+---
+identifier: require [8922,8929]
+===
+===
+delete-node
+---
+call_argument [8930,8953]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8955,8971]
+    string_literal [8955,8971]
+        string: "ZR: Empty name" [8955,8971]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [9055,9164]
+===
+------------
+===
+delete-node
+---
+call_expression [9055,9163]
+===
+===
+delete-node
+---
+expression_statement [9055,9164]
+===
+===
+delete-node
+---
+call_argument [9071,9120]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [9129,9156]
+    string_literal [9129,9156]
+        string: "ZR: Parent is subcontract" [9129,9156]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [9170,9240]
+===
+------------
+===
+delete-node
+---
+call_expression [9170,9239]
+===
+===
+delete-node
+---
+call_argument [9178,9204]
+===
+===
+delete-node
+---
+expression_statement [9170,9240]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [9206,9238]
+    string_literal [9206,9238]
+        string: "ZR: Domain group doesn't exist" [9206,9238]
+
+New cluster:
+===
+delete-node
+---
+block_statement [9276,9372]
+===
+------------
+===
+delete-node
+---
+call_argument [9329,9346]
+===
+===
+delete-node
+---
+expression_statement [9321,9365]
+===
+===
+delete-node
+---
+call_expression [9321,9364]
+===
+===
+delete-node
+---
+identifier: require [9321,9328]
+===
+===
+delete-node
+---
+block_statement [9276,9372]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [9348,9363]
+    string_literal [9348,9363]
+        string: "ZR: No parent" [9348,9363]
+
+New cluster:
+===
+delete-node
+---
+modifier_invocation [10635,10650]
+===
+------------
+===
+delete-node
+---
+modifier_invocation [10635,10650]
+===
+
+New cluster:
+===
+delete-node
+---
+function_body [10654,10817]
+===
+------------
+===
+delete-node
+---
+identifier: require [10661,10668]
+===
+===
+delete-node
+---
+unary_expression [10669,10696]
+===
+===
+delete-node
+---
+function_body [10654,10817]
+===
+===
+delete-node
+---
+call_argument [10669,10696]
+===
+===
+delete-node
+---
+call_expression [10661,10720]
+===
+===
+delete-node
+---
+expression_statement [10661,10721]
+===
+===
+delete-node
+---
+!: ! [10669,10670]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10698,10719]
+    string_literal [10698,10719]
+        string: "ZR: Metadata locked" [10698,10719]
+
+New cluster:
+===
+delete-node
+---
+modifier_invocation [11073,11088]
+===
+------------
+===
+delete-node
+---
+identifier: onlyOwnerOf [11073,11084]
+===
+===
+delete-node
+---
+modifier_invocation [11073,11088]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [11099,11159]
+===
+------------
+===
+delete-node
+---
+unary_expression [11107,11134]
+===
+===
+delete-node
+---
+!: ! [11107,11108]
+===
+===
+delete-node
+---
+call_expression [11099,11158]
+===
+===
+delete-node
+---
+expression_statement [11099,11159]
+===
+===
+delete-node
+---
+call_argument [11107,11134]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11136,11157]
+    string_literal [11136,11157]
+        string: "ZR: Metadata locked" [11136,11157]
+
+New cluster:
+===
+delete-node
+---
+function_definition [11376,11598]
+===
+------------
+===
+delete-node
+---
+identifier: onlyOwnerOf [11470,11481]
+===
+===
+delete-node
+---
+function_body [11489,11598]
+===
+===
+delete-node
+---
+function_definition [11376,11598]
+===
+===
+delete-node
+---
+modifier_invocation [11470,11485]
+===
+===
+delete-node
+---
+visibility: external [11442,11450]
+===
+===
+delete-node
+---
+identifier: setDomainMetadataUri [11385,11405]
+===
+===
+delete-node
+---
+function: function [11376,11384]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [11496,11556]
+    call_expression [11496,11555]
+        identifier: require [11496,11503]
+        call_argument [11504,11531]
+            unary_expression [11504,11531]
+                !: ! [11504,11505]
+                call_expression [11505,11531]
+                    identifier: isDomainMetadataLocked [11505,11527]
+                    call_argument [11528,11530]
+                        identifier: id [11528,11530]
+        call_argument [11533,11554]
+            string_literal [11533,11554]
+                string: "ZR: Metadata locked" [11533,11554]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [12329,12460]
+===
+------------
+===
+delete-node
+---
+call_expression [12329,12459]
+===
+===
+delete-node
+---
+expression_statement [12329,12460]
+===
+===
+delete-node
+---
+identifier: require [12329,12336]
+===
+===
+delete-node
+---
+call_argument [12347,12388]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12399,12450]
+    string_literal [12399,12450]
+        string: "ERC721: transfer caller is not owner nor approved" [12399,12450]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [13448,13468]
+    type_name: bool [13448,13452]
+    identifier: domainNftExists [13453,13468]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [13448,13483]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [13469,13470]
+===
+===
+delete-node
+---
+variable_declaration_statement [13448,13483]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [13489,13512]
+    return: return [13489,13495]
+    identifier: domainNftExists [13496,13511]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14550,14594]
+    variable_declaration [14550,14568]
+        type_name: address [14550,14557]
+        identifier: controller [14558,14568]
+    affectation_operator: = [14569,14570]
+    member_expression: records[id].controller [14571,14593]
+
+New cluster:
+===
+delete-node
+---
+identifier: controller [14607,14617]
+===
+------------
+===
+delete-node
+---
+identifier: controller [14607,14617]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [13979,14022]
+    variable_declaration [13979,13992]
+        type_name: bool [13979,13983]
+        identifier: isLocked [13984,13992]
+    affectation_operator: = [13993,13994]
+    member_expression: records[id].metadataLocked [13995,14021]
+
+New cluster:
+===
+delete-node
+---
+identifier: isLocked [14035,14043]
+===
+------------
+===
+delete-node
+---
+identifier: isLocked [14035,14043]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14262,14310]
+    variable_declaration [14262,14278]
+        type_name: address [14262,14269]
+        identifier: lockedBy [14270,14278]
+    affectation_operator: = [14279,14280]
+    member_expression: records[id].metadataLockedBy [14281,14309]
+
+New cluster:
+===
+delete-node
+---
+identifier: lockedBy [14323,14331]
+===
+------------
+===
+delete-node
+---
+identifier: lockedBy [14323,14331]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [13694,13730]
+    variable_declaration [13694,13708]
+        type_name: address [13694,13701]
+        identifier: minter [13702,13708]
+    affectation_operator: = [13709,13710]
+    member_expression: records[id].minter [13711,13729]
+
+New cluster:
+===
+delete-node
+---
+identifier: minter [13743,13749]
+===
+------------
+===
+delete-node
+---
+identifier: minter [13743,13749]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [14842,14885]
+    variable_declaration [14842,14856]
+        type_name: uint256 [14842,14849]
+        identifier: amount [14850,14856]
+    affectation_operator: = [14857,14858]
+    member_expression: records[id].royaltyAmount [14859,14884]
+
+New cluster:
+===
+delete-node
+---
+identifier: amount [14898,14904]
+===
+------------
+===
+delete-node
+---
+identifier: amount [14898,14904]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [15006,15200]
+===
+------------
+===
+delete-node
+---
+identifier: require [15082,15089]
+===
+===
+delete-node
+---
+identifier: parentOf [15015,15023]
+===
+===
+delete-node
+---
+visibility: public [15036,15042]
+===
+===
+delete-node
+---
+function: function [15006,15014]
+===
+===
+delete-node
+---
+call_expression [15082,15124]
+===
+===
+delete-node
+---
+function_body [15075,15200]
+===
+===
+delete-node
+---
+function_definition [15006,15200]
+===
+===
+delete-node
+---
+call_argument [15090,15101]
+===
+===
+delete-node
+---
+expression_statement [15082,15125]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [15103,15123]
+    string_literal [15103,15123]
+        string: "ZR: Does not exist" [15103,15123]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [15133,15173]
+    variable_declaration [15133,15149]
+        type_name: uint256 [15133,15140]
+        identifier: parentId [15141,15149]
+    affectation_operator: = [15150,15151]
+    member_expression: records[id].parentId [15152,15172]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [15179,15195]
+    return: return [15179,15185]
+    identifier: parentId [15186,15194]
+
+New cluster:
+===
+delete-node
+---
+function_definition [15206,15863]
+===
+------------
+===
+delete-node
+---
+function: function [15206,15214]
+===
+===
+delete-node
+---
+identifier: tokenURI [15215,15223]
+===
+===
+delete-node
+---
+identifier: require [15376,15383]
+===
+===
+delete-node
+---
+function_definition [15206,15863]
+===
+===
+delete-node
+---
+call_expression [15376,15473]
+===
+===
+delete-node
+---
+visibility: public [15246,15252]
+===
+===
+delete-node
+---
+function_body [15369,15863]
+===
+===
+delete-node
+---
+call_argument [15392,15408]
+===
+===
+delete-node
+---
+virtual: virtual [15268,15275]
+===
+===
+delete-node
+---
+expression_statement [15376,15474]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [15417,15466]
+    string_literal [15417,15466]
+        string: "ERC721Metadata: URI query for nonexistent token" [15417,15466]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [15482,15528]
+    variable_declaration [15482,15508]
+        type_name: DomainRecord [15482,15494]
+        memory: memory [15495,15501]
+        identifier: domain [15502,15508]
+    affectation_operator: = [15509,15510]
+    array_access [15511,15527]
+        identifier: records [15511,15518]
+        identifier: tokenId [15519,15526]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [15536,15819]
+    if: if [15536,15538]
+    binary_expression [15540,15563]
+        member_expression: domain.domainGroup [15540,15558]
+        comparison_operator: != [15559,15561]
+        number_literal: 0 [15562,15563]
+    block_statement [15565,15819]
+        return_statement [15621,15812]
+            return: return [15621,15627]
+            type_cast_expression [15637,15811]
+                primitive_type: string [15637,15643]
+                call_argument [15656,15800]
+                    call_expression [15656,15800]
+                        member_expression: abi.encodePacked [15656,15672]
+                        call_argument [15687,15735]
+                            member_expression: domainGroups[domain.domainGroup].baseMetadataUri [15687,15735]
+                        call_argument [15750,15787]
+                            call_expression [15750,15787]
+                                identifier: uint2str [15750,15758]
+                                call_argument [15759,15786]
+                                    member_expression: domain.domainGroupFileIndex [15759,15786]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [3575,3597]
+    string_literal [3576,3596]
+        string: "ZR: Not controller" [3576,3596]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3611,3613]
+    identifier: _ [3611,3612]
+
+New cluster:
+===
+delete-node
+---
+function_definition [16172,16391]
+===
+------------
+===
+delete-node
+---
+function_definition [16172,16391]
+===
+===
+delete-node
+---
+visibility: internal [16234,16242]
+===
+===
+delete-node
+---
+identifier: _setDomainMetadataUri [16181,16202]
+===
+===
+delete-node
+---
+function_body [16243,16391]
+===
+===
+delete-node
+---
+function: function [16172,16180]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [16250,16320]
+    call_expression [16250,16319]
+        identifier: require [16250,16257]
+        call_argument [16258,16286]
+            binary_expression [16258,16286]
+                member_expression: records[id].domainGroup [16258,16281]
+                comparison_operator: == [16282,16284]
+                number_literal: 0 [16285,16286]
+        call_argument [16288,16318]
+            string_literal [16288,16318]
+                string: "Must update via domain group" [16288,16318]
+
+New cluster:
+===
+delete-node
+---
+function_definition [16397,16785]
+===
+------------
+===
+delete-node
+---
+identifier: require [16643,16650]
+===
+===
+delete-node
+---
+call_argument [16713,16753]
+===
+===
+delete-node
+---
+visibility: internal [16459,16467]
+===
+===
+delete-node
+---
+expression_statement [16643,16697]
+===
+===
+delete-node
+---
+expression_statement [16705,16773]
+===
+===
+delete-node
+---
+function_definition [16397,16785]
+===
+===
+delete-node
+---
+call_expression [16561,16620]
+===
+===
+delete-node
+---
+call_expression [16705,16772]
+===
+===
+delete-node
+---
+if_statement [16480,16780]
+===
+===
+delete-node
+---
+if: if [16480,16482]
+===
+===
+delete-node
+---
+else: else [16629,16633]
+===
+===
+delete-node
+---
+call_argument [16651,16677]
+===
+===
+delete-node
+---
+identifier: require [16705,16712]
+===
+===
+delete-node
+---
+call_expression [16643,16696]
+===
+===
+delete-node
+---
+function_body [16473,16785]
+===
+===
+delete-node
+---
+function: function [16397,16405]
+===
+===
+delete-node
+---
+expression_statement [16561,16621]
+===
+===
+delete-node
+---
+block_statement [16634,16780]
+===
+===
+delete-node
+---
+call_argument [16509,16534]
+===
+===
+delete-node
+---
+block_statement [16492,16628]
+===
+===
+delete-node
+---
+identifier: require [16561,16568]
+===
+===
+delete-node
+---
+identifier: _validateLockDomainMetadata [16406,16433]
+===
+===
+delete-node
+---
+call_expression [16501,16552]
+===
+===
+delete-node
+---
+identifier: toLock [16484,16490]
+===
+===
+delete-node
+---
+call_argument [16569,16596]
+===
+===
+delete-node
+---
+expression_statement [16501,16553]
+===
+===
+delete-node
+---
+identifier: require [16501,16508]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16536,16551]
+    string_literal [16536,16551]
+        string: "ZR: Not owner" [16536,16551]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16598,16619]
+    string_literal [16598,16619]
+        string: "ZR: Metadata locked" [16598,16619]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16679,16695]
+    string_literal [16679,16695]
+        string: "ZR: Not locked" [16679,16695]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16755,16771]
+    string_literal [16755,16771]
+        string: "ZR: Not locker" [16755,16771]
+
+New cluster:
+===
+delete-node
+---
+increment_operator: ++ [18056,18058]
+===
+------------
+===
+delete-node
+---
+increment_operator: ++ [18056,18058]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: uint2str [18210,18218]
+===
+------------
+===
+delete-node
+---
+identifier: uint2str [18210,18218]
+===
+
+New cluster:
+===
+delete-node
+---
+increment_operator: ++ [18916,18918]
+===
+------------
+===
+delete-node
+---
+increment_operator: ++ [18916,18918]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: uint2str [19090,19098]
+===
+------------
+===
+delete-node
+---
+identifier: uint2str [19090,19098]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [19926,19940]
+    identifier: onlyController [19926,19940]
+
+New cluster:
+===
+delete-node
+---
+arithmetic_operator: - [19968,19969]
+===
+------------
+===
+delete-node
+---
+arithmetic_operator: - [19968,19969]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [19948,20018]
+===
+------------
+===
+delete-node
+---
+binary_expression [19956,19987]
+===
+===
+delete-node
+---
+number_literal: 0 [19986,19987]
+===
+===
+delete-node
+---
+expression_statement [19948,20018]
+===
+===
+delete-node
+---
+call_argument [19956,19987]
+===
+===
+delete-node
+---
+call_expression [19948,20017]
+===
+===
+delete-node
+---
+comparison_operator: > [19984,19985]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19989,20016]
+    string_literal [19989,20016]
+        string: "Invalid number of domains" [19989,20016]
+
+New cluster:
+===
+delete-node
+---
+increment_operator: ++ [20095,20097]
+===
+------------
+===
+delete-node
+---
+increment_operator: ++ [20095,20097]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: uint2str [20829,20837]
+===
+------------
+===
+delete-node
+---
+identifier: uint2str [20829,20837]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: uint2str [20262,20270]
+===
+------------
+===
+delete-node
+---
+identifier: uint2str [20262,20270]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [20589,20603]
+    identifier: onlyController [20589,20603]
+
+New cluster:
+===
+delete-node
+---
+arithmetic_operator: - [20631,20632]
+===
+------------
+===
+delete-node
+---
+arithmetic_operator: - [20631,20632]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [20611,20681]
+===
+------------
+===
+delete-node
+---
+comparison_operator: > [20647,20648]
+===
+===
+delete-node
+---
+number_literal: 0 [20649,20650]
+===
+===
+delete-node
+---
+call_argument [20619,20650]
+===
+===
+delete-node
+---
+expression_statement [20611,20681]
+===
+===
+delete-node
+---
+call_expression [20611,20680]
+===
+===
+delete-node
+---
+binary_expression [20619,20650]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20652,20679]
+    string_literal [20652,20679]
+        string: "Invalid number of domains" [20652,20679]
+
+New cluster:
+===
+delete-node
+---
+increment_operator: ++ [20759,20761]
+===
+------------
+===
+delete-node
+---
+increment_operator: ++ [20759,20761]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: uint2str [20162,20170]
+===
+------------
+===
+delete-node
+---
+identifier: uint2str [20162,20170]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [21086,21599]
+    function: function [21086,21094]
+    identifier: uint2str [21095,21103]
+    parameter [21104,21114]
+        type_name: uint256 [21104,21111]
+        identifier: _i [21112,21114]
+    visibility: internal [21121,21129]
+    state_mutability [21135,21139]
+        pure: pure [21135,21139]
+    return_type_definition [21145,21182]
+        returns: returns [21145,21152]
+        parameter [21154,21181]
+            type_name: string [21154,21160]
+            memory: memory [21161,21167]
+            identifier: _uintAsString [21168,21181]
+    function_body [21186,21599]
+        if_statement [21193,21233]
+            if: if [21193,21195]
+            binary_expression [21197,21204]
+                identifier: _i [21197,21199]
+                comparison_operator: == [21200,21202]
+                number_literal: 0 [21203,21204]
+            block_statement [21206,21233]
+                return_statement [21215,21226]
+                    return: return [21215,21221]
+                    string_literal [21222,21225]
+                        string: "0" [21222,21225]
+        variable_declaration_statement [21239,21254]
+            variable_declaration [21239,21248]
+                type_name: uint256 [21239,21246]
+                identifier: j [21247,21248]
+            affectation_operator: = [21249,21250]
+            identifier: _i [21251,21253]
+        variable_declaration_statement [21260,21272]
+            variable_declaration [21260,21271]
+                type_name: uint256 [21260,21267]
+                identifier: len [21268,21271]
+        while_statement [21278,21331]
+            while: while [21278,21283]
+            binary_expression [21285,21291]
+                identifier: j [21285,21286]
+                comparison_operator: != [21287,21289]
+                number_literal: 0 [21290,21291]
+            block_statement [21293,21331]
+                expression_statement [21302,21308]
+                    update_expression [21302,21307]
+                        identifier: len [21302,21305]
+                        increment_operator: ++ [21305,21307]
+                expression_statement [21316,21324]
+                    augmented_assignment_expression [21316,21323]
+                        identifier: j [21316,21317]
+                        affectation_operator: /= [21318,21320]
+                        number_literal: 10 [21321,21323]
+        variable_declaration_statement [21337,21372]
+            variable_declaration [21337,21354]
+                type_name: bytes [21337,21342]
+                memory: memory [21343,21349]
+                identifier: bstr [21350,21354]
+            affectation_operator: = [21355,21356]
+            call_expression [21357,21371]
+                new_expression [21357,21366]
+                    new: new [21357,21360]
+                    type_name: bytes [21361,21366]
+                call_argument [21367,21370]
+                    identifier: len [21367,21370]
+        variable_declaration_statement [21378,21394]
+            variable_declaration [21378,21387]
+                type_name: uint256 [21378,21385]
+                identifier: k [21386,21387]
+            affectation_operator: = [21388,21389]
+            identifier: len [21390,21393]
+        while_statement [21400,21568]
+            while: while [21400,21405]
+            binary_expression [21407,21414]
+                identifier: _i [21407,21409]
+                comparison_operator: != [21410,21412]
+                number_literal: 0 [21413,21414]
+            block_statement [21416,21568]
+                expression_statement [21425,21435]
+                    assignment_expression [21425,21434]
+                        identifier: k [21425,21426]
+                        affectation_operator: = [21427,21428]
+                        binary_expression [21429,21434]
+                            identifier: k [21429,21430]
+                            arithmetic_operator: - [21431,21432]
+                            number_literal: 1 [21433,21434]
+                variable_declaration_statement [21443,21490]
+                    variable_declaration [21443,21453]
+                        type_name: uint8 [21443,21448]
+                        identifier: temp [21449,21453]
+                    affectation_operator: = [21454,21455]
+                    parenthesized_expression [21456,21489]
+                        binary_expression [21457,21488]
+                            number_literal: 48 [21457,21459]
+                            arithmetic_operator: + [21460,21461]
+                            type_cast_expression [21462,21488]
+                                primitive_type: uint8 [21462,21467]
+                                call_argument [21468,21487]
+                                    binary_expression [21468,21487]
+                                        identifier: _i [21468,21470]
+                                        arithmetic_operator: - [21471,21472]
+                                        binary_expression [21473,21487]
+                                            parenthesized_expression [21473,21482]
+                                                binary_expression [21474,21481]
+                                                    identifier: _i [21474,21476]
+                                                    arithmetic_operator: / [21477,21478]
+                                                    number_literal: 10 [21479,21481]
+                                            arithmetic_operator: * [21483,21484]
+                                            number_literal: 10 [21485,21487]
+                variable_declaration_statement [21498,21523]
+                    variable_declaration [21498,21507]
+                        type_name: bytes1 [21498,21504]
+                        identifier: b1 [21505,21507]
+                    affectation_operator: = [21508,21509]
+                    type_cast_expression [21510,21522]
+                        primitive_type: bytes1 [21510,21516]
+                        call_argument [21517,21521]
+                            identifier: temp [21517,21521]
+                expression_statement [21531,21544]
+                    assignment_expression [21531,21543]
+                        array_access [21531,21538]
+                            identifier: bstr [21531,21535]
+                            identifier: k [21536,21537]
+                        affectation_operator: = [21539,21540]
+                        identifier: b1 [21541,21543]
+                expression_statement [21552,21561]
+                    augmented_assignment_expression [21552,21560]
+                        identifier: _i [21552,21554]
+                        affectation_operator: /= [21555,21557]
+                        number_literal: 10 [21558,21560]
+        return_statement [21574,21594]
+            return: return [21574,21580]
+            type_cast_expression [21581,21593]
+                primitive_type: string [21581,21587]
+                call_argument [21588,21592]
+                    identifier: bstr [21588,21592]
+

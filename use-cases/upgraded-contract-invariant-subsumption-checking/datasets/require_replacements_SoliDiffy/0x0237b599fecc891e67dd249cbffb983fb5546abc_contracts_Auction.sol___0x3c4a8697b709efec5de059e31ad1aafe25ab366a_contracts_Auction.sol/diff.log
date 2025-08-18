@@ -1,0 +1,1236 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+interface_declaration [1413,1604]
+    interface: interface [1413,1422]
+    identifier: IMarketplaceFeeEngine [1423,1444]
+    contract_body [1445,1604]
+        function_definition [1451,1602]
+            function: function [1451,1459]
+            identifier: getMarketplaceFee [1460,1477]
+            parameter [1487,1494]
+                type_name: bytes32 [1487,1494]
+            parameter [1504,1511]
+                type_name: address [1504,1511]
+            parameter [1521,1528]
+                type_name: uint256 [1521,1528]
+            visibility: external [1535,1543]
+            state_mutability [1544,1548]
+                view: view [1544,1548]
+            return_type_definition [1549,1601]
+                returns: returns [1549,1556]
+                parameter [1558,1582]
+                    type_name: address payable[] [1558,1575]
+                    memory: memory [1576,1582]
+                parameter [1584,1600]
+                    type_name: uint256[] [1584,1593]
+                    memory: memory [1594,1600]
+to
+source_file [0,29707]
+at 12
+
+New cluster:
+===
+insert-node
+---
+identifier: Auction [1675,1682]
+to
+contract_declaration [1473,29706]
+at 0
+------------
+===
+insert-node
+---
+identifier: Auction [1675,1682]
+to
+contract_declaration [1473,29706]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1683,1685]
+to
+contract_declaration [1473,29706]
+at 1
+------------
+===
+insert-node
+---
+is: is [1683,1685]
+to
+contract_declaration [1473,29706]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [4989,5039]
+    type_name: IMarketplaceFeeEngine [4989,5010]
+    visibility: public [5011,5017]
+    identifier: marketplaceFeeEngine [5018,5038]
+to
+contract_body [1540,29706]
+at 28
+
+New cluster:
+===
+insert-node
+---
+function_definition [12789,12979]
+to
+contract_body [1540,29706]
+at 37
+------------
+===
+insert-node
+---
+identifier: resultAuction [12798,12811]
+to
+function_definition [12789,12979]
+at 1
+===
+insert-node
+---
+visibility: external [12882,12890]
+to
+function_definition [12789,12979]
+at 5
+===
+insert-node
+---
+function: function [12789,12797]
+to
+function_definition [12789,12979]
+at 0
+===
+insert-node
+---
+function_definition [12789,12979]
+to
+contract_body [1540,29706]
+at 37
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [13395,13557]
+    function: function [13395,13403]
+    identifier: resultAuction [13404,13417]
+    parameter [13418,13437]
+        type_name: address [13418,13425]
+        identifier: _nftAddress [13426,13437]
+    parameter [13439,13455]
+        type_name: uint256 [13439,13446]
+        identifier: _tokenId [13447,13455]
+    visibility: external [13465,13473]
+    modifier_invocation [13482,13494]
+        identifier: nonReentrant [13482,13494]
+    function_body [13499,13557]
+        expression_statement [13509,13551]
+            call_expression [13509,13550]
+                identifier: _resultAuction [13509,13523]
+                call_argument [13524,13535]
+                    identifier: _nftAddress [13524,13535]
+                call_argument [13537,13545]
+                    identifier: _tokenId [13537,13545]
+                call_argument [13547,13549]
+                    string_literal [13547,13549]
+                        string: "" [13547,13549]
+to
+contract_body [1540,29706]
+at 38
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [30230,30468]
+    function: function [30230,30238]
+    identifier: initializeMarketplaceFeeEngine [30239,30269]
+    parameter [30270,30299]
+        type_name: address [30270,30277]
+        identifier: _marketplaceFeeEngine [30278,30299]
+    visibility: public [30301,30307]
+    function_body [30308,30468]
+        expression_statement [30318,30385]
+            call_expression [30318,30384]
+                identifier: require [30318,30325]
+                call_argument [30326,30371]
+                    binary_expression [30326,30371]
+                        type_cast_expression [30326,30355]
+                            primitive_type: address [30326,30333]
+                            call_argument [30334,30354]
+                                identifier: marketplaceFeeEngine [30334,30354]
+                        comparison_operator: == [30356,30358]
+                        type_cast_expression [30359,30371]
+                            primitive_type: address [30359,30366]
+                            call_argument [30367,30370]
+                                number_literal: 0x0 [30367,30370]
+                call_argument [30373,30383]
+                    string_literal [30373,30383]
+                        string: "non zero" [30373,30383]
+        expression_statement [30394,30462]
+            assignment_expression [30394,30461]
+                identifier: marketplaceFeeEngine [30394,30414]
+                affectation_operator: = [30415,30416]
+                call_expression [30417,30461]
+                    identifier: IMarketplaceFeeEngine [30417,30438]
+                    call_argument [30439,30460]
+                        identifier: _marketplaceFeeEngine [30439,30460]
+to
+contract_body [1540,29706]
+at 57
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [30474,30661]
+    function: function [30474,30482]
+    identifier: setMarketplaceFeeEngine [30483,30506]
+    parameter [30507,30536]
+        type_name: address [30507,30514]
+        identifier: _marketplaceFeeEngine [30515,30536]
+    visibility: external [30546,30554]
+    modifier_invocation [30563,30572]
+        identifier: onlyOwner [30563,30572]
+    function_body [30577,30661]
+        expression_statement [30587,30655]
+            assignment_expression [30587,30654]
+                identifier: marketplaceFeeEngine [30587,30607]
+                affectation_operator: = [30608,30609]
+                call_expression [30610,30654]
+                    identifier: IMarketplaceFeeEngine [30610,30631]
+                    call_argument [30632,30653]
+                        identifier: _marketplaceFeeEngine [30632,30653]
+to
+contract_body [1540,29706]
+at 58
+
+New cluster:
+===
+insert-node
+---
+function_definition [30667,31938]
+to
+contract_body [1540,29706]
+at 59
+------------
+===
+insert-node
+---
+visibility: private [30819,30826]
+to
+function_definition [30667,31938]
+at 6
+===
+insert-node
+---
+variable_declaration_statement [31571,31607]
+to
+block_statement [31553,31848]
+at 0
+===
+insert-node
+---
+call_expression [31388,31464]
+to
+variable_declaration_statement [31358,31465]
+at 2
+===
+insert-node
+---
+identifier: _distributeMarketplaceFee [30676,30701]
+to
+function_definition [30667,31938]
+at 1
+===
+insert-node
+---
+for: for [31177,31180]
+to
+for_statement [31177,31906]
+at 0
+===
+insert-node
+---
+identifier: require [31624,31631]
+to
+call_expression [31624,31833]
+at 0
+===
+insert-node
+---
+block_statement [31553,31848]
+to
+if_statement [31311,31848]
+at 4
+===
+insert-node
+---
+function_definition [30667,31938]
+to
+contract_body [1540,29706]
+at 59
+===
+insert-node
+---
+expression_statement [31624,31834]
+to
+block_statement [31553,31848]
+at 1
+===
+insert-node
+---
+block_statement [31340,31547]
+to
+if_statement [31311,31848]
+at 2
+===
+insert-node
+---
+affectation_operator: = [31386,31387]
+to
+variable_declaration_statement [31358,31465]
+at 1
+===
+insert-node
+---
+function: function [30667,30675]
+to
+function_definition [30667,31938]
+at 0
+===
+insert-node
+---
+call_expression [31624,31833]
+to
+expression_statement [31624,31834]
+at 0
+===
+insert-node
+---
+if: if [31311,31313]
+to
+if_statement [31311,31848]
+at 0
+===
+insert-node
+---
+else: else [31548,31552]
+to
+if_statement [31311,31848]
+at 3
+===
+insert-node
+---
+affectation_operator: = [31587,31588]
+to
+variable_declaration_statement [31571,31607]
+at 1
+===
+insert-node
+---
+function_body [30845,31938]
+to
+function_definition [30667,31938]
+at 8
+===
+insert-node
+---
+block_statement [31225,31906]
+to
+for_statement [31177,31906]
+at 4
+===
+insert-node
+---
+variable_declaration_statement [31358,31465]
+to
+block_statement [31340,31547]
+at 0
+===
+insert-node
+---
+if_statement [31311,31848]
+to
+block_statement [31225,31906]
+at 1
+===
+insert-node
+---
+for_statement [31177,31906]
+to
+function_body [30845,31938]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12812,12831]
+    type_name: address [12812,12819]
+    identifier: _nftAddress [12820,12831]
+to
+function_definition [12789,12979]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12833,12849]
+    type_name: uint256 [12833,12840]
+    identifier: _tokenId [12841,12849]
+to
+function_definition [12789,12979]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12851,12872]
+    type_name: string [12851,12857]
+    memory: memory [12858,12864]
+    identifier: _source [12865,12872]
+to
+function_definition [12789,12979]
+at 4
+
+New cluster:
+MOVE from function_definition [12789,12979]
+------------
+===
+move-tree
+---
+modifier_invocation [12588,12600]
+    identifier: nonReentrant [12588,12600]
+to
+function_definition [12789,12979]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [12916,12979]
+    expression_statement [12926,12973]
+        call_expression [12926,12972]
+            identifier: _resultAuction [12926,12940]
+            call_argument [12941,12952]
+                identifier: _nftAddress [12941,12952]
+            call_argument [12954,12962]
+                identifier: _tokenId [12954,12962]
+            call_argument [12964,12971]
+                identifier: _source [12964,12971]
+to
+function_definition [12789,12979]
+at 7
+
+New cluster:
+UPDATE from resultAuction to _resultAuction
+------------
+===
+update-node
+---
+identifier: resultAuction [12510,12523]
+replace resultAuction by _resultAuction
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13626,13647]
+    type_name: string [13626,13632]
+    memory: memory [13633,13639]
+    identifier: _source [13640,13647]
+to
+function_definition [12501,18105]
+at 4
+
+New cluster:
+UPDATE from external to private
+------------
+===
+update-node
+---
+visibility: external [12571,12579]
+replace external by private
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30711,30732]
+    type_name: string [30711,30717]
+    memory: memory [30718,30724]
+    identifier: _source [30725,30732]
+to
+function_definition [30667,31938]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30742,30761]
+    type_name: address [30742,30749]
+    identifier: _collection [30750,30761]
+to
+function_definition [30667,31938]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30771,30785]
+    type_name: uint256 [30771,30778]
+    identifier: _value [30779,30785]
+to
+function_definition [30667,31938]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30795,30812]
+    type_name: address [30795,30802]
+    identifier: _payToken [30803,30812]
+to
+function_definition [30667,31938]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [30827,30844]
+    returns: returns [30827,30834]
+    parameter [30836,30843]
+        type_name: uint256 [30836,30843]
+to
+function_definition [30667,31938]
+at 7
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [15083,15181]
+to
+function_body [12605,18105]
+at 13
+------------
+===
+insert-node
+---
+variable_declaration_statement [15083,15181]
+to
+function_body [12605,18105]
+at 13
+===
+insert-node
+---
+call_expression [15103,15180]
+to
+variable_declaration_statement [15083,15181]
+at 2
+===
+insert-node
+---
+call_argument [15129,15136]
+to
+call_expression [15103,15180]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [30855,30905]
+    variable_declaration [30855,30865]
+        type_name: bytes32 [30855,30862]
+        identifier: id [30863,30865]
+    affectation_operator: = [30866,30867]
+    call_expression [30868,30904]
+        identifier: keccak256 [30868,30877]
+        call_argument [30878,30903]
+            call_expression [30878,30903]
+                member_expression: abi.encodePacked [30878,30894]
+                call_argument [30895,30902]
+                    identifier: _source [30895,30902]
+to
+function_body [30845,31938]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [30914,31137]
+    variable_declaration_tuple [30914,31008]
+        variable_declaration [30928,30963]
+            type_name: address payable[] [30928,30945]
+            memory: memory [30946,30952]
+            identifier: recipients [30953,30963]
+        variable_declaration [30977,30998]
+            type_name: uint256[] [30977,30986]
+            memory: memory [30987,30993]
+            identifier: fees [30994,30998]
+    affectation_operator: = [31009,31010]
+    call_expression [31011,31136]
+        member_expression: marketplaceFeeEngine.getMarketplaceFee [31011,31049]
+        call_argument [31067,31069]
+            identifier: id [31067,31069]
+        call_argument [31087,31098]
+            identifier: _collection [31087,31098]
+        call_argument [31116,31122]
+            identifier: _value [31116,31122]
+to
+function_body [30845,31938]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [31146,31168]
+    variable_declaration [31146,31163]
+        type_name: uint256 [31146,31153]
+        identifier: feeAmount [31154,31163]
+    affectation_operator: = [31164,31165]
+    number_literal: 0 [31166,31167]
+to
+function_body [30845,31938]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [31915,31932]
+    return: return [31915,31921]
+    identifier: feeAmount [31922,31931]
+to
+function_body [30845,31938]
+at 4
+
+New cluster:
+MOVE from variable_declaration_statement [15083,15181]
+------------
+===
+move-tree
+---
+affectation_operator: = [14048,14049]
+to
+variable_declaration_statement [15083,15181]
+at 1
+===
+move-tree
+---
+variable_declaration [14030,14047]
+    type_name: uint256 [14030,14037]
+    identifier: feeAmount [14038,14047]
+to
+variable_declaration_statement [15083,15181]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [31182,31196]
+    variable_declaration [31182,31191]
+        type_name: uint256 [31182,31189]
+        identifier: i [31190,31191]
+    affectation_operator: = [31192,31193]
+    number_literal: 0 [31194,31195]
+to
+for_statement [31177,31906]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [31197,31219]
+    binary_expression [31197,31218]
+        identifier: i [31197,31198]
+        comparison_operator: < [31199,31200]
+        member_expression: recipients.length [31201,31218]
+to
+for_statement [31177,31906]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+update_expression [31220,31223]
+    identifier: i [31220,31221]
+    increment_operator: ++ [31221,31223]
+to
+for_statement [31177,31906]
+at 3
+
+New cluster:
+UPDATE from value to _distributeMarketplaceFee
+------------
+===
+update-node
+---
+identifier: value [14258,14263]
+replace value by _distributeMarketplaceFee
+
+New cluster:
+MOVE from call_expression [15103,15180]
+------------
+===
+move-tree
+---
+identifier: value [14258,14263]
+to
+call_expression [15103,15180]
+at 0
+
+New cluster:
+MOVE from call_expression [15103,15180]
+------------
+===
+move-tree
+---
+call_argument [14314,14337]
+    identifier: platformTransferSuccess [14314,14337]
+to
+call_expression [15103,15180]
+at 2
+===
+move-tree
+---
+call_argument [14339,14368]
+    string_literal [14339,14368]
+        string: "failed to send platform fee" [14339,14368]
+to
+call_expression [15103,15180]
+at 3
+===
+move-tree
+---
+identifier: require [14306,14313]
+to
+call_argument [15129,15136]
+at 0
+
+New cluster:
+MOVE from call_expression [15103,15180]
+------------
+===
+move-tree
+---
+call_argument [14425,14441]
+    member_expression: auction.payToken [14425,14441]
+to
+call_expression [15103,15180]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [31239,31298]
+    if: if [31239,31241]
+    binary_expression [31243,31255]
+        array_access [31243,31250]
+            identifier: fees [31243,31247]
+            identifier: i [31248,31249]
+        comparison_operator: == [31251,31253]
+        number_literal: 0 [31254,31255]
+    block_statement [31257,31298]
+        continue_statement [31275,31284]
+            continue: continue [31275,31283]
+to
+block_statement [31225,31906]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [31861,31896]
+    assignment_expression [31861,31895]
+        identifier: feeAmount [31861,31870]
+        affectation_operator: = [31871,31872]
+        call_expression [31873,31895]
+            member_expression: feeAmount.add [31873,31886]
+            call_argument [31887,31894]
+                array_access [31887,31894]
+                    identifier: fees [31887,31891]
+                    identifier: i [31892,31893]
+to
+block_statement [31225,31906]
+at 2
+
+New cluster:
+UPDATE from require to _source
+------------
+===
+update-node
+---
+identifier: require [14306,14313]
+replace require by _source
+
+New cluster:
+UPDATE from platformTransferSuccess to _nftAddress
+------------
+===
+update-node
+---
+identifier: platformTransferSuccess [14314,14337]
+replace platformTransferSuccess by _nftAddress
+
+New cluster:
+===
+insert-node
+---
+identifier: winningBid [15151,15161]
+to
+call_argument [14339,14368]
+at 0
+------------
+===
+insert-node
+---
+identifier: winningBid [15151,15161]
+to
+call_argument [14339,14368]
+at 0
+
+New cluster:
+MOVE from if_statement [31311,31848]
+------------
+===
+move-tree
+---
+binary_expression [14101,14131]
+    member_expression: auction.payToken [14101,14117]
+    comparison_operator: == [14118,14120]
+    type_cast_expression [14121,14131]
+        primitive_type: address [14121,14128]
+        call_argument [14129,14130]
+            number_literal: 0 [14129,14130]
+to
+if_statement [31311,31848]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: _payToken [31315,31324]
+to
+binary_expression [14101,14131]
+at 0
+------------
+===
+insert-node
+---
+identifier: _payToken [31315,31324]
+to
+binary_expression [14101,14131]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [31482,31533]
+    call_expression [31482,31532]
+        identifier: require [31482,31489]
+        call_argument [31490,31508]
+            identifier: feeTransferSuccess [31490,31508]
+        call_argument [31510,31531]
+            string_literal [31510,31531]
+                string: "fee transfer failed" [31510,31531]
+to
+block_statement [31340,31547]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_tuple [31358,31385]
+    variable_declaration [31359,31382]
+        type_name: bool [31359,31363]
+        identifier: feeTransferSuccess [31364,31382]
+to
+variable_declaration_statement [31358,31465]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [31571,31607]
+------------
+===
+move-tree
+---
+variable_declaration [14400,14415]
+    type_name: IERC20 [14400,14406]
+    identifier: payToken [14407,14415]
+to
+variable_declaration_statement [31571,31607]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [31589,31606]
+    identifier: IERC20 [31589,31595]
+    call_argument [31596,31605]
+        identifier: _payToken [31596,31605]
+to
+variable_declaration_statement [31571,31607]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_expression [31388,31460]
+    member_expression: recipients[i].call [31388,31406]
+    struct_field_assignment [31428,31442]
+        identifier: value [31428,31433]
+        :: : [31433,31434]
+        array_access [31435,31442]
+            identifier: fees [31435,31439]
+            identifier: i [31440,31441]
+to
+call_expression [31388,31464]
+at 0
+
+New cluster:
+MOVE from call_expression [31388,31464]
+------------
+===
+move-tree
+---
+call_argument [14289,14291]
+    string_literal [14289,14291]
+        string: "" [14289,14291]
+to
+call_expression [31388,31464]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [31653,31764]
+    call_expression [31653,31764]
+        member_expression: payToken.transfer [31653,31670]
+        call_argument [31696,31709]
+            array_access [31696,31709]
+                identifier: recipients [31696,31706]
+                identifier: i [31707,31708]
+        call_argument [31735,31742]
+            array_access [31735,31742]
+                identifier: fees [31735,31739]
+                identifier: i [31740,31741]
+to
+call_expression [31624,31833]
+at 1
+
+New cluster:
+MOVE from call_expression [31624,31833]
+------------
+===
+move-tree
+---
+call_argument [14607,14636]
+    string_literal [14607,14636]
+        string: "failed to send platform fee" [14607,14636]
+to
+call_expression [31624,31833]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: Auction [1482,1489]
+===
+------------
+===
+delete-node
+---
+identifier: Auction [1482,1489]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1490,1492]
+===
+------------
+===
+delete-node
+---
+is: is [1490,1492]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [14339,14368]
+    string: "failed to send platform fee" [14339,14368]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [14050,14087]
+    member_expression: winningBid.mul(platformFee).div [14050,14081]
+    call_argument [14082,14086]
+        number_literal: 1000 [14082,14086]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [14030,14088]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [14030,14088]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [14097,14661]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [14213,14214]
+===
+===
+delete-node
+---
+struct_field_assignment [14258,14274]
+===
+===
+delete-node
+---
+identifier: feeAmount [14265,14274]
+===
+===
+delete-node
+---
+expression_statement [14306,14370]
+===
+===
+delete-node
+---
+struct_expression [14215,14288]
+===
+===
+delete-node
+---
+variable_declaration_statement [14400,14443]
+===
+===
+delete-node
+---
+affectation_operator: = [14416,14417]
+===
+===
+delete-node
+---
+variable_declaration_statement [14180,14293]
+===
+===
+delete-node
+---
+call_expression [14418,14442]
+===
+===
+delete-node
+---
+block_statement [14133,14380]
+===
+===
+delete-node
+---
+else: else [14381,14385]
+===
+===
+delete-node
+---
+call_expression [14456,14650]
+===
+===
+delete-node
+---
+call_expression [14306,14369]
+===
+===
+delete-node
+---
+:: : [14263,14264]
+===
+===
+delete-node
+---
+identifier: IERC20 [14418,14424]
+===
+===
+delete-node
+---
+member_expression: platformFeeRecipient.call [14215,14240]
+===
+===
+delete-node
+---
+if: if [14097,14099]
+===
+===
+delete-node
+---
+block_statement [14386,14661]
+===
+===
+delete-node
+---
+identifier: require [14456,14463]
+===
+===
+delete-node
+---
+expression_statement [14456,14651]
+===
+===
+delete-node
+---
+call_expression [14215,14292]
+===
+===
+delete-node
+---
+if_statement [14097,14661]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_tuple [14180,14212]
+    variable_declaration [14181,14209]
+        type_name: bool [14181,14185]
+        identifier: platformTransferSuccess [14186,14209]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14481,14589]
+    call_expression [14481,14589]
+        member_expression: payToken.transfer [14481,14498]
+        call_argument [14520,14540]
+            identifier: platformFeeRecipient [14520,14540]
+        call_argument [14562,14571]
+            identifier: feeAmount [14562,14571]
+
+New cluster:
+===
+delete-node
+---
+member_expression: auction.payToken [14101,14117]
+===
+------------
+===
+delete-node
+---
+member_expression: auction.payToken [14101,14117]
+===
+

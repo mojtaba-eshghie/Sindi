@@ -1,0 +1,4050 @@
+New cluster:
+MOVE from source_file [0,72755]
+------------
+===
+move-tree
+---
+interface_declaration [15099,15567]
+    interface: interface [15099,15108]
+    identifier: IERC165Upgradeable [15109,15127]
+    contract_body [15128,15567]
+        function_definition [15488,15564]
+            function: function [15488,15496]
+            identifier: supportsInterface [15497,15514]
+            parameter [15515,15533]
+                type_name: bytes4 [15515,15521]
+                identifier: interfaceId [15522,15533]
+            visibility: external [15535,15543]
+            state_mutability [15544,15548]
+                view: view [15544,15548]
+            return_type_definition [15549,15563]
+                returns: returns [15549,15556]
+                parameter [15558,15562]
+                    type_name: bool [15558,15562]
+to
+source_file [0,72755]
+at 13
+===
+move-tree
+---
+library_declaration [1323,13117]
+    library: library [1323,1330]
+    identifier: EnumerableSetUpgradeable [1331,1355]
+    contract_body [1356,13117]
+        struct_declaration [1812,2065]
+            struct: struct [1812,1818]
+            identifier: Set [1819,1822]
+            struct_member [1868,1886]
+                type_name: bytes32[] [1868,1877]
+                identifier: _values [1878,1885]
+            struct_member [2021,2058]
+                type_name: mapping(bytes32 => uint256) [2021,2048]
+                identifier: _indexes [2049,2057]
+        function_definition [2243,2657]
+            function: function [2243,2251]
+            identifier: _add [2252,2256]
+            parameter [2257,2272]
+                type_name: Set [2257,2260]
+                storage: storage [2261,2268]
+                identifier: set [2269,2272]
+            parameter [2274,2287]
+                type_name: bytes32 [2274,2281]
+                identifier: value [2282,2287]
+            visibility: private [2289,2296]
+            return_type_definition [2297,2311]
+                returns: returns [2297,2304]
+                parameter [2306,2310]
+                    type_name: bool [2306,2310]
+            function_body [2312,2657]
+                if_statement [2323,2650]
+                    if: if [2323,2325]
+                    unary_expression [2327,2349]
+                        !: ! [2327,2328]
+                        call_expression [2328,2349]
+                            identifier: _contains [2328,2337]
+                            call_argument [2338,2341]
+                                identifier: set [2338,2341]
+                            call_argument [2343,2348]
+                                identifier: value [2343,2348]
+                    block_statement [2351,2605]
+                        expression_statement [2366,2390]
+                            call_expression [2366,2389]
+                                member_expression: set._values.push [2366,2382]
+                                call_argument [2383,2388]
+                                    identifier: value [2383,2388]
+                        expression_statement [2527,2568]
+                            assignment_expression [2527,2567]
+                                array_access [2527,2546]
+                                    member_expression: set._indexes [2527,2539]
+                                    identifier: value [2540,2545]
+                                affectation_operator: = [2547,2548]
+                                member_expression: set._values.length [2549,2567]
+                        return_statement [2582,2594]
+                            return: return [2582,2588]
+                            boolean_literal: true [2589,2593]
+                    else: else [2606,2610]
+                    block_statement [2611,2650]
+                        return_statement [2626,2639]
+                            return: return [2626,2632]
+                            boolean_literal: false [2633,2638]
+        function_definition [2833,4253]
+            function: function [2833,2841]
+            identifier: _remove [2842,2849]
+            parameter [2850,2865]
+                type_name: Set [2850,2853]
+                storage: storage [2854,2861]
+                identifier: set [2862,2865]
+            parameter [2867,2880]
+                type_name: bytes32 [2867,2874]
+                identifier: value [2875,2880]
+            visibility: private [2882,2889]
+            return_type_definition [2890,2904]
+                returns: returns [2890,2897]
+                parameter [2899,2903]
+                    type_name: bool [2899,2903]
+            function_body [2905,4253]
+                variable_declaration_statement [3017,3058]
+                    variable_declaration [3017,3035]
+                        type_name: uint256 [3017,3024]
+                        identifier: valueIndex [3025,3035]
+                    affectation_operator: = [3036,3037]
+                    array_access [3038,3057]
+                        member_expression: set._indexes [3038,3050]
+                        identifier: value [3051,3056]
+                if_statement [3070,4246]
+                    if: if [3070,3072]
+                    binary_expression [3074,3089]
+                        identifier: valueIndex [3074,3084]
+                        comparison_operator: != [3085,3087]
+                        number_literal: 0 [3088,3089]
+                    block_statement [3091,4201]
+                        variable_declaration_statement [3449,3488]
+                            variable_declaration [3449,3470]
+                                type_name: uint256 [3449,3456]
+                                identifier: toDeleteIndex [3457,3470]
+                            affectation_operator: = [3471,3472]
+                            binary_expression [3473,3487]
+                                identifier: valueIndex [3473,3483]
+                                arithmetic_operator: - [3484,3485]
+                                number_literal: 1 [3486,3487]
+                        variable_declaration_statement [3502,3545]
+                            variable_declaration [3502,3519]
+                                type_name: uint256 [3502,3509]
+                                identifier: lastIndex [3510,3519]
+                            affectation_operator: = [3520,3521]
+                            binary_expression [3522,3544]
+                                member_expression: set._values.length [3522,3540]
+                                arithmetic_operator: - [3541,3542]
+                                number_literal: 1 [3543,3544]
+                        if_statement [3561,3966]
+                            if: if [3561,3563]
+                            binary_expression [3565,3591]
+                                identifier: lastIndex [3565,3574]
+                                comparison_operator: != [3575,3577]
+                                identifier: toDeleteIndex [3578,3591]
+                            block_statement [3593,3966]
+                                variable_declaration_statement [3612,3655]
+                                    variable_declaration [3612,3629]
+                                        type_name: bytes32 [3612,3619]
+                                        identifier: lastValue [3620,3629]
+                                    affectation_operator: = [3630,3631]
+                                    array_access [3632,3654]
+                                        member_expression: set._values [3632,3643]
+                                        identifier: lastIndex [3644,3653]
+                                expression_statement [3757,3796]
+                                    assignment_expression [3757,3795]
+                                        array_access [3757,3783]
+                                            member_expression: set._values [3757,3768]
+                                            identifier: toDeleteIndex [3769,3782]
+                                        affectation_operator: = [3784,3785]
+                                        identifier: lastValue [3786,3795]
+                                expression_statement [3871,3908]
+                                    assignment_expression [3871,3907]
+                                        array_access [3871,3894]
+                                            member_expression: set._indexes [3871,3883]
+                                            identifier: lastValue [3884,3893]
+                                        affectation_operator: = [3895,3896]
+                                        identifier: valueIndex [3897,3907]
+                        expression_statement [4047,4065]
+                            call_expression [4047,4064]
+                                member_expression: set._values.pop [4047,4062]
+                        expression_statement [4135,4162]
+                            array_access [4135,4161]
+                                unary_expression [4135,4154]
+                                    delete: delete [4135,4141]
+                                    member_expression: set._indexes [4142,4154]
+                                identifier: value [4155,4160]
+                        return_statement [4178,4190]
+                            return: return [4178,4184]
+                            boolean_literal: true [4185,4189]
+                    else: else [4202,4206]
+                    block_statement [4207,4246]
+                        return_statement [4222,4235]
+                            return: return [4222,4228]
+                            boolean_literal: false [4229,4234]
+        function_definition [4339,4468]
+            function: function [4339,4347]
+            identifier: _contains [4348,4357]
+            parameter [4358,4373]
+                type_name: Set [4358,4361]
+                storage: storage [4362,4369]
+                identifier: set [4370,4373]
+            parameter [4375,4388]
+                type_name: bytes32 [4375,4382]
+                identifier: value [4383,4388]
+            visibility: private [4390,4397]
+            state_mutability [4398,4402]
+                view: view [4398,4402]
+            return_type_definition [4403,4417]
+                returns: returns [4403,4410]
+                parameter [4412,4416]
+                    type_name: bool [4412,4416]
+            function_body [4418,4468]
+                return_statement [4429,4461]
+                    return: return [4429,4435]
+                    binary_expression [4436,4460]
+                        array_access [4436,4455]
+                            member_expression: set._indexes [4436,4448]
+                            identifier: value [4449,4454]
+                        comparison_operator: != [4456,4458]
+                        number_literal: 0 [4459,4460]
+        function_definition [4554,4663]
+            function: function [4554,4562]
+            identifier: _length [4563,4570]
+            parameter [4571,4586]
+                type_name: Set [4571,4574]
+                storage: storage [4575,4582]
+                identifier: set [4583,4586]
+            visibility: private [4588,4595]
+            state_mutability [4596,4600]
+                view: view [4596,4600]
+            return_type_definition [4601,4618]
+                returns: returns [4601,4608]
+                parameter [4610,4617]
+                    type_name: uint256 [4610,4617]
+            function_body [4619,4663]
+                return_statement [4630,4656]
+                    return: return [4630,4636]
+                    member_expression: set._values.length [4637,4655]
+        function_definition [5017,5137]
+            function: function [5017,5025]
+            identifier: _at [5026,5029]
+            parameter [5030,5045]
+                type_name: Set [5030,5033]
+                storage: storage [5034,5041]
+                identifier: set [5042,5045]
+            parameter [5047,5060]
+                type_name: uint256 [5047,5054]
+                identifier: index [5055,5060]
+            visibility: private [5062,5069]
+            state_mutability [5070,5074]
+                view: view [5070,5074]
+            return_type_definition [5075,5092]
+                returns: returns [5075,5082]
+                parameter [5084,5091]
+                    type_name: bytes32 [5084,5091]
+            function_body [5093,5137]
+                return_statement [5104,5130]
+                    return: return [5104,5110]
+                    array_access [5111,5129]
+                        member_expression: set._values [5111,5122]
+                        identifier: index [5123,5128]
+        function_definition [5687,5798]
+            function: function [5687,5695]
+            identifier: _values [5696,5703]
+            parameter [5704,5719]
+                type_name: Set [5704,5707]
+                storage: storage [5708,5715]
+                identifier: set [5716,5719]
+            visibility: private [5721,5728]
+            state_mutability [5729,5733]
+                view: view [5729,5733]
+            return_type_definition [5734,5760]
+                returns: returns [5734,5741]
+                parameter [5743,5759]
+                    type_name: bytes32[] [5743,5752]
+                    memory: memory [5753,5759]
+            function_body [5761,5798]
+                return_statement [5772,5791]
+                    return: return [5772,5778]
+                    member_expression: set._values [5779,5790]
+        struct_declaration [5827,5874]
+            struct: struct [5827,5833]
+            identifier: Bytes32Set [5834,5844]
+            struct_member [5856,5867]
+                type_name: Set [5856,5859]
+                identifier: _inner [5860,5866]
+        function_definition [6052,6177]
+            function: function [6052,6060]
+            identifier: add [6061,6064]
+            parameter [6065,6087]
+                type_name: Bytes32Set [6065,6075]
+                storage: storage [6076,6083]
+                identifier: set [6084,6087]
+            parameter [6089,6102]
+                type_name: bytes32 [6089,6096]
+                identifier: value [6097,6102]
+            visibility: internal [6104,6112]
+            return_type_definition [6113,6127]
+                returns: returns [6113,6120]
+                parameter [6122,6126]
+                    type_name: bool [6122,6126]
+            function_body [6128,6177]
+                return_statement [6139,6170]
+                    return: return [6139,6145]
+                    call_expression [6146,6169]
+                        identifier: _add [6146,6150]
+                        call_argument [6151,6161]
+                            member_expression: set._inner [6151,6161]
+                        call_argument [6163,6168]
+                            identifier: value [6163,6168]
+        function_definition [6353,6484]
+            function: function [6353,6361]
+            identifier: remove [6362,6368]
+            parameter [6369,6391]
+                type_name: Bytes32Set [6369,6379]
+                storage: storage [6380,6387]
+                identifier: set [6388,6391]
+            parameter [6393,6406]
+                type_name: bytes32 [6393,6400]
+                identifier: value [6401,6406]
+            visibility: internal [6408,6416]
+            return_type_definition [6417,6431]
+                returns: returns [6417,6424]
+                parameter [6426,6430]
+                    type_name: bool [6426,6430]
+            function_body [6432,6484]
+                return_statement [6443,6477]
+                    return: return [6443,6449]
+                    call_expression [6450,6476]
+                        identifier: _remove [6450,6457]
+                        call_argument [6458,6468]
+                            member_expression: set._inner [6458,6468]
+                        call_argument [6470,6475]
+                            identifier: value [6470,6475]
+        function_definition [6570,6710]
+            function: function [6570,6578]
+            identifier: contains [6579,6587]
+            parameter [6588,6610]
+                type_name: Bytes32Set [6588,6598]
+                storage: storage [6599,6606]
+                identifier: set [6607,6610]
+            parameter [6612,6625]
+                type_name: bytes32 [6612,6619]
+                identifier: value [6620,6625]
+            visibility: internal [6627,6635]
+            state_mutability [6636,6640]
+                view: view [6636,6640]
+            return_type_definition [6641,6655]
+                returns: returns [6641,6648]
+                parameter [6650,6654]
+                    type_name: bool [6650,6654]
+            function_body [6656,6710]
+                return_statement [6667,6703]
+                    return: return [6667,6673]
+                    call_expression [6674,6702]
+                        identifier: _contains [6674,6683]
+                        call_argument [6684,6694]
+                            member_expression: set._inner [6684,6694]
+                        call_argument [6696,6701]
+                            identifier: value [6696,6701]
+        function_definition [6796,6913]
+            function: function [6796,6804]
+            identifier: length [6805,6811]
+            parameter [6812,6834]
+                type_name: Bytes32Set [6812,6822]
+                storage: storage [6823,6830]
+                identifier: set [6831,6834]
+            visibility: internal [6836,6844]
+            state_mutability [6845,6849]
+                view: view [6845,6849]
+            return_type_definition [6850,6867]
+                returns: returns [6850,6857]
+                parameter [6859,6866]
+                    type_name: uint256 [6859,6866]
+            function_body [6868,6913]
+                return_statement [6879,6906]
+                    return: return [6879,6885]
+                    call_expression [6886,6905]
+                        identifier: _length [6886,6893]
+                        call_argument [6894,6904]
+                            member_expression: set._inner [6894,6904]
+        function_definition [7267,7398]
+            function: function [7267,7275]
+            identifier: at [7276,7278]
+            parameter [7279,7301]
+                type_name: Bytes32Set [7279,7289]
+                storage: storage [7290,7297]
+                identifier: set [7298,7301]
+            parameter [7303,7316]
+                type_name: uint256 [7303,7310]
+                identifier: index [7311,7316]
+            visibility: internal [7318,7326]
+            state_mutability [7327,7331]
+                view: view [7327,7331]
+            return_type_definition [7332,7349]
+                returns: returns [7332,7339]
+                parameter [7341,7348]
+                    type_name: bytes32 [7341,7348]
+            function_body [7350,7398]
+                return_statement [7361,7391]
+                    return: return [7361,7367]
+                    call_expression [7368,7390]
+                        identifier: _at [7368,7371]
+                        call_argument [7372,7382]
+                            member_expression: set._inner [7372,7382]
+                        call_argument [7384,7389]
+                            identifier: index [7384,7389]
+        function_definition [7948,8074]
+            function: function [7948,7956]
+            identifier: values [7957,7963]
+            parameter [7964,7986]
+                type_name: Bytes32Set [7964,7974]
+                storage: storage [7975,7982]
+                identifier: set [7983,7986]
+            visibility: internal [7988,7996]
+            state_mutability [7997,8001]
+                view: view [7997,8001]
+            return_type_definition [8002,8028]
+                returns: returns [8002,8009]
+                parameter [8011,8027]
+                    type_name: bytes32[] [8011,8020]
+                    memory: memory [8021,8027]
+            function_body [8029,8074]
+                return_statement [8040,8067]
+                    return: return [8040,8046]
+                    call_expression [8047,8066]
+                        identifier: _values [8047,8054]
+                        call_argument [8055,8065]
+                            member_expression: set._inner [8055,8065]
+        struct_declaration [8103,8150]
+            struct: struct [8103,8109]
+            identifier: AddressSet [8110,8120]
+            struct_member [8132,8143]
+                type_name: Set [8132,8135]
+                identifier: _inner [8136,8142]
+        function_definition [8328,8480]
+            function: function [8328,8336]
+            identifier: add [8337,8340]
+            parameter [8341,8363]
+                type_name: AddressSet [8341,8351]
+                storage: storage [8352,8359]
+                identifier: set [8360,8363]
+            parameter [8365,8378]
+                type_name: address [8365,8372]
+                identifier: value [8373,8378]
+            visibility: internal [8380,8388]
+            return_type_definition [8389,8403]
+                returns: returns [8389,8396]
+                parameter [8398,8402]
+                    type_name: bool [8398,8402]
+            function_body [8404,8480]
+                return_statement [8415,8473]
+                    return: return [8415,8421]
+                    call_expression [8422,8472]
+                        identifier: _add [8422,8426]
+                        call_argument [8427,8437]
+                            member_expression: set._inner [8427,8437]
+                        call_argument [8439,8471]
+                            type_cast_expression [8439,8471]
+                                primitive_type: bytes32 [8439,8446]
+                                call_argument [8447,8470]
+                                    type_cast_expression [8447,8470]
+                                        primitive_type: uint256 [8447,8454]
+                                        call_argument [8455,8469]
+                                            type_cast_expression [8455,8469]
+                                                primitive_type: uint160 [8455,8462]
+                                                call_argument [8463,8468]
+                                                    identifier: value [8463,8468]
+        function_definition [8656,8814]
+            function: function [8656,8664]
+            identifier: remove [8665,8671]
+            parameter [8672,8694]
+                type_name: AddressSet [8672,8682]
+                storage: storage [8683,8690]
+                identifier: set [8691,8694]
+            parameter [8696,8709]
+                type_name: address [8696,8703]
+                identifier: value [8704,8709]
+            visibility: internal [8711,8719]
+            return_type_definition [8720,8734]
+                returns: returns [8720,8727]
+                parameter [8729,8733]
+                    type_name: bool [8729,8733]
+            function_body [8735,8814]
+                return_statement [8746,8807]
+                    return: return [8746,8752]
+                    call_expression [8753,8806]
+                        identifier: _remove [8753,8760]
+                        call_argument [8761,8771]
+                            member_expression: set._inner [8761,8771]
+                        call_argument [8773,8805]
+                            type_cast_expression [8773,8805]
+                                primitive_type: bytes32 [8773,8780]
+                                call_argument [8781,8804]
+                                    type_cast_expression [8781,8804]
+                                        primitive_type: uint256 [8781,8788]
+                                        call_argument [8789,8803]
+                                            type_cast_expression [8789,8803]
+                                                primitive_type: uint160 [8789,8796]
+                                                call_argument [8797,8802]
+                                                    identifier: value [8797,8802]
+        function_definition [8900,9067]
+            function: function [8900,8908]
+            identifier: contains [8909,8917]
+            parameter [8918,8940]
+                type_name: AddressSet [8918,8928]
+                storage: storage [8929,8936]
+                identifier: set [8937,8940]
+            parameter [8942,8955]
+                type_name: address [8942,8949]
+                identifier: value [8950,8955]
+            visibility: internal [8957,8965]
+            state_mutability [8966,8970]
+                view: view [8966,8970]
+            return_type_definition [8971,8985]
+                returns: returns [8971,8978]
+                parameter [8980,8984]
+                    type_name: bool [8980,8984]
+            function_body [8986,9067]
+                return_statement [8997,9060]
+                    return: return [8997,9003]
+                    call_expression [9004,9059]
+                        identifier: _contains [9004,9013]
+                        call_argument [9014,9024]
+                            member_expression: set._inner [9014,9024]
+                        call_argument [9026,9058]
+                            type_cast_expression [9026,9058]
+                                primitive_type: bytes32 [9026,9033]
+                                call_argument [9034,9057]
+                                    type_cast_expression [9034,9057]
+                                        primitive_type: uint256 [9034,9041]
+                                        call_argument [9042,9056]
+                                            type_cast_expression [9042,9056]
+                                                primitive_type: uint160 [9042,9049]
+                                                call_argument [9050,9055]
+                                                    identifier: value [9050,9055]
+        function_definition [9153,9270]
+            function: function [9153,9161]
+            identifier: length [9162,9168]
+            parameter [9169,9191]
+                type_name: AddressSet [9169,9179]
+                storage: storage [9180,9187]
+                identifier: set [9188,9191]
+            visibility: internal [9193,9201]
+            state_mutability [9202,9206]
+                view: view [9202,9206]
+            return_type_definition [9207,9224]
+                returns: returns [9207,9214]
+                parameter [9216,9223]
+                    type_name: uint256 [9216,9223]
+            function_body [9225,9270]
+                return_statement [9236,9263]
+                    return: return [9236,9242]
+                    call_expression [9243,9262]
+                        identifier: _length [9243,9250]
+                        call_argument [9251,9261]
+                            member_expression: set._inner [9251,9261]
+        function_definition [9624,9782]
+            function: function [9624,9632]
+            identifier: at [9633,9635]
+            parameter [9636,9658]
+                type_name: AddressSet [9636,9646]
+                storage: storage [9647,9654]
+                identifier: set [9655,9658]
+            parameter [9660,9673]
+                type_name: uint256 [9660,9667]
+                identifier: index [9668,9673]
+            visibility: internal [9675,9683]
+            state_mutability [9684,9688]
+                view: view [9684,9688]
+            return_type_definition [9689,9706]
+                returns: returns [9689,9696]
+                parameter [9698,9705]
+                    type_name: address [9698,9705]
+            function_body [9707,9782]
+                return_statement [9718,9775]
+                    return: return [9718,9724]
+                    type_cast_expression [9725,9774]
+                        primitive_type: address [9725,9732]
+                        call_argument [9733,9773]
+                            type_cast_expression [9733,9773]
+                                primitive_type: uint160 [9733,9740]
+                                call_argument [9741,9772]
+                                    type_cast_expression [9741,9772]
+                                        primitive_type: uint256 [9741,9748]
+                                        call_argument [9749,9771]
+                                            call_expression [9749,9771]
+                                                identifier: _at [9749,9752]
+                                                call_argument [9753,9763]
+                                                    member_expression: set._inner [9753,9763]
+                                                call_argument [9765,9770]
+                                                    identifier: index [9765,9770]
+        function_definition [10332,10642]
+            function: function [10332,10340]
+            identifier: values [10341,10347]
+            parameter [10348,10370]
+                type_name: AddressSet [10348,10358]
+                storage: storage [10359,10366]
+                identifier: set [10367,10370]
+            visibility: internal [10372,10380]
+            state_mutability [10381,10385]
+                view: view [10381,10385]
+            return_type_definition [10386,10412]
+                returns: returns [10386,10393]
+                parameter [10395,10411]
+                    type_name: address[] [10395,10404]
+                    memory: memory [10405,10411]
+            function_body [10413,10642]
+                variable_declaration_statement [10424,10469]
+                    variable_declaration [10424,10446]
+                        type_name: bytes32[] [10424,10433]
+                        memory: memory [10434,10440]
+                        identifier: store [10441,10446]
+                    affectation_operator: = [10447,10448]
+                    call_expression [10449,10468]
+                        identifier: _values [10449,10456]
+                        call_argument [10457,10467]
+                            member_expression: set._inner [10457,10467]
+                variable_declaration_statement [10479,10503]
+                    variable_declaration [10479,10502]
+                        type_name: address[] [10479,10488]
+                        memory: memory [10489,10495]
+                        identifier: result [10496,10502]
+                assembly_statement [10559,10609]
+                    assembly: assembly [10559,10567]
+                    yul_assignment [10583,10598]
+                        yul_path [10583,10589]
+                            yul_identifier [10583,10589]
+                                identifier: result [10583,10589]
+                        :=: := [10590,10592]
+                        yul_path [10593,10598]
+                            yul_identifier [10593,10598]
+                                identifier: store [10593,10598]
+                return_statement [10621,10635]
+                    return: return [10621,10627]
+                    identifier: result [10628,10634]
+        struct_declaration [10668,10712]
+            struct: struct [10668,10674]
+            identifier: UintSet [10675,10682]
+            struct_member [10694,10705]
+                type_name: Set [10694,10697]
+                identifier: _inner [10698,10704]
+        function_definition [10890,11021]
+            function: function [10890,10898]
+            identifier: add [10899,10902]
+            parameter [10903,10922]
+                type_name: UintSet [10903,10910]
+                storage: storage [10911,10918]
+                identifier: set [10919,10922]
+            parameter [10924,10937]
+                type_name: uint256 [10924,10931]
+                identifier: value [10932,10937]
+            visibility: internal [10939,10947]
+            return_type_definition [10948,10962]
+                returns: returns [10948,10955]
+                parameter [10957,10961]
+                    type_name: bool [10957,10961]
+            function_body [10963,11021]
+                return_statement [10974,11014]
+                    return: return [10974,10980]
+                    call_expression [10981,11013]
+                        identifier: _add [10981,10985]
+                        call_argument [10986,10996]
+                            member_expression: set._inner [10986,10996]
+                        call_argument [10998,11012]
+                            type_cast_expression [10998,11012]
+                                primitive_type: bytes32 [10998,11005]
+                                call_argument [11006,11011]
+                                    identifier: value [11006,11011]
+        function_definition [11197,11334]
+            function: function [11197,11205]
+            identifier: remove [11206,11212]
+            parameter [11213,11232]
+                type_name: UintSet [11213,11220]
+                storage: storage [11221,11228]
+                identifier: set [11229,11232]
+            parameter [11234,11247]
+                type_name: uint256 [11234,11241]
+                identifier: value [11242,11247]
+            visibility: internal [11249,11257]
+            return_type_definition [11258,11272]
+                returns: returns [11258,11265]
+                parameter [11267,11271]
+                    type_name: bool [11267,11271]
+            function_body [11273,11334]
+                return_statement [11284,11327]
+                    return: return [11284,11290]
+                    call_expression [11291,11326]
+                        identifier: _remove [11291,11298]
+                        call_argument [11299,11309]
+                            member_expression: set._inner [11299,11309]
+                        call_argument [11311,11325]
+                            type_cast_expression [11311,11325]
+                                primitive_type: bytes32 [11311,11318]
+                                call_argument [11319,11324]
+                                    identifier: value [11319,11324]
+        function_definition [11420,11566]
+            function: function [11420,11428]
+            identifier: contains [11429,11437]
+            parameter [11438,11457]
+                type_name: UintSet [11438,11445]
+                storage: storage [11446,11453]
+                identifier: set [11454,11457]
+            parameter [11459,11472]
+                type_name: uint256 [11459,11466]
+                identifier: value [11467,11472]
+            visibility: internal [11474,11482]
+            state_mutability [11483,11487]
+                view: view [11483,11487]
+            return_type_definition [11488,11502]
+                returns: returns [11488,11495]
+                parameter [11497,11501]
+                    type_name: bool [11497,11501]
+            function_body [11503,11566]
+                return_statement [11514,11559]
+                    return: return [11514,11520]
+                    call_expression [11521,11558]
+                        identifier: _contains [11521,11530]
+                        call_argument [11531,11541]
+                            member_expression: set._inner [11531,11541]
+                        call_argument [11543,11557]
+                            type_cast_expression [11543,11557]
+                                primitive_type: bytes32 [11543,11550]
+                                call_argument [11551,11556]
+                                    identifier: value [11551,11556]
+        function_definition [11652,11766]
+            function: function [11652,11660]
+            identifier: length [11661,11667]
+            parameter [11668,11687]
+                type_name: UintSet [11668,11675]
+                storage: storage [11676,11683]
+                identifier: set [11684,11687]
+            visibility: internal [11689,11697]
+            state_mutability [11698,11702]
+                view: view [11698,11702]
+            return_type_definition [11703,11720]
+                returns: returns [11703,11710]
+                parameter [11712,11719]
+                    type_name: uint256 [11712,11719]
+            function_body [11721,11766]
+                return_statement [11732,11759]
+                    return: return [11732,11738]
+                    call_expression [11739,11758]
+                        identifier: _length [11739,11746]
+                        call_argument [11747,11757]
+                            member_expression: set._inner [11747,11757]
+        function_definition [12120,12257]
+            function: function [12120,12128]
+            identifier: at [12129,12131]
+            parameter [12132,12151]
+                type_name: UintSet [12132,12139]
+                storage: storage [12140,12147]
+                identifier: set [12148,12151]
+            parameter [12153,12166]
+                type_name: uint256 [12153,12160]
+                identifier: index [12161,12166]
+            visibility: internal [12168,12176]
+            state_mutability [12177,12181]
+                view: view [12177,12181]
+            return_type_definition [12182,12199]
+                returns: returns [12182,12189]
+                parameter [12191,12198]
+                    type_name: uint256 [12191,12198]
+            function_body [12200,12257]
+                return_statement [12211,12250]
+                    return: return [12211,12217]
+                    type_cast_expression [12218,12249]
+                        primitive_type: uint256 [12218,12225]
+                        call_argument [12226,12248]
+                            call_expression [12226,12248]
+                                identifier: _at [12226,12229]
+                                call_argument [12230,12240]
+                                    member_expression: set._inner [12230,12240]
+                                call_argument [12242,12247]
+                                    identifier: index [12242,12247]
+        function_definition [12807,13114]
+            function: function [12807,12815]
+            identifier: values [12816,12822]
+            parameter [12823,12842]
+                type_name: UintSet [12823,12830]
+                storage: storage [12831,12838]
+                identifier: set [12839,12842]
+            visibility: internal [12844,12852]
+            state_mutability [12853,12857]
+                view: view [12853,12857]
+            return_type_definition [12858,12884]
+                returns: returns [12858,12865]
+                parameter [12867,12883]
+                    type_name: uint256[] [12867,12876]
+                    memory: memory [12877,12883]
+            function_body [12885,13114]
+                variable_declaration_statement [12896,12941]
+                    variable_declaration [12896,12918]
+                        type_name: bytes32[] [12896,12905]
+                        memory: memory [12906,12912]
+                        identifier: store [12913,12918]
+                    affectation_operator: = [12919,12920]
+                    call_expression [12921,12940]
+                        identifier: _values [12921,12928]
+                        call_argument [12929,12939]
+                            member_expression: set._inner [12929,12939]
+                variable_declaration_statement [12951,12975]
+                    variable_declaration [12951,12974]
+                        type_name: uint256[] [12951,12960]
+                        memory: memory [12961,12967]
+                        identifier: result [12968,12974]
+                assembly_statement [13031,13081]
+                    assembly: assembly [13031,13039]
+                    yul_assignment [13055,13070]
+                        yul_path [13055,13061]
+                            yul_identifier [13055,13061]
+                                identifier: result [13055,13061]
+                        :=: := [13062,13064]
+                        yul_path [13065,13070]
+                            yul_identifier [13065,13070]
+                                identifier: store [13065,13070]
+                return_statement [13093,13107]
+                    return: return [13093,13099]
+                    identifier: result [13100,13106]
+to
+source_file [0,72755]
+at 20
+===
+move-tree
+---
+contract_declaration [34769,38136]
+    abstract: abstract [34769,34777]
+    identifier: Initializable [34787,34800]
+    contract_body [34801,38136]
+        state_variable_declaration [34926,34953]
+            type_name: uint8 [34926,34931]
+            visibility: private [34932,34939]
+            identifier: _initialized [34940,34952]
+        state_variable_declaration [35060,35087]
+            type_name: bool [35060,35064]
+            visibility: private [35065,35072]
+            identifier: _initializing [35073,35086]
+        event_definition [35193,35226]
+            identifier: Initialized [35199,35210]
+            event_paramater [35211,35224]
+                type_name: uint8 [35211,35216]
+                identifier: version [35217,35224]
+        modifier_definition [35485,36006]
+            modifier: modifier [35485,35493]
+            identifier: initializer [35494,35505]
+            function_body [35508,36006]
+                variable_declaration_statement [35519,35556]
+                    variable_declaration [35519,35538]
+                        type_name: bool [35519,35523]
+                        identifier: isTopLevelCall [35524,35538]
+                    affectation_operator: = [35539,35540]
+                    unary_expression [35541,35555]
+                        !: ! [35541,35542]
+                        identifier: _initializing [35542,35555]
+                expression_statement [35566,35771]
+                    call_expression [35566,35770]
+                        identifier: require [35566,35573]
+                        call_argument [35588,35696]
+                            binary_expression [35588,35696]
+                                parenthesized_expression [35588,35624]
+                                    binary_expression [35589,35623]
+                                        identifier: isTopLevelCall [35589,35603]
+                                        logical_operator: && [35604,35606]
+                                        binary_expression [35607,35623]
+                                            identifier: _initialized [35607,35619]
+                                            comparison_operator: < [35620,35621]
+                                            number_literal: 1 [35622,35623]
+                                logical_operator: || [35625,35627]
+                                parenthesized_expression [35628,35696]
+                                    binary_expression [35629,35695]
+                                        unary_expression [35629,35674]
+                                            !: ! [35629,35630]
+                                            call_expression [35630,35674]
+                                                member_expression: AddressUpgradeable.isContract [35630,35659]
+                                                call_argument [35660,35673]
+                                                    type_cast_expression [35660,35673]
+                                                        primitive_type: address [35660,35667]
+                                                        call_argument [35668,35672]
+                                                            identifier: this [35668,35672]
+                                        logical_operator: && [35675,35677]
+                                        binary_expression [35678,35695]
+                                            identifier: _initialized [35678,35690]
+                                            comparison_operator: == [35691,35693]
+                                            number_literal: 1 [35694,35695]
+                        call_argument [35711,35759]
+                            string_literal [35711,35759]
+                                string: "Initializable: contract is already initialized" [35711,35759]
+                expression_statement [35781,35798]
+                    assignment_expression [35781,35797]
+                        identifier: _initialized [35781,35793]
+                        affectation_operator: = [35794,35795]
+                        number_literal: 1 [35796,35797]
+                if_statement [35808,35875]
+                    if: if [35808,35810]
+                    identifier: isTopLevelCall [35812,35826]
+                    block_statement [35828,35875]
+                        expression_statement [35843,35864]
+                            assignment_expression [35843,35863]
+                                identifier: _initializing [35843,35856]
+                                affectation_operator: = [35857,35858]
+                                boolean_literal: true [35859,35863]
+                expression_statement [35885,35887]
+                    identifier: _ [35885,35886]
+                if_statement [35897,35999]
+                    if: if [35897,35899]
+                    identifier: isTopLevelCall [35901,35915]
+                    block_statement [35917,35999]
+                        expression_statement [35932,35954]
+                            assignment_expression [35932,35953]
+                                identifier: _initializing [35932,35945]
+                                affectation_operator: = [35946,35947]
+                                boolean_literal: false [35948,35953]
+                        emit_statement [35968,35988]
+                            identifier: Initialized [35973,35984]
+                            call_argument [35985,35986]
+                                number_literal: 1 [35985,35986]
+        modifier_definition [36797,37097]
+            modifier: modifier [36797,36805]
+            identifier: reinitializer [36806,36819]
+            parameter [36820,36833]
+                type_name: uint8 [36820,36825]
+                identifier: version [36826,36833]
+            function_body [36835,37097]
+                expression_statement [36846,36946]
+                    call_expression [36846,36945]
+                        identifier: require [36846,36853]
+                        call_argument [36854,36894]
+                            binary_expression [36854,36894]
+                                unary_expression [36854,36868]
+                                    !: ! [36854,36855]
+                                    identifier: _initializing [36855,36868]
+                                logical_operator: && [36869,36871]
+                                binary_expression [36872,36894]
+                                    identifier: _initialized [36872,36884]
+                                    comparison_operator: < [36885,36886]
+                                    identifier: version [36887,36894]
+                        call_argument [36896,36944]
+                            string_literal [36896,36944]
+                                string: "Initializable: contract is already initialized" [36896,36944]
+                expression_statement [36956,36979]
+                    assignment_expression [36956,36978]
+                        identifier: _initialized [36956,36968]
+                        affectation_operator: = [36969,36970]
+                        identifier: version [36971,36978]
+                expression_statement [36989,37010]
+                    assignment_expression [36989,37009]
+                        identifier: _initializing [36989,37002]
+                        affectation_operator: = [37003,37004]
+                        boolean_literal: true [37005,37009]
+                expression_statement [37020,37022]
+                    identifier: _ [37020,37021]
+                expression_statement [37032,37054]
+                    assignment_expression [37032,37053]
+                        identifier: _initializing [37032,37045]
+                        affectation_operator: = [37046,37047]
+                        boolean_literal: false [37048,37053]
+                emit_statement [37064,37090]
+                    identifier: Initialized [37069,37080]
+                    call_argument [37081,37088]
+                        identifier: version [37081,37088]
+        modifier_definition [37313,37441]
+            modifier: modifier [37313,37321]
+            identifier: onlyInitializing [37322,37338]
+            function_body [37341,37441]
+                expression_statement [37352,37422]
+                    call_expression [37352,37421]
+                        identifier: require [37352,37359]
+                        call_argument [37360,37373]
+                            identifier: _initializing [37360,37373]
+                        call_argument [37375,37420]
+                            string_literal [37375,37420]
+                                string: "Initializable: contract is not initializing" [37375,37420]
+                expression_statement [37432,37434]
+                    identifier: _ [37432,37433]
+        function_definition [37848,38133]
+            function: function [37848,37856]
+            identifier: _disableInitializers [37857,37877]
+            visibility: internal [37880,37888]
+            virtual: virtual [37889,37896]
+            function_body [37897,38133]
+                expression_statement [37908,37975]
+                    call_expression [37908,37974]
+                        identifier: require [37908,37915]
+                        call_argument [37916,37930]
+                            unary_expression [37916,37930]
+                                !: ! [37916,37917]
+                                identifier: _initializing [37917,37930]
+                        call_argument [37932,37973]
+                            string_literal [37932,37973]
+                                string: "Initializable: contract is initializing" [37932,37973]
+                if_statement [37985,38126]
+                    if: if [37985,37987]
+                    member_expression: _initialized < type(uint8).max [37989,38019]
+                    block_statement [38021,38126]
+                        expression_statement [38036,38067]
+                            assignment_expression [38036,38066]
+                                identifier: _initialized [38036,38048]
+                                affectation_operator: = [38049,38050]
+                                member_expression: type(uint8).max [38051,38066]
+                        emit_statement [38081,38115]
+                            identifier: Initialized [38086,38097]
+                            call_argument [38098,38113]
+                                member_expression: type(uint8).max [38098,38113]
+to
+source_file [0,72755]
+at 20
+===
+move-tree
+---
+contract_declaration [40218,42737]
+    abstract: abstract [40218,40226]
+    identifier: OwnableUpgradeable [40236,40254]
+    is: is [40255,40257]
+    inheritance_specifier [40258,40271]
+        user_defined_type [40258,40271]
+            identifier: Initializable [40258,40271]
+    inheritance_specifier [40273,40291]
+        user_defined_type [40273,40291]
+            identifier: ContextUpgradeable [40273,40291]
+    contract_body [40292,42737]
+        state_variable_declaration [40299,40322]
+            type_name: address [40299,40306]
+            visibility: private [40307,40314]
+            identifier: _owner [40315,40321]
+        event_definition [40330,40414]
+            identifier: OwnershipTransferred [40336,40356]
+            event_paramater [40357,40386]
+                type_name: address [40357,40364]
+                indexed: indexed [40365,40372]
+                identifier: previousOwner [40373,40386]
+            event_paramater [40388,40412]
+                type_name: address [40388,40395]
+                indexed: indexed [40396,40403]
+                identifier: newOwner [40404,40412]
+        function_definition [40521,40618]
+            function: function [40521,40529]
+            identifier: __Ownable_init [40530,40544]
+            visibility: internal [40547,40555]
+            modifier_invocation [40556,40572]
+                identifier: onlyInitializing [40556,40572]
+            function_body [40573,40618]
+                expression_statement [40584,40611]
+                    call_expression [40584,40610]
+                        identifier: __Ownable_init_unchained [40584,40608]
+        function_definition [40626,40739]
+            function: function [40626,40634]
+            identifier: __Ownable_init_unchained [40635,40659]
+            visibility: internal [40662,40670]
+            modifier_invocation [40671,40687]
+                identifier: onlyInitializing [40671,40687]
+            function_body [40688,40739]
+                expression_statement [40699,40732]
+                    call_expression [40699,40731]
+                        identifier: _transferOwnership [40699,40717]
+                        call_argument [40718,40730]
+                            call_expression [40718,40730]
+                                identifier: _msgSender [40718,40728]
+        modifier_definition [40832,40897]
+            modifier: modifier [40832,40840]
+            identifier: onlyOwner [40841,40850]
+            function_body [40853,40897]
+                expression_statement [40864,40878]
+                    call_expression [40864,40877]
+                        identifier: _checkOwner [40864,40875]
+                expression_statement [40888,40890]
+                    identifier: _ [40888,40889]
+        function_definition [40978,41065]
+            function: function [40978,40986]
+            identifier: owner [40987,40992]
+            visibility: public [40995,41001]
+            state_mutability [41002,41006]
+                view: view [41002,41006]
+            virtual: virtual [41007,41014]
+            return_type_definition [41015,41032]
+                returns: returns [41015,41022]
+                parameter [41024,41031]
+                    type_name: address [41024,41031]
+            function_body [41033,41065]
+                return_statement [41044,41058]
+                    return: return [41044,41050]
+                    identifier: _owner [41051,41057]
+        function_definition [41143,41275]
+            function: function [41143,41151]
+            identifier: _checkOwner [41152,41163]
+            visibility: internal [41166,41174]
+            state_mutability [41175,41179]
+                view: view [41175,41179]
+            virtual: virtual [41180,41187]
+            function_body [41188,41275]
+                expression_statement [41199,41268]
+                    call_expression [41199,41267]
+                        identifier: require [41199,41206]
+                        call_argument [41207,41230]
+                            binary_expression [41207,41230]
+                                call_expression [41207,41214]
+                                    identifier: owner [41207,41212]
+                                comparison_operator: == [41215,41217]
+                                call_expression [41218,41230]
+                                    identifier: _msgSender [41218,41228]
+                        call_argument [41232,41266]
+                            string_literal [41232,41266]
+                                string: "Ownable: caller is not the owner" [41232,41266]
+        function_definition [41626,41729]
+            function: function [41626,41634]
+            identifier: renounceOwnership [41635,41652]
+            visibility: public [41655,41661]
+            virtual: virtual [41662,41669]
+            modifier_invocation [41670,41679]
+                identifier: onlyOwner [41670,41679]
+            function_body [41680,41729]
+                expression_statement [41691,41722]
+                    call_expression [41691,41721]
+                        identifier: _transferOwnership [41691,41709]
+                        call_argument [41710,41720]
+                            type_cast_expression [41710,41720]
+                                primitive_type: address [41710,41717]
+                                call_argument [41718,41719]
+                                    number_literal: 0 [41718,41719]
+        function_definition [41884,42085]
+            function: function [41884,41892]
+            identifier: transferOwnership [41893,41910]
+            parameter [41911,41927]
+                type_name: address [41911,41918]
+                identifier: newOwner [41919,41927]
+            visibility: public [41929,41935]
+            virtual: virtual [41936,41943]
+            modifier_invocation [41944,41953]
+                identifier: onlyOwner [41944,41953]
+            function_body [41954,42085]
+                expression_statement [41965,42039]
+                    call_expression [41965,42038]
+                        identifier: require [41965,41972]
+                        call_argument [41973,41995]
+                            binary_expression [41973,41995]
+                                identifier: newOwner [41973,41981]
+                                comparison_operator: != [41982,41984]
+                                type_cast_expression [41985,41995]
+                                    primitive_type: address [41985,41992]
+                                    call_argument [41993,41994]
+                                        number_literal: 0 [41993,41994]
+                        call_argument [41997,42037]
+                            string_literal [41997,42037]
+                                string: "Ownable: new owner is the zero address" [41997,42037]
+                expression_statement [42049,42078]
+                    call_expression [42049,42077]
+                        identifier: _transferOwnership [42049,42067]
+                        call_argument [42068,42076]
+                            identifier: newOwner [42068,42076]
+        function_definition [42245,42436]
+            function: function [42245,42253]
+            identifier: _transferOwnership [42254,42272]
+            parameter [42273,42289]
+                type_name: address [42273,42280]
+                identifier: newOwner [42281,42289]
+            visibility: internal [42291,42299]
+            virtual: virtual [42300,42307]
+            function_body [42308,42436]
+                variable_declaration_statement [42319,42345]
+                    variable_declaration [42319,42335]
+                        type_name: address [42319,42326]
+                        identifier: oldOwner [42327,42335]
+                    affectation_operator: = [42336,42337]
+                    identifier: _owner [42338,42344]
+                expression_statement [42355,42373]
+                    assignment_expression [42355,42372]
+                        identifier: _owner [42355,42361]
+                        affectation_operator: = [42362,42363]
+                        identifier: newOwner [42364,42372]
+                emit_statement [42383,42429]
+                    identifier: OwnershipTransferred [42388,42408]
+                    call_argument [42409,42417]
+                        identifier: oldOwner [42409,42417]
+                    call_argument [42419,42427]
+                        identifier: newOwner [42419,42427]
+        state_variable_declaration [42708,42734]
+            type_name: uint256[49] [42708,42719]
+            visibility: private [42720,42727]
+            identifier: __gap [42728,42733]
+to
+source_file [0,72755]
+at 25
+===
+move-tree
+---
+contract_declaration [38811,39524]
+    abstract: abstract [38811,38819]
+    identifier: ContextUpgradeable [38829,38847]
+    is: is [38848,38850]
+    inheritance_specifier [38851,38864]
+        user_defined_type [38851,38864]
+            identifier: Initializable [38851,38864]
+    contract_body [38865,39524]
+        function_definition [38872,38932]
+            function: function [38872,38880]
+            identifier: __Context_init [38881,38895]
+            visibility: internal [38898,38906]
+            modifier_invocation [38907,38923]
+                identifier: onlyInitializing [38907,38923]
+            function_body [38924,38932]
+        function_definition [38940,39010]
+            function: function [38940,38948]
+            identifier: __Context_init_unchained [38949,38973]
+            visibility: internal [38976,38984]
+            modifier_invocation [38985,39001]
+                identifier: onlyInitializing [38985,39001]
+            function_body [39002,39010]
+        function_definition [39016,39114]
+            function: function [39016,39024]
+            identifier: _msgSender [39025,39035]
+            visibility: internal [39038,39046]
+            state_mutability [39047,39051]
+                view: view [39047,39051]
+            virtual: virtual [39052,39059]
+            return_type_definition [39060,39077]
+                returns: returns [39060,39067]
+                parameter [39069,39076]
+                    type_name: address [39069,39076]
+            function_body [39078,39114]
+                return_statement [39089,39107]
+                    return: return [39089,39095]
+                    member_expression: msg.sender [39096,39106]
+        function_definition [39122,39223]
+            function: function [39122,39130]
+            identifier: _msgData [39131,39139]
+            visibility: internal [39142,39150]
+            state_mutability [39151,39155]
+                view: view [39151,39155]
+            virtual: virtual [39156,39163]
+            return_type_definition [39164,39188]
+                returns: returns [39164,39171]
+                parameter [39173,39187]
+                    type_name: bytes [39173,39178]
+                    calldata: calldata [39179,39187]
+            function_body [39189,39223]
+                return_statement [39200,39216]
+                    return: return [39200,39206]
+                    member_expression: msg.data [39207,39215]
+        state_variable_declaration [39495,39521]
+            type_name: uint256[50] [39495,39506]
+            visibility: private [39507,39514]
+            identifier: __gap [39515,39520]
+to
+source_file [0,72755]
+at 24
+===
+move-tree
+---
+library_declaration [52018,55962]
+    library: library [52018,52025]
+    identifier: SafeERC20Upgradeable [52026,52046]
+    contract_body [52047,55962]
+        using_directive [52054,52091]
+            using: using [52054,52059]
+            type_alias [52060,52078]
+                identifier: AddressUpgradeable [52060,52078]
+            for: for [52079,52082]
+            type_name: address [52083,52090]
+        function_definition [52099,52321]
+            function: function [52099,52107]
+            identifier: safeTransfer [52108,52120]
+            parameter [52131,52154]
+                type_name: IERC20Upgradeable [52131,52148]
+                identifier: token [52149,52154]
+            parameter [52165,52175]
+                type_name: address [52165,52172]
+                identifier: to [52173,52175]
+            parameter [52186,52199]
+                type_name: uint256 [52186,52193]
+                identifier: value [52194,52199]
+            visibility: internal [52207,52215]
+            function_body [52216,52321]
+                expression_statement [52227,52314]
+                    call_expression [52227,52313]
+                        identifier: _callOptionalReturn [52227,52246]
+                        call_argument [52247,52252]
+                            identifier: token [52247,52252]
+                        call_argument [52254,52312]
+                            call_expression [52254,52312]
+                                member_expression: abi.encodeWithSelector [52254,52276]
+                                call_argument [52277,52300]
+                                    member_expression: token.transfer.selector [52277,52300]
+                                call_argument [52302,52304]
+                                    identifier: to [52302,52304]
+                                call_argument [52306,52311]
+                                    identifier: value [52306,52311]
+        function_definition [52329,52588]
+            function: function [52329,52337]
+            identifier: safeTransferFrom [52338,52354]
+            parameter [52365,52388]
+                type_name: IERC20Upgradeable [52365,52382]
+                identifier: token [52383,52388]
+            parameter [52399,52411]
+                type_name: address [52399,52406]
+                identifier: from [52407,52411]
+            parameter [52422,52432]
+                type_name: address [52422,52429]
+                identifier: to [52430,52432]
+            parameter [52443,52456]
+                type_name: uint256 [52443,52450]
+                identifier: value [52451,52456]
+            visibility: internal [52464,52472]
+            function_body [52473,52588]
+                expression_statement [52484,52581]
+                    call_expression [52484,52580]
+                        identifier: _callOptionalReturn [52484,52503]
+                        call_argument [52504,52509]
+                            identifier: token [52504,52509]
+                        call_argument [52511,52579]
+                            call_expression [52511,52579]
+                                member_expression: abi.encodeWithSelector [52511,52533]
+                                call_argument [52534,52561]
+                                    member_expression: token.transferFrom.selector [52534,52561]
+                                call_argument [52563,52567]
+                                    identifier: from [52563,52567]
+                                call_argument [52569,52571]
+                                    identifier: to [52569,52571]
+                                call_argument [52573,52578]
+                                    identifier: value [52573,52578]
+        function_definition [52857,53484]
+            function: function [52857,52865]
+            identifier: safeApprove [52866,52877]
+            parameter [52888,52911]
+                type_name: IERC20Upgradeable [52888,52905]
+                identifier: token [52906,52911]
+            parameter [52922,52937]
+                type_name: address [52922,52929]
+                identifier: spender [52930,52937]
+            parameter [52948,52961]
+                type_name: uint256 [52948,52955]
+                identifier: value [52956,52961]
+            visibility: internal [52969,52977]
+            function_body [52978,53484]
+                expression_statement [53209,53376]
+                    call_expression [53209,53375]
+                        identifier: require [53209,53216]
+                        call_argument [53231,53293]
+                            binary_expression [53231,53293]
+                                parenthesized_expression [53231,53243]
+                                    binary_expression [53232,53242]
+                                        identifier: value [53232,53237]
+                                        comparison_operator: == [53238,53240]
+                                        number_literal: 0 [53241,53242]
+                                logical_operator: || [53244,53246]
+                                parenthesized_expression [53247,53293]
+                                    binary_expression [53248,53292]
+                                        call_expression [53248,53287]
+                                            member_expression: token.allowance [53248,53263]
+                                            call_argument [53264,53277]
+                                                type_cast_expression [53264,53277]
+                                                    primitive_type: address [53264,53271]
+                                                    call_argument [53272,53276]
+                                                        identifier: this [53272,53276]
+                                            call_argument [53279,53286]
+                                                identifier: spender [53279,53286]
+                                        comparison_operator: == [53288,53290]
+                                        number_literal: 0 [53291,53292]
+                        call_argument [53308,53364]
+                            string_literal [53308,53364]
+                                string: "SafeERC20: approve from non-zero to non-zero allowance" [53308,53364]
+                expression_statement [53386,53477]
+                    call_expression [53386,53476]
+                        identifier: _callOptionalReturn [53386,53405]
+                        call_argument [53406,53411]
+                            identifier: token [53406,53411]
+                        call_argument [53413,53475]
+                            call_expression [53413,53475]
+                                member_expression: abi.encodeWithSelector [53413,53435]
+                                call_argument [53436,53458]
+                                    member_expression: token.approve.selector [53436,53458]
+                                call_argument [53460,53467]
+                                    identifier: spender [53460,53467]
+                                call_argument [53469,53474]
+                                    identifier: value [53469,53474]
+        function_definition [53492,53820]
+            function: function [53492,53500]
+            identifier: safeIncreaseAllowance [53501,53522]
+            parameter [53533,53556]
+                type_name: IERC20Upgradeable [53533,53550]
+                identifier: token [53551,53556]
+            parameter [53567,53582]
+                type_name: address [53567,53574]
+                identifier: spender [53575,53582]
+            parameter [53593,53606]
+                type_name: uint256 [53593,53600]
+                identifier: value [53601,53606]
+            visibility: internal [53614,53622]
+            function_body [53623,53820]
+                variable_declaration_statement [53634,53705]
+                    variable_declaration [53634,53654]
+                        type_name: uint256 [53634,53641]
+                        identifier: newAllowance [53642,53654]
+                    affectation_operator: = [53655,53656]
+                    binary_expression [53657,53704]
+                        call_expression [53657,53696]
+                            member_expression: token.allowance [53657,53672]
+                            call_argument [53673,53686]
+                                type_cast_expression [53673,53686]
+                                    primitive_type: address [53673,53680]
+                                    call_argument [53681,53685]
+                                        identifier: this [53681,53685]
+                            call_argument [53688,53695]
+                                identifier: spender [53688,53695]
+                        arithmetic_operator: + [53697,53698]
+                        identifier: value [53699,53704]
+                expression_statement [53715,53813]
+                    call_expression [53715,53812]
+                        identifier: _callOptionalReturn [53715,53734]
+                        call_argument [53735,53740]
+                            identifier: token [53735,53740]
+                        call_argument [53742,53811]
+                            call_expression [53742,53811]
+                                member_expression: abi.encodeWithSelector [53742,53764]
+                                call_argument [53765,53787]
+                                    member_expression: token.approve.selector [53765,53787]
+                                call_argument [53789,53796]
+                                    identifier: spender [53789,53796]
+                                call_argument [53798,53810]
+                                    identifier: newAllowance [53798,53810]
+        function_definition [53828,54336]
+            function: function [53828,53836]
+            identifier: safeDecreaseAllowance [53837,53858]
+            parameter [53869,53892]
+                type_name: IERC20Upgradeable [53869,53886]
+                identifier: token [53887,53892]
+            parameter [53903,53918]
+                type_name: address [53903,53910]
+                identifier: spender [53911,53918]
+            parameter [53929,53942]
+                type_name: uint256 [53929,53936]
+                identifier: value [53937,53942]
+            visibility: internal [53950,53958]
+            function_body [53959,54336]
+                block_statement [53970,54329]
+                    unchecked: unchecked [53970,53979]
+                    variable_declaration_statement [53995,54058]
+                        variable_declaration [53995,54015]
+                            type_name: uint256 [53995,54002]
+                            identifier: oldAllowance [54003,54015]
+                        affectation_operator: = [54016,54017]
+                        call_expression [54018,54057]
+                            member_expression: token.allowance [54018,54033]
+                            call_argument [54034,54047]
+                                type_cast_expression [54034,54047]
+                                    primitive_type: address [54034,54041]
+                                    call_argument [54042,54046]
+                                        identifier: this [54042,54046]
+                            call_argument [54049,54056]
+                                identifier: spender [54049,54056]
+                    expression_statement [54072,54148]
+                        call_expression [54072,54147]
+                            identifier: require [54072,54079]
+                            call_argument [54080,54101]
+                                binary_expression [54080,54101]
+                                    identifier: oldAllowance [54080,54092]
+                                    comparison_operator: >= [54093,54095]
+                                    identifier: value [54096,54101]
+                            call_argument [54103,54146]
+                                string_literal [54103,54146]
+                                    string: "SafeERC20: decreased allowance below zero" [54103,54146]
+                    variable_declaration_statement [54162,54206]
+                        variable_declaration [54162,54182]
+                            type_name: uint256 [54162,54169]
+                            identifier: newAllowance [54170,54182]
+                        affectation_operator: = [54183,54184]
+                        binary_expression [54185,54205]
+                            identifier: oldAllowance [54185,54197]
+                            arithmetic_operator: - [54198,54199]
+                            identifier: value [54200,54205]
+                    expression_statement [54220,54318]
+                        call_expression [54220,54317]
+                            identifier: _callOptionalReturn [54220,54239]
+                            call_argument [54240,54245]
+                                identifier: token [54240,54245]
+                            call_argument [54247,54316]
+                                call_expression [54247,54316]
+                                    member_expression: abi.encodeWithSelector [54247,54269]
+                                    call_argument [54270,54292]
+                                        member_expression: token.approve.selector [54270,54292]
+                                    call_argument [54294,54301]
+                                        identifier: spender [54294,54301]
+                                    call_argument [54303,54315]
+                                        identifier: newAllowance [54303,54315]
+        function_definition [54344,54841]
+            function: function [54344,54352]
+            identifier: safePermit [54353,54363]
+            parameter [54374,54403]
+                type_name: IERC20PermitUpgradeable [54374,54397]
+                identifier: token [54398,54403]
+            parameter [54414,54427]
+                type_name: address [54414,54421]
+                identifier: owner [54422,54427]
+            parameter [54438,54453]
+                type_name: address [54438,54445]
+                identifier: spender [54446,54453]
+            parameter [54464,54477]
+                type_name: uint256 [54464,54471]
+                identifier: value [54472,54477]
+            parameter [54488,54504]
+                type_name: uint256 [54488,54495]
+                identifier: deadline [54496,54504]
+            parameter [54515,54522]
+                type_name: uint8 [54515,54520]
+                identifier: v [54521,54522]
+            parameter [54533,54542]
+                type_name: bytes32 [54533,54540]
+                identifier: r [54541,54542]
+            parameter [54553,54562]
+                type_name: bytes32 [54553,54560]
+                identifier: s [54561,54562]
+            visibility: internal [54570,54578]
+            function_body [54579,54841]
+                variable_declaration_statement [54590,54632]
+                    variable_declaration [54590,54609]
+                        type_name: uint256 [54590,54597]
+                        identifier: nonceBefore [54598,54609]
+                    affectation_operator: = [54610,54611]
+                    call_expression [54612,54631]
+                        member_expression: token.nonces [54612,54624]
+                        call_argument [54625,54630]
+                            identifier: owner [54625,54630]
+                expression_statement [54642,54697]
+                    call_expression [54642,54696]
+                        member_expression: token.permit [54642,54654]
+                        call_argument [54655,54660]
+                            identifier: owner [54655,54660]
+                        call_argument [54662,54669]
+                            identifier: spender [54662,54669]
+                        call_argument [54671,54676]
+                            identifier: value [54671,54676]
+                        call_argument [54678,54686]
+                            identifier: deadline [54678,54686]
+                        call_argument [54688,54689]
+                            identifier: v [54688,54689]
+                        call_argument [54691,54692]
+                            identifier: r [54691,54692]
+                        call_argument [54694,54695]
+                            identifier: s [54694,54695]
+                variable_declaration_statement [54707,54748]
+                    variable_declaration [54707,54725]
+                        type_name: uint256 [54707,54714]
+                        identifier: nonceAfter [54715,54725]
+                    affectation_operator: = [54726,54727]
+                    call_expression [54728,54747]
+                        member_expression: token.nonces [54728,54740]
+                        call_argument [54741,54746]
+                            identifier: owner [54741,54746]
+                expression_statement [54758,54834]
+                    call_expression [54758,54833]
+                        identifier: require [54758,54765]
+                        call_argument [54766,54795]
+                            binary_expression [54766,54795]
+                                identifier: nonceAfter [54766,54776]
+                                comparison_operator: == [54777,54779]
+                                binary_expression [54780,54795]
+                                    identifier: nonceBefore [54780,54791]
+                                    arithmetic_operator: + [54792,54793]
+                                    number_literal: 1 [54794,54795]
+                        call_argument [54797,54832]
+                            string_literal [54797,54832]
+                                string: "SafeERC20: permit did not succeed" [54797,54832]
+        function_definition [55232,55959]
+            function: function [55232,55240]
+            identifier: _callOptionalReturn [55241,55260]
+            parameter [55261,55284]
+                type_name: IERC20Upgradeable [55261,55278]
+                identifier: token [55279,55284]
+            parameter [55286,55303]
+                type_name: bytes [55286,55291]
+                memory: memory [55292,55298]
+                identifier: data [55299,55303]
+            visibility: private [55305,55312]
+            function_body [55313,55959]
+                variable_declaration_statement [55667,55763]
+                    variable_declaration [55667,55690]
+                        type_name: bytes [55667,55672]
+                        memory: memory [55673,55679]
+                        identifier: returndata [55680,55690]
+                    affectation_operator: = [55691,55692]
+                    call_expression [55693,55762]
+                        member_expression: address(token).functionCall [55693,55720]
+                        call_argument [55721,55725]
+                            identifier: data [55721,55725]
+                        call_argument [55727,55761]
+                            string_literal [55727,55761]
+                                string: "SafeERC20: low-level call failed" [55727,55761]
+                if_statement [55773,55952]
+                    if: if [55773,55775]
+                    binary_expression [55777,55798]
+                        member_expression: returndata.length [55777,55794]
+                        comparison_operator: > [55795,55796]
+                        number_literal: 0 [55797,55798]
+                    block_statement [55800,55952]
+                        expression_statement [55855,55941]
+                            call_expression [55855,55940]
+                                identifier: require [55855,55862]
+                                call_argument [55863,55893]
+                                    call_expression [55863,55893]
+                                        member_expression: abi.decode [55863,55873]
+                                        call_argument [55874,55884]
+                                            identifier: returndata [55874,55884]
+                                        call_argument [55886,55892]
+                                            parenthesized_expression [55886,55892]
+                                                primitive_type: bool [55887,55891]
+                                call_argument [55895,55939]
+                                    string_literal [55895,55939]
+                                        string: "SafeERC20: ERC20 operation did not succeed" [55895,55939]
+to
+source_file [0,72755]
+at 11
+===
+move-tree
+---
+pragma_directive [24869,24892]
+    pragma: pragma [24869,24875]
+    solidity_pragma_token [24876,24891]
+        solidity: solidity [24876,24884]
+        solidity_version_comparison_operator [24884,24886]
+            bitwise_operator:  ^ [24884,24886]
+        solidity_version: 0.8.1 [24886,24891]
+to
+source_file [0,72755]
+at 5
+===
+move-tree
+---
+interface_declaration [15940,19796]
+    interface: interface [15940,15949]
+    identifier: IERC1155Upgradeable [15950,15969]
+    is: is [15970,15972]
+    inheritance_specifier [15973,15991]
+        user_defined_type [15973,15991]
+            identifier: IERC165Upgradeable [15973,15991]
+    contract_body [15992,19796]
+        event_definition [16128,16244]
+            identifier: TransferSingle [16134,16148]
+            event_paramater [16149,16173]
+                type_name: address [16149,16156]
+                indexed: indexed [16157,16164]
+                identifier: operator [16165,16173]
+            event_paramater [16175,16195]
+                type_name: address [16175,16182]
+                indexed: indexed [16183,16190]
+                identifier: from [16191,16195]
+            event_paramater [16197,16215]
+                type_name: address [16197,16204]
+                indexed: indexed [16205,16212]
+                identifier: to [16213,16215]
+            event_paramater [16217,16227]
+                type_name: uint256 [16217,16224]
+                identifier: id [16225,16227]
+            event_paramater [16229,16242]
+                type_name: uint256 [16229,16236]
+                identifier: value [16237,16242]
+        event_definition [16405,16578]
+            identifier: TransferBatch [16411,16424]
+            event_paramater [16435,16459]
+                type_name: address [16435,16442]
+                indexed: indexed [16443,16450]
+                identifier: operator [16451,16459]
+            event_paramater [16470,16490]
+                type_name: address [16470,16477]
+                indexed: indexed [16478,16485]
+                identifier: from [16486,16490]
+            event_paramater [16501,16519]
+                type_name: address [16501,16508]
+                indexed: indexed [16509,16516]
+                identifier: to [16517,16519]
+            event_paramater [16530,16543]
+                type_name: uint256[] [16530,16539]
+                identifier: ids [16540,16543]
+            event_paramater [16554,16570]
+                type_name: uint256[] [16554,16563]
+                identifier: values [16564,16570]
+        event_definition [16742,16829]
+            identifier: ApprovalForAll [16748,16762]
+            event_paramater [16763,16786]
+                type_name: address [16763,16770]
+                indexed: indexed [16771,16778]
+                identifier: account [16779,16786]
+            event_paramater [16788,16812]
+                type_name: address [16788,16795]
+                indexed: indexed [16796,16803]
+                identifier: operator [16804,16812]
+            event_paramater [16814,16827]
+                type_name: bool [16814,16818]
+                identifier: approved [16819,16827]
+        event_definition [17192,17236]
+            identifier: URI [17198,17201]
+            event_paramater [17202,17214]
+                type_name: string [17202,17208]
+                identifier: value [17209,17214]
+            event_paramater [17216,17234]
+                type_name: uint256 [17216,17223]
+                indexed: indexed [17224,17231]
+                identifier: id [17232,17234]
+        function_definition [17429,17509]
+            function: function [17429,17437]
+            identifier: balanceOf [17438,17447]
+            parameter [17448,17463]
+                type_name: address [17448,17455]
+                identifier: account [17456,17463]
+            parameter [17465,17475]
+                type_name: uint256 [17465,17472]
+                identifier: id [17473,17475]
+            visibility: external [17477,17485]
+            state_mutability [17486,17490]
+                view: view [17486,17490]
+            return_type_definition [17491,17508]
+                returns: returns [17491,17498]
+                parameter [17500,17507]
+                    type_name: uint256 [17500,17507]
+        function_definition [17717,17862]
+            function: function [17717,17725]
+            identifier: balanceOfBatch [17726,17740]
+            parameter [17741,17768]
+                type_name: address[] [17741,17750]
+                calldata: calldata [17751,17759]
+                identifier: accounts [17760,17768]
+            parameter [17770,17792]
+                type_name: uint256[] [17770,17779]
+                calldata: calldata [17780,17788]
+                identifier: ids [17789,17792]
+            visibility: external [17803,17811]
+            state_mutability [17821,17825]
+                view: view [17821,17825]
+            return_type_definition [17835,17861]
+                returns: returns [17835,17842]
+                parameter [17844,17860]
+                    type_name: uint256[] [17844,17853]
+                    memory: memory [17854,17860]
+        function_definition [18132,18201]
+            function: function [18132,18140]
+            identifier: setApprovalForAll [18141,18158]
+            parameter [18159,18175]
+                type_name: address [18159,18166]
+                identifier: operator [18167,18175]
+            parameter [18177,18190]
+                type_name: bool [18177,18181]
+                identifier: approved [18182,18190]
+            visibility: external [18192,18200]
+        function_definition [18354,18444]
+            function: function [18354,18362]
+            identifier: isApprovedForAll [18363,18379]
+            parameter [18380,18395]
+                type_name: address [18380,18387]
+                identifier: account [18388,18395]
+            parameter [18397,18413]
+                type_name: address [18397,18404]
+                identifier: operator [18405,18413]
+            visibility: external [18415,18423]
+            state_mutability [18424,18428]
+                view: view [18424,18428]
+            return_type_definition [18429,18443]
+                returns: returns [18429,18436]
+                parameter [18438,18442]
+                    type_name: bool [18438,18442]
+        function_definition [19026,19188]
+            function: function [19026,19034]
+            identifier: safeTransferFrom [19035,19051]
+            parameter [19062,19074]
+                type_name: address [19062,19069]
+                identifier: from [19070,19074]
+            parameter [19085,19095]
+                type_name: address [19085,19092]
+                identifier: to [19093,19095]
+            parameter [19106,19116]
+                type_name: uint256 [19106,19113]
+                identifier: id [19114,19116]
+            parameter [19127,19141]
+                type_name: uint256 [19127,19134]
+                identifier: amount [19135,19141]
+            parameter [19152,19171]
+                type_name: bytes [19152,19157]
+                calldata: calldata [19158,19166]
+                identifier: data [19167,19171]
+            visibility: external [19179,19187]
+        function_definition [19602,19793]
+            function: function [19602,19610]
+            identifier: safeBatchTransferFrom [19611,19632]
+            parameter [19643,19655]
+                type_name: address [19643,19650]
+                identifier: from [19651,19655]
+            parameter [19666,19676]
+                type_name: address [19666,19673]
+                identifier: to [19674,19676]
+            parameter [19687,19709]
+                type_name: uint256[] [19687,19696]
+                calldata: calldata [19697,19705]
+                identifier: ids [19706,19709]
+            parameter [19720,19746]
+                type_name: uint256[] [19720,19729]
+                calldata: calldata [19730,19738]
+                identifier: amounts [19739,19746]
+            parameter [19757,19776]
+                type_name: bytes [19757,19762]
+                calldata: calldata [19763,19771]
+                identifier: data [19772,19776]
+            visibility: external [19784,19792]
+to
+source_file [0,72755]
+at 15
+===
+move-tree
+---
+interface_declaration [48688,51336]
+    interface: interface [48688,48697]
+    identifier: IERC20Upgradeable [48698,48715]
+    contract_body [48716,51336]
+        event_definition [48892,48964]
+            identifier: Transfer [48898,48906]
+            event_paramater [48907,48927]
+                type_name: address [48907,48914]
+                indexed: indexed [48915,48922]
+                identifier: from [48923,48927]
+            event_paramater [48929,48947]
+                type_name: address [48929,48936]
+                indexed: indexed [48937,48944]
+                identifier: to [48945,48947]
+            event_paramater [48949,48962]
+                type_name: uint256 [48949,48956]
+                identifier: value [48957,48962]
+        event_definition [49129,49207]
+            identifier: Approval [49135,49143]
+            event_paramater [49144,49165]
+                type_name: address [49144,49151]
+                indexed: indexed [49152,49159]
+                identifier: owner [49160,49165]
+            event_paramater [49167,49190]
+                type_name: address [49167,49174]
+                indexed: indexed [49175,49182]
+                identifier: spender [49183,49190]
+            event_paramater [49192,49205]
+                type_name: uint256 [49192,49199]
+                identifier: value [49200,49205]
+        function_definition [49289,49344]
+            function: function [49289,49297]
+            identifier: totalSupply [49298,49309]
+            visibility: external [49312,49320]
+            state_mutability [49321,49325]
+                view: view [49321,49325]
+            return_type_definition [49326,49343]
+                returns: returns [49326,49333]
+                parameter [49335,49342]
+                    type_name: uint256 [49335,49342]
+        function_definition [49432,49500]
+            function: function [49432,49440]
+            identifier: balanceOf [49441,49450]
+            parameter [49451,49466]
+                type_name: address [49451,49458]
+                identifier: account [49459,49466]
+            visibility: external [49468,49476]
+            state_mutability [49477,49481]
+                view: view [49477,49481]
+            return_type_definition [49482,49499]
+                returns: returns [49482,49489]
+                parameter [49491,49498]
+                    type_name: uint256 [49491,49498]
+        function_definition [49722,49792]
+            function: function [49722,49730]
+            identifier: transfer [49731,49739]
+            parameter [49740,49750]
+                type_name: address [49740,49747]
+                identifier: to [49748,49750]
+            parameter [49752,49766]
+                type_name: uint256 [49752,49759]
+                identifier: amount [49760,49766]
+            visibility: external [49768,49776]
+            return_type_definition [49777,49791]
+                returns: returns [49777,49784]
+                parameter [49786,49790]
+                    type_name: bool [49786,49790]
+        function_definition [50076,50159]
+            function: function [50076,50084]
+            identifier: allowance [50085,50094]
+            parameter [50095,50108]
+                type_name: address [50095,50102]
+                identifier: owner [50103,50108]
+            parameter [50110,50125]
+                type_name: address [50110,50117]
+                identifier: spender [50118,50125]
+            visibility: external [50127,50135]
+            state_mutability [50136,50140]
+                view: view [50136,50140]
+            return_type_definition [50141,50158]
+                returns: returns [50141,50148]
+                parameter [50150,50157]
+                    type_name: uint256 [50150,50157]
+        function_definition [50828,50902]
+            function: function [50828,50836]
+            identifier: approve [50837,50844]
+            parameter [50845,50860]
+                type_name: address [50845,50852]
+                identifier: spender [50853,50860]
+            parameter [50862,50876]
+                type_name: uint256 [50862,50869]
+                identifier: amount [50870,50876]
+            visibility: external [50878,50886]
+            return_type_definition [50887,50901]
+                returns: returns [50887,50894]
+                parameter [50896,50900]
+                    type_name: bool [50896,50900]
+        function_definition [51211,51333]
+            function: function [51211,51219]
+            identifier: transferFrom [51220,51232]
+            parameter [51243,51255]
+                type_name: address [51243,51250]
+                identifier: from [51251,51255]
+            parameter [51266,51276]
+                type_name: address [51266,51273]
+                identifier: to [51274,51276]
+            parameter [51287,51301]
+                type_name: uint256 [51287,51294]
+                identifier: amount [51295,51301]
+            visibility: external [51309,51317]
+            return_type_definition [51318,51332]
+                returns: returns [51318,51325]
+                parameter [51327,51331]
+                    type_name: bool [51327,51331]
+to
+source_file [0,72755]
+at 1
+===
+move-tree
+---
+interface_declaration [46735,48423]
+    interface: interface [46735,46744]
+    identifier: IERC20PermitUpgradeable [46745,46768]
+    contract_body [46769,48423]
+        function_definition [47594,47785]
+            function: function [47594,47602]
+            identifier: permit [47603,47609]
+            parameter [47620,47633]
+                type_name: address [47620,47627]
+                identifier: owner [47628,47633]
+            parameter [47644,47659]
+                type_name: address [47644,47651]
+                identifier: spender [47652,47659]
+            parameter [47670,47683]
+                type_name: uint256 [47670,47677]
+                identifier: value [47678,47683]
+            parameter [47694,47710]
+                type_name: uint256 [47694,47701]
+                identifier: deadline [47702,47710]
+            parameter [47721,47728]
+                type_name: uint8 [47721,47726]
+                identifier: v [47727,47728]
+            parameter [47739,47748]
+                type_name: bytes32 [47739,47746]
+                identifier: r [47747,47748]
+            parameter [47759,47768]
+                type_name: bytes32 [47759,47766]
+                identifier: s [47767,47768]
+            visibility: external [47776,47784]
+        function_definition [48099,48162]
+            function: function [48099,48107]
+            identifier: nonces [48108,48114]
+            parameter [48115,48128]
+                type_name: address [48115,48122]
+                identifier: owner [48123,48128]
+            visibility: external [48130,48138]
+            state_mutability [48139,48143]
+                view: view [48139,48143]
+            return_type_definition [48144,48161]
+                returns: returns [48144,48151]
+                parameter [48153,48160]
+                    type_name: uint256 [48153,48160]
+        function_definition [48360,48420]
+            function: function [48360,48368]
+            identifier: DOMAIN_SEPARATOR [48369,48385]
+            visibility: external [48388,48396]
+            state_mutability [48397,48401]
+                view: view [48397,48401]
+            return_type_definition [48402,48419]
+                returns: returns [48402,48409]
+                parameter [48411,48418]
+                    type_name: bytes32 [48411,48418]
+to
+source_file [0,72755]
+at 4
+===
+move-tree
+---
+pragma_directive [14783,14806]
+    pragma: pragma [14783,14789]
+    solidity_pragma_token [14790,14805]
+        solidity: solidity [14790,14798]
+        solidity_version_comparison_operator [14798,14800]
+            bitwise_operator:  ^ [14798,14800]
+        solidity_version: 0.8.0 [14800,14805]
+to
+source_file [0,72755]
+at 13
+===
+move-tree
+---
+library_declaration [13605,14616]
+    library: library [13605,13612]
+    identifier: CountersUpgradeable [13613,13632]
+    contract_body [13633,14616]
+        struct_declaration [13640,14019]
+            struct: struct [13640,13646]
+            identifier: Counter [13647,13654]
+            struct_member [13983,13998]
+                type_name: uint256 [13983,13990]
+                identifier: _value [13991,13997]
+        function_definition [14027,14141]
+            function: function [14027,14035]
+            identifier: current [14036,14043]
+            parameter [14044,14067]
+                type_name: Counter [14044,14051]
+                storage: storage [14052,14059]
+                identifier: counter [14060,14067]
+            visibility: internal [14069,14077]
+            state_mutability [14078,14082]
+                view: view [14078,14082]
+            return_type_definition [14083,14100]
+                returns: returns [14083,14090]
+                parameter [14092,14099]
+                    type_name: uint256 [14092,14099]
+            function_body [14101,14141]
+                return_statement [14112,14134]
+                    return: return [14112,14118]
+                    member_expression: counter._value [14119,14133]
+        function_definition [14149,14276]
+            function: function [14149,14157]
+            identifier: increment [14158,14167]
+            parameter [14168,14191]
+                type_name: Counter [14168,14175]
+                storage: storage [14176,14183]
+                identifier: counter [14184,14191]
+            visibility: internal [14193,14201]
+            function_body [14202,14276]
+                block_statement [14213,14269]
+                    unchecked: unchecked [14213,14222]
+                    expression_statement [14238,14258]
+                        augmented_assignment_expression [14238,14257]
+                            member_expression: counter._value [14238,14252]
+                            affectation_operator: += [14253,14255]
+                            number_literal: 1 [14256,14257]
+        function_definition [14284,14519]
+            function: function [14284,14292]
+            identifier: decrement [14293,14302]
+            parameter [14303,14326]
+                type_name: Counter [14303,14310]
+                storage: storage [14311,14318]
+                identifier: counter [14319,14326]
+            visibility: internal [14328,14336]
+            function_body [14337,14519]
+                variable_declaration_statement [14348,14379]
+                    variable_declaration [14348,14361]
+                        type_name: uint256 [14348,14355]
+                        identifier: value [14356,14361]
+                    affectation_operator: = [14362,14363]
+                    member_expression: counter._value [14364,14378]
+                expression_statement [14389,14439]
+                    call_expression [14389,14438]
+                        identifier: require [14389,14396]
+                        call_argument [14397,14406]
+                            binary_expression [14397,14406]
+                                identifier: value [14397,14402]
+                                comparison_operator: > [14403,14404]
+                                number_literal: 0 [14405,14406]
+                        call_argument [14408,14437]
+                            string_literal [14408,14437]
+                                string: "Counter: decrement overflow" [14408,14437]
+                block_statement [14449,14512]
+                    unchecked: unchecked [14449,14458]
+                    expression_statement [14474,14501]
+                        assignment_expression [14474,14500]
+                            member_expression: counter._value [14474,14488]
+                            affectation_operator: = [14489,14490]
+                            binary_expression [14491,14500]
+                                identifier: value [14491,14496]
+                                arithmetic_operator: - [14497,14498]
+                                number_literal: 1 [14499,14500]
+        function_definition [14527,14613]
+            function: function [14527,14535]
+            identifier: reset [14536,14541]
+            parameter [14542,14565]
+                type_name: Counter [14542,14549]
+                storage: storage [14550,14557]
+                identifier: counter [14558,14565]
+            visibility: internal [14567,14575]
+            function_body [14576,14613]
+                expression_statement [14587,14606]
+                    assignment_expression [14587,14605]
+                        member_expression: counter._value [14587,14601]
+                        affectation_operator: = [14602,14603]
+                        number_literal: 0 [14604,14605]
+to
+source_file [0,72755]
+at 18
+===
+move-tree
+---
+library_declaration [24967,32325]
+    library: library [24967,24974]
+    identifier: AddressUpgradeable [24975,24993]
+    contract_body [24994,32325]
+        function_definition [25986,26312]
+            function: function [25986,25994]
+            identifier: isContract [25995,26005]
+            parameter [26006,26021]
+                type_name: address [26006,26013]
+                identifier: account [26014,26021]
+            visibility: internal [26023,26031]
+            state_mutability [26032,26036]
+                view: view [26032,26036]
+            return_type_definition [26037,26051]
+                returns: returns [26037,26044]
+                parameter [26046,26050]
+                    type_name: bool [26046,26050]
+            function_body [26052,26312]
+                return_statement [26274,26305]
+                    return: return [26274,26280]
+                    binary_expression [26281,26304]
+                        member_expression: account.code.length [26281,26300]
+                        comparison_operator: > [26301,26302]
+                        number_literal: 0 [26303,26304]
+        function_definition [27247,27564]
+            function: function [27247,27255]
+            identifier: sendValue [27256,27265]
+            parameter [27266,27291]
+                type_name: address payable [27266,27281]
+                identifier: recipient [27282,27291]
+            parameter [27293,27307]
+                type_name: uint256 [27293,27300]
+                identifier: amount [27301,27307]
+            visibility: internal [27309,27317]
+            function_body [27318,27564]
+                expression_statement [27329,27403]
+                    call_expression [27329,27402]
+                        identifier: require [27329,27336]
+                        call_argument [27337,27368]
+                            binary_expression [27337,27368]
+                                member_expression: address(this).balance [27337,27358]
+                                comparison_operator: >= [27359,27361]
+                                identifier: amount [27362,27368]
+                        call_argument [27370,27401]
+                            string_literal [27370,27401]
+                                string: "Address: insufficient balance" [27370,27401]
+                variable_declaration_statement [27415,27468]
+                    variable_declaration_tuple [27415,27431]
+                        variable_declaration [27416,27428]
+                            type_name: bool [27416,27420]
+                            identifier: success [27421,27428]
+                    affectation_operator: = [27432,27433]
+                    call_expression [27434,27467]
+                        struct_expression [27434,27463]
+                            member_expression: recipient.call [27434,27448]
+                            struct_field_assignment [27449,27462]
+                                identifier: value [27449,27454]
+                                :: : [27454,27455]
+                                identifier: amount [27456,27462]
+                        call_argument [27464,27466]
+                            string_literal [27464,27466]
+                                string: "" [27464,27466]
+                expression_statement [27478,27557]
+                    call_expression [27478,27556]
+                        identifier: require [27478,27485]
+                        call_argument [27486,27493]
+                            identifier: success [27486,27493]
+                        call_argument [27495,27555]
+                            string_literal [27495,27555]
+                                string: "Address: unable to send value, recipient may have reverted" [27495,27555]
+        function_definition [28326,28501]
+            function: function [28326,28334]
+            identifier: functionCall [28335,28347]
+            parameter [28348,28362]
+                type_name: address [28348,28355]
+                identifier: target [28356,28362]
+            parameter [28364,28381]
+                type_name: bytes [28364,28369]
+                memory: memory [28370,28376]
+                identifier: data [28377,28381]
+            visibility: internal [28383,28391]
+            return_type_definition [28392,28414]
+                returns: returns [28392,28399]
+                parameter [28401,28413]
+                    type_name: bytes [28401,28406]
+                    memory: memory [28407,28413]
+            function_body [28415,28501]
+                return_statement [28426,28494]
+                    return: return [28426,28432]
+                    call_expression [28433,28493]
+                        identifier: functionCall [28433,28445]
+                        call_argument [28446,28452]
+                            identifier: target [28446,28452]
+                        call_argument [28454,28458]
+                            identifier: data [28454,28458]
+                        call_argument [28460,28492]
+                            string_literal [28460,28492]
+                                string: "Address: low-level call failed" [28460,28492]
+        function_definition [28731,28960]
+            function: function [28731,28739]
+            identifier: functionCall [28740,28752]
+            parameter [28763,28777]
+                type_name: address [28763,28770]
+                identifier: target [28771,28777]
+            parameter [28788,28805]
+                type_name: bytes [28788,28793]
+                memory: memory [28794,28800]
+                identifier: data [28801,28805]
+            parameter [28816,28842]
+                type_name: string [28816,28822]
+                memory: memory [28823,28829]
+                identifier: errorMessage [28830,28842]
+            visibility: internal [28850,28858]
+            return_type_definition [28859,28881]
+                returns: returns [28859,28866]
+                parameter [28868,28880]
+                    type_name: bytes [28868,28873]
+                    memory: memory [28874,28880]
+            function_body [28882,28960]
+                return_statement [28893,28953]
+                    return: return [28893,28899]
+                    call_expression [28900,28952]
+                        identifier: functionCallWithValue [28900,28921]
+                        call_argument [28922,28928]
+                            identifier: target [28922,28928]
+                        call_argument [28930,28934]
+                            identifier: data [28930,28934]
+                        call_argument [28936,28937]
+                            number_literal: 0 [28936,28937]
+                        call_argument [28939,28951]
+                            identifier: errorMessage [28939,28951]
+        function_definition [29335,29595]
+            function: function [29335,29343]
+            identifier: functionCallWithValue [29344,29365]
+            parameter [29376,29390]
+                type_name: address [29376,29383]
+                identifier: target [29384,29390]
+            parameter [29401,29418]
+                type_name: bytes [29401,29406]
+                memory: memory [29407,29413]
+                identifier: data [29414,29418]
+            parameter [29429,29442]
+                type_name: uint256 [29429,29436]
+                identifier: value [29437,29442]
+            visibility: internal [29450,29458]
+            return_type_definition [29459,29481]
+                returns: returns [29459,29466]
+                parameter [29468,29480]
+                    type_name: bytes [29468,29473]
+                    memory: memory [29474,29480]
+            function_body [29482,29595]
+                return_statement [29493,29588]
+                    return: return [29493,29499]
+                    call_expression [29500,29587]
+                        identifier: functionCallWithValue [29500,29521]
+                        call_argument [29522,29528]
+                            identifier: target [29522,29528]
+                        call_argument [29530,29534]
+                            identifier: data [29530,29534]
+                        call_argument [29536,29541]
+                            identifier: value [29536,29541]
+                        call_argument [29543,29586]
+                            string_literal [29543,29586]
+                                string: "Address: low-level call with value failed" [29543,29586]
+        function_definition [29851,30361]
+            function: function [29851,29859]
+            identifier: functionCallWithValue [29860,29881]
+            parameter [29892,29906]
+                type_name: address [29892,29899]
+                identifier: target [29900,29906]
+            parameter [29917,29934]
+                type_name: bytes [29917,29922]
+                memory: memory [29923,29929]
+                identifier: data [29930,29934]
+            parameter [29945,29958]
+                type_name: uint256 [29945,29952]
+                identifier: value [29953,29958]
+            parameter [29969,29995]
+                type_name: string [29969,29975]
+                memory: memory [29976,29982]
+                identifier: errorMessage [29983,29995]
+            visibility: internal [30003,30011]
+            return_type_definition [30012,30034]
+                returns: returns [30012,30019]
+                parameter [30021,30033]
+                    type_name: bytes [30021,30026]
+                    memory: memory [30027,30033]
+            function_body [30035,30361]
+                expression_statement [30046,30128]
+                    call_expression [30046,30127]
+                        identifier: require [30046,30053]
+                        call_argument [30054,30084]
+                            binary_expression [30054,30084]
+                                member_expression: address(this).balance [30054,30075]
+                                comparison_operator: >= [30076,30078]
+                                identifier: value [30079,30084]
+                        call_argument [30086,30126]
+                            string_literal [30086,30126]
+                                string: "Address: insufficient balance for call" [30086,30126]
+                expression_statement [30138,30199]
+                    call_expression [30138,30198]
+                        identifier: require [30138,30145]
+                        call_argument [30146,30164]
+                            call_expression [30146,30164]
+                                identifier: isContract [30146,30156]
+                                call_argument [30157,30163]
+                                    identifier: target [30157,30163]
+                        call_argument [30166,30197]
+                            string_literal [30166,30197]
+                                string: "Address: call to non-contract" [30166,30197]
+                variable_declaration_statement [30211,30285]
+                    variable_declaration_tuple [30211,30250]
+                        variable_declaration [30212,30224]
+                            type_name: bool [30212,30216]
+                            identifier: success [30217,30224]
+                        variable_declaration [30226,30249]
+                            type_name: bytes [30226,30231]
+                            memory: memory [30232,30238]
+                            identifier: returndata [30239,30249]
+                    affectation_operator: = [30251,30252]
+                    call_expression [30253,30284]
+                        struct_expression [30253,30278]
+                            member_expression: target.call [30253,30264]
+                            struct_field_assignment [30265,30277]
+                                identifier: value [30265,30270]
+                                :: : [30270,30271]
+                                identifier: value [30272,30277]
+                        call_argument [30279,30283]
+                            identifier: data [30279,30283]
+                return_statement [30295,30354]
+                    return: return [30295,30301]
+                    call_expression [30302,30353]
+                        identifier: verifyCallResult [30302,30318]
+                        call_argument [30319,30326]
+                            identifier: success [30319,30326]
+                        call_argument [30328,30338]
+                            identifier: returndata [30328,30338]
+                        call_argument [30340,30352]
+                            identifier: errorMessage [30340,30352]
+        function_definition [30546,30745]
+            function: function [30546,30554]
+            identifier: functionStaticCall [30555,30573]
+            parameter [30574,30588]
+                type_name: address [30574,30581]
+                identifier: target [30582,30588]
+            parameter [30590,30607]
+                type_name: bytes [30590,30595]
+                memory: memory [30596,30602]
+                identifier: data [30603,30607]
+            visibility: internal [30609,30617]
+            state_mutability [30618,30622]
+                view: view [30618,30622]
+            return_type_definition [30623,30645]
+                returns: returns [30623,30630]
+                parameter [30632,30644]
+                    type_name: bytes [30632,30637]
+                    memory: memory [30638,30644]
+            function_body [30646,30745]
+                return_statement [30657,30738]
+                    return: return [30657,30663]
+                    call_expression [30664,30737]
+                        identifier: functionStaticCall [30664,30682]
+                        call_argument [30683,30689]
+                            identifier: target [30683,30689]
+                        call_argument [30691,30695]
+                            identifier: data [30691,30695]
+                        call_argument [30697,30736]
+                            string_literal [30697,30736]
+                                string: "Address: low-level static call failed" [30697,30736]
+        function_definition [30937,31332]
+            function: function [30937,30945]
+            identifier: functionStaticCall [30946,30964]
+            parameter [30975,30989]
+                type_name: address [30975,30982]
+                identifier: target [30983,30989]
+            parameter [31000,31017]
+                type_name: bytes [31000,31005]
+                memory: memory [31006,31012]
+                identifier: data [31013,31017]
+            parameter [31028,31054]
+                type_name: string [31028,31034]
+                memory: memory [31035,31041]
+                identifier: errorMessage [31042,31054]
+            visibility: internal [31062,31070]
+            state_mutability [31071,31075]
+                view: view [31071,31075]
+            return_type_definition [31076,31098]
+                returns: returns [31076,31083]
+                parameter [31085,31097]
+                    type_name: bytes [31085,31090]
+                    memory: memory [31091,31097]
+            function_body [31099,31332]
+                expression_statement [31110,31178]
+                    call_expression [31110,31177]
+                        identifier: require [31110,31117]
+                        call_argument [31118,31136]
+                            call_expression [31118,31136]
+                                identifier: isContract [31118,31128]
+                                call_argument [31129,31135]
+                                    identifier: target [31129,31135]
+                        call_argument [31138,31176]
+                            string_literal [31138,31176]
+                                string: "Address: static call to non-contract" [31138,31176]
+                variable_declaration_statement [31190,31256]
+                    variable_declaration_tuple [31190,31229]
+                        variable_declaration [31191,31203]
+                            type_name: bool [31191,31195]
+                            identifier: success [31196,31203]
+                        variable_declaration [31205,31228]
+                            type_name: bytes [31205,31210]
+                            memory: memory [31211,31217]
+                            identifier: returndata [31218,31228]
+                    affectation_operator: = [31230,31231]
+                    call_expression [31232,31255]
+                        member_expression: target.staticcall [31232,31249]
+                        call_argument [31250,31254]
+                            identifier: data [31250,31254]
+                return_statement [31266,31325]
+                    return: return [31266,31272]
+                    call_expression [31273,31324]
+                        identifier: verifyCallResult [31273,31289]
+                        call_argument [31290,31297]
+                            identifier: success [31290,31297]
+                        call_argument [31299,31309]
+                            identifier: returndata [31299,31309]
+                        call_argument [31311,31323]
+                            identifier: errorMessage [31311,31323]
+        function_definition [31560,32322]
+            function: function [31560,31568]
+            identifier: verifyCallResult [31569,31585]
+            parameter [31596,31608]
+                type_name: bool [31596,31600]
+                identifier: success [31601,31608]
+            parameter [31619,31642]
+                type_name: bytes [31619,31624]
+                memory: memory [31625,31631]
+                identifier: returndata [31632,31642]
+            parameter [31653,31679]
+                type_name: string [31653,31659]
+                memory: memory [31660,31666]
+                identifier: errorMessage [31667,31679]
+            visibility: internal [31687,31695]
+            state_mutability [31696,31700]
+                pure: pure [31696,31700]
+            return_type_definition [31701,31723]
+                returns: returns [31701,31708]
+                parameter [31710,31722]
+                    type_name: bytes [31710,31715]
+                    memory: memory [31716,31722]
+            function_body [31724,32322]
+                if_statement [31735,32315]
+                    if: if [31735,31737]
+                    identifier: success [31739,31746]
+                    block_statement [31748,31792]
+                        return_statement [31763,31781]
+                            return: return [31763,31769]
+                            identifier: returndata [31770,31780]
+                    else: else [31793,31797]
+                    block_statement [31798,32315]
+                        if_statement [31880,32304]
+                            if: if [31880,31882]
+                            binary_expression [31884,31905]
+                                member_expression: returndata.length [31884,31901]
+                                comparison_operator: > [31902,31903]
+                                number_literal: 0 [31904,31905]
+                            block_statement [31907,32243]
+                                assembly_statement [32071,32228]
+                                    assembly: assembly [32071,32079]
+                                    yul_variable_declaration [32103,32143]
+                                        let: let [32103,32106]
+                                        yul_identifier [32107,32122]
+                                            identifier: returndata_size [32107,32122]
+                                        :=: := [32123,32125]
+                                        yul_function_call [32126,32143]
+                                            yul_evm_builtin [32126,32131]
+                                                mload: mload [32126,32131]
+                                            yul_path [32132,32142]
+                                                yul_identifier [32132,32142]
+                                                    identifier: returndata [32132,32142]
+                                    yul_function_call [32165,32209]
+                                        yul_evm_builtin [32165,32171]
+                                            revert: revert [32165,32171]
+                                        yul_function_call [32172,32191]
+                                            yul_evm_builtin [32172,32175]
+                                                add: add [32172,32175]
+                                            yul_decimal_number: 32 [32176,32178]
+                                            yul_path [32180,32190]
+                                                yul_identifier [32180,32190]
+                                                    identifier: returndata [32180,32190]
+                                        yul_path [32193,32208]
+                                            yul_identifier [32193,32208]
+                                                identifier: returndata_size [32193,32208]
+                            else: else [32244,32248]
+                            block_statement [32249,32304]
+                                revert_statement [32268,32289]
+                                    revert: revert [32268,32274]
+                                    parenthesized_expression [32274,32288]
+                                        identifier: errorMessage [32275,32287]
+to
+source_file [0,72755]
+at 6
+===
+move-tree
+---
+pragma_directive [32492,32515]
+    pragma: pragma [32492,32498]
+    solidity_pragma_token [32499,32514]
+        solidity: solidity [32499,32507]
+        solidity_version_comparison_operator [32507,32509]
+            bitwise_operator:  ^ [32507,32509]
+        solidity_version: 0.8.2 [32509,32514]
+to
+source_file [0,72755]
+at 20
+===
+move-tree
+---
+pragma_directive [42898,42921]
+    pragma: pragma [42898,42904]
+    solidity_pragma_token [42905,42920]
+        solidity: solidity [42905,42913]
+        solidity_version_comparison_operator [42913,42915]
+            bitwise_operator:  ^ [42913,42915]
+        solidity_version: 0.8.0 [42915,42920]
+to
+source_file [0,72755]
+at 15
+===
+move-tree
+---
+contract_declaration [43694,46024]
+    abstract: abstract [43694,43702]
+    identifier: ReentrancyGuardUpgradeable [43712,43738]
+    is: is [43739,43741]
+    inheritance_specifier [43742,43755]
+        user_defined_type [43742,43755]
+            identifier: Initializable [43742,43755]
+    contract_body [43756,46024]
+        state_variable_declaration [44522,44564]
+            type_name: uint256 [44522,44529]
+            visibility: private [44530,44537]
+            constant: constant [44538,44546]
+            identifier: _NOT_ENTERED [44547,44559]
+            affectation_operator: = [44560,44561]
+            number_literal: 1 [44562,44563]
+        state_variable_declaration [44570,44608]
+            type_name: uint256 [44570,44577]
+            visibility: private [44578,44585]
+            constant: constant [44586,44594]
+            identifier: _ENTERED [44595,44603]
+            affectation_operator: = [44604,44605]
+            number_literal: 2 [44606,44607]
+        state_variable_declaration [44616,44640]
+            type_name: uint256 [44616,44623]
+            visibility: private [44624,44631]
+            identifier: _status [44632,44639]
+        function_definition [44648,44761]
+            function: function [44648,44656]
+            identifier: __ReentrancyGuard_init [44657,44679]
+            visibility: internal [44682,44690]
+            modifier_invocation [44691,44707]
+                identifier: onlyInitializing [44691,44707]
+            function_body [44708,44761]
+                expression_statement [44719,44754]
+                    call_expression [44719,44753]
+                        identifier: __ReentrancyGuard_init_unchained [44719,44751]
+        function_definition [44769,44880]
+            function: function [44769,44777]
+            identifier: __ReentrancyGuard_init_unchained [44778,44810]
+            visibility: internal [44813,44821]
+            modifier_invocation [44822,44838]
+                identifier: onlyInitializing [44822,44838]
+            function_body [44839,44880]
+                expression_statement [44850,44873]
+                    assignment_expression [44850,44872]
+                        identifier: _status [44850,44857]
+                        affectation_operator: = [44858,44859]
+                        identifier: _NOT_ENTERED [44860,44872]
+        modifier_definition [45266,45723]
+            modifier: modifier [45266,45274]
+            identifier: nonReentrant [45275,45287]
+            function_body [45290,45723]
+                expression_statement [45373,45437]
+                    call_expression [45373,45436]
+                        identifier: require [45373,45380]
+                        call_argument [45381,45400]
+                            binary_expression [45381,45400]
+                                identifier: _status [45381,45388]
+                                comparison_operator: != [45389,45391]
+                                identifier: _ENTERED [45392,45400]
+                        call_argument [45402,45435]
+                            string_literal [45402,45435]
+                                string: "ReentrancyGuard: reentrant call" [45402,45435]
+                expression_statement [45514,45533]
+                    assignment_expression [45514,45532]
+                        identifier: _status [45514,45521]
+                        affectation_operator: = [45522,45523]
+                        identifier: _ENTERED [45524,45532]
+                expression_statement [45545,45547]
+                    identifier: _ [45545,45546]
+                expression_statement [45693,45716]
+                    assignment_expression [45693,45715]
+                        identifier: _status [45693,45700]
+                        affectation_operator: = [45701,45702]
+                        identifier: _NOT_ENTERED [45703,45715]
+        state_variable_declaration [45995,46021]
+            type_name: uint256[49] [45995,46006]
+            visibility: private [46007,46014]
+            identifier: __gap [46015,46020]
+to
+source_file [0,72755]
+at 23
+
+New cluster:
+===
+insert-node
+---
+identifier: NftyPlaySales [62602,62615]
+to
+contract_declaration [61430,72755]
+at 0
+------------
+===
+insert-node
+---
+identifier: NftyPlaySales [62602,62615]
+to
+contract_declaration [61430,72755]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [62616,62618]
+to
+contract_declaration [61430,72755]
+at 1
+------------
+===
+insert-node
+---
+is: is [62616,62618]
+to
+contract_declaration [61430,72755]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [59055,59070]
+    type_name: uint256 [59055,59062]
+    identifier: amount [59063,59069]
+to
+struct_declaration [58494,58960]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [60452,60459]
+    type_name: uint256 [60452,60459]
+to
+return_type_definition [60248,60262]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [60461,60468]
+    type_name: uint256 [60461,60468]
+to
+return_type_definition [60248,60262]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [60470,60477]
+    type_name: uint256 [60470,60477]
+to
+return_type_definition [60248,60262]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [60496,60574]
+    variable_declaration [60496,60514]
+        type_name: uint256 [60496,60503]
+        identifier: finalPrice [60504,60514]
+    affectation_operator: = [60515,60516]
+    binary_expression [60517,60573]
+        parenthesized_expression [60517,60551]
+            binary_expression [60518,60550]
+                member_expression: makerBid.price [60518,60532]
+                arithmetic_operator: / [60533,60534]
+                member_expression: makerBid.amount [60535,60550]
+        arithmetic_operator: * [60552,60553]
+        member_expression: takerListing.amount [60554,60573]
+to
+function_body [60263,60751]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [61853,61860]
+    type_name: uint256 [61853,61860]
+to
+return_type_definition [60912,60926]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [61862,61869]
+    type_name: uint256 [61862,61869]
+to
+return_type_definition [60912,60926]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [61871,61878]
+    type_name: uint256 [61871,61878]
+to
+return_type_definition [60912,60926]
+at 4
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [70422,70560]
+to
+function_body [68751,70143]
+at 5
+------------
+===
+insert-node
+---
+affectation_operator: = [70485,70486]
+to
+variable_declaration_statement [70422,70560]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [70422,70560]
+to
+function_body [68751,70143]
+at 5
+===
+insert-node
+---
+type_name: uint256 [70454,70461]
+to
+variable_declaration [70454,70467]
+at 0
+===
+insert-node
+---
+variable_declaration [70454,70467]
+to
+variable_declaration_tuple [70422,70484]
+at 2
+===
+insert-node
+---
+variable_declaration_tuple [70422,70484]
+to
+variable_declaration_statement [70422,70560]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [70572,70621]
+to
+function_body [68751,70143]
+at 6
+------------
+===
+insert-node
+---
+expression_statement [70572,70621]
+to
+function_body [68751,70143]
+at 6
+===
+insert-node
+---
+identifier: require [70572,70579]
+to
+call_expression [70572,70620]
+at 0
+===
+insert-node
+---
+call_expression [70572,70620]
+to
+expression_statement [70572,70621]
+at 0
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [71964,72099]
+to
+function_body [70363,71619]
+at 5
+------------
+===
+insert-node
+---
+type_name: uint256 [71996,72003]
+to
+variable_declaration [71996,72009]
+at 0
+===
+insert-node
+---
+variable_declaration [71996,72009]
+to
+variable_declaration_tuple [71964,72026]
+at 2
+===
+insert-node
+---
+variable_declaration_statement [71964,72099]
+to
+function_body [70363,71619]
+at 5
+===
+insert-node
+---
+variable_declaration_tuple [71964,72026]
+to
+variable_declaration_statement [71964,72099]
+at 0
+===
+insert-node
+---
+affectation_operator: = [72027,72028]
+to
+variable_declaration_statement [71964,72099]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [72111,72164]
+to
+function_body [70363,71619]
+at 6
+------------
+===
+insert-node
+---
+call_expression [72111,72163]
+to
+expression_statement [72111,72164]
+at 0
+===
+insert-node
+---
+expression_statement [72111,72164]
+to
+function_body [70363,71619]
+at 6
+===
+insert-node
+---
+identifier: require [72111,72118]
+to
+call_expression [72111,72163]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [61110,61650]
+to
+if_statement [60274,60744]
+at 4
+------------
+===
+insert-node
+---
+else: else [61595,61599]
+to
+if_statement [61110,61650]
+at 3
+===
+insert-node
+---
+if: if [61110,61112]
+to
+if_statement [61110,61650]
+at 0
+===
+insert-node
+---
+if_statement [61110,61650]
+to
+if_statement [60274,60744]
+at 4
+
+New cluster:
+MOVE from variable_declaration_statement [70422,70560]
+------------
+===
+move-tree
+---
+call_expression [69269,69341]
+    identifier: canExecuteTakerBid [69269,69287]
+    call_argument [69288,69316]
+        member_expression: makerListing.executionMethod [69288,69316]
+    call_argument [69318,69330]
+        identifier: makerListing [69318,69330]
+    call_argument [69332,69340]
+        identifier: takerBid [69332,69340]
+to
+variable_declaration_statement [70422,70560]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [71964,72099]
+------------
+===
+move-tree
+---
+call_expression [70804,70873]
+    identifier: canExecuteTakerList [70804,70823]
+    call_argument [70824,70848]
+        member_expression: makerBid.executionMethod [70824,70848]
+    call_argument [70850,70858]
+        identifier: makerBid [70850,70858]
+    call_argument [70860,70872]
+        identifier: takerListing [70860,70872]
+to
+variable_declaration_statement [71964,72099]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [61113,61133]
+    identifier: executionMethod [61113,61128]
+    comparison_operator: == [61129,61131]
+    number_literal: 1 [61132,61133]
+to
+if_statement [61110,61650]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [61135,61585]
+    return_statement [61206,61574]
+        return: return [61206,61212]
+        tuple_expression [61213,61573]
+            binary_expression [61232,61449]
+                member_expression: makerBid.price == takerListing.price &&                 makerBid.nftAddress == takerListing.nftAddress &&                 makerBid.startTime <= block.timestamp &&                 makerBid.endTime [61232,61430]
+                comparison_operator: >= [61431,61433]
+                member_expression: block.timestamp [61434,61449]
+            member_expression: takerListing.tokenId [61469,61489]
+            identifier: finalPrice [61509,61519]
+            member_expression: takerListing.amount [61539,61558]
+to
+if_statement [61110,61650]
+at 2
+
+New cluster:
+MOVE from if_statement [61110,61650]
+------------
+===
+move-tree
+---
+block_statement [60705,60744]
+    return_statement [60720,60733]
+        return: return [60720,60726]
+        boolean_literal: false [60727,60732]
+to
+if_statement [61110,61650]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [70423,70435]
+    type_name: bool [70423,70427]
+    identifier: isValid [70428,70435]
+to
+variable_declaration_tuple [70422,70484]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [70437,70452]
+    type_name: uint256 [70437,70444]
+    identifier: tokenId [70445,70452]
+to
+variable_declaration_tuple [70422,70484]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [70469,70483]
+    type_name: uint256 [70469,70476]
+    identifier: amount [70477,70483]
+to
+variable_declaration_tuple [70422,70484]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [70580,70587]
+    identifier: isValid [70580,70587]
+to
+call_expression [70572,70620]
+at 1
+
+New cluster:
+MOVE from call_expression [70572,70620]
+------------
+===
+move-tree
+---
+call_argument [69343,69373]
+    string_literal [69343,69373]
+        string: "Taker Bid cannot be executed" [69343,69373]
+to
+call_expression [70572,70620]
+at 2
+===
+move-tree
+---
+identifier: require [69261,69268]
+to
+variable_declaration [70454,70467]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [70903,70910]
+    identifier: tokenId [70903,70910]
+to
+call_expression [69624,69751]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [70933,70947]
+    member_expression: takerBid.taker [70933,70947]
+to
+call_expression [69624,69751]
+at 5
+
+New cluster:
+===
+insert-node
+---
+identifier: tokenId [71100,71107]
+to
+call_argument [69895,69915]
+at 0
+------------
+===
+insert-node
+---
+identifier: tokenId [71100,71107]
+to
+call_argument [69895,69915]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: price [71228,71233]
+to
+call_argument [70036,70054]
+at 0
+------------
+===
+insert-node
+---
+identifier: price [71228,71233]
+to
+call_argument [70036,70054]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: amount [71284,71290]
+to
+call_argument [70105,70124]
+at 0
+------------
+===
+insert-node
+---
+identifier: amount [71284,71290]
+to
+call_argument [70105,70124]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [71965,71977]
+    type_name: bool [71965,71969]
+    identifier: isValid [71970,71977]
+to
+variable_declaration_tuple [71964,72026]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [71979,71994]
+    type_name: uint256 [71979,71986]
+    identifier: tokenId [71987,71994]
+to
+variable_declaration_tuple [71964,72026]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [72011,72025]
+    type_name: uint256 [72011,72018]
+    identifier: amount [72019,72025]
+to
+variable_declaration_tuple [71964,72026]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [72119,72126]
+    identifier: isValid [72119,72126]
+to
+call_expression [72111,72163]
+at 1
+
+New cluster:
+MOVE from variable_declaration [71996,72009]
+------------
+===
+move-tree
+---
+identifier: require [70796,70803]
+to
+variable_declaration [71996,72009]
+at 1
+===
+move-tree
+---
+call_argument [70875,70909]
+    string_literal [70875,70909]
+        string: "Taker Listing cannot be executed" [70875,70909]
+to
+call_expression [72111,72163]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [72435,72453]
+    member_expression: takerListing.taker [72435,72453]
+to
+call_expression [71145,71254]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: tokenId [72616,72623]
+to
+call_argument [71391,71407]
+at 0
+------------
+===
+insert-node
+---
+identifier: tokenId [72616,72623]
+to
+call_argument [71391,71407]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: price [72740,72745]
+to
+call_argument [71524,71538]
+at 0
+------------
+===
+insert-node
+---
+identifier: price [72740,72745]
+to
+call_argument [71524,71538]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: amount [72792,72798]
+to
+call_argument [71585,71600]
+at 0
+------------
+===
+insert-node
+---
+identifier: amount [72792,72798]
+to
+call_argument [71585,71600]
+at 0
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [60669,61083]
+to
+return_statement [60359,60679]
+at 1
+------------
+===
+insert-node
+---
+member_expression: takerListing.amount [61049,61068]
+to
+tuple_expression [60669,61083]
+at 3
+===
+insert-node
+---
+tuple_expression [60669,61083]
+to
+return_statement [60359,60679]
+at 1
+===
+insert-node
+---
+member_expression: makerBid.tokenId [60985,61001]
+to
+tuple_expression [60669,61083]
+at 1
+===
+insert-node
+---
+identifier: finalPrice [61020,61030]
+to
+tuple_expression [60669,61083]
+at 2
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [62068,62502]
+to
+return_statement [61023,61351]
+at 1
+------------
+===
+insert-node
+---
+member_expression: makerListing.amount [62468,62487]
+to
+tuple_expression [62068,62502]
+at 3
+===
+insert-node
+---
+tuple_expression [62068,62502]
+to
+return_statement [61023,61351]
+at 1
+===
+insert-node
+---
+member_expression: makerListing.tokenId [62392,62412]
+to
+tuple_expression [62068,62502]
+at 1
+===
+insert-node
+---
+member_expression: makerListing.price [62431,62449]
+to
+tuple_expression [62068,62502]
+at 2
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [62551,62567]
+to
+return_statement [61392,61405]
+at 1
+------------
+===
+insert-node
+---
+tuple_expression [62551,62567]
+to
+return_statement [61392,61405]
+at 1
+===
+insert-node
+---
+number_literal: 0 [62565,62566]
+to
+tuple_expression [62551,62567]
+at 3
+===
+insert-node
+---
+number_literal: 0 [62559,62560]
+to
+tuple_expression [62551,62567]
+at 1
+===
+insert-node
+---
+number_literal: 0 [62562,62563]
+to
+tuple_expression [62551,62567]
+at 2
+
+New cluster:
+UPDATE from require to price
+------------
+===
+update-node
+---
+identifier: require [69261,69268]
+replace require by price
+===
+update-node
+---
+identifier: require [70796,70803]
+replace require by price
+
+New cluster:
+===
+insert-node
+---
+member_expression: takerBid.taker [70731,70745]
+to
+call_argument [69478,69490]
+at 0
+------------
+===
+insert-node
+---
+member_expression: takerBid.taker [70731,70745]
+to
+call_argument [69478,69490]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: price [70777,70782]
+to
+call_argument [69522,69540]
+at 0
+------------
+===
+insert-node
+---
+identifier: price [70777,70782]
+to
+call_argument [69522,69540]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: tokenId [70832,70839]
+to
+call_argument [69590,69610]
+at 0
+------------
+===
+insert-node
+---
+identifier: tokenId [70832,70839]
+to
+call_argument [69590,69610]
+at 0
+
+New cluster:
+UPDATE from _msgSender to amount
+------------
+===
+update-node
+---
+identifier: _msgSender [69717,69727]
+replace _msgSender by amount
+
+New cluster:
+MOVE from call_argument [69717,69729]
+------------
+===
+move-tree
+---
+identifier: _msgSender [69717,69727]
+to
+call_argument [69717,69729]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: price [72312,72317]
+to
+call_argument [71059,71073]
+at 0
+------------
+===
+insert-node
+---
+identifier: price [72312,72317]
+to
+call_argument [71059,71073]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: tokenId [72359,72366]
+to
+call_argument [71115,71131]
+at 0
+------------
+===
+insert-node
+---
+identifier: tokenId [72359,72366]
+to
+call_argument [71115,71131]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: tokenId [72426,72433]
+to
+call_argument [71191,71207]
+at 0
+------------
+===
+insert-node
+---
+identifier: tokenId [72426,72433]
+to
+call_argument [71191,71207]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: amount [72472,72478]
+to
+call_argument [71238,71253]
+at 0
+------------
+===
+insert-node
+---
+identifier: amount [72472,72478]
+to
+call_argument [71238,71253]
+at 0
+
+New cluster:
+MOVE from tuple_expression [60669,61083]
+------------
+===
+move-tree
+---
+binary_expression [60385,60663]
+    member_expression: makerBid.price == takerListing.price &&                 makerBid.nftAddress == takerListing.nftAddress &&                 makerBid.tokenId == takerListing.tokenId &&                 makerBid.startTime <= block.timestamp &&                 makerBid.endTime [60385,60644]
+    comparison_operator: >= [60645,60647]
+    member_expression: block.timestamp [60648,60663]
+to
+tuple_expression [60669,61083]
+at 0
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [61622,61638]
+to
+return_statement [60720,60733]
+at 1
+------------
+===
+insert-node
+---
+tuple_expression [61622,61638]
+to
+return_statement [60720,60733]
+at 1
+===
+insert-node
+---
+number_literal: 0 [61636,61637]
+to
+tuple_expression [61622,61638]
+at 3
+===
+insert-node
+---
+number_literal: 0 [61633,61634]
+to
+tuple_expression [61622,61638]
+at 2
+===
+insert-node
+---
+number_literal: 0 [61630,61631]
+to
+tuple_expression [61622,61638]
+at 1
+
+New cluster:
+MOVE from tuple_expression [62068,62502]
+------------
+===
+move-tree
+---
+binary_expression [61049,61335]
+    member_expression: makerListing.price == takerBid.price &&                 makerListing.nftAddress == takerBid.nftAddress &&                 makerListing.tokenId == takerBid.tokenId &&                 makerListing.startTime <= block.timestamp &&                 makerListing.endTime [61049,61316]
+    comparison_operator: >= [61317,61319]
+    member_expression: block.timestamp [61320,61335]
+to
+tuple_expression [62068,62502]
+at 0
+
+New cluster:
+MOVE from tuple_expression [62551,62567]
+------------
+===
+move-tree
+---
+boolean_literal: false [61399,61404]
+to
+tuple_expression [62551,62567]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: msg.sender [70027,70037]
+to
+binary_expression [68864,68894]
+at 0
+------------
+===
+insert-node
+---
+member_expression: msg.sender [70027,70037]
+to
+binary_expression [68864,68894]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: makerListing.signer [70650,70669]
+to
+array_access [69387,69417]
+at 1
+------------
+===
+insert-node
+---
+member_expression: makerListing.signer [70650,70669]
+to
+array_access [69387,69417]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: msg.sender [73000,73010]
+to
+array_access [71785,71815]
+at 1
+------------
+===
+insert-node
+---
+member_expression: msg.sender [73000,73010]
+to
+array_access [71785,71815]
+at 1
+
+New cluster:
+MOVE from tuple_expression [61622,61638]
+------------
+===
+move-tree
+---
+boolean_literal: false [60727,60732]
+to
+tuple_expression [61622,61638]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: makerOrder.signer [73588,73605]
+to
+array_access [72374,72405]
+at 1
+------------
+===
+insert-node
+---
+member_expression: makerOrder.signer [73588,73605]
+to
+array_access [72374,72405]
+at 1
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [60366,60678]
+===
+------------
+===
+delete-node
+---
+parenthesized_expression [60366,60678]
+===
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [61030,61350]
+===
+------------
+===
+delete-node
+---
+parenthesized_expression [61030,61350]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: NftyPlaySales [61439,61452]
+===
+------------
+===
+delete-node
+---
+identifier: NftyPlaySales [61439,61452]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [61453,61455]
+===
+------------
+===
+delete-node
+---
+is: is [61453,61455]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [68864,68876]
+    identifier: _msgSender [68864,68874]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [69261,69375]
+===
+------------
+===
+delete-node
+---
+call_expression [69261,69374]
+===
+===
+delete-node
+---
+call_argument [69269,69341]
+===
+===
+delete-node
+---
+expression_statement [69261,69375]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [69404,69416]
+    identifier: _msgSender [69404,69414]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [69478,69490]
+    identifier: _msgSender [69478,69488]
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerListing.price [69522,69540]
+===
+------------
+===
+delete-node
+---
+member_expression: makerListing.price [69522,69540]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerListing.tokenId [69590,69610]
+===
+------------
+===
+delete-node
+---
+member_expression: makerListing.tokenId [69590,69610]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [69674,69694]
+    member_expression: makerListing.tokenId [69674,69694]
+
+New cluster:
+===
+delete-node
+---
+call_expression [69717,69729]
+===
+------------
+===
+delete-node
+---
+call_expression [69717,69729]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [69731,69750]
+    member_expression: makerListing.amount [69731,69750]
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerListing.tokenId [69895,69915]
+===
+------------
+===
+delete-node
+---
+member_expression: makerListing.tokenId [69895,69915]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerListing.price [70036,70054]
+===
+------------
+===
+delete-node
+---
+member_expression: makerListing.price [70036,70054]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerListing.amount [70105,70124]
+===
+------------
+===
+delete-node
+---
+member_expression: makerListing.amount [70105,70124]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [70796,70911]
+===
+------------
+===
+delete-node
+---
+call_argument [70804,70873]
+===
+===
+delete-node
+---
+expression_statement [70796,70911]
+===
+===
+delete-node
+---
+call_expression [70796,70910]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.price [71059,71073]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.price [71059,71073]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71115,71131]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71115,71131]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71191,71207]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71191,71207]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [71226,71236]
+    member_expression: msg.sender [71226,71236]
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.amount [71238,71253]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.amount [71238,71253]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71391,71407]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.tokenId [71391,71407]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.price [71524,71538]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.price [71524,71538]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: makerBid.amount [71585,71600]
+===
+------------
+===
+delete-node
+---
+member_expression: makerBid.amount [71585,71600]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [71802,71814]
+    identifier: _msgSender [71802,71812]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [72392,72404]
+    identifier: _msgSender [72392,72402]
+

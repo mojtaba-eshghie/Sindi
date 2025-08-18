@@ -1,0 +1,1109 @@
+New cluster:
+===
+insert-node
+---
+identifier: MarketRegistry [488,502]
+to
+contract_declaration [479,34038]
+at 0
+------------
+===
+insert-node
+---
+identifier: MarketRegistry [488,502]
+to
+contract_declaration [479,34038]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [503,505]
+to
+contract_declaration [479,34038]
+at 1
+------------
+===
+insert-node
+---
+is: is [503,505]
+to
+contract_declaration [479,34038]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [673,722]
+    type_name: uint256 [673,680]
+    visibility: public [681,687]
+    constant: constant [688,696]
+    identifier: CURRENT_CODE_VERSION [697,717]
+    affectation_operator: = [718,719]
+    number_literal: 6 [720,721]
+to
+contract_body [580,34038]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1492,1539]
+    type_name: mapping(bytes32 => uint256) [1492,1519]
+    visibility: internal [1520,1528]
+    identifier: __uriToId [1529,1538]
+to
+contract_body [580,34038]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [3070,3136]
+    identifier: SetMarketLenderAttestation [3076,3102]
+    event_paramater [3103,3119]
+        type_name: uint256 [3103,3110]
+        identifier: marketId [3111,3119]
+    event_paramater [3121,3134]
+        type_name: bool [3121,3125]
+        identifier: required [3126,3134]
+to
+contract_body [580,34038]
+at 31
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [3141,3209]
+    identifier: SetMarketBorrowerAttestation [3147,3175]
+    event_paramater [3176,3192]
+        type_name: uint256 [3176,3183]
+        identifier: marketId [3184,3192]
+    event_paramater [3194,3207]
+        type_name: bool [3194,3198]
+        identifier: required [3199,3207]
+to
+contract_body [580,34038]
+at 32
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [16245,16567]
+    function: function [16245,16253]
+    identifier: setBidExpirationTime [16254,16274]
+    parameter [16275,16292]
+        type_name: uint256 [16275,16282]
+        identifier: _marketId [16283,16292]
+    parameter [16294,16310]
+        type_name: uint32 [16294,16300]
+        identifier: _duration [16301,16310]
+    visibility: public [16320,16326]
+    modifier_invocation [16335,16356]
+        identifier: ownsMarket [16335,16345]
+        call_argument [16346,16355]
+            identifier: _marketId [16346,16355]
+    function_body [16361,16567]
+        if_statement [16371,16561]
+            if: if [16371,16373]
+            member_expression: _duration != markets[_marketId].bidExpirationTime [16375,16424]
+            block_statement [16426,16561]
+                expression_statement [16440,16489]
+                    assignment_expression [16440,16488]
+                        member_expression: markets[_marketId].bidExpirationTime [16440,16476]
+                        affectation_operator: = [16477,16478]
+                        identifier: _duration [16479,16488]
+                emit_statement [16503,16551]
+                    identifier: SetBidExpirationTime [16508,16528]
+                    call_argument [16529,16538]
+                        identifier: _marketId [16529,16538]
+                    call_argument [16540,16549]
+                        identifier: _duration [16540,16549]
+to
+contract_body [580,34038]
+at 55
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [17499,17848]
+    function: function [17499,17507]
+    identifier: setLenderAttestationRequired [17508,17536]
+    parameter [17537,17554]
+        type_name: uint256 [17537,17544]
+        identifier: _marketId [17545,17554]
+    parameter [17556,17570]
+        type_name: bool [17556,17560]
+        identifier: _required [17561,17570]
+    visibility: public [17580,17586]
+    modifier_invocation [17595,17616]
+        identifier: ownsMarket [17595,17605]
+        call_argument [17606,17615]
+            identifier: _marketId [17606,17615]
+    function_body [17621,17848]
+        if_statement [17631,17842]
+            if: if [17631,17633]
+            member_expression: _required != markets[_marketId].lenderAttestationRequired [17635,17692]
+            block_statement [17694,17842]
+                expression_statement [17708,17765]
+                    assignment_expression [17708,17764]
+                        member_expression: markets[_marketId].lenderAttestationRequired [17708,17752]
+                        affectation_operator: = [17753,17754]
+                        identifier: _required [17755,17764]
+                emit_statement [17778,17832]
+                    identifier: SetMarketLenderAttestation [17783,17809]
+                    call_argument [17810,17819]
+                        identifier: _marketId [17810,17819]
+                    call_argument [17821,17830]
+                        identifier: _required [17821,17830]
+to
+contract_body [580,34038]
+at 58
+
+New cluster:
+===
+insert-node
+---
+function_definition [18129,18486]
+to
+contract_body [580,34038]
+at 59
+------------
+===
+insert-node
+---
+identifier: setBorrowerAttestationRequired [18138,18168]
+to
+function_definition [18129,18486]
+at 1
+===
+insert-node
+---
+function_definition [18129,18486]
+to
+contract_body [580,34038]
+at 59
+===
+insert-node
+---
+visibility: public [18212,18218]
+to
+function_definition [18129,18486]
+at 4
+===
+insert-node
+---
+function: function [18129,18137]
+to
+function_definition [18129,18486]
+at 0
+
+New cluster:
+MOVE from function_definition [18129,18486]
+------------
+===
+move-tree
+---
+parameter [24662,24679]
+    type_name: uint256 [24662,24669]
+    identifier: _marketId [24670,24679]
+to
+function_definition [18129,18486]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [18188,18202]
+    type_name: bool [18188,18192]
+    identifier: _required [18193,18202]
+to
+function_definition [18129,18486]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [18227,18248]
+    identifier: ownsMarket [18227,18237]
+    call_argument [18238,18247]
+        identifier: _marketId [18238,18247]
+to
+function_definition [18129,18486]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [18253,18486]
+    if_statement [18263,18480]
+        if: if [18263,18265]
+        member_expression: _required != markets[_marketId].borrowerAttestationRequired [18267,18326]
+        block_statement [18328,18480]
+            expression_statement [18342,18401]
+                assignment_expression [18342,18400]
+                    member_expression: markets[_marketId].borrowerAttestationRequired [18342,18388]
+                    affectation_operator: = [18389,18390]
+                    identifier: _required [18391,18400]
+            emit_statement [18414,18470]
+                identifier: SetMarketBorrowerAttestation [18419,18447]
+                call_argument [18448,18457]
+                    identifier: _marketId [18448,18457]
+                call_argument [18459,18468]
+                    identifier: _required [18459,18468]
+to
+function_definition [18129,18486]
+at 6
+
+New cluster:
+===
+insert-node
+---
+if_statement [14691,14938]
+to
+function_body [14456,14806]
+at 0
+------------
+===
+insert-node
+---
+block_statement [14827,14938]
+to
+if_statement [14691,14938]
+at 2
+===
+insert-node
+---
+comparison_operator: != [14742,14744]
+to
+binary_expression [14708,14816]
+at 1
+===
+insert-node
+---
+if_statement [14691,14938]
+to
+function_body [14456,14806]
+at 0
+===
+insert-node
+---
+if: if [14691,14693]
+to
+if_statement [14691,14938]
+at 0
+===
+insert-node
+---
+binary_expression [14708,14816]
+to
+if_statement [14691,14938]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [15385,15584]
+to
+function_body [15237,15366]
+at 0
+------------
+===
+insert-node
+---
+member_expression: _duration != markets[_marketId].paymentCycleDuration [15389,15441]
+to
+if_statement [15385,15584]
+at 1
+===
+insert-node
+---
+block_statement [15443,15584]
+to
+if_statement [15385,15584]
+at 2
+===
+insert-node
+---
+if: if [15385,15387]
+to
+if_statement [15385,15584]
+at 0
+===
+insert-node
+---
+if_statement [15385,15584]
+to
+function_body [15237,15366]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [16028,16233]
+to
+function_body [15794,15927]
+at 0
+------------
+===
+insert-node
+---
+block_statement [16088,16233]
+to
+if_statement [16028,16233]
+at 2
+===
+insert-node
+---
+if_statement [16028,16233]
+to
+function_body [15794,15927]
+at 0
+===
+insert-node
+---
+if: if [16028,16030]
+to
+if_statement [16028,16233]
+at 0
+===
+insert-node
+---
+member_expression: _duration != markets[_marketId].paymentDefaultDuration [16032,16086]
+to
+if_statement [16028,16233]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [17019,17214]
+to
+function_body [16529,16729]
+at 1
+------------
+===
+insert-node
+---
+if: if [17019,17021]
+to
+if_statement [17019,17214]
+at 0
+===
+insert-node
+---
+if_statement [17019,17214]
+to
+function_body [16529,16729]
+at 1
+===
+insert-node
+---
+block_statement [17080,17214]
+to
+if_statement [17019,17214]
+at 2
+===
+insert-node
+---
+member_expression: _newPercent != markets[_marketId].marketplaceFeePercent [17023,17078]
+to
+if_statement [17019,17214]
+at 1
+
+New cluster:
+===
+insert-node
+---
+call_expression [13570,13637]
+to
+expression_statement [13425,13503]
+at 0
+------------
+===
+insert-node
+---
+call_argument [13610,13636]
+to
+call_expression [13570,13637]
+at 2
+===
+insert-node
+---
+call_expression [13570,13637]
+to
+expression_statement [13425,13503]
+at 0
+===
+insert-node
+---
+identifier: setLenderAttestationRequired [13570,13598]
+to
+call_expression [13570,13637]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [13647,13718]
+to
+expression_statement [13512,13586]
+at 0
+------------
+===
+insert-node
+---
+call_expression [13647,13718]
+to
+expression_statement [13512,13586]
+at 0
+===
+insert-node
+---
+identifier: setBorrowerAttestationRequired [13647,13677]
+to
+call_expression [13647,13718]
+at 0
+===
+insert-node
+---
+call_argument [13689,13717]
+to
+call_expression [13647,13718]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13599,13608]
+    identifier: _marketId [13599,13608]
+to
+call_expression [13570,13637]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13678,13687]
+    identifier: _marketId [13678,13687]
+to
+call_expression [13647,13718]
+at 1
+
+New cluster:
+MOVE from binary_expression [14708,14816]
+------------
+===
+move-tree
+---
+call_expression [14522,14549]
+    identifier: keccak256 [14522,14531]
+    call_argument [14532,14548]
+        call_expression [14532,14548]
+            member_expression: abi.encode [14532,14542]
+            call_argument [14543,14547]
+                identifier: _uri [14543,14547]
+to
+binary_expression [14708,14816]
+at 0
+
+New cluster:
+MOVE from binary_expression [14708,14816]
+------------
+===
+move-tree
+---
+call_expression [14559,14613]
+    identifier: require [14559,14566]
+    call_argument [14567,14587]
+        binary_expression [14567,14587]
+            array_access [14567,14582]
+                identifier: _uriToId [14567,14575]
+                identifier: uriId [14576,14581]
+            comparison_operator: == [14583,14585]
+            number_literal: 0 [14586,14587]
+    call_argument [14589,14612]
+        string_literal [14589,14612]
+            string: "non-unique market URI" [14589,14612]
+to
+binary_expression [14708,14816]
+at 2
+
+New cluster:
+MOVE from block_statement [14827,14938]
+------------
+===
+move-tree
+---
+emit_statement [14765,14800]
+    identifier: SetMarketURI [14770,14782]
+    call_argument [14783,14792]
+        identifier: _marketId [14783,14792]
+    call_argument [14794,14798]
+        identifier: _uri [14794,14798]
+to
+block_statement [14827,14938]
+at 1
+===
+move-tree
+---
+expression_statement [14717,14755]
+    assignment_expression [14717,14754]
+        member_expression: markets[_marketId].metadataURI [14717,14747]
+        affectation_operator: = [14748,14749]
+        identifier: _uri [14750,14754]
+to
+block_statement [14827,14938]
+at 0
+
+New cluster:
+MOVE from block_statement [15443,15584]
+------------
+===
+move-tree
+---
+emit_statement [15309,15360]
+    identifier: SetPaymentCycleDuration [15314,15337]
+    call_argument [15338,15347]
+        identifier: _marketId [15338,15347]
+    call_argument [15349,15358]
+        identifier: _duration [15349,15358]
+to
+block_statement [15443,15584]
+at 1
+===
+move-tree
+---
+expression_statement [15247,15299]
+    assignment_expression [15247,15298]
+        member_expression: markets[_marketId].paymentCycleDuration [15247,15286]
+        affectation_operator: = [15287,15288]
+        identifier: _duration [15289,15298]
+to
+block_statement [15443,15584]
+at 0
+
+New cluster:
+MOVE from block_statement [16088,16233]
+------------
+===
+move-tree
+---
+expression_statement [15804,15858]
+    assignment_expression [15804,15857]
+        member_expression: markets[_marketId].paymentDefaultDuration [15804,15845]
+        affectation_operator: = [15846,15847]
+        identifier: _duration [15848,15857]
+to
+block_statement [16088,16233]
+at 0
+===
+move-tree
+---
+emit_statement [15868,15921]
+    identifier: SetPaymentDefaultDuration [15873,15898]
+    call_argument [15899,15908]
+        identifier: _marketId [15899,15908]
+    call_argument [15910,15919]
+        identifier: _duration [15910,15919]
+to
+block_statement [16088,16233]
+at 1
+
+New cluster:
+MOVE from block_statement [17080,17214]
+------------
+===
+move-tree
+---
+expression_statement [16617,16672]
+    assignment_expression [16617,16671]
+        member_expression: markets[_marketId].marketplaceFeePercent [16617,16657]
+        affectation_operator: = [16658,16659]
+        identifier: _newPercent [16660,16671]
+to
+block_statement [17080,17214]
+at 0
+===
+move-tree
+---
+emit_statement [16681,16723]
+    identifier: SetMarketFee [16686,16698]
+    call_argument [16699,16708]
+        identifier: _marketId [16699,16708]
+    call_argument [16710,16721]
+        identifier: _newPercent [16710,16721]
+to
+block_statement [17080,17214]
+at 1
+
+New cluster:
+UPDATE from _borrowerAttestationRequired to _lenderAttestationRequired
+------------
+===
+update-node
+---
+identifier: _borrowerAttestationRequired [13474,13502]
+replace _borrowerAttestationRequired by _lenderAttestationRequired
+
+New cluster:
+MOVE from call_argument [13610,13636]
+------------
+===
+move-tree
+---
+identifier: _borrowerAttestationRequired [13474,13502]
+to
+call_argument [13610,13636]
+at 0
+
+New cluster:
+UPDATE from _lenderAttestationRequired to _borrowerAttestationRequired
+------------
+===
+update-node
+---
+identifier: _lenderAttestationRequired [13559,13585]
+replace _lenderAttestationRequired by _borrowerAttestationRequired
+
+New cluster:
+MOVE from call_argument [13689,13717]
+------------
+===
+move-tree
+---
+identifier: _lenderAttestationRequired [13559,13585]
+to
+call_argument [13689,13717]
+at 0
+
+New cluster:
+UPDATE from require to keccak256
+------------
+===
+update-node
+---
+identifier: require [14559,14566]
+replace require by keccak256
+
+New cluster:
+===
+insert-node
+---
+call_argument [14767,14815]
+to
+call_expression [14559,14613]
+at 1
+------------
+===
+insert-node
+---
+call_argument [14767,14815]
+to
+call_expression [14559,14613]
+at 1
+===
+insert-node
+---
+call_expression [14767,14815]
+to
+call_argument [14767,14815]
+at 0
+===
+insert-node
+---
+member_expression: abi.encodePacked [14767,14783]
+to
+call_expression [14767,14815]
+at 0
+
+New cluster:
+UPDATE from abi.encode to abi.encodePacked
+------------
+===
+update-node
+---
+member_expression: abi.encode [14532,14542]
+replace abi.encode by abi.encodePacked
+
+New cluster:
+MOVE from call_expression [14767,14815]
+------------
+===
+move-tree
+---
+call_argument [14567,14587]
+    binary_expression [14567,14587]
+        array_access [14567,14582]
+            identifier: _uriToId [14567,14575]
+            identifier: uriId [14576,14581]
+        comparison_operator: == [14583,14585]
+        number_literal: 0 [14586,14587]
+to
+call_expression [14767,14815]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: markets[_marketId].metadataURI [14784,14814]
+to
+call_argument [14567,14587]
+at 0
+------------
+===
+insert-node
+---
+member_expression: markets[_marketId].metadataURI [14784,14814]
+to
+call_argument [14567,14587]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: MarketRegistry [488,502]
+===
+------------
+===
+delete-node
+---
+identifier: MarketRegistry [488,502]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [503,505]
+===
+------------
+===
+delete-node
+---
+is: is [503,505]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [673,722]
+    type_name: uint256 [673,680]
+    visibility: public [681,687]
+    constant: constant [688,696]
+    identifier: CURRENT_CODE_VERSION [697,717]
+    affectation_operator: = [718,719]
+    number_literal: 5 [720,721]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1492,1538]
+    type_name: mapping(bytes32 => uint256) [1492,1519]
+    visibility: internal [1520,1528]
+    identifier: _uriToId [1529,1537]
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [13425,13502]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [13472,13473]
+===
+===
+delete-node
+---
+member_expression: markets[_marketId].borrowerAttestationRequired [13425,13471]
+===
+===
+delete-node
+---
+assignment_expression [13425,13502]
+===
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [13512,13585]
+===
+------------
+===
+delete-node
+---
+assignment_expression [13512,13585]
+===
+===
+delete-node
+---
+affectation_operator: = [13557,13558]
+===
+===
+delete-node
+---
+member_expression: markets[_marketId].lenderAttestationRequired [13512,13556]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [14567,14587]
+    array_access [14567,14582]
+        identifier: _uriToId [14567,14575]
+        identifier: uriId [14576,14581]
+    comparison_operator: == [14583,14585]
+    number_literal: 0 [14586,14587]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14589,14612]
+    string_literal [14589,14612]
+        string: "non-unique market URI" [14589,14612]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [14506,14519]
+    type_name: bytes32 [14506,14513]
+    identifier: uriId [14514,14519]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [14506,14550]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [14506,14550]
+===
+===
+delete-node
+---
+affectation_operator: = [14520,14521]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [14559,14614]
+===
+------------
+===
+delete-node
+---
+expression_statement [14559,14614]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [14680,14708]
+    assignment_expression [14680,14707]
+        array_access [14680,14695]
+            identifier: _uriToId [14680,14688]
+            identifier: uriId [14689,14694]
+        affectation_operator: = [14696,14697]
+        identifier: _marketId [14698,14707]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [15933,16165]
+    function: function [15933,15941]
+    identifier: setBidExpirationTime [15942,15962]
+    parameter [15963,15979]
+        type_name: uint256 [15963,15970]
+        identifier: marketId [15971,15979]
+    parameter [15981,15996]
+        type_name: uint32 [15981,15987]
+        identifier: duration [15988,15996]
+    visibility: public [16006,16012]
+    modifier_invocation [16021,16041]
+        identifier: ownsMarket [16021,16031]
+        call_argument [16032,16040]
+            identifier: marketId [16032,16040]
+    function_body [16046,16165]
+        expression_statement [16056,16103]
+            assignment_expression [16056,16102]
+                member_expression: markets[marketId].bidExpirationTime [16056,16091]
+                affectation_operator: = [16092,16093]
+                identifier: duration [16094,16102]
+        emit_statement [16113,16159]
+            identifier: SetBidExpirationTime [16118,16138]
+            call_argument [16139,16147]
+                identifier: marketId [16139,16147]
+            call_argument [16149,16157]
+                identifier: duration [16149,16157]
+
+New cluster:
+===
+delete-node
+---
+function_definition [24639,25110]
+===
+------------
+===
+delete-node
+---
+visibility: internal [24703,24711]
+===
+===
+delete-node
+---
+function: function [24639,24647]
+===
+===
+delete-node
+---
+function_definition [24639,25110]
+===
+===
+delete-node
+---
+identifier: _setMarketUri [24648,24661]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [24681,24701]
+    type_name: string [24681,24687]
+    calldata: calldata [24688,24696]
+    identifier: _uri [24697,24701]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [24712,25110]
+    expression_statement [24722,24760]
+        call_expression [24722,24759]
+            identifier: require [24722,24729]
+            call_argument [24730,24743]
+                binary_expression [24730,24743]
+                    identifier: _marketId [24730,24739]
+                    comparison_operator: > [24740,24741]
+                    number_literal: 0 [24742,24743]
+            call_argument [24745,24758]
+                string_literal [24745,24758]
+                    string: "Market ID 0" [24745,24758]
+    variable_declaration_statement [24810,24854]
+        variable_declaration [24810,24823]
+            type_name: bytes32 [24810,24817]
+            identifier: uriId [24818,24823]
+        affectation_operator: = [24824,24825]
+        call_expression [24826,24853]
+            identifier: keccak256 [24826,24835]
+            call_argument [24836,24852]
+                call_expression [24836,24852]
+                    member_expression: abi.encode [24836,24846]
+                    call_argument [24847,24851]
+                        identifier: _uri [24847,24851]
+    expression_statement [24863,24918]
+        call_expression [24863,24917]
+            identifier: require [24863,24870]
+            call_argument [24871,24891]
+                binary_expression [24871,24891]
+                    array_access [24871,24886]
+                        identifier: _uriToId [24871,24879]
+                        identifier: uriId [24880,24885]
+                    comparison_operator: == [24887,24889]
+                    number_literal: 0 [24890,24891]
+            call_argument [24893,24916]
+                string_literal [24893,24916]
+                    string: "non-unique market URI" [24893,24916]
+    expression_statement [24984,25012]
+        assignment_expression [24984,25011]
+            array_access [24984,24999]
+                identifier: _uriToId [24984,24992]
+                identifier: uriId [24993,24998]
+            affectation_operator: = [25000,25001]
+            identifier: _marketId [25002,25011]
+    expression_statement [25021,25059]
+        assignment_expression [25021,25058]
+            member_expression: markets[_marketId].metadataURI [25021,25051]
+            affectation_operator: = [25052,25053]
+            identifier: _uri [25054,25058]
+    emit_statement [25069,25104]
+        identifier: SetMarketURI [25074,25086]
+        call_argument [25087,25096]
+            identifier: _marketId [25087,25096]
+        call_argument [25098,25102]
+            identifier: _uri [25098,25102]
+

@@ -1,0 +1,9 @@
+results/differencing_results/0xe99abed499b8576401c9487c4d8543f04266b91b_@openzeppelin_contracts_math_SafeMath.sol___0x27426391606d7d1043c74ac8427833e19ede87a3_@openzeppelin_contracts_math_SafeMath.sol.log:
+  496  identifier: require [3213,3220]
+  497: replace require by sub
+  498  
+
+  535  identifier: require [4294,4301]
+  536: replace require by div
+  537  
+

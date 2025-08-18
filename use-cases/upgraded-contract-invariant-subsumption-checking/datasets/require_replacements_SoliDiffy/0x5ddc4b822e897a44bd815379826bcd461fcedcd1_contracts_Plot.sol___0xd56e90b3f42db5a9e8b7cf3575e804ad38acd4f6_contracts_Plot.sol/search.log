@@ -1,0 +1,5 @@
+results/differencing_results/0x5ddc4b822e897a44bd815379826bcd461fcedcd1_contracts_Plot.sol___0xd56e90b3f42db5a9e8b7cf3575e804ad38acd4f6_contracts_Plot.sol.log:
+  221  identifier: require [2418,2425]
+  222: replace require by nonReentrant
+  223  
+

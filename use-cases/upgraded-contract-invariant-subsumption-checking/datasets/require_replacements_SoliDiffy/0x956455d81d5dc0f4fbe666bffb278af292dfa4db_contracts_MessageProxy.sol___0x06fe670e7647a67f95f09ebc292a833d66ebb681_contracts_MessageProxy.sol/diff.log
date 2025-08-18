@@ -1,0 +1,3385 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [1054,1142]
+    import: import [1054,1060]
+    string: "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol" [1061,1141]
+to
+source_file [0,11852]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [1143,1202]
+    import: import [1143,1149]
+    string: "@skalenetwork/ima-interfaces/IGasReimbursable.sol" [1150,1201]
+to
+source_file [0,11852]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [1203,1259]
+    import: import [1203,1209]
+    string: "@skalenetwork/ima-interfaces/IMessageProxy.sol" [1210,1258]
+to
+source_file [0,11852]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [1260,1319]
+    import: import [1260,1266]
+    string: "@skalenetwork/ima-interfaces/IMessageReceiver.sol" [1267,1318]
+to
+source_file [0,11852]
+at 6
+
+New cluster:
+===
+insert-node
+---
+abstract: abstract [1433,1441]
+to
+contract_declaration [1145,11852]
+at 0
+------------
+===
+insert-node
+---
+abstract: abstract [1433,1441]
+to
+contract_declaration [1145,11852]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: MessageProxy [1451,1463]
+to
+contract_declaration [1145,11852]
+at 1
+------------
+===
+insert-node
+---
+identifier: MessageProxy [1451,1463]
+to
+contract_declaration [1145,11852]
+at 1
+
+New cluster:
+===
+insert-node
+---
+is: is [1464,1466]
+to
+contract_declaration [1145,11852]
+at 2
+------------
+===
+insert-node
+---
+is: is [1464,1466]
+to
+contract_declaration [1145,11852]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [1503,1516]
+    user_defined_type [1503,1516]
+        identifier: IMessageProxy [1503,1516]
+to
+contract_declaration [1145,11852]
+at 7
+
+New cluster:
+MOVE from contract_body [1214,11852]
+------------
+===
+move-tree
+---
+struct_declaration [1673,1848]
+    struct: struct [1673,1679]
+    identifier: ConnectedChainInfo [1680,1698]
+    struct_member [1750,1781]
+        type_name: uint256 [1750,1757]
+        identifier: incomingMessageCounter [1758,1780]
+    struct_member [1790,1821]
+        type_name: uint256 [1790,1797]
+        identifier: outgoingMessageCounter [1798,1820]
+    struct_member [1830,1842]
+        type_name: bool [1830,1834]
+        identifier: inited [1835,1841]
+to
+contract_body [1214,11852]
+at 1
+===
+move-tree
+---
+function_definition [3300,3764]
+    function: function [3300,3308]
+    identifier: initializeMessageProxy [3309,3331]
+    parameter [3332,3348]
+        type_name: uint [3332,3336]
+        identifier: newGasLimit [3337,3348]
+    visibility: public [3350,3356]
+    modifier_invocation [3357,3368]
+        identifier: initializer [3357,3368]
+    function_body [3369,3764]
+        expression_statement [3379,3447]
+            call_expression [3379,3446]
+                member_expression: AccessControlEnumerableUpgradeable.__AccessControlEnumerable_init [3379,3444]
+        expression_statement [3456,3499]
+            call_expression [3456,3498]
+                identifier: _setupRole [3456,3466]
+                call_argument [3467,3485]
+                    identifier: DEFAULT_ADMIN_ROLE [3467,3485]
+                call_argument [3487,3497]
+                    member_expression: msg.sender [3487,3497]
+        expression_statement [3508,3553]
+            call_expression [3508,3552]
+                identifier: _setupRole [3508,3518]
+                call_argument [3519,3539]
+                    identifier: CHAIN_CONNECTOR_ROLE [3519,3539]
+                call_argument [3541,3551]
+                    member_expression: msg.sender [3541,3551]
+        expression_statement [3562,3616]
+            call_expression [3562,3615]
+                identifier: _setupRole [3562,3572]
+                call_argument [3573,3602]
+                    identifier: EXTRA_CONTRACT_REGISTRAR_ROLE [3573,3602]
+                call_argument [3604,3614]
+                    member_expression: msg.sender [3604,3614]
+        expression_statement [3625,3670]
+            call_expression [3625,3669]
+                identifier: _setupRole [3625,3635]
+                call_argument [3636,3656]
+                    identifier: CONSTANT_SETTER_ROLE [3636,3656]
+                call_argument [3658,3668]
+                    member_expression: msg.sender [3658,3668]
+        emit_statement [3679,3726]
+            identifier: GasLimitWasChanged [3684,3702]
+            call_argument [3703,3711]
+                identifier: gasLimit [3703,3711]
+            call_argument [3713,3724]
+                identifier: newGasLimit [3713,3724]
+        expression_statement [3735,3758]
+            assignment_expression [3735,3757]
+                identifier: gasLimit [3735,3743]
+                affectation_operator: = [3744,3745]
+                identifier: newGasLimit [3746,3757]
+to
+contract_body [1214,11852]
+at 29
+===
+move-tree
+---
+function_definition [7220,7546]
+    function: function [7220,7228]
+    identifier: isContractRegistered [7229,7249]
+    parameter [7259,7285]
+        type_name: string [7259,7265]
+        calldata: calldata [7266,7274]
+        identifier: schainName [7275,7285]
+    parameter [7295,7318]
+        type_name: address [7295,7302]
+        identifier: contractAddress [7303,7318]
+    visibility: external [7333,7341]
+    state_mutability [7350,7354]
+        view: view [7350,7354]
+    return_type_definition [7363,7377]
+        returns: returns [7363,7370]
+        parameter [7372,7376]
+            type_name: bool [7372,7376]
+    function_body [7382,7546]
+        return_statement [7392,7540]
+            return: return [7392,7398]
+            array_access [7399,7539]
+                array_access [7399,7522]
+                    binary_expression [7399,7510]
+                        array_access [7399,7474]
+                            array_access [7399,7457]
+                                identifier: registryContracts [7399,7416]
+                                call_expression [7417,7456]
+                                    identifier: keccak256 [7417,7426]
+                                    call_argument [7427,7455]
+                                        call_expression [7427,7455]
+                                            member_expression: abi.encodePacked [7427,7443]
+                                            call_argument [7444,7454]
+                                                identifier: schainName [7444,7454]
+                            identifier: contractAddress [7458,7473]
+                        logical_operator: || [7475,7477]
+                        identifier: registryContracts [7493,7510]
+                    type_cast_expression [7511,7521]
+                        primitive_type: bytes32 [7511,7518]
+                        call_argument [7519,7520]
+                            number_literal: 0 [7519,7520]
+                identifier: contractAddress [7523,7538]
+to
+contract_body [1214,11852]
+at 29
+===
+move-tree
+---
+function_definition [5478,6235]
+    function: function [5478,5486]
+    identifier: postOutgoingMessage [5487,5506]
+    parameter [5516,5539]
+        type_name: bytes32 [5516,5523]
+        identifier: targetChainHash [5524,5539]
+    parameter [5549,5571]
+        type_name: address [5549,5556]
+        identifier: targetContract [5557,5571]
+    parameter [5581,5598]
+        type_name: bytes [5581,5586]
+        memory: memory [5587,5593]
+        identifier: data [5594,5598]
+    visibility: public [5613,5619]
+    virtual: virtual [5628,5635]
+    function_body [5640,6235]
+        expression_statement [5650,5739]
+            call_expression [5650,5738]
+                identifier: require [5650,5657]
+                call_argument [5658,5697]
+                    member_expression: connectedChains[targetChainHash].inited [5658,5697]
+                call_argument [5699,5737]
+                    string_literal [5699,5737]
+                        string: "Destination chain is not initialized" [5699,5737]
+        expression_statement [5748,5933]
+            call_expression [5748,5932]
+                identifier: require [5748,5755]
+                call_argument [5769,5873]
+                    array_access [5769,5873]
+                        array_access [5769,5861]
+                            binary_expression [5769,5844]
+                                array_access [5769,5810]
+                                    array_access [5769,5798]
+                                        identifier: registryContracts [5769,5786]
+                                        type_cast_expression [5787,5797]
+                                            primitive_type: bytes32 [5787,5794]
+                                            call_argument [5795,5796]
+                                                number_literal: 0 [5795,5796]
+                                    member_expression: msg.sender [5799,5809]
+                                logical_operator: || [5811,5813]
+                                identifier: registryContracts [5827,5844]
+                            identifier: targetChainHash [5845,5860]
+                        member_expression: msg.sender [5862,5872]
+                call_argument [5887,5922]
+                    string_literal [5887,5922]
+                        string: "Sender contract is not registered" [5887,5922]
+        emit_statement [5959,6158]
+            identifier: OutgoingMessage [5964,5979]
+            call_argument [5993,6008]
+                identifier: targetChainHash [5993,6008]
+            call_argument [6022,6077]
+                member_expression: connectedChains[targetChainHash].outgoingMessageCounter [6022,6077]
+            call_argument [6091,6101]
+                member_expression: msg.sender [6091,6101]
+            call_argument [6115,6129]
+                identifier: targetContract [6115,6129]
+            call_argument [6143,6147]
+                identifier: data [6143,6147]
+        expression_statement [6168,6229]
+            augmented_assignment_expression [6168,6228]
+                member_expression: connectedChains[targetChainHash].outgoingMessageCounter [6168,6223]
+                affectation_operator: += [6224,6226]
+                number_literal: 1 [6227,6228]
+to
+contract_body [1214,11852]
+at 29
+===
+move-tree
+---
+function_definition [3806,4030]
+    function: function [3806,3814]
+    identifier: isConnectedChain [3815,3831]
+    parameter [3841,3865]
+        type_name: string [3841,3847]
+        memory: memory [3848,3854]
+        identifier: schainName [3855,3865]
+    visibility: public [3880,3886]
+    state_mutability [3895,3899]
+        view: view [3895,3899]
+    virtual: virtual [3908,3915]
+    return_type_definition [3924,3938]
+        returns: returns [3924,3931]
+        parameter [3933,3937]
+            type_name: bool [3933,3937]
+    function_body [3943,4030]
+        return_statement [3953,4024]
+            return: return [3953,3959]
+            member_expression: connectedChains[keccak256(abi.encodePacked(schainName))].inited [3960,4023]
+to
+contract_body [1214,11852]
+at 29
+===
+move-tree
+---
+function_definition [4590,4882]
+    function: function [4590,4598]
+    identifier: removeConnectedChain [4599,4619]
+    parameter [4620,4644]
+        type_name: string [4620,4626]
+        memory: memory [4627,4633]
+        identifier: schainName [4634,4644]
+    visibility: public [4646,4652]
+    virtual: virtual [4653,4660]
+    modifier_invocation [4661,4679]
+        identifier: onlyChainConnector [4661,4679]
+    function_body [4680,4882]
+        variable_declaration_statement [4690,4751]
+            variable_declaration [4690,4708]
+                type_name: bytes32 [4690,4697]
+                identifier: schainHash [4698,4708]
+            affectation_operator: = [4709,4710]
+            call_expression [4711,4750]
+                identifier: keccak256 [4711,4720]
+                call_argument [4721,4749]
+                    call_expression [4721,4749]
+                        member_expression: abi.encodePacked [4721,4737]
+                        call_argument [4738,4748]
+                            identifier: schainName [4738,4748]
+        expression_statement [4760,4832]
+            call_expression [4760,4831]
+                identifier: require [4760,4767]
+                call_argument [4768,4802]
+                    member_expression: connectedChains[schainHash].inited [4768,4802]
+                call_argument [4804,4830]
+                    string_literal [4804,4830]
+                        string: "Chain is not initialized" [4804,4830]
+        expression_statement [4841,4876]
+            array_access [4841,4875]
+                unary_expression [4841,4863]
+                    delete: delete [4841,4847]
+                    identifier: connectedChains [4848,4863]
+                identifier: schainHash [4864,4874]
+to
+contract_body [1214,11852]
+at 29
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+using_directive [1565,1636]
+    using: using [1565,1570]
+    type_alias [1571,1595]
+        identifier: EnumerableSetUpgradeable [1571,1595]
+    for: for [1596,1599]
+    type_name: EnumerableSetUpgradeable.AddressSet [1600,1635]
+to
+contract_body [1214,11852]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2327,2377]
+    type_name: uint256 [2327,2334]
+    visibility: public [2335,2341]
+    constant: constant [2342,2350]
+    identifier: REVERT_REASON_LENGTH [2351,2371]
+    affectation_operator: = [2372,2373]
+    number_literal: 64 [2374,2376]
+to
+contract_body [1214,11852]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [3491,3550]
+    identifier: VersionUpdated [3497,3511]
+    event_paramater [3512,3529]
+        type_name: string [3512,3518]
+        identifier: oldVersion [3519,3529]
+    event_paramater [3531,3548]
+        type_name: string [3531,3537]
+        identifier: newVersion [3538,3548]
+to
+contract_body [1214,11852]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [3623,3727]
+    identifier: ExtraContractRegistered [3629,3652]
+    event_paramater [3662,3687]
+        type_name: bytes32 [3662,3669]
+        indexed: indexed [3670,3677]
+        identifier: chainHash [3678,3687]
+    event_paramater [3697,3720]
+        type_name: address [3697,3704]
+        identifier: contractAddress [3705,3720]
+to
+contract_body [1214,11852]
+at 18
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [3802,3903]
+    identifier: ExtraContractRemoved [3808,3828]
+    event_paramater [3838,3863]
+        type_name: bytes32 [3838,3845]
+        indexed: indexed [3846,3853]
+        identifier: chainHash [3854,3863]
+    event_paramater [3873,3896]
+        type_name: address [3873,3880]
+        identifier: contractAddress [3881,3896]
+to
+contract_body [1214,11852]
+at 19
+
+New cluster:
+===
+insert-node
+---
+function_definition [5768,6208]
+to
+contract_body [1214,11852]
+at 26
+------------
+===
+insert-node
+---
+emit_statement [6146,6202]
+to
+function_body [5873,6208]
+at 3
+===
+insert-node
+---
+identifier: registerExtraContractForAll [5777,5804]
+to
+function_definition [5768,6208]
+at 1
+===
+insert-node
+---
+function_body [5873,6208]
+to
+function_definition [5768,6208]
+at 6
+===
+insert-node
+---
+call_expression [5963,6072]
+to
+expression_statement [5963,6073]
+at 0
+===
+insert-node
+---
+identifier: ExtraContractRegistered [6151,6174]
+to
+emit_statement [6146,6202]
+at 0
+===
+insert-node
+---
+function_definition [5768,6208]
+to
+contract_body [1214,11852]
+at 26
+===
+insert-node
+---
+expression_statement [5963,6073]
+to
+function_body [5873,6208]
+at 1
+===
+insert-node
+---
+visibility: external [5828,5836]
+to
+function_definition [5768,6208]
+at 3
+===
+insert-node
+---
+function: function [5768,5776]
+to
+function_definition [5768,6208]
+at 0
+===
+insert-node
+---
+identifier: require [5963,5970]
+to
+call_expression [5963,6072]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [6497,6850]
+to
+contract_body [1214,11852]
+at 27
+------------
+===
+insert-node
+---
+function_definition [6497,6850]
+to
+contract_body [1214,11852]
+at 27
+===
+insert-node
+---
+identifier: require [6610,6617]
+to
+call_expression [6610,6714]
+at 0
+===
+insert-node
+---
+identifier: removeExtraContractForAll [6506,6531]
+to
+function_definition [6497,6850]
+at 1
+===
+insert-node
+---
+function_body [6600,6850]
+to
+function_definition [6497,6850]
+at 6
+===
+insert-node
+---
+expression_statement [6610,6715]
+to
+function_body [6600,6850]
+at 0
+===
+insert-node
+---
+function: function [6497,6505]
+to
+function_definition [6497,6850]
+at 0
+===
+insert-node
+---
+call_expression [6610,6714]
+to
+expression_statement [6610,6715]
+at 0
+===
+insert-node
+---
+visibility: external [6555,6563]
+to
+function_definition [6497,6850]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [6943,7109]
+    function: function [6943,6951]
+    identifier: getContractRegisteredLength [6952,6979]
+    parameter [6980,6998]
+        type_name: bytes32 [6980,6987]
+        identifier: schainHash [6988,6998]
+    visibility: external [7000,7008]
+    state_mutability [7009,7013]
+        view: view [7009,7013]
+    override_specifier [7014,7022]
+        override: override [7014,7022]
+    return_type_definition [7023,7040]
+        returns: returns [7023,7030]
+        parameter [7032,7039]
+            type_name: uint256 [7032,7039]
+    function_body [7041,7109]
+        return_statement [7051,7103]
+            return: return [7051,7057]
+            call_expression [7058,7102]
+                member_expression: _getRegistryContracts()[schainHash].length [7058,7100]
+to
+contract_body [1214,11852]
+at 28
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [7283,7855]
+    function: function [7283,7291]
+    identifier: getContractRegisteredRange [7292,7318]
+    parameter [7328,7346]
+        type_name: bytes32 [7328,7335]
+        identifier: schainHash [7336,7346]
+    parameter [7356,7368]
+        type_name: uint256 [7356,7363]
+        identifier: from [7364,7368]
+    parameter [7378,7388]
+        type_name: uint256 [7378,7385]
+        identifier: to [7386,7388]
+    visibility: external [7403,7411]
+    state_mutability [7420,7424]
+        view: view [7420,7424]
+    override_specifier [7433,7441]
+        override: override [7433,7441]
+    return_type_definition [7450,7493]
+        returns: returns [7450,7457]
+        parameter [7459,7492]
+            type_name: address[] [7459,7468]
+            memory: memory [7469,7475]
+            identifier: contractsInRange [7476,7492]
+    function_body [7498,7855]
+        expression_statement [7508,7656]
+            call_expression [7508,7655]
+                identifier: require [7508,7515]
+                call_argument [7529,7611]
+                    call_expression [7529,7611]
+                        member_expression: from < to && to - from <= 10 && to <= _getRegistryContracts()[schainHash].length [7529,7609]
+                call_argument [7625,7645]
+                    string_literal [7625,7645]
+                        string: "Range is incorrect" [7625,7645]
+        expression_statement [7665,7709]
+            assignment_expression [7665,7708]
+                identifier: contractsInRange [7665,7681]
+                affectation_operator: = [7682,7683]
+                call_expression [7684,7708]
+                    new_expression [7684,7697]
+                        new: new [7684,7687]
+                        type_name: address[] [7688,7697]
+                    call_argument [7698,7707]
+                        binary_expression [7698,7707]
+                            identifier: to [7698,7700]
+                            arithmetic_operator: - [7701,7702]
+                            identifier: from [7703,7707]
+        for_statement [7718,7849]
+            for: for [7718,7721]
+            variable_declaration_statement [7723,7740]
+                variable_declaration [7723,7732]
+                    type_name: uint256 [7723,7730]
+                    identifier: i [7731,7732]
+                affectation_operator: = [7733,7734]
+                identifier: from [7735,7739]
+            expression_statement [7741,7748]
+                binary_expression [7741,7747]
+                    identifier: i [7741,7742]
+                    comparison_operator: < [7743,7744]
+                    identifier: to [7745,7747]
+            update_expression [7749,7752]
+                identifier: i [7749,7750]
+                increment_operator: ++ [7750,7752]
+            block_statement [7754,7849]
+                expression_statement [7768,7839]
+                    assignment_expression [7768,7838]
+                        array_access [7768,7794]
+                            identifier: contractsInRange [7768,7784]
+                            binary_expression [7785,7793]
+                                identifier: i [7785,7786]
+                                arithmetic_operator: - [7787,7788]
+                                identifier: from [7789,7793]
+                        affectation_operator: = [7795,7796]
+                        call_expression [7797,7838]
+                            member_expression: _getRegistryContracts()[schainHash].at [7797,7835]
+                            call_argument [7836,7837]
+                                identifier: i [7836,7837]
+to
+contract_body [1214,11852]
+at 29
+
+New cluster:
+===
+insert-node
+---
+function_definition [11925,12557]
+to
+contract_body [1214,11852]
+at 39
+------------
+===
+insert-node
+---
+expression_statement [12138,12247]
+to
+function_body [12042,12557]
+at 1
+===
+insert-node
+---
+function: function [11925,11933]
+to
+function_definition [11925,12557]
+at 0
+===
+insert-node
+---
+expression_statement [12256,12415]
+to
+function_body [12042,12557]
+at 2
+===
+insert-node
+---
+identifier: _registerExtraContract [11934,11956]
+to
+function_definition [11925,12557]
+at 1
+===
+insert-node
+---
+call_expression [12138,12246]
+to
+expression_statement [12138,12247]
+at 0
+===
+insert-node
+---
+call_expression [12256,12414]
+to
+expression_statement [12256,12415]
+at 0
+===
+insert-node
+---
+visibility: internal [12029,12037]
+to
+function_definition [11925,12557]
+at 4
+===
+insert-node
+---
+function_definition [11925,12557]
+to
+contract_body [1214,11852]
+at 39
+===
+insert-node
+---
+identifier: require [12256,12263]
+to
+call_expression [12256,12414]
+at 0
+===
+insert-node
+---
+function_body [12042,12557]
+to
+function_definition [11925,12557]
+at 5
+===
+insert-node
+---
+identifier: require [12138,12145]
+to
+call_expression [12138,12246]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [12819,13181]
+to
+contract_body [1214,11852]
+at 40
+------------
+===
+insert-node
+---
+expression_statement [12944,13048]
+to
+function_body [12934,13181]
+at 0
+===
+insert-node
+---
+identifier: require [12944,12951]
+to
+call_expression [12944,13047]
+at 0
+===
+insert-node
+---
+visibility: internal [12921,12929]
+to
+function_definition [12819,13181]
+at 4
+===
+insert-node
+---
+identifier: _removeExtraContract [12828,12848]
+to
+function_definition [12819,13181]
+at 1
+===
+insert-node
+---
+call_expression [12944,13047]
+to
+expression_statement [12944,13048]
+at 0
+===
+insert-node
+---
+function: function [12819,12827]
+to
+function_definition [12819,13181]
+at 0
+===
+insert-node
+---
+function_definition [12819,13181]
+to
+contract_body [1214,11852]
+at 40
+===
+insert-node
+---
+function_body [12934,13181]
+to
+function_definition [12819,13181]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [16231,16521]
+to
+contract_body [1214,11852]
+at 46
+------------
+===
+insert-node
+---
+identifier: require [16329,16336]
+to
+call_expression [16329,16506]
+at 0
+===
+insert-node
+---
+call_argument [16350,16447]
+to
+call_expression [16329,16506]
+at 1
+===
+insert-node
+---
+function_definition [16231,16521]
+to
+contract_body [1214,11852]
+at 46
+===
+insert-node
+---
+virtual: virtual [16311,16318]
+to
+function_definition [16231,16521]
+at 5
+===
+insert-node
+---
+visibility: internal [16297,16305]
+to
+function_definition [16231,16521]
+at 3
+===
+insert-node
+---
+identifier: _authorizeOutgoingMessageSender [16240,16271]
+to
+function_definition [16231,16521]
+at 1
+===
+insert-node
+---
+identifier: isContractRegistered [16350,16370]
+to
+call_expression [16350,16394]
+at 0
+===
+insert-node
+---
+function: function [16231,16239]
+to
+function_definition [16231,16521]
+at 0
+===
+insert-node
+---
+call_expression [16350,16394]
+to
+binary_expression [16350,16447]
+at 0
+===
+insert-node
+---
+logical_operator: || [16395,16397]
+to
+binary_expression [16350,16447]
+at 1
+===
+insert-node
+---
+function_body [16319,16521]
+to
+function_definition [16231,16521]
+at 6
+===
+insert-node
+---
+binary_expression [16350,16447]
+to
+call_argument [16350,16447]
+at 0
+===
+insert-node
+---
+call_expression [16329,16506]
+to
+expression_statement [16329,16507]
+at 0
+===
+insert-node
+---
+expression_statement [16329,16507]
+to
+function_body [16319,16521]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [16606,16767]
+    function: function [16606,16614]
+    identifier: _getRegistryContracts [16615,16636]
+    visibility: internal [16647,16655]
+    state_mutability [16664,16668]
+        view: view [16664,16668]
+    virtual: virtual [16677,16684]
+    return_type_definition [16693,16766]
+        returns: returns [16693,16700]
+        parameter [16702,16765]
+            type_name: mapping(bytes32 => EnumerableSetUpgradeable.AddressSet) [16702,16757]
+            storage: storage [16758,16765]
+to
+contract_body [1214,11852]
+at 47
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [17611,17933]
+    function: function [17611,17619]
+    identifier: _getSlice [17620,17629]
+    parameter [17630,17647]
+        type_name: bytes [17630,17635]
+        memory: memory [17636,17642]
+        identifier: text [17643,17647]
+    parameter [17649,17657]
+        type_name: uint [17649,17653]
+        identifier: end [17654,17657]
+    visibility: private [17659,17666]
+    state_mutability [17667,17671]
+        pure: pure [17667,17671]
+    return_type_definition [17672,17694]
+        returns: returns [17672,17679]
+        parameter [17681,17693]
+            type_name: bytes [17681,17686]
+            memory: memory [17687,17693]
+    function_body [17695,17933]
+        variable_declaration_statement [17705,17760]
+            variable_declaration [17705,17719]
+                type_name: uint [17705,17709]
+                identifier: slicedEnd [17710,17719]
+            affectation_operator: = [17720,17721]
+            ternary_expression [17722,17759]
+                binary_expression [17722,17739]
+                    identifier: end [17722,17725]
+                    comparison_operator: < [17726,17727]
+                    member_expression: text.length [17728,17739]
+                ?: ? [17740,17741]
+                identifier: end [17742,17745]
+                :: : [17746,17747]
+                member_expression: text.length [17748,17759]
+        variable_declaration_statement [17769,17812]
+            variable_declaration [17769,17788]
+                type_name: bytes [17769,17774]
+                memory: memory [17775,17781]
+                identifier: sliced [17782,17788]
+            affectation_operator: = [17789,17790]
+            call_expression [17791,17811]
+                new_expression [17791,17800]
+                    new: new [17791,17794]
+                    type_name: bytes [17795,17800]
+                call_argument [17801,17810]
+                    identifier: slicedEnd [17801,17810]
+        for_statement [17821,17900]
+            for: for [17821,17824]
+            variable_declaration_statement [17825,17836]
+                variable_declaration [17825,17831]
+                    type_name: uint [17825,17829]
+                    identifier: i [17830,17831]
+                affectation_operator: = [17832,17833]
+                number_literal: 0 [17834,17835]
+            expression_statement [17837,17851]
+                binary_expression [17837,17850]
+                    identifier: i [17837,17838]
+                    comparison_operator: < [17839,17840]
+                    identifier: slicedEnd [17841,17850]
+            update_expression [17852,17855]
+                identifier: i [17852,17853]
+                increment_operator: ++ [17853,17855]
+            block_statement [17856,17900]
+                expression_statement [17870,17890]
+                    assignment_expression [17870,17889]
+                        array_access [17870,17879]
+                            identifier: sliced [17870,17876]
+                            identifier: i [17877,17878]
+                        affectation_operator: = [17880,17881]
+                        array_access [17882,17889]
+                            identifier: text [17882,17886]
+                            identifier: i [17887,17888]
+        return_statement [17909,17923]
+            return: return [17909,17915]
+            identifier: sliced [17916,17922]
+to
+contract_body [1214,11852]
+at 49
+
+New cluster:
+UPDATE from public to internal
+------------
+===
+update-node
+---
+visibility: public [2302,2308]
+replace public by internal
+
+New cluster:
+UPDATE from registryContracts to deprecatedRegistryContracts
+------------
+===
+update-node
+---
+identifier: registryContracts [2309,2326]
+replace registryContracts by deprecatedRegistryContracts
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [4973,4981]
+    override: override [4973,4981]
+to
+function_definition [5042,5210]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [5395,5403]
+    override: override [5395,5403]
+to
+function_definition [6241,6453]
+at 8
+
+New cluster:
+MOVE from function_definition [5768,6208]
+------------
+===
+move-tree
+---
+parameter [6496,6517]
+    type_name: address [6496,6503]
+    identifier: extraContract [6504,6517]
+to
+function_definition [5768,6208]
+at 2
+===
+move-tree
+---
+modifier_invocation [6528,6554]
+    identifier: onlyExtraContractRegistrar [6528,6554]
+to
+function_definition [5768,6208]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [5837,5845]
+    override: override [5837,5845]
+to
+function_definition [5768,6208]
+at 4
+
+New cluster:
+MOVE from function_definition [6497,6850]
+------------
+===
+move-tree
+---
+parameter [6848,6869]
+    type_name: address [6848,6855]
+    identifier: extraContract [6856,6869]
+to
+function_definition [6497,6850]
+at 2
+===
+move-tree
+---
+modifier_invocation [6880,6906]
+    identifier: onlyExtraContractRegistrar [6880,6906]
+to
+function_definition [6497,6850]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [6564,6572]
+    override: override [6564,6572]
+to
+function_definition [6497,6850]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [8116,8124]
+    override: override [8116,8124]
+to
+function_definition [7717,8096]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [8662,8670]
+    override: override [8662,8670]
+to
+function_definition [8267,8637]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [9879,9887]
+    override: override [9879,9887]
+to
+function_definition [5478,6235]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [10678,10686]
+    override: override [10678,10686]
+to
+function_definition [4590,4882]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [11109,11117]
+    override: override [11109,11117]
+to
+function_definition [3806,4030]
+at 6
+
+New cluster:
+UPDATE from external to public
+------------
+===
+update-node
+---
+visibility: external [7333,7341]
+replace external by public
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [11466,11474]
+    override: override [11466,11474]
+to
+function_definition [7220,7546]
+at 6
+
+New cluster:
+MOVE from function_definition [11925,12557]
+------------
+===
+move-tree
+---
+parameter [9854,9875]
+    type_name: address [9854,9861]
+    identifier: extraContract [9862,9875]
+to
+function_definition [11925,12557]
+at 3
+===
+move-tree
+---
+parameter [9827,9844]
+    type_name: bytes32 [9827,9834]
+    identifier: chainHash [9835,9844]
+to
+function_definition [11925,12557]
+at 2
+
+New cluster:
+MOVE from function_definition [12819,13181]
+------------
+===
+move-tree
+---
+parameter [10359,10380]
+    type_name: address [10359,10366]
+    identifier: extraContract [10367,10380]
+to
+function_definition [12819,13181]
+at 3
+===
+move-tree
+---
+parameter [10332,10349]
+    type_name: bytes32 [10332,10339]
+    identifier: chainHash [10340,10349]
+to
+function_definition [12819,13181]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [16272,16295]
+    type_name: bytes32 [16272,16279]
+    identifier: targetChainHash [16280,16295]
+to
+function_definition [16231,16521]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [16306,16310]
+    view: view [16306,16310]
+to
+function_definition [16231,16521]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [16900,16923]
+    type_name: uint256 [16900,16907]
+    identifier: startingCounter [16908,16923]
+to
+function_definition [11407,11850]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [16933,16962]
+    type_name: string [16933,16939]
+    calldata: calldata [16940,16948]
+    identifier: fromChainName [16949,16962]
+to
+function_definition [11407,11850]
+at 4
+
+New cluster:
+MOVE from function_body [5873,6208]
+------------
+===
+move-tree
+---
+expression_statement [6565,6636]
+    call_expression [6565,6635]
+        identifier: require [6565,6572]
+        call_argument [6573,6599]
+            call_expression [6573,6599]
+                member_expression: extraContract.isContract [6573,6597]
+        call_argument [6601,6634]
+            string_literal [6601,6634]
+                string: "Given address is not a contract" [6601,6634]
+to
+function_body [5873,6208]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [6082,6137]
+    call_expression [6082,6136]
+        member_expression: _getRegistryContracts()[bytes32(0)].add [6082,6121]
+        call_argument [6122,6135]
+            identifier: extraContract [6122,6135]
+to
+function_body [5873,6208]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [6724,6782]
+    call_expression [6724,6781]
+        member_expression: _getRegistryContracts()[bytes32(0)].remove [6724,6766]
+        call_argument [6767,6780]
+            identifier: extraContract [6767,6780]
+to
+function_body [6600,6850]
+at 1
+
+New cluster:
+MOVE from function_body [6600,6850]
+------------
+===
+move-tree
+---
+emit_statement [3679,3726]
+    identifier: GasLimitWasChanged [3684,3702]
+    call_argument [3703,3711]
+        identifier: gasLimit [3703,3711]
+    call_argument [3713,3724]
+        identifier: newGasLimit [3713,3724]
+to
+function_body [6600,6850]
+at 2
+
+New cluster:
+UPDATE from string to bytes32
+------------
+===
+update-node
+---
+type_name: string [7259,7265]
+replace string by bytes32
+===
+update-node
+---
+type_name: bytes [11500,11505]
+replace bytes by bytes32
+
+New cluster:
+UPDATE from schainName to schainHash
+------------
+===
+update-node
+---
+identifier: schainName [7275,7285]
+replace schainName by schainHash
+
+New cluster:
+MOVE from function_body [12042,12557]
+------------
+===
+move-tree
+---
+expression_statement [9919,9990]
+    call_expression [9919,9989]
+        identifier: require [9919,9926]
+        call_argument [9927,9953]
+            call_expression [9927,9953]
+                member_expression: extraContract.isContract [9927,9951]
+        call_argument [9955,9988]
+            string_literal [9955,9988]
+                string: "Given address is not a contract" [9955,9988]
+to
+function_body [12042,12557]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [12433,12487]
+    call_expression [12433,12486]
+        member_expression: _getRegistryContracts()[chainHash].add [12433,12471]
+        call_argument [12472,12485]
+            identifier: extraContract [12472,12485]
+to
+function_body [12042,12557]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [12496,12551]
+    identifier: ExtraContractRegistered [12501,12524]
+    call_argument [12525,12534]
+        identifier: chainHash [12525,12534]
+    call_argument [12536,12549]
+        identifier: extraContract [12536,12549]
+to
+function_body [12042,12557]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13057,13114]
+    call_expression [13057,13113]
+        member_expression: _getRegistryContracts()[chainHash].remove [13057,13098]
+        call_argument [13099,13112]
+            identifier: extraContract [13099,13112]
+to
+function_body [12934,13181]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [13123,13175]
+    identifier: ExtraContractRemoved [13128,13148]
+    call_argument [13149,13158]
+        identifier: chainHash [13149,13158]
+    call_argument [13160,13173]
+        identifier: extraContract [13160,13173]
+to
+function_body [12934,13181]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [14100,14310]
+    if: if [14100,14102]
+    call_expression [14104,14145]
+        member_expression: !message.destinationContract.isContract [14104,14143]
+    block_statement [14147,14310]
+        emit_statement [14161,14280]
+            identifier: PostMessageError [14166,14182]
+            call_argument [14200,14207]
+                identifier: counter [14200,14207]
+            call_argument [14225,14265]
+                string_literal [14225,14265]
+                    string: "Destination contract is not a contract" [14225,14265]
+        return_statement [14293,14300]
+            return: return [14293,14299]
+to
+function_body [9173,9780]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [17112,17193]
+    variable_declaration [17112,17124]
+        type_name: bytes32 [17112,17119]
+        identifier: hash [17120,17124]
+    affectation_operator: = [17125,17126]
+    call_expression [17127,17192]
+        identifier: keccak256 [17127,17136]
+        call_argument [17137,17191]
+            call_expression [17137,17191]
+                member_expression: abi.encodePacked [17137,17153]
+                call_argument [17154,17164]
+                    identifier: sourceHash [17154,17164]
+                call_argument [17166,17190]
+                    type_cast_expression [17166,17190]
+                        primitive_type: bytes32 [17166,17173]
+                        call_argument [17174,17189]
+                            identifier: startingCounter [17174,17189]
+to
+function_body [11490,11850]
+at 1
+
+New cluster:
+MOVE from call_expression [12256,12414]
+------------
+===
+move-tree
+---
+call_argument [10157,10210]
+    string_literal [10157,10210]
+        string: "Extra contract is already registered for all chains" [10157,10210]
+to
+call_expression [12256,12414]
+at 2
+===
+move-tree
+---
+call_argument [10110,10155]
+    array_access [10110,10155]
+        array_access [10110,10140]
+            unary_expression [10110,10128]
+                !: ! [10110,10111]
+                identifier: registryContracts [10111,10128]
+            type_cast_expression [10129,10139]
+                primitive_type: bytes32 [10129,10136]
+                call_argument [10137,10138]
+                    number_literal: 0 [10137,10138]
+        identifier: extraContract [10141,10154]
+to
+emit_statement [6146,6202]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6187,6200]
+    identifier: extraContract [6187,6200]
+to
+emit_statement [6146,6202]
+at 2
+
+New cluster:
+UPDATE from GasLimitWasChanged to ExtraContractRemoved
+------------
+===
+update-node
+---
+identifier: GasLimitWasChanged [3684,3702]
+replace GasLimitWasChanged by ExtraContractRemoved
+
+New cluster:
+MOVE from emit_statement [3679,3726]
+------------
+===
+move-tree
+---
+call_argument [6925,6969]
+    array_access [6925,6969]
+        array_access [6925,6954]
+            identifier: registryContracts [6925,6942]
+            type_cast_expression [6943,6953]
+                primitive_type: bytes32 [6943,6950]
+                call_argument [6951,6952]
+                    number_literal: 0 [6951,6952]
+        identifier: extraContract [6955,6968]
+to
+emit_statement [3679,3726]
+at 1
+===
+move-tree
+---
+call_argument [6971,7005]
+    string_literal [6971,7005]
+        string: "Extra contract is not registered" [6971,7005]
+to
+call_expression [6610,6714]
+at 2
+
+New cluster:
+MOVE from return_statement [7392,7540]
+------------
+===
+move-tree
+---
+call_expression [7427,7455]
+    member_expression: abi.encodePacked [7427,7443]
+    call_argument [7444,7454]
+        identifier: schainName [7444,7454]
+to
+return_statement [7392,7540]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+catch_clause [14700,14861]
+    catch: catch [14700,14705]
+    identifier: Panic [14706,14711]
+    parameter [14712,14726]
+        type_name: uint [14712,14716]
+        identifier: errorCode [14717,14726]
+    block_statement [14728,14861]
+        emit_statement [14745,14851]
+            identifier: PostMessageError [14750,14766]
+            call_argument [14784,14791]
+                identifier: counter [14784,14791]
+            call_argument [14809,14836]
+                call_expression [14809,14836]
+                    member_expression: abi.encodePacked [14809,14825]
+                    call_argument [14826,14835]
+                        identifier: errorCode [14826,14835]
+to
+try_statement [9183,9774]
+at 6
+
+New cluster:
+===
+insert-node
+---
+catch_clause [15723,15915]
+to
+try_statement [10748,11336]
+at 6
+------------
+===
+insert-node
+---
+catch_clause [15723,15915]
+to
+try_statement [10748,11336]
+at 6
+===
+insert-node
+---
+catch: catch [15723,15728]
+to
+catch_clause [15723,15915]
+at 0
+===
+insert-node
+---
+identifier: Panic [15729,15734]
+to
+catch_clause [15723,15915]
+at 1
+===
+insert-node
+---
+block_statement [15751,15915]
+to
+catch_clause [15723,15915]
+at 3
+
+New cluster:
+===
+insert-node
+---
+affectation_operator: = [17058,17059]
+to
+variable_declaration_statement [11500,11518]
+at 1
+------------
+===
+insert-node
+---
+affectation_operator: = [17058,17059]
+to
+variable_declaration_statement [11500,11518]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [17060,17102]
+    identifier: keccak256 [17060,17069]
+    call_argument [17070,17101]
+        call_expression [17070,17101]
+            member_expression: abi.encodePacked [17070,17086]
+            call_argument [17087,17100]
+                identifier: fromChainName [17087,17100]
+to
+variable_declaration_statement [11500,11518]
+at 2
+
+New cluster:
+UPDATE from data to hash
+------------
+===
+update-node
+---
+identifier: data [11628,11632]
+replace data by hash
+===
+update-node
+---
+identifier: keccak256 [11828,11837]
+replace keccak256 by hash
+===
+update-node
+---
+identifier: data [11587,11591]
+replace data by hash
+
+New cluster:
+MOVE from return_statement [11821,11844]
+------------
+===
+move-tree
+---
+identifier: keccak256 [11828,11837]
+to
+return_statement [11821,11844]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5971,6031]
+    call_expression [5971,6031]
+        member_expression: !_getRegistryContracts()[bytes32(0)].contains [5971,6016]
+        call_argument [6017,6030]
+            identifier: extraContract [6017,6030]
+to
+call_expression [5963,6072]
+at 1
+
+New cluster:
+MOVE from call_expression [16350,16394]
+------------
+===
+move-tree
+---
+call_argument [6653,6698]
+    array_access [6653,6698]
+        array_access [6653,6683]
+            unary_expression [6653,6671]
+                !: ! [6653,6654]
+                identifier: registryContracts [6654,6671]
+            type_cast_expression [6672,6682]
+                primitive_type: bytes32 [6672,6679]
+                call_argument [6680,6681]
+                    number_literal: 0 [6680,6681]
+        identifier: extraContract [6684,6697]
+to
+call_expression [16350,16394]
+at 1
+===
+move-tree
+---
+call_argument [6700,6738]
+    string_literal [6700,6738]
+        string: "Extra contract is already registered" [6700,6738]
+to
+call_expression [5963,6072]
+at 2
+
+New cluster:
+MOVE from call_argument [10110,10155]
+------------
+===
+move-tree
+---
+type_cast_expression [10129,10139]
+    primitive_type: bytes32 [10129,10136]
+    call_argument [10137,10138]
+        number_literal: 0 [10137,10138]
+to
+call_argument [10110,10155]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6618,6677]
+    call_expression [6618,6677]
+        member_expression: _getRegistryContracts()[bytes32(0)].contains [6618,6662]
+        call_argument [6663,6676]
+            identifier: extraContract [6663,6676]
+to
+call_expression [6610,6714]
+at 1
+
+New cluster:
+MOVE from call_argument [6925,6969]
+------------
+===
+move-tree
+---
+type_cast_expression [6943,6953]
+    primitive_type: bytes32 [6943,6950]
+    call_argument [6951,6952]
+        number_literal: 0 [6951,6952]
+to
+call_argument [6925,6969]
+at 0
+
+New cluster:
+UPDATE from newGasLimit to extraContract
+------------
+===
+update-node
+---
+identifier: newGasLimit [3713,3724]
+replace newGasLimit by extraContract
+
+New cluster:
+UPDATE from require to _authorizeOutgoingMessageSender
+------------
+===
+update-node
+---
+identifier: require [5748,5755]
+replace require by _authorizeOutgoingMessageSender
+
+New cluster:
+UPDATE from abi.encodePacked to _getRegistryContracts()[schainHash].contains
+------------
+===
+update-node
+---
+member_expression: abi.encodePacked [7427,7443]
+replace abi.encodePacked by _getRegistryContracts()[schainHash].contains
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12146,12205]
+    call_expression [12146,12205]
+        member_expression: !_getRegistryContracts()[chainHash].contains [12146,12190]
+        call_argument [12191,12204]
+            identifier: extraContract [12191,12204]
+to
+call_expression [12138,12246]
+at 1
+
+New cluster:
+MOVE from call_expression [12138,12246]
+------------
+===
+move-tree
+---
+call_argument [10053,10091]
+    string_literal [10053,10091]
+        string: "Extra contract is already registered" [10053,10091]
+to
+call_expression [12138,12246]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12277,12337]
+    call_expression [12277,12337]
+        member_expression: !_getRegistryContracts()[bytes32(0)].contains [12277,12322]
+        call_argument [12323,12336]
+            identifier: extraContract [12323,12336]
+to
+call_expression [12256,12414]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12952,13010]
+    call_expression [12952,13010]
+        member_expression: _getRegistryContracts()[chainHash].contains [12952,12995]
+        call_argument [12996,13009]
+            identifier: extraContract [12996,13009]
+to
+call_expression [12944,13047]
+at 1
+
+New cluster:
+MOVE from call_expression [12944,13047]
+------------
+===
+move-tree
+---
+call_argument [10471,10505]
+    string_literal [10471,10505]
+        string: "Extra contract is not registered" [10471,10505]
+to
+call_expression [12944,13047]
+at 2
+
+New cluster:
+MOVE from catch_clause [9598,9774]
+------------
+===
+move-tree
+---
+parameter [11167,11190]
+    type_name: bytes [11167,11172]
+    memory: memory [11173,11179]
+    identifier: revertData [11180,11190]
+to
+catch_clause [9598,9774]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [15735,15749]
+    type_name: uint [15735,15739]
+    identifier: errorCode [15740,15749]
+to
+catch_clause [15723,15915]
+at 2
+
+New cluster:
+MOVE from catch_clause [11160,11336]
+------------
+===
+move-tree
+---
+parameter [9605,9628]
+    type_name: bytes [9605,9610]
+    memory: memory [9611,9617]
+    identifier: revertData [9618,9628]
+to
+catch_clause [11160,11336]
+at 1
+
+New cluster:
+MOVE from call_expression [16329,16506]
+------------
+===
+move-tree
+---
+call_argument [5887,5922]
+    string_literal [5887,5922]
+        string: "Sender contract is not registered" [5887,5922]
+to
+call_expression [16329,16506]
+at 2
+
+New cluster:
+UPDATE from data to sourceHash
+------------
+===
+update-node
+---
+identifier: data [11513,11517]
+replace data by sourceHash
+
+New cluster:
+MOVE from call_argument [5769,5873]
+------------
+===
+move-tree
+---
+identifier: targetChainHash [5845,5860]
+to
+call_argument [5769,5873]
+at 0
+
+New cluster:
+UPDATE from schainName to contractAddress
+------------
+===
+update-node
+---
+identifier: schainName [7444,7454]
+replace schainName by contractAddress
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [15768,15874]
+    identifier: PostMessageError [15773,15789]
+    call_argument [15807,15814]
+        identifier: counter [15807,15814]
+    call_argument [15832,15859]
+        call_expression [15832,15859]
+            member_expression: abi.encodePacked [15832,15848]
+            call_argument [15849,15858]
+                identifier: errorCode [15849,15858]
+to
+block_statement [15751,15915]
+at 0
+
+New cluster:
+MOVE from block_statement [15751,15915]
+------------
+===
+move-tree
+---
+return_statement [11308,11326]
+    return: return [11308,11314]
+    type_cast_expression [11315,11325]
+        primitive_type: address [11315,11322]
+        call_argument [11323,11324]
+            number_literal: 0 [11323,11324]
+to
+block_statement [15751,15915]
+at 1
+
+New cluster:
+MOVE from block_statement [11192,11336]
+------------
+===
+move-tree
+---
+return_statement [9746,9764]
+    return: return [9746,9752]
+    type_cast_expression [9753,9763]
+        primitive_type: address [9753,9760]
+        call_argument [9761,9762]
+            number_literal: 0 [9761,9762]
+to
+block_statement [11192,11336]
+at 1
+
+New cluster:
+===
+insert-node
+---
+call_argument [14628,14674]
+to
+emit_statement [9464,9556]
+at 2
+------------
+===
+insert-node
+---
+call_expression [14628,14674]
+to
+call_argument [14628,14674]
+at 0
+===
+insert-node
+---
+identifier: _getSlice [14628,14637]
+to
+call_expression [14628,14674]
+at 0
+===
+insert-node
+---
+call_argument [14628,14674]
+to
+emit_statement [9464,9556]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [14972,15015]
+to
+emit_statement [9644,9733]
+at 2
+------------
+===
+insert-node
+---
+call_argument [14972,15015]
+to
+emit_statement [9644,9733]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [15620,15666]
+to
+emit_statement [11026,11118]
+at 2
+------------
+===
+insert-node
+---
+identifier: _getSlice [15620,15629]
+to
+call_expression [15620,15666]
+at 0
+===
+insert-node
+---
+call_argument [15620,15666]
+to
+emit_statement [11026,11118]
+at 2
+===
+insert-node
+---
+call_expression [15620,15666]
+to
+call_argument [15620,15666]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_argument [16026,16069]
+to
+emit_statement [11206,11295]
+at 2
+------------
+===
+insert-node
+---
+identifier: _getSlice [16026,16035]
+to
+call_expression [16026,16069]
+at 0
+===
+insert-node
+---
+call_expression [16026,16069]
+to
+call_argument [16026,16069]
+at 0
+===
+insert-node
+---
+call_argument [16026,16069]
+to
+emit_statement [11206,11295]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [16398,16447]
+    identifier: isContractRegistered [16398,16418]
+    call_argument [16419,16434]
+        identifier: targetChainHash [16419,16434]
+    call_argument [16436,16446]
+        member_expression: msg.sender [16436,16446]
+to
+binary_expression [16350,16447]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_expression [17269,17567]
+to
+assignment_expression [11587,11801]
+at 2
+------------
+===
+insert-node
+---
+call_expression [17269,17567]
+to
+assignment_expression [11587,11801]
+at 2
+===
+insert-node
+---
+identifier: keccak256 [17269,17278]
+to
+call_expression [17269,17567]
+at 0
+===
+insert-node
+---
+call_argument [17296,17553]
+to
+call_expression [17269,17567]
+at 1
+
+New cluster:
+MOVE from call_argument [14972,15015]
+------------
+===
+move-tree
+---
+call_expression [10102,10211]
+    identifier: require [10102,10109]
+    call_argument [10110,10155]
+        array_access [10110,10155]
+            array_access [10110,10140]
+                unary_expression [10110,10128]
+                    !: ! [10110,10111]
+                    identifier: registryContracts [10111,10128]
+                type_cast_expression [10129,10139]
+                    primitive_type: bytes32 [10129,10136]
+                    call_argument [10137,10138]
+                        number_literal: 0 [10137,10138]
+            identifier: extraContract [10141,10154]
+    call_argument [10157,10210]
+        string_literal [10157,10210]
+            string: "Extra contract is already registered for all chains" [10157,10210]
+to
+call_argument [14972,15015]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16383,16393]
+    member_expression: msg.sender [16383,16393]
+to
+call_expression [16350,16394]
+at 2
+
+New cluster:
+MOVE from call_expression [14628,14674]
+------------
+===
+move-tree
+---
+call_argument [9528,9541]
+    type_cast_expression [9528,9541]
+        primitive_type: bytes [9528,9533]
+        call_argument [9534,9540]
+            identifier: reason [9534,9540]
+to
+call_expression [14628,14674]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14653,14673]
+    identifier: REVERT_REASON_LENGTH [14653,14673]
+to
+call_expression [14628,14674]
+at 2
+
+New cluster:
+UPDATE from require to _getSlice
+------------
+===
+update-node
+---
+identifier: require [10102,10109]
+replace require by _getSlice
+
+New cluster:
+MOVE from call_expression [10102,10211]
+------------
+===
+move-tree
+---
+call_argument [9708,9718]
+    identifier: revertData [9708,9718]
+to
+call_expression [10102,10211]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14994,15014]
+    identifier: REVERT_REASON_LENGTH [14994,15014]
+to
+call_expression [10102,10211]
+at 2
+
+New cluster:
+MOVE from call_expression [15620,15666]
+------------
+===
+move-tree
+---
+call_argument [11090,11103]
+    type_cast_expression [11090,11103]
+        primitive_type: bytes [11090,11095]
+        call_argument [11096,11102]
+            identifier: reason [11096,11102]
+to
+call_expression [15620,15666]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [15645,15665]
+    identifier: REVERT_REASON_LENGTH [15645,15665]
+to
+call_expression [15620,15666]
+at 2
+
+New cluster:
+MOVE from call_expression [16026,16069]
+------------
+===
+move-tree
+---
+call_argument [11270,11280]
+    identifier: revertData [11270,11280]
+to
+call_expression [16026,16069]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [16048,16068]
+    identifier: REVERT_REASON_LENGTH [16048,16068]
+to
+call_expression [16026,16069]
+at 2
+
+New cluster:
+MOVE from call_argument [6653,6698]
+------------
+===
+move-tree
+---
+type_cast_expression [6672,6682]
+    primitive_type: bytes32 [6672,6679]
+    call_argument [6680,6681]
+        number_literal: 0 [6680,6681]
+to
+call_argument [6653,6698]
+at 0
+
+New cluster:
+MOVE from call_argument [17296,17553]
+------------
+===
+move-tree
+---
+call_expression [11594,11801]
+    member_expression: abi.encodePacked [11594,11610]
+    call_argument [11628,11632]
+        identifier: data [11628,11632]
+    call_argument [11650,11686]
+        type_cast_expression [11650,11686]
+            primitive_type: bytes32 [11650,11657]
+            call_argument [11658,11685]
+                type_cast_expression [11658,11685]
+                    primitive_type: bytes20 [11658,11665]
+                    call_argument [11666,11684]
+                        member_expression: messages[i].sender [11666,11684]
+    call_argument [11704,11753]
+        type_cast_expression [11704,11753]
+            primitive_type: bytes32 [11704,11711]
+            call_argument [11712,11752]
+                type_cast_expression [11712,11752]
+                    primitive_type: bytes20 [11712,11719]
+                    call_argument [11720,11751]
+                        member_expression: messages[i].destinationContract [11720,11751]
+    call_argument [11771,11787]
+        member_expression: messages[i].data [11771,11787]
+to
+call_argument [17296,17553]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_argument [17334,17497]
+to
+call_expression [11594,11801]
+at 1
+------------
+===
+insert-node
+---
+member_expression: abi.encode [17334,17344]
+to
+call_expression [17334,17497]
+at 0
+===
+insert-node
+---
+call_argument [17334,17497]
+to
+call_expression [11594,11801]
+at 1
+===
+insert-node
+---
+call_expression [17334,17497]
+to
+call_argument [17334,17497]
+at 0
+
+New cluster:
+MOVE from call_expression [17334,17497]
+------------
+===
+move-tree
+---
+call_argument [11628,11632]
+    identifier: data [11628,11632]
+to
+call_expression [17334,17497]
+at 1
+
+New cluster:
+MOVE from call_expression [17334,17497]
+------------
+===
+move-tree
+---
+call_argument [11666,11684]
+    member_expression: messages[i].sender [11666,11684]
+to
+call_expression [17334,17497]
+at 2
+
+New cluster:
+MOVE from call_expression [17334,17497]
+------------
+===
+move-tree
+---
+call_argument [11720,11751]
+    member_expression: messages[i].destinationContract [11720,11751]
+to
+call_expression [17334,17497]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [1055,1098]
+    import: import [1055,1061]
+    string: "./interfaces/IMessageReceiver.sol" [1062,1097]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [1099,1142]
+    import: import [1099,1105]
+    string: "./interfaces/IGasReimbursable.sol" [1106,1141]
+
+New cluster:
+===
+delete-node
+---
+abstract: abstract [1145,1153]
+===
+------------
+===
+delete-node
+---
+abstract: abstract [1145,1153]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: MessageProxy [1163,1175]
+===
+------------
+===
+delete-node
+---
+identifier: MessageProxy [1163,1175]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1176,1178]
+===
+------------
+===
+delete-node
+---
+is: is [1176,1178]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+struct_declaration [1854,1957]
+    struct: struct [1854,1860]
+    identifier: Message [1861,1868]
+    struct_member [1879,1894]
+        type_name: address [1879,1886]
+        identifier: sender [1887,1893]
+    struct_member [1903,1931]
+        type_name: address [1903,1910]
+        identifier: destinationContract [1911,1930]
+    struct_member [1940,1951]
+        type_name: bytes [1940,1945]
+        identifier: data [1946,1950]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+struct_declaration [1963,2091]
+    struct: struct [1963,1969]
+    identifier: Signature [1970,1979]
+    struct_member [1990,2014]
+        type_name: uint256[2] [1990,2000]
+        identifier: blsSignature [2001,2013]
+    struct_member [2023,2037]
+        type_name: uint256 [2023,2030]
+        identifier: hashA [2031,2036]
+    struct_member [2046,2060]
+        type_name: uint256 [2046,2053]
+        identifier: hashB [2054,2059]
+    struct_member [2069,2085]
+        type_name: uint256 [2069,2076]
+        identifier: counter [2077,2084]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [4287,4359]
+    function: function [4287,4295]
+    identifier: addConnectedChain [4296,4313]
+    parameter [4314,4340]
+        type_name: string [4314,4320]
+        calldata: calldata [4321,4329]
+        identifier: schainName [4330,4340]
+    visibility: external [4342,4350]
+    virtual: virtual [4351,4358]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+unary_expression [10110,10128]
+    !: ! [10110,10111]
+    identifier: registryContracts [10111,10128]
+
+New cluster:
+===
+delete-node
+---
+array_access [10110,10155]
+===
+------------
+===
+delete-node
+---
+array_access [10110,10155]
+===
+===
+delete-node
+---
+identifier: extraContract [10141,10154]
+===
+===
+delete-node
+---
+array_access [10110,10140]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [6925,6969]
+===
+------------
+===
+delete-node
+---
+identifier: registryContracts [6925,6942]
+===
+===
+delete-node
+---
+array_access [6925,6954]
+===
+===
+delete-node
+---
+identifier: extraContract [6955,6968]
+===
+===
+delete-node
+---
+array_access [6925,6969]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3703,3711]
+    identifier: gasLimit [3703,3711]
+
+New cluster:
+===
+delete-node
+---
+function_definition [6459,6807]
+===
+------------
+===
+delete-node
+---
+function: function [6459,6467]
+===
+===
+delete-node
+---
+function_body [6555,6807]
+===
+===
+delete-node
+---
+identifier: registerExtraContractForAll [6468,6495]
+===
+===
+delete-node
+---
+visibility: external [6519,6527]
+===
+===
+delete-node
+---
+identifier: require [6645,6652]
+===
+===
+delete-node
+---
+call_expression [6645,6739]
+===
+===
+delete-node
+---
+expression_statement [6645,6740]
+===
+===
+delete-node
+---
+function_definition [6459,6807]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [6749,6801]
+    assignment_expression [6749,6800]
+        array_access [6749,6793]
+            array_access [6749,6778]
+                identifier: registryContracts [6749,6766]
+                type_cast_expression [6767,6777]
+                    primitive_type: bytes32 [6767,6774]
+                    call_argument [6775,6776]
+                        number_literal: 0 [6775,6776]
+            identifier: extraContract [6779,6792]
+        affectation_operator: = [6794,6795]
+        boolean_literal: true [6796,6800]
+
+New cluster:
+===
+delete-node
+---
+function_definition [6813,7074]
+===
+------------
+===
+delete-node
+---
+function: function [6813,6821]
+===
+===
+delete-node
+---
+function_body [6907,7074]
+===
+===
+delete-node
+---
+identifier: removeExtraContractForAll [6822,6847]
+===
+===
+delete-node
+---
+expression_statement [6917,7007]
+===
+===
+delete-node
+---
+function_definition [6813,7074]
+===
+===
+delete-node
+---
+call_expression [6917,7006]
+===
+===
+delete-node
+---
+identifier: require [6917,6924]
+===
+===
+delete-node
+---
+visibility: external [6871,6879]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7016,7068]
+    array_access [7016,7067]
+        array_access [7016,7052]
+            unary_expression [7016,7040]
+                delete: delete [7016,7022]
+                identifier: registryContracts [7023,7040]
+            type_cast_expression [7041,7051]
+                primitive_type: bytes32 [7041,7048]
+                call_argument [7049,7050]
+                    number_literal: 0 [7049,7050]
+        identifier: extraContract [7053,7066]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [5769,5844]
+    array_access [5769,5810]
+        array_access [5769,5798]
+            identifier: registryContracts [5769,5786]
+            type_cast_expression [5787,5797]
+                primitive_type: bytes32 [5787,5794]
+                call_argument [5795,5796]
+                    number_literal: 0 [5795,5796]
+        member_expression: msg.sender [5799,5809]
+    logical_operator: || [5811,5813]
+    identifier: registryContracts [5827,5844]
+
+New cluster:
+===
+delete-node
+---
+array_access [5769,5873]
+===
+------------
+===
+delete-node
+---
+member_expression: msg.sender [5862,5872]
+===
+===
+delete-node
+---
+array_access [5769,5861]
+===
+===
+delete-node
+---
+array_access [5769,5873]
+===
+
+New cluster:
+===
+delete-node
+---
+calldata: calldata [7266,7274]
+===
+------------
+===
+delete-node
+---
+calldata: calldata [7266,7274]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [7399,7539]
+===
+------------
+===
+delete-node
+---
+identifier: contractAddress [7523,7538]
+===
+===
+delete-node
+---
+array_access [7399,7539]
+===
+===
+delete-node
+---
+array_access [7399,7522]
+===
+===
+delete-node
+---
+call_argument [7427,7455]
+===
+===
+delete-node
+---
+identifier: keccak256 [7417,7426]
+===
+===
+delete-node
+---
+array_access [7399,7474]
+===
+===
+delete-node
+---
+identifier: registryContracts [7493,7510]
+===
+===
+delete-node
+---
+binary_expression [7399,7510]
+===
+===
+delete-node
+---
+logical_operator: || [7475,7477]
+===
+===
+delete-node
+---
+call_expression [7417,7456]
+===
+===
+delete-node
+---
+array_access [7399,7457]
+===
+===
+delete-node
+---
+identifier: contractAddress [7458,7473]
+===
+===
+delete-node
+---
+identifier: registryContracts [7399,7416]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+type_cast_expression [7511,7521]
+    primitive_type: bytes32 [7511,7518]
+    call_argument [7519,7520]
+        number_literal: 0 [7519,7520]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [9151,9168]
+    returns: returns [9151,9158]
+    parameter [9160,9167]
+        type_name: address [9160,9167]
+
+New cluster:
+===
+delete-node
+---
+returns: returns [9348,9355]
+===
+------------
+===
+delete-node
+---
+returns: returns [9348,9355]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [9357,9373]
+    type_name: address [9357,9364]
+    identifier: receiver [9365,9373]
+
+New cluster:
+===
+delete-node
+---
+identifier: receiver [9396,9404]
+===
+------------
+===
+delete-node
+---
+identifier: receiver [9396,9404]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [9569,9587]
+    return: return [9569,9575]
+    type_cast_expression [9576,9586]
+        primitive_type: address [9576,9583]
+        call_argument [9584,9585]
+            number_literal: 0 [9584,9585]
+
+New cluster:
+===
+delete-node
+---
+function_definition [9786,10287]
+===
+------------
+===
+delete-node
+---
+function: function [9786,9794]
+===
+===
+delete-node
+---
+expression_statement [9999,10093]
+===
+===
+delete-node
+---
+call_expression [9999,10092]
+===
+===
+delete-node
+---
+function_definition [9786,10287]
+===
+===
+delete-node
+---
+expression_statement [10102,10212]
+===
+===
+delete-node
+---
+visibility: internal [9890,9898]
+===
+===
+delete-node
+---
+identifier: _registerExtraContract [9795,9817]
+===
+===
+delete-node
+---
+identifier: require [9999,10006]
+===
+===
+delete-node
+---
+function_body [9903,10287]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10007,10051]
+    array_access [10007,10051]
+        array_access [10007,10036]
+            unary_expression [10007,10025]
+                !: ! [10007,10008]
+                identifier: registryContracts [10008,10025]
+            identifier: chainHash [10026,10035]
+        identifier: extraContract [10037,10050]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [10230,10281]
+    assignment_expression [10230,10280]
+        array_access [10230,10273]
+            array_access [10230,10258]
+                identifier: registryContracts [10230,10247]
+                identifier: chainHash [10248,10257]
+            identifier: extraContract [10259,10272]
+        affectation_operator: = [10274,10275]
+        boolean_literal: true [10276,10280]
+
+New cluster:
+===
+delete-node
+---
+function_definition [10293,10573]
+===
+------------
+===
+delete-node
+---
+function: function [10293,10301]
+===
+===
+delete-node
+---
+function_body [10408,10573]
+===
+===
+delete-node
+---
+call_expression [10418,10506]
+===
+===
+delete-node
+---
+expression_statement [10418,10507]
+===
+===
+delete-node
+---
+visibility: internal [10395,10403]
+===
+===
+delete-node
+---
+identifier: _removeExtraContract [10302,10322]
+===
+===
+delete-node
+---
+identifier: require [10418,10425]
+===
+===
+delete-node
+---
+function_definition [10293,10573]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10426,10469]
+    array_access [10426,10469]
+        array_access [10426,10454]
+            identifier: registryContracts [10426,10443]
+            identifier: chainHash [10444,10453]
+        identifier: extraContract [10455,10468]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [10516,10567]
+    array_access [10516,10566]
+        array_access [10516,10551]
+            unary_expression [10516,10540]
+                delete: delete [10516,10522]
+                identifier: registryContracts [10523,10540]
+            identifier: chainHash [10541,10550]
+        identifier: extraContract [10552,10565]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+unary_expression [6653,6671]
+    !: ! [6653,6654]
+    identifier: registryContracts [6654,6671]
+
+New cluster:
+===
+delete-node
+---
+array_access [6653,6698]
+===
+------------
+===
+delete-node
+---
+array_access [6653,6698]
+===
+===
+delete-node
+---
+identifier: extraContract [6684,6697]
+===
+===
+delete-node
+---
+array_access [6653,6683]
+===
+
+New cluster:
+===
+delete-node
+---
+memory: memory [11506,11512]
+===
+------------
+===
+delete-node
+---
+memory: memory [11506,11512]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [11650,11686]
+===
+------------
+===
+delete-node
+---
+primitive_type: bytes32 [11650,11657]
+===
+===
+delete-node
+---
+primitive_type: bytes20 [11658,11665]
+===
+===
+delete-node
+---
+type_cast_expression [11658,11685]
+===
+===
+delete-node
+---
+call_argument [11650,11686]
+===
+===
+delete-node
+---
+type_cast_expression [11650,11686]
+===
+===
+delete-node
+---
+call_argument [11658,11685]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [11704,11753]
+===
+------------
+===
+delete-node
+---
+type_cast_expression [11704,11753]
+===
+===
+delete-node
+---
+call_argument [11704,11753]
+===
+===
+delete-node
+---
+type_cast_expression [11712,11752]
+===
+===
+delete-node
+---
+primitive_type: bytes20 [11712,11719]
+===
+===
+delete-node
+---
+primitive_type: bytes32 [11704,11711]
+===
+===
+delete-node
+---
+call_argument [11712,11752]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11838,11842]
+    identifier: data [11838,11842]
+
+New cluster:
+===
+delete-node
+---
+call_expression [11828,11843]
+===
+------------
+===
+delete-node
+---
+call_expression [11828,11843]
+===
+

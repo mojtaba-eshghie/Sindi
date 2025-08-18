@@ -1,0 +1,29 @@
+results/differencing_results/0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocol.sol___0xeecbbb2fb558bcf2dfd6473b45f3bdbadbbddb91_contracts_D4AProtocol.sol.log:
+  4102  identifier: require [4586,4593]
+  4103: replace require by notPaused
+  4104  ===
+
+  4107  identifier: require [10126,10133]
+  4108: replace require by notPaused
+  4109  
+
+  5339  identifier: require [10072,10079]
+  5340: replace require by d4aNotPaused
+  5341  
+
+  6281  identifier: require [11719,11726]
+  6282: replace require by _checkDaoExist
+  6283  
+
+  6301  identifier: require [11790,11797]
+  6302: replace require by _checkPauseStatus
+  6303  
+
+  6322  identifier: require [3314,3321]
+  6323: replace require by _checkUriNotExist
+  6324  
+
+  6351  identifier: require [3469,3476]
+  6352: replace require by DaoIndexTooLarge
+  6353  
+

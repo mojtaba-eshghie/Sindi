@@ -1,0 +1,5892 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [203,273]
+    import: import [203,209]
+    identifier: IMasterWhitelist [212,228]
+    from: from [231,235]
+    string: "../interfaces/IMasterWhitelist.sol" [236,272]
+to
+source_file [0,20160]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+enum_declaration [322,385]
+    enum: enum [322,326]
+    identifier: UserType [327,335]
+    enum_value: User [338,342]
+    enum_value: MarketMaker [344,355]
+    enum_value: Vault [357,362]
+    enum_value: Lawyer [364,370]
+    enum_value: SwapManager [372,383]
+to
+source_file [0,20160]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+interface_declaration [387,523]
+    interface: interface [387,396]
+    identifier: IQuadPassport [397,410]
+    contract_body [411,523]
+        function_definition [417,521]
+            function: function [417,425]
+            identifier: balanceOf [426,435]
+            parameter [436,451]
+                type_name: address [436,443]
+                identifier: account [444,451]
+            parameter [453,463]
+                type_name: uint256 [453,460]
+                identifier: id [461,463]
+            visibility: external [473,481]
+            state_mutability [490,494]
+                view: view [490,494]
+            return_type_definition [503,520]
+                returns: returns [503,510]
+                parameter [512,519]
+                    type_name: uint256 [512,519]
+to
+source_file [0,20160]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+interface_declaration [525,1034]
+    interface: interface [525,534]
+    identifier: IQuadReader [535,546]
+    contract_body [547,1034]
+        struct_declaration [553,647]
+            struct: struct [553,559]
+            identifier: Attribute [560,569]
+            struct_member [580,594]
+                type_name: bytes32 [580,587]
+                identifier: value [588,593]
+            struct_member [603,617]
+                type_name: uint256 [603,610]
+                identifier: epoch [611,616]
+            struct_member [626,641]
+                type_name: address [626,633]
+                identifier: issuer [634,640]
+        function_definition [653,765]
+            function: function [653,661]
+            identifier: queryFee [662,670]
+            parameter [671,687]
+                type_name: address [671,678]
+                identifier: _account [679,687]
+            parameter [689,707]
+                type_name: bytes32 [689,696]
+                identifier: _attribute [697,707]
+            visibility: external [717,725]
+            state_mutability [734,738]
+                view: view [734,738]
+            return_type_definition [747,764]
+                returns: returns [747,754]
+                parameter [756,763]
+                    type_name: uint256 [756,763]
+        function_definition [771,913]
+            function: function [771,779]
+            identifier: getAttributes [780,793]
+            parameter [794,810]
+                type_name: address [794,801]
+                identifier: _account [802,810]
+            parameter [812,830]
+                type_name: bytes32 [812,819]
+                identifier: _attribute [820,830]
+            visibility: external [840,848]
+            state_mutability [857,864]
+                payable: payable [857,864]
+            return_type_definition [873,912]
+                returns: returns [873,880]
+                parameter [882,911]
+                    type_name: Attribute[] [882,893]
+                    memory: memory [894,900]
+                    identifier: attributes [901,911]
+        function_definition [919,1032]
+            function: function [919,927]
+            identifier: balanceOf [928,937]
+            parameter [938,954]
+                type_name: address [938,945]
+                identifier: _account [946,954]
+            parameter [956,974]
+                type_name: bytes32 [956,963]
+                identifier: _attribute [964,974]
+            visibility: external [984,992]
+            state_mutability [1001,1005]
+                view: view [1001,1005]
+            return_type_definition [1015,1031]
+                returns: returns [1015,1022]
+                parameter [1023,1030]
+                    type_name: uint256 [1023,1030]
+to
+source_file [0,20160]
+at 5
+
+New cluster:
+===
+insert-node
+---
+interface_declaration [1036,1142]
+to
+source_file [0,20160]
+at 6
+------------
+===
+insert-node
+---
+function: function [1074,1082]
+to
+function_definition [1074,1140]
+at 0
+===
+insert-node
+---
+contract_body [1068,1142]
+to
+interface_declaration [1036,1142]
+at 2
+===
+insert-node
+---
+interface_declaration [1036,1142]
+to
+source_file [0,20160]
+at 6
+===
+insert-node
+---
+function_definition [1074,1140]
+to
+contract_body [1068,1142]
+at 0
+===
+insert-node
+---
+identifier: IVerificationRegistry [1046,1067]
+to
+interface_declaration [1036,1142]
+at 1
+===
+insert-node
+---
+interface: interface [1036,1045]
+to
+interface_declaration [1036,1142]
+at 0
+===
+insert-node
+---
+identifier: isVerified [1083,1093]
+to
+function_definition [1074,1140]
+at 1
+===
+insert-node
+---
+visibility: external [1111,1119]
+to
+function_definition [1074,1140]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: MasterWhitelist [1451,1466]
+to
+contract_declaration [649,20159]
+at 0
+------------
+===
+insert-node
+---
+identifier: MasterWhitelist [1451,1466]
+to
+contract_declaration [649,20159]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1467,1469]
+to
+contract_declaration [649,20159]
+at 1
+------------
+===
+insert-node
+---
+is: is [1467,1469]
+to
+contract_declaration [649,20159]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [1490,1506]
+    user_defined_type [1490,1506]
+        identifier: IMasterWhitelist [1490,1506]
+to
+contract_declaration [649,20159]
+at 5
+
+New cluster:
+MOVE from contract_body [696,20159]
+------------
+===
+move-tree
+---
+function_definition [10634,10903]
+    function: function [10634,10642]
+    identifier: addUserToBlacklistIndefinitely [10643,10673]
+    parameter [10674,10687]
+        type_name: address [10674,10681]
+        identifier: _user [10682,10687]
+    visibility: external [10689,10697]
+    modifier_invocation [10698,10708]
+        identifier: onlyLawyer [10698,10708]
+    function_body [10709,10903]
+        expression_statement [10719,10754]
+            assignment_expression [10719,10753]
+                array_access [10719,10742]
+                    identifier: blacklistedUsers [10719,10735]
+                    identifier: _user [10736,10741]
+                affectation_operator: = [10743,10744]
+                identifier: INF_TIME [10745,10753]
+        expression_statement [10763,10794]
+            array_access [10763,10793]
+                unary_expression [10763,10786]
+                    delete: delete [10763,10769]
+                    identifier: whitelistedUsers [10770,10786]
+                identifier: _user [10787,10792]
+        expression_statement [10803,10830]
+            array_access [10803,10829]
+                unary_expression [10803,10822]
+                    delete: delete [10803,10809]
+                    identifier: kycProviders [10810,10822]
+                identifier: _user [10823,10828]
+        emit_statement [10839,10897]
+            identifier: userAddedToBlacklist [10844,10864]
+            call_argument [10865,10870]
+                identifier: _user [10865,10870]
+            call_argument [10872,10895]
+                array_access [10872,10895]
+                    identifier: blacklistedUsers [10872,10888]
+                    identifier: _user [10889,10894]
+to
+contract_body [696,20159]
+at 47
+===
+move-tree
+---
+event_definition [3263,3338]
+    identifier: UserAddedToWhitelist [3269,3289]
+    event_paramater [3290,3310]
+        type_name: address [3290,3297]
+        indexed: indexed [3298,3305]
+        identifier: user [3306,3310]
+    event_paramater [3312,3336]
+        type_name: uint256 [3312,3319]
+        indexed: indexed [3320,3327]
+        identifier: userType [3328,3336]
+to
+contract_body [696,20159]
+at 24
+
+New cluster:
+UPDATE from 0.8.14 to 0.8.19
+------------
+===
+update-node
+---
+solidity_version: 0.8.14 [90,96]
+replace 0.8.14 by 0.8.19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1548,1595]
+    type_name: uint256 [1548,1555]
+    constant: constant [1556,1564]
+    visibility: public [1565,1571]
+    identifier: INF_TIME [1572,1580]
+    affectation_operator: = [1581,1582]
+    number_literal: 32503680000 [1583,1594]
+to
+contract_body [696,20159]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1994,2106]
+    type_name: bytes32 [1994,2001]
+    constant: constant [2002,2010]
+    visibility: internal [2011,2019]
+    identifier: CODE_AML [2020,2028]
+    affectation_operator: = [2029,2030]
+    number_literal: 0xaf192d67680c4285e52cd2a94216ce249fb4e0227d267dcc01ea88f1b020a119 [2039,2105]
+to
+contract_body [696,20159]
+at 19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2176,2292]
+    type_name: bytes32 [2176,2183]
+    constant: constant [2184,2192]
+    visibility: internal [2193,2201]
+    identifier: CODE_COUNTRY [2202,2214]
+    affectation_operator: = [2215,2216]
+    number_literal: 0xc4713d2897c0d675d85b414a1974570a575e5032b6f7be9545631a1f922b26ef [2225,2291]
+to
+contract_body [696,20159]
+at 20
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2344,2389]
+    type_name: uint256 [2344,2351]
+    constant: constant [2352,2360]
+    visibility: internal [2361,2369]
+    identifier: AML_RISK_SCORE [2370,2384]
+    affectation_operator: = [2385,2386]
+    number_literal: 5 [2387,2388]
+to
+contract_body [696,20159]
+at 21
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2528,2563]
+    type_name: uint256 [2528,2535]
+    visibility: public [2536,2542]
+    identifier: investigationPeriod [2543,2562]
+to
+contract_body [696,20159]
+at 22
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2790,2830]
+    type_name: mapping(address => bool) [2790,2814]
+    visibility: public [2815,2821]
+    identifier: lawyers [2822,2829]
+to
+contract_body [696,20159]
+at 23
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3137,3184]
+    type_name: mapping(address => bool) [3137,3161]
+    visibility: public [3162,3168]
+    identifier: whitelistedMMs [3169,3183]
+to
+contract_body [696,20159]
+at 24
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3393,3445]
+    type_name: mapping(address => bytes32) [3393,3420]
+    visibility: public [3421,3427]
+    identifier: whitelistedMMIds [3428,3444]
+to
+contract_body [696,20159]
+at 25
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3488,3537]
+    type_name: mapping(address => bool) [3488,3512]
+    visibility: public [3513,3519]
+    identifier: whitelistedUsers [3520,3536]
+to
+contract_body [696,20159]
+at 26
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3580,3632]
+    type_name: mapping(address => uint256) [3580,3607]
+    visibility: public [3608,3614]
+    identifier: blacklistedUsers [3615,3631]
+to
+contract_body [696,20159]
+at 27
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3679,3732]
+    type_name: mapping(bytes32 => bool) [3679,3703]
+    visibility: public [3704,3710]
+    identifier: blacklistedCountries [3711,3731]
+to
+contract_body [696,20159]
+at 28
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [4018,4068]
+    type_name: mapping(address => bool) [4018,4042]
+    visibility: public [4043,4049]
+    identifier: whitelistedVaults [4050,4067]
+to
+contract_body [696,20159]
+at 29
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [4554,4604]
+    type_name: mapping(address => bool) [4554,4578]
+    visibility: public [4579,4585]
+    identifier: whitelistedAssets [4586,4603]
+to
+contract_body [696,20159]
+at 30
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [4686,4734]
+    type_name: mapping(address => bytes32) [4686,4713]
+    visibility: public [4714,4720]
+    identifier: kycProviders [4721,4733]
+to
+contract_body [696,20159]
+at 31
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [5072,5128]
+    type_name: mapping(address => bool) [5072,5096]
+    visibility: public [5097,5103]
+    identifier: whitelistedSwapManagers [5104,5127]
+to
+contract_body [696,20159]
+at 32
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [5268,5301]
+    type_name: IQuadPassport [5268,5281]
+    visibility: public [5282,5288]
+    identifier: kycPassport [5289,5300]
+to
+contract_body [696,20159]
+at 33
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [5386,5415]
+    type_name: IQuadReader [5386,5397]
+    visibility: public [5398,5404]
+    identifier: kycReader [5405,5414]
+to
+contract_body [696,20159]
+at 34
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [5504,5545]
+    type_name: IVerificationRegistry [5504,5525]
+    visibility: public [5526,5532]
+    identifier: kycRegistry [5533,5544]
+to
+contract_body [696,20159]
+at 35
+
+New cluster:
+===
+insert-node
+---
+event_definition [6052,6153]
+to
+contract_body [696,20159]
+at 36
+------------
+===
+insert-node
+---
+event_definition [6052,6153]
+to
+contract_body [696,20159]
+at 36
+===
+insert-node
+---
+identifier: AddedToWhitelist [6058,6074]
+to
+event_definition [6052,6153]
+at 0
+
+New cluster:
+===
+insert-node
+---
+event_definition [6392,6468]
+to
+contract_body [696,20159]
+at 37
+------------
+===
+insert-node
+---
+identifier: RemovedFromWhitelist [6398,6418]
+to
+event_definition [6392,6468]
+at 0
+===
+insert-node
+---
+event_definition [6392,6468]
+to
+contract_body [696,20159]
+at 37
+
+New cluster:
+===
+insert-node
+---
+event_definition [6655,6724]
+to
+contract_body [696,20159]
+at 38
+------------
+===
+insert-node
+---
+event_definition [6655,6724]
+to
+contract_body [696,20159]
+at 38
+===
+insert-node
+---
+identifier: MMAddedToWhitelist [6661,6679]
+to
+event_definition [6655,6724]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [7368,7423]
+    identifier: CountryAddedToBlacklist [7374,7397]
+    event_paramater [7398,7421]
+        type_name: bytes32 [7398,7405]
+        indexed: indexed [7406,7413]
+        identifier: country [7414,7421]
+to
+contract_body [696,20159]
+at 46
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [7584,7643]
+    identifier: CountryRemovedFromBlacklist [7590,7617]
+    event_paramater [7618,7641]
+        type_name: bytes32 [7618,7625]
+        indexed: indexed [7626,7633]
+        identifier: country [7634,7641]
+to
+contract_body [696,20159]
+at 47
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [7794,7845]
+    identifier: AssetAddedToWhitelist [7800,7821]
+    event_paramater [7822,7843]
+        type_name: address [7822,7829]
+        indexed: indexed [7830,7837]
+        identifier: asset [7838,7843]
+to
+contract_body [696,20159]
+at 48
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [8004,8059]
+    identifier: AssetRemovedFromWhitelist [8010,8035]
+    event_paramater [8036,8057]
+        type_name: address [8036,8043]
+        indexed: indexed [8044,8051]
+        identifier: asset [8052,8057]
+to
+contract_body [696,20159]
+at 49
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [8227,8288]
+    identifier: IdAssignedToMM [8233,8247]
+    event_paramater [8248,8266]
+        type_name: address [8248,8255]
+        indexed: indexed [8256,8263]
+        identifier: mm [8264,8266]
+    event_paramater [8268,8286]
+        type_name: bytes32 [8268,8275]
+        indexed: indexed [8276,8283]
+        identifier: id [8284,8286]
+to
+contract_body [696,20159]
+at 50
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [8478,8551]
+    identifier: SetKYCReader [8484,8496]
+    event_paramater [8497,8522]
+        type_name: address [8497,8504]
+        indexed: indexed [8505,8512]
+        identifier: oldReader [8513,8522]
+    event_paramater [8524,8549]
+        type_name: address [8524,8531]
+        indexed: indexed [8532,8539]
+        identifier: newReader [8540,8549]
+to
+contract_body [696,20159]
+at 51
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [8751,8830]
+    identifier: SetKYCRegistry [8757,8771]
+    event_paramater [8772,8799]
+        type_name: address [8772,8779]
+        indexed: indexed [8780,8787]
+        identifier: oldRegistry [8788,8799]
+    event_paramater [8801,8828]
+        type_name: address [8801,8808]
+        indexed: indexed [8809,8816]
+        identifier: newRegistry [8817,8828]
+to
+contract_body [696,20159]
+at 52
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [9048,9131]
+    identifier: NewInvestigationPeriod [9054,9076]
+    event_paramater [9077,9102]
+        type_name: uint256 [9077,9084]
+        indexed: indexed [9085,9092]
+        identifier: oldPeriod [9093,9102]
+    event_paramater [9104,9129]
+        type_name: uint256 [9104,9111]
+        indexed: indexed [9112,9119]
+        identifier: newPeriod [9120,9129]
+to
+contract_body [696,20159]
+at 53
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [9419,9575]
+    identifier: AttributesRequestedFromKYC [9425,9451]
+    event_paramater [9461,9497]
+        type_name: address [9461,9468]
+        indexed: indexed [9469,9476]
+        identifier: _userToBeWhitelisted [9477,9497]
+    event_paramater [9507,9532]
+        type_name: uint256 [9507,9514]
+        indexed: indexed [9515,9522]
+        identifier: _userRisk [9523,9532]
+    event_paramater [9542,9568]
+        type_name: address [9542,9549]
+        indexed: indexed [9550,9557]
+        identifier: _requester [9558,9568]
+to
+contract_body [696,20159]
+at 54
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [9822,9939]
+    identifier: HighRiskAMLUserRejected [9828,9851]
+    event_paramater [9861,9897]
+        type_name: address [9861,9868]
+        indexed: indexed [9869,9876]
+        identifier: _userToBeWhitelisted [9877,9897]
+    event_paramater [9907,9932]
+        type_name: uint256 [9907,9914]
+        indexed: indexed [9915,9922]
+        identifier: _userRisk [9923,9932]
+to
+contract_body [696,20159]
+at 55
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [10189,10317]
+    identifier: BlacklistedCountryUserRejected [10195,10225]
+    event_paramater [10235,10271]
+        type_name: address [10235,10242]
+        indexed: indexed [10243,10250]
+        identifier: _userToBeWhitelisted [10251,10271]
+    event_paramater [10282,10310]
+        type_name: bytes32 [10282,10289]
+        indexed: indexed [10290,10297]
+        identifier: _userCountry [10298,10310]
+to
+contract_body [696,20159]
+at 56
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [10386,10416]
+    error: error [10386,10391]
+    identifier: CouldNotBeWhitelisted [10392,10413]
+to
+contract_body [696,20159]
+at 57
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [10504,10527]
+    error: error [10504,10509]
+    identifier: MsgValueTooLow [10510,10524]
+to
+contract_body [696,20159]
+at 58
+
+New cluster:
+===
+insert-node
+---
+function_definition [12307,12495]
+to
+contract_body [696,20159]
+at 72
+------------
+===
+insert-node
+---
+emit_statement [12436,12489]
+to
+function_body [12380,12495]
+at 1
+===
+insert-node
+---
+identifier: removeSwapManagerFromWhitelist [12316,12346]
+to
+function_definition [12307,12495]
+at 1
+===
+insert-node
+---
+identifier: RemovedFromWhitelist [12441,12461]
+to
+emit_statement [12436,12489]
+at 0
+===
+insert-node
+---
+function: function [12307,12315]
+to
+function_definition [12307,12495]
+at 0
+===
+insert-node
+---
+function_body [12380,12495]
+to
+function_definition [12307,12495]
+at 5
+===
+insert-node
+---
+visibility: external [12360,12368]
+to
+function_definition [12307,12495]
+at 3
+===
+insert-node
+---
+function_definition [12307,12495]
+to
+contract_body [696,20159]
+at 72
+
+New cluster:
+===
+insert-node
+---
+function_definition [12872,13049]
+to
+contract_body [696,20159]
+at 75
+------------
+===
+insert-node
+---
+function_definition [12872,13049]
+to
+contract_body [696,20159]
+at 75
+===
+insert-node
+---
+function: function [12872,12880]
+to
+function_definition [12872,13049]
+at 0
+===
+insert-node
+---
+visibility: external [12919,12927]
+to
+function_definition [12872,13049]
+at 3
+===
+insert-node
+---
+function_body [12939,13049]
+to
+function_definition [12872,13049]
+at 5
+===
+insert-node
+---
+emit_statement [12949,13005]
+to
+function_body [12939,13049]
+at 0
+===
+insert-node
+---
+identifier: NewInvestigationPeriod [12954,12976]
+to
+emit_statement [12949,13005]
+at 0
+===
+insert-node
+---
+identifier: setInvestigationPeriod [12881,12903]
+to
+function_definition [12872,13049]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [13102,13211]
+to
+contract_body [696,20159]
+at 76
+------------
+===
+insert-node
+---
+visibility: external [13136,13144]
+to
+function_definition [13102,13211]
+at 2
+===
+insert-node
+---
+function: function [13102,13110]
+to
+function_definition [13102,13211]
+at 0
+===
+insert-node
+---
+function_definition [13102,13211]
+to
+contract_body [696,20159]
+at 76
+===
+insert-node
+---
+identifier: getInvestigationPeriod [13111,13133]
+to
+function_definition [13102,13211]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [15822,16219]
+to
+contract_body [696,20159]
+at 87
+------------
+===
+insert-node
+---
+function_definition [15822,16219]
+to
+contract_body [696,20159]
+at 87
+===
+insert-node
+---
+affectation_operator: = [15919,15920]
+to
+assignment_expression [15895,15958]
+at 1
+===
+insert-node
+---
+function: function [15822,15830]
+to
+function_definition [15822,16219]
+at 0
+===
+insert-node
+---
+if_statement [15969,16113]
+to
+function_body [15885,16219]
+at 1
+===
+insert-node
+---
+if: if [15969,15971]
+to
+if_statement [15969,16113]
+at 0
+===
+insert-node
+---
+assignment_expression [15895,15958]
+to
+expression_statement [15895,15959]
+at 0
+===
+insert-node
+---
+identifier: addUserToBlacklist [15831,15849]
+to
+function_definition [15822,16219]
+at 1
+===
+insert-node
+---
+block_statement [15996,16113]
+to
+if_statement [15969,16113]
+at 2
+===
+insert-node
+---
+expression_statement [15895,15959]
+to
+function_body [15885,16219]
+at 0
+===
+insert-node
+---
+function_body [15885,16219]
+to
+function_definition [15822,16219]
+at 5
+===
+insert-node
+---
+visibility: external [15865,15873]
+to
+function_definition [15822,16219]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [16830,16988]
+to
+contract_body [696,20159]
+at 89
+------------
+===
+insert-node
+---
+function: function [16830,16838]
+to
+function_definition [16830,16988]
+at 0
+===
+insert-node
+---
+visibility: external [16878,16886]
+to
+function_definition [16830,16988]
+at 3
+===
+insert-node
+---
+function_definition [16830,16988]
+to
+contract_body [696,20159]
+at 89
+===
+insert-node
+---
+identifier: removeUserFromBlacklist [16839,16862]
+to
+function_definition [16830,16988]
+at 1
+===
+insert-node
+---
+function_body [16898,16988]
+to
+function_definition [16830,16988]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [17373,17551]
+to
+contract_body [696,20159]
+at 92
+------------
+===
+insert-node
+---
+identifier: AddedToWhitelist [17483,17499]
+to
+emit_statement [17478,17545]
+at 0
+===
+insert-node
+---
+visibility: external [17412,17420]
+to
+function_definition [17373,17551]
+at 3
+===
+insert-node
+---
+function: function [17373,17381]
+to
+function_definition [17373,17551]
+at 0
+===
+insert-node
+---
+function_body [17432,17551]
+to
+function_definition [17373,17551]
+at 5
+===
+insert-node
+---
+emit_statement [17478,17545]
+to
+function_body [17432,17551]
+at 1
+===
+insert-node
+---
+function_definition [17373,17551]
+to
+contract_body [696,20159]
+at 92
+===
+insert-node
+---
+identifier: addMMToWhitelist [17382,17398]
+to
+function_definition [17373,17551]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [17702,18000]
+to
+contract_body [696,20159]
+at 93
+------------
+===
+insert-node
+---
+function: function [17702,17710]
+to
+function_definition [17702,18000]
+at 0
+===
+insert-node
+---
+identifier: addMMToWhitelistWithId [17711,17733]
+to
+function_definition [17702,18000]
+at 1
+===
+insert-node
+---
+function_body [17800,18000]
+to
+function_definition [17702,18000]
+at 6
+===
+insert-node
+---
+emit_statement [17884,17951]
+to
+function_body [17800,18000]
+at 2
+===
+insert-node
+---
+function_definition [17702,18000]
+to
+contract_body [696,20159]
+at 93
+===
+insert-node
+---
+visibility: external [17768,17776]
+to
+function_definition [17702,18000]
+at 4
+===
+insert-node
+---
+identifier: AddedToWhitelist [17889,17905]
+to
+emit_statement [17884,17951]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [18113,18321]
+to
+contract_body [696,20159]
+at 94
+------------
+===
+insert-node
+---
+function_definition [18113,18321]
+to
+contract_body [696,20159]
+at 94
+===
+insert-node
+---
+function: function [18113,18121]
+to
+function_definition [18113,18321]
+at 0
+===
+insert-node
+---
+function_body [18177,18321]
+to
+function_definition [18113,18321]
+at 5
+===
+insert-node
+---
+visibility: external [18157,18165]
+to
+function_definition [18113,18321]
+at 3
+===
+insert-node
+---
+emit_statement [18262,18315]
+to
+function_body [18177,18321]
+at 2
+===
+insert-node
+---
+identifier: RemovedFromWhitelist [18267,18287]
+to
+emit_statement [18262,18315]
+at 0
+===
+insert-node
+---
+identifier: removeMMFromWhitelist [18122,18143]
+to
+function_definition [18113,18321]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [20311,20469]
+to
+contract_body [696,20159]
+at 105
+------------
+===
+insert-node
+---
+visibility: external [20365,20373]
+to
+function_definition [20311,20469]
+at 4
+===
+insert-node
+---
+function: function [20311,20319]
+to
+function_definition [20311,20469]
+at 0
+===
+insert-node
+---
+function_body [20385,20469]
+to
+function_definition [20311,20469]
+at 6
+===
+insert-node
+---
+function_definition [20311,20469]
+to
+contract_body [696,20159]
+at 105
+===
+insert-node
+---
+identifier: setWhitelistedMMId [20320,20338]
+to
+function_definition [20311,20469]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [21883,22011]
+to
+contract_body [696,20159]
+at 112
+------------
+===
+insert-node
+---
+function_definition [21883,22011]
+to
+contract_body [696,20159]
+at 112
+===
+insert-node
+---
+function: function [21883,21891]
+to
+function_definition [21883,22011]
+at 0
+===
+insert-node
+---
+call_expression [21963,21999]
+to
+binary_expression [21963,22004]
+at 0
+===
+insert-node
+---
+member_expression: kycReader.balanceOf [21963,21982]
+to
+call_expression [21963,21999]
+at 0
+===
+insert-node
+---
+number_literal: 1 [22003,22004]
+to
+binary_expression [21963,22004]
+at 2
+===
+insert-node
+---
+function_body [21946,22011]
+to
+function_definition [21883,22011]
+at 6
+===
+insert-node
+---
+visibility: public [21919,21925]
+to
+function_definition [21883,22011]
+at 3
+===
+insert-node
+---
+identifier: hasPassport [21892,21903]
+to
+function_definition [21883,22011]
+at 1
+===
+insert-node
+---
+comparison_operator: >= [22000,22002]
+to
+binary_expression [21963,22004]
+at 1
+===
+insert-node
+---
+return_statement [21956,22005]
+to
+function_body [21946,22011]
+at 0
+===
+insert-node
+---
+binary_expression [21963,22004]
+to
+return_statement [21956,22005]
+at 1
+===
+insert-node
+---
+return: return [21956,21962]
+to
+return_statement [21956,22005]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1094,1109]
+    type_name: address [1094,1101]
+    identifier: subject [1102,1109]
+to
+function_definition [1074,1140]
+at 2
+
+New cluster:
+MOVE from function_definition [1074,1140]
+------------
+===
+move-tree
+---
+state_mutability [16054,16058]
+    view: view [16054,16058]
+to
+function_definition [1074,1140]
+at 4
+===
+move-tree
+---
+return_type_definition [16059,16073]
+    returns: returns [16059,16066]
+    parameter [16068,16072]
+        type_name: bool [16068,16072]
+to
+function_definition [1074,1140]
+at 5
+
+New cluster:
+===
+insert-node
+---
+visibility: public [1658,1664]
+to
+state_variable_declaration [2272,2328]
+at 2
+------------
+===
+insert-node
+---
+visibility: public [1658,1664]
+to
+state_variable_declaration [2272,2328]
+at 2
+
+New cluster:
+===
+insert-node
+---
+visibility: public [1769,1775]
+to
+state_variable_declaration [2375,2435]
+at 2
+------------
+===
+insert-node
+---
+visibility: public [1769,1775]
+to
+state_variable_declaration [2375,2435]
+at 2
+
+New cluster:
+===
+insert-node
+---
+visibility: public [1882,1888]
+to
+state_variable_declaration [2480,2536]
+at 2
+------------
+===
+insert-node
+---
+visibility: public [1882,1888]
+to
+state_variable_declaration [2480,2536]
+at 2
+
+New cluster:
+MOVE from event_definition [6052,6153]
+------------
+===
+move-tree
+---
+event_paramater [3669,3689]
+    type_name: address [3669,3676]
+    indexed: indexed [3677,3684]
+    identifier: user [3685,3689]
+to
+event_definition [6052,6153]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [6097,6122]
+    type_name: UserType [6097,6105]
+    indexed: indexed [6106,6113]
+    identifier: userType [6114,6122]
+to
+event_definition [6052,6153]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [6124,6151]
+    type_name: bytes32 [6124,6131]
+    indexed: indexed [6132,6139]
+    identifier: kycProvider [6140,6151]
+to
+event_definition [6052,6153]
+at 3
+
+New cluster:
+MOVE from event_definition [6392,6468]
+------------
+===
+move-tree
+---
+event_paramater [3894,3914]
+    type_name: address [3894,3901]
+    indexed: indexed [3902,3909]
+    identifier: user [3910,3914]
+to
+event_definition [6392,6468]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [6441,6466]
+    type_name: UserType [6441,6449]
+    indexed: indexed [6450,6457]
+    identifier: userType [6458,6466]
+to
+event_definition [6392,6468]
+at 2
+
+New cluster:
+MOVE from event_definition [6655,6724]
+------------
+===
+move-tree
+---
+event_paramater [4196,4216]
+    type_name: address [4196,4203]
+    indexed: indexed [4204,4211]
+    identifier: user [4212,4216]
+to
+event_definition [6655,6724]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [6702,6722]
+    type_name: bytes32 [6702,6709]
+    indexed: indexed [6710,6717]
+    identifier: mmId [6718,6722]
+to
+event_definition [6655,6724]
+at 2
+
+New cluster:
+UPDATE from userAddedToBlacklist to AddedToBlacklist
+------------
+===
+update-node
+---
+identifier: userAddedToBlacklist [10844,10864]
+replace userAddedToBlacklist by AddedToBlacklist
+===
+update-node
+---
+identifier: userAddedToBlacklist [10449,10469]
+replace userAddedToBlacklist by AddedToBlacklist
+===
+update-node
+---
+identifier: userRemovedFromBlacklist [4424,4448]
+replace userRemovedFromBlacklist by AddedToBlacklist
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [6984,7017]
+    type_name: uint256 [6984,6991]
+    indexed: indexed [6992,6999]
+    identifier: investigationTime [7000,7017]
+to
+event_definition [4418,4471]
+at 2
+
+New cluster:
+UPDATE from UserAddedToWhitelist to RemovedFromBlacklist
+------------
+===
+update-node
+---
+identifier: UserAddedToWhitelist [8900,8920]
+replace UserAddedToWhitelist by RemovedFromBlacklist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [3269,3289]
+replace UserAddedToWhitelist by RemovedFromBlacklist
+
+New cluster:
+MOVE from function_definition [12307,12495]
+------------
+===
+move-tree
+---
+parameter [6936,6947]
+    type_name: address [6936,6943]
+    identifier: _sm [6944,6947]
+to
+function_definition [12307,12495]
+at 2
+===
+move-tree
+---
+modifier_invocation [6958,6968]
+    identifier: onlyLawyer [6958,6968]
+to
+function_definition [12307,12495]
+at 4
+
+New cluster:
+MOVE from function_definition [12872,13049]
+------------
+===
+move-tree
+---
+modifier_invocation [7526,7536]
+    identifier: onlyLawyer [7526,7536]
+to
+function_definition [12872,13049]
+at 4
+===
+move-tree
+---
+parameter [7502,7515]
+    type_name: uint256 [7502,7509]
+    identifier: _time [7510,7515]
+to
+function_definition [12872,13049]
+at 2
+
+New cluster:
+MOVE from function_definition [13102,13211]
+------------
+===
+move-tree
+---
+return_type_definition [7765,7782]
+    returns: returns [7765,7772]
+    parameter [7774,7781]
+        type_name: uint256 [7774,7781]
+to
+function_definition [13102,13211]
+at 4
+===
+move-tree
+---
+state_mutability [7760,7764]
+    view: view [7760,7764]
+to
+function_definition [13102,13211]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [13168,13211]
+    return_statement [13178,13205]
+        return: return [13178,13184]
+        identifier: investigationPeriod [13185,13204]
+to
+function_definition [13102,13211]
+at 5
+
+New cluster:
+UPDATE from addUserToBlacklistIndefinitely to removeUserFromWhitelist
+------------
+===
+update-node
+---
+identifier: addUserToBlacklistIndefinitely [10643,10673]
+replace addUserToBlacklistIndefinitely by removeUserFromWhitelist
+
+New cluster:
+MOVE from function_definition [15822,16219]
+------------
+===
+move-tree
+---
+modifier_invocation [9589,9599]
+    identifier: onlyLawyer [9589,9599]
+to
+function_definition [15822,16219]
+at 4
+===
+move-tree
+---
+parameter [9565,9578]
+    type_name: address [9565,9572]
+    identifier: _user [9573,9578]
+to
+function_definition [15822,16219]
+at 2
+
+New cluster:
+UPDATE from addUserToBlacklist to addUserToBlacklistIndefinitely
+------------
+===
+update-node
+---
+identifier: addUserToBlacklist [10230,10248]
+replace addUserToBlacklist by addUserToBlacklistIndefinitely
+
+New cluster:
+MOVE from function_definition [16830,16988]
+------------
+===
+move-tree
+---
+parameter [11061,11074]
+    type_name: address [11061,11068]
+    identifier: _user [11069,11074]
+to
+function_definition [16830,16988]
+at 2
+===
+move-tree
+---
+modifier_invocation [11085,11095]
+    identifier: onlyLawyer [11085,11095]
+to
+function_definition [16830,16988]
+at 4
+
+New cluster:
+MOVE from function_definition [17702,18000]
+------------
+===
+move-tree
+---
+parameter [11903,11914]
+    type_name: bytes32 [11903,11910]
+    identifier: _id [11911,11914]
+to
+function_definition [17702,18000]
+at 3
+===
+move-tree
+---
+modifier_invocation [11941,11951]
+    identifier: onlyLawyer [11941,11951]
+to
+function_definition [17373,17551]
+at 4
+===
+move-tree
+---
+parameter [11890,11901]
+    type_name: address [11890,11897]
+    identifier: _mm [11898,11901]
+to
+function_definition [17373,17551]
+at 2
+
+New cluster:
+MOVE from function_definition [17702,18000]
+------------
+===
+move-tree
+---
+parameter [11619,11630]
+    type_name: address [11619,11626]
+    identifier: _mm [11627,11630]
+to
+function_definition [17702,18000]
+at 2
+===
+move-tree
+---
+modifier_invocation [11641,11651]
+    identifier: onlyLawyer [11641,11651]
+to
+function_definition [17702,18000]
+at 5
+
+New cluster:
+MOVE from function_definition [18113,18321]
+------------
+===
+move-tree
+---
+modifier_invocation [12288,12298]
+    identifier: onlyLawyer [12288,12298]
+to
+function_definition [18113,18321]
+at 4
+===
+move-tree
+---
+parameter [12266,12277]
+    type_name: address [12266,12273]
+    identifier: _mm [12274,12277]
+to
+function_definition [18113,18321]
+at 2
+
+New cluster:
+MOVE from function_definition [20311,20469]
+------------
+===
+move-tree
+---
+parameter [14453,14464]
+    type_name: bytes32 [14453,14460]
+    identifier: _id [14461,14464]
+to
+function_definition [20311,20469]
+at 3
+===
+move-tree
+---
+modifier_invocation [14475,14485]
+    identifier: onlyLawyer [14475,14485]
+to
+function_definition [20311,20469]
+at 5
+===
+move-tree
+---
+parameter [14440,14451]
+    type_name: address [14440,14447]
+    identifier: _mm [14448,14451]
+to
+function_definition [20311,20469]
+at 2
+
+New cluster:
+UPDATE from getIdMM to getWhitelistedMMId
+------------
+===
+update-node
+---
+identifier: getIdMM [14683,14690]
+replace getIdMM by getWhitelistedMMId
+
+New cluster:
+MOVE from function_definition [21883,22011]
+------------
+===
+move-tree
+---
+return_type_definition [18002,18016]
+    returns: returns [18002,18009]
+    parameter [18011,18015]
+        type_name: bool [18011,18015]
+to
+function_definition [21883,22011]
+at 5
+===
+move-tree
+---
+state_mutability [17997,18001]
+    view: view [17997,18001]
+to
+function_definition [21883,22011]
+at 4
+===
+move-tree
+---
+parameter [17947,17960]
+    type_name: address [17947,17954]
+    identifier: _user [17955,17960]
+to
+function_definition [21883,22011]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [22226,22249]
+    returns: returns [22226,22233]
+    parameter [22235,22248]
+        type_name: string [22235,22241]
+        memory: memory [22242,22248]
+to
+function_definition [16271,17297]
+at 6
+
+New cluster:
+MOVE from function_body [16391,17297]
+------------
+===
+move-tree
+---
+expression_statement [16496,16552]
+    call_expression [16496,16551]
+        identifier: require [16496,16503]
+        call_argument [16504,16522]
+            call_expression [16504,16522]
+                identifier: hasPassport [16504,16515]
+                call_argument [16516,16521]
+                    identifier: _user [16516,16521]
+        call_argument [16524,16550]
+            string_literal [16524,16550]
+                string: "user has no KYC passport" [16524,16550]
+to
+function_body [16391,17297]
+at 2
+
+New cluster:
+===
+insert-node
+---
+visibility: external [23722,23730]
+to
+function_definition [17428,17916]
+at 3
+------------
+===
+insert-node
+---
+visibility: external [23722,23730]
+to
+function_definition [17428,17916]
+at 3
+
+New cluster:
+===
+insert-node
+---
+return_type_definition [23739,23762]
+to
+function_definition [17428,17916]
+at 4
+------------
+===
+insert-node
+---
+return_type_definition [23739,23762]
+to
+function_definition [17428,17916]
+at 4
+===
+insert-node
+---
+returns: returns [23739,23746]
+to
+return_type_definition [23739,23762]
+at 0
+
+New cluster:
+===
+insert-node
+---
+calldata: calldata [11393,11401]
+to
+parameter [5995,6029]
+at 1
+------------
+===
+insert-node
+---
+calldata: calldata [11393,11401]
+to
+parameter [5995,6029]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [12390,12426]
+    array_access [12390,12425]
+        unary_expression [12390,12420]
+            delete: delete [12390,12396]
+            identifier: whitelistedSwapManagers [12397,12420]
+        identifier: _sm [12421,12424]
+to
+function_body [12380,12495]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13015,13043]
+    assignment_expression [13015,13042]
+        identifier: investigationPeriod [13015,13034]
+        affectation_operator: = [13035,13036]
+        identifier: _time [13037,13042]
+to
+function_body [12939,13049]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [14232,14366]
+to
+function_body [8757,8937]
+at 2
+------------
+===
+insert-node
+---
+number_literal: 0 [14262,14263]
+to
+binary_expression [14235,14263]
+at 2
+===
+insert-node
+---
+if: if [14232,14234]
+to
+if_statement [14232,14366]
+at 0
+===
+insert-node
+---
+binary_expression [14235,14263]
+to
+if_statement [14232,14366]
+at 1
+===
+insert-node
+---
+if_statement [14232,14366]
+to
+function_body [8757,8937]
+at 2
+===
+insert-node
+---
+comparison_operator: != [14259,14261]
+to
+binary_expression [14235,14263]
+at 1
+===
+insert-node
+---
+emit_statement [14323,14356]
+to
+block_statement [14264,14366]
+at 1
+===
+insert-node
+---
+identifier: RemovedFromBlacklist [14328,14348]
+to
+emit_statement [14323,14356]
+at 0
+===
+insert-node
+---
+block_statement [14264,14366]
+to
+if_statement [14232,14366]
+at 2
+
+New cluster:
+===
+insert-node
+---
+emit_statement [14376,14438]
+to
+function_body [8757,8937]
+at 3
+------------
+===
+insert-node
+---
+identifier: AddedToWhitelist [14381,14397]
+to
+emit_statement [14376,14438]
+at 0
+===
+insert-node
+---
+emit_statement [14376,14438]
+to
+function_body [8757,8937]
+at 3
+
+New cluster:
+===
+insert-node
+---
+if_statement [14837,14971]
+to
+function_body [9248,9421]
+at 2
+------------
+===
+insert-node
+---
+emit_statement [14928,14961]
+to
+block_statement [14869,14971]
+at 1
+===
+insert-node
+---
+identifier: RemovedFromBlacklist [14933,14953]
+to
+emit_statement [14928,14961]
+at 0
+===
+insert-node
+---
+block_statement [14869,14971]
+to
+if_statement [14837,14971]
+at 2
+===
+insert-node
+---
+if_statement [14837,14971]
+to
+function_body [9248,9421]
+at 2
+===
+insert-node
+---
+if: if [14837,14839]
+to
+if_statement [14837,14971]
+at 0
+
+New cluster:
+MOVE from function_body [10709,10903]
+------------
+===
+move-tree
+---
+emit_statement [11143,11180]
+    identifier: userRemovedFromBlacklist [11148,11172]
+    call_argument [11173,11178]
+        identifier: _user [11173,11178]
+to
+function_body [10709,10903]
+at 3
+
+New cluster:
+MOVE from function_body [15885,16219]
+------------
+===
+move-tree
+---
+expression_statement [9650,9677]
+    array_access [9650,9676]
+        unary_expression [9650,9669]
+            delete: delete [9650,9656]
+            identifier: kycProviders [9657,9669]
+        identifier: _user [9670,9675]
+to
+function_body [15885,16219]
+at 2
+===
+move-tree
+---
+expression_statement [9610,9641]
+    array_access [9610,9640]
+        unary_expression [9610,9633]
+            delete: delete [9610,9616]
+            identifier: whitelistedUsers [9617,9633]
+        identifier: _user [9634,9639]
+to
+block_statement [15996,16113]
+at 0
+
+New cluster:
+MOVE from function_body [15885,16219]
+------------
+===
+move-tree
+---
+emit_statement [10839,10897]
+    identifier: userAddedToBlacklist [10844,10864]
+    call_argument [10865,10870]
+        identifier: _user [10865,10870]
+    call_argument [10872,10895]
+        array_access [10872,10895]
+            identifier: blacklistedUsers [10872,10888]
+            identifier: _user [10889,10894]
+to
+function_body [15885,16219]
+at 3
+===
+move-tree
+---
+expression_statement [10719,10754]
+    assignment_expression [10719,10753]
+        array_access [10719,10742]
+            identifier: blacklistedUsers [10719,10735]
+            identifier: _user [10736,10741]
+        affectation_operator: = [10743,10744]
+        identifier: INF_TIME [10745,10753]
+to
+function_body [10284,10508]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [16463,16607]
+to
+function_body [10284,10508]
+at 1
+------------
+===
+insert-node
+---
+block_statement [16490,16607]
+to
+if_statement [16463,16607]
+at 2
+===
+insert-node
+---
+if: if [16463,16465]
+to
+if_statement [16463,16607]
+at 0
+===
+insert-node
+---
+if_statement [16463,16607]
+to
+function_body [10284,10508]
+at 1
+
+New cluster:
+MOVE from function_body [16898,16988]
+------------
+===
+move-tree
+---
+expression_statement [9339,9370]
+    array_access [9339,9369]
+        unary_expression [9339,9362]
+            delete: delete [9339,9345]
+            identifier: blacklistedUsers [9346,9362]
+        identifier: _user [9363,9368]
+to
+function_body [16898,16988]
+at 0
+
+New cluster:
+MOVE from block_statement [14264,14366]
+------------
+===
+move-tree
+---
+expression_statement [8855,8886]
+    array_access [8855,8885]
+        unary_expression [8855,8878]
+            delete: delete [8855,8861]
+            identifier: blacklistedUsers [8862,8878]
+        identifier: _user [8879,8884]
+to
+block_statement [14264,14366]
+at 0
+===
+move-tree
+---
+emit_statement [8895,8931]
+    identifier: UserAddedToWhitelist [8900,8920]
+    call_argument [8921,8926]
+        identifier: _user [8921,8926]
+    call_argument [8928,8929]
+        number_literal: 0 [8928,8929]
+to
+function_body [16898,16988]
+at 1
+
+New cluster:
+MOVE from function_body [20385,20469]
+------------
+===
+move-tree
+---
+emit_statement [12070,12104]
+    identifier: mmAddedToWhitelist [12075,12093]
+    call_argument [12094,12097]
+        identifier: _mm [12094,12097]
+    call_argument [12099,12102]
+        identifier: _id [12099,12102]
+to
+function_body [20385,20469]
+at 1
+===
+move-tree
+---
+expression_statement [11991,12018]
+    assignment_expression [11991,12017]
+        array_access [11991,12010]
+            identifier: whitelistedMMs [11991,12005]
+            identifier: _mm [12006,12009]
+        affectation_operator: = [12011,12012]
+        boolean_literal: true [12013,12017]
+to
+function_body [17432,17551]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [17810,17838]
+    assignment_expression [17810,17837]
+        array_access [17810,17831]
+            identifier: whitelistedMMIds [17810,17826]
+            identifier: _mm [17827,17830]
+        affectation_operator: = [17832,17833]
+        identifier: _id [17834,17837]
+to
+function_body [17800,18000]
+at 0
+
+New cluster:
+MOVE from function_body [17800,18000]
+------------
+===
+move-tree
+---
+expression_statement [11662,11689]
+    assignment_expression [11662,11688]
+        array_access [11662,11681]
+            identifier: whitelistedMMs [11662,11676]
+            identifier: _mm [11677,11680]
+        affectation_operator: = [11682,11683]
+        boolean_literal: true [11684,11688]
+to
+function_body [17800,18000]
+at 1
+
+New cluster:
+MOVE from function_body [17800,18000]
+------------
+===
+move-tree
+---
+emit_statement [14521,14548]
+    identifier: IdMMChanged [14526,14537]
+    call_argument [14538,14541]
+        identifier: _mm [14538,14541]
+    call_argument [14543,14546]
+        identifier: _id [14543,14546]
+to
+function_body [17800,18000]
+at 3
+
+New cluster:
+MOVE from function_body [18177,18321]
+------------
+===
+move-tree
+---
+expression_statement [12309,12336]
+    array_access [12309,12335]
+        unary_expression [12309,12330]
+            delete: delete [12309,12315]
+            identifier: whitelistedMMs [12316,12330]
+        identifier: _mm [12331,12334]
+to
+function_body [18177,18321]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [18223,18252]
+    array_access [18223,18251]
+        unary_expression [18223,18246]
+            delete: delete [18223,18229]
+            identifier: whitelistedMMIds [18230,18246]
+        identifier: _mm [18247,18250]
+to
+function_body [18177,18321]
+at 1
+
+New cluster:
+MOVE from function_body [13593,13686]
+------------
+===
+move-tree
+---
+emit_statement [13923,13962]
+    identifier: RemovedAssetFromWhitelist [13928,13953]
+    call_argument [13954,13960]
+        identifier: _asset [13954,13960]
+to
+function_body [13593,13686]
+at 1
+
+New cluster:
+MOVE from function_body [13871,13968]
+------------
+===
+move-tree
+---
+emit_statement [13645,13680]
+    identifier: AddedAssetToWhitelist [13650,13671]
+    call_argument [13672,13678]
+        identifier: _asset [13672,13678]
+to
+function_body [13871,13968]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [20395,20423]
+    assignment_expression [20395,20422]
+        array_access [20395,20416]
+            identifier: whitelistedMMIds [20395,20411]
+            identifier: _mm [20412,20415]
+        affectation_operator: = [20417,20418]
+        identifier: _id [20419,20422]
+to
+function_body [20385,20469]
+at 0
+
+New cluster:
+MOVE from function_body [14975,15071]
+------------
+===
+move-tree
+---
+emit_statement [15341,15381]
+    identifier: RemovedCountryFromBlacklist [15346,15373]
+    call_argument [15374,15379]
+        identifier: _name [15374,15379]
+to
+function_body [14975,15071]
+at 1
+
+New cluster:
+MOVE from function_body [15287,15387]
+------------
+===
+move-tree
+---
+emit_statement [15029,15065]
+    identifier: CountryToBlacklistAdded [15034,15057]
+    call_argument [15058,15063]
+        identifier: _name [15058,15063]
+to
+function_body [15287,15387]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [22488,22576]
+to
+function_body [16391,17297]
+at 5
+------------
+===
+insert-node
+---
+if_statement [22488,22576]
+to
+function_body [16391,17297]
+at 5
+===
+insert-node
+---
+if: if [22488,22490]
+to
+if_statement [22488,22576]
+at 0
+
+New cluster:
+===
+insert-node
+---
+emit_statement [22694,22751]
+to
+function_body [16391,17297]
+at 8
+------------
+===
+insert-node
+---
+identifier: AttributesRequestedFromKYC [22699,22725]
+to
+emit_statement [22694,22751]
+at 0
+===
+insert-node
+---
+emit_statement [22694,22751]
+to
+function_body [16391,17297]
+at 8
+===
+insert-node
+---
+call_argument [22733,22737]
+to
+emit_statement [22694,22751]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [22761,22900]
+to
+function_body [16391,17297]
+at 9
+------------
+===
+insert-node
+---
+if_statement [22761,22900]
+to
+function_body [16391,17297]
+at 9
+===
+insert-node
+---
+emit_statement [22803,22845]
+to
+block_statement [22789,22900]
+at 0
+===
+insert-node
+---
+identifier: HighRiskAMLUserRejected [22808,22831]
+to
+emit_statement [22803,22845]
+at 0
+===
+insert-node
+---
+block_statement [22789,22900]
+to
+if_statement [22761,22900]
+at 2
+===
+insert-node
+---
+if: if [22761,22763]
+to
+if_statement [22761,22900]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [23020,23188]
+to
+function_body [16391,17297]
+at 12
+------------
+===
+insert-node
+---
+if: if [23020,23022]
+to
+if_statement [23020,23188]
+at 0
+===
+insert-node
+---
+identifier: BlacklistedCountryUserRejected [23074,23104]
+to
+emit_statement [23069,23121]
+at 0
+===
+insert-node
+---
+emit_statement [23069,23121]
+to
+block_statement [23055,23188]
+at 0
+===
+insert-node
+---
+if_statement [23020,23188]
+to
+function_body [16391,17297]
+at 12
+===
+insert-node
+---
+block_statement [23055,23188]
+to
+if_statement [23020,23188]
+at 2
+
+New cluster:
+===
+insert-node
+---
+return_statement [23363,23534]
+to
+function_body [16391,17297]
+at 17
+------------
+===
+insert-node
+---
+return: return [23363,23369]
+to
+return_statement [23363,23534]
+at 0
+===
+insert-node
+---
+return_statement [23363,23534]
+to
+function_body [16391,17297]
+at 17
+
+New cluster:
+MOVE from return_type_definition [23739,23762]
+------------
+===
+move-tree
+---
+parameter [17484,17509]
+    type_name: bytes [17484,17489]
+    calldata: calldata [17490,17498]
+    identifier: _signature [17499,17509]
+to
+return_type_definition [23739,23762]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [24095,24266]
+    return: return [24095,24101]
+    string_literal [24114,24265]
+        string: "By accessing and continuing to access the protocol you are agreeing to be bound by the terms and conditions shown in detail at www.trufin.io/policies" [24114,24265]
+to
+function_body [17532,17916]
+at 6
+
+New cluster:
+===
+insert-node
+---
+emit_statement [24443,24487]
+to
+function_body [18970,19053]
+at 0
+------------
+===
+insert-node
+---
+emit_statement [24443,24487]
+to
+function_body [18970,19053]
+at 0
+===
+insert-node
+---
+identifier: SetKYCReader [24448,24460]
+to
+emit_statement [24443,24487]
+at 0
+
+New cluster:
+===
+insert-node
+---
+emit_statement [24710,24758]
+to
+function_body [19232,19329]
+at 0
+------------
+===
+insert-node
+---
+identifier: SetKYCRegistry [24715,24729]
+to
+emit_statement [24710,24758]
+at 0
+===
+insert-node
+---
+emit_statement [24710,24758]
+to
+function_body [19232,19329]
+at 0
+
+New cluster:
+UPDATE from UserAddedToWhitelist to AddedToWhitelist
+------------
+===
+update-node
+---
+identifier: UserAddedToWhitelist [17260,17280]
+replace UserAddedToWhitelist by AddedToWhitelist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [9384,9404]
+replace UserAddedToWhitelist by AddedToWhitelist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [12858,12878]
+replace UserAddedToWhitelist by AddedToWhitelist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [17879,17899]
+replace UserAddedToWhitelist by AddedToWhitelist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [6736,6756]
+replace UserAddedToWhitelist by AddedToWhitelist
+===
+update-node
+---
+identifier: UserAddedToWhitelist [8050,8070]
+replace UserAddedToWhitelist by AddedToWhitelist
+
+New cluster:
+MOVE from emit_statement [6731,6765]
+------------
+===
+move-tree
+---
+call_argument [7055,7058]
+    identifier: _sm [7055,7058]
+to
+emit_statement [6731,6765]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12170,12186]
+    identifier: PROV_CODE_MANUAL [12170,12186]
+to
+emit_statement [6731,6765]
+at 4
+
+New cluster:
+MOVE from emit_statement [12436,12489]
+------------
+===
+move-tree
+---
+call_argument [6757,6760]
+    identifier: _sm [6757,6760]
+to
+emit_statement [12436,12489]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12467,12487]
+    member_expression: UserType.SwapManager [12467,12487]
+to
+emit_statement [12436,12489]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12977,12996]
+    identifier: investigationPeriod [12977,12996]
+to
+emit_statement [12949,13005]
+at 1
+
+New cluster:
+MOVE from emit_statement [12949,13005]
+------------
+===
+move-tree
+---
+call_argument [7597,7602]
+    identifier: _time [7597,7602]
+to
+emit_statement [12949,13005]
+at 2
+
+New cluster:
+MOVE from emit_statement [8045,8083]
+------------
+===
+move-tree
+---
+call_argument [8345,8352]
+    identifier: _lawyer [8345,8352]
+to
+emit_statement [8045,8083]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13466,13482]
+    identifier: PROV_CODE_MANUAL [13466,13482]
+to
+emit_statement [8045,8083]
+at 4
+
+New cluster:
+UPDATE from userRemovedFromWhitelist to RemovedFromWhitelist
+------------
+===
+update-node
+---
+identifier: userRemovedFromWhitelist [8320,8344]
+replace userRemovedFromWhitelist by RemovedFromWhitelist
+===
+update-node
+---
+identifier: userRemovedFromBlacklist [11148,11172]
+replace userRemovedFromBlacklist by RemovedFromWhitelist
+===
+update-node
+---
+identifier: userRemovedFromWhitelist [13137,13161]
+replace userRemovedFromWhitelist by RemovedFromWhitelist
+
+New cluster:
+MOVE from emit_statement [8315,8357]
+------------
+===
+move-tree
+---
+call_argument [8071,8078]
+    identifier: _lawyer [8071,8078]
+to
+emit_statement [8315,8357]
+at 1
+
+New cluster:
+MOVE from emit_statement [14376,14438]
+------------
+===
+move-tree
+---
+call_argument [9716,9721]
+    identifier: _user [9716,9721]
+to
+emit_statement [14376,14438]
+at 1
+
+New cluster:
+MOVE from emit_statement [14376,14438]
+------------
+===
+move-tree
+---
+call_argument [8928,8929]
+    number_literal: 0 [8928,8929]
+to
+emit_statement [14376,14438]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [14420,14436]
+    identifier: PROV_CODE_MANUAL [14420,14436]
+to
+emit_statement [14376,14438]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [14840,14868]
+    array_access [14840,14863]
+        identifier: blacklistedUsers [14840,14856]
+        identifier: _user [14857,14862]
+    comparison_operator: != [14864,14866]
+    number_literal: 0 [14867,14868]
+to
+if_statement [14837,14971]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [15032,15041]
+    identifier: _provider [15032,15041]
+to
+emit_statement [9379,9415]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [15336,15349]
+    member_expression: UserType.User [15336,15349]
+to
+emit_statement [11143,11180]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [15972,15995]
+    identifier: whitelistedUsers [15972,15988]
+    identifier: _user [15989,15994]
+to
+if_statement [15969,16113]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [16466,16489]
+    identifier: whitelistedUsers [16466,16482]
+    identifier: _user [16483,16488]
+to
+if_statement [16463,16607]
+at 1
+
+New cluster:
+MOVE from emit_statement [17478,17545]
+------------
+===
+move-tree
+---
+call_argument [12375,12378]
+    identifier: _mm [12375,12378]
+to
+emit_statement [17478,17545]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17505,17525]
+    member_expression: UserType.MarketMaker [17505,17525]
+to
+emit_statement [17478,17545]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17527,17543]
+    identifier: PROV_CODE_MANUAL [17527,17543]
+to
+emit_statement [17478,17545]
+at 3
+
+New cluster:
+MOVE from emit_statement [17884,17951]
+------------
+===
+move-tree
+---
+call_argument [12053,12056]
+    identifier: _mm [12053,12056]
+to
+emit_statement [17884,17951]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17911,17931]
+    member_expression: UserType.MarketMaker [17911,17931]
+to
+emit_statement [17884,17951]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [17933,17949]
+    identifier: PROV_CODE_MANUAL [17933,17949]
+to
+emit_statement [17884,17951]
+at 3
+
+New cluster:
+UPDATE from IdMMChanged to MMAddedToWhitelist
+------------
+===
+update-node
+---
+identifier: IdMMChanged [14526,14537]
+replace IdMMChanged by MMAddedToWhitelist
+
+New cluster:
+MOVE from emit_statement [18262,18315]
+------------
+===
+move-tree
+---
+call_argument [11724,11727]
+    identifier: _mm [11724,11727]
+to
+emit_statement [18262,18315]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [18293,18313]
+    member_expression: UserType.MarketMaker [18293,18313]
+to
+emit_statement [18262,18315]
+at 2
+
+New cluster:
+MOVE from emit_statement [12853,12890]
+------------
+===
+move-tree
+---
+call_argument [13162,13168]
+    identifier: _vault [13162,13168]
+to
+emit_statement [12853,12890]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [18808,18824]
+    identifier: PROV_CODE_MANUAL [18808,18824]
+to
+emit_statement [12853,12890]
+at 4
+
+New cluster:
+MOVE from emit_statement [13132,13173]
+------------
+===
+move-tree
+---
+call_argument [12879,12885]
+    identifier: _vault [12879,12885]
+to
+emit_statement [13132,13173]
+at 1
+
+New cluster:
+UPDATE from RemovedAssetFromWhitelist to AssetAddedToWhitelist
+------------
+===
+update-node
+---
+identifier: RemovedAssetFromWhitelist [13928,13953]
+replace RemovedAssetFromWhitelist by AssetAddedToWhitelist
+
+New cluster:
+UPDATE from AddedAssetToWhitelist to AssetRemovedFromWhitelist
+------------
+===
+update-node
+---
+identifier: AddedAssetToWhitelist [13650,13671]
+replace AddedAssetToWhitelist by AssetRemovedFromWhitelist
+
+New cluster:
+UPDATE from mmAddedToWhitelist to IdAssignedToMM
+------------
+===
+update-node
+---
+identifier: mmAddedToWhitelist [12075,12093]
+replace mmAddedToWhitelist by IdAssignedToMM
+
+New cluster:
+UPDATE from RemovedCountryFromBlacklist to CountryAddedToBlacklist
+------------
+===
+update-node
+---
+identifier: RemovedCountryFromBlacklist [15346,15373]
+replace RemovedCountryFromBlacklist by CountryAddedToBlacklist
+
+New cluster:
+UPDATE from CountryToBlacklistAdded to CountryRemovedFromBlacklist
+------------
+===
+update-node
+---
+identifier: CountryToBlacklistAdded [15034,15057]
+replace CountryToBlacklistAdded by CountryRemovedFromBlacklist
+
+New cluster:
+MOVE from if_statement [22488,22576]
+------------
+===
+move-tree
+---
+binary_expression [16727,16760]
+    member_expression: msg.value [16727,16736]
+    comparison_operator: == [16737,16739]
+    binary_expression [16740,16760]
+        identifier: feeRisk [16740,16747]
+        arithmetic_operator: + [16748,16749]
+        identifier: feeCountry [16750,16760]
+to
+if_statement [22488,22576]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [22528,22576]
+    revert_statement [22542,22566]
+        revert: revert [22542,22548]
+        identifier: MsgValueTooLow [22549,22563]
+        revert_arguments [22563,22565]
+to
+if_statement [22488,22576]
+at 2
+
+New cluster:
+MOVE from emit_statement [22694,22751]
+------------
+===
+move-tree
+---
+call_argument [17900,17905]
+    identifier: _user [17900,17905]
+to
+emit_statement [22694,22751]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22739,22749]
+    member_expression: msg.sender [22739,22749]
+to
+emit_statement [22694,22751]
+at 3
+
+New cluster:
+MOVE from if_statement [22761,22900]
+------------
+===
+move-tree
+---
+binary_expression [16924,16932]
+    identifier: risk [16924,16928]
+    comparison_operator: < [16929,16930]
+    number_literal: 5 [16931,16932]
+to
+if_statement [22761,22900]
+at 1
+
+New cluster:
+UPDATE from KYCReader         .getAttributes{value: feeCountry}(_user, CODE_COUNTRY)[0].value to kycReader         .getAttributes{value: feeCountry}(_user, CODE_COUNTRY)[0].value
+------------
+===
+update-node
+---
+member_expression: KYCReader         .getAttributes{value: feeCountry}(_user, CODE_COUNTRY)[0].value [16993,17074]
+replace KYCReader         .getAttributes{value: feeCountry}(_user, CODE_COUNTRY)[0].value by kycReader         .getAttributes{value: feeCountry}(_user, CODE_COUNTRY)[0].value
+
+New cluster:
+MOVE from if_statement [23020,23188]
+------------
+===
+move-tree
+---
+call_expression [17093,17122]
+    identifier: isCountryBlacklisted [17093,17113]
+    call_argument [17114,17121]
+        identifier: country [17114,17121]
+to
+if_statement [23020,23188]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [23333,23351]
+    identifier: PROV_CODE_QUADRATA [23333,23351]
+to
+emit_statement [17255,17291]
+at 3
+
+New cluster:
+MOVE from return_statement [23363,23534]
+------------
+===
+move-tree
+---
+string_literal [18075,18226]
+    string: "By accessing and continuing to access the protocol you are agreeing to be bound by the terms and conditions shown in detail at www.trufin.io/policies" [18075,18226]
+to
+return_statement [23363,23534]
+at 1
+
+New cluster:
+UPDATE from bytes to string
+------------
+===
+update-node
+---
+type_name: bytes [17484,17489]
+replace bytes by string
+
+New cluster:
+===
+insert-node
+---
+memory: memory [23755,23761]
+to
+parameter [17484,17509]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [23755,23761]
+to
+parameter [17484,17509]
+at 1
+
+New cluster:
+MOVE from emit_statement [17874,17910]
+------------
+===
+move-tree
+---
+call_argument [18447,18452]
+    identifier: _user [18447,18452]
+to
+emit_statement [17874,17910]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [24059,24075]
+    identifier: PROV_CODE_VERITE [24059,24075]
+to
+emit_statement [17874,17910]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [24461,24479]
+    type_cast_expression [24461,24479]
+        primitive_type: address [24461,24468]
+        call_argument [24469,24478]
+            identifier: kycReader [24469,24478]
+to
+emit_statement [24443,24487]
+at 1
+
+New cluster:
+MOVE from emit_statement [24443,24487]
+------------
+===
+move-tree
+---
+call_argument [19317,19321]
+    identifier: _kyc [19317,19321]
+to
+emit_statement [24443,24487]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [24730,24750]
+    type_cast_expression [24730,24750]
+        primitive_type: address [24730,24737]
+        call_argument [24738,24749]
+            identifier: kycRegistry [24738,24749]
+to
+emit_statement [24710,24758]
+at 1
+
+New cluster:
+MOVE from emit_statement [24710,24758]
+------------
+===
+move-tree
+---
+call_argument [19041,19045]
+    identifier: _kyc [19041,19045]
+to
+emit_statement [24710,24758]
+at 2
+
+New cluster:
+UPDATE from investigation_period to investigationPeriod
+------------
+===
+update-node
+---
+identifier: investigation_period [6093,6113]
+replace investigation_period by investigationPeriod
+
+New cluster:
+UPDATE from KYCReader to kycReader
+------------
+===
+update-node
+---
+identifier: KYCReader [6199,6208]
+replace KYCReader by kycReader
+===
+update-node
+---
+identifier: KYCReader [18980,18989]
+replace KYCReader by kycReader
+
+New cluster:
+UPDATE from KYCRegistry to kycRegistry
+------------
+===
+update-node
+---
+identifier: KYCRegistry [6241,6252]
+replace KYCRegistry by kycRegistry
+===
+update-node
+---
+identifier: KYCRegistry [19242,19253]
+replace KYCRegistry by kycRegistry
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [11763,11814]
+    identifier: CountryAddedToBlacklist [11768,11791]
+    call_argument [11792,11812]
+        array_access [11792,11812]
+            identifier: _countryBlacklist [11792,11809]
+            identifier: i [11810,11811]
+to
+block_statement [6349,6482]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.SwapManager [12148,12168]
+to
+call_argument [6762,6763]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.SwapManager [12148,12168]
+to
+call_argument [6762,6763]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.Lawyer [13449,13464]
+to
+call_argument [8080,8081]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.Lawyer [13449,13464]
+to
+call_argument [8080,8081]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.Lawyer [13740,13755]
+to
+call_argument [8354,8355]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.Lawyer [13740,13755]
+to
+call_argument [8354,8355]
+at 0
+
+New cluster:
+MOVE from binary_expression [14235,14263]
+------------
+===
+move-tree
+---
+array_access [10294,10317]
+    identifier: blacklistedUsers [10294,10310]
+    identifier: _user [10311,10316]
+to
+binary_expression [14235,14263]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.User [14405,14418]
+to
+call_argument [8928,8929]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.User [14405,14418]
+to
+call_argument [8928,8929]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [14883,14914]
+    array_access [14883,14913]
+        unary_expression [14883,14906]
+            delete: delete [14883,14889]
+            identifier: blacklistedUsers [14890,14906]
+        identifier: _user [14907,14912]
+to
+block_statement [14869,14971]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.User [15017,15030]
+to
+call_argument [9412,9413]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.User [15017,15030]
+to
+call_argument [9412,9413]
+at 0
+
+New cluster:
+MOVE from assignment_expression [15895,15958]
+------------
+===
+move-tree
+---
+array_access [11106,11129]
+    identifier: blacklistedUsers [11106,11122]
+    identifier: _user [11123,11128]
+to
+assignment_expression [15895,15958]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [15921,15958]
+    member_expression: block.timestamp [15921,15936]
+    arithmetic_operator: + [15937,15938]
+    identifier: investigationPeriod [15939,15958]
+to
+assignment_expression [15895,15958]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [16055,16103]
+    identifier: RemovedFromWhitelist [16060,16080]
+    call_argument [16081,16086]
+        identifier: _user [16081,16086]
+    call_argument [16088,16101]
+        member_expression: UserType.User [16088,16101]
+to
+block_statement [15996,16113]
+at 1
+
+New cluster:
+MOVE from block_statement [16490,16607]
+------------
+===
+move-tree
+---
+expression_statement [10368,10399]
+    array_access [10368,10398]
+        unary_expression [10368,10391]
+            delete: delete [10368,10374]
+            identifier: whitelistedUsers [10375,10391]
+        identifier: _user [10392,10397]
+to
+block_statement [16490,16607]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [16549,16597]
+    identifier: RemovedFromWhitelist [16554,16574]
+    call_argument [16575,16580]
+        identifier: _user [16575,16580]
+    call_argument [16582,16595]
+        member_expression: UserType.User [16582,16595]
+to
+block_statement [16490,16607]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.Vault [18792,18806]
+to
+call_argument [12887,12888]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.Vault [18792,18806]
+to
+call_argument [12887,12888]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.Vault [19091,19105]
+to
+call_argument [13170,13171]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.Vault [19091,19105]
+to
+call_argument [13170,13171]
+at 0
+
+New cluster:
+UPDATE from idMM to whitelistedMMIds
+------------
+===
+update-node
+---
+identifier: idMM [14753,14757]
+replace idMM by whitelistedMMIds
+
+New cluster:
+UPDATE from == to <
+------------
+===
+update-node
+---
+comparison_operator: == [16737,16739]
+replace == by <
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [22504,22526]
+to
+binary_expression [16727,16760]
+at 2
+------------
+===
+insert-node
+---
+parenthesized_expression [22504,22526]
+to
+binary_expression [16727,16760]
+at 2
+
+New cluster:
+UPDATE from require to risk
+------------
+===
+update-node
+---
+identifier: require [16916,16923]
+replace require by risk
+
+New cluster:
+MOVE from call_argument [22733,22737]
+------------
+===
+move-tree
+---
+identifier: require [16916,16923]
+to
+call_argument [22733,22737]
+at 0
+===
+move-tree
+---
+call_argument [16934,16963]
+    string_literal [16934,16963]
+        string: "Could not be whitelisted: 1" [16934,16963]
+to
+emit_statement [22803,22845]
+at 1
+
+New cluster:
+UPDATE from < to >=
+------------
+===
+update-node
+---
+comparison_operator: < [16929,16930]
+replace < by >=
+
+New cluster:
+===
+insert-node
+---
+identifier: AML_RISK_SCORE [22773,22787]
+to
+binary_expression [16924,16932]
+at 2
+------------
+===
+insert-node
+---
+identifier: AML_RISK_SCORE [22773,22787]
+to
+binary_expression [16924,16932]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [22859,22890]
+    revert: revert [22859,22865]
+    identifier: CouldNotBeWhitelisted [22866,22887]
+    revert_arguments [22887,22889]
+to
+block_statement [22789,22900]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [23147,23178]
+    revert: revert [23147,23153]
+    identifier: CouldNotBeWhitelisted [23154,23175]
+    revert_arguments [23175,23177]
+to
+block_statement [23055,23188]
+at 1
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.User [23318,23331]
+to
+call_argument [17288,17289]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.User [23318,23331]
+to
+call_argument [17288,17289]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: UserType.User [24044,24057]
+to
+call_argument [17907,17908]
+at 0
+------------
+===
+insert-node
+---
+member_expression: UserType.User [24044,24057]
+to
+call_argument [17907,17908]
+at 0
+
+New cluster:
+UPDATE from KYCReader.queryFee to kycReader.queryFee
+------------
+===
+update-node
+---
+member_expression: KYCReader.queryFee [19486,19504]
+replace KYCReader.queryFee by kycReader.queryFee
+===
+update-node
+---
+member_expression: KYCReader.queryFee [19691,19709]
+replace KYCReader.queryFee by kycReader.queryFee
+
+New cluster:
+MOVE from emit_statement [14323,14356]
+------------
+===
+move-tree
+---
+call_argument [16425,16430]
+    identifier: _user [16425,16430]
+to
+emit_statement [14323,14356]
+at 1
+
+New cluster:
+MOVE from emit_statement [14928,14961]
+------------
+===
+move-tree
+---
+call_argument [17566,17571]
+    identifier: _user [17566,17571]
+to
+emit_statement [14928,14961]
+at 1
+
+New cluster:
+MOVE from call_expression [21963,21999]
+------------
+===
+move-tree
+---
+call_argument [16111,16116]
+    identifier: _user [16111,16116]
+to
+call_expression [21963,21999]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [21990,21998]
+    identifier: CODE_AML [21990,21998]
+to
+call_expression [21963,21999]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [22504,22526]
+------------
+===
+move-tree
+---
+binary_expression [16740,16760]
+    identifier: feeRisk [16740,16747]
+    arithmetic_operator: + [16748,16749]
+    identifier: feeCountry [16750,16760]
+to
+parenthesized_expression [22504,22526]
+at 0
+
+New cluster:
+UPDATE from KYCReader.getAttributes{value: feeRisk}(_user, CODE_RISK)[0].value to kycReader.getAttributes{value: feeRisk}(_user, CODE_AML)[0].value
+------------
+===
+update-node
+---
+member_expression: KYCReader.getAttributes{value: feeRisk}(_user, CODE_RISK)[0].value [16830,16896]
+replace KYCReader.getAttributes{value: feeRisk}(_user, CODE_RISK)[0].value by kycReader.getAttributes{value: feeRisk}(_user, CODE_AML)[0].value
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22839,22843]
+    identifier: risk [22839,22843]
+to
+emit_statement [22803,22845]
+at 2
+
+New cluster:
+MOVE from emit_statement [23069,23121]
+------------
+===
+move-tree
+---
+call_argument [17124,17153]
+    string_literal [17124,17153]
+        string: "Could not be whitelisted: 2" [17124,17153]
+to
+emit_statement [23069,23121]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [23112,23119]
+    identifier: country [23112,23119]
+to
+emit_statement [23069,23121]
+at 2
+
+New cluster:
+UPDATE from CODE_RISK to CODE_AML
+------------
+===
+update-node
+---
+identifier: CODE_RISK [19517,19526]
+replace CODE_RISK by CODE_AML
+
+New cluster:
+===
+insert-node
+---
+identifier: _user [22832,22837]
+to
+call_argument [16934,16963]
+at 0
+------------
+===
+insert-node
+---
+identifier: _user [22832,22837]
+to
+call_argument [16934,16963]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: _user [23105,23110]
+to
+call_argument [17124,17153]
+at 0
+------------
+===
+insert-node
+---
+identifier: _user [23105,23110]
+to
+call_argument [17124,17153]
+at 0
+
+New cluster:
+UPDATE from KYCRegistry.isVerified to kycRegistry.isVerified
+------------
+===
+update-node
+---
+member_expression: KYCRegistry.isVerified [17712,17734]
+replace KYCRegistry.isVerified by kycRegistry.isVerified
+===
+update-node
+---
+member_expression: KYCRegistry.isVerified [10020,10042]
+replace KYCRegistry.isVerified by kycRegistry.isVerified
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [203,302]
+    import: import [203,209]
+    identifier: SignatureChecker [212,228]
+    from: from [231,235]
+    string: "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol" [236,301]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [303,367]
+    import: import [303,309]
+    identifier: IQuadPassport [312,325]
+    from: from [328,332]
+    string: "../interfaces/IQuadPassport.sol" [333,366]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [368,428]
+    import: import [368,374]
+    identifier: IQuadReader [377,388]
+    from: from [391,395]
+    string: "../interfaces/IQuadReader.sol" [396,427]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [429,509]
+    import: import [429,435]
+    identifier: IVerificationRegistry [438,459]
+    from: from [462,466]
+    string: "../interfaces/IVerificationRegistry.sol" [467,508]
+
+New cluster:
+===
+delete-node
+---
+identifier: MasterWhitelist [658,673]
+===
+------------
+===
+delete-node
+---
+identifier: MasterWhitelist [658,673]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [674,676]
+===
+------------
+===
+delete-node
+---
+is: is [674,676]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [702,731]
+    type_name: uint256 [702,709]
+    identifier: investigation_period [710,730]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [736,776]
+    type_name: uint256 [736,743]
+    constant: constant [744,752]
+    identifier: INF_TIME [753,761]
+    affectation_operator: = [762,763]
+    number_literal: 32503680000 [764,775]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [899,932]
+    type_name: mapping(address => bool) [899,923]
+    identifier: lawyers [924,931]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [997,1037]
+    type_name: mapping(address => bool) [997,1021]
+    identifier: whitelistedMMs [1022,1036]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1127,1160]
+    type_name: mapping(address => bytes32) [1127,1154]
+    identifier: idMM [1155,1159]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1217,1259]
+    type_name: mapping(address => bool) [1217,1241]
+    identifier: whitelistedUsers [1242,1258]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1316,1361]
+    type_name: mapping(address => uint256) [1316,1343]
+    identifier: blacklistedUsers [1344,1360]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1422,1468]
+    type_name: mapping(bytes32 => bool) [1422,1446]
+    identifier: blacklistedCountries [1447,1467]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1526,1569]
+    type_name: mapping(address => bool) [1526,1550]
+    identifier: whitelistedVaults [1551,1568]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1627,1670]
+    type_name: mapping(address => bool) [1627,1651]
+    identifier: whitelistedAssets [1652,1669]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1765,1806]
+    type_name: mapping(address => bytes32) [1765,1792]
+    identifier: kycProviders [1793,1805]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1903,1952]
+    type_name: mapping(address => bool) [1903,1927]
+    identifier: whitelistedSwapManagers [1928,1951]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2010,2043]
+    type_name: IQuadPassport [2010,2023]
+    visibility: public [2024,2030]
+    identifier: KYCPassport [2031,2042]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2099,2128]
+    type_name: IQuadReader [2099,2110]
+    visibility: public [2111,2117]
+    identifier: KYCReader [2118,2127]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2186,2227]
+    type_name: IVerificationRegistry [2186,2207]
+    visibility: public [2208,2214]
+    identifier: KYCRegistry [2215,2226]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2570,2674]
+    type_name: bytes32 [2570,2577]
+    constant: constant [2578,2586]
+    identifier: CODE_RISK [2587,2596]
+    affectation_operator: = [2597,2598]
+    number_literal: 0xaf192d67680c4285e52cd2a94216ce249fb4e0227d267dcc01ea88f1b020a119 [2607,2673]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2711,2818]
+    type_name: bytes32 [2711,2718]
+    constant: constant [2719,2727]
+    identifier: CODE_COUNTRY [2728,2740]
+    affectation_operator: = [2741,2742]
+    number_literal: 0xc4713d2897c0d675d85b414a1974570a575e5032b6f7be9545631a1f922b26ef [2751,2817]
+
+New cluster:
+===
+delete-node
+---
+event_definition [3629,3730]
+===
+------------
+===
+delete-node
+---
+identifier: userRemovedFromWhitelist [3635,3659]
+===
+===
+delete-node
+---
+event_definition [3629,3730]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [3699,3723]
+    type_name: uint256 [3699,3706]
+    indexed: indexed [3707,3714]
+    identifier: userType [3715,3723]
+
+New cluster:
+===
+delete-node
+---
+event_definition [3869,3938]
+===
+------------
+===
+delete-node
+---
+event_definition [3869,3938]
+===
+===
+delete-node
+---
+identifier: mmAddedToWhitelist [3875,3893]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [3916,3936]
+    type_name: bytes32 [3916,3923]
+    indexed: indexed [3924,3931]
+    identifier: mmid [3932,3936]
+
+New cluster:
+===
+delete-node
+---
+event_definition [4160,4259]
+===
+------------
+===
+delete-node
+---
+identifier: userAddedToBlacklist [4166,4186]
+===
+===
+delete-node
+---
+event_definition [4160,4259]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [4226,4252]
+    type_name: uint256 [4226,4233]
+    identifier: investigation_time [4234,4252]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [3312,3336]
+    type_name: uint256 [3312,3319]
+    indexed: indexed [3320,3327]
+    identifier: userType [3328,3336]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4477,4562]
+    identifier: newInvestigationPeriod [4483,4505]
+    event_paramater [4506,4532]
+        type_name: uint256 [4506,4513]
+        indexed: indexed [4514,4521]
+        identifier: _oldPeriod [4522,4532]
+    event_paramater [4534,4560]
+        type_name: uint256 [4534,4541]
+        indexed: indexed [4542,4549]
+        identifier: _newPeriod [4550,4560]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4568,4620]
+    identifier: KYCPassportChanged [4574,4592]
+    event_paramater [4593,4618]
+        type_name: address [4593,4600]
+        indexed: indexed [4601,4608]
+        identifier: _passport [4609,4618]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4626,4674]
+    identifier: KYCReaderChanged [4632,4648]
+    event_paramater [4649,4672]
+        type_name: address [4649,4656]
+        indexed: indexed [4657,4664]
+        identifier: _reader [4665,4672]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4680,4732]
+    identifier: KYCRegistryChanged [4686,4704]
+    event_paramater [4705,4730]
+        type_name: address [4705,4712]
+        indexed: indexed [4713,4720]
+        identifier: _registry [4721,4730]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4738,4794]
+    identifier: CountryToBlacklistAdded [4744,4767]
+    event_paramater [4768,4792]
+        type_name: bytes32 [4768,4775]
+        indexed: indexed [4776,4783]
+        identifier: _country [4784,4792]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4800,4860]
+    identifier: RemovedCountryFromBlacklist [4806,4833]
+    event_paramater [4834,4858]
+        type_name: bytes32 [4834,4841]
+        indexed: indexed [4842,4849]
+        identifier: _country [4850,4858]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4866,4926]
+    identifier: IdMMChanged [4872,4883]
+    event_paramater [4884,4903]
+        type_name: address [4884,4891]
+        indexed: indexed [4892,4899]
+        identifier: _mm [4900,4903]
+    event_paramater [4905,4924]
+        type_name: bytes32 [4905,4912]
+        indexed: indexed [4913,4920]
+        identifier: _id [4921,4924]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4932,4984]
+    identifier: AddedAssetToWhitelist [4938,4959]
+    event_paramater [4960,4982]
+        type_name: address [4960,4967]
+        indexed: indexed [4968,4975]
+        identifier: _asset [4976,4982]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [4990,5046]
+    identifier: RemovedAssetFromWhitelist [4996,5021]
+    event_paramater [5022,5044]
+        type_name: address [5022,5029]
+        indexed: indexed [5030,5037]
+        identifier: _asset [5038,5044]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5916,5933]
+    type_name: address [5916,5923]
+    identifier: _passport [5924,5933]
+
+New cluster:
+===
+delete-node
+---
+memory: memory [6005,6011]
+===
+------------
+===
+delete-node
+---
+memory: memory [6005,6011]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [6151,6190]
+    assignment_expression [6151,6189]
+        identifier: KYCPassport [6151,6162]
+        affectation_operator: = [6163,6164]
+        call_expression [6165,6189]
+            identifier: IQuadPassport [6165,6178]
+            call_argument [6179,6188]
+                identifier: _passport [6179,6188]
+
+New cluster:
+===
+delete-node
+---
+affectation_operator: = [6312,6313]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [6312,6313]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [6314,6315]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [6314,6315]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 4 [6762,6763]
+===
+------------
+===
+delete-node
+---
+number_literal: 4 [6762,6763]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [6896,7069]
+===
+------------
+===
+delete-node
+---
+visibility: external [6949,6957]
+===
+===
+delete-node
+---
+emit_statement [7025,7063]
+===
+===
+delete-node
+---
+identifier: userRemovedFromWhitelist [7030,7054]
+===
+===
+delete-node
+---
+identifier: removeSwapManagerFromWhitelist [6905,6935]
+===
+===
+delete-node
+---
+function_body [6969,7069]
+===
+===
+delete-node
+---
+function_definition [6896,7069]
+===
+===
+delete-node
+---
+function: function [6896,6904]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [6979,7016]
+    assignment_expression [6979,7015]
+        array_access [6979,7007]
+            identifier: whitelistedSwapManagers [6979,7002]
+            identifier: _sm [7003,7006]
+        affectation_operator: = [7008,7009]
+        boolean_literal: false [7010,7015]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7060,7061]
+    number_literal: 4 [7060,7061]
+
+New cluster:
+===
+delete-node
+---
+function_definition [7470,7648]
+===
+------------
+===
+delete-node
+---
+identifier: setInvestigationPeriod [7479,7501]
+===
+===
+delete-node
+---
+function_body [7537,7648]
+===
+===
+delete-node
+---
+function: function [7470,7478]
+===
+===
+delete-node
+---
+function_definition [7470,7648]
+===
+===
+delete-node
+---
+identifier: newInvestigationPeriod [7552,7574]
+===
+===
+delete-node
+---
+emit_statement [7547,7604]
+===
+===
+delete-node
+---
+visibility: external [7517,7525]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7575,7595]
+    identifier: investigation_period [7575,7595]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7613,7642]
+    assignment_expression [7613,7641]
+        identifier: investigation_period [7613,7633]
+        affectation_operator: = [7634,7635]
+        identifier: _time [7636,7641]
+
+New cluster:
+===
+delete-node
+---
+function_definition [7717,7827]
+===
+------------
+===
+delete-node
+---
+visibility: external [7751,7759]
+===
+===
+delete-node
+---
+function: function [7717,7725]
+===
+===
+delete-node
+---
+function_definition [7717,7827]
+===
+===
+delete-node
+---
+identifier: getInvestigationPeriod [7726,7748]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [7783,7827]
+    return_statement [7793,7821]
+        return: return [7793,7799]
+        identifier: investigation_period [7800,7820]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 3 [8080,8081]
+===
+------------
+===
+delete-node
+---
+number_literal: 3 [8080,8081]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 3 [8354,8355]
+===
+------------
+===
+delete-node
+---
+number_literal: 3 [8354,8355]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [8928,8929]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [8928,8929]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [9412,9413]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [9412,9413]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [9532,9732]
+===
+------------
+===
+delete-node
+---
+function: function [9532,9540]
+===
+===
+delete-node
+---
+identifier: userRemovedFromWhitelist [9691,9715]
+===
+===
+delete-node
+---
+visibility: external [9580,9588]
+===
+===
+delete-node
+---
+function_definition [9532,9732]
+===
+===
+delete-node
+---
+identifier: removeUserFromWhitelist [9541,9564]
+===
+===
+delete-node
+---
+function_body [9600,9732]
+===
+===
+delete-node
+---
+emit_statement [9686,9726]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [9723,9724]
+    number_literal: 0 [9723,9724]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [10294,10359]
+===
+------------
+===
+delete-node
+---
+assignment_expression [10294,10358]
+===
+===
+delete-node
+---
+affectation_operator: = [10318,10319]
+===
+===
+delete-node
+---
+expression_statement [10294,10359]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [10320,10358]
+    member_expression: block.timestamp [10320,10335]
+    arithmetic_operator: + [10336,10337]
+    identifier: investigation_period [10338,10358]
+
+New cluster:
+===
+delete-node
+---
+function_definition [11028,11186]
+===
+------------
+===
+delete-node
+---
+function: function [11028,11036]
+===
+===
+delete-node
+---
+function_body [11096,11186]
+===
+===
+delete-node
+---
+assignment_expression [11106,11133]
+===
+===
+delete-node
+---
+visibility: external [11076,11084]
+===
+===
+delete-node
+---
+expression_statement [11106,11134]
+===
+===
+delete-node
+---
+function_definition [11028,11186]
+===
+===
+delete-node
+---
+identifier: removeUserFromBlacklist [11037,11060]
+===
+===
+delete-node
+---
+affectation_operator: = [11130,11131]
+===
+===
+delete-node
+---
+number_literal: 0 [11132,11133]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [11593,11738]
+===
+------------
+===
+delete-node
+---
+function_definition [11593,11738]
+===
+===
+delete-node
+---
+function: function [11593,11601]
+===
+===
+delete-node
+---
+emit_statement [11698,11732]
+===
+===
+delete-node
+---
+visibility: external [11632,11640]
+===
+===
+delete-node
+---
+identifier: UserAddedToWhitelist [11703,11723]
+===
+===
+delete-node
+---
+function_body [11652,11738]
+===
+===
+delete-node
+---
+identifier: addMMToWhitelist [11602,11618]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11729,11730]
+    number_literal: 1 [11729,11730]
+
+New cluster:
+===
+delete-node
+---
+function_definition [11858,12110]
+===
+------------
+===
+delete-node
+---
+function: function [11858,11866]
+===
+===
+delete-node
+---
+visibility: external [11924,11932]
+===
+===
+delete-node
+---
+emit_statement [12027,12061]
+===
+===
+delete-node
+---
+identifier: addMMToWhitelistWithId [11867,11889]
+===
+===
+delete-node
+---
+identifier: UserAddedToWhitelist [12032,12052]
+===
+===
+delete-node
+---
+function_body [11956,12110]
+===
+===
+delete-node
+---
+function_definition [11858,12110]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [11966,11982]
+    assignment_expression [11966,11981]
+        array_access [11966,11975]
+            identifier: idMM [11966,11970]
+            identifier: _mm [11971,11974]
+        affectation_operator: = [11976,11977]
+        identifier: _id [11978,11981]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12058,12059]
+    number_literal: 1 [12058,12059]
+
+New cluster:
+===
+delete-node
+---
+function_definition [12235,12389]
+===
+------------
+===
+delete-node
+---
+visibility: external [12279,12287]
+===
+===
+delete-node
+---
+function_body [12299,12389]
+===
+===
+delete-node
+---
+emit_statement [12345,12383]
+===
+===
+delete-node
+---
+function: function [12235,12243]
+===
+===
+delete-node
+---
+identifier: removeMMFromWhitelist [12244,12265]
+===
+===
+delete-node
+---
+function_definition [12235,12389]
+===
+===
+delete-node
+---
+identifier: userRemovedFromWhitelist [12350,12374]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12380,12381]
+    number_literal: 1 [12380,12381]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 2 [12887,12888]
+===
+------------
+===
+delete-node
+---
+number_literal: 2 [12887,12888]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 2 [13170,13171]
+===
+------------
+===
+delete-node
+---
+number_literal: 2 [13170,13171]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [14423,14554]
+===
+------------
+===
+delete-node
+---
+function_definition [14423,14554]
+===
+===
+delete-node
+---
+function: function [14423,14431]
+===
+===
+delete-node
+---
+identifier: setIdMM [14432,14439]
+===
+===
+delete-node
+---
+visibility: external [14466,14474]
+===
+===
+delete-node
+---
+function_body [14486,14554]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [14496,14512]
+    assignment_expression [14496,14511]
+        array_access [14496,14505]
+            identifier: idMM [14496,14500]
+            identifier: _mm [14501,14504]
+        affectation_operator: = [14506,14507]
+        identifier: _id [14508,14511]
+
+New cluster:
+===
+delete-node
+---
+function_definition [16011,16140]
+===
+------------
+===
+delete-node
+---
+return: return [16084,16090]
+===
+===
+delete-node
+---
+call_expression [16091,16128]
+===
+===
+delete-node
+---
+return_statement [16084,16134]
+===
+===
+delete-node
+---
+identifier: hasPassport [16020,16031]
+===
+===
+delete-node
+---
+visibility: public [16047,16053]
+===
+===
+delete-node
+---
+function_body [16074,16140]
+===
+===
+delete-node
+---
+binary_expression [16091,16133]
+===
+===
+delete-node
+---
+comparison_operator: >= [16129,16131]
+===
+===
+delete-node
+---
+number_literal: 1 [16132,16133]
+===
+===
+delete-node
+---
+member_expression: KYCReader.balanceOf [16091,16110]
+===
+===
+delete-node
+---
+function_definition [16011,16140]
+===
+===
+delete-node
+---
+function: function [16011,16019]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [16032,16045]
+    type_name: address [16032,16039]
+    identifier: _user [16040,16045]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16118,16127]
+    identifier: CODE_RISK [16118,16127]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [16327,16352]
+    type_name: bytes [16327,16332]
+    calldata: calldata [16333,16341]
+    identifier: _signature [16342,16352]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [16401,16487]
+===
+------------
+===
+delete-node
+---
+identifier: _policiesSigned [16409,16424]
+===
+===
+delete-node
+---
+identifier: require [16401,16408]
+===
+===
+delete-node
+---
+call_argument [16409,16443]
+===
+===
+delete-node
+---
+call_expression [16401,16486]
+===
+===
+delete-node
+---
+expression_statement [16401,16487]
+===
+===
+delete-node
+---
+call_expression [16409,16443]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16432,16442]
+    identifier: _signature [16432,16442]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16445,16485]
+    string_literal [16445,16485]
+        string: "user has not signed terms & conditions" [16445,16485]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [16719,16784]
+===
+------------
+===
+delete-node
+---
+expression_statement [16719,16784]
+===
+===
+delete-node
+---
+call_argument [16727,16760]
+===
+===
+delete-node
+---
+call_expression [16719,16783]
+===
+===
+delete-node
+---
+identifier: require [16719,16726]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [16762,16782]
+    string_literal [16762,16782]
+        string: "fee is not correct" [16762,16782]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 5 [16931,16932]
+===
+------------
+===
+delete-node
+---
+number_literal: 5 [16931,16932]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [16934,16963]
+    string: "Could not be whitelisted: 1" [16934,16963]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [16916,16965]
+===
+------------
+===
+delete-node
+---
+call_argument [16924,16932]
+===
+===
+delete-node
+---
+call_expression [16916,16964]
+===
+===
+delete-node
+---
+expression_statement [16916,16965]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [17124,17153]
+    string: "Could not be whitelisted: 2" [17124,17153]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [17084,17155]
+===
+------------
+===
+delete-node
+---
+unary_expression [17092,17122]
+===
+===
+delete-node
+---
+expression_statement [17084,17155]
+===
+===
+delete-node
+---
+!: ! [17092,17093]
+===
+===
+delete-node
+---
+identifier: require [17084,17091]
+===
+===
+delete-node
+---
+call_argument [17092,17122]
+===
+===
+delete-node
+---
+call_expression [17084,17154]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [17288,17289]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [17288,17289]
+===
+
+New cluster:
+===
+delete-node
+---
+calldata: calldata [17490,17498]
+===
+------------
+===
+delete-node
+---
+calldata: calldata [17490,17498]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: _signature [17499,17509]
+===
+------------
+===
+delete-node
+---
+identifier: _signature [17499,17509]
+===
+
+New cluster:
+===
+delete-node
+---
+visibility: external [17519,17527]
+===
+------------
+===
+delete-node
+---
+visibility: external [17519,17527]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [17542,17628]
+===
+------------
+===
+delete-node
+---
+identifier: require [17542,17549]
+===
+===
+delete-node
+---
+identifier: _policiesSigned [17550,17565]
+===
+===
+delete-node
+---
+expression_statement [17542,17628]
+===
+===
+delete-node
+---
+call_argument [17550,17584]
+===
+===
+delete-node
+---
+call_expression [17542,17627]
+===
+===
+delete-node
+---
+call_expression [17550,17584]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17573,17583]
+    identifier: _signature [17573,17583]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17586,17626]
+    string_literal [17586,17626]
+        string: "user has not signed terms & conditions" [17586,17626]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [17907,17908]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [17907,17908]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [17922,18529]
+===
+------------
+===
+delete-node
+---
+function: function [17922,17930]
+===
+===
+delete-node
+---
+variable_declaration_statement [18027,18237]
+===
+===
+delete-node
+---
+call_expression [18397,18522]
+===
+===
+delete-node
+---
+member_expression: SignatureChecker.isValidSignatureNow [18397,18433]
+===
+===
+delete-node
+---
+function_body [18017,18529]
+===
+===
+delete-node
+---
+affectation_operator: = [18050,18051]
+===
+===
+delete-node
+---
+identifier: _policiesSigned [17931,17946]
+===
+===
+delete-node
+---
+return: return [18390,18396]
+===
+===
+delete-node
+---
+call_argument [18075,18226]
+===
+===
+delete-node
+---
+return_statement [18390,18523]
+===
+===
+delete-node
+---
+identifier: keccak256 [18052,18061]
+===
+===
+delete-node
+---
+call_expression [18052,18236]
+===
+===
+delete-node
+---
+function_definition [17922,18529]
+===
+===
+delete-node
+---
+visibility: private [17989,17996]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [17962,17987]
+    type_name: bytes [17962,17967]
+    calldata: calldata [17968,17976]
+    identifier: _signature [17977,17987]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [18027,18049]
+    type_name: bytes32 [18027,18034]
+    identifier: hashedPolicies [18035,18049]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [18246,18381]
+    variable_declaration [18246,18276]
+        type_name: bytes32 [18246,18253]
+        identifier: prefixedHashedPolicies [18254,18276]
+    affectation_operator: = [18277,18278]
+    call_expression [18279,18380]
+        identifier: keccak256 [18279,18288]
+        call_argument [18302,18370]
+            call_expression [18302,18370]
+                member_expression: abi.encodePacked [18302,18318]
+                call_argument [18319,18353]
+                    string_literal [18319,18353]
+                        string: "\x19Ethereum Signed Message:\n32" [18319,18353]
+                call_argument [18355,18369]
+                    identifier: hashedPolicies [18355,18369]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18466,18488]
+    identifier: prefixedHashedPolicies [18466,18488]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18502,18512]
+    identifier: _signature [18502,18512]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [18650,18797]
+    function: function [18650,18658]
+    identifier: setKYCPassport [18659,18673]
+    parameter [18674,18686]
+        type_name: address [18674,18681]
+        identifier: _kyc [18682,18686]
+    visibility: external [18688,18696]
+    modifier_invocation [18697,18707]
+        identifier: onlyLawyer [18697,18707]
+    function_body [18708,18797]
+        expression_statement [18718,18752]
+            assignment_expression [18718,18751]
+                identifier: KYCPassport [18718,18729]
+                affectation_operator: = [18730,18731]
+                call_expression [18732,18751]
+                    identifier: IQuadPassport [18732,18745]
+                    call_argument [18746,18750]
+                        identifier: _kyc [18746,18750]
+        emit_statement [18761,18791]
+            identifier: KYCPassportChanged [18766,18784]
+            call_argument [18785,18789]
+                identifier: _kyc [18785,18789]
+
+New cluster:
+===
+delete-node
+---
+emit_statement [19019,19047]
+===
+------------
+===
+delete-node
+---
+identifier: KYCReaderChanged [19024,19040]
+===
+===
+delete-node
+---
+emit_statement [19019,19047]
+===
+
+New cluster:
+===
+delete-node
+---
+emit_statement [19293,19323]
+===
+------------
+===
+delete-node
+---
+emit_statement [19293,19323]
+===
+===
+delete-node
+---
+identifier: KYCRegistryChanged [19298,19316]
+===
+

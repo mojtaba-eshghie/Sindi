@@ -1,0 +1,5 @@
+results/differencing_results/0xe6abfcabe24f06197a7a20dc9c81c251f2862430_LoopringAmmPool.sol___0xee017df188362f8620058e6cef56d0e65b872164_LoopringAmmPool.sol.log:
+  17694  identifier: require [179028,179035]
+  17695: replace require by approveExchangeTransaction
+  17696  
+

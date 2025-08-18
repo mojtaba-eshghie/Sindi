@@ -1,0 +1,1318 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [1341,1501]
+    modifier: modifier [1341,1349]
+    identifier: ableToMint [1350,1360]
+    parameter [1361,1374]
+        type_name: bytes32 [1361,1368]
+        identifier: daoId [1369,1374]
+    parameter [1376,1400]
+        type_name: bytes32[] [1376,1385]
+        calldata: calldata [1386,1394]
+        identifier: proof [1395,1400]
+    parameter [1402,1416]
+        type_name: uint256 [1402,1409]
+        identifier: amount [1410,1416]
+    function_body [1418,1501]
+        expression_statement [1428,1484]
+            call_expression [1428,1483]
+                identifier: _checkMintEligibility [1428,1449]
+                call_argument [1450,1455]
+                    identifier: daoId [1450,1455]
+                call_argument [1457,1467]
+                    member_expression: msg.sender [1457,1467]
+                call_argument [1469,1474]
+                    identifier: proof [1469,1474]
+                call_argument [1476,1482]
+                    identifier: amount [1476,1482]
+        expression_statement [1493,1495]
+            identifier: _ [1493,1494]
+to
+contract_body [244,5434]
+at 6
+
+New cluster:
+===
+insert-node
+---
+function_definition [1507,1740]
+to
+contract_body [244,5434]
+at 7
+------------
+===
+insert-node
+---
+function: function [1507,1515]
+to
+function_definition [1507,1740]
+at 0
+===
+insert-node
+---
+function_body [1646,1740]
+to
+function_definition [1507,1740]
+at 8
+===
+insert-node
+---
+if_statement [1656,1734]
+to
+function_body [1646,1740]
+at 0
+===
+insert-node
+---
+if: if [1656,1658]
+to
+if_statement [1656,1734]
+at 0
+===
+insert-node
+---
+identifier: _checkMintEligibility [1516,1537]
+to
+function_definition [1507,1740]
+at 1
+===
+insert-node
+---
+function_definition [1507,1740]
+to
+contract_body [244,5434]
+at 7
+===
+insert-node
+---
+visibility: internal [1620,1628]
+to
+function_definition [1507,1740]
+at 6
+
+New cluster:
+===
+insert-node
+---
+function_definition [2302,3068]
+to
+contract_body [244,5434]
+at 9
+------------
+===
+insert-node
+---
+function_definition [2302,3068]
+to
+contract_body [244,5434]
+at 9
+===
+insert-node
+---
+identifier: batchMint [2311,2320]
+to
+function_definition [2302,3068]
+at 1
+===
+insert-node
+---
+block_statement [2612,2935]
+to
+function_body [2549,3068]
+at 1
+===
+insert-node
+---
+call_expression [2626,2681]
+to
+expression_statement [2626,2682]
+at 0
+===
+insert-node
+---
+function: function [2302,2310]
+to
+function_definition [2302,3068]
+at 0
+===
+insert-node
+---
+expression_statement [2626,2682]
+to
+block_statement [2612,2935]
+at 0
+===
+insert-node
+---
+identifier: _checkMintEligibility [2626,2647]
+to
+call_expression [2626,2681]
+at 0
+===
+insert-node
+---
+function_body [2549,3068]
+to
+function_definition [2302,3068]
+at 11
+===
+insert-node
+---
+visibility: external [2492,2500]
+to
+function_definition [2302,3068]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [5944,5969]
+    error: error [5944,5949]
+    identifier: InvalidSignature [5950,5966]
+to
+contract_body [244,5434]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1538,1551]
+    type_name: bytes32 [1538,1545]
+    identifier: daoId [1546,1551]
+to
+function_definition [1507,1740]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1553,1568]
+    type_name: address [1553,1560]
+    identifier: account [1561,1568]
+to
+function_definition [1507,1740]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1570,1594]
+    type_name: bytes32[] [1570,1579]
+    calldata: calldata [1580,1588]
+    identifier: proof [1589,1594]
+to
+function_definition [1507,1740]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1596,1610]
+    type_name: uint256 [1596,1603]
+    identifier: amount [1604,1610]
+to
+function_definition [1507,1740]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [1637,1641]
+    view: view [1637,1641]
+to
+function_definition [1507,1740]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2330,2343]
+    type_name: bytes32 [2330,2337]
+    identifier: daoId [2338,2343]
+to
+function_definition [2302,3068]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2353,2369]
+    type_name: bytes32 [2353,2360]
+    identifier: canvasId [2361,2369]
+to
+function_definition [2302,3068]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2379,2403]
+    type_name: bytes32[] [2379,2388]
+    calldata: calldata [2389,2397]
+    identifier: proof [2398,2403]
+to
+function_definition [2302,3068]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2413,2448]
+    type_name: MintNftInfo[] [2413,2426]
+    calldata: calldata [2427,2435]
+    identifier: mintNftInfos [2436,2448]
+to
+function_definition [2302,3068]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2458,2485]
+    type_name: bytes[] [2458,2465]
+    calldata: calldata [2466,2474]
+    identifier: signatures [2475,2485]
+to
+function_definition [2302,3068]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [2501,2508]
+    payable: payable [2501,2508]
+to
+function_definition [2302,3068]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [2509,2521]
+    identifier: nonReentrant [2509,2521]
+to
+function_definition [2302,3068]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [2522,2548]
+    returns: returns [2522,2529]
+    parameter [2531,2547]
+        type_name: uint256[] [2531,2540]
+        memory: memory [2541,2547]
+to
+function_definition [2302,3068]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [4364,4378]
+    type_name: uint256 [4364,4371]
+    identifier: amount [4372,4378]
+to
+function_definition [3145,4693]
+at 5
+
+New cluster:
+UPDATE from _DAO_id to daoId
+------------
+===
+update-node
+---
+identifier: _DAO_id [1648,1655]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [2939,2946]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [481,488]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [2475,2482]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [4122,4129]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [848,855]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [719,726]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [928,935]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [3174,3181]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [1396,1403]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [3035,3042]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [4478,4485]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [3766,3773]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [2099,2106]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [2592,2599]
+replace _DAO_id by daoId
+===
+update-node
+---
+identifier: _DAO_id [3546,3553]
+replace _DAO_id by daoId
+
+New cluster:
+UPDATE from _canvas_uri to canvasUri
+------------
+===
+update-node
+---
+identifier: _canvas_uri [506,517]
+replace _canvas_uri by canvasUri
+===
+update-node
+---
+identifier: _canvas_uri [937,948]
+replace _canvas_uri by canvasUri
+
+New cluster:
+UPDATE from _proof to proof
+------------
+===
+update-node
+---
+identifier: _proof [1669,1675]
+replace _proof by proof
+===
+update-node
+---
+identifier: _proof [4497,4503]
+replace _proof by proof
+===
+update-node
+---
+identifier: _proof [538,544]
+replace _proof by proof
+===
+update-node
+---
+identifier: _proof [1496,1502]
+replace _proof by proof
+===
+update-node
+---
+identifier: _proof [3220,3226]
+replace _proof by proof
+===
+update-node
+---
+identifier: _proof [869,875]
+replace _proof by proof
+
+New cluster:
+===
+insert-node
+---
+if_statement [635,737]
+to
+function_body [630,956]
+at 0
+------------
+===
+insert-node
+---
+if: if [635,637]
+to
+if_statement [635,737]
+at 0
+===
+insert-node
+---
+revert_statement [716,737]
+to
+if_statement [635,737]
+at 2
+===
+insert-node
+---
+revert_arguments [734,736]
+to
+revert_statement [716,737]
+at 2
+===
+insert-node
+---
+if_statement [635,737]
+to
+function_body [630,956]
+at 0
+===
+insert-node
+---
+revert: revert [716,722]
+to
+revert_statement [716,737]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [746,881]
+to
+function_body [630,956]
+at 1
+------------
+===
+insert-node
+---
+if_statement [746,881]
+to
+function_body [630,956]
+at 1
+===
+insert-node
+---
+if: if [746,748]
+to
+if_statement [746,881]
+at 0
+
+New cluster:
+===
+insert-node
+---
+block_statement [2012,2087]
+to
+function_body [1621,1918]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [2026,2077]
+to
+block_statement [2012,2087]
+at 0
+===
+insert-node
+---
+call_argument [2074,2075]
+to
+call_expression [2026,2076]
+at 4
+===
+insert-node
+---
+call_expression [2026,2076]
+to
+expression_statement [2026,2077]
+at 0
+===
+insert-node
+---
+block_statement [2012,2087]
+to
+function_body [1621,1918]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [2171,2228]
+    augmented_assignment_expression [2171,2227]
+        member_expression: nftMintTrackers[daoId].mintInfos[msg.sender].minted [2171,2222]
+        affectation_operator: += [2223,2225]
+        number_literal: 1 [2226,2227]
+to
+function_body [1621,1918]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [2559,2603]
+    variable_declaration [2559,2572]
+        type_name: uint32 [2559,2565]
+        identifier: length [2566,2572]
+    affectation_operator: = [2573,2574]
+    type_cast_expression [2575,2602]
+        primitive_type: uint32 [2575,2581]
+        call_argument [2582,2601]
+            member_expression: mintNftInfos.length [2582,2601]
+to
+function_body [2549,3068]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [2944,3006]
+    augmented_assignment_expression [2944,3005]
+        member_expression: nftMintTrackers[daoId].mintInfos[msg.sender].minted [2944,2995]
+        affectation_operator: += [2996,2998]
+        identifier: length [2999,3005]
+to
+function_body [2549,3068]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [3015,3062]
+    return: return [3015,3021]
+    call_expression [3022,3061]
+        identifier: _mintNft [3022,3030]
+        call_argument [3031,3036]
+            identifier: daoId [3031,3036]
+        call_argument [3038,3046]
+            identifier: canvasId [3038,3046]
+        call_argument [3048,3060]
+            identifier: mintNftInfos [3048,3060]
+to
+function_body [2549,3068]
+at 3
+
+New cluster:
+UPDATE from _account to account
+------------
+===
+update-node
+---
+identifier: _account [4487,4495]
+replace _account by account
+===
+update-node
+---
+identifier: _account [3191,3199]
+replace _account by account
+===
+update-node
+---
+identifier: _account [3555,3563]
+replace _account by account
+===
+update-node
+---
+identifier: _account [3880,3888]
+replace _account by account
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [5441,5482]
+    variable_declaration [5441,5463]
+        type_name: uint256 [5441,5448]
+        identifier: expectedMinted [5449,5463]
+    affectation_operator: = [5464,5465]
+    binary_expression [5466,5481]
+        identifier: minted [5466,5472]
+        arithmetic_operator: + [5473,5474]
+        identifier: amount [5475,5481]
+to
+function_body [3257,4693]
+at 8
+
+New cluster:
+===
+insert-node
+---
+if_statement [6391,6604]
+to
+function_body [4873,5432]
+at 2
+------------
+===
+insert-node
+---
+if_statement [6391,6604]
+to
+function_body [4873,5432]
+at 2
+===
+insert-node
+---
+if: if [6391,6393]
+to
+if_statement [6391,6604]
+at 0
+
+New cluster:
+MOVE from if_statement [635,737]
+------------
+===
+move-tree
+---
+call_expression [661,739]
+    member_expression: !settings.permission_control().isCanvasCreatorBlacklisted [661,718]
+    call_argument [719,726]
+        identifier: _DAO_id [719,726]
+    call_argument [728,738]
+        member_expression: msg.sender [728,738]
+to
+if_statement [635,737]
+at 1
+
+New cluster:
+MOVE from if_statement [746,881]
+------------
+===
+move-tree
+---
+call_expression [793,876]
+    member_expression: settings.permission_control().inCanvasCreatorWhitelist [793,847]
+    call_argument [848,855]
+        identifier: _DAO_id [848,855]
+    call_argument [857,867]
+        member_expression: msg.sender [857,867]
+    call_argument [869,875]
+        identifier: _proof [869,875]
+to
+if_statement [746,881]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [833,881]
+    revert_statement [847,871]
+        revert: revert [847,853]
+        identifier: NotInWhitelist [854,868]
+        revert_arguments [868,870]
+to
+if_statement [746,881]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [1660,1703]
+    !: ! [1660,1661]
+    call_expression [1661,1703]
+        identifier: _ableToMint [1661,1672]
+        call_argument [1673,1678]
+            identifier: daoId [1673,1678]
+        call_argument [1680,1687]
+            identifier: account [1680,1687]
+        call_argument [1689,1694]
+            identifier: proof [1689,1694]
+        call_argument [1696,1702]
+            identifier: amount [1696,1702]
+to
+if_statement [1656,1734]
+at 1
+
+New cluster:
+MOVE from if_statement [1656,1734]
+------------
+===
+move-tree
+---
+revert_statement [1678,1707]
+    revert: revert [1678,1684]
+    identifier: ExceedMaxMintAmount [1685,1704]
+    revert_arguments [1704,1706]
+to
+if_statement [1656,1734]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+for_statement [2695,2925]
+    for: for [2695,2698]
+    variable_declaration_statement [2700,2713]
+        variable_declaration [2700,2708]
+            type_name: uint32 [2700,2706]
+            identifier: i [2707,2708]
+        affectation_operator: = [2709,2710]
+        number_literal: 0 [2711,2712]
+    expression_statement [2714,2725]
+        binary_expression [2714,2724]
+            identifier: i [2714,2715]
+            comparison_operator: < [2716,2717]
+            identifier: length [2718,2724]
+    block_statement [2727,2925]
+        expression_statement [2745,2840]
+            call_expression [2745,2839]
+                identifier: _verifySignature [2745,2761]
+                call_argument [2762,2770]
+                    identifier: canvasId [2762,2770]
+                call_argument [2772,2796]
+                    member_expression: mintNftInfos[i].tokenUri [2772,2796]
+                call_argument [2798,2823]
+                    member_expression: mintNftInfos[i].flatPrice [2798,2823]
+                call_argument [2825,2838]
+                    array_access [2825,2838]
+                        identifier: signatures [2825,2835]
+                        identifier: i [2836,2837]
+        block_statement [2857,2911]
+            unchecked: unchecked [2857,2866]
+            expression_statement [2889,2893]
+                update_expression [2889,2892]
+                    increment_operator: ++ [2889,2891]
+                    identifier: i [2891,2892]
+to
+block_statement [2612,2935]
+at 1
+
+New cluster:
+MOVE from if_statement [6391,6604]
+------------
+===
+move-tree
+---
+call_expression [5198,5364]
+    member_expression: IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                         || signer == settings.owner_proxy().ownerOf [5198,5352]
+    call_argument [5353,5363]
+        identifier: _canvas_id [5353,5363]
+to
+if_statement [6391,6604]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [6578,6604]
+    revert: revert [6578,6584]
+    identifier: InvalidSignature [6585,6601]
+    revert_arguments [6601,6603]
+to
+if_statement [6391,6604]
+at 2
+
+New cluster:
+UPDATE from !settings.permission_control().isCanvasCreatorBlacklisted to settings.permission_control().isCanvasCreatorBlacklisted
+------------
+===
+update-node
+---
+member_expression: !settings.permission_control().isCanvasCreatorBlacklisted [661,718]
+replace !settings.permission_control().isCanvasCreatorBlacklisted by settings.permission_control().isCanvasCreatorBlacklisted
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [703,713]
+    member_expression: msg.sender [703,713]
+to
+call_expression [661,739]
+at 2
+
+New cluster:
+UPDATE from require to Blacklisted
+------------
+===
+update-node
+---
+identifier: require [785,792]
+replace require by Blacklisted
+
+New cluster:
+MOVE from revert_statement [716,737]
+------------
+===
+move-tree
+---
+identifier: require [785,792]
+to
+revert_statement [716,737]
+at 1
+
+New cluster:
+UPDATE from settings.permission_control().inCanvasCreatorWhitelist to !settings.permission_control().inCanvasCreatorWhitelist
+------------
+===
+update-node
+---
+member_expression: settings.permission_control().inCanvasCreatorWhitelist [793,847]
+replace settings.permission_control().inCanvasCreatorWhitelist by !settings.permission_control().inCanvasCreatorWhitelist
+
+New cluster:
+MOVE from call_expression [2026,2076]
+------------
+===
+move-tree
+---
+call_argument [1669,1675]
+    identifier: _proof [1669,1675]
+to
+call_expression [2026,2076]
+at 3
+===
+move-tree
+---
+call_argument [1648,1655]
+    identifier: _DAO_id [1648,1655]
+to
+call_expression [2026,2076]
+at 1
+===
+move-tree
+---
+identifier: _ableToMint [1636,1647]
+to
+call_expression [2026,2076]
+at 0
+===
+move-tree
+---
+call_argument [1657,1667]
+    member_expression: msg.sender [1657,1667]
+to
+call_expression [793,876]
+at 2
+
+New cluster:
+UPDATE from _mintNFT to _mintNft
+------------
+===
+update-node
+---
+identifier: _mintNFT [1866,1874]
+replace _mintNFT by _mintNft
+
+New cluster:
+UPDATE from IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                         || signer == settings.owner_proxy().ownerOf to !IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                 && signer != settings.owner_proxy().ownerOf
+------------
+===
+update-node
+---
+member_expression: IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                         || signer == settings.owner_proxy().ownerOf [5198,5352]
+replace IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                         || signer == settings.owner_proxy().ownerOf by !IAccessControlUpgradeable(address(settings)).hasRole(keccak256("SIGNER_ROLE"), signer)                 && signer != settings.owner_proxy().ownerOf
+
+New cluster:
+UPDATE from _ableToMint to _checkMintEligibility
+------------
+===
+update-node
+---
+identifier: _ableToMint [1636,1647]
+replace _ableToMint by _checkMintEligibility
+
+New cluster:
+MOVE from call_expression [2026,2076]
+------------
+===
+move-tree
+---
+call_argument [728,738]
+    member_expression: msg.sender [728,738]
+to
+call_expression [2026,2076]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2648,2653]
+    identifier: daoId [2648,2653]
+to
+call_expression [2626,2681]
+at 1
+
+New cluster:
+MOVE from call_expression [2626,2681]
+------------
+===
+move-tree
+---
+call_argument [857,867]
+    member_expression: msg.sender [857,867]
+to
+call_expression [2626,2681]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2667,2672]
+    identifier: proof [2667,2672]
+to
+call_expression [2626,2681]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2674,2680]
+    identifier: length [2674,2680]
+to
+call_expression [2626,2681]
+at 4
+
+New cluster:
+UPDATE from minted to expectedMinted
+------------
+===
+update-node
+---
+identifier: minted [4356,4362]
+replace minted by expectedMinted
+===
+update-node
+---
+identifier: minted [4663,4669]
+replace minted by expectedMinted
+===
+update-node
+---
+identifier: minted [4623,4629]
+replace minted by expectedMinted
+
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+comparison_operator: < [4670,4671]
+replace < by <=
+===
+update-node
+---
+comparison_operator: < [4630,4631]
+replace < by <=
+===
+update-node
+---
+comparison_operator: < [4363,4364]
+replace < by <=
+
+New cluster:
+MOVE from call_argument [2074,2075]
+------------
+===
+move-tree
+---
+number_literal: 1 [1773,1774]
+to
+call_argument [2074,2075]
+at 0
+
+New cluster:
+===
+delete-node
+---
+expression_statement [640,776]
+===
+------------
+===
+delete-node
+---
+call_argument [661,739]
+===
+===
+delete-node
+---
+call_expression [640,775]
+===
+===
+delete-node
+---
+identifier: require [640,647]
+===
+===
+delete-node
+---
+expression_statement [640,776]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [741,765]
+    string_literal [741,765]
+        string: "Account is blacklisted" [741,765]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [785,898]
+===
+------------
+===
+delete-node
+---
+call_expression [785,897]
+===
+===
+delete-node
+---
+expression_statement [785,898]
+===
+===
+delete-node
+---
+call_argument [793,876]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [878,896]
+    string_literal [878,896]
+        string: "Not in whitelist" [878,896]
+
+New cluster:
+===
+delete-node
+---
+if_statement [1631,1707]
+===
+------------
+===
+delete-node
+---
+call_expression [1636,1676]
+===
+===
+delete-node
+---
+!: ! [1635,1636]
+===
+===
+delete-node
+---
+if_statement [1631,1707]
+===
+===
+delete-node
+---
+unary_expression [1635,1676]
+===
+===
+delete-node
+---
+if: if [1631,1633]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [1716,1775]
+===
+------------
+===
+delete-node
+---
+affectation_operator: += [1770,1772]
+===
+===
+delete-node
+---
+member_expression: nftMintTrackers[_DAO_id].mintInfos[msg.sender].minted [1716,1769]
+===
+===
+delete-node
+---
+expression_statement [1716,1775]
+===
+===
+delete-node
+---
+augmented_assignment_expression [1716,1774]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [5115,5426]
+===
+------------
+===
+delete-node
+---
+binary_expression [5136,5382]
+===
+===
+delete-node
+---
+parenthesized_expression [5176,5382]
+===
+===
+delete-node
+---
+expression_statement [5115,5426]
+===
+===
+delete-node
+---
+call_expression [5115,5425]
+===
+===
+delete-node
+---
+logical_operator: && [5173,5175]
+===
+===
+delete-node
+---
+call_argument [5136,5382]
+===
+===
+delete-node
+---
+identifier: require [5115,5122]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [5136,5156]
+    identifier: signer [5136,5142]
+    comparison_operator: != [5143,5145]
+    type_cast_expression [5146,5156]
+        primitive_type: address [5146,5153]
+        call_argument [5154,5155]
+            number_literal: 0 [5154,5155]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5396,5415]
+    string_literal [5396,5415]
+        string: "invalid signature" [5396,5415]
+

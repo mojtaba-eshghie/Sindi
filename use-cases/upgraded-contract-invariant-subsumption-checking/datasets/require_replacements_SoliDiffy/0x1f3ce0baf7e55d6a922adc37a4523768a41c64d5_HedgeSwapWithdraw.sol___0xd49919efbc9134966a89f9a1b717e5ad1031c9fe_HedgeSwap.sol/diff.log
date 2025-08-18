@@ -1,0 +1,3561 @@
+New cluster:
+MOVE from source_file [0,14756]
+------------
+===
+move-tree
+---
+interface_declaration [8085,9466]
+    interface: interface [8085,8094]
+    identifier: IHedgeGovernance [8095,8111]
+    is: is [8112,8114]
+    inheritance_specifier [8115,8128]
+        user_defined_type [8115,8128]
+            identifier: IHedgeMapping [8115,8128]
+    contract_body [8129,9466]
+        function_definition [8539,8596]
+            function: function [8539,8547]
+            identifier: setGovernance [8548,8561]
+            parameter [8562,8574]
+                type_name: address [8562,8569]
+                identifier: addr [8570,8574]
+            parameter [8576,8585]
+                type_name: uint [8576,8580]
+                identifier: flag [8581,8585]
+            visibility: external [8587,8595]
+        function_definition [8998,9064]
+            function: function [8998,9006]
+            identifier: getGovernance [9007,9020]
+            parameter [9021,9033]
+                type_name: address [9021,9028]
+                identifier: addr [9029,9033]
+            visibility: external [9035,9043]
+            state_mutability [9044,9048]
+                view: view [9044,9048]
+            return_type_definition [9049,9063]
+                returns: returns [9049,9056]
+                parameter [9058,9062]
+                    type_name: uint [9058,9062]
+        function_definition [9384,9463]
+            function: function [9384,9392]
+            identifier: checkGovernance [9393,9408]
+            parameter [9409,9421]
+                type_name: address [9409,9416]
+                identifier: addr [9417,9421]
+            parameter [9423,9432]
+                type_name: uint [9423,9427]
+                identifier: flag [9428,9432]
+            visibility: external [9434,9442]
+            state_mutability [9443,9447]
+                view: view [9443,9447]
+            return_type_definition [9448,9462]
+                returns: returns [9448,9455]
+                parameter [9457,9461]
+                    type_name: bool [9457,9461]
+to
+source_file [0,14756]
+at 8
+===
+move-tree
+---
+interface_declaration [4700,7922]
+    interface: interface [4700,4709]
+    identifier: IHedgeMapping [4710,4723]
+    contract_body [4724,7922]
+        function_definition [5239,5471]
+            function: function [5239,5247]
+            identifier: setBuiltinAddress [5248,5265]
+            parameter [5276,5292]
+                type_name: address [5276,5283]
+                identifier: dcuToken [5284,5292]
+            parameter [5303,5319]
+                type_name: address [5303,5310]
+                identifier: hedgeDAO [5311,5319]
+            parameter [5330,5350]
+                type_name: address [5330,5337]
+                identifier: hedgeOptions [5338,5350]
+            parameter [5361,5381]
+                type_name: address [5361,5368]
+                identifier: hedgeFutures [5369,5381]
+            parameter [5392,5420]
+                type_name: address [5392,5399]
+                identifier: hedgeVaultForStaking [5400,5420]
+            parameter [5431,5454]
+                type_name: address [5431,5438]
+                identifier: nestPriceFacade [5439,5454]
+            visibility: external [5462,5470]
+        function_definition [5991,6239]
+            function: function [5991,5999]
+            identifier: getBuiltinAddress [6000,6017]
+            visibility: external [6020,6028]
+            state_mutability [6029,6033]
+                view: view [6029,6033]
+            return_type_definition [6034,6238]
+                returns: returns [6034,6041]
+                parameter [6053,6069]
+                    type_name: address [6053,6060]
+                    identifier: dcuToken [6061,6069]
+                parameter [6080,6096]
+                    type_name: address [6080,6087]
+                    identifier: hedgeDAO [6088,6096]
+                parameter [6107,6127]
+                    type_name: address [6107,6114]
+                    identifier: hedgeOptions [6115,6127]
+                parameter [6138,6158]
+                    type_name: address [6138,6145]
+                    identifier: hedgeFutures [6146,6158]
+                parameter [6169,6197]
+                    type_name: address [6169,6176]
+                    identifier: hedgeVaultForStaking [6177,6197]
+                parameter [6208,6231]
+                    type_name: address [6208,6215]
+                    identifier: nestPriceFacade [6216,6231]
+        function_definition [6342,6404]
+            function: function [6342,6350]
+            identifier: getDCUTokenAddress [6351,6369]
+            visibility: external [6372,6380]
+            state_mutability [6381,6385]
+                view: view [6381,6385]
+            return_type_definition [6386,6403]
+                returns: returns [6386,6393]
+                parameter [6395,6402]
+                    type_name: address [6395,6402]
+        function_definition [6531,6593]
+            function: function [6531,6539]
+            identifier: getHedgeDAOAddress [6540,6558]
+            visibility: external [6561,6569]
+            state_mutability [6570,6574]
+                view: view [6570,6574]
+            return_type_definition [6575,6592]
+                returns: returns [6575,6582]
+                parameter [6584,6591]
+                    type_name: address [6584,6591]
+        function_definition [6728,6794]
+            function: function [6728,6736]
+            identifier: getHedgeOptionsAddress [6737,6759]
+            visibility: external [6762,6770]
+            state_mutability [6771,6775]
+                view: view [6771,6775]
+            return_type_definition [6776,6793]
+                returns: returns [6776,6783]
+                parameter [6785,6792]
+                    type_name: address [6785,6792]
+        function_definition [6929,6995]
+            function: function [6929,6937]
+            identifier: getHedgeFuturesAddress [6938,6960]
+            visibility: external [6963,6971]
+            state_mutability [6972,6976]
+                view: view [6972,6976]
+            return_type_definition [6977,6994]
+                returns: returns [6977,6984]
+                parameter [6986,6993]
+                    type_name: address [6986,6993]
+        function_definition [7146,7220]
+            function: function [7146,7154]
+            identifier: getHedgeVaultForStakingAddress [7155,7185]
+            visibility: external [7188,7196]
+            state_mutability [7197,7201]
+                view: view [7197,7201]
+            return_type_definition [7202,7219]
+                returns: returns [7202,7209]
+                parameter [7211,7218]
+                    type_name: address [7211,7218]
+        function_definition [7361,7423]
+            function: function [7361,7369]
+            identifier: getNestPriceFacade [7370,7388]
+            visibility: external [7391,7399]
+            state_mutability [7400,7404]
+                view: view [7400,7404]
+            return_type_definition [7405,7422]
+                returns: returns [7405,7412]
+                parameter [7414,7421]
+                    type_name: address [7414,7421]
+        function_definition [7650,7719]
+            function: function [7650,7658]
+            identifier: registerAddress [7659,7674]
+            parameter [7675,7694]
+                type_name: string [7675,7681]
+                calldata: calldata [7682,7690]
+                identifier: key [7691,7694]
+            parameter [7696,7708]
+                type_name: address [7696,7703]
+                identifier: addr [7704,7708]
+            visibility: external [7710,7718]
+        function_definition [7844,7919]
+            function: function [7844,7852]
+            identifier: checkAddress [7853,7865]
+            parameter [7866,7885]
+                type_name: string [7866,7872]
+                calldata: calldata [7873,7881]
+                identifier: key [7882,7885]
+            visibility: external [7887,7895]
+            state_mutability [7896,7900]
+                view: view [7896,7900]
+            return_type_definition [7901,7918]
+                returns: returns [7901,7908]
+                parameter [7910,7917]
+                    type_name: address [7910,7917]
+to
+source_file [0,14756]
+at 6
+===
+move-tree
+---
+contract_declaration [11180,12993]
+    identifier: HedgeBase [11189,11198]
+    contract_body [11199,12993]
+        state_variable_declaration [11271,11298]
+            type_name: address [11271,11278]
+            visibility: public [11279,11285]
+            identifier: _governance [11286,11297]
+        function_definition [11430,11594]
+            function: function [11430,11438]
+            identifier: initialize [11439,11449]
+            parameter [11450,11468]
+                type_name: address [11450,11457]
+                identifier: governance [11458,11468]
+            visibility: public [11470,11476]
+            virtual: virtual [11477,11484]
+            function_body [11485,11594]
+                expression_statement [11496,11552]
+                    call_expression [11496,11551]
+                        identifier: require [11496,11503]
+                        call_argument [11504,11529]
+                            binary_expression [11504,11529]
+                                identifier: _governance [11504,11515]
+                                comparison_operator: == [11516,11518]
+                                type_cast_expression [11519,11529]
+                                    primitive_type: address [11519,11526]
+                                    call_argument [11527,11528]
+                                        number_literal: 0 [11527,11528]
+                        call_argument [11531,11550]
+                            string_literal [11531,11550]
+                                string: "Hedge:!initialize" [11531,11550]
+                expression_statement [11562,11587]
+                    assignment_expression [11562,11586]
+                        identifier: _governance [11562,11573]
+                        affectation_operator: = [11574,11575]
+                        identifier: governance [11576,11586]
+        function_definition [11880,12146]
+            function: function [11880,11888]
+            identifier: update [11889,11895]
+            parameter [11896,11917]
+                type_name: address [11896,11903]
+                identifier: newGovernance [11904,11917]
+            visibility: public [11919,11925]
+            virtual: virtual [11926,11933]
+            function_body [11934,12146]
+                variable_declaration_statement [11947,11980]
+                    variable_declaration [11947,11965]
+                        type_name: address [11947,11954]
+                        identifier: governance [11955,11965]
+                    affectation_operator: = [11966,11967]
+                    identifier: _governance [11968,11979]
+                expression_statement [11990,12101]
+                    call_expression [11990,12100]
+                        identifier: require [11990,11997]
+                        call_argument [11998,12085]
+                            call_expression [11998,12085]
+                                member_expression: governance == msg.sender || IHedgeGovernance(governance).checkGovernance [11998,12070]
+                                call_argument [12071,12081]
+                                    member_expression: msg.sender [12071,12081]
+                                call_argument [12083,12084]
+                                    number_literal: 0 [12083,12084]
+                        call_argument [12087,12099]
+                            string_literal [12087,12099]
+                                string: "Hedge:!gov" [12087,12099]
+                expression_statement [12111,12139]
+                    assignment_expression [12111,12138]
+                        identifier: _governance [12111,12122]
+                        affectation_operator: = [12123,12124]
+                        identifier: newGovernance [12125,12138]
+        function_definition [12322,12691]
+            function: function [12322,12330]
+            identifier: migrate [12331,12338]
+            parameter [12339,12359]
+                type_name: address [12339,12346]
+                identifier: tokenAddress [12347,12359]
+            parameter [12361,12371]
+                type_name: uint [12361,12365]
+                identifier: value [12366,12371]
+            visibility: external [12373,12381]
+            modifier_invocation [12382,12396]
+                identifier: onlyGovernance [12382,12396]
+            function_body [12397,12691]
+                variable_declaration_statement [12410,12474]
+                    variable_declaration [12410,12420]
+                        type_name: address [12410,12417]
+                        identifier: to [12418,12420]
+                    affectation_operator: = [12421,12422]
+                    call_expression [12423,12473]
+                        member_expression: IHedgeGovernance(_governance).getHedgeDAOAddress [12423,12471]
+                if_statement [12484,12684]
+                    if: if [12484,12486]
+                    binary_expression [12488,12514]
+                        identifier: tokenAddress [12488,12500]
+                        comparison_operator: == [12501,12503]
+                        type_cast_expression [12504,12514]
+                            primitive_type: address [12504,12511]
+                            call_argument [12512,12513]
+                                number_literal: 0 [12512,12513]
+                    block_statement [12516,12599]
+                        expression_statement [12531,12588]
+                            call_expression [12531,12587]
+                                struct_expression [12531,12574]
+                                    member_expression: IHedgeDAO(to).addETHReward [12531,12557]
+                                    struct_field_assignment [12560,12572]
+                                        identifier: value [12560,12565]
+                                        :: : [12565,12566]
+                                        identifier: value [12567,12572]
+                                call_argument [12576,12586]
+                                    type_cast_expression [12576,12586]
+                                        primitive_type: address [12576,12583]
+                                        call_argument [12584,12585]
+                                            number_literal: 0 [12584,12585]
+                    else: else [12600,12604]
+                    block_statement [12605,12684]
+                        expression_statement [12620,12673]
+                            call_expression [12620,12672]
+                                member_expression: TransferHelper.safeTransfer [12620,12647]
+                                call_argument [12648,12660]
+                                    identifier: tokenAddress [12648,12660]
+                                call_argument [12662,12664]
+                                    identifier: to [12662,12664]
+                                call_argument [12666,12671]
+                                    identifier: value [12666,12671]
+        modifier_definition [12738,12878]
+            modifier: modifier [12738,12746]
+            identifier: onlyGovernance [12747,12761]
+            function_body [12764,12878]
+                expression_statement [12775,12859]
+                    call_expression [12775,12858]
+                        identifier: require [12775,12782]
+                        call_argument [12783,12843]
+                            call_expression [12783,12843]
+                                member_expression: IHedgeGovernance(_governance).checkGovernance [12783,12828]
+                                call_argument [12829,12839]
+                                    member_expression: msg.sender [12829,12839]
+                                call_argument [12841,12842]
+                                    number_literal: 0 [12841,12842]
+                        call_argument [12845,12857]
+                            string_literal [12845,12857]
+                                string: "Hedge:!gov" [12845,12857]
+                expression_statement [12869,12871]
+                    identifier: _ [12869,12870]
+        modifier_definition [12886,12990]
+            modifier: modifier [12886,12894]
+            identifier: noContract [12895,12905]
+            function_body [12908,12990]
+                expression_statement [12919,12971]
+                    call_expression [12919,12970]
+                        identifier: require [12919,12926]
+                        call_argument [12927,12950]
+                            binary_expression [12927,12950]
+                                member_expression: msg.sender [12927,12937]
+                                comparison_operator: == [12938,12940]
+                                member_expression: tx.origin [12941,12950]
+                        call_argument [12952,12969]
+                            string_literal [12952,12969]
+                                string: "Hedge:!contract" [12952,12969]
+                expression_statement [12981,12983]
+                    identifier: _ [12981,12982]
+to
+source_file [0,14756]
+at 12
+===
+move-tree
+---
+interface_declaration [9617,11058]
+    interface: interface [9617,9626]
+    identifier: IHedgeDAO [9627,9636]
+    contract_body [9637,11058]
+        event_definition [9838,9888]
+            identifier: ApplicationChanged [9844,9862]
+            event_paramater [9863,9875]
+                type_name: address [9863,9870]
+                identifier: addr [9871,9875]
+            event_paramater [9877,9886]
+                type_name: uint [9877,9881]
+                identifier: flag [9882,9886]
+        function_definition [10081,10139]
+            function: function [10081,10089]
+            identifier: setApplication [10090,10104]
+            parameter [10105,10117]
+                type_name: address [10105,10112]
+                identifier: addr [10113,10117]
+            parameter [10119,10128]
+                type_name: uint [10119,10123]
+                identifier: flag [10124,10128]
+            visibility: external [10130,10138]
+        function_definition [10331,10400]
+            function: function [10331,10339]
+            identifier: checkApplication [10340,10356]
+            parameter [10357,10369]
+                type_name: address [10357,10364]
+                identifier: addr [10365,10369]
+            visibility: external [10371,10379]
+            state_mutability [10380,10384]
+                view: view [10380,10384]
+            return_type_definition [10385,10399]
+                returns: returns [10385,10392]
+                parameter [10394,10398]
+                    type_name: uint [10394,10398]
+        function_definition [10471,10524]
+            function: function [10471,10479]
+            identifier: addETHReward [10480,10492]
+            parameter [10493,10505]
+                type_name: address [10493,10500]
+                identifier: pool [10501,10505]
+            visibility: external [10507,10515]
+            state_mutability [10516,10523]
+                payable: payable [10516,10523]
+        function_definition [10635,10703]
+            function: function [10635,10643]
+            identifier: totalETHRewards [10644,10659]
+            parameter [10660,10672]
+                type_name: address [10660,10667]
+                identifier: pool [10668,10672]
+            visibility: external [10674,10682]
+            state_mutability [10683,10687]
+                view: view [10683,10687]
+            return_type_definition [10688,10702]
+                returns: returns [10688,10695]
+                parameter [10697,10701]
+                    type_name: uint [10697,10701]
+        function_definition [10962,11055]
+            function: function [10962,10970]
+            identifier: settle [10971,10977]
+            parameter [10978,10990]
+                type_name: address [10978,10985]
+                identifier: pool [10986,10990]
+            parameter [10992,11012]
+                type_name: address [10992,10999]
+                identifier: tokenAddress [11000,11012]
+            parameter [11014,11024]
+                type_name: address [11014,11021]
+                identifier: to [11022,11024]
+            parameter [11026,11036]
+                type_name: uint [11026,11030]
+                identifier: value [11031,11036]
+            visibility: external [11038,11046]
+            state_mutability [11047,11054]
+                payable: payable [11047,11054]
+to
+source_file [0,14756]
+at 10
+===
+move-tree
+---
+contract_declaration [13125,13601]
+    identifier: HedgeFrequentlyUsed [13134,13153]
+    is: is [13154,13156]
+    inheritance_specifier [13157,13166]
+        user_defined_type [13157,13166]
+            identifier: HedgeBase [13157,13166]
+    contract_body [13167,13601]
+        state_variable_declaration [13208,13288]
+            type_name: address [13208,13215]
+            constant: constant [13216,13224]
+            identifier: DCU_TOKEN_ADDRESS [13225,13242]
+            affectation_operator: = [13243,13244]
+            number_literal: 0xf56c6eCE0C0d6Fbb9A53282C0DF71dBFaFA933eF [13245,13287]
+        state_variable_declaration [13340,13428]
+            type_name: address [13340,13347]
+            constant: constant [13348,13356]
+            identifier: NEST_PRICE_FACADE_ADDRESS [13357,13382]
+            affectation_operator: = [13383,13384]
+            number_literal: 0xB5D2890c061c321A5B6A4a4254bb1522425BAF0A [13385,13427]
+        state_variable_declaration [13457,13538]
+            type_name: address [13457,13464]
+            constant: constant [13465,13473]
+            identifier: USDT_TOKEN_ADDRESS [13474,13492]
+            affectation_operator: = [13493,13494]
+            number_literal: 0xdAC17F958D2ee523a2206206994597C13D831ec7 [13495,13537]
+        state_variable_declaration [13564,13598]
+            type_name: uint [13564,13568]
+            constant: constant [13569,13577]
+            identifier: USDT_BASE [13578,13587]
+            affectation_operator: = [13588,13589]
+            number_literal: 1000000 [13590,13597]
+to
+source_file [0,14756]
+at 14
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+interface_declaration [4632,5553]
+    interface: interface [4632,4641]
+    identifier: IHedgeSwap [4642,4652]
+    contract_body [4653,5553]
+        function_definition [4922,4993]
+            function: function [4922,4930]
+            identifier: swapForDCU [4931,4941]
+            parameter [4942,4957]
+                type_name: uint [4942,4946]
+                identifier: nestAmount [4947,4957]
+            visibility: external [4959,4967]
+            return_type_definition [4968,4992]
+                returns: returns [4968,4975]
+                parameter [4977,4991]
+                    type_name: uint [4977,4981]
+                    identifier: dcuAmount [4982,4991]
+        function_definition [5103,5175]
+            function: function [5103,5111]
+            identifier: swapForNEST [5112,5123]
+            parameter [5124,5138]
+                type_name: uint [5124,5128]
+                identifier: dcuAmount [5129,5138]
+            visibility: external [5140,5148]
+            return_type_definition [5149,5174]
+                returns: returns [5149,5156]
+                parameter [5158,5173]
+                    type_name: uint [5158,5162]
+                    identifier: nestAmount [5163,5173]
+        function_definition [5289,5362]
+            function: function [5289,5297]
+            identifier: swapExactDCU [5298,5310]
+            parameter [5311,5325]
+                type_name: uint [5311,5315]
+                identifier: dcuAmount [5316,5325]
+            visibility: external [5327,5335]
+            return_type_definition [5336,5361]
+                returns: returns [5336,5343]
+                parameter [5345,5360]
+                    type_name: uint [5345,5349]
+                    identifier: nestAmount [5350,5360]
+        function_definition [5476,5550]
+            function: function [5476,5484]
+            identifier: swapExactNEST [5485,5498]
+            parameter [5499,5514]
+                type_name: uint [5499,5503]
+                identifier: nestAmount [5504,5514]
+            visibility: external [5516,5524]
+            return_type_definition [5525,5549]
+                returns: returns [5525,5532]
+                parameter [5534,5548]
+                    type_name: uint [5534,5538]
+                    identifier: dcuAmount [5539,5548]
+to
+source_file [0,14756]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [14743,14766]
+    pragma: pragma [14743,14749]
+    solidity_pragma_token [14750,14765]
+        solidity: solidity [14750,14758]
+        solidity_version_comparison_operator [14758,14760]
+            bitwise_operator:  ^ [14758,14760]
+        solidity_version: 0.8.0 [14760,14765]
+to
+source_file [0,14756]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+interface_declaration [14892,15312]
+    interface: interface [14892,14901]
+    identifier: IERC20Metadata [14902,14916]
+    is: is [14917,14919]
+    inheritance_specifier [14920,14926]
+        user_defined_type [14920,14926]
+            identifier: IERC20 [14920,14926]
+    contract_body [14927,15312]
+        function_definition [14996,15050]
+            function: function [14996,15004]
+            identifier: name [15005,15009]
+            visibility: external [15012,15020]
+            state_mutability [15021,15025]
+                view: view [15021,15025]
+            return_type_definition [15026,15049]
+                returns: returns [15026,15033]
+                parameter [15035,15048]
+                    type_name: string [15035,15041]
+                    memory: memory [15042,15048]
+        function_definition [15122,15178]
+            function: function [15122,15130]
+            identifier: symbol [15131,15137]
+            visibility: external [15140,15148]
+            state_mutability [15149,15153]
+                view: view [15149,15153]
+            return_type_definition [15154,15177]
+                returns: returns [15154,15161]
+                parameter [15163,15176]
+                    type_name: string [15163,15169]
+                    memory: memory [15170,15176]
+        function_definition [15259,15309]
+            function: function [15259,15267]
+            identifier: decimals [15268,15276]
+            visibility: external [15279,15287]
+            state_mutability [15288,15292]
+                view: view [15288,15292]
+            return_type_definition [15293,15308]
+                returns: returns [15293,15300]
+                parameter [15302,15307]
+                    type_name: uint8 [15302,15307]
+to
+source_file [0,14756]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [15388,15411]
+    pragma: pragma [15388,15394]
+    solidity_pragma_token [15395,15410]
+        solidity: solidity [15395,15403]
+        solidity_version_comparison_operator [15403,15405]
+            bitwise_operator:  ^ [15403,15405]
+        solidity_version: 0.8.0 [15405,15410]
+to
+source_file [0,14756]
+at 18
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+contract_declaration [15921,16164]
+    abstract: abstract [15921,15929]
+    identifier: Context [15939,15946]
+    contract_body [15947,16164]
+        function_definition [15954,16052]
+            function: function [15954,15962]
+            identifier: _msgSender [15963,15973]
+            visibility: internal [15976,15984]
+            state_mutability [15985,15989]
+                view: view [15985,15989]
+            virtual: virtual [15990,15997]
+            return_type_definition [15998,16015]
+                returns: returns [15998,16005]
+                parameter [16007,16014]
+                    type_name: address [16007,16014]
+            function_body [16016,16052]
+                return_statement [16027,16045]
+                    return: return [16027,16033]
+                    member_expression: msg.sender [16034,16044]
+        function_definition [16060,16161]
+            function: function [16060,16068]
+            identifier: _msgData [16069,16077]
+            visibility: internal [16080,16088]
+            state_mutability [16089,16093]
+                view: view [16089,16093]
+            virtual: virtual [16094,16101]
+            return_type_definition [16102,16126]
+                returns: returns [16102,16109]
+                parameter [16111,16125]
+                    type_name: bytes [16111,16116]
+                    calldata: calldata [16117,16125]
+            function_body [16127,16161]
+                return_statement [16138,16154]
+                    return: return [16138,16144]
+                    member_expression: msg.data [16145,16153]
+to
+source_file [0,14756]
+at 19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [16244,16267]
+    pragma: pragma [16244,16250]
+    solidity_pragma_token [16251,16266]
+        solidity: solidity [16251,16259]
+        solidity_version_comparison_operator [16259,16261]
+            bitwise_operator:  ^ [16259,16261]
+        solidity_version: 0.8.0 [16261,16266]
+to
+source_file [0,14756]
+at 20
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+contract_declaration [17462,28199]
+    identifier: ERC20 [17471,17476]
+    is: is [17477,17479]
+    inheritance_specifier [17480,17487]
+        user_defined_type [17480,17487]
+            identifier: Context [17480,17487]
+    inheritance_specifier [17489,17495]
+        user_defined_type [17489,17495]
+            identifier: IERC20 [17489,17495]
+    inheritance_specifier [17497,17511]
+        user_defined_type [17497,17511]
+            identifier: IERC20Metadata [17497,17511]
+    contract_body [17512,28199]
+        state_variable_declaration [17519,17565]
+            type_name: mapping(address => uint256) [17519,17546]
+            visibility: private [17547,17554]
+            identifier: _balances [17555,17564]
+        state_variable_declaration [17573,17641]
+            type_name: mapping(address => mapping(address => uint256)) [17573,17620]
+            visibility: private [17621,17628]
+            identifier: _allowances [17629,17640]
+        state_variable_declaration [17649,17678]
+            type_name: uint256 [17649,17656]
+            visibility: private [17657,17664]
+            identifier: _totalSupply [17665,17677]
+        state_variable_declaration [17686,17707]
+            type_name: string [17686,17692]
+            visibility: private [17693,17700]
+            identifier: _name [17701,17706]
+        state_variable_declaration [17713,17736]
+            type_name: string [17713,17719]
+            visibility: private [17720,17727]
+            identifier: _symbol [17728,17735]
+        constructor_definition [18056,18172]
+            constructor: constructor [18056,18067]
+            parameter [18068,18087]
+                type_name: string [18068,18074]
+                memory: memory [18075,18081]
+                identifier: name_ [18082,18087]
+            parameter [18089,18110]
+                type_name: string [18089,18095]
+                memory: memory [18096,18102]
+                identifier: symbol_ [18103,18110]
+            function_body [18112,18172]
+                expression_statement [18123,18137]
+                    assignment_expression [18123,18136]
+                        identifier: _name [18123,18128]
+                        affectation_operator: = [18129,18130]
+                        identifier: name_ [18131,18136]
+                expression_statement [18147,18165]
+                    assignment_expression [18147,18164]
+                        identifier: _symbol [18147,18154]
+                        affectation_operator: = [18155,18156]
+                        identifier: symbol_ [18157,18164]
+        function_definition [18242,18342]
+            function: function [18242,18250]
+            identifier: name [18251,18255]
+            visibility: public [18258,18264]
+            state_mutability [18265,18269]
+                view: view [18265,18269]
+            virtual: virtual [18270,18277]
+            override_specifier [18278,18286]
+                override: override [18278,18286]
+            return_type_definition [18287,18310]
+                returns: returns [18287,18294]
+                parameter [18296,18309]
+                    type_name: string [18296,18302]
+                    memory: memory [18303,18309]
+            function_body [18311,18342]
+                return_statement [18322,18335]
+                    return: return [18322,18328]
+                    identifier: _name [18329,18334]
+        function_definition [18461,18565]
+            function: function [18461,18469]
+            identifier: symbol [18470,18476]
+            visibility: public [18479,18485]
+            state_mutability [18486,18490]
+                view: view [18486,18490]
+            virtual: virtual [18491,18498]
+            override_specifier [18499,18507]
+                override: override [18499,18507]
+            return_type_definition [18508,18531]
+                returns: returns [18508,18515]
+                parameter [18517,18530]
+                    type_name: string [18517,18523]
+                    memory: memory [18524,18530]
+            function_body [18532,18565]
+                return_statement [18543,18558]
+                    return: return [18543,18549]
+                    identifier: _symbol [18550,18557]
+        function_definition [19204,19297]
+            function: function [19204,19212]
+            identifier: decimals [19213,19221]
+            visibility: public [19224,19230]
+            state_mutability [19231,19235]
+                view: view [19231,19235]
+            virtual: virtual [19236,19243]
+            override_specifier [19244,19252]
+                override: override [19244,19252]
+            return_type_definition [19253,19268]
+                returns: returns [19253,19260]
+                parameter [19262,19267]
+                    type_name: uint8 [19262,19267]
+            function_body [19269,19297]
+                return_statement [19280,19290]
+                    return: return [19280,19286]
+                    number_literal: 18 [19287,19289]
+        function_definition [19362,19470]
+            function: function [19362,19370]
+            identifier: totalSupply [19371,19382]
+            visibility: public [19385,19391]
+            state_mutability [19392,19396]
+                view: view [19392,19396]
+            virtual: virtual [19397,19404]
+            override_specifier [19405,19413]
+                override: override [19405,19413]
+            return_type_definition [19414,19431]
+                returns: returns [19414,19421]
+                parameter [19423,19430]
+                    type_name: uint256 [19423,19430]
+            function_body [19432,19470]
+                return_statement [19443,19463]
+                    return: return [19443,19449]
+                    identifier: _totalSupply [19450,19462]
+        function_definition [19533,19660]
+            function: function [19533,19541]
+            identifier: balanceOf [19542,19551]
+            parameter [19552,19567]
+                type_name: address [19552,19559]
+                identifier: account [19560,19567]
+            visibility: public [19569,19575]
+            state_mutability [19576,19580]
+                view: view [19576,19580]
+            virtual: virtual [19581,19588]
+            override_specifier [19589,19597]
+                override: override [19589,19597]
+            return_type_definition [19598,19615]
+                returns: returns [19598,19605]
+                parameter [19607,19614]
+                    type_name: uint256 [19607,19614]
+            function_body [19616,19660]
+                return_statement [19627,19653]
+                    return: return [19627,19633]
+                    array_access [19634,19652]
+                        identifier: _balances [19634,19643]
+                        identifier: account [19644,19651]
+        function_definition [19873,20048]
+            function: function [19873,19881]
+            identifier: transfer [19882,19890]
+            parameter [19891,19908]
+                type_name: address [19891,19898]
+                identifier: recipient [19899,19908]
+            parameter [19910,19924]
+                type_name: uint256 [19910,19917]
+                identifier: amount [19918,19924]
+            visibility: public [19926,19932]
+            virtual: virtual [19933,19940]
+            override_specifier [19941,19949]
+                override: override [19941,19949]
+            return_type_definition [19950,19964]
+                returns: returns [19950,19957]
+                parameter [19959,19963]
+                    type_name: bool [19959,19963]
+            function_body [19965,20048]
+                expression_statement [19976,20019]
+                    call_expression [19976,20018]
+                        identifier: _transfer [19976,19985]
+                        call_argument [19986,19998]
+                            call_expression [19986,19998]
+                                identifier: _msgSender [19986,19996]
+                        call_argument [20000,20009]
+                            identifier: recipient [20000,20009]
+                        call_argument [20011,20017]
+                            identifier: amount [20011,20017]
+                return_statement [20029,20041]
+                    return: return [20029,20035]
+                    boolean_literal: true [20036,20040]
+        function_definition [20111,20262]
+            function: function [20111,20119]
+            identifier: allowance [20120,20129]
+            parameter [20130,20143]
+                type_name: address [20130,20137]
+                identifier: owner [20138,20143]
+            parameter [20145,20160]
+                type_name: address [20145,20152]
+                identifier: spender [20153,20160]
+            visibility: public [20162,20168]
+            state_mutability [20169,20173]
+                view: view [20169,20173]
+            virtual: virtual [20174,20181]
+            override_specifier [20182,20190]
+                override: override [20182,20190]
+            return_type_definition [20191,20208]
+                returns: returns [20191,20198]
+                parameter [20200,20207]
+                    type_name: uint256 [20200,20207]
+            function_body [20209,20262]
+                return_statement [20220,20255]
+                    return: return [20220,20226]
+                    array_access [20227,20254]
+                        array_access [20227,20245]
+                            identifier: _allowances [20227,20238]
+                            identifier: owner [20239,20244]
+                        identifier: spender [20246,20253]
+        function_definition [20409,20578]
+            function: function [20409,20417]
+            identifier: approve [20418,20425]
+            parameter [20426,20441]
+                type_name: address [20426,20433]
+                identifier: spender [20434,20441]
+            parameter [20443,20457]
+                type_name: uint256 [20443,20450]
+                identifier: amount [20451,20457]
+            visibility: public [20459,20465]
+            virtual: virtual [20466,20473]
+            override_specifier [20474,20482]
+                override: override [20474,20482]
+            return_type_definition [20483,20497]
+                returns: returns [20483,20490]
+                parameter [20492,20496]
+                    type_name: bool [20492,20496]
+            function_body [20498,20578]
+                expression_statement [20509,20549]
+                    call_expression [20509,20548]
+                        identifier: _approve [20509,20517]
+                        call_argument [20518,20530]
+                            call_expression [20518,20530]
+                                identifier: _msgSender [20518,20528]
+                        call_argument [20532,20539]
+                            identifier: spender [20532,20539]
+                        call_argument [20541,20547]
+                            identifier: amount [20541,20547]
+                return_statement [20559,20571]
+                    return: return [20559,20565]
+                    boolean_literal: true [20566,20570]
+        function_definition [21060,21552]
+            function: function [21060,21068]
+            identifier: transferFrom [21069,21081]
+            parameter [21092,21106]
+                type_name: address [21092,21099]
+                identifier: sender [21100,21106]
+            parameter [21117,21134]
+                type_name: address [21117,21124]
+                identifier: recipient [21125,21134]
+            parameter [21145,21159]
+                type_name: uint256 [21145,21152]
+                identifier: amount [21153,21159]
+            visibility: public [21167,21173]
+            virtual: virtual [21174,21181]
+            override_specifier [21182,21190]
+                override: override [21182,21190]
+            return_type_definition [21191,21205]
+                returns: returns [21191,21198]
+                parameter [21200,21204]
+                    type_name: bool [21200,21204]
+            function_body [21206,21552]
+                expression_statement [21217,21254]
+                    call_expression [21217,21253]
+                        identifier: _transfer [21217,21226]
+                        call_argument [21227,21233]
+                            identifier: sender [21227,21233]
+                        call_argument [21235,21244]
+                            identifier: recipient [21235,21244]
+                        call_argument [21246,21252]
+                            identifier: amount [21246,21252]
+                variable_declaration_statement [21266,21327]
+                    variable_declaration [21266,21290]
+                        type_name: uint256 [21266,21273]
+                        identifier: currentAllowance [21274,21290]
+                    affectation_operator: = [21291,21292]
+                    array_access [21293,21326]
+                        array_access [21293,21312]
+                            identifier: _allowances [21293,21304]
+                            identifier: sender [21305,21311]
+                        call_expression [21313,21325]
+                            identifier: _msgSender [21313,21323]
+                expression_statement [21337,21417]
+                    call_expression [21337,21416]
+                        identifier: require [21337,21344]
+                        call_argument [21345,21371]
+                            binary_expression [21345,21371]
+                                identifier: currentAllowance [21345,21361]
+                                comparison_operator: >= [21362,21364]
+                                identifier: amount [21365,21371]
+                        call_argument [21373,21415]
+                            string_literal [21373,21415]
+                                string: "ERC20: transfer amount exceeds allowance" [21373,21415]
+                block_statement [21427,21521]
+                    unchecked: unchecked [21427,21436]
+                    expression_statement [21452,21510]
+                        call_expression [21452,21509]
+                            identifier: _approve [21452,21460]
+                            call_argument [21461,21467]
+                                identifier: sender [21461,21467]
+                            call_argument [21469,21481]
+                                call_expression [21469,21481]
+                                    identifier: _msgSender [21469,21479]
+                            call_argument [21483,21508]
+                                binary_expression [21483,21508]
+                                    identifier: currentAllowance [21483,21499]
+                                    arithmetic_operator: - [21500,21501]
+                                    identifier: amount [21502,21508]
+                return_statement [21533,21545]
+                    return: return [21533,21539]
+                    boolean_literal: true [21540,21544]
+        function_definition [21961,22176]
+            function: function [21961,21969]
+            identifier: increaseAllowance [21970,21987]
+            parameter [21988,22003]
+                type_name: address [21988,21995]
+                identifier: spender [21996,22003]
+            parameter [22005,22023]
+                type_name: uint256 [22005,22012]
+                identifier: addedValue [22013,22023]
+            visibility: public [22025,22031]
+            virtual: virtual [22032,22039]
+            return_type_definition [22040,22054]
+                returns: returns [22040,22047]
+                parameter [22049,22053]
+                    type_name: bool [22049,22053]
+            function_body [22055,22176]
+                expression_statement [22066,22147]
+                    call_expression [22066,22146]
+                        identifier: _approve [22066,22074]
+                        call_argument [22075,22087]
+                            call_expression [22075,22087]
+                                identifier: _msgSender [22075,22085]
+                        call_argument [22089,22096]
+                            identifier: spender [22089,22096]
+                        call_argument [22098,22145]
+                            binary_expression [22098,22145]
+                                array_access [22098,22132]
+                                    array_access [22098,22123]
+                                        identifier: _allowances [22098,22109]
+                                        call_expression [22110,22122]
+                                            identifier: _msgSender [22110,22120]
+                                    identifier: spender [22124,22131]
+                                arithmetic_operator: + [22133,22134]
+                                identifier: addedValue [22135,22145]
+                return_statement [22157,22169]
+                    return: return [22157,22163]
+                    boolean_literal: true [22164,22168]
+        function_definition [22679,23092]
+            function: function [22679,22687]
+            identifier: decreaseAllowance [22688,22705]
+            parameter [22706,22721]
+                type_name: address [22706,22713]
+                identifier: spender [22714,22721]
+            parameter [22723,22746]
+                type_name: uint256 [22723,22730]
+                identifier: subtractedValue [22731,22746]
+            visibility: public [22748,22754]
+            virtual: virtual [22755,22762]
+            return_type_definition [22763,22777]
+                returns: returns [22763,22770]
+                parameter [22772,22776]
+                    type_name: bool [22772,22776]
+            function_body [22778,23092]
+                variable_declaration_statement [22789,22851]
+                    variable_declaration [22789,22813]
+                        type_name: uint256 [22789,22796]
+                        identifier: currentAllowance [22797,22813]
+                    affectation_operator: = [22814,22815]
+                    array_access [22816,22850]
+                        array_access [22816,22841]
+                            identifier: _allowances [22816,22827]
+                            call_expression [22828,22840]
+                                identifier: _msgSender [22828,22838]
+                        identifier: spender [22842,22849]
+                expression_statement [22861,22947]
+                    call_expression [22861,22946]
+                        identifier: require [22861,22868]
+                        call_argument [22869,22904]
+                            binary_expression [22869,22904]
+                                identifier: currentAllowance [22869,22885]
+                                comparison_operator: >= [22886,22888]
+                                identifier: subtractedValue [22889,22904]
+                        call_argument [22906,22945]
+                            string_literal [22906,22945]
+                                string: "ERC20: decreased allowance below zero" [22906,22945]
+                block_statement [22957,23061]
+                    unchecked: unchecked [22957,22966]
+                    expression_statement [22982,23050]
+                        call_expression [22982,23049]
+                            identifier: _approve [22982,22990]
+                            call_argument [22991,23003]
+                                call_expression [22991,23003]
+                                    identifier: _msgSender [22991,23001]
+                            call_argument [23005,23012]
+                                identifier: spender [23005,23012]
+                            call_argument [23014,23048]
+                                binary_expression [23014,23048]
+                                    identifier: currentAllowance [23014,23030]
+                                    arithmetic_operator: - [23031,23032]
+                                    identifier: subtractedValue [23033,23048]
+                return_statement [23073,23085]
+                    return: return [23073,23079]
+                    boolean_literal: true [23080,23084]
+        function_definition [23582,24315]
+            function: function [23582,23590]
+            identifier: _transfer [23591,23600]
+            parameter [23611,23625]
+                type_name: address [23611,23618]
+                identifier: sender [23619,23625]
+            parameter [23636,23653]
+                type_name: address [23636,23643]
+                identifier: recipient [23644,23653]
+            parameter [23664,23678]
+                type_name: uint256 [23664,23671]
+                identifier: amount [23672,23678]
+            visibility: internal [23686,23694]
+            virtual: virtual [23695,23702]
+            function_body [23703,24315]
+                expression_statement [23714,23785]
+                    call_expression [23714,23784]
+                        identifier: require [23714,23721]
+                        call_argument [23722,23742]
+                            binary_expression [23722,23742]
+                                identifier: sender [23722,23728]
+                                comparison_operator: != [23729,23731]
+                                type_cast_expression [23732,23742]
+                                    primitive_type: address [23732,23739]
+                                    call_argument [23740,23741]
+                                        number_literal: 0 [23740,23741]
+                        call_argument [23744,23783]
+                            string_literal [23744,23783]
+                                string: "ERC20: transfer from the zero address" [23744,23783]
+                expression_statement [23795,23867]
+                    call_expression [23795,23866]
+                        identifier: require [23795,23802]
+                        call_argument [23803,23826]
+                            binary_expression [23803,23826]
+                                identifier: recipient [23803,23812]
+                                comparison_operator: != [23813,23815]
+                                type_cast_expression [23816,23826]
+                                    primitive_type: address [23816,23823]
+                                    call_argument [23824,23825]
+                                        number_literal: 0 [23824,23825]
+                        call_argument [23828,23865]
+                            string_literal [23828,23865]
+                                string: "ERC20: transfer to the zero address" [23828,23865]
+                expression_statement [23879,23927]
+                    call_expression [23879,23926]
+                        identifier: _beforeTokenTransfer [23879,23899]
+                        call_argument [23900,23906]
+                            identifier: sender [23900,23906]
+                        call_argument [23908,23917]
+                            identifier: recipient [23908,23917]
+                        call_argument [23919,23925]
+                            identifier: amount [23919,23925]
+                variable_declaration_statement [23939,23981]
+                    variable_declaration [23939,23960]
+                        type_name: uint256 [23939,23946]
+                        identifier: senderBalance [23947,23960]
+                    affectation_operator: = [23961,23962]
+                    array_access [23963,23980]
+                        identifier: _balances [23963,23972]
+                        identifier: sender [23973,23979]
+                expression_statement [23991,24066]
+                    call_expression [23991,24065]
+                        identifier: require [23991,23998]
+                        call_argument [23999,24022]
+                            binary_expression [23999,24022]
+                                identifier: senderBalance [23999,24012]
+                                comparison_operator: >= [24013,24015]
+                                identifier: amount [24016,24022]
+                        call_argument [24024,24064]
+                            string_literal [24024,24064]
+                                string: "ERC20: transfer amount exceeds balance" [24024,24064]
+                block_statement [24076,24155]
+                    unchecked: unchecked [24076,24085]
+                    expression_statement [24101,24144]
+                        assignment_expression [24101,24143]
+                            array_access [24101,24118]
+                                identifier: _balances [24101,24110]
+                                identifier: sender [24111,24117]
+                            affectation_operator: = [24119,24120]
+                            binary_expression [24121,24143]
+                                identifier: senderBalance [24121,24134]
+                                arithmetic_operator: - [24135,24136]
+                                identifier: amount [24137,24143]
+                expression_statement [24165,24196]
+                    augmented_assignment_expression [24165,24195]
+                        array_access [24165,24185]
+                            identifier: _balances [24165,24174]
+                            identifier: recipient [24175,24184]
+                        affectation_operator: += [24186,24188]
+                        identifier: amount [24189,24195]
+                emit_statement [24208,24249]
+                    identifier: Transfer [24213,24221]
+                    call_argument [24222,24228]
+                        identifier: sender [24222,24228]
+                    call_argument [24230,24239]
+                        identifier: recipient [24230,24239]
+                    call_argument [24241,24247]
+                        identifier: amount [24241,24247]
+                expression_statement [24261,24308]
+                    call_expression [24261,24307]
+                        identifier: _afterTokenTransfer [24261,24280]
+                        call_argument [24281,24287]
+                            identifier: sender [24281,24287]
+                        call_argument [24289,24298]
+                            identifier: recipient [24289,24298]
+                        call_argument [24300,24306]
+                            identifier: amount [24300,24306]
+        function_definition [24602,25001]
+            function: function [24602,24610]
+            identifier: _mint [24611,24616]
+            parameter [24617,24632]
+                type_name: address [24617,24624]
+                identifier: account [24625,24632]
+            parameter [24634,24648]
+                type_name: uint256 [24634,24641]
+                identifier: amount [24642,24648]
+            visibility: internal [24650,24658]
+            virtual: virtual [24659,24666]
+            function_body [24667,25001]
+                expression_statement [24678,24744]
+                    call_expression [24678,24743]
+                        identifier: require [24678,24685]
+                        call_argument [24686,24707]
+                            binary_expression [24686,24707]
+                                identifier: account [24686,24693]
+                                comparison_operator: != [24694,24696]
+                                type_cast_expression [24697,24707]
+                                    primitive_type: address [24697,24704]
+                                    call_argument [24705,24706]
+                                        number_literal: 0 [24705,24706]
+                        call_argument [24709,24742]
+                            string_literal [24709,24742]
+                                string: "ERC20: mint to the zero address" [24709,24742]
+                expression_statement [24756,24806]
+                    call_expression [24756,24805]
+                        identifier: _beforeTokenTransfer [24756,24776]
+                        call_argument [24777,24787]
+                            type_cast_expression [24777,24787]
+                                primitive_type: address [24777,24784]
+                                call_argument [24785,24786]
+                                    number_literal: 0 [24785,24786]
+                        call_argument [24789,24796]
+                            identifier: account [24789,24796]
+                        call_argument [24798,24804]
+                            identifier: amount [24798,24804]
+                expression_statement [24818,24841]
+                    augmented_assignment_expression [24818,24840]
+                        identifier: _totalSupply [24818,24830]
+                        affectation_operator: += [24831,24833]
+                        identifier: amount [24834,24840]
+                expression_statement [24851,24880]
+                    augmented_assignment_expression [24851,24879]
+                        array_access [24851,24869]
+                            identifier: _balances [24851,24860]
+                            identifier: account [24861,24868]
+                        affectation_operator: += [24870,24872]
+                        identifier: amount [24873,24879]
+                emit_statement [24890,24933]
+                    identifier: Transfer [24895,24903]
+                    call_argument [24904,24914]
+                        type_cast_expression [24904,24914]
+                            primitive_type: address [24904,24911]
+                            call_argument [24912,24913]
+                                number_literal: 0 [24912,24913]
+                    call_argument [24916,24923]
+                        identifier: account [24916,24923]
+                    call_argument [24925,24931]
+                        identifier: amount [24925,24931]
+                expression_statement [24945,24994]
+                    call_expression [24945,24993]
+                        identifier: _afterTokenTransfer [24945,24964]
+                        call_argument [24965,24975]
+                            type_cast_expression [24965,24975]
+                                primitive_type: address [24965,24972]
+                                call_argument [24973,24974]
+                                    number_literal: 0 [24973,24974]
+                        call_argument [24977,24984]
+                            identifier: account [24977,24984]
+                        call_argument [24986,24992]
+                            identifier: amount [24986,24992]
+        function_definition [25334,25925]
+            function: function [25334,25342]
+            identifier: _burn [25343,25348]
+            parameter [25349,25364]
+                type_name: address [25349,25356]
+                identifier: account [25357,25364]
+            parameter [25366,25380]
+                type_name: uint256 [25366,25373]
+                identifier: amount [25374,25380]
+            visibility: internal [25382,25390]
+            virtual: virtual [25391,25398]
+            function_body [25399,25925]
+                expression_statement [25410,25478]
+                    call_expression [25410,25477]
+                        identifier: require [25410,25417]
+                        call_argument [25418,25439]
+                            binary_expression [25418,25439]
+                                identifier: account [25418,25425]
+                                comparison_operator: != [25426,25428]
+                                type_cast_expression [25429,25439]
+                                    primitive_type: address [25429,25436]
+                                    call_argument [25437,25438]
+                                        number_literal: 0 [25437,25438]
+                        call_argument [25441,25476]
+                            string_literal [25441,25476]
+                                string: "ERC20: burn from the zero address" [25441,25476]
+                expression_statement [25490,25540]
+                    call_expression [25490,25539]
+                        identifier: _beforeTokenTransfer [25490,25510]
+                        call_argument [25511,25518]
+                            identifier: account [25511,25518]
+                        call_argument [25520,25530]
+                            type_cast_expression [25520,25530]
+                                primitive_type: address [25520,25527]
+                                call_argument [25528,25529]
+                                    number_literal: 0 [25528,25529]
+                        call_argument [25532,25538]
+                            identifier: amount [25532,25538]
+                variable_declaration_statement [25552,25596]
+                    variable_declaration [25552,25574]
+                        type_name: uint256 [25552,25559]
+                        identifier: accountBalance [25560,25574]
+                    affectation_operator: = [25575,25576]
+                    array_access [25577,25595]
+                        identifier: _balances [25577,25586]
+                        identifier: account [25587,25594]
+                expression_statement [25606,25678]
+                    call_expression [25606,25677]
+                        identifier: require [25606,25613]
+                        call_argument [25614,25638]
+                            binary_expression [25614,25638]
+                                identifier: accountBalance [25614,25628]
+                                comparison_operator: >= [25629,25631]
+                                identifier: amount [25632,25638]
+                        call_argument [25640,25676]
+                            string_literal [25640,25676]
+                                string: "ERC20: burn amount exceeds balance" [25640,25676]
+                block_statement [25688,25769]
+                    unchecked: unchecked [25688,25697]
+                    expression_statement [25713,25758]
+                        assignment_expression [25713,25757]
+                            array_access [25713,25731]
+                                identifier: _balances [25713,25722]
+                                identifier: account [25723,25730]
+                            affectation_operator: = [25732,25733]
+                            binary_expression [25734,25757]
+                                identifier: accountBalance [25734,25748]
+                                arithmetic_operator: - [25749,25750]
+                                identifier: amount [25751,25757]
+                expression_statement [25779,25802]
+                    augmented_assignment_expression [25779,25801]
+                        identifier: _totalSupply [25779,25791]
+                        affectation_operator: -= [25792,25794]
+                        identifier: amount [25795,25801]
+                emit_statement [25814,25857]
+                    identifier: Transfer [25819,25827]
+                    call_argument [25828,25835]
+                        identifier: account [25828,25835]
+                    call_argument [25837,25847]
+                        type_cast_expression [25837,25847]
+                            primitive_type: address [25837,25844]
+                            call_argument [25845,25846]
+                                number_literal: 0 [25845,25846]
+                    call_argument [25849,25855]
+                        identifier: amount [25849,25855]
+                expression_statement [25869,25918]
+                    call_expression [25869,25917]
+                        identifier: _afterTokenTransfer [25869,25888]
+                        call_argument [25889,25896]
+                            identifier: account [25889,25896]
+                        call_argument [25898,25908]
+                            type_cast_expression [25898,25908]
+                                primitive_type: address [25898,25905]
+                                call_argument [25906,25907]
+                                    number_literal: 0 [25906,25907]
+                        call_argument [25910,25916]
+                            identifier: amount [25910,25916]
+        function_definition [26363,26743]
+            function: function [26363,26371]
+            identifier: _approve [26372,26380]
+            parameter [26391,26404]
+                type_name: address [26391,26398]
+                identifier: owner [26399,26404]
+            parameter [26415,26430]
+                type_name: address [26415,26422]
+                identifier: spender [26423,26430]
+            parameter [26441,26455]
+                type_name: uint256 [26441,26448]
+                identifier: amount [26449,26455]
+            visibility: internal [26463,26471]
+            virtual: virtual [26472,26479]
+            function_body [26480,26743]
+                expression_statement [26491,26560]
+                    call_expression [26491,26559]
+                        identifier: require [26491,26498]
+                        call_argument [26499,26518]
+                            binary_expression [26499,26518]
+                                identifier: owner [26499,26504]
+                                comparison_operator: != [26505,26507]
+                                type_cast_expression [26508,26518]
+                                    primitive_type: address [26508,26515]
+                                    call_argument [26516,26517]
+                                        number_literal: 0 [26516,26517]
+                        call_argument [26520,26558]
+                            string_literal [26520,26558]
+                                string: "ERC20: approve from the zero address" [26520,26558]
+                expression_statement [26570,26639]
+                    call_expression [26570,26638]
+                        identifier: require [26570,26577]
+                        call_argument [26578,26599]
+                            binary_expression [26578,26599]
+                                identifier: spender [26578,26585]
+                                comparison_operator: != [26586,26588]
+                                type_cast_expression [26589,26599]
+                                    primitive_type: address [26589,26596]
+                                    call_argument [26597,26598]
+                                        number_literal: 0 [26597,26598]
+                        call_argument [26601,26637]
+                            string_literal [26601,26637]
+                                string: "ERC20: approve to the zero address" [26601,26637]
+                expression_statement [26651,26688]
+                    assignment_expression [26651,26687]
+                        array_access [26651,26678]
+                            array_access [26651,26669]
+                                identifier: _allowances [26651,26662]
+                                identifier: owner [26663,26668]
+                            identifier: spender [26670,26677]
+                        affectation_operator: = [26679,26680]
+                        identifier: amount [26681,26687]
+                emit_statement [26698,26736]
+                    identifier: Approval [26703,26711]
+                    call_argument [26712,26717]
+                        identifier: owner [26712,26717]
+                    call_argument [26719,26726]
+                        identifier: spender [26719,26726]
+                    call_argument [26728,26734]
+                        identifier: amount [26728,26734]
+        function_definition [27343,27468]
+            function: function [27343,27351]
+            identifier: _beforeTokenTransfer [27352,27372]
+            parameter [27383,27395]
+                type_name: address [27383,27390]
+                identifier: from [27391,27395]
+            parameter [27406,27416]
+                type_name: address [27406,27413]
+                identifier: to [27414,27416]
+            parameter [27427,27441]
+                type_name: uint256 [27427,27434]
+                identifier: amount [27435,27441]
+            visibility: internal [27449,27457]
+            virtual: virtual [27458,27465]
+            function_body [27466,27468]
+        function_definition [28072,28196]
+            function: function [28072,28080]
+            identifier: _afterTokenTransfer [28081,28100]
+            parameter [28111,28123]
+                type_name: address [28111,28118]
+                identifier: from [28119,28123]
+            parameter [28134,28144]
+                type_name: address [28134,28141]
+                identifier: to [28142,28144]
+            parameter [28155,28169]
+                type_name: uint256 [28155,28162]
+                identifier: amount [28163,28169]
+            visibility: internal [28177,28185]
+            virtual: virtual [28186,28193]
+            function_body [28194,28196]
+to
+source_file [0,14756]
+at 21
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [28257,28280]
+    pragma: pragma [28257,28263]
+    solidity_pragma_token [28264,28279]
+        solidity: solidity [28264,28272]
+        solidity_version_comparison_operator [28272,28274]
+            bitwise_operator:  ^ [28272,28274]
+        solidity_version: 0.8.6 [28274,28279]
+to
+source_file [0,14756]
+at 22
+
+New cluster:
+===
+insert-node
+---
+contract_declaration [28298,29332]
+to
+source_file [0,14756]
+at 23
+------------
+===
+insert-node
+---
+visibility: external [28711,28719]
+to
+function_definition [28664,28778]
+at 4
+===
+insert-node
+---
+is: is [28311,28313]
+to
+contract_declaration [28298,29332]
+at 1
+===
+insert-node
+---
+contract_declaration [28298,29332]
+to
+source_file [0,14756]
+at 23
+===
+insert-node
+---
+contract_body [28369,29332]
+to
+contract_declaration [28298,29332]
+at 4
+===
+insert-node
+---
+function: function [28664,28672]
+to
+function_definition [28664,28778]
+at 0
+===
+insert-node
+---
+identifier: DCU [28307,28310]
+to
+contract_declaration [28298,29332]
+at 0
+===
+insert-node
+---
+function_definition [28664,28778]
+to
+contract_body [28369,29332]
+at 3
+===
+insert-node
+---
+identifier: setMinter [28673,28682]
+to
+function_definition [28664,28778]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [29396,29419]
+    pragma: pragma [29396,29402]
+    solidity_pragma_token [29403,29418]
+        solidity: solidity [29403,29411]
+        solidity_version_comparison_operator [29411,29413]
+            bitwise_operator:  ^ [29411,29413]
+        solidity_version: 0.8.6 [29413,29418]
+to
+source_file [0,14756]
+at 24
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [28314,28323]
+    user_defined_type [28314,28323]
+        identifier: HedgeBase [28314,28323]
+to
+contract_declaration [28298,29332]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [28325,28368]
+    user_defined_type [28325,28330]
+        identifier: ERC20 [28325,28330]
+    call_argument [28331,28360]
+        string_literal [28331,28360]
+            string: "Decentralized Currency Unit" [28331,28360]
+    call_argument [28362,28367]
+        string_literal [28362,28367]
+            string: "DCU" [28362,28367]
+to
+contract_declaration [28298,29332]
+at 3
+
+New cluster:
+UPDATE from HedgeSwapWithdraw to HedgeSwap
+------------
+===
+update-node
+---
+identifier: HedgeSwapWithdraw [13729,13746]
+replace HedgeSwapWithdraw by HedgeSwap
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+inheritance_specifier [29482,29492]
+    user_defined_type [29482,29492]
+        identifier: IHedgeSwap [29482,29492]
+to
+contract_declaration [13720,14756]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [28395,28427]
+    type_name: mapping(address=>uint) [28395,28417]
+    identifier: _minters [28418,28426]
+to
+contract_body [28369,29332]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+constructor_definition [28435,28457]
+    constructor: constructor [28435,28446]
+    function_body [28449,28457]
+to
+contract_body [28369,29332]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [28465,28568]
+    modifier: modifier [28465,28473]
+    identifier: onlyMinter [28474,28484]
+    function_body [28485,28568]
+        expression_statement [28496,28549]
+            call_expression [28496,28548]
+                identifier: require [28496,28503]
+                call_argument [28504,28529]
+                    binary_expression [28504,28529]
+                        array_access [28504,28524]
+                            identifier: _minters [28504,28512]
+                            member_expression: msg.sender [28513,28523]
+                        comparison_operator: == [28525,28527]
+                        number_literal: 1 [28528,28529]
+                call_argument [28531,28547]
+                    string_literal [28531,28547]
+                        string: "DCU:not minter" [28531,28547]
+        expression_statement [28559,28561]
+            identifier: _ [28559,28560]
+to
+contract_body [28369,29332]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [28875,28985]
+    function: function [28875,28883]
+    identifier: checkMinter [28884,28895]
+    parameter [28896,28911]
+        type_name: address [28896,28903]
+        identifier: account [28904,28911]
+    visibility: external [28913,28921]
+    state_mutability [28922,28926]
+        view: view [28922,28926]
+    return_type_definition [28927,28941]
+        returns: returns [28927,28934]
+        parameter [28936,28940]
+            type_name: uint [28936,28940]
+    function_body [28942,28985]
+        return_statement [28953,28978]
+            return: return [28953,28959]
+            array_access [28960,28977]
+                identifier: _minters [28960,28968]
+                identifier: account [28969,28976]
+to
+contract_body [28369,29332]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [29061,29154]
+    function: function [29061,29069]
+    identifier: mint [29070,29074]
+    parameter [29075,29085]
+        type_name: address [29075,29082]
+        identifier: to [29083,29085]
+    parameter [29087,29097]
+        type_name: uint [29087,29091]
+        identifier: value [29092,29097]
+    visibility: external [29099,29107]
+    modifier_invocation [29108,29118]
+        identifier: onlyMinter [29108,29118]
+    function_body [29119,29154]
+        expression_statement [29130,29147]
+            call_expression [29130,29146]
+                identifier: _mint [29130,29135]
+                call_argument [29136,29138]
+                    identifier: to [29136,29138]
+                call_argument [29140,29145]
+                    identifier: value [29140,29145]
+to
+contract_body [28369,29332]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [29232,29329]
+    function: function [29232,29240]
+    identifier: burn [29241,29245]
+    parameter [29246,29258]
+        type_name: address [29246,29253]
+        identifier: from [29254,29258]
+    parameter [29260,29270]
+        type_name: uint [29260,29264]
+        identifier: value [29265,29270]
+    visibility: external [29272,29280]
+    modifier_invocation [29281,29291]
+        identifier: onlyMinter [29281,29291]
+    function_body [29292,29329]
+        expression_statement [29303,29322]
+            call_expression [29303,29321]
+                identifier: _burn [29303,29308]
+                call_argument [29309,29313]
+                    identifier: from [29309,29313]
+                call_argument [29315,29320]
+                    identifier: value [29315,29320]
+to
+contract_body [28369,29332]
+at 6
+
+New cluster:
+===
+insert-node
+---
+function_definition [30218,31042]
+to
+contract_body [13770,14756]
+at 3
+------------
+===
+insert-node
+---
+function_definition [30218,31042]
+to
+contract_body [13770,14756]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [31152,31420]
+to
+contract_body [13770,14756]
+at 4
+------------
+===
+insert-node
+---
+function: function [31152,31160]
+to
+function_definition [31152,31420]
+at 0
+===
+insert-node
+---
+identifier: swapForDCU [31161,31171]
+to
+function_definition [31152,31420]
+at 1
+===
+insert-node
+---
+function_body [31232,31420]
+to
+function_definition [31152,31420]
+at 6
+===
+insert-node
+---
+function_definition [31152,31420]
+to
+contract_body [13770,14756]
+at 4
+===
+insert-node
+---
+visibility: external [31189,31197]
+to
+function_definition [31152,31420]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [31530,31798]
+to
+contract_body [13770,14756]
+at 5
+------------
+===
+insert-node
+---
+visibility: external [31567,31575]
+to
+function_definition [31530,31798]
+at 3
+===
+insert-node
+---
+function_body [31611,31798]
+to
+function_definition [31530,31798]
+at 6
+===
+insert-node
+---
+function_definition [31530,31798]
+to
+contract_body [13770,14756]
+at 5
+===
+insert-node
+---
+function: function [31530,31538]
+to
+function_definition [31530,31798]
+at 0
+===
+insert-node
+---
+identifier: swapForNEST [31539,31550]
+to
+function_definition [31530,31798]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [31912,32098]
+    function: function [31912,31920]
+    identifier: swapExactDCU [31921,31933]
+    parameter [31934,31948]
+        type_name: uint [31934,31938]
+        identifier: dcuAmount [31939,31948]
+    visibility: external [31950,31958]
+    override_specifier [31959,31967]
+        override: override [31959,31967]
+    return_type_definition [31968,31993]
+        returns: returns [31968,31975]
+        parameter [31977,31992]
+            type_name: uint [31977,31981]
+            identifier: nestAmount [31982,31992]
+    function_body [31994,32098]
+        expression_statement [32005,32091]
+            assignment_expression [32005,32090]
+                identifier: nestAmount [32005,32015]
+                affectation_operator: = [32016,32017]
+                call_expression [32018,32090]
+                    identifier: _swapExact [32018,32028]
+                    call_argument [32029,32047]
+                        identifier: NEST_TOKEN_ADDRESS [32029,32047]
+                    call_argument [32049,32066]
+                        identifier: DCU_TOKEN_ADDRESS [32049,32066]
+                    call_argument [32068,32077]
+                        identifier: dcuAmount [32068,32077]
+                    call_argument [32079,32089]
+                        member_expression: msg.sender [32079,32089]
+to
+contract_body [13770,14756]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [32212,32398]
+    function: function [32212,32220]
+    identifier: swapExactNEST [32221,32234]
+    parameter [32235,32250]
+        type_name: uint [32235,32239]
+        identifier: nestAmount [32240,32250]
+    visibility: external [32252,32260]
+    override_specifier [32261,32269]
+        override: override [32261,32269]
+    return_type_definition [32270,32294]
+        returns: returns [32270,32277]
+        parameter [32279,32293]
+            type_name: uint [32279,32283]
+            identifier: dcuAmount [32284,32293]
+    function_body [32295,32398]
+        expression_statement [32305,32391]
+            assignment_expression [32305,32390]
+                identifier: dcuAmount [32305,32314]
+                affectation_operator: = [32315,32316]
+                call_expression [32317,32390]
+                    identifier: _swapExact [32317,32327]
+                    call_argument [32328,32345]
+                        identifier: DCU_TOKEN_ADDRESS [32328,32345]
+                    call_argument [32347,32365]
+                        identifier: NEST_TOKEN_ADDRESS [32347,32365]
+                    call_argument [32367,32377]
+                        identifier: nestAmount [32367,32377]
+                    call_argument [32379,32389]
+                        member_expression: msg.sender [32379,32389]
+to
+contract_body [13770,14756]
+at 7
+
+New cluster:
+===
+insert-node
+---
+function_definition [32436,32765]
+to
+contract_body [13770,14756]
+at 8
+------------
+===
+insert-node
+---
+identifier: _swap [32445,32450]
+to
+function_definition [32436,32765]
+at 1
+===
+insert-node
+---
+function: function [32436,32444]
+to
+function_definition [32436,32765]
+at 0
+===
+insert-node
+---
+function_body [32523,32765]
+to
+function_definition [32436,32765]
+at 7
+===
+insert-node
+---
+function_definition [32436,32765]
+to
+contract_body [13770,14756]
+at 8
+===
+insert-node
+---
+visibility: private [32490,32497]
+to
+function_definition [32436,32765]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [32801,33247]
+to
+contract_body [13770,14756]
+at 9
+------------
+===
+insert-node
+---
+primitive_type: address [33156,33163]
+to
+type_cast_expression [33156,33169]
+at 0
+===
+insert-node
+---
+expression_statement [33107,33181]
+to
+function_body [32908,33247]
+at 3
+===
+insert-node
+---
+binary_expression [33059,33096]
+to
+assignment_expression [33048,33096]
+at 2
+===
+insert-node
+---
+variable_declaration [32919,32932]
+to
+variable_declaration_statement [32919,32972]
+at 0
+===
+insert-node
+---
+type_name: uint [32919,32923]
+to
+variable_declaration [32919,32932]
+at 0
+===
+insert-node
+---
+function_definition [32801,33247]
+to
+contract_body [13770,14756]
+at 9
+===
+insert-node
+---
+variable_declaration [32982,32995]
+to
+variable_declaration_statement [32982,33036]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [32982,33036]
+to
+function_body [32908,33247]
+at 1
+===
+insert-node
+---
+expression_statement [33048,33097]
+to
+function_body [32908,33247]
+at 2
+===
+insert-node
+---
+function: function [32801,32809]
+to
+function_definition [32801,33247]
+at 0
+===
+insert-node
+---
+call_argument [33156,33169]
+to
+call_expression [33107,33180]
+at 3
+===
+insert-node
+---
+call_expression [33107,33180]
+to
+expression_statement [33107,33181]
+at 0
+===
+insert-node
+---
+call_argument [33139,33142]
+to
+call_expression [33107,33180]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [32919,32972]
+to
+function_body [32908,33247]
+at 0
+===
+insert-node
+---
+visibility: private [32876,32883]
+to
+function_definition [32801,33247]
+at 6
+===
+insert-node
+---
+function_body [32908,33247]
+to
+function_definition [32801,33247]
+at 8
+===
+insert-node
+---
+member_expression: TransferHelper.safeTransferFrom [33107,33138]
+to
+call_expression [33107,33180]
+at 0
+===
+insert-node
+---
+assignment_expression [33048,33096]
+to
+expression_statement [33048,33097]
+at 0
+===
+insert-node
+---
+call_argument [33164,33168]
+to
+type_cast_expression [33156,33169]
+at 1
+===
+insert-node
+---
+identifier: _swapExact [32810,32820]
+to
+function_definition [32801,33247]
+at 1
+===
+insert-node
+---
+affectation_operator: = [33057,33058]
+to
+assignment_expression [33048,33096]
+at 1
+===
+insert-node
+---
+type_name: uint [32982,32986]
+to
+variable_declaration [32982,32995]
+at 0
+===
+insert-node
+---
+type_cast_expression [33156,33169]
+to
+call_argument [33156,33169]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [28683,28698]
+    type_name: address [28683,28690]
+    identifier: account [28691,28698]
+to
+function_definition [28664,28778]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [28700,28709]
+    type_name: uint [28700,28704]
+    identifier: flag [28705,28709]
+to
+function_definition [28664,28778]
+at 3
+
+New cluster:
+MOVE from function_definition [30218,31042]
+------------
+===
+move-tree
+---
+visibility: external [14073,14081]
+to
+function_definition [30218,31042]
+at 7
+===
+move-tree
+---
+identifier: withdraw [14062,14070]
+to
+function_definition [30218,31042]
+at 1
+===
+move-tree
+---
+function: function [14053,14061]
+to
+function_definition [30218,31042]
+at 0
+===
+move-tree
+---
+modifier_invocation [14082,14096]
+    identifier: onlyGovernance [14082,14096]
+to
+function_definition [28664,28778]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [28735,28778]
+    expression_statement [28746,28771]
+        assignment_expression [28746,28770]
+            array_access [28746,28763]
+                identifier: _minters [28746,28754]
+                identifier: account [28755,28762]
+            affectation_operator: = [28764,28765]
+            identifier: flag [28766,28770]
+to
+function_definition [28664,28778]
+at 6
+
+New cluster:
+UPDATE from withdraw to swap
+------------
+===
+update-node
+---
+identifier: withdraw [14062,14070]
+replace withdraw by swap
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30242,30253]
+    type_name: address [30242,30249]
+    identifier: src [30250,30253]
+to
+function_definition [30218,31042]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30265,30277]
+    type_name: address [30265,30272]
+    identifier: dest [30273,30277]
+to
+function_definition [30218,31042]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30289,30293]
+    type_name: uint [30289,30293]
+to
+function_definition [30218,31042]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30318,30328]
+    type_name: address [30318,30325]
+    identifier: to [30326,30328]
+to
+function_definition [30218,31042]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [30340,30355]
+    type_name: address [30340,30347]
+    identifier: payback [30348,30355]
+to
+function_definition [30218,31042]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [30372,30379]
+    payable: payable [30372,30379]
+to
+function_definition [30218,31042]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [30380,30442]
+    returns: returns [30380,30387]
+    parameter [30399,30413]
+        type_name: uint [30399,30403]
+        identifier: amountOut [30404,30413]
+    parameter [30425,30435]
+        type_name: uint [30425,30429]
+        identifier: mined [30430,30435]
+to
+function_definition [30218,31042]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [30443,31042]
+    if_statement [30454,30604]
+        if: if [30454,30456]
+        binary_expression [30458,30471]
+            member_expression: msg.value [30458,30467]
+            comparison_operator: > [30468,30469]
+            number_literal: 0 [30470,30471]
+        block_statement [30473,30604]
+            expression_statement [30542,30593]
+                call_expression [30542,30592]
+                    member_expression: TransferHelper.safeTransferETH [30542,30572]
+                    call_argument [30573,30580]
+                        identifier: payback [30573,30580]
+                    call_argument [30582,30591]
+                        member_expression: msg.value [30582,30591]
+    if_statement [30651,31013]
+        if: if [30651,30653]
+        binary_expression [30655,30709]
+            binary_expression [30655,30680]
+                identifier: src [30655,30658]
+                comparison_operator: == [30659,30661]
+                identifier: NEST_TOKEN_ADDRESS [30662,30680]
+            logical_operator: && [30681,30683]
+            binary_expression [30684,30709]
+                identifier: dest [30684,30688]
+                comparison_operator: == [30689,30691]
+                identifier: DCU_TOKEN_ADDRESS [30692,30709]
+        block_statement [30711,30798]
+            expression_statement [30726,30787]
+                assignment_expression [30726,30786]
+                    identifier: amountOut [30726,30735]
+                    affectation_operator: = [30736,30737]
+                    call_expression [30738,30786]
+                        identifier: _swap [30738,30743]
+                        call_argument [30744,30762]
+                            identifier: NEST_TOKEN_ADDRESS [30744,30762]
+                        call_argument [30764,30781]
+                            identifier: DCU_TOKEN_ADDRESS [30764,30781]
+                        call_argument [30783,30785]
+                            identifier: to [30783,30785]
+        else: else [30799,30803]
+        if_statement [30804,31013]
+            if: if [30804,30806]
+            binary_expression [30808,30862]
+                binary_expression [30808,30832]
+                    identifier: src [30808,30811]
+                    comparison_operator: == [30812,30814]
+                    identifier: DCU_TOKEN_ADDRESS [30815,30832]
+                logical_operator: && [30833,30835]
+                binary_expression [30836,30862]
+                    identifier: dest [30836,30840]
+                    comparison_operator: == [30841,30843]
+                    identifier: NEST_TOKEN_ADDRESS [30844,30862]
+            block_statement [30864,30951]
+                expression_statement [30879,30940]
+                    assignment_expression [30879,30939]
+                        identifier: amountOut [30879,30888]
+                        affectation_operator: = [30889,30890]
+                        call_expression [30891,30939]
+                            identifier: _swap [30891,30896]
+                            call_argument [30897,30914]
+                                identifier: DCU_TOKEN_ADDRESS [30897,30914]
+                            call_argument [30916,30934]
+                                identifier: NEST_TOKEN_ADDRESS [30916,30934]
+                            call_argument [30936,30938]
+                                identifier: to [30936,30938]
+            else: else [30952,30956]
+            block_statement [30957,31013]
+                revert_statement [30972,31002]
+                    revert: revert [30972,30978]
+                    parenthesized_expression [30978,31001]
+                        string_literal [30979,31000]
+                            string: "HS:pair not allowed" [30979,31000]
+    expression_statement [31025,31035]
+        assignment_expression [31025,31034]
+            identifier: mined [31025,31030]
+            affectation_operator: = [31031,31032]
+            number_literal: 0 [31033,31034]
+to
+function_definition [30218,31042]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [31172,31187]
+    type_name: uint [31172,31176]
+    identifier: nestAmount [31177,31187]
+to
+function_definition [31152,31420]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [31198,31206]
+    override: override [31198,31206]
+to
+function_definition [31152,31420]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [31207,31231]
+    returns: returns [31207,31214]
+    parameter [31216,31230]
+        type_name: uint [31216,31220]
+        identifier: dcuAmount [31221,31230]
+to
+function_definition [31152,31420]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [31551,31565]
+    type_name: uint [31551,31555]
+    identifier: dcuAmount [31556,31565]
+to
+function_definition [31530,31798]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [31576,31584]
+    override: override [31576,31584]
+to
+function_definition [31530,31798]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [31585,31610]
+    returns: returns [31585,31592]
+    parameter [31594,31609]
+        type_name: uint [31594,31598]
+        identifier: nestAmount [31599,31609]
+to
+function_definition [31530,31798]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32451,32462]
+    type_name: address [32451,32458]
+    identifier: src [32459,32462]
+to
+function_definition [32436,32765]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32464,32476]
+    type_name: address [32464,32471]
+    identifier: dest [32472,32476]
+to
+function_definition [32436,32765]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32478,32488]
+    type_name: address [32478,32485]
+    identifier: to [32486,32488]
+to
+function_definition [32436,32765]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [32498,32522]
+    returns: returns [32498,32505]
+    parameter [32507,32521]
+        type_name: uint [32507,32511]
+        identifier: amountOut [32512,32521]
+to
+function_definition [32436,32765]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32821,32832]
+    type_name: address [32821,32828]
+    identifier: src [32829,32832]
+to
+function_definition [32801,33247]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32834,32846]
+    type_name: address [32834,32841]
+    identifier: dest [32842,32846]
+to
+function_definition [32801,33247]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32848,32862]
+    type_name: uint [32848,32852]
+    identifier: amountOut [32853,32862]
+to
+function_definition [32801,33247]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32864,32874]
+    type_name: address [32864,32871]
+    identifier: to [32872,32874]
+to
+function_definition [32801,33247]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [32884,32907]
+    returns: returns [32884,32891]
+    parameter [32893,32906]
+        type_name: uint [32893,32897]
+        identifier: amountIn [32898,32906]
+to
+function_definition [32801,33247]
+at 7
+
+New cluster:
+MOVE from function_body [31232,31420]
+------------
+===
+move-tree
+---
+expression_statement [14527,14590]
+    assignment_expression [14527,14589]
+        identifier: balance1 [14527,14535]
+        affectation_operator: = [14536,14537]
+        call_expression [14538,14589]
+            member_expression: IERC20( DCU_TOKEN_ADDRESS).balanceOf [14538,14574]
+            call_argument [14575,14588]
+                type_cast_expression [14575,14588]
+                    primitive_type: address [14575,14582]
+                    call_argument [14583,14587]
+                        identifier: this [14583,14587]
+to
+function_body [31232,31420]
+at 0
+===
+move-tree
+---
+variable_declaration_statement [14186,14254]
+    variable_declaration [14186,14199]
+        type_name: uint [14186,14190]
+        identifier: balance1 [14191,14199]
+    affectation_operator: = [14200,14201]
+    call_expression [14202,14253]
+        member_expression: IERC20( DCU_TOKEN_ADDRESS).balanceOf [14202,14238]
+        call_argument [14239,14252]
+            type_cast_expression [14239,14252]
+                primitive_type: address [14239,14246]
+                call_argument [14247,14251]
+                    identifier: this [14247,14251]
+to
+function_body [32523,32765]
+at 1
+===
+move-tree
+---
+expression_statement [14454,14517]
+    assignment_expression [14454,14516]
+        identifier: balance0 [14454,14462]
+        affectation_operator: = [14463,14464]
+        call_expression [14465,14516]
+            member_expression: IERC20(NEST_TOKEN_ADDRESS).balanceOf [14465,14501]
+            call_argument [14502,14515]
+                type_cast_expression [14502,14515]
+                    primitive_type: address [14502,14509]
+                    call_argument [14510,14514]
+                        identifier: this [14510,14514]
+to
+function_body [31611,31798]
+at 0
+===
+move-tree
+---
+variable_declaration_statement [14108,14176]
+    variable_declaration [14108,14121]
+        type_name: uint [14108,14112]
+        identifier: balance0 [14113,14121]
+    affectation_operator: = [14122,14123]
+    call_expression [14124,14175]
+        member_expression: IERC20(NEST_TOKEN_ADDRESS).balanceOf [14124,14160]
+        call_argument [14161,14174]
+            type_cast_expression [14161,14174]
+                primitive_type: address [14161,14168]
+                call_argument [14169,14173]
+                    identifier: this [14169,14173]
+to
+function_body [32523,32765]
+at 0
+===
+move-tree
+---
+expression_statement [14359,14434]
+    call_expression [14359,14433]
+        member_expression: TransferHelper.safeTransfer [14359,14386]
+        call_argument [14388,14405]
+            identifier: DCU_TOKEN_ADDRESS [14388,14405]
+        call_argument [14407,14417]
+            member_expression: msg.sender [14407,14417]
+        call_argument [14419,14432]
+            binary_expression [14419,14432]
+                identifier: balance1 [14419,14427]
+                >>: >> [14428,14430]
+                number_literal: 1 [14431,14432]
+to
+function_body [32523,32765]
+at 3
+===
+move-tree
+---
+expression_statement [14274,14349]
+    call_expression [14274,14348]
+        member_expression: TransferHelper.safeTransfer [14274,14301]
+        call_argument [14302,14320]
+            identifier: NEST_TOKEN_ADDRESS [14302,14320]
+        call_argument [14322,14332]
+            member_expression: msg.sender [14322,14332]
+        call_argument [14334,14347]
+            binary_expression [14334,14347]
+                identifier: balance0 [14334,14342]
+                >>: >> [14343,14345]
+                number_literal: 1 [14346,14347]
+to
+function_body [32523,32765]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [31344,31413]
+    assignment_expression [31344,31412]
+        identifier: dcuAmount [31344,31353]
+        affectation_operator: = [31354,31355]
+        call_expression [31356,31412]
+            identifier: _swap [31356,31361]
+            call_argument [31362,31380]
+                identifier: NEST_TOKEN_ADDRESS [31362,31380]
+            call_argument [31382,31399]
+                identifier: DCU_TOKEN_ADDRESS [31382,31399]
+            call_argument [31401,31411]
+                member_expression: msg.sender [31401,31411]
+to
+function_body [31232,31420]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [31721,31791]
+    assignment_expression [31721,31790]
+        identifier: nestAmount [31721,31731]
+        affectation_operator: = [31732,31733]
+        call_expression [31734,31790]
+            identifier: _swap [31734,31739]
+            call_argument [31740,31757]
+                identifier: DCU_TOKEN_ADDRESS [31740,31757]
+            call_argument [31759,31777]
+                identifier: NEST_TOKEN_ADDRESS [31759,31777]
+            call_argument [31779,31789]
+                member_expression: msg.sender [31779,31789]
+to
+function_body [31611,31798]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [33191,33240]
+    call_expression [33191,33239]
+        member_expression: TransferHelper.safeTransfer [33191,33218]
+        call_argument [33219,33223]
+            identifier: dest [33219,33223]
+        call_argument [33225,33227]
+            identifier: to [33225,33227]
+        call_argument [33229,33238]
+            identifier: amountOut [33229,33238]
+to
+function_body [32908,33247]
+at 4
+
+New cluster:
+MOVE from variable_declaration [32982,32995]
+------------
+===
+move-tree
+---
+identifier: balance1 [14527,14535]
+to
+variable_declaration [32982,32995]
+at 1
+===
+move-tree
+---
+affectation_operator: = [14536,14537]
+to
+variable_declaration_statement [32982,33036]
+at 1
+===
+move-tree
+---
+call_expression [14538,14589]
+    member_expression: IERC20( DCU_TOKEN_ADDRESS).balanceOf [14538,14574]
+    call_argument [14575,14588]
+        type_cast_expression [14575,14588]
+            primitive_type: address [14575,14582]
+            call_argument [14583,14587]
+                identifier: this [14583,14587]
+to
+expression_statement [14527,14590]
+at 0
+
+New cluster:
+MOVE from variable_declaration [32919,32932]
+------------
+===
+move-tree
+---
+identifier: balance0 [14454,14462]
+to
+variable_declaration [32919,32932]
+at 1
+===
+move-tree
+---
+call_expression [14465,14516]
+    member_expression: IERC20(NEST_TOKEN_ADDRESS).balanceOf [14465,14501]
+    call_argument [14502,14515]
+        type_cast_expression [14502,14515]
+            primitive_type: address [14502,14509]
+            call_argument [14510,14514]
+                identifier: this [14510,14514]
+to
+expression_statement [14454,14517]
+at 0
+===
+move-tree
+---
+affectation_operator: = [14463,14464]
+to
+variable_declaration_statement [32919,32972]
+at 1
+
+New cluster:
+===
+insert-node
+---
+assignment_expression [32663,32698]
+to
+expression_statement [14274,14349]
+at 0
+------------
+===
+insert-node
+---
+identifier: amountOut [32663,32672]
+to
+assignment_expression [32663,32698]
+at 0
+===
+insert-node
+---
+arithmetic_operator: - [32684,32685]
+to
+binary_expression [32675,32698]
+at 1
+===
+insert-node
+---
+affectation_operator: = [32673,32674]
+to
+assignment_expression [32663,32698]
+at 1
+===
+insert-node
+---
+binary_expression [32675,32698]
+to
+assignment_expression [32663,32698]
+at 2
+===
+insert-node
+---
+identifier: balance1 [32675,32683]
+to
+binary_expression [32675,32698]
+at 0
+===
+insert-node
+---
+assignment_expression [32663,32698]
+to
+expression_statement [14274,14349]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [32935,32971]
+    member_expression: IERC20(src).balanceOf [32935,32956]
+    call_argument [32957,32970]
+        type_cast_expression [32957,32970]
+            primitive_type: address [32957,32964]
+            call_argument [32965,32969]
+                identifier: this [32965,32969]
+to
+variable_declaration_statement [32919,32972]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [32998,33035]
+    member_expression: IERC20(dest).balanceOf [32998,33020]
+    call_argument [33021,33034]
+        type_cast_expression [33021,33034]
+            primitive_type: address [33021,33028]
+            call_argument [33029,33033]
+                identifier: this [33029,33033]
+to
+variable_declaration_statement [32982,33036]
+at 2
+
+New cluster:
+UPDATE from IERC20( DCU_TOKEN_ADDRESS).balanceOf to TransferHelper.safeTransferFrom
+------------
+===
+update-node
+---
+member_expression: IERC20( DCU_TOKEN_ADDRESS).balanceOf [14538,14574]
+replace IERC20( DCU_TOKEN_ADDRESS).balanceOf by TransferHelper.safeTransferFrom
+===
+update-node
+---
+member_expression: IERC20(NEST_TOKEN_ADDRESS).balanceOf [14465,14501]
+replace IERC20(NEST_TOKEN_ADDRESS).balanceOf by TransferHelper.safeTransferFrom
+
+New cluster:
+MOVE from call_expression [14538,14589]
+------------
+===
+move-tree
+---
+call_argument [14322,14332]
+    member_expression: msg.sender [14322,14332]
+to
+call_expression [14538,14589]
+at 2
+===
+move-tree
+---
+call_argument [14302,14320]
+    identifier: NEST_TOKEN_ADDRESS [14302,14320]
+to
+call_expression [14538,14589]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [31322,31332]
+    identifier: nestAmount [31322,31332]
+to
+call_expression [14538,14589]
+at 4
+
+New cluster:
+MOVE from call_expression [14465,14516]
+------------
+===
+move-tree
+---
+call_argument [14388,14405]
+    identifier: DCU_TOKEN_ADDRESS [14388,14405]
+to
+call_expression [14465,14516]
+at 1
+===
+move-tree
+---
+call_argument [14407,14417]
+    member_expression: msg.sender [14407,14417]
+to
+call_expression [14465,14516]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [31700,31709]
+    identifier: dcuAmount [31700,31709]
+to
+call_expression [14465,14516]
+at 4
+
+New cluster:
+UPDATE from IERC20(NEST_TOKEN_ADDRESS).balanceOf to IERC20(src).balanceOf
+------------
+===
+update-node
+---
+member_expression: IERC20(NEST_TOKEN_ADDRESS).balanceOf [14124,14160]
+replace IERC20(NEST_TOKEN_ADDRESS).balanceOf by IERC20(src).balanceOf
+
+New cluster:
+UPDATE from IERC20( DCU_TOKEN_ADDRESS).balanceOf to IERC20(dest).balanceOf
+------------
+===
+update-node
+---
+member_expression: IERC20( DCU_TOKEN_ADDRESS).balanceOf [14202,14238]
+replace IERC20( DCU_TOKEN_ADDRESS).balanceOf by IERC20(dest).balanceOf
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [32737,32741]
+    identifier: dest [32737,32741]
+to
+call_expression [14359,14433]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [32743,32745]
+    identifier: to [32743,32745]
+to
+call_expression [14359,14433]
+at 2
+
+New cluster:
+UPDATE from require to amountIn
+------------
+===
+update-node
+---
+identifier: require [14610,14617]
+replace require by amountIn
+
+New cluster:
+MOVE from call_expression [33107,33180]
+------------
+===
+move-tree
+---
+call_argument [14725,14744]
+    string_literal [14725,14744]
+        string: "HSW:balance error" [14725,14744]
+to
+call_expression [33107,33180]
+at 4
+===
+move-tree
+---
+identifier: require [14610,14617]
+to
+assignment_expression [33048,33096]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [33144,33154]
+    member_expression: msg.sender [33144,33154]
+to
+call_expression [33107,33180]
+at 2
+
+New cluster:
+MOVE from binary_expression [32675,32698]
+------------
+===
+move-tree
+---
+binary_expression [14334,14347]
+    identifier: balance0 [14334,14342]
+    >>: >> [14343,14345]
+    number_literal: 1 [14346,14347]
+to
+binary_expression [32675,32698]
+at 2
+
+New cluster:
+UPDATE from balance1 to amountOut
+------------
+===
+update-node
+---
+identifier: balance1 [14419,14427]
+replace balance1 by amountOut
+
+New cluster:
+MOVE from call_argument [14419,14432]
+------------
+===
+move-tree
+---
+identifier: balance1 [14419,14427]
+to
+call_argument [14419,14432]
+at 0
+
+New cluster:
+MOVE from binary_expression [33059,33096]
+------------
+===
+move-tree
+---
+binary_expression [14618,14637]
+    identifier: balance0 [14618,14626]
+    arithmetic_operator: * [14627,14628]
+    identifier: balance1 [14629,14637]
+to
+binary_expression [33059,33096]
+at 0
+
+New cluster:
+MOVE from binary_expression [33059,33096]
+------------
+===
+move-tree
+---
+arithmetic_operator: - [14642,14643]
+to
+binary_expression [33059,33096]
+at 1
+
+New cluster:
+MOVE from binary_expression [33059,33096]
+------------
+===
+move-tree
+---
+identifier: balance0 [14680,14688]
+to
+binary_expression [33059,33096]
+at 2
+===
+move-tree
+---
+identifier: balance1 [14691,14699]
+to
+call_argument [33139,33142]
+at 0
+
+New cluster:
+UPDATE from balance1 to src
+------------
+===
+update-node
+---
+identifier: balance1 [14691,14699]
+replace balance1 by src
+
+New cluster:
+===
+insert-node
+---
+identifier: amountIn [33171,33179]
+to
+call_argument [14725,14744]
+at 0
+------------
+===
+insert-node
+---
+identifier: amountIn [33171,33179]
+to
+call_argument [14725,14744]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: K [32686,32687]
+to
+binary_expression [14334,14347]
+at 0
+------------
+===
+insert-node
+---
+identifier: K [32686,32687]
+to
+binary_expression [14334,14347]
+at 0
+
+New cluster:
+===
+insert-node
+---
+arithmetic_operator: / [32688,32689]
+to
+binary_expression [14334,14347]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: / [32688,32689]
+to
+binary_expression [14334,14347]
+at 1
+
+New cluster:
+UPDATE from balance0 to K
+------------
+===
+update-node
+---
+identifier: balance0 [14618,14626]
+replace balance0 by K
+
+New cluster:
+UPDATE from * to /
+------------
+===
+update-node
+---
+arithmetic_operator: * [14627,14628]
+replace * by /
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [33063,33085]
+to
+binary_expression [14618,14637]
+at 2
+------------
+===
+insert-node
+---
+binary_expression [33064,33084]
+to
+parenthesized_expression [33063,33085]
+at 0
+===
+insert-node
+---
+arithmetic_operator: - [33073,33074]
+to
+binary_expression [33064,33084]
+at 1
+===
+insert-node
+---
+parenthesized_expression [33063,33085]
+to
+binary_expression [14618,14637]
+at 2
+===
+insert-node
+---
+identifier: amountOut [33075,33084]
+to
+binary_expression [33064,33084]
+at 2
+
+New cluster:
+UPDATE from K to this
+------------
+===
+update-node
+---
+identifier: K [14702,14703]
+replace K by this
+
+New cluster:
+MOVE from call_argument [33164,33168]
+------------
+===
+move-tree
+---
+identifier: K [14702,14703]
+to
+call_argument [33164,33168]
+at 0
+
+New cluster:
+MOVE from binary_expression [33064,33084]
+------------
+===
+move-tree
+---
+identifier: balance1 [14629,14637]
+to
+binary_expression [33064,33084]
+at 0
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [14527,14589]
+===
+------------
+===
+delete-node
+---
+assignment_expression [14527,14589]
+===
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [14454,14516]
+===
+------------
+===
+delete-node
+---
+assignment_expression [14454,14516]
+===
+
+New cluster:
+===
+delete-node
+---
+>>: >> [14343,14345]
+===
+------------
+===
+delete-node
+---
+>>: >> [14343,14345]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 1 [14346,14347]
+===
+------------
+===
+delete-node
+---
+number_literal: 1 [14346,14347]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [14274,14348]
+===
+------------
+===
+delete-node
+---
+call_expression [14274,14348]
+===
+===
+delete-node
+---
+call_argument [14334,14347]
+===
+===
+delete-node
+---
+member_expression: TransferHelper.safeTransfer [14274,14301]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [14419,14432]
+===
+------------
+===
+delete-node
+---
+binary_expression [14419,14432]
+===
+===
+delete-node
+---
+>>: >> [14428,14430]
+===
+===
+delete-node
+---
+number_literal: 1 [14431,14432]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [14725,14744]
+    string: "HSW:balance error" [14725,14744]
+
+New cluster:
+===
+delete-node
+---
+function_definition [14053,14753]
+===
+------------
+===
+delete-node
+---
+logical_operator: && [14677,14679]
+===
+===
+delete-node
+---
+arithmetic_operator: * [14689,14690]
+===
+===
+delete-node
+---
+comparison_operator: > [14638,14639]
+===
+===
+delete-node
+---
+binary_expression [14680,14723]
+===
+===
+delete-node
+---
+comparison_operator: < [14700,14701]
+===
+===
+delete-node
+---
+arithmetic_operator: + [14704,14705]
+===
+===
+delete-node
+---
+expression_statement [14610,14746]
+===
+===
+delete-node
+---
+function_body [14097,14753]
+===
+===
+delete-node
+---
+binary_expression [14618,14661]
+===
+===
+delete-node
+---
+identifier: K [14640,14641]
+===
+===
+delete-node
+---
+call_argument [14618,14723]
+===
+===
+delete-node
+---
+function_definition [14053,14753]
+===
+===
+delete-node
+---
+call_expression [14610,14745]
+===
+===
+delete-node
+---
+binary_expression [14640,14661]
+===
+===
+delete-node
+---
+binary_expression [14618,14723]
+===
+===
+delete-node
+---
+binary_expression [14680,14699]
+===
+===
+delete-node
+---
+binary_expression [14702,14723]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [14644,14661]
+    number_literal: 1 ether [14644,14651]
+    arithmetic_operator: * [14652,14653]
+    number_literal: 1 ether [14654,14661]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [14706,14723]
+    number_literal: 1 ether [14706,14713]
+    arithmetic_operator: * [14714,14715]
+    number_literal: 1 ether [14716,14723]
+

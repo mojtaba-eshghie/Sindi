@@ -1,0 +1,5 @@
+results/differencing_results/0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol.log:
+  2235  identifier: require [15495,15502]
+  2236: replace require by _getListing
+  2237  ===
+

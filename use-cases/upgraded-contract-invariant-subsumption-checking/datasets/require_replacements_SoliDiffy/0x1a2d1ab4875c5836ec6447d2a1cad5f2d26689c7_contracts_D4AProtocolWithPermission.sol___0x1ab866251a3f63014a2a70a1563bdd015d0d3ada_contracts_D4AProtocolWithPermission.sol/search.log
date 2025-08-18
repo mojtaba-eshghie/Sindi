@@ -1,0 +1,9 @@
+results/differencing_results/0x1a2d1ab4875c5836ec6447d2a1cad5f2d26689c7_contracts_D4AProtocolWithPermission.sol___0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocolWithPermission.sol.log:
+  698  identifier: require [1573,1580]
+  699: replace require by ExceedMaxMintAmount
+  700  
+
+  766  identifier: require [1457,1464]
+  767: replace require by _ableToMint
+  768  
+

@@ -1,0 +1,352 @@
+New cluster:
+===
+insert-node
+---
+identifier: ERC721Upgradeable [760,777]
+to
+contract_declaration [751,15115]
+at 0
+------------
+===
+insert-node
+---
+identifier: ERC721Upgradeable [760,777]
+to
+contract_declaration [751,15115]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [778,780]
+to
+contract_declaration [751,15115]
+at 1
+------------
+===
+insert-node
+---
+is: is [778,780]
+to
+contract_declaration [751,15115]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [12173,12306]
+to
+contract_body [882,15115]
+at 34
+------------
+===
+insert-node
+---
+function: function [12173,12181]
+to
+function_definition [12173,12306]
+at 0
+===
+insert-node
+---
+virtual: virtual [12228,12235]
+to
+function_definition [12173,12306]
+at 5
+===
+insert-node
+---
+function_body [12236,12306]
+to
+function_definition [12173,12306]
+at 6
+===
+insert-node
+---
+visibility: internal [12214,12222]
+to
+function_definition [12173,12306]
+at 3
+===
+insert-node
+---
+function_definition [12173,12306]
+to
+contract_body [882,15115]
+at 34
+===
+insert-node
+---
+identifier: _requireMinted [12182,12196]
+to
+function_definition [12173,12306]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12197,12212]
+    type_name: uint256 [12197,12204]
+    identifier: tokenId [12205,12212]
+to
+function_definition [12173,12306]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [12223,12227]
+    view: view [12223,12227]
+to
+function_definition [12173,12306]
+at 4
+
+New cluster:
+UPDATE from _data to data
+------------
+===
+update-node
+---
+identifier: _data [9015,9020]
+replace _data by data
+===
+update-node
+---
+identifier: _data [5955,5960]
+replace _data by data
+===
+update-node
+---
+identifier: _data [12972,12977]
+replace _data by data
+===
+update-node
+---
+identifier: _data [6147,6152]
+replace _data by data
+===
+update-node
+---
+identifier: _data [7261,7266]
+replace _data by data
+===
+update-node
+---
+identifier: _data [7134,7139]
+replace _data by data
+===
+update-node
+---
+identifier: _data [13133,13138]
+replace _data by data
+===
+update-node
+---
+identifier: _data [9151,9156]
+replace _data by data
+
+New cluster:
+MOVE from function_body [12236,12306]
+------------
+===
+move-tree
+---
+expression_statement [8024,8098]
+    call_expression [8024,8097]
+        identifier: require [8024,8031]
+        call_argument [8032,8048]
+            call_expression [8032,8048]
+                identifier: _exists [8032,8039]
+                call_argument [8040,8047]
+                    identifier: tokenId [8040,8047]
+        call_argument [8050,8096]
+            string_literal [8050,8096]
+                string: "ERC721: operator query for nonexistent token" [8050,8096]
+to
+function_body [12236,12306]
+at 0
+
+New cluster:
+UPDATE from require to _requireMinted
+------------
+===
+update-node
+---
+identifier: require [3377,3384]
+replace require by _requireMinted
+===
+update-node
+---
+identifier: require [4567,4574]
+replace require by _requireMinted
+
+New cluster:
+MOVE from call_expression [3377,3453]
+------------
+===
+move-tree
+---
+call_argument [3393,3400]
+    identifier: tokenId [3393,3400]
+to
+call_expression [3377,3453]
+at 1
+
+New cluster:
+MOVE from call_expression [4567,4640]
+------------
+===
+move-tree
+---
+call_argument [4583,4590]
+    identifier: tokenId [4583,4590]
+to
+call_expression [4567,4640]
+at 1
+
+New cluster:
+UPDATE from "ERC721: balance query for the zero address" to "ERC721: address zero is not a valid owner"
+------------
+===
+update-node
+---
+string: "ERC721: balance query for the zero address" [2510,2554]
+replace "ERC721: balance query for the zero address" by "ERC721: address zero is not a valid owner"
+
+New cluster:
+UPDATE from "ERC721: owner query for nonexistent token" to "ERC721: invalid token ID"
+------------
+===
+update-node
+---
+string: "ERC721: owner query for nonexistent token" [2814,2857]
+replace "ERC721: owner query for nonexistent token" by "ERC721: invalid token ID"
+===
+update-node
+---
+string: "ERC721: operator query for nonexistent token" [8050,8096]
+replace "ERC721: operator query for nonexistent token" by "ERC721: invalid token ID"
+
+New cluster:
+UPDATE from "ERC721: approve caller is not owner nor approved for all" to "ERC721: approve caller is not token owner nor approved for all"
+------------
+===
+update-node
+---
+string: "ERC721: approve caller is not owner nor approved for all" [4304,4362]
+replace "ERC721: approve caller is not owner nor approved for all" by "ERC721: approve caller is not token owner nor approved for all"
+
+New cluster:
+UPDATE from "ERC721: transfer caller is not owner nor approved" to "ERC721: caller is not token owner nor approved"
+------------
+===
+update-node
+---
+string: "ERC721: transfer caller is not owner nor approved" [6052,6103]
+replace "ERC721: transfer caller is not owner nor approved" by "ERC721: caller is not token owner nor approved"
+===
+update-node
+---
+string: "ERC721: transfer caller is not owner nor approved" [5431,5482]
+replace "ERC721: transfer caller is not owner nor approved" by "ERC721: caller is not token owner nor approved"
+
+New cluster:
+===
+delete-node
+---
+identifier: ERC721Upgradeable [760,777]
+===
+------------
+===
+delete-node
+---
+identifier: ERC721Upgradeable [760,777]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [778,780]
+===
+------------
+===
+delete-node
+---
+is: is [778,780]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [3385,3401]
+===
+------------
+===
+delete-node
+---
+call_expression [3385,3401]
+===
+===
+delete-node
+---
+identifier: _exists [3385,3392]
+===
+===
+delete-node
+---
+call_argument [3385,3401]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3403,3452]
+    string_literal [3403,3452]
+        string: "ERC721Metadata: URI query for nonexistent token" [3403,3452]
+
+New cluster:
+===
+delete-node
+---
+call_argument [4575,4591]
+===
+------------
+===
+delete-node
+---
+call_argument [4575,4591]
+===
+===
+delete-node
+---
+identifier: _exists [4575,4582]
+===
+===
+delete-node
+---
+call_expression [4575,4591]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4593,4639]
+    string_literal [4593,4639]
+        string: "ERC721: approved query for nonexistent token" [4593,4639]
+

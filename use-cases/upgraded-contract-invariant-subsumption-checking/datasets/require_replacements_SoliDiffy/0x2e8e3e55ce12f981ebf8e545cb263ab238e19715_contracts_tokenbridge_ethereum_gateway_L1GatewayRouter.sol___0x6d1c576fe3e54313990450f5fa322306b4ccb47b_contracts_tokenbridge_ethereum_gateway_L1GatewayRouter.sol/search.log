@@ -1,0 +1,9 @@
+results/differencing_results/0x2e8e3e55ce12f981ebf8e545cb263ab238e19715_contracts_tokenbridge_ethereum_gateway_L1GatewayRouter.sol___0x6d1c576fe3e54313990450f5fa322306b4ccb47b_contracts_tokenbridge_ethereum_gateway_L1GatewayRouter.sol.log:
+  733  identifier: require [8472,8479]
+  734: replace require by TransferRouted
+  735  
+
+  969  identifier: require [8535,8542]
+  970: replace require by _to
+  971  
+

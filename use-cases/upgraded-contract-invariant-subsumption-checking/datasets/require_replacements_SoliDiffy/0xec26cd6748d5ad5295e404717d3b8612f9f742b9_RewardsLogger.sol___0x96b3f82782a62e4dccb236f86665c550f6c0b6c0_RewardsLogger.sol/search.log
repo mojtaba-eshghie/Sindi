@@ -1,0 +1,5 @@
+results/differencing_results/0xec26cd6748d5ad5295e404717d3b8612f9f742b9_RewardsLogger.sol___0x96b3f82782a62e4dccb236f86665c550f6c0b6c0_RewardsLogger.sol.log:
+  24  identifier: require [28496,28503]
+  25: replace require by onlyManager
+  26  
+

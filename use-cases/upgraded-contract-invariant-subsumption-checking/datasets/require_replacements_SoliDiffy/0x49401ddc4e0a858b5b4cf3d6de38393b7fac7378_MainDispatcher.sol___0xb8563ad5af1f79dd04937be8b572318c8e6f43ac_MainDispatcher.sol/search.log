@@ -1,0 +1,9 @@
+results/differencing_results/0x49401ddc4e0a858b5b4cf3d6de38393b7fac7378_MainDispatcher.sol___0xb8563ad5af1f79dd04937be8b572318c8e6f43ac_MainDispatcher.sol.log:
+  1438  identifier: require [10633,10640]
+  1439: replace require by keccak256
+  1440  ===
+
+  1550  identifier: require [11805,11812]
+  1551: replace require by subContracts
+  1552  ===
+

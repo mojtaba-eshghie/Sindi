@@ -1,0 +1,5 @@
+results/differencing_results/0x67db14e73c2dce786b5bbbfa4d010deab4bbfcf9_CToken.sol___0x02beff6668a0c8b7b16c978de8807527d9342ad4_CToken.sol.log:
+  541  identifier: require [24717,24724]
+  542: replace require by name
+  543  
+

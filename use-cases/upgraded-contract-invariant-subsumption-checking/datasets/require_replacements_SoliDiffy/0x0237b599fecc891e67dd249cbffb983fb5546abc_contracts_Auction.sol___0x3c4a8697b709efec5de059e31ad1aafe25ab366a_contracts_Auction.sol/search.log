@@ -1,0 +1,5 @@
+results/differencing_results/0x0237b599fecc891e67dd249cbffb983fb5546abc_contracts_Auction.sol___0x3c4a8697b709efec5de059e31ad1aafe25ab366a_contracts_Auction.sol.log:
+  835  identifier: require [14306,14313]
+  836: replace require by _source
+  837  
+

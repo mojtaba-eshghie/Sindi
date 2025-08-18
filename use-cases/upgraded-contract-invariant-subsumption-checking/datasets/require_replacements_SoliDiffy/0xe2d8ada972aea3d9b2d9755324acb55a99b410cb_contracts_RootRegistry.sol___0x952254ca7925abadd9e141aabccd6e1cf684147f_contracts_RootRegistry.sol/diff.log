@@ -1,0 +1,319 @@
+New cluster:
+===
+insert-node
+---
+function_definition [862,1007]
+to
+contract_body [453,2067]
+at 2
+------------
+===
+insert-node
+---
+function_body [943,1007]
+to
+function_definition [862,1007]
+at 5
+===
+insert-node
+---
+function_definition [862,1007]
+to
+contract_body [453,2067]
+at 2
+
+New cluster:
+===
+insert-node
+---
+function_definition [1066,1262]
+to
+contract_body [453,2067]
+at 3
+------------
+===
+insert-node
+---
+function_body [1157,1262]
+to
+function_definition [1066,1262]
+at 5
+===
+insert-node
+---
+identifier: __RootRegistry_init_unchained [1075,1104]
+to
+function_definition [1066,1262]
+at 1
+===
+insert-node
+---
+function_definition [1066,1262]
+to
+contract_body [453,2067]
+at 3
+===
+insert-node
+---
+function: function [1066,1074]
+to
+function_definition [1066,1262]
+at 0
+===
+insert-node
+---
+visibility: internal [1131,1139]
+to
+function_definition [1066,1262]
+at 3
+
+New cluster:
+MOVE from function_definition [862,1007]
+------------
+===
+move-tree
+---
+function: function [809,817]
+to
+function_definition [862,1007]
+at 0
+===
+move-tree
+---
+identifier: setRootChainManager [818,837]
+to
+function_definition [862,1007]
+at 1
+===
+move-tree
+---
+parameter [838,862]
+    type_name: address [838,845]
+    identifier: rootChainManager [846,862]
+to
+function_definition [1066,1262]
+at 2
+===
+move-tree
+---
+visibility: external [864,872]
+to
+function_definition [862,1007]
+at 3
+
+New cluster:
+UPDATE from setRootChainManager to __RootRegistry_init
+------------
+===
+update-node
+---
+identifier: setRootChainManager [818,837]
+replace setRootChainManager by __RootRegistry_init
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [891,915]
+    type_name: address [891,898]
+    identifier: rootChainManager [899,915]
+to
+function_definition [862,1007]
+at 2
+
+New cluster:
+UPDATE from external to internal
+------------
+===
+update-node
+---
+visibility: external [864,872]
+replace external by internal
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [926,942]
+    identifier: onlyInitializing [926,942]
+to
+function_definition [862,1007]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [1140,1156]
+    identifier: onlyInitializing [1140,1156]
+to
+function_definition [1066,1262]
+at 4
+
+New cluster:
+MOVE from function_body [943,1007]
+------------
+===
+move-tree
+---
+expression_statement [892,1061]
+    call_expression [892,1060]
+        identifier: require [892,899]
+        call_argument [913,996]
+            binary_expression [913,996]
+                member_expression: StorageSlotUpgradeable.getAddressSlot(_ROOT_CHAIN_MANAGER_SLOT).value [913,982]
+                comparison_operator: == [983,985]
+                type_cast_expression [986,996]
+                    primitive_type: address [986,993]
+                    call_argument [994,995]
+                        number_literal: 0 [994,995]
+        call_argument [1010,1050]
+            string_literal [1010,1050]
+                string: 'Registry: ROOT_CHAIN_MANEGER_NOT_EMPTY' [1010,1050]
+to
+function_body [943,1007]
+at 0
+===
+move-tree
+---
+expression_statement [1070,1159]
+    assignment_expression [1070,1158]
+        member_expression: StorageSlotUpgradeable.getAddressSlot(_ROOT_CHAIN_MANAGER_SLOT).value [1070,1139]
+        affectation_operator: = [1140,1141]
+        identifier: rootChainManager [1142,1158]
+to
+function_body [1157,1262]
+at 0
+
+New cluster:
+UPDATE from require to __RootRegistry_init_unchained
+------------
+===
+update-node
+---
+identifier: require [892,899]
+replace require by __RootRegistry_init_unchained
+
+New cluster:
+MOVE from call_expression [892,1060]
+------------
+===
+move-tree
+---
+call_argument [994,995]
+    number_literal: 0 [994,995]
+to
+call_expression [892,1060]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: rootChainManager [983,999]
+to
+call_argument [994,995]
+at 0
+------------
+===
+insert-node
+---
+identifier: rootChainManager [983,999]
+to
+call_argument [994,995]
+at 0
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [994,995]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [994,995]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [913,996]
+===
+------------
+===
+delete-node
+---
+member_expression: StorageSlotUpgradeable.getAddressSlot(_ROOT_CHAIN_MANAGER_SLOT).value [913,982]
+===
+===
+delete-node
+---
+primitive_type: address [986,993]
+===
+===
+delete-node
+---
+call_argument [913,996]
+===
+===
+delete-node
+---
+type_cast_expression [986,996]
+===
+===
+delete-node
+---
+binary_expression [913,996]
+===
+===
+delete-node
+---
+comparison_operator: == [983,985]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [1010,1050]
+    string_literal [1010,1050]
+        string: 'Registry: ROOT_CHAIN_MANEGER_NOT_EMPTY' [1010,1050]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [873,881]
+    override: override [873,881]
+
+New cluster:
+===
+delete-node
+---
+function_definition [809,1165]
+===
+------------
+===
+delete-node
+---
+function_definition [809,1165]
+===
+===
+delete-node
+---
+function_body [882,1165]
+===
+

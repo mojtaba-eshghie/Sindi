@@ -1,0 +1,4017 @@
+New cluster:
+MOVE from source_file [0,42798]
+------------
+===
+move-tree
+---
+contract_declaration [7330,8687]
+    identifier: Initializable [7339,7352]
+    contract_body [7353,8687]
+        state_variable_declaration [7430,7455]
+            type_name: bool [7430,7434]
+            visibility: private [7435,7442]
+            identifier: initialized [7443,7454]
+        state_variable_declaration [7549,7575]
+            type_name: bool [7549,7553]
+            visibility: private [7554,7561]
+            identifier: initializing [7562,7574]
+        modifier_definition [7660,7996]
+            modifier: modifier [7660,7668]
+            identifier: initializer [7669,7680]
+            function_body [7683,7996]
+                expression_statement [7689,7796]
+                    call_expression [7689,7795]
+                        identifier: require [7689,7696]
+                        call_argument [7697,7744]
+                            binary_expression [7697,7744]
+                                binary_expression [7697,7728]
+                                    identifier: initializing [7697,7709]
+                                    logical_operator: || [7710,7712]
+                                    call_expression [7713,7728]
+                                        identifier: isConstructor [7713,7726]
+                                logical_operator: || [7729,7731]
+                                unary_expression [7732,7744]
+                                    !: ! [7732,7733]
+                                    identifier: initialized [7733,7744]
+                        call_argument [7746,7794]
+                            string_literal [7746,7794]
+                                string: "Contract instance has already been initialized" [7746,7794]
+                variable_declaration_statement [7802,7838]
+                    variable_declaration [7802,7821]
+                        type_name: bool [7802,7806]
+                        identifier: isTopLevelCall [7807,7821]
+                    affectation_operator: = [7822,7823]
+                    unary_expression [7824,7837]
+                        !: ! [7824,7825]
+                        identifier: initializing [7825,7837]
+                if_statement [7843,7923]
+                    if: if [7843,7845]
+                    identifier: isTopLevelCall [7847,7861]
+                    block_statement [7863,7923]
+                        expression_statement [7871,7891]
+                            assignment_expression [7871,7890]
+                                identifier: initializing [7871,7883]
+                                affectation_operator: = [7884,7885]
+                                boolean_literal: true [7886,7890]
+                        expression_statement [7898,7917]
+                            assignment_expression [7898,7916]
+                                identifier: initialized [7898,7909]
+                                affectation_operator: = [7910,7911]
+                                boolean_literal: true [7912,7916]
+                expression_statement [7929,7931]
+                    identifier: _ [7929,7930]
+                if_statement [7937,7992]
+                    if: if [7937,7939]
+                    identifier: isTopLevelCall [7941,7955]
+                    block_statement [7957,7992]
+                        expression_statement [7965,7986]
+                            assignment_expression [7965,7985]
+                                identifier: initializing [7965,7977]
+                                affectation_operator: = [7978,7979]
+                                boolean_literal: false [7980,7985]
+        function_definition [8082,8580]
+            function: function [8082,8090]
+            identifier: isConstructor [8091,8104]
+            visibility: private [8107,8114]
+            state_mutability [8115,8119]
+                view: view [8115,8119]
+            return_type_definition [8120,8134]
+                returns: returns [8120,8127]
+                parameter [8129,8133]
+                    type_name: bool [8129,8133]
+            function_body [8135,8580]
+                variable_declaration_statement [8470,8499]
+                    variable_declaration [8470,8482]
+                        type_name: address [8470,8477]
+                        identifier: self [8478,8482]
+                    affectation_operator: = [8483,8484]
+                    type_cast_expression [8485,8498]
+                        primitive_type: address [8485,8492]
+                        call_argument [8493,8497]
+                            identifier: this [8493,8497]
+                variable_declaration_statement [8504,8515]
+                    variable_declaration [8504,8514]
+                        type_name: uint256 [8504,8511]
+                        identifier: cs [8512,8514]
+                assembly_statement [8520,8556]
+                    assembly: assembly [8520,8528]
+                    yul_assignment [8531,8554]
+                        yul_path [8531,8533]
+                            yul_identifier [8531,8533]
+                                identifier: cs [8531,8533]
+                        :=: := [8534,8536]
+                        yul_function_call [8537,8554]
+                            yul_evm_builtin [8537,8548]
+                                extcodesize: extcodesize [8537,8548]
+                            yul_path [8549,8553]
+                                yul_identifier [8549,8553]
+                                    identifier: self [8549,8553]
+                return_statement [8561,8576]
+                    return: return [8561,8567]
+                    binary_expression [8568,8575]
+                        identifier: cs [8568,8570]
+                        comparison_operator: == [8571,8573]
+                        number_literal: 0 [8574,8575]
+        state_variable_declaration [8655,8685]
+            type_name: uint256[50] [8655,8666]
+            visibility: private [8667,8674]
+            identifier: ______gap [8675,8684]
+to
+source_file [0,42798]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [8041,8064]
+    pragma: pragma [8041,8047]
+    solidity_pragma_token [8048,8063]
+        solidity: solidity [8048,8056]
+        solidity_version_comparison_operator [8056,8058]
+            bitwise_operator:  ^ [8056,8058]
+        solidity_version: 0.8.0 [8058,8063]
+to
+source_file [0,42798]
+at 2
+
+New cluster:
+===
+insert-node
+---
+library_declaration [8134,15863]
+to
+source_file [0,42798]
+at 3
+------------
+===
+insert-node
+---
+function: function [13613,13621]
+to
+function_definition [13613,13999]
+at 0
+===
+insert-node
+---
+contract_body [8150,15863]
+to
+library_declaration [8134,15863]
+at 2
+===
+insert-node
+---
+visibility: internal [8763,8771]
+to
+function_definition [8726,9103]
+at 3
+===
+insert-node
+---
+function_body [13771,13999]
+to
+function_definition [13613,13999]
+at 8
+===
+insert-node
+---
+library_declaration [8134,15863]
+to
+source_file [0,42798]
+at 3
+===
+insert-node
+---
+call_expression [13941,13992]
+to
+return_statement [13934,13993]
+at 1
+===
+insert-node
+---
+return: return [13934,13940]
+to
+return_statement [13934,13993]
+at 0
+===
+insert-node
+---
+identifier: functionStaticCall [13622,13640]
+to
+function_definition [13613,13999]
+at 1
+===
+insert-node
+---
+function: function [8726,8734]
+to
+function_definition [8726,9103]
+at 0
+===
+insert-node
+---
+identifier: functionStaticCall [13241,13259]
+to
+function_definition [13232,13429]
+at 1
+===
+insert-node
+---
+function_definition [13232,13429]
+to
+contract_body [8150,15863]
+at 6
+===
+insert-node
+---
+identifier: verifyCallResult [13941,13957]
+to
+call_expression [13941,13992]
+at 0
+===
+insert-node
+---
+visibility: internal [13295,13303]
+to
+function_definition [13232,13429]
+at 4
+===
+insert-node
+---
+:=: := [9039,9041]
+to
+yul_assignment [9034,9062]
+at 1
+===
+insert-node
+---
+library: library [8134,8141]
+to
+library_declaration [8134,15863]
+at 0
+===
+insert-node
+---
+identifier: Address [8142,8149]
+to
+library_declaration [8134,15863]
+at 1
+===
+insert-node
+---
+visibility: internal [13734,13742]
+to
+function_definition [13613,13999]
+at 5
+===
+insert-node
+---
+identifier: isContract [8735,8745]
+to
+function_definition [8726,9103]
+at 1
+===
+insert-node
+---
+function_body [8792,9103]
+to
+function_definition [8726,9103]
+at 6
+===
+insert-node
+---
+return_statement [13934,13993]
+to
+function_body [13771,13999]
+at 2
+===
+insert-node
+---
+yul_assignment [9034,9062]
+to
+assembly_statement [9011,9072]
+at 1
+===
+insert-node
+---
+function_definition [13613,13999]
+to
+contract_body [8150,15863]
+at 7
+===
+insert-node
+---
+assembly: assembly [9011,9019]
+to
+assembly_statement [9011,9072]
+at 0
+===
+insert-node
+---
+function: function [13232,13240]
+to
+function_definition [13232,13429]
+at 0
+===
+insert-node
+---
+assembly_statement [9011,9072]
+to
+function_body [8792,9103]
+at 1
+===
+insert-node
+---
+function_definition [8726,9103]
+to
+contract_body [8150,15863]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [19555,19578]
+    pragma: pragma [19555,19561]
+    solidity_pragma_token [19562,19577]
+        solidity: solidity [19562,19570]
+        solidity_version_comparison_operator [19570,19572]
+            bitwise_operator:  ^ [19570,19572]
+        solidity_version: 0.8.0 [19572,19577]
+to
+source_file [0,42798]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [21457,21480]
+    pragma: pragma [21457,21463]
+    solidity_pragma_token [21464,21479]
+        solidity: solidity [21464,21472]
+        solidity_version_comparison_operator [21472,21474]
+            bitwise_operator:  ^ [21472,21474]
+        solidity_version: 0.8.0 [21474,21479]
+to
+source_file [0,42798]
+at 13
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [25246,25269]
+    pragma: pragma [25246,25252]
+    solidity_pragma_token [25253,25268]
+        solidity: solidity [25253,25261]
+        solidity_version_comparison_operator [25261,25263]
+            bitwise_operator:  ^ [25261,25263]
+        solidity_version: 0.8.0 [25263,25268]
+to
+source_file [0,42798]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pragma_directive [30549,30572]
+    pragma: pragma [30549,30555]
+    solidity_pragma_token [30556,30571]
+        solidity: solidity [30556,30564]
+        solidity_version_comparison_operator [30564,30566]
+            bitwise_operator:  ^ [30564,30566]
+        solidity_version: 0.8.0 [30566,30571]
+to
+source_file [0,42798]
+at 19
+
+New cluster:
+MOVE from contract_body [1919,6610]
+------------
+===
+move-tree
+---
+function_definition [3045,3232]
+    function: function [3045,3053]
+    identifier: sub [3054,3057]
+    parameter [3058,3067]
+        type_name: uint256 [3058,3065]
+        identifier: a [3066,3067]
+    parameter [3069,3078]
+        type_name: uint256 [3069,3076]
+        identifier: b [3077,3078]
+    parameter [3080,3106]
+        type_name: string [3080,3086]
+        memory: memory [3087,3093]
+        identifier: errorMessage [3094,3106]
+    visibility: internal [3108,3116]
+    state_mutability [3117,3121]
+        pure: pure [3117,3121]
+    return_type_definition [3122,3139]
+        returns: returns [3122,3129]
+        parameter [3131,3138]
+            type_name: uint256 [3131,3138]
+    function_body [3140,3232]
+        expression_statement [3150,3180]
+            call_expression [3150,3179]
+                identifier: require [3150,3157]
+                call_argument [3158,3164]
+                    binary_expression [3158,3164]
+                        identifier: b [3158,3159]
+                        comparison_operator: <= [3160,3162]
+                        identifier: a [3163,3164]
+                call_argument [3166,3178]
+                    identifier: errorMessage [3166,3178]
+        variable_declaration_statement [3189,3207]
+            variable_declaration [3189,3198]
+                type_name: uint256 [3189,3196]
+                identifier: c [3197,3198]
+            affectation_operator: = [3199,3200]
+            binary_expression [3201,3206]
+                identifier: a [3201,3202]
+                arithmetic_operator: - [3203,3204]
+                identifier: b [3205,3206]
+        return_statement [3217,3226]
+            return: return [3217,3223]
+            identifier: c [3224,3225]
+to
+contract_body [1919,6610]
+at 7
+===
+move-tree
+---
+function_definition [5031,5369]
+    function: function [5031,5039]
+    identifier: div [5040,5043]
+    parameter [5044,5053]
+        type_name: uint256 [5044,5051]
+        identifier: a [5052,5053]
+    parameter [5055,5064]
+        type_name: uint256 [5055,5062]
+        identifier: b [5063,5064]
+    parameter [5066,5092]
+        type_name: string [5066,5072]
+        memory: memory [5073,5079]
+        identifier: errorMessage [5080,5092]
+    visibility: internal [5094,5102]
+    state_mutability [5103,5107]
+        pure: pure [5103,5107]
+    return_type_definition [5108,5125]
+        returns: returns [5108,5115]
+        parameter [5117,5124]
+            type_name: uint256 [5117,5124]
+    function_body [5126,5369]
+        expression_statement [5202,5231]
+            call_expression [5202,5230]
+                identifier: require [5202,5209]
+                call_argument [5210,5215]
+                    binary_expression [5210,5215]
+                        identifier: b [5210,5211]
+                        comparison_operator: > [5212,5213]
+                        number_literal: 0 [5214,5215]
+                call_argument [5217,5229]
+                    identifier: errorMessage [5217,5229]
+        variable_declaration_statement [5240,5258]
+            variable_declaration [5240,5249]
+                type_name: uint256 [5240,5247]
+                identifier: c [5248,5249]
+            affectation_operator: = [5250,5251]
+            binary_expression [5252,5257]
+                identifier: a [5252,5253]
+                arithmetic_operator: / [5254,5255]
+                identifier: b [5256,5257]
+        return_statement [5354,5363]
+            return: return [5354,5360]
+            identifier: c [5361,5362]
+to
+contract_body [1919,6610]
+at 7
+
+New cluster:
+===
+insert-node
+---
+abstract: abstract [15934,15942]
+to
+contract_declaration [7330,8687]
+at 0
+------------
+===
+insert-node
+---
+abstract: abstract [15934,15942]
+to
+contract_declaration [7330,8687]
+at 0
+
+New cluster:
+===
+insert-node
+---
+abstract: abstract [19712,19720]
+to
+contract_declaration [14711,16404]
+at 0
+------------
+===
+insert-node
+---
+abstract: abstract [19712,19720]
+to
+contract_declaration [14711,16404]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: OUSD [30962,30966]
+to
+contract_declaration [25965,42797]
+at 0
+------------
+===
+insert-node
+---
+identifier: OUSD [30962,30966]
+to
+contract_declaration [25965,42797]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [30967,30969]
+to
+contract_declaration [25965,42797]
+at 1
+------------
+===
+insert-node
+---
+is: is [30967,30969]
+to
+contract_declaration [25965,42797]
+at 1
+
+New cluster:
+UPDATE from 0.5.5 to 0.8.0
+------------
+===
+update-node
+---
+solidity_version: 0.5.5 [8758,8763]
+replace 0.5.5 by 0.8.0
+===
+update-node
+---
+solidity_version: 0.5.0 [1330,1335]
+replace 0.5.0 by 0.8.0
+===
+update-node
+---
+solidity_version: 0.5.0 [11771,11776]
+replace 0.5.0 by 0.8.0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3185,3375]
+    function: function [3185,3193]
+    identifier: tryDiv [3194,3200]
+    parameter [3201,3210]
+        type_name: uint256 [3201,3208]
+        identifier: a [3209,3210]
+    parameter [3212,3221]
+        type_name: uint256 [3212,3219]
+        identifier: b [3220,3221]
+    visibility: internal [3223,3231]
+    state_mutability [3232,3236]
+        pure: pure [3232,3236]
+    return_type_definition [3237,3260]
+        returns: returns [3237,3244]
+        parameter [3246,3250]
+            type_name: bool [3246,3250]
+        parameter [3252,3259]
+            type_name: uint256 [3252,3259]
+    function_body [3261,3375]
+        block_statement [3271,3369]
+            unchecked: unchecked [3271,3280]
+            if_statement [3295,3325]
+                if: if [3295,3297]
+                binary_expression [3299,3305]
+                    identifier: b [3299,3300]
+                    comparison_operator: == [3301,3303]
+                    number_literal: 0 [3304,3305]
+                return_statement [3307,3325]
+                    return: return [3307,3313]
+                    tuple_expression [3314,3324]
+                        boolean_literal: false [3315,3320]
+                        number_literal: 0 [3322,3323]
+            return_statement [3338,3359]
+                return: return [3338,3344]
+                tuple_expression [3345,3358]
+                    boolean_literal: true [3346,3350]
+                    binary_expression [3352,3357]
+                        identifier: a [3352,3353]
+                        arithmetic_operator: / [3354,3355]
+                        identifier: b [3356,3357]
+to
+contract_body [1919,6610]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3534,3724]
+    function: function [3534,3542]
+    identifier: tryMod [3543,3549]
+    parameter [3550,3559]
+        type_name: uint256 [3550,3557]
+        identifier: a [3558,3559]
+    parameter [3561,3570]
+        type_name: uint256 [3561,3568]
+        identifier: b [3569,3570]
+    visibility: internal [3572,3580]
+    state_mutability [3581,3585]
+        pure: pure [3581,3585]
+    return_type_definition [3586,3609]
+        returns: returns [3586,3593]
+        parameter [3595,3599]
+            type_name: bool [3595,3599]
+        parameter [3601,3608]
+            type_name: uint256 [3601,3608]
+    function_body [3610,3724]
+        block_statement [3620,3718]
+            unchecked: unchecked [3620,3629]
+            if_statement [3644,3674]
+                if: if [3644,3646]
+                binary_expression [3648,3654]
+                    identifier: b [3648,3649]
+                    comparison_operator: == [3650,3652]
+                    number_literal: 0 [3653,3654]
+                return_statement [3656,3674]
+                    return: return [3656,3662]
+                    tuple_expression [3663,3673]
+                        boolean_literal: false [3664,3669]
+                        number_literal: 0 [3671,3672]
+            return_statement [3687,3708]
+                return: return [3687,3693]
+                tuple_expression [3694,3707]
+                    boolean_literal: true [3695,3699]
+                    binary_expression [3701,3706]
+                        identifier: a [3701,3702]
+                        %: % [3703,3704]
+                        identifier: b [3705,3706]
+to
+contract_body [1919,6610]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [3959,4055]
+to
+contract_body [1919,6610]
+at 5
+------------
+===
+insert-node
+---
+function: function [3959,3967]
+to
+function_definition [3959,4055]
+at 0
+===
+insert-node
+---
+identifier: add [3968,3971]
+to
+function_definition [3959,4055]
+at 1
+===
+insert-node
+---
+function_definition [3959,4055]
+to
+contract_body [1919,6610]
+at 5
+===
+insert-node
+---
+visibility: internal [3994,4002]
+to
+function_definition [3959,4055]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [4326,4422]
+to
+contract_body [1919,6610]
+at 6
+------------
+===
+insert-node
+---
+return: return [4403,4409]
+to
+return_statement [4403,4416]
+at 0
+===
+insert-node
+---
+visibility: internal [4361,4369]
+to
+function_definition [4326,4422]
+at 4
+===
+insert-node
+---
+function_body [4393,4422]
+to
+function_definition [4326,4422]
+at 7
+===
+insert-node
+---
+return_statement [4403,4416]
+to
+function_body [4393,4422]
+at 0
+===
+insert-node
+---
+function_definition [4326,4422]
+to
+contract_body [1919,6610]
+at 6
+===
+insert-node
+---
+function: function [4326,4334]
+to
+function_definition [4326,4422]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [4669,4765]
+to
+contract_body [1919,6610]
+at 7
+------------
+===
+insert-node
+---
+function_definition [4669,4765]
+to
+contract_body [1919,6610]
+at 7
+===
+insert-node
+---
+function: function [4669,4677]
+to
+function_definition [4669,4765]
+at 0
+===
+insert-node
+---
+identifier: mul [4678,4681]
+to
+function_definition [4669,4765]
+at 1
+===
+insert-node
+---
+visibility: internal [4704,4712]
+to
+function_definition [4669,4765]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [7754,7984]
+to
+contract_body [1919,6610]
+at 13
+------------
+===
+insert-node
+---
+unchecked: unchecked [7889,7898]
+to
+block_statement [7889,7978]
+at 0
+===
+insert-node
+---
+function_body [7879,7984]
+to
+function_definition [7754,7984]
+at 8
+===
+insert-node
+---
+block_statement [7889,7978]
+to
+function_body [7879,7984]
+at 0
+===
+insert-node
+---
+function: function [7754,7762]
+to
+function_definition [7754,7984]
+at 0
+===
+insert-node
+---
+function_definition [7754,7984]
+to
+contract_body [1919,6610]
+at 13
+===
+insert-node
+---
+visibility: internal [7847,7855]
+to
+function_definition [7754,7984]
+at 5
+===
+insert-node
+---
+identifier: mod [7763,7766]
+to
+function_definition [7754,7984]
+at 1
+
+New cluster:
+MOVE from contract_body [8150,15863]
+------------
+===
+move-tree
+---
+function_definition [11328,11693]
+    function: function [11328,11336]
+    identifier: sendValue [11337,11346]
+    parameter [11347,11372]
+        type_name: address payable [11347,11362]
+        identifier: recipient [11363,11372]
+    parameter [11374,11388]
+        type_name: uint256 [11374,11381]
+        identifier: amount [11382,11388]
+    visibility: internal [11390,11398]
+    function_body [11399,11693]
+        expression_statement [11409,11483]
+            call_expression [11409,11482]
+                identifier: require [11409,11416]
+                call_argument [11417,11448]
+                    binary_expression [11417,11448]
+                        member_expression: address(this).balance [11417,11438]
+                        comparison_operator: >= [11439,11441]
+                        identifier: amount [11442,11448]
+                call_argument [11450,11481]
+                    string_literal [11450,11481]
+                        string: "Address: insufficient balance" [11450,11481]
+        variable_declaration_statement [11547,11599]
+            variable_declaration_tuple [11547,11563]
+                variable_declaration [11548,11560]
+                    type_name: bool [11548,11552]
+                    identifier: success [11553,11560]
+            affectation_operator: = [11564,11565]
+            call_expression [11566,11598]
+                call_expression [11566,11594]
+                    member_expression: recipient.call.value [11566,11586]
+                    call_argument [11587,11593]
+                        identifier: amount [11587,11593]
+                call_argument [11595,11597]
+                    string_literal [11595,11597]
+                        string: "" [11595,11597]
+        expression_statement [11608,11687]
+            call_expression [11608,11686]
+                identifier: require [11608,11615]
+                call_argument [11616,11623]
+                    identifier: success [11616,11623]
+                call_argument [11625,11685]
+                    string_literal [11625,11685]
+                        string: "Address: unable to send value, recipient may have reverted" [11625,11685]
+to
+contract_body [8150,15863]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [11074,11247]
+    function: function [11074,11082]
+    identifier: functionCall [11083,11095]
+    parameter [11096,11110]
+        type_name: address [11096,11103]
+        identifier: target [11104,11110]
+    parameter [11112,11129]
+        type_name: bytes [11112,11117]
+        memory: memory [11118,11124]
+        identifier: data [11125,11129]
+    visibility: internal [11131,11139]
+    return_type_definition [11140,11162]
+        returns: returns [11140,11147]
+        parameter [11149,11161]
+            type_name: bytes [11149,11154]
+            memory: memory [11155,11161]
+    function_body [11163,11247]
+        return_statement [11173,11241]
+            return: return [11173,11179]
+            call_expression [11180,11240]
+                identifier: functionCall [11180,11192]
+                call_argument [11193,11199]
+                    identifier: target [11193,11199]
+                call_argument [11201,11205]
+                    identifier: data [11201,11205]
+                call_argument [11207,11239]
+                    string_literal [11207,11239]
+                        string: "Address: low-level call failed" [11207,11239]
+to
+contract_body [8150,15863]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [11469,11692]
+    function: function [11469,11477]
+    identifier: functionCall [11478,11490]
+    parameter [11500,11514]
+        type_name: address [11500,11507]
+        identifier: target [11508,11514]
+    parameter [11524,11541]
+        type_name: bytes [11524,11529]
+        memory: memory [11530,11536]
+        identifier: data [11537,11541]
+    parameter [11551,11577]
+        type_name: string [11551,11557]
+        memory: memory [11558,11564]
+        identifier: errorMessage [11565,11577]
+    visibility: internal [11584,11592]
+    return_type_definition [11593,11615]
+        returns: returns [11593,11600]
+        parameter [11602,11614]
+            type_name: bytes [11602,11607]
+            memory: memory [11608,11614]
+    function_body [11616,11692]
+        return_statement [11626,11686]
+            return: return [11626,11632]
+            call_expression [11633,11685]
+                identifier: functionCallWithValue [11633,11654]
+                call_argument [11655,11661]
+                    identifier: target [11655,11661]
+                call_argument [11663,11667]
+                    identifier: data [11663,11667]
+                call_argument [11669,11670]
+                    number_literal: 0 [11669,11670]
+                call_argument [11672,11684]
+                    identifier: errorMessage [11672,11684]
+to
+contract_body [8150,15863]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [12054,12308]
+    function: function [12054,12062]
+    identifier: functionCallWithValue [12063,12084]
+    parameter [12094,12108]
+        type_name: address [12094,12101]
+        identifier: target [12102,12108]
+    parameter [12118,12135]
+        type_name: bytes [12118,12123]
+        memory: memory [12124,12130]
+        identifier: data [12131,12135]
+    parameter [12145,12158]
+        type_name: uint256 [12145,12152]
+        identifier: value [12153,12158]
+    visibility: internal [12165,12173]
+    return_type_definition [12174,12196]
+        returns: returns [12174,12181]
+        parameter [12183,12195]
+            type_name: bytes [12183,12188]
+            memory: memory [12189,12195]
+    function_body [12197,12308]
+        return_statement [12207,12302]
+            return: return [12207,12213]
+            call_expression [12214,12301]
+                identifier: functionCallWithValue [12214,12235]
+                call_argument [12236,12242]
+                    identifier: target [12236,12242]
+                call_argument [12244,12248]
+                    identifier: data [12244,12248]
+                call_argument [12250,12255]
+                    identifier: value [12250,12255]
+                call_argument [12257,12300]
+                    string_literal [12257,12300]
+                        string: "Address: low-level call with value failed" [12257,12300]
+to
+contract_body [8150,15863]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [12556,13055]
+    function: function [12556,12564]
+    identifier: functionCallWithValue [12565,12586]
+    parameter [12596,12610]
+        type_name: address [12596,12603]
+        identifier: target [12604,12610]
+    parameter [12620,12637]
+        type_name: bytes [12620,12625]
+        memory: memory [12626,12632]
+        identifier: data [12633,12637]
+    parameter [12647,12660]
+        type_name: uint256 [12647,12654]
+        identifier: value [12655,12660]
+    parameter [12670,12696]
+        type_name: string [12670,12676]
+        memory: memory [12677,12683]
+        identifier: errorMessage [12684,12696]
+    visibility: internal [12703,12711]
+    return_type_definition [12712,12734]
+        returns: returns [12712,12719]
+        parameter [12721,12733]
+            type_name: bytes [12721,12726]
+            memory: memory [12727,12733]
+    function_body [12735,13055]
+        expression_statement [12745,12827]
+            call_expression [12745,12826]
+                identifier: require [12745,12752]
+                call_argument [12753,12783]
+                    binary_expression [12753,12783]
+                        member_expression: address(this).balance [12753,12774]
+                        comparison_operator: >= [12775,12777]
+                        identifier: value [12778,12783]
+                call_argument [12785,12825]
+                    string_literal [12785,12825]
+                        string: "Address: insufficient balance for call" [12785,12825]
+        expression_statement [12836,12897]
+            call_expression [12836,12896]
+                identifier: require [12836,12843]
+                call_argument [12844,12862]
+                    call_expression [12844,12862]
+                        identifier: isContract [12844,12854]
+                        call_argument [12855,12861]
+                            identifier: target [12855,12861]
+                call_argument [12864,12895]
+                    string_literal [12864,12895]
+                        string: "Address: call to non-contract" [12864,12895]
+        variable_declaration_statement [12907,12981]
+            variable_declaration_tuple [12907,12946]
+                variable_declaration [12908,12920]
+                    type_name: bool [12908,12912]
+                    identifier: success [12913,12920]
+                variable_declaration [12922,12945]
+                    type_name: bytes [12922,12927]
+                    memory: memory [12928,12934]
+                    identifier: returndata [12935,12945]
+            affectation_operator: = [12947,12948]
+            call_expression [12949,12980]
+                struct_expression [12949,12974]
+                    member_expression: target.call [12949,12960]
+                    struct_field_assignment [12961,12973]
+                        identifier: value [12961,12966]
+                        :: : [12966,12967]
+                        identifier: value [12968,12973]
+                call_argument [12975,12979]
+                    identifier: data [12975,12979]
+        return_statement [12990,13049]
+            return: return [12990,12996]
+            call_expression [12997,13048]
+                identifier: verifyCallResult [12997,13013]
+                call_argument [13014,13021]
+                    identifier: success [13014,13021]
+                call_argument [13023,13033]
+                    identifier: returndata [13023,13033]
+                call_argument [13035,13047]
+                    identifier: errorMessage [13035,13047]
+to
+contract_body [8150,15863]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [14178,14376]
+    function: function [14178,14186]
+    identifier: functionDelegateCall [14187,14207]
+    parameter [14208,14222]
+        type_name: address [14208,14215]
+        identifier: target [14216,14222]
+    parameter [14224,14241]
+        type_name: bytes [14224,14229]
+        memory: memory [14230,14236]
+        identifier: data [14237,14241]
+    visibility: internal [14243,14251]
+    return_type_definition [14252,14274]
+        returns: returns [14252,14259]
+        parameter [14261,14273]
+            type_name: bytes [14261,14266]
+            memory: memory [14267,14273]
+    function_body [14275,14376]
+        return_statement [14285,14370]
+            return: return [14285,14291]
+            call_expression [14292,14369]
+                identifier: functionDelegateCall [14292,14312]
+                call_argument [14313,14319]
+                    identifier: target [14313,14319]
+                call_argument [14321,14325]
+                    identifier: data [14321,14325]
+                call_argument [14327,14368]
+                    string_literal [14327,14368]
+                        string: "Address: low-level delegate call failed" [14327,14368]
+to
+contract_body [8150,15863]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [14562,14949]
+    function: function [14562,14570]
+    identifier: functionDelegateCall [14571,14591]
+    parameter [14601,14615]
+        type_name: address [14601,14608]
+        identifier: target [14609,14615]
+    parameter [14625,14642]
+        type_name: bytes [14625,14630]
+        memory: memory [14631,14637]
+        identifier: data [14638,14642]
+    parameter [14652,14678]
+        type_name: string [14652,14658]
+        memory: memory [14659,14665]
+        identifier: errorMessage [14666,14678]
+    visibility: internal [14685,14693]
+    return_type_definition [14694,14716]
+        returns: returns [14694,14701]
+        parameter [14703,14715]
+            type_name: bytes [14703,14708]
+            memory: memory [14709,14715]
+    function_body [14717,14949]
+        expression_statement [14727,14797]
+            call_expression [14727,14796]
+                identifier: require [14727,14734]
+                call_argument [14735,14753]
+                    call_expression [14735,14753]
+                        identifier: isContract [14735,14745]
+                        call_argument [14746,14752]
+                            identifier: target [14746,14752]
+                call_argument [14755,14795]
+                    string_literal [14755,14795]
+                        string: "Address: delegate call to non-contract" [14755,14795]
+        variable_declaration_statement [14807,14875]
+            variable_declaration_tuple [14807,14846]
+                variable_declaration [14808,14820]
+                    type_name: bool [14808,14812]
+                    identifier: success [14813,14820]
+                variable_declaration [14822,14845]
+                    type_name: bytes [14822,14827]
+                    memory: memory [14828,14834]
+                    identifier: returndata [14835,14845]
+            affectation_operator: = [14847,14848]
+            call_expression [14849,14874]
+                member_expression: target.delegatecall [14849,14868]
+                call_argument [14869,14873]
+                    identifier: data [14869,14873]
+        return_statement [14884,14943]
+            return: return [14884,14890]
+            call_expression [14891,14942]
+                identifier: verifyCallResult [14891,14907]
+                call_argument [14908,14915]
+                    identifier: success [14908,14915]
+                call_argument [14917,14927]
+                    identifier: returndata [14917,14927]
+                call_argument [14929,14941]
+                    identifier: errorMessage [14929,14941]
+to
+contract_body [8150,15863]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [15169,15861]
+    function: function [15169,15177]
+    identifier: verifyCallResult [15178,15194]
+    parameter [15204,15216]
+        type_name: bool [15204,15208]
+        identifier: success [15209,15216]
+    parameter [15226,15249]
+        type_name: bytes [15226,15231]
+        memory: memory [15232,15238]
+        identifier: returndata [15239,15249]
+    parameter [15259,15285]
+        type_name: string [15259,15265]
+        memory: memory [15266,15272]
+        identifier: errorMessage [15273,15285]
+    visibility: internal [15292,15300]
+    state_mutability [15301,15305]
+        pure: pure [15301,15305]
+    return_type_definition [15306,15328]
+        returns: returns [15306,15313]
+        parameter [15315,15327]
+            type_name: bytes [15315,15320]
+            memory: memory [15321,15327]
+    function_body [15329,15861]
+        if_statement [15339,15855]
+            if: if [15339,15341]
+            identifier: success [15343,15350]
+            block_statement [15352,15394]
+                return_statement [15366,15384]
+                    return: return [15366,15372]
+                    identifier: returndata [15373,15383]
+            else: else [15395,15399]
+            block_statement [15400,15855]
+                if_statement [15480,15845]
+                    if: if [15480,15482]
+                    binary_expression [15484,15505]
+                        member_expression: returndata.length [15484,15501]
+                        comparison_operator: > [15502,15503]
+                        number_literal: 0 [15504,15505]
+                    block_statement [15507,15786]
+                        assembly_statement [15618,15772]
+                            assembly: assembly [15618,15626]
+                            yul_variable_declaration [15649,15689]
+                                let: let [15649,15652]
+                                yul_identifier [15653,15668]
+                                    identifier: returndata_size [15653,15668]
+                                :=: := [15669,15671]
+                                yul_function_call [15672,15689]
+                                    yul_evm_builtin [15672,15677]
+                                        mload: mload [15672,15677]
+                                    yul_path [15678,15688]
+                                        yul_identifier [15678,15688]
+                                            identifier: returndata [15678,15688]
+                            yul_function_call [15710,15754]
+                                yul_evm_builtin [15710,15716]
+                                    revert: revert [15710,15716]
+                                yul_function_call [15717,15736]
+                                    yul_evm_builtin [15717,15720]
+                                        add: add [15717,15720]
+                                    yul_decimal_number: 32 [15721,15723]
+                                    yul_path [15725,15735]
+                                        yul_identifier [15725,15735]
+                                            identifier: returndata [15725,15735]
+                                yul_path [15738,15753]
+                                    yul_identifier [15738,15753]
+                                        identifier: returndata_size [15738,15753]
+                    else: else [15787,15791]
+                    block_statement [15792,15845]
+                        revert_statement [15810,15831]
+                            revert: revert [15810,15816]
+                            parenthesized_expression [15816,15830]
+                                identifier: errorMessage [15817,15829]
+to
+contract_body [8150,15863]
+at 10
+
+New cluster:
+UPDATE from add to tryAdd
+------------
+===
+update-node
+---
+identifier: add [2156,2159]
+replace add by tryAdd
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [1896,1919]
+    returns: returns [1896,1903]
+    parameter [1905,1909]
+        type_name: bool [1905,1909]
+    parameter [1911,1918]
+        type_name: uint256 [1911,1918]
+to
+function_definition [2147,2323]
+at 6
+
+New cluster:
+UPDATE from sub to trySub
+------------
+===
+update-node
+---
+identifier: sub [2596,2599]
+replace sub by trySub
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2222,2231]
+    type_name: uint256 [2222,2229]
+    identifier: a [2230,2231]
+to
+function_definition [2587,2721]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2233,2242]
+    type_name: uint256 [2233,2240]
+    identifier: b [2241,2242]
+to
+function_definition [2587,2721]
+at 3
+
+New cluster:
+MOVE from function_definition [2587,2721]
+------------
+===
+move-tree
+---
+state_mutability [10291,10295]
+    pure: pure [10291,10295]
+to
+function_definition [2587,2721]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [2258,2281]
+    returns: returns [2258,2265]
+    parameter [2267,2271]
+        type_name: bool [2267,2271]
+    parameter [2273,2280]
+        type_name: uint256 [2273,2280]
+to
+function_definition [2587,2721]
+at 8
+
+New cluster:
+UPDATE from mul to tryMul
+------------
+===
+update-node
+---
+identifier: mul [3481,3484]
+replace mul by tryMul
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [2595,2618]
+    returns: returns [2595,2602]
+    parameter [2604,2608]
+        type_name: bool [2604,2608]
+    parameter [2610,2617]
+        type_name: uint256 [2610,2617]
+to
+function_definition [3472,3931]
+at 6
+
+New cluster:
+MOVE from function_definition [3959,4055]
+------------
+===
+move-tree
+---
+state_mutability [4430,4434]
+    pure: pure [4430,4434]
+to
+function_definition [3959,4055]
+at 5
+===
+move-tree
+---
+parameter [4399,4408]
+    type_name: uint256 [4399,4406]
+    identifier: a [4407,4408]
+to
+function_definition [3959,4055]
+at 2
+===
+move-tree
+---
+parameter [4410,4419]
+    type_name: uint256 [4410,4417]
+    identifier: b [4418,4419]
+to
+function_definition [3959,4055]
+at 3
+===
+move-tree
+---
+return_type_definition [4435,4452]
+    returns: returns [4435,4442]
+    parameter [4444,4451]
+        type_name: uint256 [4444,4451]
+to
+function_definition [3959,4055]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [4026,4055]
+    return_statement [4036,4049]
+        return: return [4036,4042]
+        binary_expression [4043,4048]
+            identifier: a [4043,4044]
+            arithmetic_operator: + [4045,4046]
+            identifier: b [4047,4048]
+to
+function_definition [3959,4055]
+at 7
+
+New cluster:
+UPDATE from require to sub
+------------
+===
+update-node
+---
+identifier: require [3849,3856]
+replace require by sub
+
+New cluster:
+MOVE from function_definition [4326,4422]
+------------
+===
+move-tree
+---
+identifier: require [3849,3856]
+to
+function_definition [4326,4422]
+at 1
+
+New cluster:
+MOVE from function_definition [4326,4422]
+------------
+===
+move-tree
+---
+return_type_definition [5862,5879]
+    returns: returns [5862,5869]
+    parameter [5871,5878]
+        type_name: uint256 [5871,5878]
+to
+function_definition [4326,4422]
+at 6
+===
+move-tree
+---
+parameter [5826,5835]
+    type_name: uint256 [5826,5833]
+    identifier: a [5834,5835]
+to
+function_definition [4326,4422]
+at 2
+===
+move-tree
+---
+parameter [5837,5846]
+    type_name: uint256 [5837,5844]
+    identifier: b [5845,5846]
+to
+function_definition [4326,4422]
+at 3
+===
+move-tree
+---
+state_mutability [5857,5861]
+    pure: pure [5857,5861]
+to
+function_definition [4326,4422]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [4682,4691]
+    type_name: uint256 [4682,4689]
+    identifier: a [4690,4691]
+to
+function_definition [4669,4765]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [4693,4702]
+    type_name: uint256 [4693,4700]
+    identifier: b [4701,4702]
+to
+function_definition [4669,4765]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [4713,4717]
+    pure: pure [4713,4717]
+to
+function_definition [4669,4765]
+at 5
+
+New cluster:
+MOVE from function_definition [4669,4765]
+------------
+===
+move-tree
+---
+return_type_definition [3521,3538]
+    returns: returns [3521,3528]
+    parameter [3530,3537]
+        type_name: uint256 [3530,3537]
+to
+function_definition [4669,4765]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [4736,4765]
+    return_statement [4746,4759]
+        return: return [4746,4752]
+        binary_expression [4753,4758]
+            identifier: a [4753,4754]
+            arithmetic_operator: * [4755,4756]
+            identifier: b [4757,4758]
+to
+function_definition [4669,4765]
+at 7
+
+New cluster:
+MOVE from function_definition [4386,4516]
+------------
+===
+move-tree
+---
+parameter [2600,2609]
+    type_name: uint256 [2600,2607]
+    identifier: a [2608,2609]
+to
+function_definition [4386,4516]
+at 2
+===
+move-tree
+---
+state_mutability [2631,2635]
+    pure: pure [2631,2635]
+to
+function_definition [4386,4516]
+at 5
+===
+move-tree
+---
+parameter [2611,2620]
+    type_name: uint256 [2611,2618]
+    identifier: b [2619,2620]
+to
+function_definition [4386,4516]
+at 3
+===
+move-tree
+---
+return_type_definition [2636,2653]
+    returns: returns [2636,2643]
+    parameter [2645,2652]
+        type_name: uint256 [2645,2652]
+to
+function_definition [4386,4516]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7776,7785]
+    type_name: uint256 [7776,7783]
+    identifier: a [7784,7785]
+to
+function_definition [7754,7984]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7795,7804]
+    type_name: uint256 [7795,7802]
+    identifier: b [7803,7804]
+to
+function_definition [7754,7984]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7814,7840]
+    type_name: string [7814,7820]
+    memory: memory [7821,7827]
+    identifier: errorMessage [7828,7840]
+to
+function_definition [7754,7984]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [7856,7860]
+    pure: pure [7856,7860]
+to
+function_definition [7754,7984]
+at 6
+
+New cluster:
+MOVE from function_definition [7754,7984]
+------------
+===
+move-tree
+---
+return_type_definition [2196,2213]
+    returns: returns [2196,2203]
+    parameter [2205,2212]
+        type_name: uint256 [2205,2212]
+to
+function_definition [7754,7984]
+at 7
+
+New cluster:
+MOVE from function_definition [8726,9103]
+------------
+===
+move-tree
+---
+state_mutability [9473,9477]
+    view: view [9473,9477]
+to
+function_definition [8726,9103]
+at 4
+===
+move-tree
+---
+return_type_definition [9478,9492]
+    returns: returns [9478,9485]
+    parameter [9487,9491]
+        type_name: bool [9487,9491]
+to
+function_definition [8726,9103]
+at 5
+===
+move-tree
+---
+parameter [9447,9462]
+    type_name: address [9447,9454]
+    identifier: account [9455,9462]
+to
+function_definition [8726,9103]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13260,13274]
+    type_name: address [13260,13267]
+    identifier: target [13268,13274]
+to
+function_definition [13232,13429]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13276,13293]
+    type_name: bytes [13276,13281]
+    memory: memory [13282,13288]
+    identifier: data [13289,13293]
+to
+function_definition [13232,13429]
+at 3
+
+New cluster:
+MOVE from function_definition [13232,13429]
+------------
+===
+move-tree
+---
+state_mutability [8115,8119]
+    view: view [8115,8119]
+to
+function_definition [13232,13429]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [13309,13331]
+    returns: returns [13309,13316]
+    parameter [13318,13330]
+        type_name: bytes [13318,13323]
+        memory: memory [13324,13330]
+to
+function_definition [13232,13429]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [13332,13429]
+    return_statement [13342,13423]
+        return: return [13342,13348]
+        call_expression [13349,13422]
+            identifier: functionStaticCall [13349,13367]
+            call_argument [13368,13374]
+                identifier: target [13368,13374]
+            call_argument [13376,13380]
+                identifier: data [13376,13380]
+            call_argument [13382,13421]
+                string_literal [13382,13421]
+                    string: "Address: low-level static call failed" [13382,13421]
+to
+function_definition [13232,13429]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13650,13664]
+    type_name: address [13650,13657]
+    identifier: target [13658,13664]
+to
+function_definition [13613,13999]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [13674,13691]
+    type_name: bytes [13674,13679]
+    memory: memory [13680,13686]
+    identifier: data [13687,13691]
+to
+function_definition [13613,13999]
+at 3
+
+New cluster:
+MOVE from function_definition [13613,13999]
+------------
+===
+move-tree
+---
+parameter [6480,6506]
+    type_name: string [6480,6486]
+    memory: memory [6487,6493]
+    identifier: errorMessage [6494,6506]
+to
+function_definition [13613,13999]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [13743,13747]
+    view: view [13743,13747]
+to
+function_definition [13613,13999]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [13748,13770]
+    returns: returns [13748,13755]
+    parameter [13757,13769]
+        type_name: bytes [13757,13762]
+        memory: memory [13763,13769]
+to
+function_definition [13613,13999]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [22190,22202]
+    type_name: uint256 [22190,22197]
+    identifier: from [22198,22202]
+to
+function_definition [17110,17418]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [32588,32596]
+    override: override [32588,32596]
+to
+function_definition [27547,27636]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [32967,32975]
+    override: override [32967,32975]
+to
+function_definition [27880,28103]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [33871,33879]
+    override: override [33871,33879]
+to
+function_definition [28743,29123]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [34578,34586]
+    override: override [34578,34586]
+to
+function_definition [29381,29869]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [37191,37199]
+    override: override [37191,37199]
+to
+function_definition [31990,32154]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [38041,38049]
+    override: override [38041,38049]
+to
+function_definition [32787,32993]
+at 5
+
+New cluster:
+===
+insert-node
+---
+block_statement [1930,2054]
+to
+function_body [2214,2323]
+at 0
+------------
+===
+insert-node
+---
+if: if [1985,1987]
+to
+if_statement [1985,2014]
+at 0
+===
+insert-node
+---
+unchecked: unchecked [1930,1939]
+to
+block_statement [1930,2054]
+at 0
+===
+insert-node
+---
+if_statement [1985,2014]
+to
+block_statement [1930,2054]
+at 2
+===
+insert-node
+---
+block_statement [1930,2054]
+to
+function_body [2214,2323]
+at 0
+
+New cluster:
+===
+insert-node
+---
+block_statement [2292,2389]
+to
+function_body [2654,2721]
+at 0
+------------
+===
+insert-node
+---
+block_statement [2292,2389]
+to
+function_body [2654,2721]
+at 0
+===
+insert-node
+---
+unchecked: unchecked [2292,2301]
+to
+block_statement [2292,2389]
+at 0
+
+New cluster:
+===
+insert-node
+---
+block_statement [2629,3030]
+to
+function_body [3539,3931]
+at 0
+------------
+===
+insert-node
+---
+if: if [2956,2958]
+to
+if_statement [2956,2990]
+at 0
+===
+insert-node
+---
+if_statement [2956,2990]
+to
+block_statement [2629,3030]
+at 3
+===
+insert-node
+---
+unchecked: unchecked [2629,2638]
+to
+block_statement [2629,3030]
+at 0
+===
+insert-node
+---
+block_statement [2629,3030]
+to
+function_body [3539,3931]
+at 0
+
+New cluster:
+===
+insert-node
+---
+block_statement [6298,6388]
+to
+function_body [3140,3232]
+at 0
+------------
+===
+insert-node
+---
+unchecked: unchecked [6298,6307]
+to
+block_statement [6298,6388]
+at 0
+===
+insert-node
+---
+block_statement [6298,6388]
+to
+function_body [3140,3232]
+at 0
+
+New cluster:
+===
+insert-node
+---
+block_statement [7013,7102]
+to
+function_body [5126,5369]
+at 0
+------------
+===
+insert-node
+---
+block_statement [7013,7102]
+to
+function_body [5126,5369]
+at 0
+===
+insert-node
+---
+unchecked: unchecked [7013,7022]
+to
+block_statement [7013,7102]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [8989,9002]
+    variable_declaration [8989,9001]
+        type_name: uint256 [8989,8996]
+        identifier: size [8997,9001]
+to
+function_body [8792,9103]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [9081,9097]
+    return: return [9081,9087]
+    binary_expression [9088,9096]
+        identifier: size [9088,9092]
+        comparison_operator: > [9093,9094]
+        number_literal: 0 [9095,9096]
+to
+function_body [8792,9103]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13781,13849]
+    call_expression [13781,13848]
+        identifier: require [13781,13788]
+        call_argument [13789,13807]
+            call_expression [13789,13807]
+                identifier: isContract [13789,13799]
+                call_argument [13800,13806]
+                    identifier: target [13800,13806]
+        call_argument [13809,13847]
+            string_literal [13809,13847]
+                string: "Address: static call to non-contract" [13809,13847]
+to
+function_body [13771,13999]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [13859,13925]
+    variable_declaration_tuple [13859,13898]
+        variable_declaration [13860,13872]
+            type_name: bool [13860,13864]
+            identifier: success [13865,13872]
+        variable_declaration [13874,13897]
+            type_name: bytes [13874,13879]
+            memory: memory [13880,13886]
+            identifier: returndata [13887,13897]
+    affectation_operator: = [13899,13900]
+    call_expression [13901,13924]
+        member_expression: target.staticcall [13901,13918]
+        call_argument [13919,13923]
+            identifier: data [13919,13923]
+to
+function_body [13771,13999]
+at 1
+
+New cluster:
+UPDATE from int8 to uint256
+------------
+===
+update-node
+---
+type_name: int8 [17138,17142]
+replace int8 by uint256
+
+New cluster:
+UPDATE from adjustment to to
+------------
+===
+update-node
+---
+identifier: adjustment [17143,17153]
+replace adjustment by to
+===
+update-node
+---
+identifier: adjustment [17229,17239]
+replace adjustment by to
+===
+update-node
+---
+identifier: adjustment [17314,17324]
+replace adjustment by to
+===
+update-node
+---
+identifier: adjustment [17281,17291]
+replace adjustment by to
+
+New cluster:
+MOVE from block_statement [1930,2054]
+------------
+===
+move-tree
+---
+variable_declaration_statement [2224,2242]
+    variable_declaration [2224,2233]
+        type_name: uint256 [2224,2231]
+        identifier: c [2232,2233]
+    affectation_operator: = [2234,2235]
+    binary_expression [2236,2241]
+        identifier: a [2236,2237]
+        arithmetic_operator: + [2238,2239]
+        identifier: b [2240,2241]
+to
+block_statement [1930,2054]
+at 1
+===
+move-tree
+---
+return_statement [2308,2317]
+    return: return [2308,2314]
+    identifier: c [2315,2316]
+to
+block_statement [1930,2054]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [2316,2345]
+    if: if [2316,2318]
+    binary_expression [2320,2325]
+        identifier: b [2320,2321]
+        comparison_operator: > [2322,2323]
+        identifier: a [2324,2325]
+    return_statement [2327,2345]
+        return: return [2327,2333]
+        tuple_expression [2334,2344]
+            boolean_literal: false [2335,2340]
+            number_literal: 0 [2342,2343]
+to
+block_statement [2292,2389]
+at 1
+
+New cluster:
+MOVE from block_statement [2292,2389]
+------------
+===
+move-tree
+---
+return_statement [2664,2715]
+    return: return [2664,2670]
+    call_expression [2671,2714]
+        identifier: sub [2671,2674]
+        call_argument [2675,2676]
+            identifier: a [2675,2676]
+        call_argument [2678,2679]
+            identifier: b [2678,2679]
+        call_argument [2681,2713]
+            string_literal [2681,2713]
+                string: "SafeMath: subtraction overflow" [2681,2713]
+to
+block_statement [2292,2389]
+at 2
+
+New cluster:
+MOVE from block_statement [2629,3030]
+------------
+===
+move-tree
+---
+return_statement [3916,3925]
+    return: return [3916,3922]
+    identifier: c [3923,3924]
+to
+block_statement [2629,3030]
+at 4
+===
+move-tree
+---
+if_statement [3767,3812]
+    if: if [3767,3769]
+    binary_expression [3771,3777]
+        identifier: a [3771,3772]
+        comparison_operator: == [3773,3775]
+        number_literal: 0 [3776,3777]
+    block_statement [3779,3812]
+        return_statement [3793,3802]
+            return: return [3793,3799]
+            number_literal: 0 [3800,3801]
+to
+block_statement [2629,3030]
+at 1
+===
+move-tree
+---
+variable_declaration_statement [3822,3840]
+    variable_declaration [3822,3831]
+        type_name: uint256 [3822,3829]
+        identifier: c [3830,3831]
+    affectation_operator: = [3832,3833]
+    binary_expression [3834,3839]
+        identifier: a [3834,3835]
+        arithmetic_operator: * [3836,3837]
+        identifier: b [3838,3839]
+to
+block_statement [2629,3030]
+at 2
+
+New cluster:
+MOVE from return_statement [4403,4416]
+------------
+===
+move-tree
+---
+binary_expression [3201,3206]
+    identifier: a [3201,3202]
+    arithmetic_operator: - [3203,3204]
+    identifier: b [3205,3206]
+to
+return_statement [4403,4416]
+at 1
+
+New cluster:
+MOVE from return_statement [4463,4510]
+------------
+===
+move-tree
+---
+binary_expression [5252,5257]
+    identifier: a [5252,5253]
+    arithmetic_operator: / [5254,5255]
+    identifier: b [5256,5257]
+to
+return_statement [4463,4510]
+at 1
+
+New cluster:
+MOVE from block_statement [6298,6388]
+------------
+===
+move-tree
+---
+expression_statement [3150,3180]
+    call_expression [3150,3179]
+        identifier: require [3150,3157]
+        call_argument [3158,3164]
+            binary_expression [3158,3164]
+                identifier: b [3158,3159]
+                comparison_operator: <= [3160,3162]
+                identifier: a [3163,3164]
+        call_argument [3166,3178]
+            identifier: errorMessage [3166,3178]
+to
+block_statement [6298,6388]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [6365,6378]
+    return: return [6365,6371]
+    binary_expression [6372,6377]
+        identifier: a [6372,6373]
+        arithmetic_operator: - [6374,6375]
+        identifier: b [6376,6377]
+to
+block_statement [6298,6388]
+at 2
+
+New cluster:
+MOVE from block_statement [7013,7102]
+------------
+===
+move-tree
+---
+expression_statement [5202,5231]
+    call_expression [5202,5230]
+        identifier: require [5202,5209]
+        call_argument [5210,5215]
+            binary_expression [5210,5215]
+                identifier: b [5210,5211]
+                comparison_operator: > [5212,5213]
+                number_literal: 0 [5214,5215]
+        call_argument [5217,5229]
+            identifier: errorMessage [5217,5229]
+to
+block_statement [7013,7102]
+at 1
+
+New cluster:
+MOVE from block_statement [7013,7102]
+------------
+===
+move-tree
+---
+return_statement [5890,5935]
+    return: return [5890,5896]
+    call_expression [5897,5934]
+        identifier: mod [5897,5900]
+        call_argument [5901,5902]
+            identifier: a [5901,5902]
+        call_argument [5904,5905]
+            identifier: b [5904,5905]
+        call_argument [5907,5933]
+            string_literal [5907,5933]
+                string: "SafeMath: modulo by zero" [5907,5933]
+to
+block_statement [7013,7102]
+at 2
+
+New cluster:
+MOVE from block_statement [7889,7978]
+------------
+===
+move-tree
+---
+expression_statement [6550,6580]
+    call_expression [6550,6579]
+        identifier: require [6550,6557]
+        call_argument [6558,6564]
+            binary_expression [6558,6564]
+                identifier: b [6558,6559]
+                comparison_operator: != [6560,6562]
+                number_literal: 0 [6563,6564]
+        call_argument [6566,6578]
+            identifier: errorMessage [6566,6578]
+to
+block_statement [7889,7978]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [7955,7968]
+    return: return [7955,7961]
+    binary_expression [7962,7967]
+        identifier: a [7962,7963]
+        %: % [7964,7965]
+        identifier: b [7966,7967]
+to
+block_statement [7889,7978]
+at 2
+
+New cluster:
+MOVE from if_statement [1985,2014]
+------------
+===
+move-tree
+---
+binary_expression [2259,2265]
+    identifier: c [2259,2260]
+    comparison_operator: >= [2261,2263]
+    identifier: a [2264,2265]
+to
+if_statement [1985,2014]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [1996,2014]
+    return: return [1996,2002]
+    tuple_expression [2003,2013]
+        boolean_literal: false [2004,2009]
+        number_literal: 0 [2011,2012]
+to
+if_statement [1985,2014]
+at 2
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [2034,2043]
+to
+return_statement [2308,2317]
+at 1
+------------
+===
+insert-node
+---
+tuple_expression [2034,2043]
+to
+return_statement [2308,2317]
+at 1
+===
+insert-node
+---
+boolean_literal: true [2035,2039]
+to
+tuple_expression [2034,2043]
+at 0
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [2365,2378]
+to
+return_statement [2664,2715]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: - [2374,2375]
+to
+binary_expression [2372,2377]
+at 1
+===
+insert-node
+---
+tuple_expression [2365,2378]
+to
+return_statement [2664,2715]
+at 1
+===
+insert-node
+---
+boolean_literal: true [2366,2370]
+to
+tuple_expression [2365,2378]
+at 0
+===
+insert-node
+---
+binary_expression [2372,2377]
+to
+tuple_expression [2365,2378]
+at 1
+
+New cluster:
+MOVE from if_statement [3767,3812]
+------------
+===
+move-tree
+---
+return_statement [3793,3802]
+    return: return [3793,3799]
+    number_literal: 0 [3800,3801]
+to
+if_statement [3767,3812]
+at 2
+
+New cluster:
+MOVE from if_statement [2956,2990]
+------------
+===
+move-tree
+---
+binary_expression [3857,3867]
+    binary_expression [3857,3862]
+        identifier: c [3857,3858]
+        arithmetic_operator: / [3859,3860]
+        identifier: a [3861,3862]
+    comparison_operator: == [3863,3865]
+    identifier: b [3866,3867]
+to
+if_statement [2956,2990]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [2972,2990]
+    return: return [2972,2978]
+    tuple_expression [2979,2989]
+        boolean_literal: false [2980,2985]
+        number_literal: 0 [2987,2988]
+to
+if_statement [2956,2990]
+at 2
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [3010,3019]
+to
+return_statement [3916,3925]
+at 1
+------------
+===
+insert-node
+---
+boolean_literal: true [3011,3015]
+to
+tuple_expression [3010,3019]
+at 0
+===
+insert-node
+---
+tuple_expression [3010,3019]
+to
+return_statement [3916,3925]
+at 1
+
+New cluster:
+===
+insert-node
+---
+binary_expression [7086,7091]
+to
+return_statement [5890,5935]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: / [7088,7089]
+to
+binary_expression [7086,7091]
+at 1
+===
+insert-node
+---
+binary_expression [7086,7091]
+to
+return_statement [5890,5935]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+yul_path [9034,9038]
+    yul_identifier [9034,9038]
+        identifier: size [9034,9038]
+to
+yul_assignment [9034,9062]
+at 0
+
+New cluster:
+MOVE from yul_assignment [9034,9062]
+------------
+===
+move-tree
+---
+yul_function_call [9948,9968]
+    yul_evm_builtin [9948,9959]
+        extcodehash: extcodehash [9948,9959]
+    yul_path [9960,9967]
+        yul_identifier [9960,9967]
+            identifier: account [9960,9967]
+to
+yul_assignment [9034,9062]
+at 2
+
+New cluster:
+===
+insert-node
+---
+struct_expression [10204,10233]
+to
+call_expression [11566,11598]
+at 0
+------------
+===
+insert-node
+---
+struct_field_assignment [10219,10232]
+to
+struct_expression [10204,10233]
+at 1
+===
+insert-node
+---
+identifier: value [10219,10224]
+to
+struct_field_assignment [10219,10232]
+at 0
+===
+insert-node
+---
+struct_expression [10204,10233]
+to
+call_expression [11566,11598]
+at 0
+===
+insert-node
+---
+:: : [10224,10225]
+to
+struct_field_assignment [10219,10232]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13958,13965]
+    identifier: success [13958,13965]
+to
+call_expression [13941,13992]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13967,13977]
+    identifier: returndata [13967,13977]
+to
+call_expression [13941,13992]
+at 2
+
+New cluster:
+MOVE from call_expression [13941,13992]
+------------
+===
+move-tree
+---
+call_argument [6566,6578]
+    identifier: errorMessage [6566,6578]
+to
+call_expression [13941,13992]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: from [22260,22264]
+to
+binary_expression [17229,17243]
+at 2
+------------
+===
+insert-node
+---
+identifier: from [22260,22264]
+to
+binary_expression [17229,17243]
+at 2
+
+New cluster:
+UPDATE from >= to <
+------------
+===
+update-node
+---
+comparison_operator: >= [2261,2263]
+replace >= by <
+
+New cluster:
+MOVE from tuple_expression [2034,2043]
+------------
+===
+move-tree
+---
+identifier: c [2315,2316]
+to
+tuple_expression [2034,2043]
+at 1
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [2902,2911]
+to
+return_statement [3793,3802]
+at 1
+------------
+===
+insert-node
+---
+boolean_literal: true [2903,2907]
+to
+tuple_expression [2902,2911]
+at 0
+===
+insert-node
+---
+tuple_expression [2902,2911]
+to
+return_statement [3793,3802]
+at 1
+
+New cluster:
+UPDATE from == to !=
+------------
+===
+update-node
+---
+comparison_operator: == [3863,3865]
+replace == by !=
+
+New cluster:
+MOVE from tuple_expression [3010,3019]
+------------
+===
+move-tree
+---
+identifier: c [3923,3924]
+to
+tuple_expression [3010,3019]
+at 1
+
+New cluster:
+MOVE from binary_expression [7086,7091]
+------------
+===
+move-tree
+---
+identifier: a [5901,5902]
+to
+binary_expression [7086,7091]
+at 0
+
+New cluster:
+MOVE from binary_expression [7086,7091]
+------------
+===
+move-tree
+---
+identifier: b [5904,5905]
+to
+binary_expression [7086,7091]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7928,7940]
+    identifier: errorMessage [7928,7940]
+to
+call_expression [6550,6579]
+at 2
+
+New cluster:
+MOVE from yul_function_call [9948,9968]
+------------
+===
+move-tree
+---
+yul_evm_builtin [8537,8548]
+    extcodesize: extcodesize [8537,8548]
+to
+yul_function_call [9948,9968]
+at 0
+
+New cluster:
+UPDATE from recipient.call.value to recipient.call
+------------
+===
+update-node
+---
+member_expression: recipient.call.value [11566,11586]
+replace recipient.call.value by recipient.call
+
+New cluster:
+MOVE from struct_expression [10204,10233]
+------------
+===
+move-tree
+---
+member_expression: recipient.call.value [11566,11586]
+to
+struct_expression [10204,10233]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: from [22332,22336]
+to
+binary_expression [17314,17328]
+at 2
+------------
+===
+insert-node
+---
+identifier: from [22332,22336]
+to
+binary_expression [17314,17328]
+at 2
+
+New cluster:
+MOVE from binary_expression [2372,2377]
+------------
+===
+move-tree
+---
+identifier: a [2675,2676]
+to
+binary_expression [2372,2377]
+at 0
+
+New cluster:
+MOVE from binary_expression [2372,2377]
+------------
+===
+move-tree
+---
+identifier: b [2678,2679]
+to
+binary_expression [2372,2377]
+at 2
+
+New cluster:
+MOVE from tuple_expression [2902,2911]
+------------
+===
+move-tree
+---
+number_literal: 0 [3800,3801]
+to
+tuple_expression [2902,2911]
+at 1
+
+New cluster:
+MOVE from struct_field_assignment [10219,10232]
+------------
+===
+move-tree
+---
+identifier: amount [11587,11593]
+to
+struct_field_assignment [10219,10232]
+at 2
+
+New cluster:
+MOVE from binary_expression [7697,7744]
+------------
+===
+move-tree
+---
+logical_operator: || [7710,7712]
+to
+binary_expression [7697,7744]
+at 1
+===
+move-tree
+---
+identifier: initializing [7697,7709]
+to
+binary_expression [7697,7744]
+at 0
+
+New cluster:
+UPDATE from "Contract instance has already been initialized" to "Initializable: contract is already initialized"
+------------
+===
+update-node
+---
+string: "Contract instance has already been initialized" [7746,7794]
+replace "Contract instance has already been initialized" by "Initializable: contract is already initialized"
+
+New cluster:
+UPDATE from != to >
+------------
+===
+update-node
+---
+comparison_operator: != [6560,6562]
+replace != by >
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [22294,22305]
+to
+binary_expression [17269,17292]
+at 2
+------------
+===
+insert-node
+---
+binary_expression [22295,22304]
+to
+parenthesized_expression [22294,22305]
+at 0
+===
+insert-node
+---
+identifier: from [22300,22304]
+to
+binary_expression [22295,22304]
+at 2
+===
+insert-node
+---
+arithmetic_operator: - [22298,22299]
+to
+binary_expression [22295,22304]
+at 1
+===
+insert-node
+---
+parenthesized_expression [22294,22305]
+to
+binary_expression [17269,17292]
+at 2
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [22366,22377]
+to
+binary_expression [17354,17382]
+at 2
+------------
+===
+insert-node
+---
+parenthesized_expression [22366,22377]
+to
+binary_expression [17354,17382]
+at 2
+
+New cluster:
+MOVE from binary_expression [22295,22304]
+------------
+===
+move-tree
+---
+identifier: adjustment [17281,17291]
+to
+binary_expression [22295,22304]
+at 0
+
+New cluster:
+MOVE from parenthesized_expression [22366,22377]
+------------
+===
+move-tree
+---
+binary_expression [17366,17381]
+    identifier: adjustment [17366,17376]
+    arithmetic_operator: * [17377,17378]
+    unary_expression [17379,17381]
+        arithmetic_operator: - [17379,17380]
+        number_literal: 1 [17380,17381]
+to
+parenthesized_expression [22366,22377]
+at 0
+
+New cluster:
+UPDATE from adjustment to from
+------------
+===
+update-node
+---
+identifier: adjustment [17366,17376]
+replace adjustment by from
+
+New cluster:
+MOVE from binary_expression [17366,17381]
+------------
+===
+move-tree
+---
+arithmetic_operator: - [17379,17380]
+to
+binary_expression [17366,17381]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: to [22374,22376]
+to
+binary_expression [17366,17381]
+at 2
+------------
+===
+insert-node
+---
+identifier: to [22374,22376]
+to
+binary_expression [17366,17381]
+at 2
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2251,2298]
+===
+------------
+===
+delete-node
+---
+expression_statement [2251,2298]
+===
+===
+delete-node
+---
+call_argument [2259,2265]
+===
+===
+delete-node
+---
+identifier: require [2251,2258]
+===
+===
+delete-node
+---
+call_expression [2251,2297]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2267,2296]
+    string_literal [2267,2296]
+        string: "SafeMath: addition overflow" [2267,2296]
+
+New cluster:
+===
+delete-node
+---
+call_expression [2671,2714]
+===
+------------
+===
+delete-node
+---
+call_argument [2678,2679]
+===
+===
+delete-node
+---
+identifier: sub [2671,2674]
+===
+===
+delete-node
+---
+call_expression [2671,2714]
+===
+===
+delete-node
+---
+call_argument [2675,2676]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2681,2713]
+    string_literal [2681,2713]
+        string: "SafeMath: subtraction overflow" [2681,2713]
+
+New cluster:
+===
+delete-node
+---
+block_statement [3779,3812]
+===
+------------
+===
+delete-node
+---
+block_statement [3779,3812]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3849,3906]
+===
+------------
+===
+delete-node
+---
+expression_statement [3849,3906]
+===
+===
+delete-node
+---
+call_argument [3857,3867]
+===
+===
+delete-node
+---
+call_expression [3849,3905]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3869,3904]
+    string_literal [3869,3904]
+        string: "SafeMath: multiplication overflow" [3869,3904]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [4470,4509]
+    identifier: div [4470,4473]
+    call_argument [4474,4475]
+        identifier: a [4474,4475]
+    call_argument [4477,4478]
+        identifier: b [4477,4478]
+    call_argument [4480,4508]
+        string_literal [4480,4508]
+            string: "SafeMath: division by zero" [4480,4508]
+
+New cluster:
+===
+delete-node
+---
+function_definition [5813,5941]
+===
+------------
+===
+delete-node
+---
+function_body [5880,5941]
+===
+===
+delete-node
+---
+visibility: internal [5848,5856]
+===
+===
+delete-node
+---
+function_definition [5813,5941]
+===
+===
+delete-node
+---
+identifier: mod [5822,5825]
+===
+===
+delete-node
+---
+function: function [5813,5821]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [3189,3198]
+    type_name: uint256 [3189,3196]
+    identifier: c [3197,3198]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [3189,3207]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [3199,3200]
+===
+===
+delete-node
+---
+variable_declaration_statement [3189,3207]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [3217,3226]
+    return: return [3217,3223]
+    identifier: c [3224,3225]
+
+New cluster:
+===
+delete-node
+---
+call_expression [5897,5934]
+===
+------------
+===
+delete-node
+---
+call_expression [5897,5934]
+===
+===
+delete-node
+---
+call_argument [5904,5905]
+===
+===
+delete-node
+---
+call_argument [5901,5902]
+===
+===
+delete-node
+---
+identifier: mod [5897,5900]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5907,5933]
+    string_literal [5907,5933]
+        string: "SafeMath: modulo by zero" [5907,5933]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [5240,5249]
+    type_name: uint256 [5240,5247]
+    identifier: c [5248,5249]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [5240,5258]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [5240,5258]
+===
+===
+delete-node
+---
+affectation_operator: = [5250,5251]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [5354,5363]
+    return: return [5354,5360]
+    identifier: c [5361,5362]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+yul_evm_builtin [9948,9959]
+    extcodehash: extcodehash [9948,9959]
+
+New cluster:
+===
+delete-node
+---
+call_expression [11566,11594]
+===
+------------
+===
+delete-node
+---
+call_expression [11566,11594]
+===
+===
+delete-node
+---
+call_argument [11587,11593]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+pragma_directive [6673,6705]
+    pragma: pragma [6673,6679]
+    solidity_pragma_token [6680,6704]
+        solidity: solidity [6680,6688]
+        solidity_version_comparison_operator [6688,6691]
+            comparison_operator:  >= [6688,6691]
+        solidity_version: 0.4.24 [6691,6697]
+        solidity_version_comparison_operator [6697,6699]
+            <:  < [6697,6699]
+        solidity_version: 0.7.0 [6699,6704]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [7713,7728]
+    identifier: isConstructor [7713,7726]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [7697,7728]
+===
+------------
+===
+delete-node
+---
+binary_expression [7697,7728]
+===
+
+New cluster:
+===
+delete-node
+---
+logical_operator: || [7729,7731]
+===
+------------
+===
+delete-node
+---
+logical_operator: || [7729,7731]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [8082,8580]
+===
+------------
+===
+delete-node
+---
+assembly_statement [8520,8556]
+===
+===
+delete-node
+---
+visibility: private [8107,8114]
+===
+===
+delete-node
+---
+function_body [8135,8580]
+===
+===
+delete-node
+---
+yul_assignment [8531,8554]
+===
+===
+delete-node
+---
+assembly: assembly [8520,8528]
+===
+===
+delete-node
+---
+function: function [8082,8090]
+===
+===
+delete-node
+---
+identifier: isConstructor [8091,8104]
+===
+===
+delete-node
+---
+function_definition [8082,8580]
+===
+===
+delete-node
+---
+:=: := [8534,8536]
+===
+===
+delete-node
+---
+yul_function_call [8537,8554]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [8120,8134]
+    returns: returns [8120,8127]
+    parameter [8129,8133]
+        type_name: bool [8129,8133]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [8470,8499]
+    variable_declaration [8470,8482]
+        type_name: address [8470,8477]
+        identifier: self [8478,8482]
+    affectation_operator: = [8483,8484]
+    type_cast_expression [8485,8498]
+        primitive_type: address [8485,8492]
+        call_argument [8493,8497]
+            identifier: this [8493,8497]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [8504,8515]
+    variable_declaration [8504,8514]
+        type_name: uint256 [8504,8511]
+        identifier: cs [8512,8514]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+yul_path [8531,8533]
+    yul_identifier [8531,8533]
+        identifier: cs [8531,8533]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+yul_path [8549,8553]
+    yul_identifier [8549,8553]
+        identifier: self [8549,8553]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [8561,8576]
+    return: return [8561,8567]
+    binary_expression [8568,8575]
+        identifier: cs [8568,8570]
+        comparison_operator: == [8571,8573]
+        number_literal: 0 [8574,8575]
+
+New cluster:
+===
+delete-node
+---
+library_declaration [8834,11695]
+===
+------------
+===
+delete-node
+---
+function: function [10246,10254]
+===
+===
+delete-node
+---
+visibility: internal [9464,9472]
+===
+===
+delete-node
+---
+:=: := [9945,9947]
+===
+===
+delete-node
+---
+identifier: isContract [9436,9446]
+===
+===
+delete-node
+---
+function_definition [9427,10037]
+===
+===
+delete-node
+---
+identifier: Address [8842,8849]
+===
+===
+delete-node
+---
+identifier: toPayable [10255,10264]
+===
+===
+delete-node
+---
+library_declaration [8834,11695]
+===
+===
+delete-node
+---
+function: function [9427,9435]
+===
+===
+delete-node
+---
+visibility: internal [10282,10290]
+===
+===
+delete-node
+---
+function_definition [10246,10371]
+===
+===
+delete-node
+---
+assembly: assembly [9925,9933]
+===
+===
+delete-node
+---
+assembly_statement [9925,9970]
+===
+===
+delete-node
+---
+contract_body [8850,11695]
+===
+===
+delete-node
+---
+library: library [8834,8841]
+===
+===
+delete-node
+---
+yul_assignment [9936,9968]
+===
+===
+delete-node
+---
+function_body [9493,10037]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [9745,9762]
+    variable_declaration [9745,9761]
+        type_name: bytes32 [9745,9752]
+        identifier: codehash [9753,9761]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [9771,9860]
+    variable_declaration [9771,9790]
+        type_name: bytes32 [9771,9778]
+        identifier: accountHash [9779,9790]
+    affectation_operator: = [9791,9792]
+    number_literal: 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 [9793,9859]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+yul_path [9936,9944]
+    yul_identifier [9936,9944]
+        identifier: codehash [9936,9944]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [9979,10031]
+    return: return [9979,9985]
+    parenthesized_expression [9986,10030]
+        binary_expression [9987,10029]
+            binary_expression [9987,10010]
+                identifier: codehash [9987,9995]
+                comparison_operator: != [9996,9998]
+                identifier: accountHash [9999,10010]
+            logical_operator: && [10011,10013]
+            binary_expression [10014,10029]
+                identifier: codehash [10014,10022]
+                comparison_operator: != [10023,10025]
+                number_literal: 0x0 [10026,10029]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [10265,10280]
+    type_name: address [10265,10272]
+    identifier: account [10273,10280]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [10296,10321]
+    returns: returns [10296,10303]
+    parameter [10305,10320]
+        type_name: address payable [10305,10320]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [10322,10371]
+    return_statement [10332,10365]
+        return: return [10332,10338]
+        type_cast_expression [10339,10364]
+            primitive_type: address [10339,10346]
+            call_argument [10347,10363]
+                type_cast_expression [10347,10363]
+                    primitive_type: uint160 [10347,10354]
+                    call_argument [10355,10362]
+                        identifier: account [10355,10362]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+pragma_directive [14555,14578]
+    pragma: pragma [14555,14561]
+    solidity_pragma_token [14562,14577]
+        solidity: solidity [14562,14570]
+        solidity_version:  0.5.11 [14570,14577]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+pragma_directive [16447,16470]
+    pragma: pragma [16447,16453]
+    solidity_pragma_token [16454,16469]
+        solidity: solidity [16454,16462]
+        solidity_version:  0.5.11 [16462,16469]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [17242,17243]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [17242,17243]
+===
+
+New cluster:
+===
+delete-node
+---
+type_cast_expression [17273,17292]
+===
+------------
+===
+delete-node
+---
+primitive_type: uint256 [17273,17280]
+===
+===
+delete-node
+---
+type_cast_expression [17273,17292]
+===
+===
+delete-node
+---
+call_argument [17281,17291]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [17327,17328]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [17327,17328]
+===
+
+New cluster:
+===
+delete-node
+---
+arithmetic_operator: * [17377,17378]
+===
+------------
+===
+delete-node
+---
+arithmetic_operator: * [17377,17378]
+===
+
+New cluster:
+===
+delete-node
+---
+unary_expression [17379,17381]
+===
+------------
+===
+delete-node
+---
+number_literal: 1 [17380,17381]
+===
+===
+delete-node
+---
+unary_expression [17379,17381]
+===
+
+New cluster:
+===
+delete-node
+---
+type_cast_expression [17358,17382]
+===
+------------
+===
+delete-node
+---
+type_cast_expression [17358,17382]
+===
+===
+delete-node
+---
+call_argument [17366,17381]
+===
+===
+delete-node
+---
+primitive_type: uint256 [17358,17365]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+pragma_directive [20251,20274]
+    pragma: pragma [20251,20257]
+    solidity_pragma_token [20258,20273]
+        solidity: solidity [20258,20266]
+        solidity_version:  0.5.11 [20266,20273]
+
+New cluster:
+===
+delete-node
+---
+internal: internal [21656,21664]
+===
+------------
+===
+delete-node
+---
+internal: internal [21656,21664]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+pragma_directive [25563,25586]
+    pragma: pragma [25563,25569]
+    solidity_pragma_token [25570,25585]
+        solidity: solidity [25570,25578]
+        solidity_version:  0.5.11 [25578,25585]
+
+New cluster:
+===
+delete-node
+---
+identifier: OUSD [25974,25978]
+===
+------------
+===
+delete-node
+---
+identifier: OUSD [25974,25978]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [25979,25981]
+===
+------------
+===
+delete-node
+---
+is: is [25979,25981]
+===
+

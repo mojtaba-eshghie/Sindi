@@ -1,0 +1,5 @@
+results/differencing_results/0x6a6025c18f4b15385e8f65c67d759b53180bcd37_contracts_MarketRegistry.sol___0x54b1b79531c80da391638d040b58abdb193326f3_contracts_MarketRegistry.sol.log:
+  724  identifier: require [14559,14566]
+  725: replace require by keccak256
+  726  
+

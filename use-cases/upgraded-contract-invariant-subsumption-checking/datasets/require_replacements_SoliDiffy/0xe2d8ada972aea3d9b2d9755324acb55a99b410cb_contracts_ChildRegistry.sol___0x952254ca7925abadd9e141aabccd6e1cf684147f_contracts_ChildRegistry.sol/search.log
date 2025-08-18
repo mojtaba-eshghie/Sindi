@@ -1,0 +1,5 @@
+results/differencing_results/0xe2d8ada972aea3d9b2d9755324acb55a99b410cb_contracts_ChildRegistry.sol___0x952254ca7925abadd9e141aabccd6e1cf684147f_contracts_ChildRegistry.sol.log:
+  232  identifier: require [761,768]
+  233: replace require by __ChildRegistry_init_unchained
+  234  
+

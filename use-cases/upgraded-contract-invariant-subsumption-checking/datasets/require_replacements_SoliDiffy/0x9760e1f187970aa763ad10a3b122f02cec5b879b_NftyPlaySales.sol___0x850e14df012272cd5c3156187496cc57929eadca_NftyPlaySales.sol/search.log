@@ -1,0 +1,9 @@
+results/differencing_results/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol.log:
+  3409  identifier: require [69261,69268]
+  3410: replace require by price
+  3411  ===
+
+  3414  identifier: require [70796,70803]
+  3415: replace require by price
+  3416  
+

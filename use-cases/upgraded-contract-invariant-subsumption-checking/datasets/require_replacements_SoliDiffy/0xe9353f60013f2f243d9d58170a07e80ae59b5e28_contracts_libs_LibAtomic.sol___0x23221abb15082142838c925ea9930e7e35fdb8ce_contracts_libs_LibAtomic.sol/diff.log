@@ -1,0 +1,978 @@
+New cluster:
+MOVE from struct_declaration [227,395]
+------------
+===
+move-tree
+---
+struct_member [324,342]
+    type_name: uint64 [324,330]
+    identifier: expiration [331,341]
+to
+struct_declaration [227,395]
+at 3
+===
+move-tree
+---
+struct_member [379,389]
+    type_name: bool [379,383]
+    identifier: used [384,388]
+to
+struct_declaration [383,552]
+at 4
+
+New cluster:
+===
+insert-node
+---
+struct_declaration [383,552]
+to
+contract_body [191,5343]
+at 2
+------------
+===
+insert-node
+---
+struct: struct [383,389]
+to
+struct_declaration [383,552]
+at 0
+===
+insert-node
+---
+struct_declaration [383,552]
+to
+contract_body [191,5343]
+at 2
+===
+insert-node
+---
+identifier: LockInfo [390,398]
+to
+struct_declaration [383,552]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [322,343]
+    type_name: uint24 [322,328]
+    identifier: targetChainId [329,342]
+to
+struct_declaration [227,395]
+at 6
+
+New cluster:
+MOVE from struct_declaration [383,552]
+------------
+===
+move-tree
+---
+struct_member [753,768]
+    type_name: address [753,760]
+    identifier: sender [761,767]
+to
+struct_declaration [383,552]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [433,451]
+    type_name: uint64 [433,439]
+    identifier: expiration [440,450]
+to
+struct_declaration [383,552]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [479,493]
+    type_name: address [479,486]
+    identifier: asset [487,492]
+to
+struct_declaration [383,552]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [502,516]
+    type_name: uint64 [502,508]
+    identifier: amount [509,515]
+to
+struct_declaration [383,552]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_member [525,546]
+    type_name: uint24 [525,531]
+    identifier: targetChainId [532,545]
+to
+struct_declaration [383,552]
+at 7
+
+New cluster:
+UPDATE from mapping(bytes32 => LockOrder) to mapping(bytes32 => LockInfo)
+------------
+===
+update-node
+---
+type_name: mapping(bytes32 => LockOrder) [3076,3105]
+replace mapping(bytes32 => LockOrder) by mapping(bytes32 => LockInfo)
+===
+update-node
+---
+type_name: mapping(bytes32 => LockOrder) [3940,3969]
+replace mapping(bytes32 => LockOrder) by mapping(bytes32 => LockInfo)
+===
+update-node
+---
+type_name: mapping(bytes32 => LockOrder) [855,884]
+replace mapping(bytes32 => LockOrder) by mapping(bytes32 => LockInfo)
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [1362,1390]
+    variable_declaration [1362,1375]
+        type_name: int [1362,1365]
+        identifier: remaining [1366,1375]
+    affectation_operator: = [1376,1377]
+    member_expression: swap.amount [1378,1389]
+to
+function_body [1135,1909]
+at 4
+
+New cluster:
+===
+insert-node
+---
+if_statement [1808,2018]
+to
+function_body [1135,1909]
+at 6
+------------
+===
+insert-node
+---
+if: if [1808,1810]
+to
+if_statement [1808,2018]
+at 0
+===
+insert-node
+---
+if_statement [1808,2018]
+to
+function_body [1135,1909]
+at 6
+
+New cluster:
+UPDATE from mapping(bytes32 => RedeemInfo) to mapping(bytes32 => bytes)
+------------
+===
+update-node
+---
+type_name: mapping(bytes32 => RedeemInfo) [2025,2055]
+replace mapping(bytes32 => RedeemInfo) by mapping(bytes32 => bytes)
+
+New cluster:
+===
+insert-node
+---
+view: view [4812,4816]
+to
+state_mutability [4616,4620]
+at 0
+------------
+===
+insert-node
+---
+view: view [4812,4816]
+to
+state_mutability [4616,4620]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [4845,4858]
+    variable_declaration [4845,4857]
+        type_name: uint256 [4845,4852]
+        identifier: chId [4853,4857]
+to
+function_body [4639,5023]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+assembly_statement [4867,4917]
+    assembly: assembly [4867,4875]
+    yul_assignment [4890,4907]
+        yul_path [4890,4894]
+            yul_identifier [4890,4894]
+                identifier: chId [4890,4894]
+        :=: := [4895,4897]
+        yul_function_call [4898,4907]
+            yul_evm_builtin [4898,4905]
+                chainid: chainid [4898,4905]
+to
+function_body [4639,5023]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [5424,5437]
+    variable_declaration [5424,5436]
+        type_name: uint256 [5424,5431]
+        identifier: chId [5432,5436]
+to
+function_body [5123,5341]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+assembly_statement [5446,5496]
+    assembly: assembly [5446,5454]
+    yul_assignment [5469,5486]
+        yul_path [5469,5473]
+            yul_identifier [5469,5473]
+                identifier: chId [5469,5473]
+        :=: := [5474,5476]
+        yul_function_call [5477,5486]
+            yul_evm_builtin [5477,5484]
+                chainid: chainid [5477,5484]
+to
+function_body [5123,5341]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1812,1825]
+    identifier: remaining [1812,1821]
+    comparison_operator: > [1822,1823]
+    number_literal: 0 [1824,1825]
+to
+if_statement [1808,2018]
+at 1
+
+New cluster:
+MOVE from if_statement [1588,1788]
+------------
+===
+move-tree
+---
+else: else [1654,1658]
+to
+if_statement [1588,1788]
+at 3
+===
+move-tree
+---
+block_statement [1659,1857]
+    expression_statement [1673,1774]
+        call_expression [1673,1773]
+            member_expression: LibExchange._updateBalance [1673,1699]
+            call_argument [1700,1711]
+                member_expression: swap.sender [1700,1711]
+            call_argument [1713,1723]
+                member_expression: swap.asset [1713,1723]
+            call_argument [1725,1744]
+                binary_expression [1725,1744]
+                    unary_expression [1725,1727]
+                        arithmetic_operator: - [1725,1726]
+                        number_literal: 1 [1726,1727]
+                    arithmetic_operator: * [1727,1728]
+                    type_cast_expression [1728,1744]
+                        primitive_type: int [1728,1731]
+                        call_argument [1732,1743]
+                            member_expression: swap.amount [1732,1743]
+            call_argument [1746,1759]
+                identifier: assetBalances [1746,1759]
+            call_argument [1761,1772]
+                identifier: liabilities [1761,1772]
+    expression_statement [1787,1847]
+        call_expression [1787,1846]
+            identifier: require [1787,1794]
+            call_argument [1795,1838]
+                binary_expression [1795,1838]
+                    array_access [1795,1833]
+                        array_access [1795,1821]
+                            identifier: assetBalances [1795,1808]
+                            member_expression: swap.sender [1809,1820]
+                        member_expression: swap.asset [1822,1832]
+                    comparison_operator: >= [1834,1836]
+                    number_literal: 0 [1837,1838]
+            call_argument [1840,1845]
+                string_literal [1840,1845]
+                    string: "E1A" [1840,1845]
+to
+if_statement [1808,2018]
+at 2
+
+New cluster:
+UPDATE from LockOrder to LockInfo
+------------
+===
+update-node
+---
+type_name: LockOrder [3309,3318]
+replace LockOrder by LockInfo
+===
+update-node
+---
+identifier: swap [1898,1902]
+replace swap by LockInfo
+===
+update-node
+---
+type_name: LockOrder [4172,4181]
+replace LockOrder by LockInfo
+
+New cluster:
+===
+insert-node
+---
+if_statement [1588,1788]
+to
+block_statement [1430,1653]
+at 2
+------------
+===
+insert-node
+---
+expression_statement [1712,1743]
+to
+block_statement [1694,1788]
+at 0
+===
+insert-node
+---
+if: if [1588,1590]
+to
+if_statement [1588,1788]
+at 0
+===
+insert-node
+---
+block_statement [1616,1688]
+to
+if_statement [1588,1788]
+at 2
+===
+insert-node
+---
+type_cast_expression [1726,1742]
+to
+assignment_expression [1712,1742]
+at 2
+===
+insert-node
+---
+block_statement [1694,1788]
+to
+if_statement [1588,1788]
+at 4
+===
+insert-node
+---
+affectation_operator: = [1724,1725]
+to
+assignment_expression [1712,1742]
+at 1
+===
+insert-node
+---
+assignment_expression [1712,1742]
+to
+expression_statement [1712,1743]
+at 0
+===
+insert-node
+---
+if_statement [1588,1788]
+to
+block_statement [1430,1653]
+at 2
+===
+insert-node
+---
+member_expression: swap.amount [1712,1723]
+to
+assignment_expression [1712,1742]
+at 0
+===
+insert-node
+---
+primitive_type: uint64 [1726,1732]
+to
+type_cast_expression [1726,1742]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [2059,2149]
+to
+assignment_expression [1867,1902]
+at 2
+------------
+===
+insert-node
+---
+call_expression [2059,2149]
+to
+assignment_expression [1867,1902]
+at 2
+
+New cluster:
+MOVE from assignment_expression [2834,2901]
+------------
+===
+move-tree
+---
+identifier: secret [2894,2900]
+to
+assignment_expression [2834,2901]
+at 2
+
+New cluster:
+UPDATE from keccak256(             abi.encodePacked(                 "atomicOrder",                 _order.sender,                 _order.receiver,                 _order.claimReceiver,                 _order.asset,                 _order.amount,                 _order.expiration,                 _order.secretHash             )         ).toEthSignedMessageHash to keccak256(             abi.encodePacked(                 "atomicOrder",                 chId,                 _order.sender,                 _order.receiver,                 _order.claimReceiver,                 _order.asset,                 _order.amount,                 _order.expiration,                 _order.secretHash             )         ).toEthSignedMessageHash
+------------
+===
+update-node
+---
+member_expression: keccak256(             abi.encodePacked(                 "atomicOrder",                 _order.sender,                 _order.receiver,                 _order.claimReceiver,                 _order.asset,                 _order.amount,                 _order.expiration,                 _order.secretHash             )         ).toEthSignedMessageHash [4664,5014]
+replace keccak256(             abi.encodePacked(                 "atomicOrder",                 _order.sender,                 _order.receiver,                 _order.claimReceiver,                 _order.asset,                 _order.amount,                 _order.expiration,                 _order.secretHash             )         ).toEthSignedMessageHash by keccak256(             abi.encodePacked(                 "atomicOrder",                 chId,                 _order.sender,                 _order.receiver,                 _order.claimReceiver,                 _order.asset,                 _order.amount,                 _order.expiration,                 _order.secretHash             )         ).toEthSignedMessageHash
+
+New cluster:
+UPDATE from keccak256(             abi.encodePacked(                 "claimOrder",                 _order.receiver,                 _order.secretHash             )         ).toEthSignedMessageHash to keccak256(             abi.encodePacked(                 "claimOrder",                 chId,                 _order.receiver,                 _order.secretHash             )         ).toEthSignedMessageHash
+------------
+===
+update-node
+---
+member_expression: keccak256(             abi.encodePacked(                 "claimOrder",                 _order.receiver,                 _order.secretHash             )         ).toEthSignedMessageHash [5148,5332]
+replace keccak256(             abi.encodePacked(                 "claimOrder",                 _order.receiver,                 _order.secretHash             )         ).toEthSignedMessageHash by keccak256(             abi.encodePacked(                 "claimOrder",                 chId,                 _order.receiver,                 _order.secretHash             )         ).toEthSignedMessageHash
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1592,1614]
+    identifier: eth_sent [1592,1600]
+    comparison_operator: < [1601,1602]
+    member_expression: swap.amount [1603,1614]
+to
+if_statement [1588,1788]
+at 1
+
+New cluster:
+MOVE from call_expression [2059,2149]
+------------
+===
+move-tree
+---
+identifier: swap [1898,1902]
+to
+call_expression [2059,2149]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2068,2079]
+    member_expression: swap.sender [2068,2079]
+to
+call_expression [2059,2149]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2081,2096]
+    member_expression: swap.expiration [2081,2096]
+to
+call_expression [2059,2149]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2098,2103]
+    boolean_literal: false [2098,2103]
+to
+call_expression [2059,2149]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2105,2115]
+    member_expression: swap.asset [2105,2115]
+to
+call_expression [2059,2149]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2117,2128]
+    member_expression: swap.amount [2117,2128]
+to
+call_expression [2059,2149]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [2130,2148]
+    member_expression: swap.targetChainId [2130,2148]
+to
+call_expression [2059,2149]
+at 6
+
+New cluster:
+MOVE from block_statement [1616,1688]
+------------
+===
+move-tree
+---
+expression_statement [1600,1643]
+    call_expression [1600,1642]
+        identifier: require [1600,1607]
+        call_argument [1608,1631]
+            binary_expression [1608,1631]
+                member_expression: swap.amount [1608,1619]
+                comparison_operator: == [1620,1622]
+                identifier: eth_sent [1623,1631]
+        call_argument [1633,1641]
+            string_literal [1633,1641]
+                string: "E17ETA" [1633,1641]
+to
+block_statement [1616,1688]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1760,1774]
+    assignment_expression [1760,1773]
+        identifier: remaining [1760,1769]
+        affectation_operator: = [1770,1771]
+        number_literal: 0 [1772,1773]
+to
+block_statement [1694,1788]
+at 1
+
+New cluster:
+UPDATE from secrets[order.secretHash].sender to secrets[order.secretHash].length
+------------
+===
+update-node
+---
+member_expression: secrets[order.secretHash].sender [2318,2350]
+replace secrets[order.secretHash].sender by secrets[order.secretHash].length
+
+New cluster:
+MOVE from binary_expression [2318,2364]
+------------
+===
+move-tree
+---
+number_literal: 0 [2362,2363]
+to
+binary_expression [2318,2364]
+at 2
+
+New cluster:
+===
+insert-node
+---
+assignment_expression [1634,1673]
+to
+expression_statement [1600,1643]
+at 0
+------------
+===
+insert-node
+---
+assignment_expression [1634,1673]
+to
+expression_statement [1600,1643]
+at 0
+===
+insert-node
+---
+affectation_operator: = [1644,1645]
+to
+assignment_expression [1634,1673]
+at 1
+
+New cluster:
+UPDATE from require to remaining
+------------
+===
+update-node
+---
+identifier: require [1600,1607]
+replace require by remaining
+
+New cluster:
+MOVE from assignment_expression [1634,1673]
+------------
+===
+move-tree
+---
+identifier: require [1600,1607]
+to
+assignment_expression [1634,1673]
+at 0
+===
+move-tree
+---
+call_argument [1633,1641]
+    string_literal [1633,1641]
+        string: "E17ETA" [1633,1641]
+to
+type_cast_expression [1726,1742]
+at 1
+
+New cluster:
+MOVE from assignment_expression [1634,1673]
+------------
+===
+move-tree
+---
+binary_expression [1608,1631]
+    member_expression: swap.amount [1608,1619]
+    comparison_operator: == [1620,1622]
+    identifier: eth_sent [1623,1631]
+to
+assignment_expression [1634,1673]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: remaining [1896,1905]
+to
+binary_expression [1725,1744]
+at 2
+------------
+===
+insert-node
+---
+identifier: remaining [1896,1905]
+to
+binary_expression [1725,1744]
+at 2
+
+New cluster:
+MOVE from binary_expression [1608,1631]
+------------
+===
+move-tree
+---
+type_cast_expression [1728,1744]
+    primitive_type: int [1728,1731]
+    call_argument [1732,1743]
+        member_expression: swap.amount [1732,1743]
+to
+binary_expression [1608,1631]
+at 0
+
+New cluster:
+===
+insert-node
+---
+arithmetic_operator: - [1663,1664]
+to
+binary_expression [1608,1631]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: - [1663,1664]
+to
+binary_expression [1608,1631]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: eth_sent [1733,1741]
+to
+call_argument [1633,1641]
+at 0
+------------
+===
+insert-node
+---
+identifier: eth_sent [1733,1741]
+to
+call_argument [1633,1641]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+import_directive [115,143]
+    import: import [115,121]
+    string: "./LibValidator.sol" [122,142]
+
+New cluster:
+===
+delete-node
+---
+struct_declaration [725,796]
+===
+------------
+===
+delete-node
+---
+struct_declaration [725,796]
+===
+===
+delete-node
+---
+struct: struct [725,731]
+===
+===
+delete-node
+---
+identifier: RedeemInfo [732,742]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+struct_member [777,790]
+    type_name: bytes [777,782]
+    identifier: secret [783,789]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [914,960]
+    type_name: mapping(bytes32 => RedeemInfo) [914,944]
+    storage: storage [945,952]
+    identifier: secrets [953,960]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1262,1325]
+    call_expression [1262,1324]
+        identifier: require [1262,1269]
+        call_argument [1270,1315]
+            binary_expression [1270,1315]
+                member_expression: secrets[swap.secretHash].sender [1270,1301]
+                comparison_operator: == [1302,1304]
+                type_cast_expression [1305,1315]
+                    primitive_type: address [1305,1312]
+                    call_argument [1313,1314]
+                        number_literal: 0 [1313,1314]
+        call_argument [1317,1323]
+            string_literal [1317,1323]
+                string: "E17R" [1317,1323]
+
+New cluster:
+===
+delete-node
+---
+member_expression: swap.amount [1608,1619]
+===
+------------
+===
+delete-node
+---
+member_expression: swap.amount [1608,1619]
+===
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: == [1620,1622]
+===
+------------
+===
+delete-node
+---
+comparison_operator: == [1620,1622]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [1600,1642]
+===
+------------
+===
+delete-node
+---
+call_argument [1608,1631]
+===
+===
+delete-node
+---
+call_expression [1600,1642]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [1633,1641]
+    string: "E17ETA" [1633,1641]
+
+New cluster:
+===
+delete-node
+---
+type_cast_expression [2354,2364]
+===
+------------
+===
+delete-node
+---
+type_cast_expression [2354,2364]
+===
+===
+delete-node
+---
+call_argument [2362,2363]
+===
+===
+delete-node
+---
+primitive_type: address [2354,2361]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [2862,2901]
+===
+------------
+===
+delete-node
+---
+call_expression [2862,2901]
+===
+===
+delete-node
+---
+call_argument [2894,2900]
+===
+===
+delete-node
+---
+identifier: RedeemInfo [2862,2872]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2873,2892]
+    member_expression: order.claimReceiver [2873,2892]
+
+New cluster:
+===
+delete-node
+---
+pure: pure [4616,4620]
+===
+------------
+===
+delete-node
+---
+pure: pure [4616,4620]
+===
+

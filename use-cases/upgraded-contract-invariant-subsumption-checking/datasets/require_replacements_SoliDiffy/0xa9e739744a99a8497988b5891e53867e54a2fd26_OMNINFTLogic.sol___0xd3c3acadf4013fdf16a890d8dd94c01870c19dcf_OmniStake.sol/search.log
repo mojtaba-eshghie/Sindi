@@ -1,0 +1,17 @@
+results/differencing_results/0xa9e739744a99a8497988b5891e53867e54a2fd26_OMNINFTLogic.sol___0xd3c3acadf4013fdf16a890d8dd94c01870c19dcf_OmniStake.sol.log:
+  1369  identifier: require [89493,89500]
+  1370: replace require by Stake
+  1371  
+
+  1774  identifier: require [91899,91906]
+  1775: replace require by withdrawStake
+  1776  
+
+  1799  identifier: require [93445,93452]
+  1800: replace require by withdrawMultiStake
+  1801  
+
+  6170  identifier: require [89371,89378]
+  6171: replace require by this
+  6172  ===
+

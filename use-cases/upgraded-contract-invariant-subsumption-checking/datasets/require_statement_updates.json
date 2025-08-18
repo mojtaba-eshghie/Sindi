@@ -1,0 +1,2523 @@
+[
+  {
+    "contract_pair": "0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol",
+    "function": "initialize",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_nativeTokenWrapper != address(0)",
+      "throwError(ZERO_ADDRESS)"
+    ],
+    "new_norm_args": [
+      "_primaryMarketFeeBps <= MAX_BPS && _marketFeeBps <= MAX_BPS",
+      "throwError(BPS_EXCEEDS_10000)"
+    ],
+    "old_raw": "require(_nativeTokenWrapper != address(0), throwError(ZERO_ADDRESS));",
+    "new_raw": "require(\n            _primaryMarketFeeBps <= MAX_BPS && _marketFeeBps <= MAX_BPS,\n            throwError(BPS_EXCEEDS_10000)\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol",
+    "function": "safeTransferERC20",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "success && balAfter == balBefore + _amount",
+      "throwError(TRANSFER_FAILED)"
+    ],
+    "new_norm_args": [
+      "balAfter == balBefore + _amount",
+      "throwError(TRANSFER_FAILED)"
+    ],
+    "old_raw": "require(\n            success && balAfter == balBefore + _amount,\n            throwError(TRANSFER_FAILED)\n        );",
+    "new_raw": "require(balAfter == balBefore + _amount, throwError(TRANSFER_FAILED));",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol",
+    "function": "validateUserOwnershipAndApproval",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "IERC1155(_assetContract).balanceOf(_tokenOwner, _tokenId) >= _quantity",
+      "throwError( INVALID_ASSET_OWNERSHIP_OR_INSUFFICIENT_ALLOWANCE_BALANCE )"
+    ],
+    "new_norm_args": [
+      "(_tokenOwner == msg.sender || IERC1155(_assetContract).isApprovedForAll( _tokenOwner, msg.sender )) && (IERC1155(_assetContract).balanceOf( _tokenOwner, _tokenId ) >= _quantity)",
+      "throwError( INVALID_ASSET_OWNERSHIP_OR_INSUFFICIENT_ALLOWANCE_BALANCE )"
+    ],
+    "old_raw": "require(\n                IERC1155(_assetContract).balanceOf(_tokenOwner, _tokenId) >=\n                    _quantity,\n                throwError(\n                    INVALID_ASSET_OWNERSHIP_OR_INSUFFICIENT_ALLOWANCE_BALANCE\n                )\n            );",
+    "new_raw": "require(\n                (_tokenOwner == msg.sender ||\n                    IERC1155(_assetContract).isApprovedForAll(\n                        _tokenOwner,\n                        msg.sender\n                    )) &&\n                    (IERC1155(_assetContract).balanceOf(\n                        _tokenOwner,\n                        _tokenId\n                    ) >= _quantity),\n                throwError(\n                    INVALID_ASSET_OWNERSHIP_OR_INSUFFICIENT_ALLOWANCE_BALANCE\n                )\n            );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol",
+    "function": "validateERC20BalAndAllowance",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "IERC20(_currency).balanceOf(_addrToCheck) >= _currencyAmountToCheckAgainst && IERC20(_currency).allowance(_addrToCheck, address(this)) >= _currencyAmountToCheckAgainst",
+      "throwError(TOKEN_INSUFFICIENT_ALLOWANCE_BALANCE)"
+    ],
+    "new_norm_args": [
+      "IERC20Upgradeable(_currency).balanceOf(_addrToCheck) >= _currencyAmountToCheckAgainst && IERC20Upgradeable(_currency).allowance( _addrToCheck, address(this) ) >= _currencyAmountToCheckAgainst",
+      "throwError(TOKEN_INSUFFICIENT_ALLOWANCE_BALANCE)"
+    ],
+    "old_raw": "require(\n            IERC20(_currency).balanceOf(_addrToCheck) >=\n                _currencyAmountToCheckAgainst &&\n                IERC20(_currency).allowance(_addrToCheck, address(this)) >=\n                _currencyAmountToCheckAgainst,\n            throwError(TOKEN_INSUFFICIENT_ALLOWANCE_BALANCE)\n        );",
+    "new_raw": "require(\n            IERC20Upgradeable(_currency).balanceOf(_addrToCheck) >=\n                _currencyAmountToCheckAgainst &&\n                IERC20Upgradeable(_currency).allowance(\n                    _addrToCheck,\n                    address(this)\n                ) >=\n                _currencyAmountToCheckAgainst,\n            throwError(TOKEN_INSUFFICIENT_ALLOWANCE_BALANCE)\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(\n            _checkOnERC721Received(from, to, tokenId, _data),\n            \"ERC721: transfer to non ERC721Receiver implementer\"\n        );",
+    "new_raw": "require(\n            _checkOnERC721Received(from, to, tokenId, data),\n            \"ERC721: transfer to non ERC721Receiver implementer\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol",
+    "function": "burn",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721Burnable: caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "old_raw": "require(\n            _isApprovedOrOwner(_msgSender(), tokenId),\n            \"ERC721Burnable: caller is not owner nor approved\"\n        );",
+    "new_raw": "require(\n            _isApprovedOrOwner(_msgSender(), tokenId),\n            \"ERC721: caller is not token owner or approved\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateValidatorThreshold",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": null,
+    "old_norm_args": [
+      "newThreshold > 0"
+    ],
+    "new_norm_args": [
+      "newThreshold != 0"
+    ],
+    "old_raw": "require(newThreshold > 0);",
+    "new_raw": "require(newThreshold != 0);",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateCheckPointBlockInterval",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_blocks > 0",
+      "\"Blocks interval must be non-zero\""
+    ],
+    "new_norm_args": [
+      "_blocks != 0"
+    ],
+    "old_raw": "require(_blocks > 0, \"Blocks interval must be non-zero\");",
+    "new_raw": "require(_blocks != 0);",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateCheckpointReward",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": null,
+    "old_norm_args": [
+      "newReward > 0"
+    ],
+    "new_norm_args": [
+      "newReward != 0"
+    ],
+    "old_raw": "require(newReward > 0);",
+    "new_raw": "require(newReward != 0);",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateProposerBonus",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "newProposerBonus <= 100",
+      "\"too big\""
+    ],
+    "new_norm_args": [
+      "newProposerBonus <= MAX_PROPOSER_BONUS",
+      "\"too big\""
+    ],
+    "old_raw": "require(newProposerBonus <= 100, \"too big\");",
+    "new_raw": "require(newProposerBonus <= MAX_PROPOSER_BONUS, \"too big\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "unjail",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "validators[validatorId].status == Status.Locked",
+      "\"Validator is not jailed\""
+    ],
+    "new_norm_args": [
+      "validators[validatorId].status == Status.Locked",
+      "\"Not jailed\""
+    ],
+    "old_raw": "require(validators[validatorId].status == Status.Locked, \"Validator is not jailed\");",
+    "new_raw": "require(validators[validatorId].status == Status.Locked, \"Not jailed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "unjail",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "validators[validatorId].deactivationEpoch == 0",
+      "\"Validator already unstaking\""
+    ],
+    "new_norm_args": [
+      "validators[validatorId].deactivationEpoch == 0",
+      "\"Already unstaking\""
+    ],
+    "old_raw": "require(validators[validatorId].deactivationEpoch == 0, \"Validator already unstaking\");",
+    "new_raw": "require(validators[validatorId].deactivationEpoch == 0, \"Already unstaking\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateValidatorDelegation",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "isValidator(validatorId)",
+      "\"not a validator\""
+    ],
+    "new_norm_args": [
+      "_isValidator( validators[validatorId].status, validators[validatorId].amount, validators[validatorId].deactivationEpoch, currentEpoch )",
+      "\"not validator\""
+    ],
+    "old_raw": "require(isValidator(validatorId), \"not a validator\");",
+    "new_raw": "require(\n            _isValidator(\n                validators[validatorId].status,\n                validators[validatorId].amount,\n                validators[validatorId].deactivationEpoch,\n                currentEpoch\n            ),\n            \"not validator\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol",
+    "function": "updateValidatorDelegation",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "contractAddr != address(0x0)",
+      "\"delegation not enabled\""
+    ],
+    "new_norm_args": [
+      "contractAddr != address(0x0)",
+      "\"Delegation is disabled\""
+    ],
+    "old_raw": "require(contractAddr != address(0x0), \"delegation not enabled\");",
+    "new_raw": "require(contractAddr != address(0x0), \"Delegation is disabled\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x21bd30476ea9eb666be71c1341f325cad60f0789_contracts_protocol_BNFT.sol___0x98a3894af804d0da09bce3ccf92ba3cf841df581_contracts_protocol_BNFT.sol",
+    "function": "mint",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "AddressUpgradeable.isContract(_msgSender())",
+      "\"BNFT: caller is not contract\""
+    ],
+    "new_norm_args": [
+      "to == _msgSender()",
+      "\"BNFT: caller is not to\""
+    ],
+    "old_raw": "require(AddressUpgradeable.isContract(_msgSender()), \"BNFT: caller is not contract\");",
+    "new_raw": "require(to == _msgSender(), \"BNFT: caller is not to\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x21bd30476ea9eb666be71c1341f325cad60f0789_contracts_protocol_BNFT.sol___0x98a3894af804d0da09bce3ccf92ba3cf841df581_contracts_protocol_BNFT.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x21bd30476ea9eb666be71c1341f325cad60f0789_contracts_protocol_BNFT.sol___0x98a3894af804d0da09bce3ccf92ba3cf841df581_contracts_protocol_BNFT.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner nor approved for all\""
+    ],
+    "old_raw": "require(_msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner nor approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner nor approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner nor approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_transfer",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "ERC721Upgradeable.ownerOf(tokenId) == from",
+      "\"ERC721: transfer of token that is not own\""
+    ],
+    "new_norm_args": [
+      "ERC721Upgradeable.ownerOf(tokenId) == from",
+      "\"ERC721: transfer from incorrect owner\""
+    ],
+    "old_raw": "require(ERC721Upgradeable.ownerOf(tokenId) == from, \"ERC721: transfer of token that is not own\");",
+    "new_raw": "require(ERC721Upgradeable.ownerOf(tokenId) == from, \"ERC721: transfer from incorrect owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x81897e86fe7818c4deab5f908ca495b5a9128e24_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe09dc3724cd5b566d64db4186fa8b4321071c28f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner nor approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner nor approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner nor approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner nor approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_transfer",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "ERC721Upgradeable.ownerOf(tokenId) == from",
+      "\"ERC721: transfer of token that is not own\""
+    ],
+    "new_norm_args": [
+      "ERC721Upgradeable.ownerOf(tokenId) == from",
+      "\"ERC721: transfer from incorrect owner\""
+    ],
+    "old_raw": "require(ERC721Upgradeable.ownerOf(tokenId) == from, \"ERC721: transfer of token that is not own\");",
+    "new_raw": "require(ERC721Upgradeable.ownerOf(tokenId) == from, \"ERC721: transfer from incorrect owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x7ffd2171b10c134ca9de94df09d4f9adfeb096f3_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xc1ff360c1e8296012db2969d1ba6e1bf3069b33e_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setAllAvailableTokensAndWrappers",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "protocolTokens.length == wrappers.length && (allocations.length == wrappers.length || keepAllocations)",
+      "\"IDLE:LEN_DIFF\""
+    ],
+    "new_norm_args": [
+      "protocolTokens.length == wrappers.length",
+      "\"2\""
+    ],
+    "old_raw": "require(protocolTokens.length == wrappers.length && (allocations.length == wrappers.length || keepAllocations), \"IDLE:LEN_DIFF\");",
+    "new_raw": "require(protocolTokens.length == wrappers.length, \"2\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setAllAvailableTokensAndWrappers",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "protocolTokens[i] != address(0) && wrappers[i] != address(0)",
+      "\"IDLE:IS_0\""
+    ],
+    "new_norm_args": [
+      "_newGovTokensEqualLen.length >= protocolTokens.length",
+      "'3'"
+    ],
+    "old_raw": "require(protocolTokens[i] != address(0) && wrappers[i] != address(0), \"IDLE:IS_0\");",
+    "new_raw": "require(_newGovTokensEqualLen.length >= protocolTokens.length, '3');",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setAllAvailableTokensAndWrappers",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "protocolTokens.length == allAvailableTokens.length",
+      "\"IDLE:LEN_DIFF2\""
+    ],
+    "new_norm_args": [
+      "protToken != address(0) && wrappers[i] != address(0)",
+      "\"0\""
+    ],
+    "old_raw": "require(protocolTokens.length == allAvailableTokens.length, \"IDLE:LEN_DIFF2\");",
+    "new_raw": "require(protToken != address(0) && wrappers[i] != address(0), \"0\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setRebalancer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_rebalancer != address(0)",
+      "\"IDLE:IS_0\""
+    ],
+    "new_norm_args": [
+      "(rebalancer = _rebalancer) != address(0)",
+      "\"0\""
+    ],
+    "old_raw": "require(_rebalancer != address(0), \"IDLE:IS_0\");",
+    "new_raw": "require((rebalancer = _rebalancer) != address(0), \"0\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setFee",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_fee <= 10000",
+      "\"IDLE:TOO_HIGH\""
+    ],
+    "new_norm_args": [
+      "(fee = _fee) <= FULL_ALLOC / 10",
+      "\"5\""
+    ],
+    "old_raw": "require(_fee <= 10000, \"IDLE:TOO_HIGH\");",
+    "new_raw": "require((fee = _fee) <= FULL_ALLOC / 10, \"5\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setFeeAddress",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_feeAddress != address(0)",
+      "\"IDLE:IS_0\""
+    ],
+    "new_norm_args": [
+      "(feeAddress = _feeAddress) != address(0)",
+      "\"0\""
+    ],
+    "old_raw": "require(_feeAddress != address(0), \"IDLE:IS_0\");",
+    "new_raw": "require((feeAddress = _feeAddress) != address(0), \"0\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setOracleAddress",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_oracle != address(0)",
+      "\"IDLE:IS_0\""
+    ],
+    "new_norm_args": [
+      "(oracle = _oracle) != address(0)",
+      "\"0\""
+    ],
+    "old_raw": "require(_oracle != address(0), \"IDLE:IS_0\");",
+    "new_raw": "require((oracle = _oracle) != address(0), \"0\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setMaxUnlentPerc",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_perc <= 100000",
+      "\"IDLE:TOO_HIGH\""
+    ],
+    "new_norm_args": [
+      "(maxUnlentPerc = _perc) <= 100000",
+      "\"5\""
+    ],
+    "old_raw": "require(_perc <= 100000, \"IDLE:TOO_HIGH\");",
+    "new_raw": "require((maxUnlentPerc = _perc) <= 100000, \"5\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "setAllocations",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "msg.sender == rebalancer || msg.sender == owner()",
+      "\"IDLE:!AUTH\""
+    ],
+    "new_norm_args": [
+      "msg.sender == rebalancer || msg.sender == owner()",
+      "\"6\""
+    ],
+    "old_raw": "require(msg.sender == rebalancer || msg.sender == owner(), \"IDLE:!AUTH\");",
+    "new_raw": "require(msg.sender == rebalancer || msg.sender == owner(), \"6\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "_setAllocations",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_allocations.length == allAvailableTokens.length",
+      "\"IDLE:!EQ_LEN\""
+    ],
+    "new_norm_args": [
+      "_allocations.length == allAvailableTokens.length",
+      "\"2\""
+    ],
+    "old_raw": "require(_allocations.length == allAvailableTokens.length, \"IDLE:!EQ_LEN\");",
+    "new_raw": "require(_allocations.length == allAvailableTokens.length, \"2\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "_setAllocations",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "total == FULL_ALLOC",
+      "\"IDLE:!EQ_TOT\""
+    ],
+    "new_norm_args": [
+      "total == FULL_ALLOC",
+      "\"7\""
+    ],
+    "old_raw": "require(total == FULL_ALLOC, \"IDLE:!EQ_TOT\");",
+    "new_raw": "require(total == FULL_ALLOC, \"7\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol",
+    "function": "_checkMintRedeemSameTx",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "keccak256(abi.encodePacked(tx.origin, block.number)) != _minterBlock",
+      "\"IDLE:REENTR\""
+    ],
+    "new_norm_args": [
+      "keccak256(abi.encodePacked(tx.origin, block.number)) != _minterBlock",
+      "\"9\""
+    ],
+    "old_raw": "require(keccak256(abi.encodePacked(tx.origin, block.number)) != _minterBlock, \"IDLE:REENTR\");",
+    "new_raw": "require(keccak256(abi.encodePacked(tx.origin, block.number)) != _minterBlock, \"9\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "postIncomingMessages",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "registerExtraContractForAll",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "removeExtraContractForAll",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[bytes32(0)][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[chainHash][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[chainHash][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered for all chains\");",
+    "new_raw": "require(\n            !_getRegistryContracts()[bytes32(0)].contains(extraContract),\n            \"Extra contract is already registered for all chains\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol",
+    "function": "_removeExtraContract",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[chainHash][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[chainHash][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2fadfcb4ab510463ba8b1ae6f44fb0d55a79a6db_contracts_MessageProxy.sol___0x947cb65494903a53e55f7dfef949e66d43e076b3_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner or approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner or approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner or approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4cb1b007369c976ba9a9196a5a18746bc4a4343c_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x53ccffe7ae4e1fb235d695004a277ba878d24367_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner nor approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner nor approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner nor approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner nor approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x51576ed8a981976fbee2d8bb4130cc6f70daa1e0_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x55720ba86e4c88db69c2109e954b221eeead8711_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol",
+    "function": "executeListingAgainstTakerBid",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_msgSender() == takerBid.taker",
+      "\"Order taker must be the sender\""
+    ],
+    "new_norm_args": [
+      "msg.sender == takerBid.taker",
+      "\"Order taker must be the sender\""
+    ],
+    "old_raw": "require(_msgSender() == takerBid.taker, \"Order taker must be the sender\");",
+    "new_raw": "require(msg.sender == takerBid.taker, \"Order taker must be the sender\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol",
+    "function": "executeListingAgainstTakerBid",
+    "require_index": 3,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "canExecuteTakerBid(makerListing.executionMethod, makerListing, takerBid)",
+      "\"Taker Bid cannot be executed\""
+    ],
+    "new_norm_args": [
+      "isValid",
+      "\"Taker Bid cannot be executed\""
+    ],
+    "old_raw": "require(canExecuteTakerBid(makerListing.executionMethod, makerListing, takerBid), \"Taker Bid cannot be executed\");",
+    "new_raw": "require(isValid, \"Taker Bid cannot be executed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol",
+    "function": "executeBidAgainstTakerListing",
+    "require_index": 3,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "canExecuteTakerList(makerBid.executionMethod, makerBid, takerListing)",
+      "\"Taker Listing cannot be executed\""
+    ],
+    "new_norm_args": [
+      "isValid",
+      "\"Taker Listing cannot be executed\""
+    ],
+    "old_raw": "require(canExecuteTakerList(makerBid.executionMethod, makerBid, takerListing), \"Taker Listing cannot be executed\");",
+    "new_raw": "require(isValid, \"Taker Listing cannot be executed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol",
+    "function": "validateMakerOrder",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!_cancelledOrSold[_msgSender()][makerOrder.nonce]",
+      "\"Order has been executed or cancelled\""
+    ],
+    "new_norm_args": [
+      "!_cancelledOrSold[makerOrder.signer][makerOrder.nonce]",
+      "\"Order has been executed or cancelled\""
+    ],
+    "old_raw": "require(!_cancelledOrSold[_msgSender()][makerOrder.nonce], \"Order has been executed or cancelled\");",
+    "new_raw": "require(!_cancelledOrSold[makerOrder.signer][makerOrder.nonce], \"Order has been executed or cancelled\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x9760e1f187970aa763ad10a3b122f02cec5b879b_NftyPlaySales.sol___0x850e14df012272cd5c3156187496cc57929eadca_NftyPlaySales.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on send\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on send\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_RenZECController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_RenZECController.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner or approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner nor approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner or approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner nor approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner nor approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner or approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner nor approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x2b79e61b762698af9bc0249fc8354bef5c871220_contracts_ASTILO.sol___0x91164a971e136e5bd33d37af37e5c7a480b3adf8_contracts_ASTILO.sol",
+    "function": "buyTokens",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "isActive(saleId)",
+      "\"Sale is not active\""
+    ],
+    "new_norm_args": [
+      "isActive(_saleId)",
+      "\"Sale is not active\""
+    ],
+    "old_raw": "require(\n            isActive(saleId),\n            \"Sale is not active\"\n        );",
+    "new_raw": "require(\n            isActive(_saleId),\n            \"Sale is not active\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2b79e61b762698af9bc0249fc8354bef5c871220_contracts_ASTILO.sol___0x91164a971e136e5bd33d37af37e5c7a480b3adf8_contracts_ASTILO.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x2b79e61b762698af9bc0249fc8354bef5c871220_contracts_ASTILO.sol___0x91164a971e136e5bd33d37af37e5c7a480b3adf8_contracts_ASTILO.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on send\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on send\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on send\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on send\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerAvax.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerAvax.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xe5862651a033cddcb8f3b4af9c063db2baec39d0_LendingPair.sol___0xe5b0974a457698b171e5541378dbec55e0e2ee62_LendingPair.sol",
+    "function": "_checkBorrowLimits",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_debtOf(_token, _account) >= lendingController.minBorrow(_token)",
+      "\"LendingPair: borrow amount below minimum\""
+    ],
+    "new_norm_args": [
+      "accountDebt == 0 || accountDebt >= lendingController.minBorrow(_token)",
+      "\"LendingPair: borrow amount below minimum\""
+    ],
+    "old_raw": "require(\n      _debtOf(_token, _account) >= lendingController.minBorrow(_token),\n      \"LendingPair: borrow amount below minimum\"\n    );",
+    "new_raw": "require(\n      accountDebt == 0 || accountDebt >= lendingController.minBorrow(_token),\n      \"LendingPair: borrow amount below minimum\"\n    );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe5862651a033cddcb8f3b4af9c063db2baec39d0_LendingPair.sol___0xe5b0974a457698b171e5541378dbec55e0e2ee62_LendingPair.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe5862651a033cddcb8f3b4af9c063db2baec39d0_LendingPair.sol___0xe5b0974a457698b171e5541378dbec55e0e2ee62_LendingPair.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xe9353f60013f2f243d9d58170a07e80ae59b5e28_contracts_libs_LibAtomic.sol___0x23221abb15082142838c925ea9930e7e35fdb8ce_contracts_libs_LibAtomic.sol",
+    "function": "doRedeemAtomic",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "secrets[order.secretHash].sender == address(0)",
+      "\"E17R\""
+    ],
+    "new_norm_args": [
+      "secrets[order.secretHash].length == 0",
+      "\"E17R\""
+    ],
+    "old_raw": "require(secrets[order.secretHash].sender == address(0), \"E17R\");",
+    "new_raw": "require(secrets[order.secretHash].length == 0, \"E17R\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe9353f60013f2f243d9d58170a07e80ae59b5e28_contracts_libs_LibAtomic.sol___0x23221abb15082142838c925ea9930e7e35fdb8ce_contracts_libs_LibAtomic.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe9353f60013f2f243d9d58170a07e80ae59b5e28_contracts_libs_LibAtomic.sol___0x23221abb15082142838c925ea9930e7e35fdb8ce_contracts_libs_LibAtomic.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "postIncomingMessages",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "registerExtraContractForAll",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "removeExtraContractForAll",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[bytes32(0)][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[chainHash][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[chainHash][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered for all chains\");",
+    "new_raw": "require(\n            !_getRegistryContracts()[bytes32(0)].contains(extraContract),\n            \"Extra contract is already registered for all chains\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol",
+    "function": "_removeExtraContract",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[chainHash][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[chainHash][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4827ece3114796c9c26459b35b6e23e2a952ae09_contracts_MessageProxy.sol___0xe8608987fee290114f99cc23c1eabd084c0176e9_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol",
+    "function": "executeSportBuyMessage",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "whitelistedToReceiveFrom[_sender]",
+      "\"Invalid sender\""
+    ],
+    "new_norm_args": [
+      "whitelistedToReceiveFrom[_sender]",
+      "\"InvSender\""
+    ],
+    "old_raw": "require(whitelistedToReceiveFrom[_sender], \"Invalid sender\");",
+    "new_raw": "require(whitelistedToReceiveFrom[_sender], \"InvSender\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol",
+    "function": "executeSportBuyMessage",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"Invalid selector\""
+    ],
+    "new_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"InvSelector\""
+    ],
+    "old_raw": "require(selectorAddress[selector] != address(0), \"Invalid selector\");",
+    "new_raw": "require(selectorAddress[selector] != address(0), \"InvSelector\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol",
+    "function": "_executeBuy",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"Invalid selector\""
+    ],
+    "new_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"InvSelector\""
+    ],
+    "old_raw": "require(selectorAddress[selector] != address(0), \"Invalid selector\");",
+    "new_raw": "require(selectorAddress[selector] != address(0), \"InvSelector\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol",
+    "function": "executeMessageWithTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_sender == sourceAdapter",
+      "\"Invalid sender\""
+    ],
+    "new_norm_args": [
+      "whitelistedToReceiveFrom[_sender]",
+      "\"InvSender\""
+    ],
+    "old_raw": "require(_sender == sourceAdapter, \"Invalid sender\");",
+    "new_raw": "require(whitelistedToReceiveFrom[_sender], \"InvSender\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol",
+    "function": "executeMessageWithTransfer",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"Invalid selector\""
+    ],
+    "new_norm_args": [
+      "selectorAddress[selector] != address(0)",
+      "\"InvSelector\""
+    ],
+    "old_raw": "require(selectorAddress[selector] != address(0), \"Invalid selector\");",
+    "new_raw": "require(selectorAddress[selector] != address(0), \"InvSelector\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on sending to governance\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on sending to governance\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on sending to strategist\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on sending to strategist\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroController.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroController.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner nor approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner nor approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner nor approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner nor approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xbc1981c278cb088e6d4f6cff15a1562556285d88_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x08194f4b1e04021c43544603761c50877d48bdc1_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol",
+    "function": "initialize",
+    "require_index": 3,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "err == NO_ERROR",
+      "\"setting comptroller failed\""
+    ],
+    "new_norm_args": [
+      "err == uint(Error.NO_ERROR)",
+      "\"setting comptroller failed\""
+    ],
+    "old_raw": "require(err == NO_ERROR, \"setting comptroller failed\");",
+    "new_raw": "require(err == uint(Error.NO_ERROR), \"setting comptroller failed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol",
+    "function": "initialize",
+    "require_index": 4,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "err == NO_ERROR",
+      "\"setting interest rate model failed\""
+    ],
+    "new_norm_args": [
+      "err == uint(Error.NO_ERROR)",
+      "\"setting interest rate model failed\""
+    ],
+    "old_raw": "require(err == NO_ERROR, \"setting interest rate model failed\");",
+    "new_raw": "require(err == uint(Error.NO_ERROR), \"setting interest rate model failed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol",
+    "function": "liquidateBorrowFresh",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "amountSeizeError == NO_ERROR",
+      "\"LIQUIDATE_COMPTROLLER_CALCULATE_AMOUNT_SEIZE_FAILED\""
+    ],
+    "new_norm_args": [
+      "amountSeizeError == uint(Error.NO_ERROR)",
+      "\"LIQUIDATE_COMPTROLLER_CALCULATE_AMOUNT_SEIZE_FAILED\""
+    ],
+    "old_raw": "require(amountSeizeError == NO_ERROR, \"LIQUIDATE_COMPTROLLER_CALCULATE_AMOUNT_SEIZE_FAILED\");",
+    "new_raw": "require(amountSeizeError == uint(Error.NO_ERROR), \"LIQUIDATE_COMPTROLLER_CALCULATE_AMOUNT_SEIZE_FAILED\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol",
+    "function": "liquidateBorrowFresh",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "cTokenCollateral.seize(liquidator, borrower, seizeTokens) == NO_ERROR",
+      "\"token seizure failed\""
+    ],
+    "new_norm_args": [
+      "seizeError == uint(Error.NO_ERROR)",
+      "\"token seizure failed\""
+    ],
+    "old_raw": "require(cTokenCollateral.seize(liquidator, borrower, seizeTokens) == NO_ERROR, \"token seizure failed\");",
+    "new_raw": "require(seizeError == uint(Error.NO_ERROR), \"token seizure failed\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x3363bae2fc44da742df13cd3ee94b6bb868ea376_contracts_CToken.sol___0xa1849880593e96d2f7df77d0d38a7f2372ae10e0_contracts_CToken.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on send\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on send\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerMatic.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerMatic.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "postIncomingMessages",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "registerExtraContractForAll",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "removeExtraContractForAll",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[bytes32(0)][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[chainHash][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[chainHash][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered for all chains\");",
+    "new_raw": "require(\n            !_getRegistryContracts()[bytes32(0)].contains(extraContract),\n            \"Extra contract is already registered for all chains\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol",
+    "function": "_removeExtraContract",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[chainHash][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[chainHash][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol",
+    "function": "earn",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "governancePayable.send(toGovernance)",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to governance\""
+    ],
+    "old_raw": "require(governancePayable.send(toGovernance), \"error on send\");",
+    "new_raw": "require(success, \"error sending to governance\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol",
+    "function": "earn",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "strategistPayable.send(output.sub(toGovernance))",
+      "\"error on send\""
+    ],
+    "new_norm_args": [
+      "success",
+      "\"error sending to strategist\""
+    ],
+    "old_raw": "require(strategistPayable.send(output.sub(toGovernance)), \"error on send\");",
+    "new_raw": "require(success, \"error sending to strategist\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerArb.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerArb.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner or approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner or approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner or approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x4efa1c944293aae01f7788aceff69a293f01b1db_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0x151311c2f693dc29bbd7eb6336971d0d637eaf7b_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "postIncomingMessages",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "registerExtraContractForAll",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "removeExtraContractForAll",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[bytes32(0)][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[chainHash][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[chainHash][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered for all chains\");",
+    "new_raw": "require(\n            !_getRegistryContracts()[bytes32(0)].contains(extraContract),\n            \"Extra contract is already registered for all chains\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol",
+    "function": "_removeExtraContract",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[chainHash][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[chainHash][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x956455d81d5dc0f4fbe666bffb278af292dfa4db_contracts_MessageProxy.sol___0x06fe670e7647a67f95f09ebc292a833d66ebb681_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner or approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner or approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner or approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol",
+    "function": "finalize",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "listingId > 0 && listingId <= _listingCounter",
+      "\"Invalid listing\""
+    ],
+    "new_norm_args": [
+      "!MarketplaceLib.isOffer(listingType)",
+      "\"Invalid type\""
+    ],
+    "old_raw": "require(listingId > 0 && listingId <= _listingCounter, \"Invalid listing\");",
+    "new_raw": "require(!MarketplaceLib.isOffer(listingType), \"Invalid type\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol",
+    "function": "finalize",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "(listing.flags & MarketplaceLib.FLAG_MASK_FINALIZED) == 0",
+      "\"Invalid listing\""
+    ],
+    "new_norm_args": [
+      "!MarketplaceLib.isFinalized(listing.flags)",
+      "\"Invalid listing\""
+    ],
+    "old_raw": "require((listing.flags & MarketplaceLib.FLAG_MASK_FINALIZED) == 0, \"Invalid listing\");",
+    "new_raw": "require(!MarketplaceLib.isFinalized(listing.flags), \"Invalid listing\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa5d39e71c716e3964ed9dfa23ec9266d306501eb_contracts_MarketplaceCore.sol___0x73f4877b7db9923cf42d7f579fe7bec360ffcd22_contracts_MarketplaceCore.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xe6abfcabe24f06197a7a20dc9c81c251f2862430_LoopringAmmPool.sol___0xee017df188362f8620058e6cef56d0e65b872164_LoopringAmmPool.sol",
+    "function": "processJoin",
+    "require_index": 2,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "txHash.verifySignature(join.owner, signature)",
+      "\"INVALID_OFFCHAIN_L1_APPROVAL\""
+    ],
+    "new_norm_args": [
+      "txHash.verifySignature(join.owner, signature)",
+      "\"INVALID_OFFCHAIN_APPROVAL\""
+    ],
+    "old_raw": "require(txHash.verifySignature(join.owner, signature), \"INVALID_OFFCHAIN_L1_APPROVAL\");",
+    "new_raw": "require(txHash.verifySignature(join.owner, signature), \"INVALID_OFFCHAIN_APPROVAL\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe6abfcabe24f06197a7a20dc9c81c251f2862430_LoopringAmmPool.sol___0xee017df188362f8620058e6cef56d0e65b872164_LoopringAmmPool.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xe6abfcabe24f06197a7a20dc9c81c251f2862430_LoopringAmmPool.sol___0xee017df188362f8620058e6cef56d0e65b872164_LoopringAmmPool.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "postIncomingMessages",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "registerExtraContractForAll",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "removeExtraContractForAll",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[bytes32(0)][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[bytes32(0)].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 1,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[chainHash][extraContract]",
+      "\"Extra contract is already registered\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is already registered\""
+    ],
+    "old_raw": "require(!registryContracts[chainHash][extraContract], \"Extra contract is already registered\");",
+    "new_raw": "require(!_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is already registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "_registerExtraContract",
+    "require_index": 2,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "!registryContracts[bytes32(0)][extraContract]",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "new_norm_args": [
+      "!_getRegistryContracts()[bytes32(0)].contains(extraContract)",
+      "\"Extra contract is already registered for all chains\""
+    ],
+    "old_raw": "require(!registryContracts[bytes32(0)][extraContract], \"Extra contract is already registered for all chains\");",
+    "new_raw": "require(\n            !_getRegistryContracts()[bytes32(0)].contains(extraContract),\n            \"Extra contract is already registered for all chains\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol",
+    "function": "_removeExtraContract",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "registryContracts[chainHash][extraContract]",
+      "\"Extra contract is not registered\""
+    ],
+    "new_norm_args": [
+      "_getRegistryContracts()[chainHash].contains(extraContract)",
+      "\"Extra contract is not registered\""
+    ],
+    "old_raw": "require(registryContracts[chainHash][extraContract], \"Extra contract is not registered\");",
+    "new_raw": "require(_getRegistryContracts()[chainHash].contains(extraContract), \"Extra contract is not registered\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0xa99a7b8fbb46cbeb9bf8174b21964ba11399b272_contracts_MessageProxy.sol___0x573383db7d9b41e2a9aa180e305d958c0cf9a52e_contracts_MessageProxy.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocol.sol___0xeecbbb2fb558bcf2dfd6473b45f3bdbadbbddb91_contracts_D4AProtocol.sol",
+    "function": "changeDaoNftPriceMultiplyFactor",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": true,
+    "old_norm_args": [
+      "succ",
+      "\"not admin, can not change\""
+    ],
+    "new_norm_args": [
+      "newNftPriceMultiplyFactor >= 10_000"
+    ],
+    "old_raw": "require(succ, \"not admin, can not change\");",
+    "new_raw": "require(newNftPriceMultiplyFactor >= 10_000);",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocol.sol___0xeecbbb2fb558bcf2dfd6473b45f3bdbadbbddb91_contracts_D4AProtocol.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocol.sol___0xeecbbb2fb558bcf2dfd6473b45f3bdbadbbddb91_contracts_D4AProtocol.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "balanceOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: balance query for the zero address\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: address zero is not a valid owner\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: balance query for the zero address\");",
+    "new_raw": "require(owner != address(0), \"ERC721: address zero is not a valid owner\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "ownerOf",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: owner query for nonexistent token\""
+    ],
+    "new_norm_args": [
+      "owner != address(0)",
+      "\"ERC721: invalid token ID\""
+    ],
+    "old_raw": "require(owner != address(0), \"ERC721: owner query for nonexistent token\");",
+    "new_raw": "require(owner != address(0), \"ERC721: invalid token ID\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "approve",
+    "require_index": 1,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not owner nor approved for all\""
+    ],
+    "new_norm_args": [
+      "_msgSender() == owner || isApprovedForAll(owner, _msgSender())",
+      "\"ERC721: approve caller is not token owner or approved for all\""
+    ],
+    "old_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not owner nor approved for all\"\n        );",
+    "new_raw": "require(\n            _msgSender() == owner || isApprovedForAll(owner, _msgSender()),\n            \"ERC721: approve caller is not token owner or approved for all\"\n        );",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "transferFrom",
+    "require_index": 0,
+    "cond_changed": false,
+    "msg_changed": true,
+    "old_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: transfer caller is not owner nor approved\""
+    ],
+    "new_norm_args": [
+      "_isApprovedOrOwner(_msgSender(), tokenId)",
+      "\"ERC721: caller is not token owner or approved\""
+    ],
+    "old_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: transfer caller is not owner nor approved\");",
+    "new_raw": "require(_isApprovedOrOwner(_msgSender(), tokenId), \"ERC721: caller is not token owner or approved\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  },
+  {
+    "contract_pair": "0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol",
+    "function": "_safeTransfer",
+    "require_index": 0,
+    "cond_changed": true,
+    "msg_changed": false,
+    "old_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, _data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "new_norm_args": [
+      "_checkOnERC721Received(from, to, tokenId, data)",
+      "\"ERC721: transfer to non ERC721Receiver implementer\""
+    ],
+    "old_raw": "require(_checkOnERC721Received(from, to, tokenId, _data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "new_raw": "require(_checkOnERC721Received(from, to, tokenId, data), \"ERC721: transfer to non ERC721Receiver implementer\");",
+    "old_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/old.sol",
+    "new_path": "/Users/mojtabaeshghie/projects/Invarify/review/require_replacements/0x555b449e9aa5fc50826a2a1cb4ed6fec7b093cdc_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfbaea0017659abeeff6bc8c162bea9aa603c5cb7_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol/new.sol"
+  }
+]

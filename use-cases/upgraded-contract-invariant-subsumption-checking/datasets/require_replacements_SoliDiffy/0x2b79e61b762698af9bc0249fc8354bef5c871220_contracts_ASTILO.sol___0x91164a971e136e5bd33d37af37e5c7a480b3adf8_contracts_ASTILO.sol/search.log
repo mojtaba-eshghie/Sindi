@@ -1,0 +1,5 @@
+results/differencing_results/0x2b79e61b762698af9bc0249fc8354bef5c871220_contracts_ASTILO.sol___0x91164a971e136e5bd33d37af37e5c7a480b3adf8_contracts_ASTILO.sol.log:
+  656  identifier: require [6490,6497]
+  657: replace require by updateSaleIdbyType
+  658  
+

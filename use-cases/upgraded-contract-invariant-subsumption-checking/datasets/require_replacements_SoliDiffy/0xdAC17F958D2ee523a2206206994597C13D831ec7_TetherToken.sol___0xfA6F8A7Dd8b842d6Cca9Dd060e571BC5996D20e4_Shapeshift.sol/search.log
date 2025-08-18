@@ -1,0 +1,5 @@
+results/differencing_results/0xdAC17F958D2ee523a2206206994597C13D831ec7_TetherToken.sol___0xfA6F8A7Dd8b842d6Cca9Dd060e571BC5996D20e4_Shapeshift.sol.log:
+  2277  identifier: require [14339,14346]
+  2278: replace require by keccak256
+  2279  ===
+

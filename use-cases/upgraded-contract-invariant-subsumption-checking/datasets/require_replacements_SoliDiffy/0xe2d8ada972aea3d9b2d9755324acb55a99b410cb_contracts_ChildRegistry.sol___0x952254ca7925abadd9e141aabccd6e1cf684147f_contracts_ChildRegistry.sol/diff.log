@@ -1,0 +1,511 @@
+New cluster:
+UPDATE from './IChildRegistry.sol' to './@maticnetwork/IChildToken.sol'
+------------
+===
+update-node
+---
+string: './IChildRegistry.sol' [260,282]
+replace './IChildRegistry.sol' by './@maticnetwork/IChildToken.sol'
+
+New cluster:
+===
+insert-node
+---
+function_definition [745,894]
+to
+contract_body [354,2863]
+at 2
+------------
+===
+insert-node
+---
+function_body [828,894]
+to
+function_definition [745,894]
+at 5
+===
+insert-node
+---
+function_definition [745,894]
+to
+contract_body [354,2863]
+at 2
+
+New cluster:
+===
+insert-node
+---
+function_definition [953,1153]
+to
+contract_body [354,2863]
+at 3
+------------
+===
+insert-node
+---
+function_body [1046,1153]
+to
+function_definition [953,1153]
+at 5
+===
+insert-node
+---
+function: function [953,961]
+to
+function_definition [953,1153]
+at 0
+===
+insert-node
+---
+function_definition [953,1153]
+to
+contract_body [354,2863]
+at 3
+===
+insert-node
+---
+identifier: __ChildRegistry_init_unchained [962,992]
+to
+function_definition [953,1153]
+at 1
+===
+insert-node
+---
+visibility: internal [1020,1028]
+to
+function_definition [953,1153]
+at 3
+
+New cluster:
+UPDATE from IChildRegistry to IChildToken
+------------
+===
+update-node
+---
+identifier: IChildRegistry [339,353]
+replace IChildRegistry by IChildToken
+
+New cluster:
+MOVE from function_definition [745,894]
+------------
+===
+move-tree
+---
+identifier: setChildChainManager [693,713]
+to
+function_definition [745,894]
+at 1
+===
+move-tree
+---
+parameter [714,740]
+    type_name: address [714,721]
+    identifier: clientChainManager [722,740]
+to
+function_definition [745,894]
+at 2
+===
+move-tree
+---
+visibility: external [742,750]
+to
+function_definition [745,894]
+at 3
+===
+move-tree
+---
+function: function [684,692]
+to
+function_definition [745,894]
+at 0
+
+New cluster:
+UPDATE from setChildChainManager to __ChildRegistry_init
+------------
+===
+update-node
+---
+identifier: setChildChainManager [693,713]
+replace setChildChainManager by __ChildRegistry_init
+
+New cluster:
+UPDATE from external to internal
+------------
+===
+update-node
+---
+visibility: external [742,750]
+replace external by internal
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [811,827]
+    identifier: onlyInitializing [811,827]
+to
+function_definition [745,894]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [993,1018]
+    type_name: address [993,1000]
+    identifier: childChainManager [1001,1018]
+to
+function_definition [953,1153]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [1029,1045]
+    identifier: onlyInitializing [1029,1045]
+to
+function_definition [953,1153]
+at 4
+
+New cluster:
+UPDATE from clientChainManager to childChainManager
+------------
+===
+update-node
+---
+identifier: clientChainManager [722,740]
+replace clientChainManager by childChainManager
+===
+update-node
+---
+identifier: clientChainManager [1014,1032]
+replace clientChainManager by childChainManager
+
+New cluster:
+MOVE from function_body [828,894]
+------------
+===
+move-tree
+---
+expression_statement [761,932]
+    call_expression [761,931]
+        identifier: require [761,768]
+        call_argument [782,866]
+            binary_expression [782,866]
+                member_expression: StorageSlotUpgradeable.getAddressSlot(_CHILD_CHAIN_MANAGER_SLOT).value [782,852]
+                comparison_operator: == [853,855]
+                type_cast_expression [856,866]
+                    primitive_type: address [856,863]
+                    call_argument [864,865]
+                        number_literal: 0 [864,865]
+        call_argument [880,921]
+            string_literal [880,921]
+                string: 'Registry: CHILD_CHAIN_MANEGER_NOT_EMPTY' [880,921]
+to
+function_body [828,894]
+at 0
+===
+move-tree
+---
+expression_statement [941,1033]
+    assignment_expression [941,1032]
+        member_expression: StorageSlotUpgradeable.getAddressSlot(_CHILD_CHAIN_MANAGER_SLOT).value [941,1011]
+        affectation_operator: = [1012,1013]
+        identifier: clientChainManager [1014,1032]
+to
+function_body [1046,1153]
+at 0
+
+New cluster:
+UPDATE from require to __ChildRegistry_init_unchained
+------------
+===
+update-node
+---
+identifier: require [761,768]
+replace require by __ChildRegistry_init_unchained
+
+New cluster:
+MOVE from call_expression [761,931]
+------------
+===
+move-tree
+---
+call_argument [864,865]
+    number_literal: 0 [864,865]
+to
+call_expression [761,931]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: childChainManager [869,886]
+to
+call_argument [864,865]
+at 0
+------------
+===
+insert-node
+---
+identifier: childChainManager [869,886]
+to
+call_argument [864,865]
+at 0
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [864,865]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [864,865]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [782,866]
+===
+------------
+===
+delete-node
+---
+binary_expression [782,866]
+===
+===
+delete-node
+---
+primitive_type: address [856,863]
+===
+===
+delete-node
+---
+comparison_operator: == [853,855]
+===
+===
+delete-node
+---
+call_argument [782,866]
+===
+===
+delete-node
+---
+member_expression: StorageSlotUpgradeable.getAddressSlot(_CHILD_CHAIN_MANAGER_SLOT).value [782,852]
+===
+===
+delete-node
+---
+type_cast_expression [856,866]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [880,921]
+    string_literal [880,921]
+        string: 'Registry: CHILD_CHAIN_MANEGER_NOT_EMPTY' [880,921]
+
+New cluster:
+===
+delete-node
+---
+function_definition [684,1039]
+===
+------------
+===
+delete-node
+---
+function_definition [684,1039]
+===
+===
+delete-node
+---
+function_body [751,1039]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [1770,1938]
+    function: function [1770,1778]
+    identifier: withdraw [1779,1787]
+    parameter [1788,1803]
+        type_name: uint256 [1788,1795]
+        identifier: tokenId [1796,1803]
+    visibility: external [1805,1813]
+    override_specifier [1814,1822]
+        override: override [1814,1822]
+    function_body [1823,1938]
+        expression_statement [1833,1908]
+            call_expression [1833,1907]
+                identifier: require [1833,1840]
+                call_argument [1841,1873]
+                    binary_expression [1841,1873]
+                        call_expression [1841,1853]
+                            identifier: _msgSender [1841,1851]
+                        comparison_operator: == [1854,1856]
+                        call_expression [1857,1873]
+                            identifier: ownerOf [1857,1864]
+                            call_argument [1865,1872]
+                                identifier: tokenId [1865,1872]
+                call_argument [1875,1906]
+                    string_literal [1875,1906]
+                        string: 'Registry: INVALID_TOKEN_OWNER' [1875,1906]
+        expression_statement [1917,1932]
+            call_expression [1917,1931]
+                identifier: _burn [1917,1922]
+                call_argument [1923,1930]
+                    identifier: tokenId [1923,1930]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [1944,2675]
+    function: function [1944,1952]
+    identifier: withdrawBatch [1953,1966]
+    parameter [1967,1994]
+        type_name: uint256[] [1967,1976]
+        calldata: calldata [1977,1985]
+        identifier: tokenIds [1986,1994]
+    visibility: external [1996,2004]
+    override_specifier [2005,2013]
+        override: override [2005,2013]
+    function_body [2014,2675]
+        variable_declaration_statement [2024,2057]
+            variable_declaration [2024,2038]
+                type_name: uint256 [2024,2031]
+                identifier: length [2032,2038]
+            affectation_operator: = [2039,2040]
+            member_expression: tokenIds.length [2041,2056]
+        expression_statement [2066,2130]
+            call_expression [2066,2129]
+                identifier: require [2066,2073]
+                call_argument [2074,2095]
+                    binary_expression [2074,2095]
+                        identifier: length [2074,2080]
+                        comparison_operator: <= [2081,2083]
+                        identifier: BATCH_LIMIT [2084,2095]
+                call_argument [2097,2128]
+                    string_literal [2097,2128]
+                        string: 'Registry: EXCEEDS_BATCH_LIMIT' [2097,2128]
+        for_statement [2224,2468]
+            for: for [2224,2227]
+            variable_declaration_statement [2229,2243]
+                variable_declaration [2229,2238]
+                    type_name: uint256 [2229,2236]
+                    identifier: i [2237,2238]
+                affectation_operator: = [2239,2240]
+                number_literal: 0 [2241,2242]
+            expression_statement [2244,2255]
+                binary_expression [2244,2254]
+                    identifier: i [2244,2245]
+                    comparison_operator: < [2246,2247]
+                    identifier: length [2248,2254]
+            update_expression [2256,2259]
+                identifier: i [2256,2257]
+                increment_operator: ++ [2257,2259]
+            block_statement [2261,2468]
+                variable_declaration_statement [2275,2305]
+                    variable_declaration [2275,2290]
+                        type_name: uint256 [2275,2282]
+                        identifier: tokenId [2283,2290]
+                    affectation_operator: = [2291,2292]
+                    array_access [2293,2304]
+                        identifier: tokenIds [2293,2301]
+                        identifier: i [2302,2303]
+                expression_statement [2319,2430]
+                    call_expression [2319,2429]
+                        identifier: require [2319,2326]
+                        call_argument [2327,2359]
+                            binary_expression [2327,2359]
+                                call_expression [2327,2339]
+                                    identifier: _msgSender [2327,2337]
+                                comparison_operator: == [2340,2342]
+                                call_expression [2343,2359]
+                                    identifier: ownerOf [2343,2350]
+                                    call_argument [2351,2358]
+                                        identifier: tokenId [2351,2358]
+                        call_argument [2361,2428]
+                            type_cast_expression [2361,2428]
+                                primitive_type: string [2361,2367]
+                                call_argument [2368,2427]
+                                    call_expression [2368,2427]
+                                        member_expression: abi.encodePacked [2368,2384]
+                                        call_argument [2385,2417]
+                                            string_literal [2385,2417]
+                                                string: 'Registry: INVALID_TOKEN_OWNER ' [2385,2417]
+                                        call_argument [2419,2426]
+                                            identifier: tokenId [2419,2426]
+                expression_statement [2443,2458]
+                    call_expression [2443,2457]
+                        identifier: _burn [2443,2448]
+                        call_argument [2449,2456]
+                            identifier: tokenId [2449,2456]
+        emit_statement [2625,2669]
+            identifier: WithdrawnBatch [2630,2644]
+            call_argument [2645,2657]
+                call_expression [2645,2657]
+                    identifier: _msgSender [2645,2655]
+            call_argument [2659,2667]
+                identifier: tokenIds [2659,2667]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2681,2861]
+    function: function [2681,2689]
+    identifier: withdrawWithMetadata [2690,2710]
+    parameter [2711,2726]
+        type_name: uint256 [2711,2718]
+        identifier: tokenId [2719,2726]
+    visibility: external [2728,2736]
+    override_specifier [2737,2745]
+        override: override [2737,2745]
+    function_body [2746,2861]
+        expression_statement [2756,2831]
+            call_expression [2756,2830]
+                identifier: require [2756,2763]
+                call_argument [2764,2796]
+                    binary_expression [2764,2796]
+                        call_expression [2764,2776]
+                            identifier: _msgSender [2764,2774]
+                        comparison_operator: == [2777,2779]
+                        call_expression [2780,2796]
+                            identifier: ownerOf [2780,2787]
+                            call_argument [2788,2795]
+                                identifier: tokenId [2788,2795]
+                call_argument [2798,2829]
+                    string_literal [2798,2829]
+                        string: 'Registry: INVALID_TOKEN_OWNER' [2798,2829]
+        expression_statement [2840,2855]
+            call_expression [2840,2854]
+                identifier: _burn [2840,2845]
+                call_argument [2846,2853]
+                    identifier: tokenId [2846,2853]
+
