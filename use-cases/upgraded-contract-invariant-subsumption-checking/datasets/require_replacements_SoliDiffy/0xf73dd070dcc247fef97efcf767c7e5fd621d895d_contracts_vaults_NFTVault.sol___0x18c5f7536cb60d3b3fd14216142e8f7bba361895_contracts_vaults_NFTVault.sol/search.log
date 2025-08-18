@@ -1,0 +1,13 @@
+results/differencing_results/0xf73dd070dcc247fef97efcf767c7e5fd621d895d_contracts_vaults_NFTVault.sol___0x18c5f7536cb60d3b3fd14216142e8f7bba361895_contracts_vaults_NFTVault.sol.log:
+  11373  identifier: require [31587,31594]
+  11374: replace require by owner
+  11375  ===
+
+  11432  identifier: require [35022,35029]
+  11433: replace require by Unauthorized
+  11434  ===
+
+  11470  identifier: require [32037,32044]
+  11471: replace require by borrowType
+  11472  
+

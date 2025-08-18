@@ -1,0 +1,840 @@
+New cluster:
+===
+insert-node
+---
+identifier: DelegationController [2521,2541]
+to
+contract_declaration [2512,39173]
+at 0
+------------
+===
+insert-node
+---
+identifier: DelegationController [2521,2541]
+to
+contract_declaration [2512,39173]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [2542,2544]
+to
+contract_declaration [2512,39173]
+at 1
+------------
+===
+insert-node
+---
+is: is [2542,2544]
+to
+contract_declaration [2512,39173]
+at 1
+
+New cluster:
+MOVE from contract_body [2566,39173]
+------------
+===
+move-tree
+---
+function_definition [11692,13669]
+    function: function [11692,11700]
+    identifier: acceptPendingDelegation [11701,11724]
+    parameter [11725,11742]
+        type_name: uint [11725,11729]
+        identifier: delegationId [11730,11742]
+    visibility: external [11744,11752]
+    modifier_invocation [11753,11788]
+        identifier: checkDelegationExists [11753,11774]
+        call_argument [11775,11787]
+            identifier: delegationId [11775,11787]
+    function_body [11789,13669]
+        expression_statement [11799,11969]
+            call_expression [11799,11968]
+                identifier: require [11799,11806]
+                call_argument [11820,11919]
+                    call_expression [11820,11919]
+                        member_expression: _getValidatorService().checkValidatorAddressToId [11820,11868]
+                        call_argument [11869,11879]
+                            member_expression: msg.sender [11869,11879]
+                        call_argument [11881,11918]
+                            member_expression: delegations[delegationId].validatorId [11881,11918]
+                call_argument [11933,11967]
+                    string_literal [11933,11967]
+                        string: "No permissions to accept request" [11933,11967]
+        expression_statement [11978,12079]
+            call_expression [11978,12078]
+                identifier: _checkIfDelegationIsAllowed [11978,12005]
+                call_argument [12006,12038]
+                    member_expression: delegations[delegationId].holder [12006,12038]
+                call_argument [12040,12077]
+                    member_expression: delegations[delegationId].validatorId [12040,12077]
+        variable_declaration_statement [12097,12141]
+            variable_declaration [12097,12115]
+                type_name: State [12097,12102]
+                identifier: currentState [12103,12115]
+            affectation_operator: = [12116,12117]
+            call_expression [12118,12140]
+                identifier: getState [12118,12126]
+                call_argument [12127,12139]
+                    identifier: delegationId [12127,12139]
+        if_statement [12150,12760]
+            if: if [12150,12152]
+            binary_expression [12154,12184]
+                identifier: currentState [12154,12166]
+                comparison_operator: != [12167,12169]
+                member_expression: State.PROPOSED [12170,12184]
+            block_statement [12186,12760]
+                if_statement [12200,12750]
+                    if: if [12200,12202]
+                    binary_expression [12204,12400]
+                        binary_expression [12204,12349]
+                            binary_expression [12204,12285]
+                                binary_expression [12204,12234]
+                                    identifier: currentState [12204,12216]
+                                    comparison_operator: == [12217,12219]
+                                    member_expression: State.ACCEPTED [12220,12234]
+                                logical_operator: || [12235,12237]
+                                binary_expression [12254,12285]
+                                    identifier: currentState [12254,12266]
+                                    comparison_operator: == [12267,12269]
+                                    member_expression: State.DELEGATED [12270,12285]
+                            logical_operator: || [12286,12288]
+                            binary_expression [12305,12349]
+                                identifier: currentState [12305,12317]
+                                comparison_operator: == [12318,12320]
+                                member_expression: State.UNDELEGATION_REQUESTED [12321,12349]
+                        logical_operator: || [12350,12352]
+                        binary_expression [12369,12400]
+                            identifier: currentState [12369,12381]
+                            comparison_operator: == [12382,12384]
+                            member_expression: State.COMPLETED [12385,12400]
+                    block_statement [12414,12497]
+                        revert_statement [12432,12483]
+                            revert: revert [12432,12438]
+                            parenthesized_expression [12438,12482]
+                                string_literal [12439,12481]
+                                    string: "The delegation has been already accepted" [12439,12481]
+                    else: else [12498,12502]
+                    if_statement [12503,12750]
+                        if: if [12503,12505]
+                        binary_expression [12507,12537]
+                            identifier: currentState [12507,12519]
+                            comparison_operator: == [12520,12522]
+                            member_expression: State.CANCELED [12523,12537]
+                        block_statement [12539,12631]
+                            revert_statement [12557,12617]
+                                revert: revert [12557,12563]
+                                parenthesized_expression [12563,12616]
+                                    string_literal [12564,12615]
+                                        string: "The delegation has been cancelled by token holder" [12564,12615]
+                        else: else [12632,12636]
+                        if_statement [12637,12750]
+                            if: if [12637,12639]
+                            binary_expression [12641,12671]
+                                identifier: currentState [12641,12653]
+                                comparison_operator: == [12654,12656]
+                                member_expression: State.REJECTED [12657,12671]
+                            block_statement [12673,12750]
+                                revert_statement [12691,12736]
+                                    revert: revert [12691,12697]
+                                    parenthesized_expression [12697,12735]
+                                        string_literal [12698,12734]
+                                            string: "The delegation request is outdated" [12698,12734]
+        expression_statement [12769,12852]
+            call_expression [12769,12851]
+                identifier: require [12769,12776]
+                call_argument [12777,12807]
+                    binary_expression [12777,12807]
+                        identifier: currentState [12777,12789]
+                        comparison_operator: == [12790,12792]
+                        member_expression: State.PROPOSED [12793,12807]
+                call_argument [12809,12850]
+                    string_literal [12809,12850]
+                        string: "Cannot set delegation state to accepted" [12809,12850]
+        variable_declaration_statement [12862,12971]
+            variable_declaration [12862,12901]
+                type_name: SlashingSignal[] [12862,12878]
+                memory: memory [12879,12885]
+                identifier: slashingSignals [12886,12901]
+            affectation_operator: = [12902,12903]
+            call_expression [12904,12970]
+                identifier: _processAllSlashesWithoutSignals [12904,12936]
+                call_argument [12937,12969]
+                    member_expression: delegations[delegationId].holder [12937,12969]
+        expression_statement [12981,13015]
+            call_expression [12981,13014]
+                identifier: _addToAllStatistics [12981,13000]
+                call_argument [13001,13013]
+                    identifier: delegationId [13001,13013]
+        variable_declaration_statement [13033,13080]
+            variable_declaration [13033,13044]
+                type_name: uint [13033,13037]
+                identifier: amount [13038,13044]
+            affectation_operator: = [13045,13046]
+            member_expression: delegations[delegationId].amount [13047,13079]
+        expression_statement [13089,13282]
+            call_expression [13089,13281]
+                member_expression: _getTokenLaunchLocker().handleDelegationAdd [13089,13132]
+                call_argument [13146,13178]
+                    member_expression: delegations[delegationId].holder [13146,13178]
+                call_argument [13192,13204]
+                    identifier: delegationId [13192,13204]
+                call_argument [13218,13224]
+                    identifier: amount [13218,13224]
+                call_argument [13238,13271]
+                    member_expression: delegations[delegationId].started [13238,13271]
+        variable_declaration_statement [13292,13440]
+            variable_declaration [13292,13312]
+                type_name: uint [13292,13296]
+                identifier: effectiveAmount [13297,13312]
+            affectation_operator: = [13313,13314]
+            call_expression [13315,13439]
+                member_expression: amount.mul [13315,13325]
+                call_argument [13339,13429]
+                    call_expression [13339,13429]
+                        member_expression: _getDelegationPeriodManager().stakeMultipliers [13339,13385]
+                        call_argument [13386,13428]
+                            member_expression: delegations[delegationId].delegationPeriod [13386,13428]
+        expression_statement [13449,13568]
+            call_expression [13449,13567]
+                member_expression: _getBounty().handleDelegationAdd [13449,13481]
+                call_argument [13495,13510]
+                    identifier: effectiveAmount [13495,13510]
+                call_argument [13524,13557]
+                    member_expression: delegations[delegationId].started [13524,13557]
+        expression_statement [13578,13616]
+            call_expression [13578,13615]
+                identifier: _sendSlashingSignals [13578,13598]
+                call_argument [13599,13614]
+                    identifier: slashingSignals [13599,13614]
+        emit_statement [13625,13663]
+            identifier: DelegationAccepted [13630,13648]
+            call_argument [13649,13661]
+                identifier: delegationId [13649,13661]
+to
+contract_body [2566,39173]
+at 94
+===
+move-tree
+---
+function_definition [13934,16365]
+    function: function [13934,13942]
+    identifier: requestUndelegation [13943,13962]
+    parameter [13963,13980]
+        type_name: uint [13963,13967]
+        identifier: delegationId [13968,13980]
+    visibility: external [13982,13990]
+    modifier_invocation [13991,14026]
+        identifier: checkDelegationExists [13991,14012]
+        call_argument [14013,14025]
+            identifier: delegationId [14013,14025]
+    function_body [14027,16365]
+        expression_statement [14037,14119]
+            call_expression [14037,14118]
+                identifier: require [14037,14044]
+                call_argument [14045,14086]
+                    binary_expression [14045,14086]
+                        call_expression [14045,14067]
+                            identifier: getState [14045,14053]
+                            call_argument [14054,14066]
+                                identifier: delegationId [14054,14066]
+                        comparison_operator: == [14068,14070]
+                        member_expression: State.DELEGATED [14071,14086]
+                call_argument [14088,14117]
+                    string_literal [14088,14117]
+                        string: "Cannot request undelegation" [14088,14117]
+        variable_declaration_statement [14128,14187]
+            variable_declaration [14128,14161]
+                type_name: ValidatorService [14128,14144]
+                identifier: validatorService [14145,14161]
+            affectation_operator: = [14162,14163]
+            call_expression [14164,14186]
+                identifier: _getValidatorService [14164,14184]
+        expression_statement [14196,14491]
+            call_expression [14196,14490]
+                identifier: require [14196,14203]
+                call_argument [14217,14432]
+                    binary_expression [14217,14432]
+                        binary_expression [14217,14263]
+                            member_expression: delegations[delegationId].holder [14217,14249]
+                            comparison_operator: == [14250,14252]
+                            member_expression: msg.sender [14253,14263]
+                        logical_operator: || [14264,14266]
+                        parenthesized_expression [14279,14432]
+                            binary_expression [14280,14431]
+                                member_expression: validatorService.validatorAddressExists(msg.sender) &&             delegations[delegationId].validatorId [14280,14384]
+                                comparison_operator: == [14385,14387]
+                                call_expression [14388,14431]
+                                    member_expression: validatorService.getValidatorId [14388,14419]
+                                    call_argument [14420,14430]
+                                        member_expression: msg.sender [14420,14430]
+                call_argument [14446,14489]
+                    string_literal [14446,14489]
+                        string: "Permission denied to request undelegation" [14446,14489]
+        expression_statement [14500,14642]
+            call_expression [14500,14641]
+                identifier: _removeValidatorFromValidatorsPerDelegators [14500,14543]
+                call_argument [14557,14589]
+                    member_expression: delegations[delegationId].holder [14557,14589]
+                call_argument [14603,14640]
+                    member_expression: delegations[delegationId].validatorId [14603,14640]
+        expression_statement [14651,14681]
+            call_expression [14651,14680]
+                identifier: processAllSlashes [14651,14668]
+                call_argument [14669,14679]
+                    member_expression: msg.sender [14669,14679]
+        expression_statement [14690,14770]
+            assignment_expression [14690,14769]
+                member_expression: delegations[delegationId].finished [14690,14724]
+                affectation_operator: = [14725,14726]
+                call_expression [14727,14769]
+                    identifier: _calculateDelegationEndMonth [14727,14755]
+                    call_argument [14756,14768]
+                        identifier: delegationId [14756,14768]
+        variable_declaration_statement [14779,14860]
+            variable_declaration [14779,14803]
+                type_name: uint [14779,14783]
+                identifier: amountAfterSlashing [14784,14803]
+            affectation_operator: = [14804,14805]
+            call_expression [14806,14859]
+                identifier: _calculateDelegationAmountAfterSlashing [14806,14845]
+                call_argument [14846,14858]
+                    identifier: delegationId [14846,14858]
+        expression_statement [14869,15034]
+            call_expression [14869,15033]
+                identifier: _removeFromDelegatedToValidator [14869,14900]
+                call_argument [14914,14951]
+                    member_expression: delegations[delegationId].validatorId [14914,14951]
+                call_argument [14965,14984]
+                    identifier: amountAfterSlashing [14965,14984]
+                call_argument [14998,15032]
+                    member_expression: delegations[delegationId].finished [14998,15032]
+        expression_statement [15043,15200]
+            call_expression [15043,15199]
+                identifier: _removeFromDelegatedByHolder [15043,15071]
+                call_argument [15085,15117]
+                    member_expression: delegations[delegationId].holder [15085,15117]
+                call_argument [15131,15150]
+                    identifier: amountAfterSlashing [15131,15150]
+                call_argument [15164,15198]
+                    member_expression: delegations[delegationId].finished [15164,15198]
+        expression_statement [15209,15428]
+            call_expression [15209,15427]
+                identifier: _removeFromDelegatedByHolderToValidator [15209,15248]
+                call_argument [15262,15294]
+                    member_expression: delegations[delegationId].holder [15262,15294]
+                call_argument [15308,15345]
+                    member_expression: delegations[delegationId].validatorId [15308,15345]
+                call_argument [15359,15378]
+                    identifier: amountAfterSlashing [15359,15378]
+                call_argument [15392,15426]
+                    member_expression: delegations[delegationId].finished [15392,15426]
+        variable_declaration_statement [15437,15593]
+            variable_declaration [15437,15457]
+                type_name: uint [15437,15441]
+                identifier: effectiveAmount [15442,15457]
+            affectation_operator: = [15458,15459]
+            call_expression [15460,15592]
+                member_expression: amountAfterSlashing.mul [15460,15483]
+                call_argument [15501,15591]
+                    call_expression [15501,15591]
+                        member_expression: _getDelegationPeriodManager().stakeMultipliers [15501,15547]
+                        call_argument [15548,15590]
+                            member_expression: delegations[delegationId].delegationPeriod [15548,15590]
+        expression_statement [15602,15772]
+            call_expression [15602,15771]
+                identifier: _removeFromEffectiveDelegatedToValidator [15602,15642]
+                call_argument [15656,15693]
+                    member_expression: delegations[delegationId].validatorId [15656,15693]
+                call_argument [15707,15722]
+                    identifier: effectiveAmount [15707,15722]
+                call_argument [15736,15770]
+                    member_expression: delegations[delegationId].finished [15736,15770]
+        expression_statement [15781,16005]
+            call_expression [15781,16004]
+                identifier: _removeFromEffectiveDelegatedByHolderToValidator [15781,15829]
+                call_argument [15843,15875]
+                    member_expression: delegations[delegationId].holder [15843,15875]
+                call_argument [15889,15926]
+                    member_expression: delegations[delegationId].validatorId [15889,15926]
+                call_argument [15940,15955]
+                    identifier: effectiveAmount [15940,15955]
+                call_argument [15969,16003]
+                    member_expression: delegations[delegationId].finished [15969,16003]
+        expression_statement [16014,16184]
+            call_expression [16014,16183]
+                member_expression: _getTokenLaunchLocker().handleDelegationRemoving [16014,16062]
+                call_argument [16076,16108]
+                    member_expression: delegations[delegationId].holder [16076,16108]
+                call_argument [16122,16134]
+                    identifier: delegationId [16122,16134]
+                call_argument [16148,16182]
+                    member_expression: delegations[delegationId].finished [16148,16182]
+        expression_statement [16193,16309]
+            call_expression [16193,16308]
+                member_expression: _getBounty().handleDelegationRemoving [16193,16230]
+                call_argument [16244,16259]
+                    identifier: effectiveAmount [16244,16259]
+                call_argument [16273,16307]
+                    member_expression: delegations[delegationId].finished [16273,16307]
+        emit_statement [16318,16359]
+            identifier: UndelegationRequested [16323,16344]
+            call_argument [16345,16357]
+                identifier: delegationId [16345,16357]
+to
+contract_body [2566,39173]
+at 87
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2780,2860]
+    type_name: uint [2780,2784]
+    visibility: public [2785,2791]
+    constant: constant [2792,2800]
+    identifier: UNDELEGATION_PROHIBITION_WINDOW_SECONDS [2801,2840]
+    affectation_operator: = [2841,2842]
+    binary_expression [2843,2859]
+        binary_expression [2843,2854]
+            binary_expression [2843,2849]
+                number_literal: 3 [2843,2844]
+                arithmetic_operator: * [2845,2846]
+                number_literal: 24 [2847,2849]
+            arithmetic_operator: * [2850,2851]
+            number_literal: 60 [2852,2854]
+        arithmetic_operator: * [2855,2856]
+        number_literal: 60 [2857,2859]
+to
+contract_body [2566,39173]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [11782,12096]
+to
+contract_body [2566,39173]
+at 42
+------------
+===
+insert-node
+---
+identifier: acceptPendingDelegation [11791,11814]
+to
+function_definition [11782,12096]
+at 1
+===
+insert-node
+---
+function_definition [11782,12096]
+to
+contract_body [2566,39173]
+at 42
+===
+insert-node
+---
+function_body [11879,12096]
+to
+function_definition [11782,12096]
+at 5
+===
+insert-node
+---
+visibility: external [11834,11842]
+to
+function_definition [11782,12096]
+at 3
+===
+insert-node
+---
+function: function [11782,11790]
+to
+function_definition [11782,12096]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [12361,13585]
+to
+contract_body [2566,39173]
+at 43
+------------
+===
+insert-node
+---
+function_definition [12361,13585]
+to
+contract_body [2566,39173]
+at 43
+===
+insert-node
+---
+identifier: requestUndelegation [12370,12389]
+to
+function_definition [12361,13585]
+at 1
+===
+insert-node
+---
+function: function [12361,12369]
+to
+function_definition [12361,13585]
+at 0
+===
+insert-node
+---
+visibility: external [12409,12417]
+to
+function_definition [12361,13585]
+at 3
+===
+insert-node
+---
+function_body [12454,13585]
+to
+function_definition [12361,13585]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [11815,11832]
+    type_name: uint [11815,11819]
+    identifier: delegationId [11820,11832]
+to
+function_definition [11782,12096]
+at 2
+
+New cluster:
+MOVE from function_definition [11782,12096]
+------------
+===
+move-tree
+---
+modifier_invocation [11753,11788]
+    identifier: checkDelegationExists [11753,11774]
+    call_argument [11775,11787]
+        identifier: delegationId [11775,11787]
+to
+function_definition [11782,12096]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [12390,12407]
+    type_name: uint [12390,12394]
+    identifier: delegationId [12395,12407]
+to
+function_definition [12361,13585]
+at 2
+
+New cluster:
+MOVE from function_definition [12361,13585]
+------------
+===
+move-tree
+---
+modifier_invocation [13991,14026]
+    identifier: checkDelegationExists [13991,14012]
+    call_argument [14013,14025]
+        identifier: delegationId [14013,14025]
+to
+function_definition [12361,13585]
+at 4
+
+New cluster:
+UPDATE from requestUndelegation to _subtractFromAllStatistics
+------------
+===
+update-node
+---
+identifier: requestUndelegation [13943,13962]
+replace requestUndelegation by _subtractFromAllStatistics
+
+New cluster:
+UPDATE from external to private
+------------
+===
+update-node
+---
+visibility: external [11744,11752]
+replace external by private
+===
+update-node
+---
+visibility: external [13982,13990]
+replace external by private
+
+New cluster:
+UPDATE from acceptPendingDelegation to _accept
+------------
+===
+update-node
+---
+identifier: acceptPendingDelegation [11701,11724]
+replace acceptPendingDelegation by _accept
+
+New cluster:
+MOVE from function_body [11879,12096]
+------------
+===
+move-tree
+---
+expression_statement [11799,11969]
+    call_expression [11799,11968]
+        identifier: require [11799,11806]
+        call_argument [11820,11919]
+            call_expression [11820,11919]
+                member_expression: _getValidatorService().checkValidatorAddressToId [11820,11868]
+                call_argument [11869,11879]
+                    member_expression: msg.sender [11869,11879]
+                call_argument [11881,11918]
+                    member_expression: delegations[delegationId].validatorId [11881,11918]
+        call_argument [11933,11967]
+            string_literal [11933,11967]
+                string: "No permissions to accept request" [11933,11967]
+to
+function_body [11879,12096]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [12068,12090]
+    call_expression [12068,12089]
+        identifier: _accept [12068,12075]
+        call_argument [12076,12088]
+            identifier: delegationId [12076,12088]
+to
+function_body [11879,12096]
+at 1
+
+New cluster:
+MOVE from function_body [12454,13585]
+------------
+===
+move-tree
+---
+expression_statement [14690,14770]
+    assignment_expression [14690,14769]
+        member_expression: delegations[delegationId].finished [14690,14724]
+        affectation_operator: = [14725,14726]
+        call_expression [14727,14769]
+            identifier: _calculateDelegationEndMonth [14727,14755]
+            call_argument [14756,14768]
+                identifier: delegationId [14756,14768]
+to
+function_body [12454,13585]
+at 5
+===
+move-tree
+---
+expression_statement [14037,14119]
+    call_expression [14037,14118]
+        identifier: require [14037,14044]
+        call_argument [14045,14086]
+            binary_expression [14045,14086]
+                call_expression [14045,14067]
+                    identifier: getState [14045,14053]
+                    call_argument [14054,14066]
+                        identifier: delegationId [14054,14066]
+                comparison_operator: == [14068,14070]
+                member_expression: State.DELEGATED [14071,14086]
+        call_argument [14088,14117]
+            string_literal [14088,14117]
+                string: "Cannot request undelegation" [14088,14117]
+to
+function_body [12454,13585]
+at 0
+===
+move-tree
+---
+expression_statement [14196,14491]
+    call_expression [14196,14490]
+        identifier: require [14196,14203]
+        call_argument [14217,14432]
+            binary_expression [14217,14432]
+                binary_expression [14217,14263]
+                    member_expression: delegations[delegationId].holder [14217,14249]
+                    comparison_operator: == [14250,14252]
+                    member_expression: msg.sender [14253,14263]
+                logical_operator: || [14264,14266]
+                parenthesized_expression [14279,14432]
+                    binary_expression [14280,14431]
+                        member_expression: validatorService.validatorAddressExists(msg.sender) &&             delegations[delegationId].validatorId [14280,14384]
+                        comparison_operator: == [14385,14387]
+                        call_expression [14388,14431]
+                            member_expression: validatorService.getValidatorId [14388,14419]
+                            call_argument [14420,14430]
+                                member_expression: msg.sender [14420,14430]
+        call_argument [14446,14489]
+            string_literal [14446,14489]
+                string: "Permission denied to request undelegation" [14446,14489]
+to
+function_body [12454,13585]
+at 2
+===
+move-tree
+---
+variable_declaration_statement [14128,14187]
+    variable_declaration [14128,14161]
+        type_name: ValidatorService [14128,14144]
+        identifier: validatorService [14145,14161]
+    affectation_operator: = [14162,14163]
+    call_expression [14164,14186]
+        identifier: _getValidatorService [14164,14184]
+to
+function_body [12454,13585]
+at 1
+===
+move-tree
+---
+expression_statement [14500,14642]
+    call_expression [14500,14641]
+        identifier: _removeValidatorFromValidatorsPerDelegators [14500,14543]
+        call_argument [14557,14589]
+            member_expression: delegations[delegationId].holder [14557,14589]
+        call_argument [14603,14640]
+            member_expression: delegations[delegationId].validatorId [14603,14640]
+to
+function_body [12454,13585]
+at 3
+===
+move-tree
+---
+expression_statement [14651,14681]
+    call_expression [14651,14680]
+        identifier: processAllSlashes [14651,14668]
+        call_argument [14669,14679]
+            member_expression: msg.sender [14669,14679]
+to
+function_body [12454,13585]
+at 4
+===
+move-tree
+---
+emit_statement [16318,16359]
+    identifier: UndelegationRequested [16323,16344]
+    call_argument [16345,16357]
+        identifier: delegationId [16345,16357]
+to
+function_body [12454,13585]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13207,13469]
+    call_expression [13207,13468]
+        identifier: require [13207,13214]
+        call_argument [13228,13365]
+            call_expression [13228,13365]
+                member_expression: now.add(UNDELEGATION_PROHIBITION_WINDOW_SECONDS)                 < _getTimeHelpers().monthToTimestamp [13228,13329]
+                call_argument [13330,13364]
+                    member_expression: delegations[delegationId].finished [13330,13364]
+        call_argument [13379,13458]
+            string_literal [13379,13458]
+                string: "Undelegation requests must be sent 3 days before the end of delegation period" [13379,13458]
+to
+function_body [12454,13585]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13479,13520]
+    call_expression [13479,13519]
+        identifier: _subtractFromAllStatistics [13479,13505]
+        call_argument [13506,13518]
+            identifier: delegationId [13506,13518]
+to
+function_body [12454,13585]
+at 7
+
+New cluster:
+UPDATE from require to assert
+------------
+===
+update-node
+---
+identifier: require [29075,29082]
+replace require by assert
+
+New cluster:
+===
+delete-node
+---
+identifier: DelegationController [2521,2541]
+===
+------------
+===
+delete-node
+---
+identifier: DelegationController [2521,2541]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [2542,2544]
+===
+------------
+===
+delete-node
+---
+is: is [2542,2544]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [29167,29212]
+    string_literal [29167,29212]
+        string: "There are no delegation requests this month" [29167,29212]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [29223,29316]
+    call_expression [29223,29315]
+        identifier: require [29223,29230]
+        call_argument [29231,29283]
+            binary_expression [29231,29283]
+                member_expression: _lockedInPendingDelegations[holder].amount [29231,29273]
+                comparison_operator: >= [29274,29276]
+                identifier: amount [29277,29283]
+        call_argument [29285,29314]
+            string_literal [29285,29314]
+                string: "Unlocking amount is too big" [29285,29314]
+

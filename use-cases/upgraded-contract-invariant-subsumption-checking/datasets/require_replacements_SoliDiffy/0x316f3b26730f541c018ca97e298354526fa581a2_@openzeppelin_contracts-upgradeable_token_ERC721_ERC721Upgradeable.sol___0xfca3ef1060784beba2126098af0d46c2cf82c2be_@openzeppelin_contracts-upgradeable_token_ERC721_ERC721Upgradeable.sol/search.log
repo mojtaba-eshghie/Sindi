@@ -1,0 +1,5 @@
+results/differencing_results/0x316f3b26730f541c018ca97e298354526fa581a2_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xfca3ef1060784beba2126098af0d46c2cf82c2be_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol.log:
+  361  identifier: require [12359,12366]
+  362: replace require by _approve
+  363  ===
+

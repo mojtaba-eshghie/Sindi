@@ -1,0 +1,886 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [387,445]
+    type_name: mapping(bytes32 => NftMintTracker) [387,421]
+    visibility: public [422,428]
+    identifier: nftMintTrackers [429,444]
+to
+contract_body [244,2563]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [1328,1356]
+    error: error [1328,1333]
+    identifier: ExceedMaxMintAmount [1334,1353]
+to
+contract_body [244,2563]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1924,2017]
+    identifier: MintCapSet [1930,1940]
+    event_paramater [1941,1963]
+        type_name: bytes32 [1941,1948]
+        indexed: indexed [1949,1956]
+        identifier: DAO_id [1957,1963]
+    event_paramater [1965,1979]
+        type_name: uint32 [1965,1971]
+        identifier: mintCap [1972,1979]
+    event_paramater [1981,2015]
+        type_name: DesignatedCap[] [1981,1996]
+        identifier: designatedMintCaps [1997,2015]
+to
+contract_body [244,2563]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [2023,2043]
+    error: error [2023,2028]
+    identifier: NotDaoOwner [2029,2040]
+to
+contract_body [244,2563]
+at 8
+
+New cluster:
+===
+insert-node
+---
+function_definition [2049,3085]
+to
+contract_body [244,2563]
+at 9
+------------
+===
+insert-node
+---
+expression_statement [2988,3079]
+to
+function_body [2374,3085]
+at 6
+===
+insert-node
+---
+function: function [2049,2057]
+to
+function_definition [2049,3085]
+at 0
+===
+insert-node
+---
+visibility: public [2358,2364]
+to
+function_definition [2049,3085]
+at 8
+===
+insert-node
+---
+member_expression: settings.permission_control().modifyPermission [2988,3034]
+to
+call_expression [2988,3078]
+at 0
+===
+insert-node
+---
+function_definition [2049,3085]
+to
+contract_body [244,2563]
+at 9
+===
+insert-node
+---
+function_body [2374,3085]
+to
+function_definition [2049,3085]
+at 10
+===
+insert-node
+---
+call_expression [2988,3078]
+to
+expression_statement [2988,3079]
+at 0
+===
+insert-node
+---
+identifier: setMintCapAndPermission [2058,2081]
+to
+function_definition [2049,3085]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3091,3111]
+    error: error [3091,3096]
+    identifier: Blacklisted [3097,3108]
+to
+contract_body [244,2563]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3116,3139]
+    error: error [3116,3121]
+    identifier: NotInWhitelist [3122,3136]
+to
+contract_body [244,2563]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3145,4693]
+    function: function [3145,3153]
+    identifier: _ableToMint [3154,3165]
+    parameter [3166,3181]
+        type_name: bytes32 [3166,3173]
+        identifier: _DAO_id [3174,3181]
+    parameter [3183,3199]
+        type_name: address [3183,3190]
+        identifier: _account [3191,3199]
+    parameter [3201,3226]
+        type_name: bytes32[] [3201,3210]
+        calldata: calldata [3211,3219]
+        identifier: _proof [3220,3226]
+    visibility: internal [3228,3236]
+    state_mutability [3237,3241]
+        view: view [3237,3241]
+    return_type_definition [3242,3256]
+        returns: returns [3242,3249]
+        parameter [3251,3255]
+            type_name: bool [3251,3255]
+    function_body [3257,4693]
+        variable_declaration_statement [3426,3495]
+            variable_declaration [3426,3462]
+                type_name: IPermissionControl [3426,3444]
+                identifier: permissionControl [3445,3462]
+            affectation_operator: = [3463,3464]
+            call_expression [3465,3494]
+                member_expression: settings.permission_control [3465,3492]
+        if_statement [3504,3611]
+            if: if [3504,3506]
+            call_expression [3508,3564]
+                member_expression: permissionControl.isMinterBlacklisted [3508,3545]
+                call_argument [3546,3553]
+                    identifier: _DAO_id [3546,3553]
+                call_argument [3555,3563]
+                    identifier: _account [3555,3563]
+            block_statement [3566,3611]
+                revert_statement [3580,3601]
+                    revert: revert [3580,3586]
+                    identifier: Blacklisted [3587,3598]
+                    revert_arguments [3598,3600]
+        variable_declaration_statement [3620,3635]
+            variable_declaration [3620,3634]
+                type_name: uint32 [3620,3626]
+                identifier: mintCap [3627,3634]
+        variable_declaration_statement [3644,3659]
+            variable_declaration [3644,3658]
+                type_name: uint128 [3644,3651]
+                identifier: minted [3652,3658]
+        variable_declaration_statement [3668,3690]
+            variable_declaration [3668,3689]
+                type_name: uint128 [3668,3675]
+                identifier: designatedCap [3676,3689]
+        block_statement [3699,3990]
+            variable_declaration_statement [3713,3775]
+                variable_declaration [3713,3747]
+                    type_name: NftMintTracker [3713,3727]
+                    storage: storage [3728,3735]
+                    identifier: mintTracker [3736,3747]
+                affectation_operator: = [3748,3749]
+                array_access [3750,3774]
+                    identifier: nftMintTrackers [3750,3765]
+                    identifier: _DAO_id [3766,3773]
+            expression_statement [3788,3818]
+                assignment_expression [3788,3817]
+                    identifier: mintCap [3788,3795]
+                    affectation_operator: = [3796,3797]
+                    member_expression: mintTracker.mintCap [3798,3817]
+            variable_declaration_statement [3831,3890]
+                variable_declaration [3831,3855]
+                    type_name: MintInfo [3831,3839]
+                    memory: memory [3840,3846]
+                    identifier: mintInfo [3847,3855]
+                affectation_operator: = [3856,3857]
+                array_access [3858,3889]
+                    member_expression: mintTracker.mintInfos [3858,3879]
+                    identifier: _account [3880,3888]
+            expression_statement [3903,3928]
+                assignment_expression [3903,3927]
+                    identifier: minted [3903,3909]
+                    affectation_operator: = [3910,3911]
+                    member_expression: mintInfo.minted [3912,3927]
+            expression_statement [3941,3980]
+                assignment_expression [3941,3979]
+                    identifier: designatedCap [3941,3954]
+                    affectation_operator: = [3955,3956]
+                    member_expression: mintInfo.designatedCap [3957,3979]
+        variable_declaration_statement [4000,4020]
+            variable_declaration [4000,4019]
+                type_name: bool [4000,4004]
+                identifier: isWhitelistOff [4005,4019]
+        block_statement [4029,4259]
+            variable_declaration_statement [4043,4131]
+                variable_declaration [4043,4088]
+                    type_name: IPermissionControl.Whitelist [4043,4071]
+                    memory: memory [4072,4078]
+                    identifier: whitelist [4079,4088]
+                affectation_operator: = [4089,4090]
+                call_expression [4091,4130]
+                    member_expression: permissionControl.getWhitelist [4091,4121]
+                    call_argument [4122,4129]
+                        identifier: _DAO_id [4122,4129]
+            expression_statement [4144,4249]
+                assignment_expression [4144,4248]
+                    identifier: isWhitelistOff [4144,4158]
+                    affectation_operator: = [4159,4160]
+                    binary_expression [4161,4248]
+                        member_expression: whitelist.minterMerkleRoot == bytes32(0) && whitelist.minterNFTHolderPasses.length [4161,4243]
+                        comparison_operator: == [4244,4246]
+                        number_literal: 0 [4247,4248]
+        if_statement [4293,4383]
+            if: if [4293,4295]
+            identifier: isWhitelistOff [4297,4311]
+            block_statement [4313,4383]
+                return_statement [4327,4373]
+                    return: return [4327,4333]
+                    ternary_expression [4334,4372]
+                        binary_expression [4334,4346]
+                            identifier: mintCap [4334,4341]
+                            comparison_operator: == [4342,4344]
+                            number_literal: 0 [4345,4346]
+                        ?: ? [4347,4348]
+                        boolean_literal: true [4349,4353]
+                        :: : [4354,4355]
+                        binary_expression [4356,4372]
+                            identifier: minted [4356,4362]
+                            comparison_operator: < [4363,4364]
+                            identifier: mintCap [4365,4372]
+        if_statement [4437,4554]
+            if: if [4437,4439]
+            unary_expression [4441,4504]
+                !: ! [4441,4442]
+                call_expression [4442,4504]
+                    member_expression: permissionControl.inMinterWhitelist [4442,4477]
+                    call_argument [4478,4485]
+                        identifier: _DAO_id [4478,4485]
+                    call_argument [4487,4495]
+                        identifier: _account [4487,4495]
+                    call_argument [4497,4503]
+                        identifier: _proof [4497,4503]
+            block_statement [4506,4554]
+                revert_statement [4520,4544]
+                    revert: revert [4520,4526]
+                    identifier: NotInWhitelist [4527,4541]
+                    revert_arguments [4541,4543]
+        return_statement [4595,4687]
+            return: return [4595,4601]
+            ternary_expression [4602,4686]
+                ternary_expression [4602,4660]
+                    binary_expression [4602,4620]
+                        identifier: designatedCap [4602,4615]
+                        comparison_operator: != [4616,4618]
+                        number_literal: 0 [4619,4620]
+                    ?: ? [4621,4622]
+                    binary_expression [4623,4645]
+                        identifier: minted [4623,4629]
+                        comparison_operator: < [4630,4631]
+                        identifier: designatedCap [4632,4645]
+                    :: : [4646,4647]
+                    binary_expression [4648,4660]
+                        identifier: mintCap [4648,4655]
+                        comparison_operator: != [4656,4658]
+                        number_literal: 0 [4659,4660]
+                ?: ? [4661,4662]
+                binary_expression [4663,4679]
+                    identifier: minted [4663,4669]
+                    comparison_operator: < [4670,4671]
+                    identifier: mintCap [4672,4679]
+                :: : [4680,4681]
+                boolean_literal: true [4682,4686]
+to
+contract_body [244,2563]
+at 12
+
+New cluster:
+UPDATE from external to public
+------------
+===
+update-node
+---
+visibility: external [1049,1057]
+replace external by public
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2091,2106]
+    type_name: bytes32 [2091,2098]
+    identifier: _DAO_id [2099,2106]
+to
+function_definition [2049,3085]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2116,2131]
+    type_name: uint32 [2116,2122]
+    identifier: _mintCap [2123,2131]
+to
+function_definition [2049,3085]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2141,2184]
+    type_name: DesignatedCap[] [2141,2156]
+    calldata: calldata [2157,2165]
+    identifier: designatedMintCaps [2166,2184]
+to
+function_definition [2049,3085]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2194,2239]
+    type_name: IPermissionControl.Whitelist [2194,2222]
+    memory: memory [2223,2229]
+    identifier: whitelist [2230,2239]
+to
+function_definition [2049,3085]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2249,2294]
+    type_name: IPermissionControl.Blacklist [2249,2277]
+    memory: memory [2278,2284]
+    identifier: blacklist [2285,2294]
+to
+function_definition [2049,3085]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [2304,2351]
+    type_name: IPermissionControl.Blacklist [2304,2332]
+    memory: memory [2333,2339]
+    identifier: unblacklist [2340,2351]
+to
+function_definition [2049,3085]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [2365,2373]
+    override: override [2365,2373]
+to
+function_definition [2049,3085]
+at 9
+
+New cluster:
+UPDATE from reinitializer to initializer
+------------
+===
+update-node
+---
+identifier: reinitializer [1058,1071]
+replace reinitializer by initializer
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1142,1167]
+    call_expression [1142,1166]
+        identifier: __ReentrancyGuard_init [1142,1164]
+to
+function_body [1075,1182]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1219,1259]
+    assignment_expression [1219,1258]
+        identifier: project_num [1219,1230]
+        affectation_operator: = [1231,1232]
+        call_expression [1233,1258]
+            member_expression: settings.reserved_slots [1233,1256]
+to
+function_body [1075,1182]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [1631,1707]
+to
+function_body [1447,1822]
+at 0
+------------
+===
+insert-node
+---
+revert_arguments [1704,1706]
+to
+revert_statement [1678,1707]
+at 2
+===
+insert-node
+---
+if: if [1631,1633]
+to
+if_statement [1631,1707]
+at 0
+===
+insert-node
+---
+revert_statement [1678,1707]
+to
+if_statement [1631,1707]
+at 2
+===
+insert-node
+---
+revert: revert [1678,1684]
+to
+revert_statement [1678,1707]
+at 0
+===
+insert-node
+---
+unary_expression [1635,1676]
+to
+if_statement [1631,1707]
+at 1
+===
+insert-node
+---
+if_statement [1631,1707]
+to
+function_body [1447,1822]
+at 0
+===
+insert-node
+---
+!: ! [1635,1636]
+to
+unary_expression [1635,1676]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1716,1775]
+    augmented_assignment_expression [1716,1774]
+        member_expression: nftMintTrackers[_DAO_id].mintInfos[msg.sender].minted [1716,1769]
+        affectation_operator: += [1770,1772]
+        number_literal: 1 [1773,1774]
+to
+function_body [1447,1822]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [2384,2530]
+    if: if [2384,2386]
+    call_expression [2388,2483]
+        member_expression: msg.sender != settings.project_proxy() && msg.sender != settings.owner_proxy().ownerOf [2388,2474]
+        call_argument [2475,2482]
+            identifier: _DAO_id [2475,2482]
+    block_statement [2485,2530]
+        revert_statement [2499,2520]
+            revert: revert [2499,2505]
+            identifier: NotDaoOwner [2506,2517]
+            revert_arguments [2517,2519]
+to
+function_body [2374,3085]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [2539,2601]
+    variable_declaration [2539,2573]
+        type_name: NftMintTracker [2539,2553]
+        storage: storage [2554,2561]
+        identifier: mintTracker [2562,2573]
+    affectation_operator: = [2574,2575]
+    array_access [2576,2600]
+        identifier: nftMintTrackers [2576,2591]
+        identifier: _DAO_id [2592,2599]
+to
+function_body [2374,3085]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [2610,2641]
+    assignment_expression [2610,2640]
+        member_expression: mintTracker.mintCap [2610,2629]
+        affectation_operator: = [2630,2631]
+        identifier: _mintCap [2632,2640]
+to
+function_body [2374,3085]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [2650,2693]
+    variable_declaration [2650,2664]
+        type_name: uint256 [2650,2657]
+        identifier: length [2658,2664]
+    affectation_operator: = [2665,2666]
+    member_expression: designatedMintCaps.length [2667,2692]
+to
+function_body [2374,3085]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+for_statement [2702,2913]
+    for: for [2702,2705]
+    variable_declaration_statement [2707,2721]
+        variable_declaration [2707,2716]
+            type_name: uint256 [2707,2714]
+            identifier: i [2715,2716]
+        affectation_operator: = [2717,2718]
+        number_literal: 0 [2719,2720]
+    expression_statement [2722,2733]
+        binary_expression [2722,2732]
+            identifier: i [2722,2723]
+            comparison_operator: < [2724,2725]
+            identifier: length [2726,2732]
+    block_statement [2735,2913]
+        expression_statement [2749,2844]
+            assignment_expression [2749,2843]
+                member_expression: mintTracker.mintInfos[designatedMintCaps[i].account].designatedCap [2749,2815]
+                affectation_operator: = [2816,2817]
+                member_expression: designatedMintCaps[i].cap [2818,2843]
+        block_statement [2857,2903]
+            unchecked: unchecked [2857,2866]
+            expression_statement [2885,2889]
+                update_expression [2885,2888]
+                    increment_operator: ++ [2885,2887]
+                    identifier: i [2887,2888]
+to
+function_body [2374,3085]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [2923,2978]
+    identifier: MintCapSet [2928,2938]
+    call_argument [2939,2946]
+        identifier: _DAO_id [2939,2946]
+    call_argument [2948,2956]
+        identifier: _mintCap [2948,2956]
+    call_argument [2958,2976]
+        identifier: designatedMintCaps [2958,2976]
+to
+function_body [2374,3085]
+at 5
+
+New cluster:
+MOVE from unary_expression [1635,1676]
+------------
+===
+move-tree
+---
+call_expression [1581,1657]
+    member_expression: settings.permission_control().inMinterWhitelist [1581,1628]
+    call_argument [1629,1636]
+        identifier: _DAO_id [1629,1636]
+    call_argument [1638,1648]
+        member_expression: msg.sender [1638,1648]
+    call_argument [1650,1656]
+        identifier: _proof [1650,1656]
+to
+unary_expression [1635,1676]
+at 1
+
+New cluster:
+UPDATE from require to ExceedMaxMintAmount
+------------
+===
+update-node
+---
+identifier: require [1573,1580]
+replace require by ExceedMaxMintAmount
+
+New cluster:
+MOVE from revert_statement [1678,1707]
+------------
+===
+move-tree
+---
+identifier: require [1573,1580]
+to
+revert_statement [1678,1707]
+at 1
+
+New cluster:
+MOVE from call_expression [2988,3078]
+------------
+===
+move-tree
+---
+call_argument [1516,1523]
+    identifier: _DAO_id [1516,1523]
+to
+call_expression [2988,3078]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [3044,3053]
+    identifier: whitelist [3044,3053]
+to
+call_expression [2988,3078]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [3055,3064]
+    identifier: blacklist [3055,3064]
+to
+call_expression [2988,3078]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [3066,3077]
+    identifier: unblacklist [3066,3077]
+to
+call_expression [2988,3078]
+at 4
+
+New cluster:
+UPDATE from require to _ableToMint
+------------
+===
+update-node
+---
+identifier: require [1457,1464]
+replace require by _ableToMint
+
+New cluster:
+MOVE from call_expression [1581,1657]
+------------
+===
+move-tree
+---
+identifier: require [1457,1464]
+to
+call_expression [1581,1657]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [1072,1073]
+    number_literal: 2 [1072,1073]
+
+New cluster:
+===
+delete-node
+---
+member_expression: settings.permission_control().inMinterWhitelist [1581,1628]
+===
+------------
+===
+delete-node
+---
+member_expression: settings.permission_control().inMinterWhitelist [1581,1628]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [1457,1564]
+===
+------------
+===
+delete-node
+---
+call_argument [1465,1536]
+===
+===
+delete-node
+---
+expression_statement [1457,1564]
+===
+===
+delete-node
+---
+member_expression: !settings.permission_control().isMinterBlacklisted [1465,1515]
+===
+===
+delete-node
+---
+call_expression [1465,1536]
+===
+===
+delete-node
+---
+call_expression [1457,1563]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [1525,1535]
+    member_expression: msg.sender [1525,1535]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [1538,1562]
+    string_literal [1538,1562]
+        string: "Account is blacklisted" [1538,1562]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [1573,1679]
+===
+------------
+===
+delete-node
+---
+call_argument [1581,1657]
+===
+===
+delete-node
+---
+expression_statement [1573,1679]
+===
+===
+delete-node
+---
+call_expression [1573,1678]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [1659,1677]
+    string_literal [1659,1677]
+        string: "Not in whitelist" [1659,1677]
+

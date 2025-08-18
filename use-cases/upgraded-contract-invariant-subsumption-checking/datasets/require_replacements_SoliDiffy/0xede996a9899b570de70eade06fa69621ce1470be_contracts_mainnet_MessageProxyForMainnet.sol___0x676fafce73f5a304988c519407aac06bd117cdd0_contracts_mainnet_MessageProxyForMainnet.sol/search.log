@@ -1,0 +1,9 @@
+results/differencing_results/0xede996a9899b570de70eade06fa69621ce1470be_contracts_mainnet_MessageProxyForMainnet.sol___0x676fafce73f5a304988c519407aac06bd117cdd0_contracts_mainnet_MessageProxyForMainnet.sol.log:
+  550  identifier: require [10941,10948]
+  551: replace require by onlyOwner
+  552  ===
+
+  555  identifier: require [5219,5226]
+  556: replace require by onlyOwner
+  557  
+

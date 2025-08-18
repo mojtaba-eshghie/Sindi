@@ -1,0 +1,5 @@
+results/differencing_results/0x27665f1ccf0eabe2b085eee0784d3b47e351eef1_contracts_CryptoNijigenGirlsUpgradeable.sol___0x56eab68699f0459ddac040fb1378aa1aa88a8b24_contracts_CryptoNijigenGirlsUpgradeable.sol.log:
+  1896  identifier: require [3344,3351]
+  1897: replace require by txFee
+  1898  
+

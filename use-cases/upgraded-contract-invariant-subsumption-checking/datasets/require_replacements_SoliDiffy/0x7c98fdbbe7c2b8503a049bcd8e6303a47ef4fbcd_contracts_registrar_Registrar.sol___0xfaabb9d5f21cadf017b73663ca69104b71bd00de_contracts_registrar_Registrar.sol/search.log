@@ -1,0 +1,29 @@
+results/differencing_results/0x7c98fdbbe7c2b8503a049bcd8e6303a47ef4fbcd_contracts_registrar_Registrar.sol___0xfaabb9d5f21cadf017b73663ca69104b71bd00de_contracts_registrar_Registrar.sol.log:
+  2816  identifier: require [19948,19955]
+  2817: replace require by _onlyController
+  2818  ===
+
+  2821  identifier: require [20611,20618]
+  2822: replace require by _onlyController
+  2823  ===
+
+  2826  identifier: require [2963,2970]
+  2827: replace require by _onlyController
+  2828  
+
+  2931  identifier: require [11099,11106]
+  2932: replace require by _onlyOwnerOf
+  2933  
+
+  3184  identifier: require [3035,3042]
+  3185: replace require by InvalidFolderGroup
+  3186  
+
+  3204  identifier: require [9055,9062]
+  3205: replace require by EmptyDomainName
+  3206  
+
+  3224  identifier: require [9170,9177]
+  3225: replace require by SubdomainParent
+  3226  
+

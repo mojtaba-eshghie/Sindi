@@ -1,0 +1,1232 @@
+New cluster:
+===
+insert-node
+---
+identifier: ERC721Upgradeable [760,777]
+to
+contract_declaration [751,15115]
+at 0
+------------
+===
+insert-node
+---
+identifier: ERC721Upgradeable [760,777]
+to
+contract_declaration [751,15115]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [778,780]
+to
+contract_declaration [751,15115]
+at 1
+------------
+===
+insert-node
+---
+is: is [778,780]
+to
+contract_declaration [751,15115]
+at 1
+
+New cluster:
+===
+insert-node
+---
+function_definition [7310,7425]
+to
+contract_body [882,15115]
+at 25
+------------
+===
+insert-node
+---
+function_body [7385,7425]
+to
+function_definition [7310,7425]
+at 7
+===
+insert-node
+---
+virtual: virtual [7359,7366]
+to
+function_definition [7310,7425]
+at 5
+===
+insert-node
+---
+return_statement [7395,7419]
+to
+function_body [7385,7425]
+at 0
+===
+insert-node
+---
+identifier: _ownerOf [7319,7327]
+to
+function_definition [7310,7425]
+at 1
+===
+insert-node
+---
+function_definition [7310,7425]
+to
+contract_body [882,15115]
+at 25
+===
+insert-node
+---
+function: function [7310,7318]
+to
+function_definition [7310,7425]
+at 0
+===
+insert-node
+---
+return: return [7395,7401]
+to
+return_statement [7395,7419]
+at 0
+===
+insert-node
+---
+visibility: internal [7345,7353]
+to
+function_definition [7310,7425]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [14004,14137]
+to
+contract_body [882,15115]
+at 35
+------------
+===
+insert-node
+---
+function: function [14004,14012]
+to
+function_definition [14004,14137]
+at 0
+===
+insert-node
+---
+visibility: internal [14045,14053]
+to
+function_definition [14004,14137]
+at 3
+===
+insert-node
+---
+identifier: _requireMinted [14013,14027]
+to
+function_definition [14004,14137]
+at 1
+===
+insert-node
+---
+function_body [14067,14137]
+to
+function_definition [14004,14137]
+at 6
+===
+insert-node
+---
+virtual: virtual [14059,14066]
+to
+function_definition [14004,14137]
+at 5
+===
+insert-node
+---
+function_definition [14004,14137]
+to
+contract_body [882,15115]
+at 35
+
+New cluster:
+===
+insert-node
+---
+function_definition [16258,16654]
+to
+contract_body [882,15115]
+at 37
+------------
+===
+insert-node
+---
+identifier: _beforeTokenTransfer [16267,16287]
+to
+function_definition [16258,16654]
+at 1
+===
+insert-node
+---
+visibility: internal [16399,16407]
+to
+function_definition [16258,16654]
+at 6
+===
+insert-node
+---
+virtual: virtual [16408,16415]
+to
+function_definition [16258,16654]
+at 7
+===
+insert-node
+---
+function_definition [16258,16654]
+to
+contract_body [882,15115]
+at 37
+===
+insert-node
+---
+function: function [16258,16266]
+to
+function_definition [16258,16654]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [17360,17513]
+to
+contract_body [882,15115]
+at 38
+------------
+===
+insert-node
+---
+identifier: _afterTokenTransfer [17369,17388]
+to
+function_definition [17360,17513]
+at 1
+===
+insert-node
+---
+function: function [17360,17368]
+to
+function_definition [17360,17513]
+at 0
+===
+insert-node
+---
+visibility: internal [17494,17502]
+to
+function_definition [17360,17513]
+at 6
+===
+insert-node
+---
+virtual: virtual [17503,17510]
+to
+function_definition [17360,17513]
+at 7
+===
+insert-node
+---
+function_definition [17360,17513]
+to
+contract_body [882,15115]
+at 38
+===
+insert-node
+---
+function_body [17511,17513]
+to
+function_definition [17360,17513]
+at 8
+
+New cluster:
+MOVE from function_definition [16258,16654]
+------------
+===
+move-tree
+---
+parameter [14739,14751]
+    type_name: address [14739,14746]
+    identifier: from [14747,14751]
+to
+function_definition [16258,16654]
+at 2
+===
+move-tree
+---
+parameter [14781,14796]
+    type_name: uint256 [14781,14788]
+    identifier: tokenId [14789,14796]
+to
+function_definition [7310,7425]
+at 2
+===
+move-tree
+---
+parameter [14761,14771]
+    type_name: address [14761,14768]
+    identifier: to [14769,14771]
+to
+function_definition [16258,16654]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [7354,7358]
+    view: view [7354,7358]
+to
+function_definition [7310,7425]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [7367,7384]
+    returns: returns [7367,7374]
+    parameter [7376,7383]
+        type_name: address [7376,7383]
+to
+function_definition [7310,7425]
+at 6
+
+New cluster:
+MOVE from function_definition [17360,17513]
+------------
+===
+move-tree
+---
+parameter [14268,14278]
+    type_name: address [14268,14275]
+    identifier: to [14276,14278]
+to
+function_definition [17360,17513]
+at 3
+===
+move-tree
+---
+parameter [14288,14303]
+    type_name: uint256 [14288,14295]
+    identifier: tokenId [14296,14303]
+to
+function_definition [14004,14137]
+at 2
+===
+move-tree
+---
+parameter [14246,14258]
+    type_name: address [14246,14253]
+    identifier: from [14254,14258]
+to
+function_definition [17360,17513]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [14054,14058]
+    view: view [14054,14058]
+to
+function_definition [14004,14137]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [16339,16346]
+    type_name: uint256 [16339,16346]
+to
+function_definition [16258,16654]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [16375,16392]
+    type_name: uint256 [16375,16382]
+    identifier: batchSize [16383,16392]
+to
+function_definition [16258,16654]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [16416,16654]
+    if_statement [16426,16648]
+        if: if [16426,16428]
+        binary_expression [16430,16443]
+            identifier: batchSize [16430,16439]
+            comparison_operator: > [16440,16441]
+            number_literal: 1 [16442,16443]
+        block_statement [16445,16648]
+            if_statement [16459,16544]
+                if: if [16459,16461]
+                binary_expression [16463,16481]
+                    identifier: from [16463,16467]
+                    comparison_operator: != [16468,16470]
+                    type_cast_expression [16471,16481]
+                        primitive_type: address [16471,16478]
+                        call_argument [16479,16480]
+                            number_literal: 0 [16479,16480]
+                block_statement [16483,16544]
+                    expression_statement [16501,16530]
+                        augmented_assignment_expression [16501,16529]
+                            array_access [16501,16516]
+                                identifier: _balances [16501,16510]
+                                identifier: from [16511,16515]
+                            affectation_operator: -= [16517,16519]
+                            identifier: batchSize [16520,16529]
+            if_statement [16557,16638]
+                if: if [16557,16559]
+                binary_expression [16561,16577]
+                    identifier: to [16561,16563]
+                    comparison_operator: != [16564,16566]
+                    type_cast_expression [16567,16577]
+                        primitive_type: address [16567,16574]
+                        call_argument [16575,16576]
+                            number_literal: 0 [16575,16576]
+                block_statement [16579,16638]
+                    expression_statement [16597,16624]
+                        augmented_assignment_expression [16597,16623]
+                            array_access [16597,16610]
+                                identifier: _balances [16597,16606]
+                                identifier: to [16607,16609]
+                            affectation_operator: += [16611,16613]
+                            identifier: batchSize [16614,16623]
+to
+function_definition [16258,16654]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17440,17460]
+    type_name: uint256 [17440,17447]
+    identifier: firstTokenId [17448,17460]
+to
+function_definition [17360,17513]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [17470,17487]
+    type_name: uint256 [17470,17477]
+    identifier: batchSize [17478,17487]
+to
+function_definition [17360,17513]
+at 5
+
+New cluster:
+UPDATE from _data to data
+------------
+===
+update-node
+---
+identifier: _data [7134,7139]
+replace _data by data
+===
+update-node
+---
+identifier: _data [6147,6152]
+replace _data by data
+===
+update-node
+---
+identifier: _data [7261,7266]
+replace _data by data
+===
+update-node
+---
+identifier: _data [5955,5960]
+replace _data by data
+===
+update-node
+---
+identifier: _data [13133,13138]
+replace _data by data
+===
+update-node
+---
+identifier: _data [9015,9020]
+replace _data by data
+===
+update-node
+---
+identifier: _data [12972,12977]
+replace _data by data
+===
+update-node
+---
+identifier: _data [9151,9156]
+replace _data by data
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9920,9979]
+    call_expression [9920,9978]
+        identifier: require [9920,9927]
+        call_argument [9928,9945]
+            unary_expression [9928,9945]
+                !: ! [9928,9929]
+                call_expression [9929,9945]
+                    identifier: _exists [9929,9936]
+                    call_argument [9937,9944]
+                        identifier: tokenId [9937,9944]
+        call_argument [9947,9977]
+            string_literal [9947,9977]
+                string: "ERC721: token already minted" [9947,9977]
+to
+function_body [9623,9989]
+at 3
+
+New cluster:
+===
+insert-node
+---
+block_statement [9989,10349]
+to
+function_body [9623,9989]
+at 4
+------------
+===
+insert-node
+---
+unchecked: unchecked [9989,9998]
+to
+block_statement [9989,10349]
+at 0
+===
+insert-node
+---
+block_statement [9989,10349]
+to
+function_body [9623,9989]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [11173,11205]
+    array_access [11173,11204]
+        unary_expression [11173,11195]
+            delete: delete [11173,11179]
+            identifier: _tokenApprovals [11180,11195]
+        identifier: tokenId [11196,11203]
+to
+function_body [10255,10623]
+at 3
+
+New cluster:
+===
+insert-node
+---
+block_statement [11215,11452]
+to
+function_body [10255,10623]
+at 4
+------------
+===
+insert-node
+---
+block_statement [11215,11452]
+to
+function_body [10255,10623]
+at 4
+===
+insert-node
+---
+unchecked: unchecked [11215,11224]
+to
+block_statement [11215,11452]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [12513,12545]
+    array_access [12513,12544]
+        unary_expression [12513,12535]
+            delete: delete [12513,12519]
+            identifier: _tokenApprovals [12520,12535]
+        identifier: tokenId [12536,12543]
+to
+function_body [11056,11563]
+at 4
+
+New cluster:
+===
+insert-node
+---
+block_statement [12555,13051]
+to
+function_body [11056,11563]
+at 5
+------------
+===
+insert-node
+---
+block_statement [12555,13051]
+to
+function_body [11056,11563]
+at 5
+===
+insert-node
+---
+unchecked: unchecked [12555,12564]
+to
+block_statement [12555,13051]
+at 0
+
+New cluster:
+MOVE from function_body [14067,14137]
+------------
+===
+move-tree
+---
+expression_statement [8024,8098]
+    call_expression [8024,8097]
+        identifier: require [8024,8031]
+        call_argument [8032,8048]
+            call_expression [8032,8048]
+                identifier: _exists [8032,8039]
+                call_argument [8040,8047]
+                    identifier: tokenId [8040,8047]
+        call_argument [8050,8096]
+            string_literal [8050,8096]
+                string: "ERC721: operator query for nonexistent token" [8050,8096]
+to
+function_body [14067,14137]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [2758,2775]
+to
+variable_declaration_statement [2743,2776]
+at 2
+------------
+===
+insert-node
+---
+call_argument [2767,2774]
+to
+call_expression [2758,2775]
+at 1
+===
+insert-node
+---
+call_expression [2758,2775]
+to
+variable_declaration_statement [2743,2776]
+at 2
+
+New cluster:
+MOVE from return_statement [7395,7419]
+------------
+===
+move-tree
+---
+array_access [7720,7736]
+    identifier: _owners [7720,7727]
+    identifier: tokenId [7728,7735]
+to
+return_statement [7395,7419]
+at 1
+
+New cluster:
+MOVE from block_statement [9989,10349]
+------------
+===
+move-tree
+---
+expression_statement [9829,9848]
+    augmented_assignment_expression [9829,9847]
+        array_access [9829,9842]
+            identifier: _balances [9829,9838]
+            identifier: to [9839,9841]
+        affectation_operator: += [9843,9845]
+        number_literal: 1 [9846,9847]
+to
+block_statement [9989,10349]
+at 1
+
+New cluster:
+===
+insert-node
+---
+assignment_expression [11093,11135]
+to
+expression_statement [10412,10442]
+at 0
+------------
+===
+insert-node
+---
+affectation_operator: = [11099,11100]
+to
+assignment_expression [11093,11135]
+at 1
+===
+insert-node
+---
+assignment_expression [11093,11135]
+to
+expression_statement [10412,10442]
+at 0
+
+New cluster:
+MOVE from block_statement [11215,11452]
+------------
+===
+move-tree
+---
+expression_statement [10452,10474]
+    augmented_assignment_expression [10452,10473]
+        array_access [10452,10468]
+            identifier: _balances [10452,10461]
+            identifier: owner [10462,10467]
+        affectation_operator: -= [10469,10471]
+        number_literal: 1 [10472,10473]
+to
+block_statement [11215,11452]
+at 1
+
+New cluster:
+MOVE from block_statement [12555,13051]
+------------
+===
+move-tree
+---
+expression_statement [11415,11434]
+    augmented_assignment_expression [11415,11433]
+        array_access [11415,11428]
+            identifier: _balances [11415,11424]
+            identifier: to [11425,11427]
+        affectation_operator: += [11429,11431]
+        number_literal: 1 [11432,11433]
+to
+block_statement [12555,13051]
+at 2
+===
+move-tree
+---
+expression_statement [11385,11406]
+    augmented_assignment_expression [11385,11405]
+        array_access [11385,11400]
+            identifier: _balances [11385,11394]
+            identifier: from [11395,11399]
+        affectation_operator: -= [11401,11403]
+        number_literal: 1 [11404,11405]
+to
+block_statement [12555,13051]
+at 1
+
+New cluster:
+UPDATE from _owners to _ownerOf
+------------
+===
+update-node
+---
+identifier: _owners [2759,2766]
+replace _owners by _ownerOf
+
+New cluster:
+MOVE from call_argument [2767,2774]
+------------
+===
+move-tree
+---
+identifier: tokenId [2767,2774]
+to
+call_argument [2767,2774]
+at 0
+===
+move-tree
+---
+identifier: _owners [2759,2766]
+to
+call_expression [2758,2775]
+at 0
+
+New cluster:
+UPDATE from require to _requireMinted
+------------
+===
+update-node
+---
+identifier: require [4567,4574]
+replace require by _requireMinted
+===
+update-node
+---
+identifier: require [3377,3384]
+replace require by _requireMinted
+
+New cluster:
+MOVE from call_expression [3377,3453]
+------------
+===
+move-tree
+---
+call_argument [11366,11373]
+    identifier: tokenId [11366,11373]
+to
+call_expression [3377,3453]
+at 1
+
+New cluster:
+MOVE from call_expression [4567,4640]
+------------
+===
+move-tree
+---
+call_argument [10433,10440]
+    identifier: tokenId [10433,10440]
+to
+call_expression [4567,4640]
+at 1
+===
+move-tree
+---
+identifier: _approve [10412,10420]
+to
+assignment_expression [11093,11135]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [7816,7833]
+    identifier: _ownerOf [7816,7824]
+    call_argument [7825,7832]
+        identifier: tokenId [7825,7832]
+to
+binary_expression [7720,7750]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [9831,9832]
+    number_literal: 1 [9831,9832]
+to
+call_expression [9773,9818]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10485,10486]
+    number_literal: 1 [10485,10486]
+to
+call_expression [9938,9982]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10989,10990]
+    number_literal: 1 [10989,10990]
+to
+call_expression [10326,10374]
+at 4
+
+New cluster:
+UPDATE from _approve to owner
+------------
+===
+update-node
+---
+identifier: _approve [10412,10420]
+replace _approve by owner
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [11101,11135]
+    member_expression: ERC721Upgradeable.ownerOf [11101,11126]
+    call_argument [11127,11134]
+        identifier: tokenId [11127,11134]
+to
+assignment_expression [11093,11135]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [11595,11596]
+    number_literal: 1 [11595,11596]
+to
+call_expression [10569,10616]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12265,12266]
+    number_literal: 1 [12265,12266]
+to
+call_expression [11244,11283]
+at 4
+
+New cluster:
+UPDATE from _approve to require
+------------
+===
+update-node
+---
+identifier: _approve [11345,11353]
+replace _approve by require
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12367,12409]
+    binary_expression [12367,12409]
+        call_expression [12367,12401]
+            member_expression: ERC721Upgradeable.ownerOf [12367,12392]
+            call_argument [12393,12400]
+                identifier: tokenId [12393,12400]
+        comparison_operator: == [12402,12404]
+        identifier: from [12405,12409]
+to
+call_expression [11345,11374]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12411,12450]
+    string_literal [12411,12450]
+        string: "ERC721: transfer from incorrect owner" [12411,12450]
+to
+call_expression [11345,11374]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [13174,13175]
+    number_literal: 1 [13174,13175]
+to
+call_expression [11518,11556]
+at 4
+
+New cluster:
+UPDATE from "ERC721: balance query for the zero address" to "ERC721: address zero is not a valid owner"
+------------
+===
+update-node
+---
+string: "ERC721: balance query for the zero address" [2510,2554]
+replace "ERC721: balance query for the zero address" by "ERC721: address zero is not a valid owner"
+
+New cluster:
+UPDATE from "ERC721: owner query for nonexistent token" to "ERC721: invalid token ID"
+------------
+===
+update-node
+---
+string: "ERC721: owner query for nonexistent token" [2814,2857]
+replace "ERC721: owner query for nonexistent token" by "ERC721: invalid token ID"
+===
+update-node
+---
+string: "ERC721: operator query for nonexistent token" [8050,8096]
+replace "ERC721: operator query for nonexistent token" by "ERC721: invalid token ID"
+
+New cluster:
+UPDATE from "ERC721: approve caller is not owner nor approved for all" to "ERC721: approve caller is not token owner or approved for all"
+------------
+===
+update-node
+---
+string: "ERC721: approve caller is not owner nor approved for all" [4304,4362]
+replace "ERC721: approve caller is not owner nor approved for all" by "ERC721: approve caller is not token owner or approved for all"
+
+New cluster:
+UPDATE from "ERC721: transfer caller is not owner nor approved" to "ERC721: caller is not token owner or approved"
+------------
+===
+update-node
+---
+string: "ERC721: transfer caller is not owner nor approved" [6052,6103]
+replace "ERC721: transfer caller is not owner nor approved" by "ERC721: caller is not token owner or approved"
+===
+update-node
+---
+string: "ERC721: transfer caller is not owner nor approved" [5431,5482]
+replace "ERC721: transfer caller is not owner nor approved" by "ERC721: caller is not token owner or approved"
+
+New cluster:
+===
+delete-node
+---
+identifier: ERC721Upgradeable [760,777]
+===
+------------
+===
+delete-node
+---
+identifier: ERC721Upgradeable [760,777]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [778,780]
+===
+------------
+===
+delete-node
+---
+is: is [778,780]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [2759,2775]
+===
+------------
+===
+delete-node
+---
+array_access [2759,2775]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3385,3401]
+    call_expression [3385,3401]
+        identifier: _exists [3385,3392]
+        call_argument [3393,3400]
+            identifier: tokenId [3393,3400]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3403,3452]
+    string_literal [3403,3452]
+        string: "ERC721Metadata: URI query for nonexistent token" [3403,3452]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4575,4591]
+    call_expression [4575,4591]
+        identifier: _exists [4575,4582]
+        call_argument [4583,4590]
+            identifier: tokenId [4583,4590]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4593,4639]
+    string_literal [4593,4639]
+        string: "ERC721: approved query for nonexistent token" [4593,4639]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10421,10431]
+    type_cast_expression [10421,10431]
+        primitive_type: address [10421,10428]
+        call_argument [10429,10430]
+            number_literal: 0 [10429,10430]
+
+New cluster:
+===
+delete-node
+---
+call_expression [10412,10441]
+===
+------------
+===
+delete-node
+---
+call_expression [10412,10441]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11354,11364]
+    type_cast_expression [11354,11364]
+        primitive_type: address [11354,11361]
+        call_argument [11362,11363]
+            number_literal: 0 [11362,11363]
+
+New cluster:
+===
+delete-node
+---
+function_definition [14207,14329]
+===
+------------
+===
+delete-node
+---
+function_definition [14207,14329]
+===
+===
+delete-node
+---
+function_body [14327,14329]
+===
+===
+delete-node
+---
+virtual: virtual [14319,14326]
+===
+===
+delete-node
+---
+function: function [14207,14215]
+===
+===
+delete-node
+---
+identifier: _beforeTokenTransfer [14216,14236]
+===
+===
+delete-node
+---
+visibility: internal [14310,14318]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [14701,14822]
+===
+------------
+===
+delete-node
+---
+visibility: internal [14803,14811]
+===
+===
+delete-node
+---
+identifier: _afterTokenTransfer [14710,14729]
+===
+===
+delete-node
+---
+function_definition [14701,14822]
+===
+===
+delete-node
+---
+virtual: virtual [14812,14819]
+===
+===
+delete-node
+---
+function_body [14820,14822]
+===
+===
+delete-node
+---
+function: function [14701,14709]
+===
+

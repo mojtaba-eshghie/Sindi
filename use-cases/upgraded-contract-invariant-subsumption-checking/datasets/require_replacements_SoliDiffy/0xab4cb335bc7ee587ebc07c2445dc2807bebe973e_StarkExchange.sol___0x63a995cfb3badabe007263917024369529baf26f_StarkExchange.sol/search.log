@@ -1,0 +1,5 @@
+results/differencing_results/0xab4cb335bc7ee587ebc07c2445dc2807bebe973e_StarkExchange.sol___0x63a995cfb3badabe007263917024369529baf26f_StarkExchange.sol.log:
+  1820  identifier: require [3735,3742]
+  1821: replace require by subContractIdx
+  1822  
+

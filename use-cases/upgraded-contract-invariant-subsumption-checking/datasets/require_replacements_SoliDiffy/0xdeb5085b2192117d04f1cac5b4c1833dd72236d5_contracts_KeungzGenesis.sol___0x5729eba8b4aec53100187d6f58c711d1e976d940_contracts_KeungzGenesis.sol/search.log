@@ -1,0 +1,5 @@
+results/differencing_results/0xdeb5085b2192117d04f1cac5b4c1833dd72236d5_contracts_KeungzGenesis.sol___0x5729eba8b4aec53100187d6f58c711d1e976d940_contracts_KeungzGenesis.sol.log:
+  1485  identifier: require [2904,2911]
+  1486: replace require by explicitOwnershipOf
+  1487  
+

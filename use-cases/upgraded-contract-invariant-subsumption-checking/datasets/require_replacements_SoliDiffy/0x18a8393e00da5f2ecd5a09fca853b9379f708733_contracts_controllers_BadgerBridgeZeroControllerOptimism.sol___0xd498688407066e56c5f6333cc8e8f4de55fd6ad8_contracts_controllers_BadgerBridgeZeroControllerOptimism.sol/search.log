@@ -1,0 +1,5 @@
+results/differencing_results/0x18a8393e00da5f2ecd5a09fca853b9379f708733_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol___0xd498688407066e56c5f6333cc8e8f4de55fd6ad8_contracts_controllers_BadgerBridgeZeroControllerOptimism.sol.log:
+  220  identifier: require [4637,4644]
+  221: replace require by success
+  222  
+

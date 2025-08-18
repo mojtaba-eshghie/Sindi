@@ -1,0 +1,5 @@
+results/differencing_results/0x1ab866251a3f63014a2a70a1563bdd015d0d3ada_contracts_D4AProtocolWithPermission.sol___0xeecbbb2fb558bcf2dfd6473b45f3bdbadbbddb91_contracts_D4AProtocolWithPermission.sol.log:
+  926  identifier: require [785,792]
+  927: replace require by Blacklisted
+  928  
+

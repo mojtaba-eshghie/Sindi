@@ -1,0 +1,1985 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [539,571]
+    error: error [539,544]
+    identifier: BAGC_It_Is_User_TokenId [545,568]
+to
+source_file [0,6396]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [572,606]
+    error: error [572,577]
+    identifier: BAGC_Not_Invitation_Owner [578,603]
+to
+source_file [0,6396]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [607,630]
+    error: error [607,612]
+    identifier: BAGC_Not_Owner [613,627]
+to
+source_file [0,6396]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [631,663]
+    error: error [631,636]
+    identifier: BAGC_Already_Registered [637,660]
+to
+source_file [0,6396]
+at 12
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [664,692]
+    error: error [664,669]
+    identifier: BAGC_Pool_Not_Exist [670,689]
+to
+source_file [0,6396]
+at 13
+
+New cluster:
+MOVE from contract_body [623,6395]
+------------
+===
+move-tree
+---
+function_definition [4862,4968]
+    function: function [4862,4870]
+    identifier: getPoolId [4871,4880]
+    parameter [4881,4896]
+        type_name: uint256 [4881,4888]
+        identifier: tokenId [4889,4896]
+    visibility: public [4898,4904]
+    state_mutability [4905,4909]
+        view: view [4905,4909]
+    return_type_definition [4910,4927]
+        returns: returns [4910,4917]
+        parameter [4919,4926]
+            type_name: uint256 [4919,4926]
+    function_body [4928,4968]
+        return_statement [4938,4962]
+            return: return [4938,4944]
+            array_access [4945,4961]
+                identifier: _locked [4945,4952]
+                identifier: tokenId [4953,4960]
+to
+contract_body [623,6395]
+at 12
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1374,1420]
+    identifier: Locked [1380,1386]
+    event_paramater [1387,1401]
+        type_name: address [1387,1394]
+        identifier: caller [1395,1401]
+    event_paramater [1403,1418]
+        type_name: uint256 [1403,1410]
+        identifier: tokenId [1411,1418]
+to
+contract_body [623,6395]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1478,1526]
+    identifier: Unlocked [1484,1492]
+    event_paramater [1493,1507]
+        type_name: address [1493,1500]
+        identifier: caller [1501,1507]
+    event_paramater [1509,1524]
+        type_name: uint256 [1509,1516]
+        identifier: tokenId [1517,1524]
+to
+contract_body [623,6395]
+at 4
+
+New cluster:
+===
+insert-node
+---
+function_definition [5296,5402]
+to
+contract_body [623,6395]
+at 12
+------------
+===
+insert-node
+---
+function: function [5296,5304]
+to
+function_definition [5296,5402]
+at 0
+===
+insert-node
+---
+identifier: getPoolId [5305,5314]
+to
+function_definition [5296,5402]
+at 1
+===
+insert-node
+---
+function_definition [5296,5402]
+to
+contract_body [623,6395]
+at 12
+===
+insert-node
+---
+visibility: public [5332,5338]
+to
+function_definition [5296,5402]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [6601,6922]
+    function: function [6601,6609]
+    identifier: changePool [6610,6620]
+    parameter [6621,6636]
+        type_name: uint256 [6621,6628]
+        identifier: tokenId [6629,6636]
+    parameter [6638,6652]
+        type_name: uint256 [6638,6645]
+        identifier: poolId [6646,6652]
+    visibility: public [6654,6660]
+    modifier_invocation [6661,6670]
+        identifier: onlyOwner [6661,6670]
+    function_body [6671,6922]
+        if_statement [6681,6797]
+            if: if [6681,6683]
+            binary_expression [6685,6727]
+                member_expression: _poolInfo[_poolId[tokenId]].currentNum [6685,6723]
+                comparison_operator: > [6724,6725]
+                number_literal: 0 [6726,6727]
+            block_statement [6729,6797]
+                expression_statement [6743,6787]
+                    augmented_assignment_expression [6743,6786]
+                        member_expression: _poolInfo[_poolId[tokenId]].currentNum [6743,6781]
+                        affectation_operator: -= [6782,6784]
+                        number_literal: 1 [6785,6786]
+        if_statement [6806,6881]
+            if: if [6806,6808]
+            binary_expression [6810,6821]
+                identifier: poolId [6810,6816]
+                comparison_operator: != [6817,6819]
+                number_literal: 0 [6820,6821]
+            block_statement [6823,6881]
+                expression_statement [6837,6871]
+                    augmented_assignment_expression [6837,6870]
+                        member_expression: _poolInfo[poolId].currentNum [6837,6865]
+                        affectation_operator: += [6866,6868]
+                        number_literal: 1 [6869,6870]
+        expression_statement [6890,6916]
+            assignment_expression [6890,6915]
+                array_access [6890,6906]
+                    identifier: _poolId [6890,6897]
+                    identifier: tokenId [6898,6905]
+                affectation_operator: = [6907,6908]
+                identifier: poolId [6909,6915]
+to
+contract_body [623,6395]
+at 15
+
+New cluster:
+===
+insert-node
+---
+function_definition [7014,7224]
+to
+contract_body [623,6395]
+at 16
+------------
+===
+insert-node
+---
+function_body [7052,7224]
+to
+function_definition [7014,7224]
+at 4
+===
+insert-node
+---
+function: function [7014,7022]
+to
+function_definition [7014,7224]
+at 0
+===
+insert-node
+---
+function_definition [7014,7224]
+to
+contract_body [623,6395]
+at 16
+===
+insert-node
+---
+identifier: Lock [7023,7027]
+to
+function_definition [7014,7224]
+at 1
+===
+insert-node
+---
+visibility: public [7045,7051]
+to
+function_definition [7014,7224]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [7411,7542]
+to
+contract_body [623,6395]
+at 18
+------------
+===
+insert-node
+---
+identifier: Unlock [7420,7426]
+to
+function_definition [7411,7542]
+at 1
+===
+insert-node
+---
+number_literal: 0 [7490,7491]
+to
+assignment_expression [7471,7491]
+at 2
+===
+insert-node
+---
+function_body [7461,7542]
+to
+function_definition [7411,7542]
+at 5
+===
+insert-node
+---
+assignment_expression [7471,7491]
+to
+expression_statement [7471,7492]
+at 0
+===
+insert-node
+---
+function: function [7411,7419]
+to
+function_definition [7411,7542]
+at 0
+===
+insert-node
+---
+visibility: public [7444,7450]
+to
+function_definition [7411,7542]
+at 3
+===
+insert-node
+---
+expression_statement [7471,7492]
+to
+function_body [7461,7542]
+at 0
+===
+insert-node
+---
+affectation_operator: = [7488,7489]
+to
+assignment_expression [7471,7491]
+at 1
+===
+insert-node
+---
+function_definition [7411,7542]
+to
+contract_body [623,6395]
+at 18
+
+New cluster:
+UPDATE from Locked to Staked
+------------
+===
+update-node
+---
+identifier: Locked [5425,5431]
+replace Locked by Staked
+===
+update-node
+---
+identifier: Locked [1087,1093]
+replace Locked by Staked
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [1249,1263]
+    type_name: address [1249,1256]
+    identifier: caller [1257,1263]
+to
+event_definition [1081,1127]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [1298,1316]
+    type_name: uint256 [1298,1305]
+    identifier: currentNum [1306,1316]
+to
+event_definition [1081,1127]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [5315,5330]
+    type_name: uint256 [5315,5322]
+    identifier: tokenId [5323,5330]
+to
+function_definition [5296,5402]
+at 2
+
+New cluster:
+MOVE from function_definition [5296,5402]
+------------
+===
+move-tree
+---
+return_type_definition [5026,5043]
+    returns: returns [5026,5033]
+    parameter [5035,5042]
+        type_name: uint256 [5035,5042]
+to
+function_definition [5296,5402]
+at 5
+===
+move-tree
+---
+state_mutability [5021,5025]
+    view: view [5021,5025]
+to
+function_definition [5296,5402]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [5362,5402]
+    return_statement [5372,5396]
+        return: return [5372,5378]
+        array_access [5379,5395]
+            identifier: _poolId [5379,5386]
+            identifier: tokenId [5387,5394]
+to
+function_definition [5296,5402]
+at 6
+
+New cluster:
+UPDATE from getPoolEndTime to getPoolInfo
+------------
+===
+update-node
+---
+identifier: getPoolEndTime [4983,4997]
+replace getPoolEndTime by getPoolInfo
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [5522,5526]
+    view: view [5522,5526]
+to
+function_definition [4974,5084]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [5527,5561]
+    returns: returns [5527,5534]
+    parameter [5536,5543]
+        type_name: uint256 [5536,5543]
+    parameter [5545,5560]
+        type_name: PoolInfo [5545,5553]
+        memory: memory [5554,5560]
+to
+function_definition [4974,5084]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [5738,5767]
+    type_name: bytes [5738,5743]
+    memory: memory [5744,5750]
+    identifier: relayerSignature [5751,5767]
+to
+function_definition [5145,5455]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7028,7043]
+    type_name: uint256 [7028,7035]
+    identifier: tokenId [7036,7043]
+to
+function_definition [7014,7224]
+at 2
+
+New cluster:
+UPDATE from getPoolId to isLock
+------------
+===
+update-node
+---
+identifier: getPoolId [4871,4880]
+replace getPoolId by isLock
+
+New cluster:
+UPDATE from public to external
+------------
+===
+update-node
+---
+visibility: public [4898,4904]
+replace public by external
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7427,7442]
+    type_name: uint256 [7427,7434]
+    identifier: tokenId [7435,7442]
+to
+function_definition [7411,7542]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [7451,7460]
+    identifier: onlyOwner [7451,7460]
+to
+function_definition [7411,7542]
+at 4
+
+New cluster:
+===
+insert-node
+---
+if_statement [2576,2680]
+to
+function_body [2167,2350]
+at 0
+------------
+===
+insert-node
+---
+if_statement [2576,2680]
+to
+function_body [2167,2350]
+at 0
+===
+insert-node
+---
+if: if [2576,2578]
+to
+if_statement [2576,2680]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [3094,3198]
+to
+function_body [2660,2788]
+at 0
+------------
+===
+insert-node
+---
+if: if [3094,3096]
+to
+if_statement [3094,3198]
+at 0
+===
+insert-node
+---
+if_statement [3094,3198]
+to
+function_body [2660,2788]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [4239,4348]
+to
+function_body [3485,4279]
+at 3
+------------
+===
+insert-node
+---
+revert: revert [4303,4309]
+to
+revert_statement [4303,4338]
+at 0
+===
+insert-node
+---
+revert_arguments [4335,4337]
+to
+revert_statement [4303,4338]
+at 2
+===
+insert-node
+---
+block_statement [4289,4348]
+to
+if_statement [4239,4348]
+at 2
+===
+insert-node
+---
+revert_statement [4303,4338]
+to
+block_statement [4289,4348]
+at 0
+===
+insert-node
+---
+if_statement [4239,4348]
+to
+function_body [3485,4279]
+at 3
+===
+insert-node
+---
+if: if [4239,4241]
+to
+if_statement [4239,4348]
+at 0
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [5786,5831]
+to
+function_body [5206,5455]
+at 0
+------------
+===
+insert-node
+---
+variable_declaration_statement [5786,5831]
+to
+function_body [5206,5455]
+at 0
+===
+insert-node
+---
+variable_declaration [5786,5810]
+to
+variable_declaration_statement [5786,5831]
+at 0
+===
+insert-node
+---
+memory: memory [5795,5801]
+to
+variable_declaration [5786,5810]
+at 1
+===
+insert-node
+---
+affectation_operator: = [5811,5812]
+to
+variable_declaration_statement [5786,5831]
+at 1
+===
+insert-node
+---
+type_name: PoolInfo [5786,5794]
+to
+variable_declaration [5786,5810]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [5841,5942]
+to
+function_body [5206,5455]
+at 1
+------------
+===
+insert-node
+---
+block_statement [5888,5942]
+to
+if_statement [5841,5942]
+at 2
+===
+insert-node
+---
+revert_statement [5902,5932]
+to
+block_statement [5888,5942]
+at 0
+===
+insert-node
+---
+parenthesized_expression [5908,5931]
+to
+revert_statement [5902,5932]
+at 1
+===
+insert-node
+---
+if: if [5841,5843]
+to
+if_statement [5841,5942]
+at 0
+===
+insert-node
+---
+revert: revert [5902,5908]
+to
+revert_statement [5902,5932]
+at 0
+===
+insert-node
+---
+if_statement [5841,5942]
+to
+function_body [5206,5455]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [5952,6031]
+to
+function_body [5206,5455]
+at 2
+------------
+===
+insert-node
+---
+revert: revert [5992,5998]
+to
+revert_statement [5992,6021]
+at 0
+===
+insert-node
+---
+revert_statement [5992,6021]
+to
+block_statement [5978,6031]
+at 0
+===
+insert-node
+---
+block_statement [5978,6031]
+to
+if_statement [5952,6031]
+at 2
+===
+insert-node
+---
+if_statement [5952,6031]
+to
+function_body [5206,5455]
+at 2
+===
+insert-node
+---
+if: if [5952,5954]
+to
+if_statement [5952,6031]
+at 0
+===
+insert-node
+---
+revert_arguments [6018,6020]
+to
+revert_statement [5992,6021]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [6040,6148]
+to
+function_body [5206,5455]
+at 3
+------------
+===
+insert-node
+---
+if_statement [6040,6148]
+to
+function_body [5206,5455]
+at 3
+===
+insert-node
+---
+if: if [6040,6042]
+to
+if_statement [6040,6148]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [6158,6242]
+to
+function_body [5206,5455]
+at 4
+------------
+===
+insert-node
+---
+if_statement [6158,6242]
+to
+function_body [5206,5455]
+at 4
+===
+insert-node
+---
+if: if [6158,6160]
+to
+if_statement [6158,6242]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [6252,6400]
+    variable_declaration_tuple [6252,6289]
+        variable_declaration [6253,6265]
+            type_name: bool [6253,6257]
+            identifier: success [6258,6265]
+        variable_declaration [6267,6288]
+            type_name: string [6267,6273]
+            memory: memory [6274,6280]
+            identifier: message [6281,6288]
+    affectation_operator: = [6290,6291]
+    call_expression [6292,6399]
+        identifier: verifyStakingPoolSignature [6292,6318]
+        call_argument [6332,6339]
+            identifier: tokenId [6332,6339]
+        call_argument [6353,6359]
+            identifier: poolId [6353,6359]
+        call_argument [6373,6389]
+            identifier: relayerSignature [6373,6389]
+to
+function_body [5206,5455]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [6409,6435]
+    call_expression [6409,6434]
+        identifier: require [6409,6416]
+        call_argument [6417,6424]
+            identifier: success [6417,6424]
+        call_argument [6426,6433]
+            identifier: message [6426,6433]
+to
+function_body [5206,5455]
+at 6
+
+New cluster:
+===
+insert-node
+---
+expression_statement [6445,6471]
+to
+function_body [5206,5455]
+at 7
+------------
+===
+insert-node
+---
+affectation_operator: = [6462,6463]
+to
+assignment_expression [6445,6470]
+at 1
+===
+insert-node
+---
+expression_statement [6445,6471]
+to
+function_body [5206,5455]
+at 7
+===
+insert-node
+---
+assignment_expression [6445,6470]
+to
+expression_statement [6445,6471]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [6480,6514]
+    augmented_assignment_expression [6480,6513]
+        member_expression: _poolInfo[poolId].currentNum [6480,6508]
+        affectation_operator: += [6509,6511]
+        number_literal: 1 [6512,6513]
+to
+function_body [5206,5455]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [7062,7146]
+    if: if [7062,7064]
+    binary_expression [7066,7096]
+        call_expression [7066,7082]
+            identifier: ownerOf [7066,7073]
+            call_argument [7074,7081]
+                identifier: tokenId [7074,7081]
+        comparison_operator: != [7083,7085]
+        member_expression: msg.sender [7086,7096]
+    block_statement [7098,7146]
+        revert_statement [7112,7136]
+            revert: revert [7112,7118]
+            identifier: BAGC_Not_Owner [7119,7133]
+            revert_arguments [7133,7135]
+to
+function_body [7052,7224]
+at 0
+
+New cluster:
+MOVE from function_body [7052,7224]
+------------
+===
+move-tree
+---
+expression_statement [5385,5411]
+    assignment_expression [5385,5410]
+        array_access [5385,5401]
+            identifier: _locked [5385,5392]
+            identifier: tokenId [5393,5400]
+        affectation_operator: = [5402,5403]
+        identifier: poolId [5404,5410]
+to
+function_body [7052,7224]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [7185,7218]
+    identifier: Locked [7190,7196]
+    call_argument [7197,7207]
+        member_expression: msg.sender [7197,7207]
+    call_argument [7209,7216]
+        identifier: tokenId [7209,7216]
+to
+function_body [7052,7224]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [7501,7536]
+    identifier: Unlocked [7506,7514]
+    call_argument [7515,7525]
+        member_expression: msg.sender [7515,7525]
+    call_argument [7527,7534]
+        identifier: tokenId [7527,7534]
+to
+function_body [7461,7542]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [7808,7878]
+to
+function_body [5711,5863]
+at 0
+------------
+===
+insert-node
+---
+comparison_operator: < [7843,7844]
+to
+binary_expression [7816,7860]
+at 1
+===
+insert-node
+---
+binary_expression [7816,7860]
+to
+call_argument [7816,7860]
+at 0
+===
+insert-node
+---
+expression_statement [7808,7878]
+to
+function_body [5711,5863]
+at 0
+===
+insert-node
+---
+call_expression [7808,7877]
+to
+expression_statement [7808,7878]
+at 0
+===
+insert-node
+---
+identifier: require [7808,7815]
+to
+call_expression [7808,7877]
+at 0
+===
+insert-node
+---
+call_argument [7816,7860]
+to
+call_expression [7808,7877]
+at 1
+
+New cluster:
+MOVE from if_statement [2576,2680]
+------------
+===
+move-tree
+---
+call_expression [2678,2720]
+    member_expression: !IBAGC(address(this)).isUserToken [2678,2711]
+    call_argument [2712,2719]
+        identifier: tokenId [2712,2719]
+to
+if_statement [2576,2680]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [2623,2680]
+    revert_statement [2637,2670]
+        revert: revert [2637,2643]
+        identifier: BAGC_It_Is_User_TokenId [2644,2667]
+        revert_arguments [2667,2669]
+to
+if_statement [2576,2680]
+at 2
+
+New cluster:
+MOVE from if_statement [3094,3198]
+------------
+===
+move-tree
+---
+call_expression [2185,2227]
+    member_expression: !IBAGC(address(this)).isUserToken [2185,2218]
+    call_argument [2219,2226]
+        identifier: tokenId [2219,2226]
+to
+if_statement [3094,3198]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [3141,3198]
+    revert_statement [3155,3188]
+        revert: revert [3155,3161]
+        identifier: BAGC_It_Is_User_TokenId [3162,3185]
+        revert_arguments [3185,3187]
+to
+if_statement [3094,3198]
+at 2
+
+New cluster:
+MOVE from if_statement [4239,4348]
+------------
+===
+move-tree
+---
+binary_expression [3759,3803]
+    call_expression [3759,3789]
+        member_expression: nft.ownerOf [3759,3770]
+        call_argument [3771,3788]
+            identifier: invitationTokenId [3771,3788]
+    comparison_operator: == [3790,3792]
+    member_expression: msg.sender [3793,3803]
+to
+if_statement [4239,4348]
+at 1
+
+New cluster:
+===
+insert-node
+---
+augmented_assignment_expression [4471,4499]
+to
+expression_statement [4054,4110]
+at 0
+------------
+===
+insert-node
+---
+augmented_assignment_expression [4471,4499]
+to
+expression_statement [4054,4110]
+at 0
+
+New cluster:
+===
+insert-node
+---
+tuple_expression [5579,5616]
+to
+return_statement [5054,5078]
+at 1
+------------
+===
+insert-node
+---
+tuple_expression [5579,5616]
+to
+return_statement [5054,5078]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [5813,5830]
+    identifier: _poolInfo [5813,5822]
+    identifier: poolId [5823,5829]
+to
+variable_declaration_statement [5786,5831]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [5845,5886]
+    binary_expression [5845,5868]
+        member_expression: poolInfo.currentNum [5845,5864]
+        arithmetic_operator: + [5865,5866]
+        number_literal: 1 [5867,5868]
+    comparison_operator: > [5869,5870]
+    member_expression: poolInfo.maxNum [5871,5886]
+to
+if_statement [5841,5942]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [5956,5976]
+    member_expression: poolInfo.status [5956,5971]
+    comparison_operator: == [5972,5974]
+    number_literal: 0 [5975,5976]
+to
+if_statement [5952,6031]
+at 1
+
+New cluster:
+MOVE from if_statement [6040,6148]
+------------
+===
+move-tree
+---
+binary_expression [5292,5336]
+    array_access [5292,5318]
+        identifier: _endTime [5292,5300]
+        array_access [5301,5317]
+            identifier: _locked [5301,5308]
+            identifier: tokenId [5309,5316]
+    comparison_operator: < [5319,5320]
+    member_expression: block.timestamp [5321,5336]
+to
+if_statement [6040,6148]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [6091,6148]
+    revert_statement [6105,6138]
+        revert: revert [6105,6111]
+        identifier: BAGC_Already_Registered [6112,6135]
+        revert_arguments [6135,6137]
+to
+if_statement [6040,6148]
+at 2
+
+New cluster:
+MOVE from if_statement [6158,6242]
+------------
+===
+move-tree
+---
+binary_expression [5224,5254]
+    call_expression [5224,5240]
+        identifier: ownerOf [5224,5231]
+        call_argument [5232,5239]
+            identifier: tokenId [5232,5239]
+    comparison_operator: == [5241,5243]
+    member_expression: msg.sender [5244,5254]
+to
+if_statement [6158,6242]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [6194,6242]
+    revert_statement [6208,6232]
+        revert: revert [6208,6214]
+        identifier: BAGC_Not_Owner [6215,6229]
+        revert_arguments [6229,6231]
+to
+if_statement [6158,6242]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6535,6545]
+    member_expression: msg.sender [6535,6545]
+to
+emit_statement [5420,5449]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6564,6587]
+    binary_expression [6564,6587]
+        member_expression: poolInfo.currentNum [6564,6583]
+        arithmetic_operator: + [6584,6585]
+        number_literal: 1 [6586,6587]
+to
+emit_statement [5420,5449]
+at 4
+
+New cluster:
+UPDATE from !IBAGC(address(this)).isUserToken to IBAGC(address(this)).isUserToken
+------------
+===
+update-node
+---
+member_expression: !IBAGC(address(this)).isUserToken [2992,3025]
+replace !IBAGC(address(this)).isUserToken by IBAGC(address(this)).isUserToken
+===
+update-node
+---
+member_expression: !IBAGC(address(this)).isUserToken [2678,2711]
+replace !IBAGC(address(this)).isUserToken by IBAGC(address(this)).isUserToken
+===
+update-node
+---
+member_expression: !IBAGC(address(this)).isUserToken [2185,2218]
+replace !IBAGC(address(this)).isUserToken by IBAGC(address(this)).isUserToken
+
+New cluster:
+===
+insert-node
+---
+if_statement [3435,3555]
+to
+block_statement [2970,3125]
+at 0
+------------
+===
+insert-node
+---
+if_statement [3435,3555]
+to
+block_statement [2970,3125]
+at 0
+===
+insert-node
+---
+if: if [3435,3437]
+to
+if_statement [3435,3555]
+at 0
+
+New cluster:
+UPDATE from verifySignature to verifyMintSignature
+------------
+===
+update-node
+---
+identifier: verifySignature [3535,3550]
+replace verifySignature by verifyMintSignature
+
+New cluster:
+UPDATE from == to !=
+------------
+===
+update-node
+---
+comparison_operator: == [3790,3792]
+replace == by !=
+===
+update-node
+---
+comparison_operator: == [5241,5243]
+replace == by !=
+
+New cluster:
+MOVE from augmented_assignment_expression [4471,4499]
+------------
+===
+move-tree
+---
+identifier: _numUserAvailableTokens [4054,4077]
+to
+augmented_assignment_expression [4471,4499]
+at 0
+===
+move-tree
+---
+affectation_operator: = [4078,4079]
+to
+augmented_assignment_expression [4471,4499]
+at 1
+
+New cluster:
+UPDATE from = to -=
+------------
+===
+update-node
+---
+affectation_operator: = [4078,4079]
+replace = by -=
+
+New cluster:
+MOVE from augmented_assignment_expression [4471,4499]
+------------
+===
+move-tree
+---
+number_literal: 1 [4108,4109]
+to
+augmented_assignment_expression [4471,4499]
+at 2
+
+New cluster:
+MOVE from tuple_expression [5579,5616]
+------------
+===
+move-tree
+---
+array_access [5061,5077]
+    identifier: _endTime [5061,5069]
+    identifier: poolId [5070,5076]
+to
+tuple_expression [5579,5616]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [5598,5615]
+    identifier: _poolInfo [5598,5607]
+    identifier: poolId [5608,5614]
+to
+tuple_expression [5579,5616]
+at 1
+
+New cluster:
+UPDATE from require to poolInfo
+------------
+===
+update-node
+---
+identifier: require [5216,5223]
+replace require by poolInfo
+
+New cluster:
+MOVE from variable_declaration [5786,5810]
+------------
+===
+move-tree
+---
+identifier: require [5216,5223]
+to
+variable_declaration [5786,5810]
+at 2
+
+New cluster:
+UPDATE from < to >=
+------------
+===
+update-node
+---
+comparison_operator: < [5319,5320]
+replace < by >=
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [6445,6461]
+    identifier: _poolId [6445,6452]
+    identifier: tokenId [6453,6460]
+to
+assignment_expression [6445,6470]
+at 0
+
+New cluster:
+MOVE from assignment_expression [6445,6470]
+------------
+===
+move-tree
+---
+identifier: poolId [5404,5410]
+to
+assignment_expression [6445,6470]
+at 2
+
+New cluster:
+===
+insert-node
+---
+number_literal: 1 [7174,7175]
+to
+assignment_expression [5385,5410]
+at 2
+------------
+===
+insert-node
+---
+number_literal: 1 [7174,7175]
+to
+assignment_expression [5385,5410]
+at 2
+
+New cluster:
+MOVE from assignment_expression [7471,7491]
+------------
+===
+move-tree
+---
+array_access [5301,5317]
+    identifier: _locked [5301,5308]
+    identifier: tokenId [5309,5316]
+to
+assignment_expression [7471,7491]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7862,7876]
+    string_literal [7862,7876]
+        string: "BAGC: staked" [7862,7876]
+to
+call_expression [7808,7877]
+at 2
+
+New cluster:
+MOVE from if_statement [3435,3555]
+------------
+===
+move-tree
+---
+call_expression [2992,3042]
+    member_expression: !IBAGC(address(this)).isUserToken [2992,3025]
+    call_argument [3026,3041]
+        array_access [3026,3041]
+            identifier: tokenIdArray [3026,3038]
+            identifier: i [3039,3040]
+to
+if_statement [3435,3555]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [3490,3555]
+    revert_statement [3508,3541]
+        revert: revert [3508,3514]
+        identifier: BAGC_It_Is_User_TokenId [3515,3538]
+        revert_arguments [3538,3540]
+to
+if_statement [3435,3555]
+at 2
+
+New cluster:
+UPDATE from updatedNumAvailableTokens to BAGC_Not_Invitation_Owner
+------------
+===
+update-node
+---
+identifier: updatedNumAvailableTokens [3853,3878]
+replace updatedNumAvailableTokens by BAGC_Not_Invitation_Owner
+
+New cluster:
+MOVE from revert_statement [4303,4338]
+------------
+===
+move-tree
+---
+identifier: updatedNumAvailableTokens [3853,3878]
+to
+revert_statement [4303,4338]
+at 1
+
+New cluster:
+UPDATE from require to BAGC_Pool_Not_Exist
+------------
+===
+update-node
+---
+identifier: require [5284,5291]
+replace require by BAGC_Pool_Not_Exist
+
+New cluster:
+MOVE from revert_statement [5992,6021]
+------------
+===
+move-tree
+---
+identifier: require [5284,5291]
+to
+revert_statement [5992,6021]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [6053,6069]
+    identifier: _poolId [6053,6060]
+    identifier: tokenId [6061,6068]
+to
+array_access [5292,5318]
+at 1
+
+New cluster:
+MOVE from parenthesized_expression [5908,5931]
+------------
+===
+move-tree
+---
+string_literal [5256,5273]
+    string: "BAGC: not owner" [5256,5273]
+to
+parenthesized_expression [5908,5931]
+at 0
+
+New cluster:
+MOVE from binary_expression [7816,7860]
+------------
+===
+move-tree
+---
+array_access [5729,5755]
+    identifier: _endTime [5729,5737]
+    array_access [5738,5754]
+        identifier: _locked [5738,5745]
+        identifier: tokenId [5746,5753]
+to
+binary_expression [7816,7860]
+at 0
+===
+move-tree
+---
+member_expression: block.timestamp [5758,5773]
+to
+binary_expression [7816,7860]
+at 2
+
+New cluster:
+MOVE from binary_expression [5729,5773]
+------------
+===
+move-tree
+---
+array_access [5738,5754]
+    identifier: _locked [5738,5745]
+    identifier: tokenId [5746,5753]
+to
+binary_expression [5729,5773]
+at 0
+
+New cluster:
+UPDATE from < to ==
+------------
+===
+update-node
+---
+comparison_operator: < [5756,5757]
+replace < by ==
+
+New cluster:
+===
+insert-node
+---
+number_literal: 0 [7915,7916]
+to
+binary_expression [5729,5773]
+at 2
+------------
+===
+insert-node
+---
+number_literal: 0 [7915,7916]
+to
+binary_expression [5729,5773]
+at 2
+
+New cluster:
+UPDATE from "BAGC: not owner" to "BAGC : Pool is full"
+------------
+===
+update-node
+---
+string: "BAGC: not owner" [5256,5273]
+replace "BAGC: not owner" by "BAGC : Pool is full"
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [7825,7841]
+    identifier: _poolId [7825,7832]
+    identifier: tokenId [7833,7840]
+to
+array_access [5729,5755]
+at 1
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2177,2256]
+===
+------------
+===
+delete-node
+---
+expression_statement [2177,2256]
+===
+===
+delete-node
+---
+call_expression [2177,2255]
+===
+===
+delete-node
+---
+identifier: require [2177,2184]
+===
+===
+delete-node
+---
+call_argument [2185,2227]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2229,2254]
+    string_literal [2229,2254]
+        string: "BAGC: it's user tokenId" [2229,2254]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2670,2749]
+===
+------------
+===
+delete-node
+---
+identifier: require [2670,2677]
+===
+===
+delete-node
+---
+call_expression [2670,2748]
+===
+===
+delete-node
+---
+call_argument [2678,2720]
+===
+===
+delete-node
+---
+expression_statement [2670,2749]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2722,2747]
+    string_literal [2722,2747]
+        string: "BAGC: it's user tokenId" [2722,2747]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2984,3071]
+===
+------------
+===
+delete-node
+---
+call_expression [2984,3070]
+===
+===
+delete-node
+---
+identifier: require [2984,2991]
+===
+===
+delete-node
+---
+call_argument [2992,3042]
+===
+===
+delete-node
+---
+expression_statement [2984,3071]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3044,3069]
+    string_literal [3044,3069]
+        string: "BAGC: it's user tokenId" [3044,3069]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3751,3835]
+===
+------------
+===
+delete-node
+---
+identifier: require [3751,3758]
+===
+===
+delete-node
+---
+expression_statement [3751,3835]
+===
+===
+delete-node
+---
+call_argument [3759,3803]
+===
+===
+delete-node
+---
+call_expression [3751,3834]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3805,3833]
+    string_literal [3805,3833]
+        string: "BAGC: not invitation owner" [3805,3833]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [3845,3905]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [3845,3905]
+===
+===
+delete-node
+---
+affectation_operator: = [3879,3880]
+===
+===
+delete-node
+---
+identifier: _numUserAvailableTokens [3881,3904]
+===
+===
+delete-node
+---
+variable_declaration [3845,3878]
+===
+===
+delete-node
+---
+type_name: uint256 [3845,3852]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3976,4001]
+    identifier: updatedNumAvailableTokens [3976,4001]
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [4054,4109]
+===
+------------
+===
+delete-node
+---
+arithmetic_operator: - [4106,4107]
+===
+===
+delete-node
+---
+binary_expression [4080,4109]
+===
+===
+delete-node
+---
+assignment_expression [4054,4109]
+===
+===
+delete-node
+---
+identifier: updatedNumAvailableTokens [4080,4105]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [5216,5275]
+===
+------------
+===
+delete-node
+---
+expression_statement [5216,5275]
+===
+===
+delete-node
+---
+call_expression [5216,5274]
+===
+===
+delete-node
+---
+call_argument [5224,5254]
+===
+===
+delete-node
+---
+call_argument [5256,5273]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [5284,5376]
+===
+------------
+===
+delete-node
+---
+call_expression [5284,5375]
+===
+===
+delete-node
+---
+expression_statement [5284,5376]
+===
+===
+delete-node
+---
+call_argument [5292,5336]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5338,5374]
+    string_literal [5338,5374]
+        string: "BAGC: already registered in a pool" [5338,5374]
+

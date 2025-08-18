@@ -1,0 +1,410 @@
+New cluster:
+===
+insert-node
+---
+identifier: BabylonCore [617,628]
+to
+contract_declaration [608,16004]
+at 0
+------------
+===
+insert-node
+---
+identifier: BabylonCore [617,628]
+to
+contract_declaration [608,16004]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [629,631]
+to
+contract_declaration [608,16004]
+at 1
+------------
+===
+insert-node
+---
+is: is [629,631]
+to
+contract_declaration [608,16004]
+at 1
+
+New cluster:
+MOVE from function_body [8166,9323]
+------------
+===
+move-tree
+---
+variable_declaration_statement [8523,8567]
+    variable_declaration [8523,8543]
+        type_name: uint256 [8523,8530]
+        identifier: totalTickets [8531,8543]
+    affectation_operator: = [8544,8545]
+    member_expression: listing.totalTickets [8546,8566]
+to
+function_body [8166,9323]
+at 1
+===
+move-tree
+---
+expression_statement [8973,9022]
+    assignment_expression [8973,9021]
+        member_expression: restrictions.reserved [8973,8994]
+        affectation_operator: = [8995,8996]
+        member_expression: newRestrictions.reserved [8997,9021]
+to
+block_statement [9001,9064]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [8645,8699]
+    variable_declaration [8645,8665]
+        type_name: uint256 [8645,8652]
+        identifier: reserveFloor [8653,8665]
+    affectation_operator: = [8666,8667]
+    member_expression: restrictions.mintedFromReserve [8668,8698]
+to
+function_body [8166,9323]
+at 7
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [8708,8806]
+to
+function_body [8166,9323]
+at 8
+------------
+===
+insert-node
+---
+variable_declaration_statement [8708,8806]
+to
+function_body [8166,9323]
+at 8
+===
+insert-node
+---
+variable_declaration [8708,8730]
+to
+variable_declaration_statement [8708,8806]
+at 0
+===
+insert-node
+---
+affectation_operator: = [8731,8732]
+to
+variable_declaration_statement [8708,8806]
+at 1
+===
+insert-node
+---
+type_name: uint256 [8708,8715]
+to
+variable_declaration [8708,8730]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [8816,9064]
+to
+function_body [8166,9323]
+at 9
+------------
+===
+insert-node
+---
+block_statement [9001,9064]
+to
+if_statement [8816,9064]
+at 4
+===
+insert-node
+---
+else: else [8996,9000]
+to
+if_statement [8816,9064]
+at 3
+===
+insert-node
+---
+if_statement [8816,9064]
+to
+function_body [8166,9323]
+at 9
+===
+insert-node
+---
+if: if [8816,8818]
+to
+if_statement [8816,9064]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [8708,8806]
+------------
+===
+move-tree
+---
+parenthesized_expression [8761,8833]
+    binary_expression [8762,8832]
+        binary_expression [8762,8799]
+            identifier: totalTickets [8762,8774]
+            arithmetic_operator: - [8775,8776]
+            member_expression: listing.currentTickets [8777,8799]
+        arithmetic_operator: + [8800,8801]
+        member_expression: restrictions.mintedFromReserve [8802,8832]
+to
+variable_declaration_statement [8708,8806]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [8820,8862]
+    member_expression: newRestrictions.reserved [8820,8844]
+    comparison_operator: <= [8845,8847]
+    identifier: reserveCeiling [8848,8862]
+to
+if_statement [8816,9064]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [8864,8995]
+    expression_statement [8878,8985]
+        assignment_expression [8878,8984]
+            member_expression: restrictions.reserved [8878,8899]
+            affectation_operator: = [8900,8901]
+            ternary_expression [8902,8984]
+                binary_expression [8902,8942]
+                    member_expression: newRestrictions.reserved [8902,8926]
+                    comparison_operator: <= [8927,8929]
+                    identifier: reserveFloor [8930,8942]
+                ?: ? [8943,8944]
+                identifier: reserveFloor [8945,8957]
+                :: : [8958,8959]
+                member_expression: newRestrictions.reserved [8960,8984]
+to
+if_statement [8816,9064]
+at 2
+
+New cluster:
+UPDATE from require to reserveCeiling
+------------
+===
+update-node
+---
+identifier: require [8577,8584]
+replace require by reserveCeiling
+
+New cluster:
+MOVE from variable_declaration [8708,8730]
+------------
+===
+move-tree
+---
+identifier: require [8577,8584]
+to
+variable_declaration [8708,8730]
+at 1
+
+New cluster:
+===
+insert-node
+---
+ternary_expression [9103,9207]
+to
+assignment_expression [9031,9089]
+at 2
+------------
+===
+insert-node
+---
+:: : [9176,9177]
+to
+ternary_expression [9103,9207]
+at 3
+===
+insert-node
+---
+identifier: totalTickets [9163,9175]
+to
+ternary_expression [9103,9207]
+at 2
+===
+insert-node
+---
+member_expression: newRestrictions.maxPerAddress [9178,9207]
+to
+ternary_expression [9103,9207]
+at 4
+===
+insert-node
+---
+identifier: totalTickets [9136,9148]
+to
+binary_expression [9103,9148]
+at 2
+===
+insert-node
+---
+binary_expression [9103,9148]
+to
+ternary_expression [9103,9207]
+at 0
+===
+insert-node
+---
+ternary_expression [9103,9207]
+to
+assignment_expression [9031,9089]
+at 2
+===
+insert-node
+---
+?: ? [9149,9150]
+to
+ternary_expression [9103,9207]
+at 1
+===
+insert-node
+---
+comparison_operator: >= [9133,9135]
+to
+binary_expression [9103,9148]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: reserveCeiling [9039,9053]
+to
+assignment_expression [8973,9021]
+at 2
+------------
+===
+insert-node
+---
+identifier: reserveCeiling [9039,9053]
+to
+assignment_expression [8973,9021]
+at 2
+
+New cluster:
+MOVE from binary_expression [9103,9148]
+------------
+===
+move-tree
+---
+member_expression: newRestrictions.maxPerAddress [9060,9089]
+to
+binary_expression [9103,9148]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: BabylonCore [617,628]
+===
+------------
+===
+delete-node
+---
+identifier: BabylonCore [617,628]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [629,631]
+===
+------------
+===
+delete-node
+---
+is: is [629,631]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8577,8895]
+===
+------------
+===
+delete-node
+---
+binary_expression [8598,8833]
+===
+===
+delete-node
+---
+member_expression: newRestrictions.maxPerAddress <= totalTickets &&             newRestrictions.reserved >= restrictions.mintedFromReserve &&             newRestrictions.reserved [8598,8757]
+===
+===
+delete-node
+---
+expression_statement [8577,8895]
+===
+===
+delete-node
+---
+call_expression [8577,8894]
+===
+===
+delete-node
+---
+call_argument [8598,8833]
+===
+===
+delete-node
+---
+comparison_operator: <= [8758,8760]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8847,8884]
+    string_literal [8847,8884]
+        string: "BabylonCore: Incorrect restrictions" [8847,8884]
+
+New cluster:
+===
+delete-node
+---
+member_expression: newRestrictions.reserved [8997,9021]
+===
+------------
+===
+delete-node
+---
+member_expression: newRestrictions.reserved [8997,9021]
+===
+

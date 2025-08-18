@@ -1,0 +1,5 @@
+results/differencing_results/0x493a1d529b7ee59a395b3c8d1cc8b667ea5db185_contracts_BRLCTokenBridgeable.sol___0x366ab0376ff3712bf00bd4c2eff8097738cca82e_contracts_BRLCTokenBridgeable.sol.log:
+  233  identifier: require [3256,3263]
+  234: replace require by _setBridge
+  235  
+

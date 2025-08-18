@@ -1,0 +1,380 @@
+New cluster:
+===
+insert-node
+---
+identifier: ApeMax_Production [398,415]
+to
+contract_declaration [389,23300]
+at 0
+------------
+===
+insert-node
+---
+identifier: ApeMax_Production [398,415]
+to
+contract_declaration [389,23300]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [416,418]
+to
+contract_declaration [389,23300]
+at 1
+------------
+===
+insert-node
+---
+is: is [416,418]
+to
+contract_declaration [389,23300]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [3899,3951]
+    variable_declaration [3899,3921]
+        type_name: uint256 [3899,3906]
+        identifier: sender_balance [3907,3921]
+    affectation_operator: = [3922,3923]
+    call_expression [3924,3950]
+        member_expression: usdt.balanceOf [3924,3938]
+        call_argument [3939,3949]
+            member_expression: msg.sender [3939,3949]
+to
+block_statement [3812,4016]
+at 1
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [3964,4026]
+to
+block_statement [3812,4016]
+at 2
+------------
+===
+insert-node
+---
+affectation_operator: = [3982,3983]
+to
+variable_declaration_statement [3964,4026]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [3964,4026]
+to
+block_statement [3812,4016]
+at 2
+===
+insert-node
+---
+type_name: uint256 [3964,3971]
+to
+variable_declaration [3964,3981]
+at 0
+===
+insert-node
+---
+variable_declaration [3964,3981]
+to
+variable_declaration_statement [3964,4026]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [4040,4111]
+to
+block_statement [3812,4016]
+at 3
+------------
+===
+insert-node
+---
+call_expression [4040,4110]
+to
+expression_statement [4040,4111]
+at 0
+===
+insert-node
+---
+identifier: require [4040,4047]
+to
+call_expression [4040,4110]
+at 0
+===
+insert-node
+---
+expression_statement [4040,4111]
+to
+block_statement [3812,4016]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4124,4192]
+    call_expression [4124,4191]
+        identifier: require [4124,4131]
+        call_argument [4132,4159]
+            binary_expression [4132,4159]
+                identifier: allowance [4132,4141]
+                comparison_operator: >= [4142,4144]
+                identifier: amount_payable [4145,4159]
+        call_argument [4161,4190]
+            string_literal [4161,4190]
+                string: "Insufficient USDT allowance" [4161,4190]
+to
+block_statement [3812,4016]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [3984,4025]
+    member_expression: usdt.allowance [3984,3998]
+    call_argument [3999,4009]
+        member_expression: msg.sender [3999,4009]
+    call_argument [4011,4024]
+        type_cast_expression [4011,4024]
+            primitive_type: address [4011,4018]
+            call_argument [4019,4023]
+                identifier: this [4019,4023]
+to
+variable_declaration_statement [3964,4026]
+at 2
+
+New cluster:
+MOVE from expression_statement [3906,4006]
+------------
+===
+move-tree
+---
+call_expression [3914,3974]
+    member_expression: usdt.transferFrom [3914,3931]
+    call_argument [3932,3942]
+        member_expression: msg.sender [3932,3942]
+    call_argument [3944,3957]
+        type_cast_expression [3944,3957]
+            primitive_type: address [3944,3951]
+            call_argument [3952,3956]
+                identifier: this [3952,3956]
+    call_argument [3959,3973]
+        identifier: amount_payable [3959,3973]
+to
+expression_statement [3906,4006]
+at 0
+
+New cluster:
+UPDATE from require to allowance
+------------
+===
+update-node
+---
+identifier: require [3906,3913]
+replace require by allowance
+
+New cluster:
+MOVE from variable_declaration [3964,3981]
+------------
+===
+move-tree
+---
+identifier: require [3906,3913]
+to
+variable_declaration [3964,3981]
+at 1
+===
+move-tree
+---
+call_argument [3976,4004]
+    string_literal [3976,4004]
+        string: "USDT token transfer failed" [3976,4004]
+to
+call_expression [4040,4110]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4048,4080]
+    binary_expression [4048,4080]
+        identifier: sender_balance [4048,4062]
+        comparison_operator: >= [4063,4065]
+        identifier: amount_payable [4066,4080]
+to
+call_expression [4040,4110]
+at 1
+
+New cluster:
+MOVE from expression_statement [15541,15617]
+------------
+===
+move-tree
+---
+call_expression [15549,15585]
+    member_expression: usdt.transfer [15549,15562]
+    call_argument [15563,15570]
+        call_expression [15563,15570]
+            identifier: owner [15563,15568]
+    call_argument [15572,15584]
+        identifier: usdt_balance [15572,15584]
+to
+expression_statement [15541,15617]
+at 0
+
+New cluster:
+MOVE from expression_statement [15826,15902]
+------------
+===
+move-tree
+---
+call_expression [15834,15870]
+    member_expression: usdc.transfer [15834,15847]
+    call_argument [15848,15855]
+        call_expression [15848,15855]
+            identifier: owner [15848,15853]
+    call_argument [15857,15869]
+        identifier: usdc_balance [15857,15869]
+to
+expression_statement [15826,15902]
+at 0
+
+New cluster:
+UPDATE from "USDT token transfer failed" to "Insufficient USDT balance"
+------------
+===
+update-node
+---
+string: "USDT token transfer failed" [3976,4004]
+replace "USDT token transfer failed" by "Insufficient USDT balance"
+
+New cluster:
+===
+delete-node
+---
+identifier: ApeMax_Production [398,415]
+===
+------------
+===
+delete-node
+---
+identifier: ApeMax_Production [398,415]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [416,418]
+===
+------------
+===
+delete-node
+---
+is: is [416,418]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [3906,4005]
+===
+------------
+===
+delete-node
+---
+call_argument [3914,3974]
+===
+===
+delete-node
+---
+call_expression [3906,4005]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [15541,15616]
+===
+------------
+===
+delete-node
+---
+identifier: require [15541,15548]
+===
+===
+delete-node
+---
+call_expression [15541,15616]
+===
+===
+delete-node
+---
+call_argument [15549,15585]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [15587,15615]
+    string_literal [15587,15615]
+        string: "USDT token transfer failed" [15587,15615]
+
+New cluster:
+===
+delete-node
+---
+call_expression [15826,15901]
+===
+------------
+===
+delete-node
+---
+identifier: require [15826,15833]
+===
+===
+delete-node
+---
+call_argument [15834,15870]
+===
+===
+delete-node
+---
+call_expression [15826,15901]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [15872,15900]
+    string_literal [15872,15900]
+        string: "USDC token transfer failed" [15872,15900]
+

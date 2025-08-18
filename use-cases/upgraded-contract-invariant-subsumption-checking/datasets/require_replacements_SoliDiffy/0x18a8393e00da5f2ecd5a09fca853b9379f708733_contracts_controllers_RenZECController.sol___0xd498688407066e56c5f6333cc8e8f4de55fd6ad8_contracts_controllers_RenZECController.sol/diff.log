@@ -1,0 +1,460 @@
+New cluster:
+===
+insert-node
+---
+identifier: RenZECController [1105,1121]
+to
+contract_declaration [1096,19000]
+at 0
+------------
+===
+insert-node
+---
+identifier: RenZECController [1105,1121]
+to
+contract_declaration [1096,19000]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1122,1124]
+to
+contract_declaration [1096,19000]
+at 1
+------------
+===
+insert-node
+---
+is: is [1122,1124]
+to
+contract_declaration [1096,19000]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2106,2148]
+    type_name: uint256 [2106,2113]
+    constant: constant [2114,2122]
+    identifier: GAS_COST [2123,2131]
+    affectation_operator: = [2132,2133]
+    type_cast_expression [2134,2147]
+        primitive_type: uint256 [2134,2141]
+        call_argument [2142,2146]
+            number_literal: 36e4 [2142,2146]
+to
+contract_body [1143,19000]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [9451,9464]
+    variable_declaration [9451,9463]
+        type_name: bool [9451,9455]
+        identifier: success [9456,9463]
+to
+block_statement [9333,9746]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9543,9623]
+    assignment_expression [9543,9622]
+        tuple_expression [9543,9554]
+            identifier: success [9544,9551]
+        affectation_operator: = [9555,9556]
+        call_expression [9557,9622]
+            struct_expression [9557,9618]
+                member_expression: governancePayable.call [9557,9579]
+                struct_field_assignment [9581,9600]
+                    identifier: value [9581,9586]
+                    :: : [9586,9587]
+                    identifier: toGovernance [9588,9600]
+                struct_field_assignment [9602,9616]
+                    identifier: gas [9602,9605]
+                    :: : [9605,9606]
+                    call_expression [9607,9616]
+                        identifier: gasleft [9607,9614]
+            call_argument [9619,9621]
+                string_literal [9619,9621]
+                    string: "" [9619,9621]
+to
+block_statement [9333,9746]
+at 4
+
+New cluster:
+===
+insert-node
+---
+expression_statement [9757,9849]
+to
+block_statement [9333,9746]
+at 7
+------------
+===
+insert-node
+---
+tuple_expression [9757,9768]
+to
+assignment_expression [9757,9848]
+at 0
+===
+insert-node
+---
+affectation_operator: = [9769,9770]
+to
+assignment_expression [9757,9848]
+at 1
+===
+insert-node
+---
+assignment_expression [9757,9848]
+to
+expression_statement [9757,9849]
+at 0
+===
+insert-node
+---
+expression_statement [9757,9849]
+to
+block_statement [9333,9746]
+at 7
+
+New cluster:
+===
+insert-node
+---
+expression_statement [9856,9904]
+to
+block_statement [9333,9746]
+at 8
+------------
+===
+insert-node
+---
+expression_statement [9856,9904]
+to
+block_statement [9333,9746]
+at 8
+===
+insert-node
+---
+call_expression [9856,9903]
+to
+expression_statement [9856,9904]
+at 0
+===
+insert-node
+---
+identifier: require [9856,9863]
+to
+call_expression [9856,9903]
+at 0
+
+New cluster:
+MOVE from call_expression [9523,9585]
+------------
+===
+move-tree
+---
+call_argument [9554,9566]
+    identifier: toGovernance [9554,9566]
+to
+call_expression [9523,9585]
+at 1
+
+New cluster:
+MOVE from assignment_expression [9757,9848]
+------------
+===
+move-tree
+---
+call_expression [9673,9721]
+    member_expression: strategistPayable.send [9673,9695]
+    call_argument [9696,9720]
+        call_expression [9696,9720]
+            member_expression: output.sub [9696,9706]
+            call_argument [9707,9719]
+                identifier: toGovernance [9707,9719]
+to
+assignment_expression [9757,9848]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [9864,9871]
+    identifier: success [9864,9871]
+to
+call_expression [9856,9903]
+at 1
+
+New cluster:
+MOVE from call_expression [9856,9903]
+------------
+===
+move-tree
+---
+call_argument [9723,9738]
+    string_literal [9723,9738]
+        string: "error on send" [9723,9738]
+to
+call_expression [9856,9903]
+at 2
+===
+move-tree
+---
+identifier: require [9665,9672]
+to
+tuple_expression [9757,9768]
+at 0
+
+New cluster:
+UPDATE from toGovernance to success
+------------
+===
+update-node
+---
+identifier: toGovernance [9554,9566]
+replace toGovernance by success
+===
+update-node
+---
+identifier: require [9665,9672]
+replace require by success
+
+New cluster:
+===
+insert-node
+---
+struct_expression [9771,9844]
+to
+call_expression [9673,9721]
+at 0
+------------
+===
+insert-node
+---
+identifier: value [9795,9800]
+to
+struct_field_assignment [9795,9826]
+at 0
+===
+insert-node
+---
+struct_expression [9771,9844]
+to
+call_expression [9673,9721]
+at 0
+===
+insert-node
+---
+struct_field_assignment [9795,9826]
+to
+struct_expression [9771,9844]
+at 1
+===
+insert-node
+---
+:: : [9800,9801]
+to
+struct_field_assignment [9795,9826]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [9845,9847]
+    string_literal [9845,9847]
+        string: "" [9845,9847]
+to
+call_expression [9673,9721]
+at 1
+
+New cluster:
+UPDATE from "error on send" to "error sending to governance"
+------------
+===
+update-node
+---
+string: "error on send" [9569,9584]
+replace "error on send" by "error sending to governance"
+
+New cluster:
+UPDATE from strategistPayable.send to strategistPayable.call
+------------
+===
+update-node
+---
+member_expression: strategistPayable.send [9673,9695]
+replace strategistPayable.send by strategistPayable.call
+
+New cluster:
+MOVE from struct_expression [9771,9844]
+------------
+===
+move-tree
+---
+member_expression: strategistPayable.send [9673,9695]
+to
+struct_expression [9771,9844]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_field_assignment [9828,9842]
+    identifier: gas [9828,9831]
+    :: : [9831,9832]
+    call_expression [9833,9842]
+        identifier: gasleft [9833,9840]
+to
+struct_expression [9771,9844]
+at 2
+
+New cluster:
+UPDATE from "error on send" to "error sending to strategist"
+------------
+===
+update-node
+---
+string: "error on send" [9723,9738]
+replace "error on send" by "error sending to strategist"
+
+New cluster:
+MOVE from struct_field_assignment [9795,9826]
+------------
+===
+move-tree
+---
+call_expression [9696,9720]
+    member_expression: output.sub [9696,9706]
+    call_argument [9707,9719]
+        identifier: toGovernance [9707,9719]
+to
+struct_field_assignment [9795,9826]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: RenZECController [1105,1121]
+===
+------------
+===
+delete-node
+---
+identifier: RenZECController [1105,1121]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1122,1124]
+===
+------------
+===
+delete-node
+---
+is: is [1122,1124]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2106,2148]
+    type_name: uint256 [2106,2113]
+    constant: constant [2114,2122]
+    identifier: GAS_COST [2123,2131]
+    affectation_operator: = [2132,2133]
+    type_cast_expression [2134,2147]
+        primitive_type: uint256 [2134,2141]
+        call_argument [2142,2146]
+            number_literal: 23e4 [2142,2146]
+
+New cluster:
+===
+delete-node
+---
+call_argument [9531,9567]
+===
+------------
+===
+delete-node
+---
+call_argument [9531,9567]
+===
+===
+delete-node
+---
+member_expression: governancePayable.send [9531,9553]
+===
+===
+delete-node
+---
+call_expression [9531,9567]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [9696,9720]
+===
+------------
+===
+delete-node
+---
+call_argument [9696,9720]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [9665,9740]
+===
+------------
+===
+delete-node
+---
+expression_statement [9665,9740]
+===
+===
+delete-node
+---
+call_expression [9665,9739]
+===
+===
+delete-node
+---
+call_argument [9673,9721]
+===
+

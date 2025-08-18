@@ -1,0 +1,5 @@
+results/differencing_results/0xcf36bddda4a0660ec2223a88cc2995836f9be4bb_contracts_ApeMax_Production.sol___0x7b0131b516c9694983ba5ef9793ce65c6579d291_contracts_ApeMax_Production.sol.log:
+  190  identifier: require [3906,3913]
+  191: replace require by allowance
+  192  
+

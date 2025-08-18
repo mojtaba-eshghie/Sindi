@@ -1,0 +1,5 @@
+results/differencing_results/0xed6eb2dfd0f0d0a98b0b8695a8e9056e55fefc85_contracts_MintingManager.sol___0xf51b669df92d68394a1ffbc6ae84bf016290687c_contracts_MintingManager.sol.log:
+  1048  identifier: require [2420,2427]
+  1049: replace require by _ensureAllowed
+  1050  
+

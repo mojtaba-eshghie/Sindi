@@ -1,0 +1,5 @@
+results/differencing_results/0xc1915f560ee4381b311d567047ce0a52762de926_contracts_BabylonCore.sol___0x139827bc5211113d99adc215312576d249943bb6_contracts_BabylonCore.sol.log:
+  216  identifier: require [8577,8584]
+  217: replace require by reserveCeiling
+  218  
+

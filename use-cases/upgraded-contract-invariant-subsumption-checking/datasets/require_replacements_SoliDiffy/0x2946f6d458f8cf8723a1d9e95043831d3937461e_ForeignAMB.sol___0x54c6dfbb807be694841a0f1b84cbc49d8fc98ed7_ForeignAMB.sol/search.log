@@ -1,0 +1,5 @@
+results/differencing_results/0x2946f6d458f8cf8723a1d9e95043831d3937461e_ForeignAMB.sol___0x54c6dfbb807be694841a0f1b84cbc49d8fc98ed7_ForeignAMB.sol.log:
+  2602  identifier: require [22199,22206]
+  2603: replace require by _setGasPrice
+  2604  ===
+

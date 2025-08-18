@@ -1,0 +1,21 @@
+results/differencing_results/0xf58ec2f599ec32f2ae104984f41c1fb1377eceba_StakeManager.sol___0xb955ee20a7f1d6f9bd68805e6eefe2cbc5d8220d_StakeManager.sol.log:
+  20542  identifier: require [130605,130612]
+  20543: replace require by _transferToken
+  20544  ===
+
+  20547  identifier: require [122115,122122]
+  20548: replace require by _transferToken
+  20549  ===
+
+  20552  identifier: require [132192,132199]
+  20553: replace require by _transferToken
+  20554  
+
+  21267  identifier: require [121172,121179]
+  21268: replace require by _transferTokenFrom
+  21269  ===
+
+  21272  identifier: require [131091,131098]
+  21273: replace require by _transferTokenFrom
+  21274  
+

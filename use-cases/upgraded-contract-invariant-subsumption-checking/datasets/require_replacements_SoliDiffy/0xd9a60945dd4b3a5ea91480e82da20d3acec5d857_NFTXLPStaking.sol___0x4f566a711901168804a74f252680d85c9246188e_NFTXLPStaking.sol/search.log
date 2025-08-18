@@ -1,0 +1,5 @@
+results/differencing_results/0xd9a60945dd4b3a5ea91480e82da20d3acec5d857_NFTXLPStaking.sol___0x4f566a711901168804a74f252680d85c9246188e_NFTXLPStaking.sol.log:
+  6279  identifier: require [134810,134817]
+  6280: replace require by unusedDistBal
+  6281  
+

@@ -1,0 +1,5222 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [637,659]
+    import: import [637,643]
+    string: "./Errors.sol" [644,658]
+to
+source_file [0,24601]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [660,692]
+    import: import [660,666]
+    string: "./WhitelistManager.sol" [667,691]
+to
+source_file [0,24601]
+at 10
+
+New cluster:
+===
+insert-node
+---
+identifier: LoanVault [733,742]
+to
+contract_declaration [668,24600]
+at 0
+------------
+===
+insert-node
+---
+identifier: LoanVault [733,742]
+to
+contract_declaration [668,24600]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [743,745]
+to
+contract_declaration [668,24600]
+at 1
+------------
+===
+insert-node
+---
+is: is [743,745]
+to
+contract_declaration [668,24600]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1210,1250]
+    identifier: SetFundingFee [1216,1229]
+    event_paramater [1230,1248]
+        type_name: uint256 [1230,1237]
+        identifier: fundingFee [1238,1248]
+to
+contract_body [774,24600]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [1980,2129]
+    identifier: CreateFundingAttempt [1986,2006]
+    event_paramater [2007,2029]
+        type_name: address [2007,2014]
+        indexed: indexed [2015,2022]
+        identifier: funder [2023,2029]
+    event_paramater [2031,2061]
+        type_name: IERC20Upgradeable [2031,2048]
+        identifier: fundingToken [2049,2061]
+    event_paramater [2063,2089]
+        type_name: uint256 [2063,2070]
+        identifier: fundingTokenAmount [2071,2089]
+    event_paramater [2091,2111]
+        type_name: uint256 [2091,2098]
+        identifier: florinTokens [2099,2111]
+    event_paramater [2113,2127]
+        type_name: uint256 [2113,2120]
+        identifier: shares [2121,2127]
+to
+contract_body [774,24600]
+at 15
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [2134,2188]
+    identifier: ApproveFundingAttempt [2140,2161]
+    event_paramater [2162,2186]
+        type_name: uint256 [2162,2169]
+        identifier: fundingAttemptId [2170,2186]
+to
+contract_body [774,24600]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [2193,2261]
+    identifier: RejectFundingAttempt [2199,2219]
+    event_paramater [2220,2244]
+        type_name: uint256 [2220,2227]
+        identifier: fundingAttemptId [2228,2244]
+    event_paramater [2246,2259]
+        type_name: string [2246,2252]
+        identifier: reason [2253,2259]
+to
+contract_body [774,24600]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [2266,2324]
+    identifier: FundingAttemptFailed [2272,2292]
+    event_paramater [2293,2307]
+        type_name: uint256 [2293,2300]
+        identifier: fundId [2301,2307]
+    event_paramater [2309,2322]
+        type_name: string [2309,2315]
+        identifier: reason [2316,2322]
+to
+contract_body [774,24600]
+at 18
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [2329,2375]
+    identifier: SetFundApprover [2335,2350]
+    event_paramater [2351,2373]
+        type_name: address [2351,2358]
+        identifier: funderApprover [2359,2373]
+to
+contract_body [774,24600]
+at 19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [2380,2433]
+    identifier: SetWhitelistManager [2386,2405]
+    event_paramater [2406,2431]
+        type_name: address [2406,2413]
+        identifier: whitelistManager_ [2414,2431]
+to
+contract_body [774,24600]
+at 20
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [4353,4417]
+    type_name: uint256 [4353,4360]
+    visibility: private [4361,4368]
+    constant: constant [4369,4377]
+    identifier: NO_FUNDING_REQUEST [4378,4396]
+    affectation_operator: = [4397,4398]
+    member_expression: type(uint256).max [4399,4416]
+to
+contract_body [774,24600]
+at 28
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_declaration [5320,5635]
+    struct: struct [5320,5326]
+    identifier: FundingAttempt [5327,5341]
+    struct_member [5352,5363]
+        type_name: uint256 [5352,5359]
+        identifier: id [5360,5362]
+    struct_member [5372,5387]
+        type_name: address [5372,5379]
+        identifier: funder [5380,5386]
+    struct_member [5396,5427]
+        type_name: IERC20Upgradeable [5396,5413]
+        identifier: fundingToken [5414,5426]
+    struct_member [5436,5463]
+        type_name: uint256 [5436,5443]
+        identifier: fundingTokenAmount [5444,5462]
+    struct_member [5472,5497]
+        type_name: uint256 [5472,5479]
+        identifier: flrFundingAmount [5480,5496]
+    struct_member [5506,5521]
+        type_name: uint256 [5506,5513]
+        identifier: shares [5514,5520]
+    struct_member [5530,5565]
+        type_name: uint256 [5530,5537]
+        identifier: fillableFundingTokenAmount [5538,5564]
+    struct_member [5574,5594]
+        type_name: uint256 [5574,5581]
+        identifier: maxSlippage [5582,5593]
+    struct_member [5603,5629]
+        type_name: FundingAttemptState [5603,5622]
+        identifier: state [5623,5628]
+to
+contract_body [774,24600]
+at 32
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+enum_declaration [5696,5796]
+    enum: enum [5696,5700]
+    identifier: FundingAttemptState [5701,5720]
+    enum_value: PENDING [5731,5738]
+    enum_value: EXECUTED [5748,5756]
+    enum_value: REJECTED [5766,5774]
+    enum_value: FAILED [5784,5790]
+to
+contract_body [774,24600]
+at 33
+
+New cluster:
+===
+insert-node
+---
+modifier_definition [5879,6021]
+to
+contract_body [774,24600]
+at 34
+------------
+===
+insert-node
+---
+function_body [5903,6021]
+to
+modifier_definition [5879,6021]
+at 2
+===
+insert-node
+---
+identifier: onlyDelegate [5888,5900]
+to
+modifier_definition [5879,6021]
+at 1
+===
+insert-node
+---
+modifier: modifier [5879,5887]
+to
+modifier_definition [5879,6021]
+at 0
+===
+insert-node
+---
+modifier_definition [5879,6021]
+to
+contract_body [774,24600]
+at 34
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [6104,6258]
+    modifier: modifier [6104,6112]
+    identifier: onlyFundApprover [6113,6129]
+    function_body [6132,6258]
+        if_statement [6142,6241]
+            if: if [6142,6144]
+            binary_expression [6146,6174]
+                identifier: fundApprover [6146,6158]
+                comparison_operator: != [6159,6161]
+                call_expression [6162,6174]
+                    identifier: _msgSender [6162,6172]
+            block_statement [6176,6241]
+                revert_statement [6190,6231]
+                    revert: revert [6190,6196]
+                    member_expression: Errors.CallerMustBeFundApprover [6197,6228]
+                    revert_arguments [6228,6230]
+        expression_statement [6250,6252]
+            identifier: _ [6250,6251]
+to
+contract_body [774,24600]
+at 35
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [7656,7725]
+    type_name: mapping(IERC20Upgradeable => uint256) [7656,7693]
+    visibility: private [7694,7701]
+    identifier: chainLinkFeedHeartBeat [7702,7724]
+to
+contract_body [774,24600]
+at 45
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [7781,7821]
+    type_name: FundingAttempt[] [7781,7797]
+    visibility: public [7798,7804]
+    identifier: fundingAttempts [7805,7820]
+to
+contract_body [774,24600]
+at 46
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [7906,7934]
+    type_name: address [7906,7913]
+    visibility: public [7914,7920]
+    identifier: fundApprover [7921,7933]
+to
+contract_body [774,24600]
+at 47
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [8053,8079]
+    type_name: uint256 [8053,8060]
+    visibility: public [8061,8067]
+    identifier: fundingFee [8068,8078]
+to
+contract_body [774,24600]
+at 48
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [8632,8673]
+    type_name: WhitelistManager [8632,8648]
+    visibility: public [8649,8655]
+    identifier: whitelistManager [8656,8672]
+to
+contract_body [774,24600]
+at 49
+
+New cluster:
+===
+insert-node
+---
+function_definition [10111,10566]
+to
+contract_body [774,24600]
+at 52
+------------
+===
+insert-node
+---
+identifier: inflationAttackProtectionInitalization [10120,10158]
+to
+function_definition [10111,10566]
+at 1
+===
+insert-node
+---
+call_expression [10271,10301]
+to
+expression_statement [10271,10302]
+at 0
+===
+insert-node
+---
+identifier: _mint [10271,10276]
+to
+call_expression [10271,10301]
+at 0
+===
+insert-node
+---
+function_body [10170,10566]
+to
+function_definition [10111,10566]
+at 3
+===
+insert-node
+---
+function_definition [10111,10566]
+to
+contract_body [774,24600]
+at 52
+===
+insert-node
+---
+expression_statement [10271,10302]
+to
+function_body [10170,10566]
+at 0
+===
+insert-node
+---
+function: function [10111,10119]
+to
+function_definition [10111,10566]
+at 0
+===
+insert-node
+---
+visibility: internal [10161,10169]
+to
+function_definition [10111,10566]
+at 2
+
+New cluster:
+===
+insert-node
+---
+function_definition [18127,18582]
+to
+contract_body [774,24600]
+at 70
+------------
+===
+insert-node
+---
+call_expression [18473,18575]
+to
+expression_statement [18473,18576]
+at 0
+===
+insert-node
+---
+function_body [18185,18582]
+to
+function_definition [18127,18582]
+at 4
+===
+insert-node
+---
+expression_statement [18473,18576]
+to
+function_body [18185,18582]
+at 3
+===
+insert-node
+---
+visibility: internal [18176,18184]
+to
+function_definition [18127,18582]
+at 3
+===
+insert-node
+---
+member_expression: SafeERC20Upgradeable.safeTransferFrom [18473,18510]
+to
+call_expression [18473,18575]
+at 0
+===
+insert-node
+---
+function_definition [18127,18582]
+to
+contract_body [774,24600]
+at 70
+===
+insert-node
+---
+identifier: depositEURToTreasury [18136,18156]
+to
+function_definition [18127,18582]
+at 1
+===
+insert-node
+---
+function: function [18127,18135]
+to
+function_definition [18127,18582]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [19188,19535]
+    function: function [19188,19196]
+    identifier: setFundingFee [19197,19210]
+    parameter [19211,19230]
+        type_name: uint256 [19211,19218]
+        identifier: _fundingFee [19219,19230]
+    visibility: external [19232,19240]
+    modifier_invocation [19241,19250]
+        identifier: onlyOwner [19241,19250]
+    function_body [19251,19535]
+        if_statement [19261,19454]
+            if: if [19261,19263]
+            binary_expression [19265,19281]
+                identifier: _fundingFee [19265,19276]
+                comparison_operator: != [19277,19279]
+                number_literal: 0 [19280,19281]
+            block_statement [19283,19454]
+                if_statement [19297,19444]
+                    if: if [19297,19299]
+                    binary_expression [19301,19341]
+                        binary_expression [19301,19319]
+                            identifier: _fundingFee [19301,19312]
+                            comparison_operator: < [19313,19314]
+                            number_literal: 1e14 [19315,19319]
+                        logical_operator: || [19320,19322]
+                        binary_expression [19323,19341]
+                            identifier: _fundingFee [19323,19334]
+                            comparison_operator: > [19335,19336]
+                            number_literal: 1e17 [19337,19341]
+                    block_statement [19343,19444]
+                        revert_statement [19392,19430]
+                            revert: revert [19392,19398]
+                            member_expression: Errors.FundingFeeOutOfBounds [19399,19427]
+                            revert_arguments [19427,19429]
+        expression_statement [19463,19488]
+            assignment_expression [19463,19487]
+                identifier: fundingFee [19463,19473]
+                affectation_operator: = [19474,19475]
+                identifier: _fundingFee [19476,19487]
+        emit_statement [19497,19529]
+            identifier: SetFundingFee [19502,19515]
+            call_argument [19516,19527]
+                identifier: _fundingFee [19516,19527]
+to
+contract_body [774,24600]
+at 72
+
+New cluster:
+===
+insert-node
+---
+function_definition [21275,22314]
+to
+contract_body [774,24600]
+at 75
+------------
+===
+insert-node
+---
+comparison_operator: < [21629,21630]
+to
+binary_expression [21577,21657]
+at 1
+===
+insert-node
+---
+member_expression: fundingAttempts.push [21801,21821]
+to
+call_expression [21801,22190]
+at 0
+===
+insert-node
+---
+if: if [21573,21575]
+to
+if_statement [21573,21721]
+at 0
+===
+insert-node
+---
+emit_statement [22200,22308]
+to
+function_body [21409,22314]
+at 4
+===
+insert-node
+---
+member_expression: fundingToken.allowance [21577,21599]
+to
+call_expression [21577,21628]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [21419,21563]
+to
+function_body [21409,22314]
+at 0
+===
+insert-node
+---
+identifier: CreateFundingAttempt [22205,22225]
+to
+emit_statement [22200,22308]
+at 0
+===
+insert-node
+---
+identifier: createFundingAttempt [21284,21304]
+to
+function_definition [21275,22314]
+at 1
+===
+insert-node
+---
+function_body [21409,22314]
+to
+function_definition [21275,22314]
+at 7
+===
+insert-node
+---
+if_statement [21573,21721]
+to
+function_body [21409,22314]
+at 1
+===
+insert-node
+---
+call_expression [21801,22190]
+to
+expression_statement [21801,22191]
+at 0
+===
+insert-node
+---
+expression_statement [21801,22191]
+to
+function_body [21409,22314]
+at 3
+===
+insert-node
+---
+binary_expression [21577,21657]
+to
+if_statement [21573,21721]
+at 1
+===
+insert-node
+---
+affectation_operator: = [21500,21501]
+to
+variable_declaration_statement [21419,21563]
+at 1
+===
+insert-node
+---
+call_argument [21835,22180]
+to
+call_expression [21801,22190]
+at 1
+===
+insert-node
+---
+function_definition [21275,22314]
+to
+contract_body [774,24600]
+at 75
+===
+insert-node
+---
+function: function [21275,21283]
+to
+function_definition [21275,22314]
+at 0
+===
+insert-node
+---
+visibility: external [21386,21394]
+to
+function_definition [21275,22314]
+at 5
+===
+insert-node
+---
+call_expression [21835,22180]
+to
+call_argument [21835,22180]
+at 0
+===
+insert-node
+---
+call_expression [21577,21628]
+to
+binary_expression [21577,21657]
+at 0
+===
+insert-node
+---
+identifier: fillableFundingTokenAmount [21631,21657]
+to
+binary_expression [21577,21657]
+at 2
+===
+insert-node
+---
+identifier: FundingAttempt [21835,21849]
+to
+call_expression [21835,22180]
+at 0
+
+New cluster:
+===
+insert-node
+---
+function_definition [27926,28675]
+to
+contract_body [774,24600]
+at 80
+------------
+===
+insert-node
+---
+if: if [28222,28224]
+to
+if_statement [28222,28553]
+at 0
+===
+insert-node
+---
+identifier: cancelFundingRequest [27935,27955]
+to
+function_definition [27926,28675]
+at 1
+===
+insert-node
+---
+function_body [28003,28675]
+to
+function_definition [27926,28675]
+at 5
+===
+insert-node
+---
+function: function [27926,27934]
+to
+function_definition [27926,28675]
+at 0
+===
+insert-node
+---
+if: if [28265,28267]
+to
+if_statement [28265,28386]
+at 0
+===
+insert-node
+---
+if_statement [28222,28553]
+to
+function_body [28003,28675]
+at 2
+===
+insert-node
+---
+if_statement [28265,28386]
+to
+block_statement [28251,28553]
+at 0
+===
+insert-node
+---
+function_definition [27926,28675]
+to
+contract_body [774,24600]
+at 80
+===
+insert-node
+---
+block_statement [28251,28553]
+to
+if_statement [28222,28553]
+at 2
+===
+insert-node
+---
+visibility: public [27982,27988]
+to
+function_definition [27926,28675]
+at 3
+
+New cluster:
+===
+insert-node
+---
+function_definition [32857,33145]
+to
+contract_body [774,24600]
+at 88
+------------
+===
+insert-node
+---
+identifier: getFundingTokenChainLinkFeed [32866,32894]
+to
+function_definition [32857,33145]
+at 1
+===
+insert-node
+---
+function: function [32857,32865]
+to
+function_definition [32857,33145]
+at 0
+===
+insert-node
+---
+visibility: external [32927,32935]
+to
+function_definition [32857,33145]
+at 3
+===
+insert-node
+---
+function_definition [32857,33145]
+to
+contract_body [774,24600]
+at 88
+
+New cluster:
+===
+insert-node
+---
+function_definition [34162,34296]
+to
+contract_body [774,24600]
+at 92
+------------
+===
+insert-node
+---
+visibility: public [34218,34224]
+to
+function_definition [34162,34296]
+at 3
+===
+insert-node
+---
+identifier: isFundingToken [34171,34185]
+to
+function_definition [34162,34296]
+at 1
+===
+insert-node
+---
+function: function [34162,34170]
+to
+function_definition [34162,34296]
+at 0
+===
+insert-node
+---
+function_definition [34162,34296]
+to
+contract_body [774,24600]
+at 92
+
+New cluster:
+===
+insert-node
+---
+function_definition [34920,35048]
+to
+contract_body [774,24600]
+at 95
+------------
+===
+insert-node
+---
+identifier: isPrimaryFunder [34929,34944]
+to
+function_definition [34920,35048]
+at 1
+===
+insert-node
+---
+visibility: public [34968,34974]
+to
+function_definition [34920,35048]
+at 3
+===
+insert-node
+---
+function_definition [34920,35048]
+to
+contract_body [774,24600]
+at 95
+===
+insert-node
+---
+function: function [34920,34928]
+to
+function_definition [34920,35048]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [35468,35747]
+    function: function [35468,35476]
+    identifier: getFundingAttempt [35477,35494]
+    parameter [35495,35519]
+        type_name: uint256 [35495,35502]
+        identifier: fundingAttemptId [35503,35519]
+    visibility: public [35521,35527]
+    state_mutability [35528,35532]
+        view: view [35528,35532]
+    return_type_definition [35533,35564]
+        returns: returns [35533,35540]
+        parameter [35542,35563]
+            type_name: FundingAttempt [35542,35556]
+            memory: memory [35557,35563]
+    function_body [35565,35747]
+        if_statement [35575,35690]
+            if: if [35575,35577]
+            binary_expression [35579,35621]
+                identifier: fundingAttemptId [35579,35595]
+                comparison_operator: >= [35596,35598]
+                member_expression: fundingAttempts.length [35599,35621]
+            block_statement [35623,35690]
+                revert_statement [35637,35680]
+                    revert: revert [35637,35643]
+                    member_expression: Errors.FundingAttemptDoesNotExist [35644,35677]
+                    revert_arguments [35677,35679]
+        return_statement [35700,35741]
+            return: return [35700,35706]
+            array_access [35707,35740]
+                identifier: fundingAttempts [35707,35722]
+                identifier: fundingAttemptId [35723,35739]
+to
+contract_body [774,24600]
+at 98
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [35791,35906]
+    function: function [35791,35799]
+    identifier: getFundingAttempts [35800,35818]
+    visibility: public [35821,35827]
+    state_mutability [35828,35832]
+        view: view [35828,35832]
+    return_type_definition [35833,35866]
+        returns: returns [35833,35840]
+        parameter [35842,35865]
+            type_name: FundingAttempt[] [35842,35858]
+            memory: memory [35859,35865]
+    function_body [35867,35906]
+        return_statement [35877,35900]
+            return: return [35877,35883]
+            identifier: fundingAttempts [35884,35899]
+to
+contract_body [774,24600]
+at 99
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [36032,37114]
+    function: function [36032,36040]
+    identifier: approveFundingAttempt [36041,36062]
+    parameter [36063,36087]
+        type_name: uint256 [36063,36070]
+        identifier: fundingAttemptId [36071,36087]
+    visibility: public [36089,36095]
+    modifier_invocation [36096,36112]
+        identifier: onlyFundApprover [36096,36112]
+    function_body [36113,37114]
+        variable_declaration_statement [36123,36197]
+            variable_declaration [36123,36160]
+                type_name: FundingAttempt [36123,36137]
+                storage: storage [36138,36145]
+                identifier: fundingAttempt [36146,36160]
+            affectation_operator: = [36161,36162]
+            array_access [36163,36196]
+                identifier: fundingAttempts [36163,36178]
+                identifier: fundingAttemptId [36179,36195]
+        if_statement [36207,36329]
+            if: if [36207,36209]
+            binary_expression [36211,36262]
+                member_expression: fundingAttempt.state [36211,36231]
+                comparison_operator: != [36232,36234]
+                member_expression: FundingAttemptState.PENDING [36235,36262]
+            block_statement [36264,36329]
+                revert_statement [36278,36319]
+                    revert: revert [36278,36284]
+                    member_expression: Errors.FundingAttemptNotPending [36285,36316]
+                    revert_arguments [36316,36318]
+        variable_declaration_statement [36339,36464]
+            variable_declaration_tuple [36339,36361]
+                variable_declaration [36342,36356]
+                    type_name: uint256 [36342,36349]
+                    identifier: assets [36350,36356]
+            affectation_operator: = [36362,36363]
+            call_expression [36364,36463]
+                identifier: _previewFund [36364,36376]
+                call_argument [36377,36398]
+                    member_expression: fundingAttempt.funder [36377,36398]
+                call_argument [36400,36427]
+                    member_expression: fundingAttempt.fundingToken [36400,36427]
+                call_argument [36429,36462]
+                    member_expression: fundingAttempt.fundingTokenAmount [36429,36462]
+        if_statement [36474,36874]
+            if: if [36474,36476]
+            binary_expression [36478,36518]
+                identifier: assets [36478,36484]
+                comparison_operator: < [36485,36486]
+                member_expression: fundingAttempt.flrFundingAmount [36487,36518]
+            block_statement [36520,36874]
+                variable_declaration_statement [36534,36618]
+                    variable_declaration [36534,36550]
+                        type_name: uint256 [36534,36541]
+                        identifier: slippage [36542,36550]
+                    affectation_operator: = [36551,36552]
+                    binary_expression [36553,36617]
+                        binary_expression [36553,36561]
+                            number_literal: 10 [36553,36555]
+                            **: ** [36556,36558]
+                            number_literal: 18 [36559,36561]
+                        arithmetic_operator: - [36562,36563]
+                        binary_expression [36564,36617]
+                            parenthesized_expression [36564,36583]
+                                binary_expression [36565,36582]
+                                    identifier: assets [36565,36571]
+                                    arithmetic_operator: * [36572,36573]
+                                    binary_expression [36574,36582]
+                                        number_literal: 10 [36574,36576]
+                                        **: ** [36577,36579]
+                                        number_literal: 18 [36580,36582]
+                            arithmetic_operator: / [36584,36585]
+                            member_expression: fundingAttempt.flrFundingAmount [36586,36617]
+                if_statement [36632,36864]
+                    if: if [36632,36634]
+                    binary_expression [36636,36674]
+                        identifier: slippage [36636,36644]
+                        comparison_operator: >= [36645,36647]
+                        member_expression: fundingAttempt.maxSlippage [36648,36674]
+                    block_statement [36676,36864]
+                        expression_statement [36694,36744]
+                            assignment_expression [36694,36743]
+                                member_expression: fundingAttempt.state [36694,36714]
+                                affectation_operator: = [36715,36716]
+                                member_expression: FundingAttemptState.FAILED [36717,36743]
+                        emit_statement [36761,36826]
+                            identifier: FundingAttemptFailed [36766,36786]
+                            call_argument [36787,36803]
+                                identifier: fundingAttemptId [36787,36803]
+                            call_argument [36805,36824]
+                                string_literal [36805,36824]
+                                    string: "slippage too high" [36805,36824]
+                        return_statement [36843,36850]
+                            return: return [36843,36849]
+        expression_statement [36884,36993]
+            call_expression [36884,36992]
+                identifier: executeFundingAttempt [36884,36905]
+                call_argument [36906,36933]
+                    member_expression: fundingAttempt.fundingToken [36906,36933]
+                call_argument [36935,36968]
+                    member_expression: fundingAttempt.fundingTokenAmount [36935,36968]
+                call_argument [36970,36991]
+                    member_expression: fundingAttempt.funder [36970,36991]
+        expression_statement [37002,37054]
+            assignment_expression [37002,37053]
+                member_expression: fundingAttempt.state [37002,37022]
+                affectation_operator: = [37023,37024]
+                member_expression: FundingAttemptState.EXECUTED [37025,37053]
+        emit_statement [37063,37108]
+            identifier: ApproveFundingAttempt [37068,37089]
+            call_argument [37090,37106]
+                identifier: fundingAttemptId [37090,37106]
+to
+contract_body [774,24600]
+at 100
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [37282,37732]
+    function: function [37282,37290]
+    identifier: rejectFundingAttempt [37291,37311]
+    parameter [37312,37336]
+        type_name: uint256 [37312,37319]
+        identifier: fundingAttemptId [37320,37336]
+    parameter [37338,37360]
+        type_name: string [37338,37344]
+        calldata: calldata [37345,37353]
+        identifier: reason [37354,37360]
+    visibility: external [37362,37370]
+    modifier_invocation [37371,37387]
+        identifier: onlyFundApprover [37371,37387]
+    function_body [37388,37732]
+        variable_declaration_statement [37398,37472]
+            variable_declaration [37398,37435]
+                type_name: FundingAttempt [37398,37412]
+                storage: storage [37413,37420]
+                identifier: fundingAttempt [37421,37435]
+            affectation_operator: = [37436,37437]
+            array_access [37438,37471]
+                identifier: fundingAttempts [37438,37453]
+                identifier: fundingAttemptId [37454,37470]
+        if_statement [37481,37603]
+            if: if [37481,37483]
+            binary_expression [37485,37536]
+                member_expression: fundingAttempt.state [37485,37505]
+                comparison_operator: != [37506,37508]
+                member_expression: FundingAttemptState.PENDING [37509,37536]
+            block_statement [37538,37603]
+                revert_statement [37552,37593]
+                    revert: revert [37552,37558]
+                    member_expression: Errors.FundingAttemptNotPending [37559,37590]
+                    revert_arguments [37590,37592]
+        expression_statement [37613,37665]
+            assignment_expression [37613,37664]
+                member_expression: fundingAttempt.state [37613,37633]
+                affectation_operator: = [37634,37635]
+                member_expression: FundingAttemptState.REJECTED [37636,37664]
+        emit_statement [37674,37726]
+            identifier: RejectFundingAttempt [37679,37699]
+            call_argument [37700,37716]
+                identifier: fundingAttemptId [37700,37716]
+            call_argument [37718,37724]
+                identifier: reason [37718,37724]
+to
+contract_body [774,24600]
+at 101
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [37831,37987]
+    function: function [37831,37839]
+    identifier: setFundApprover [37840,37855]
+    parameter [37856,37877]
+        type_name: address [37856,37863]
+        identifier: fundApprover_ [37864,37877]
+    visibility: external [37879,37887]
+    modifier_invocation [37888,37897]
+        identifier: onlyOwner [37888,37897]
+    function_body [37898,37987]
+        expression_statement [37908,37937]
+            assignment_expression [37908,37936]
+                identifier: fundApprover [37908,37920]
+                affectation_operator: = [37921,37922]
+                identifier: fundApprover_ [37923,37936]
+        emit_statement [37946,37981]
+            identifier: SetFundApprover [37951,37966]
+            call_argument [37967,37979]
+                identifier: fundApprover [37967,37979]
+to
+contract_body [774,24600]
+at 102
+
+New cluster:
+===
+insert-node
+---
+function_definition [38148,38343]
+to
+contract_body [774,24600]
+at 103
+------------
+===
+insert-node
+---
+function_definition [38148,38343]
+to
+contract_body [774,24600]
+at 103
+===
+insert-node
+---
+identifier: isDepositorWhitelisted [38157,38179]
+to
+function_definition [38148,38343]
+at 1
+===
+insert-node
+---
+visibility: public [38199,38205]
+to
+function_definition [38148,38343]
+at 3
+===
+insert-node
+---
+function: function [38148,38156]
+to
+function_definition [38148,38343]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [38349,38548]
+    function: function [38349,38357]
+    identifier: setWhitelistManager [38358,38377]
+    parameter [38378,38412]
+        type_name: WhitelistManager [38378,38394]
+        identifier: whitelistManager_ [38395,38412]
+    visibility: external [38414,38422]
+    modifier_invocation [38423,38432]
+        identifier: onlyOwner [38423,38432]
+    function_body [38433,38548]
+        expression_statement [38443,38480]
+            assignment_expression [38443,38479]
+                identifier: whitelistManager [38443,38459]
+                affectation_operator: = [38460,38461]
+                identifier: whitelistManager_ [38462,38479]
+        emit_statement [38489,38542]
+            identifier: SetWhitelistManager [38494,38513]
+            call_argument [38514,38540]
+                type_cast_expression [38514,38540]
+                    primitive_type: address [38514,38521]
+                    call_argument [38522,38539]
+                        identifier: whitelistManager_ [38522,38539]
+to
+contract_body [774,24600]
+at 104
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [1143,1155]
+    type_name: address [1143,1150]
+    identifier: from [1151,1155]
+to
+event_definition [1066,1104]
+at 1
+
+New cluster:
+UPDATE from Fund to ExecuteFundingAttempt
+------------
+===
+update-node
+---
+identifier: Fund [17626,17630]
+replace Fund by ExecuteFundingAttempt
+===
+update-node
+---
+identifier: Fund [1169,1173]
+replace Fund by ExecuteFundingAttempt
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_paramater [1763,1794]
+    type_name: uint256 [1763,1770]
+    identifier: chainLinkFeedHeartBeat_ [1771,1794]
+to
+event_definition [1437,1598]
+at 4
+
+New cluster:
+UPDATE from public to external
+------------
+===
+update-node
+---
+visibility: public [7435,7441]
+replace public by external
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [18157,18174]
+    type_name: uint256 [18157,18164]
+    identifier: amountEur [18165,18174]
+to
+function_definition [18127,18582]
+at 2
+
+New cluster:
+MOVE from function_definition [15226,15447]
+------------
+===
+move-tree
+---
+modifier_invocation [9064,9077]
+    identifier: whenNotPaused [9064,9077]
+to
+function_definition [15226,15447]
+at 9
+
+New cluster:
+MOVE from function_definition [15572,15817]
+------------
+===
+move-tree
+---
+modifier_invocation [8807,8820]
+    identifier: whenNotPaused [8807,8820]
+to
+function_definition [15572,15817]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [21305,21335]
+    type_name: IERC20Upgradeable [21305,21322]
+    identifier: fundingToken [21323,21335]
+to
+function_definition [21275,22314]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [21337,21363]
+    type_name: uint256 [21337,21344]
+    identifier: fundingTokenAmount [21345,21363]
+to
+function_definition [21275,22314]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [21365,21384]
+    type_name: uint256 [21365,21372]
+    identifier: maxSlippage [21373,21384]
+to
+function_definition [21275,22314]
+at 4
+
+New cluster:
+MOVE from function_definition [21275,22314]
+------------
+===
+move-tree
+---
+modifier_invocation [16565,16578]
+    identifier: whenNotPaused [16565,16578]
+to
+function_definition [21275,22314]
+at 6
+
+New cluster:
+UPDATE from fund to executeFundingAttempt
+------------
+===
+update-node
+---
+identifier: fund [16491,16495]
+replace fund by executeFundingAttempt
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [22838,22852]
+    type_name: address [22838,22845]
+    identifier: funder [22846,22852]
+to
+function_definition [16482,17717]
+at 4
+
+New cluster:
+UPDATE from external to internal
+------------
+===
+update-node
+---
+visibility: external [16556,16564]
+replace external by internal
+
+New cluster:
+MOVE from function_definition [27926,28675]
+------------
+===
+move-tree
+---
+modifier_invocation [19970,19983]
+    identifier: whenNotPaused [19970,19983]
+to
+function_definition [27926,28675]
+at 4
+===
+move-tree
+---
+parameter [19937,19961]
+    type_name: uint256 [19937,19944]
+    identifier: fundingRequestId [19945,19961]
+to
+function_definition [27926,28675]
+at 2
+
+New cluster:
+UPDATE from getNextOpenFundingRequestId to getNextFundingRequestId
+------------
+===
+update-node
+---
+identifier: getNextOpenFundingRequestId [20566,20593]
+replace getNextOpenFundingRequestId by getNextFundingRequestId
+===
+update-node
+---
+identifier: getNextOpenFundingRequestId [18449,18476]
+replace getNextOpenFundingRequestId by getNextFundingRequestId
+===
+update-node
+---
+identifier: getNextOpenFundingRequestId [18298,18325]
+replace getNextOpenFundingRequestId by getNextFundingRequestId
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32197,32228]
+    type_name: uint256 [32197,32204]
+    identifier: chainLinkFeedHeartBeat_ [32205,32228]
+to
+function_definition [22368,22892]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32895,32925]
+    type_name: IERC20Upgradeable [32895,32912]
+    identifier: fundingToken [32913,32925]
+to
+function_definition [32857,33145]
+at 2
+
+New cluster:
+MOVE from function_definition [32857,33145]
+------------
+===
+move-tree
+---
+state_mutability [22978,22982]
+    view: view [22978,22982]
+to
+function_definition [32857,33145]
+at 4
+===
+move-tree
+---
+return_type_definition [22983,23020]
+    returns: returns [22983,22990]
+    parameter [22992,23013]
+        type_name: AggregatorV3Interface [22992,23013]
+    parameter [23015,23019]
+        type_name: bool [23015,23019]
+to
+function_definition [32857,33145]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [32988,33145]
+    return_statement [32998,33139]
+        return: return [32998,33004]
+        tuple_expression [33005,33138]
+            array_access [33006,33046]
+                identifier: fundingTokenChainLinkFeeds [33006,33032]
+                identifier: fundingToken [33033,33045]
+            array_access [33048,33099]
+                identifier: invertFundingTokenChainLinkFeedAnswer [33048,33085]
+                identifier: fundingToken [33086,33098]
+            array_access [33101,33137]
+                identifier: chainLinkFeedHeartBeat [33101,33123]
+                identifier: fundingToken [33124,33136]
+to
+function_definition [32857,33145]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [34186,34216]
+    type_name: IERC20Upgradeable [34186,34203]
+    identifier: fundingToken [34204,34216]
+to
+function_definition [34162,34296]
+at 2
+
+New cluster:
+MOVE from function_definition [34162,34296]
+------------
+===
+move-tree
+---
+return_type_definition [24538,24552]
+    returns: returns [24538,24545]
+    parameter [24547,24551]
+        type_name: bool [24547,24551]
+to
+function_definition [34162,34296]
+at 5
+===
+move-tree
+---
+state_mutability [24533,24537]
+    view: view [24533,24537]
+to
+function_definition [34162,34296]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [34245,34296]
+    return_statement [34255,34290]
+        return: return [34255,34261]
+        array_access [34262,34289]
+            identifier: fundingTokens [34262,34275]
+            identifier: fundingToken [34276,34288]
+to
+function_definition [34162,34296]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [34945,34966]
+    type_name: address [34945,34952]
+    identifier: primaryFunder [34953,34966]
+to
+function_definition [34920,35048]
+at 2
+
+New cluster:
+MOVE from function_definition [34920,35048]
+------------
+===
+move-tree
+---
+return_type_definition [24217,24231]
+    returns: returns [24217,24224]
+    parameter [24226,24230]
+        type_name: bool [24226,24230]
+to
+function_definition [34920,35048]
+at 5
+===
+move-tree
+---
+state_mutability [24212,24216]
+    view: view [24212,24216]
+to
+function_definition [34920,35048]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [34995,35048]
+    return_statement [35005,35042]
+        return: return [35005,35011]
+        array_access [35012,35041]
+            identifier: primaryFunders [35012,35026]
+            identifier: primaryFunder [35027,35040]
+to
+function_definition [34920,35048]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [38180,38197]
+    type_name: address [38180,38187]
+    identifier: depositor [38188,38197]
+to
+function_definition [38148,38343]
+at 2
+
+New cluster:
+MOVE from function_definition [38148,38343]
+------------
+===
+move-tree
+---
+state_mutability [23801,23805]
+    view: view [23801,23805]
+to
+function_definition [38148,38343]
+at 4
+===
+move-tree
+---
+return_type_definition [23806,23820]
+    returns: returns [23806,23813]
+    parameter [23815,23819]
+        type_name: bool [23815,23819]
+to
+function_definition [38148,38343]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_body [38226,38343]
+    return_statement [38236,38337]
+        return: return [38236,38242]
+        binary_expression [38243,38336]
+            binary_expression [38243,38282]
+                type_cast_expression [38243,38268]
+                    primitive_type: address [38243,38250]
+                    call_argument [38251,38267]
+                        identifier: whitelistManager [38251,38267]
+                comparison_operator: == [38269,38271]
+                type_cast_expression [38272,38282]
+                    primitive_type: address [38272,38279]
+                    call_argument [38280,38281]
+                        number_literal: 0 [38280,38281]
+            logical_operator: || [38283,38285]
+            call_expression [38286,38336]
+                member_expression: whitelistManager.isDepositorWhitelisted [38286,38325]
+                call_argument [38326,38335]
+                    identifier: depositor [38326,38335]
+to
+function_definition [38148,38343]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [5913,6004]
+    if: if [5913,5915]
+    binary_expression [5917,5941]
+        identifier: delegate [5917,5925]
+        comparison_operator: != [5926,5928]
+        call_expression [5929,5941]
+            identifier: _msgSender [5929,5939]
+    block_statement [5943,6004]
+        revert_statement [5957,5994]
+            revert: revert [5957,5963]
+            member_expression: Errors.CallerMustBeDelegate [5964,5991]
+            revert_arguments [5991,5993]
+to
+function_body [5903,6021]
+at 0
+
+New cluster:
+MOVE from function_body [5903,6021]
+------------
+===
+move-tree
+---
+expression_statement [4663,4665]
+    identifier: _ [4663,4664]
+to
+function_body [5903,6021]
+at 1
+
+New cluster:
+===
+insert-node
+---
+calldata: calldata [9268,9276]
+to
+parameter [6274,6292]
+at 1
+------------
+===
+insert-node
+---
+calldata: calldata [9268,9276]
+to
+parameter [6274,6292]
+at 1
+
+New cluster:
+===
+insert-node
+---
+calldata: calldata [9290,9298]
+to
+parameter [6294,6314]
+at 1
+------------
+===
+insert-node
+---
+calldata: calldata [9290,9298]
+to
+parameter [6294,6314]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9820,9861]
+    call_expression [9820,9860]
+        identifier: inflationAttackProtectionInitalization [9820,9858]
+to
+function_body [6369,6843]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [10326,10365]
+    augmented_assignment_expression [10326,10364]
+        identifier: outstandingRewardsSnapshot [10326,10352]
+        affectation_operator: += [10353,10355]
+        binary_expression [10356,10364]
+            number_literal: 10 [10356,10358]
+            **: ** [10359,10361]
+            number_literal: 18 [10362,10364]
+to
+function_body [10170,10566]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [10449,10478]
+    augmented_assignment_expression [10449,10477]
+        identifier: loansOutstanding [10449,10465]
+        affectation_operator: += [10466,10468]
+        binary_expression [10469,10477]
+            number_literal: 10 [10469,10471]
+            **: ** [10472,10474]
+            number_literal: 18 [10475,10477]
+to
+function_body [10170,10566]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [12776,12895]
+to
+function_body [9628,9902]
+at 0
+------------
+===
+insert-node
+---
+if_statement [12776,12895]
+to
+function_body [9628,9902]
+at 0
+===
+insert-node
+---
+if: if [12776,12778]
+to
+if_statement [12776,12895]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [13369,13512]
+to
+function_body [10201,10721]
+at 0
+------------
+===
+insert-node
+---
+if_statement [13369,13512]
+to
+function_body [10201,10721]
+at 0
+===
+insert-node
+---
+if: if [13369,13371]
+to
+if_statement [13369,13512]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [14311,14434]
+to
+function_body [10973,11294]
+at 0
+------------
+===
+insert-node
+---
+if: if [14311,14313]
+to
+if_statement [14311,14434]
+at 0
+===
+insert-node
+---
+if_statement [14311,14434]
+to
+function_body [10973,11294]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [14939,15074]
+to
+function_body [11568,11790]
+at 0
+------------
+===
+insert-node
+---
+if: if [14939,14941]
+to
+if_statement [14939,15074]
+at 0
+===
+insert-node
+---
+if_statement [14939,15074]
+to
+function_body [11568,11790]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [17887,17988]
+    if: if [17887,17889]
+    binary_expression [17891,17903]
+        identifier: rewards [17891,17898]
+        comparison_operator: == [17899,17901]
+        number_literal: 0 [17902,17903]
+    block_statement [17905,17988]
+        revert_statement [17919,17978]
+            revert: revert [17919,17925]
+            member_expression: Errors.EffectiveRewardAmountMustBeGreaterThanZero [17926,17975]
+            revert_arguments [17975,17977]
+to
+function_body [14546,14845]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [18195,18250]
+    variable_declaration [18195,18221]
+        type_name: IERC20Upgradeable [18195,18212]
+        identifier: eurToken [18213,18221]
+    affectation_operator: = [18222,18223]
+    call_expression [18224,18249]
+        member_expression: florinTreasury.eurToken [18224,18247]
+to
+function_body [18185,18582]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [18260,18354]
+    variable_declaration [18260,18282]
+        type_name: uint256 [18260,18267]
+        identifier: transferAmount [18268,18282]
+    affectation_operator: = [18283,18284]
+    call_expression [18285,18353]
+        member_expression: Util.convertDecimals [18285,18305]
+        call_argument [18306,18315]
+            identifier: amountEur [18306,18315]
+        call_argument [18317,18319]
+            number_literal: 18 [18317,18319]
+        call_argument [18321,18352]
+            call_expression [18321,18352]
+                member_expression: Util.getERC20Decimals [18321,18342]
+                call_argument [18343,18351]
+                    identifier: eurToken [18343,18351]
+to
+function_body [18185,18582]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [18363,18464]
+    if: if [18363,18365]
+    binary_expression [18367,18386]
+        identifier: transferAmount [18367,18381]
+        comparison_operator: == [18382,18384]
+        number_literal: 0 [18385,18386]
+    block_statement [18388,18464]
+        revert_statement [18402,18454]
+            revert: revert [18402,18408]
+            member_expression: Errors.TransferAmountMustBeGreaterThanZero [18409,18451]
+            revert_arguments [18451,18453]
+to
+function_body [18185,18582]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [18759,18925]
+    if: if [18759,18761]
+    binary_expression [18763,18772]
+        identifier: _apr [18763,18767]
+        comparison_operator: != [18768,18770]
+        number_literal: 0 [18771,18772]
+    block_statement [18774,18925]
+        if_statement [18788,18915]
+            if: if [18788,18790]
+            binary_expression [18792,18818]
+                binary_expression [18792,18803]
+                    identifier: _apr [18792,18796]
+                    comparison_operator: < [18797,18798]
+                    number_literal: 1e14 [18799,18803]
+                logical_operator: || [18804,18806]
+                binary_expression [18807,18818]
+                    identifier: _apr [18807,18811]
+                    comparison_operator: > [18812,18813]
+                    number_literal: 1e18 [18814,18818]
+            block_statement [18820,18915]
+                revert_statement [18870,18901]
+                    revert: revert [18870,18876]
+                    member_expression: Errors.AprOutOfBounds [18877,18898]
+                    revert_arguments [18898,18900]
+to
+function_body [15012,15104]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [19804,19911]
+to
+function_body [15336,15447]
+at 0
+------------
+===
+insert-node
+---
+unary_expression [19808,19845]
+to
+if_statement [19804,19911]
+at 1
+===
+insert-node
+---
+!: ! [19808,19809]
+to
+unary_expression [19808,19845]
+at 0
+===
+insert-node
+---
+if_statement [19804,19911]
+to
+function_body [15336,15447]
+at 0
+===
+insert-node
+---
+if: if [19804,19806]
+to
+if_statement [19804,19911]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [21731,21792]
+    variable_declaration [21731,21766]
+        type_name: uint256 [21731,21738]
+        identifier: openPendingFundingRequestId [21739,21766]
+    affectation_operator: = [21767,21768]
+    member_expression: fundingAttempts.length [21769,21791]
+to
+function_body [21409,22314]
+at 2
+
+New cluster:
+UPDATE from wallet to funder
+------------
+===
+update-node
+---
+identifier: wallet [18007,18013]
+replace wallet by funder
+===
+update-node
+---
+identifier: wallet [18168,18174]
+replace wallet by funder
+
+New cluster:
+===
+insert-node
+---
+if_statement [25465,25537]
+to
+function_body [18134,19481]
+at 0
+------------
+===
+insert-node
+---
+!: ! [25469,25470]
+to
+unary_expression [25469,25493]
+at 0
+===
+insert-node
+---
+unary_expression [25469,25493]
+to
+if_statement [25465,25537]
+at 1
+===
+insert-node
+---
+if: if [25465,25467]
+to
+if_statement [25465,25537]
+at 0
+===
+insert-node
+---
+if_statement [25465,25537]
+to
+function_body [18134,19481]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [25546,25626]
+to
+function_body [18134,19481]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [25550,25573]
+to
+if_statement [25546,25626]
+at 1
+===
+insert-node
+---
+if_statement [25546,25626]
+to
+function_body [18134,19481]
+at 1
+===
+insert-node
+---
+comparison_operator: == [25569,25571]
+to
+binary_expression [25550,25573]
+at 1
+===
+insert-node
+---
+number_literal: 0 [25572,25573]
+to
+binary_expression [25550,25573]
+at 2
+===
+insert-node
+---
+if: if [25546,25548]
+to
+if_statement [25546,25626]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [25635,25711]
+to
+function_body [18134,19481]
+at 2
+------------
+===
+insert-node
+---
+if_statement [25635,25711]
+to
+function_body [18134,19481]
+at 2
+===
+insert-node
+---
+!: ! [25639,25640]
+to
+unary_expression [25639,25668]
+at 0
+===
+insert-node
+---
+unary_expression [25639,25668]
+to
+if_statement [25635,25711]
+at 1
+===
+insert-node
+---
+if: if [25635,25637]
+to
+if_statement [25635,25711]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [25720,25810]
+to
+function_body [18134,19481]
+at 3
+------------
+===
+insert-node
+---
+if_statement [25720,25810]
+to
+function_body [18134,19481]
+at 3
+===
+insert-node
+---
+if: if [25720,25722]
+to
+if_statement [25720,25810]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [26798,26890]
+    variable_declaration [26798,26831]
+        type_name: uint256 [26798,26805]
+        identifier: correctedFlrFundingAmount [26806,26831]
+    affectation_operator: = [26832,26833]
+    binary_expression [26834,26889]
+        parenthesized_expression [26834,26878]
+            binary_expression [26835,26877]
+                identifier: flrFundingAmount [26835,26851]
+                arithmetic_operator: * [26852,26853]
+                parenthesized_expression [26854,26877]
+                    binary_expression [26855,26876]
+                        binary_expression [26855,26863]
+                            number_literal: 10 [26855,26857]
+                            **: ** [26858,26860]
+                            number_literal: 18 [26861,26863]
+                        arithmetic_operator: - [26864,26865]
+                        identifier: fundingFee [26866,26876]
+        arithmetic_operator: / [26879,26880]
+        binary_expression [26881,26889]
+            number_literal: 10 [26881,26883]
+            **: ** [26884,26886]
+            number_literal: 18 [26887,26889]
+to
+function_body [18134,19481]
+at 13
+
+New cluster:
+===
+insert-node
+---
+if_statement [27368,27471]
+to
+function_body [19575,19901]
+at 0
+------------
+===
+insert-node
+---
+if: if [27368,27370]
+to
+if_statement [27368,27471]
+at 0
+===
+insert-node
+---
+if_statement [27368,27471]
+to
+function_body [19575,19901]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [28013,28128]
+    if: if [28013,28015]
+    binary_expression [28017,28059]
+        identifier: fundingRequestId [28017,28033]
+        comparison_operator: >= [28034,28036]
+        member_expression: fundingRequests.length [28037,28059]
+    block_statement [28061,28128]
+        revert_statement [28075,28118]
+            revert: revert [28075,28081]
+            member_expression: Errors.FundingRequestDoesNotExist [28082,28115]
+            revert_arguments [28115,28117]
+to
+function_body [28003,28675]
+at 0
+
+New cluster:
+MOVE from function_body [28003,28675]
+------------
+===
+move-tree
+---
+variable_declaration_statement [20087,20161]
+    variable_declaration [20087,20124]
+        type_name: FundingRequest [20087,20101]
+        storage: storage [20102,20109]
+        identifier: fundingRequest [20110,20124]
+    affectation_operator: = [20125,20126]
+    array_access [20127,20160]
+        identifier: fundingRequests [20127,20142]
+        identifier: fundingRequestId [20143,20159]
+to
+function_body [28003,28675]
+at 1
+===
+move-tree
+---
+expression_statement [20439,20492]
+    assignment_expression [20439,20491]
+        member_expression: fundingRequest.state [20439,20459]
+        affectation_operator: = [20460,20461]
+        member_expression: FundingRequestState.CANCELLED [20462,20491]
+to
+function_body [28003,28675]
+at 3
+===
+move-tree
+---
+emit_statement [20501,20545]
+    identifier: CancelFundingRequest [20506,20526]
+    call_argument [20527,20543]
+        identifier: fundingRequestId [20527,20543]
+to
+function_body [28003,28675]
+at 4
+
+New cluster:
+===
+insert-node
+---
+if_statement [29987,30102]
+to
+function_body [21308,21458]
+at 0
+------------
+===
+insert-node
+---
+if_statement [29987,30102]
+to
+function_body [21308,21458]
+at 0
+===
+insert-node
+---
+if: if [29987,29989]
+to
+if_statement [29987,30102]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [30721,30797]
+to
+function_body [21691,22362]
+at 0
+------------
+===
+insert-node
+---
+unary_expression [30725,30754]
+to
+if_statement [30721,30797]
+at 1
+===
+insert-node
+---
+if_statement [30721,30797]
+to
+function_body [21691,22362]
+at 0
+===
+insert-node
+---
+if: if [30721,30723]
+to
+if_statement [30721,30797]
+at 0
+===
+insert-node
+---
+!: ! [30725,30726]
+to
+unary_expression [30725,30754]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [30807,30941]
+to
+function_body [21691,22362]
+at 1
+------------
+===
+insert-node
+---
+if_statement [30807,30941]
+to
+function_body [21691,22362]
+at 1
+===
+insert-node
+---
+if: if [30807,30809]
+to
+if_statement [30807,30941]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [31069,31159]
+to
+function_body [21691,22362]
+at 5
+------------
+===
+insert-node
+---
+if: if [31069,31071]
+to
+if_statement [31069,31159]
+at 0
+===
+insert-node
+---
+if_statement [31069,31159]
+to
+function_body [21691,22362]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [31222,31395]
+    if: if [31222,31224]
+    array_access [31226,31292]
+        binary_expression [31226,31278]
+            member_expression: updatedAt < block.timestamp [31226,31253]
+            arithmetic_operator: - [31254,31255]
+            identifier: chainLinkFeedHeartBeat [31256,31278]
+        identifier: fundingToken [31279,31291]
+    block_statement [31294,31395]
+        revert_statement [31308,31360]
+            revert: revert [31308,31314]
+            member_expression: Errors.ChainLinkFeedHeartBeatOutOfBoundary [31315,31357]
+            revert_arguments [31357,31359]
+to
+function_body [21691,22362]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [32444,32507]
+    assignment_expression [32444,32506]
+        array_access [32444,32480]
+            identifier: chainLinkFeedHeartBeat [32444,32466]
+            identifier: fundingToken [32467,32479]
+        affectation_operator: = [32481,32482]
+        identifier: chainLinkFeedHeartBeat_ [32483,32506]
+to
+function_body [22581,22892]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [32979,32986]
+    type_name: uint256 [32979,32986]
+to
+return_type_definition [22983,23020]
+at 3
+
+New cluster:
+===
+insert-node
+---
+binary_expression [11769,11832]
+to
+if_statement [7900,7960]
+at 1
+------------
+===
+insert-node
+---
+logical_operator: || [11815,11817]
+to
+binary_expression [11769,11832]
+at 1
+===
+insert-node
+---
+binary_expression [11769,11832]
+to
+if_statement [7900,7960]
+at 1
+
+New cluster:
+MOVE from if_statement [12776,12895]
+------------
+===
+move-tree
+---
+binary_expression [9646,9676]
+    identifier: loanAmount [9646,9656]
+    comparison_operator: <= [9657,9659]
+    identifier: loansOutstanding [9660,9676]
+to
+if_statement [12776,12895]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [12811,12895]
+    revert_statement [12825,12885]
+        revert: revert [12825,12831]
+        member_expression: Errors.LoanAmountMustBeLessOrEqualLoansOutstanding [12832,12882]
+        revert_arguments [12882,12884]
+to
+if_statement [12776,12895]
+at 2
+
+New cluster:
+MOVE from if_statement [13369,13512]
+------------
+===
+move-tree
+---
+binary_expression [10219,10261]
+    identifier: estimatedDefaultAmount [10219,10241]
+    comparison_operator: <= [10242,10244]
+    identifier: loansOutstanding [10245,10261]
+to
+if_statement [13369,13512]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [13416,13512]
+    revert_statement [13430,13502]
+        revert: revert [13430,13436]
+        member_expression: Errors.EstimatedDefaultAmountMustBeLessOrEqualLoansOutstanding [13437,13499]
+        revert_arguments [13499,13501]
+to
+if_statement [13369,13512]
+at 2
+
+New cluster:
+MOVE from if_statement [14311,14434]
+------------
+===
+move-tree
+---
+binary_expression [10991,11023]
+    identifier: recoveredAmount [10991,11006]
+    comparison_operator: <= [11007,11009]
+    identifier: loanWriteDown [11010,11023]
+to
+if_statement [14311,14434]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [14348,14434]
+    revert_statement [14362,14424]
+        revert: revert [14362,14368]
+        member_expression: Errors.RecoveredAmountMustBeLessOrEqualLoanWriteDown [14369,14421]
+        revert_arguments [14421,14423]
+to
+if_statement [14311,14434]
+at 2
+
+New cluster:
+MOVE from if_statement [14939,15074]
+------------
+===
+move-tree
+---
+binary_expression [11586,11624]
+    identifier: definiteDefaultAmount [11586,11607]
+    comparison_operator: <= [11608,11610]
+    identifier: loanWriteDown [11611,11624]
+to
+if_statement [14939,15074]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [14982,15074]
+    revert_statement [14996,15064]
+        revert: revert [14996,15002]
+        member_expression: Errors.DefiniteDefaultAmountMustBeLessOrEqualLoanWriteDown [15003,15061]
+        revert_arguments [15061,15063]
+to
+if_statement [14939,15074]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_expression [18032,18061]
+to
+expression_statement [14752,14801]
+at 0
+------------
+===
+insert-node
+---
+call_expression [18032,18061]
+to
+expression_statement [14752,14801]
+at 0
+===
+insert-node
+---
+identifier: depositEURToTreasury [18032,18052]
+to
+call_expression [18032,18061]
+at 0
+
+New cluster:
+MOVE from emit_statement [14810,14839]
+------------
+===
+move-tree
+---
+call_argument [17631,17643]
+    call_expression [17631,17643]
+        identifier: _msgSender [17631,17641]
+to
+emit_statement [14810,14839]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [19847,19911]
+    revert_statement [19861,19901]
+        revert: revert [19861,19867]
+        member_expression: Errors.DepositorNotWhitelisted [19868,19898]
+        revert_arguments [19898,19900]
+to
+if_statement [19804,19911]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_tuple [21419,21499]
+    variable_declaration [21422,21446]
+        type_name: uint256 [21422,21429]
+        identifier: flrFundingAmount [21430,21446]
+    variable_declaration [21448,21462]
+        type_name: uint256 [21448,21455]
+        identifier: shares [21456,21462]
+    variable_declaration [21464,21498]
+        type_name: uint256 [21464,21471]
+        identifier: fillableFundingTokenAmount [21472,21498]
+to
+variable_declaration_statement [21419,21563]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [21419,21563]
+------------
+===
+move-tree
+---
+call_expression [16702,16808]
+    identifier: _previewFund [16702,16714]
+    call_argument [16728,16740]
+        call_expression [16728,16740]
+            identifier: _msgSender [16728,16738]
+    call_argument [16754,16766]
+        identifier: fundingToken [16754,16766]
+    call_argument [16780,16798]
+        identifier: fundingTokenAmount [16780,16798]
+to
+variable_declaration_statement [21419,21563]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [21659,21721]
+    revert_statement [21673,21711]
+        revert: revert [21673,21679]
+        member_expression: Errors.InsufficientAllowance [21680,21708]
+        revert_arguments [21708,21710]
+to
+if_statement [21573,21721]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22226,22238]
+    call_expression [22226,22238]
+        identifier: _msgSender [22226,22236]
+to
+emit_statement [22200,22308]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22240,22252]
+    identifier: fundingToken [22240,22252]
+to
+emit_statement [22200,22308]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22254,22280]
+    identifier: fillableFundingTokenAmount [22254,22280]
+to
+emit_statement [22200,22308]
+at 3
+
+New cluster:
+MOVE from emit_statement [22200,22308]
+------------
+===
+move-tree
+---
+call_argument [19436,19452]
+    identifier: flrFundingAmount [19436,19452]
+to
+emit_statement [22200,22308]
+at 4
+
+New cluster:
+MOVE from emit_statement [22200,22308]
+------------
+===
+move-tree
+---
+call_argument [8867,8873]
+    identifier: shares [8867,8873]
+to
+emit_statement [22200,22308]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [22988,23042]
+    identifier: _previewFund [22988,23000]
+    call_argument [23001,23007]
+        identifier: funder [23001,23007]
+    call_argument [23009,23021]
+        identifier: fundingToken [23009,23021]
+    call_argument [23023,23041]
+        identifier: fundingTokenAmount [23023,23041]
+to
+variable_declaration_statement [16589,16809]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [23872,23878]
+    identifier: funder [23872,23878]
+to
+emit_statement [17621,17711]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [25495,25537]
+    revert: revert [25495,25501]
+    member_expression: Errors.CallerMustBePrimaryFunder [25502,25534]
+    revert_arguments [25534,25536]
+to
+if_statement [25465,25537]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [25575,25626]
+    revert: revert [25575,25581]
+    member_expression: Errors.FundingAmountMustBeGreaterThanZero [25582,25623]
+    revert_arguments [25623,25625]
+to
+if_statement [25546,25626]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [25670,25711]
+    revert: revert [25670,25676]
+    member_expression: Errors.UnrecognizedFundingToken [25677,25708]
+    revert_arguments [25708,25710]
+to
+if_statement [25635,25711]
+at 2
+
+New cluster:
+MOVE from if_statement [25720,25810]
+------------
+===
+move-tree
+---
+binary_expression [18298,18349]
+    call_expression [18298,18327]
+        identifier: getNextOpenFundingRequestId [18298,18325]
+    comparison_operator: != [18328,18330]
+    identifier: NO_FUNDING_REQUEST [18331,18349]
+to
+if_statement [25720,25810]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [25773,25810]
+    revert: revert [25773,25779]
+    member_expression: Errors.NoOpenFundingRequest [25780,25807]
+    revert_arguments [25807,25809]
+to
+if_statement [25720,25810]
+at 2
+
+New cluster:
+MOVE from if_statement [27368,27471]
+------------
+===
+move-tree
+---
+binary_expression [19593,19612]
+    identifier: amountRequested [19593,19608]
+    comparison_operator: > [19609,19610]
+    number_literal: 0 [19611,19612]
+to
+if_statement [27368,27471]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [27394,27471]
+    revert_statement [27408,27461]
+        revert: revert [27408,27414]
+        member_expression: Errors.AmountRequestedMustBeGreaterThanZero [27415,27458]
+        revert_arguments [27458,27460]
+to
+if_statement [27368,27471]
+at 2
+
+New cluster:
+MOVE from if_statement [28222,28553]
+------------
+===
+move-tree
+---
+binary_expression [20175,20198]
+    call_expression [20175,20187]
+        identifier: _msgSender [20175,20185]
+    comparison_operator: != [20188,20190]
+    call_expression [20191,20198]
+        identifier: owner [20191,20196]
+to
+if_statement [28222,28553]
+at 1
+
+New cluster:
+MOVE from if_statement [29987,30102]
+------------
+===
+move-tree
+---
+binary_expression [21326,21367]
+    identifier: fundingRequestId [21326,21342]
+    comparison_operator: < [21343,21344]
+    member_expression: fundingRequests.length [21345,21367]
+to
+if_statement [29987,30102]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [30035,30102]
+    revert_statement [30049,30092]
+        revert: revert [30049,30055]
+        member_expression: Errors.FundingRequestDoesNotExist [30056,30089]
+        revert_arguments [30089,30091]
+to
+if_statement [29987,30102]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [30756,30797]
+    revert: revert [30756,30762]
+    member_expression: Errors.UnrecognizedFundingToken [30763,30794]
+    revert_arguments [30794,30796]
+to
+if_statement [30721,30797]
+at 2
+
+New cluster:
+MOVE from if_statement [30807,30941]
+------------
+===
+move-tree
+---
+binary_expression [21786,21849]
+    type_cast_expression [21786,21835]
+        primitive_type: address [21786,21793]
+        call_argument [21794,21834]
+            array_access [21794,21834]
+                identifier: fundingTokenChainLinkFeeds [21794,21820]
+                identifier: fundingToken [21821,21833]
+    comparison_operator: != [21836,21838]
+    type_cast_expression [21839,21849]
+        primitive_type: address [21839,21846]
+        call_argument [21847,21848]
+            number_literal: 0 [21847,21848]
+to
+if_statement [30807,30941]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [30876,30941]
+    revert_statement [30890,30931]
+        revert: revert [30890,30896]
+        member_expression: Errors.NoChainLinkFeedAvailable [30897,30928]
+        revert_arguments [30928,30930]
+to
+if_statement [30807,30941]
+at 2
+
+New cluster:
+MOVE from if_statement [31069,31159]
+------------
+===
+move-tree
+---
+binary_expression [21999,22016]
+    identifier: exchangeRate [21999,22011]
+    comparison_operator: != [22012,22014]
+    number_literal: 0 [22015,22016]
+to
+if_statement [31069,31159]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [31092,31159]
+    revert_statement [31106,31149]
+        revert: revert [31106,31112]
+        member_expression: Errors.ZeroOrNegativeExchangeRate [31113,31146]
+        revert_arguments [31146,31148]
+to
+if_statement [31069,31159]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [32631,32654]
+    identifier: chainLinkFeedHeartBeat_ [32631,32654]
+to
+emit_statement [22771,22886]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10277,10290]
+    type_cast_expression [10277,10290]
+        primitive_type: address [10277,10284]
+        call_argument [10285,10289]
+            identifier: this [10285,10289]
+to
+call_expression [10271,10301]
+at 1
+
+New cluster:
+MOVE from call_expression [10271,10301]
+------------
+===
+move-tree
+---
+call_argument [13658,13666]
+    binary_expression [13658,13666]
+        number_literal: 10 [13658,13660]
+        **: ** [13661,13663]
+        number_literal: 18 [13664,13666]
+to
+call_expression [10271,10301]
+at 2
+
+New cluster:
+MOVE from binary_expression [11769,11832]
+------------
+===
+move-tree
+---
+binary_expression [7904,7949]
+    binary_expression [7904,7937]
+        identifier: loansOutstanding [7904,7920]
+        comparison_operator: <= [7921,7923]
+        call_expression [7924,7937]
+            identifier: totalAssets [7924,7935]
+    logical_operator: || [7938,7940]
+    binary_expression [7941,7949]
+        identifier: debt [7941,7945]
+        comparison_operator: > [7946,7947]
+        number_literal: 0 [7948,7949]
+to
+binary_expression [11769,11832]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [11818,11832]
+    member_expression: super.paused [11818,11830]
+to
+binary_expression [11769,11832]
+at 2
+
+New cluster:
+UPDATE from <= to >
+------------
+===
+update-node
+---
+comparison_operator: <= [9657,9659]
+replace <= by >
+===
+update-node
+---
+comparison_operator: <= [10242,10244]
+replace <= by >
+===
+update-node
+---
+comparison_operator: <= [11007,11009]
+replace <= by >
+===
+update-node
+---
+comparison_operator: <= [11608,11610]
+replace <= by >
+
+New cluster:
+===
+insert-node
+---
+identifier: depositEURToTreasury [12985,13005]
+to
+call_expression [9808,9859]
+at 0
+------------
+===
+insert-node
+---
+identifier: depositEURToTreasury [12985,13005]
+to
+call_expression [9808,9859]
+at 0
+
+New cluster:
+UPDATE from absoluteVaultSupplied to absoluteFundingRequestSupplied
+------------
+===
+update-node
+---
+identifier: absoluteVaultSupplied [13510,13531]
+replace absoluteVaultSupplied by absoluteFundingRequestSupplied
+
+New cluster:
+UPDATE from rewardsPerSecond.mulDiv to absoluteFundingRequestSupplied.mulDiv
+------------
+===
+update-node
+---
+member_expression: rewardsPerSecond.mulDiv [13761,13784]
+replace rewardsPerSecond.mulDiv by absoluteFundingRequestSupplied.mulDiv
+
+New cluster:
+MOVE from call_expression [13761,13847]
+------------
+===
+move-tree
+---
+call_argument [13426,13429]
+    identifier: apr [13426,13429]
+to
+call_expression [13761,13847]
+at 1
+===
+move-tree
+---
+call_argument [13441,13470]
+    member_expression: MathUpgradeable.Rounding.Down [13441,13470]
+to
+call_expression [13761,13847]
+at 4
+
+New cluster:
+MOVE from call_expression [18032,18061]
+------------
+===
+move-tree
+---
+call_argument [14792,14799]
+    identifier: rewards [14792,14799]
+to
+call_expression [18032,18061]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [18511,18519]
+    identifier: eurToken [18511,18519]
+to
+call_expression [18473,18575]
+at 1
+
+New cluster:
+MOVE from call_expression [18473,18575]
+------------
+===
+move-tree
+---
+call_argument [17392,17404]
+    call_expression [17392,17404]
+        identifier: _msgSender [17392,17402]
+to
+call_expression [18473,18575]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [18535,18558]
+    type_cast_expression [18535,18558]
+        primitive_type: address [18535,18542]
+        call_argument [18543,18557]
+            identifier: florinTreasury [18543,18557]
+to
+call_expression [18473,18575]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [18560,18574]
+    identifier: transferAmount [18560,18574]
+to
+call_expression [18473,18575]
+at 4
+
+New cluster:
+MOVE from unary_expression [19808,19845]
+------------
+===
+move-tree
+---
+call_expression [14752,14800]
+    member_expression: florinTreasury.depositEUR [14752,14777]
+    call_argument [14778,14790]
+        call_expression [14778,14790]
+            identifier: _msgSender [14778,14788]
+    call_argument [14792,14799]
+        identifier: rewards [14792,14799]
+to
+unary_expression [19808,19845]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [23626,23632]
+    identifier: funder [23626,23632]
+to
+call_expression [17386,17413]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [23767,23773]
+    identifier: funder [23767,23773]
+to
+call_expression [17487,17610]
+at 2
+
+New cluster:
+UPDATE from cappedFundingTokenAmount to fillableFundingTokenAmount
+------------
+===
+update-node
+---
+identifier: cappedFundingTokenAmount [17659,17683]
+replace cappedFundingTokenAmount by fillableFundingTokenAmount
+===
+update-node
+---
+identifier: cappedFundingTokenAmount [17585,17609]
+replace cappedFundingTokenAmount by fillableFundingTokenAmount
+===
+update-node
+---
+identifier: cappedFundingTokenAmount [16674,16698]
+replace cappedFundingTokenAmount by fillableFundingTokenAmount
+
+New cluster:
+MOVE from unary_expression [25469,25493]
+------------
+===
+move-tree
+---
+call_expression [18152,18175]
+    identifier: isPrimaryFunder [18152,18167]
+    call_argument [18168,18174]
+        identifier: wallet [18168,18174]
+to
+unary_expression [25469,25493]
+at 1
+
+New cluster:
+UPDATE from require to fundingTokenAmount
+------------
+===
+update-node
+---
+identifier: require [18213,18220]
+replace require by fundingTokenAmount
+
+New cluster:
+MOVE from binary_expression [25550,25573]
+------------
+===
+move-tree
+---
+identifier: require [18213,18220]
+to
+binary_expression [25550,25573]
+at 0
+
+New cluster:
+MOVE from unary_expression [25639,25668]
+------------
+===
+move-tree
+---
+call_expression [18221,18249]
+    identifier: isFundingToken [18221,18235]
+    call_argument [18236,18248]
+        identifier: fundingToken [18236,18248]
+to
+unary_expression [25639,25668]
+at 1
+
+New cluster:
+UPDATE from > to ==
+------------
+===
+update-node
+---
+comparison_operator: > [19609,19610]
+replace > by ==
+===
+update-node
+---
+comparison_operator: != [18328,18330]
+replace != by ==
+===
+update-node
+---
+comparison_operator: != [21836,21838]
+replace != by ==
+
+New cluster:
+===
+insert-node
+---
+storage: storage [25835,25842]
+to
+variable_declaration [18387,18430]
+at 1
+------------
+===
+insert-node
+---
+storage: storage [25835,25842]
+to
+variable_declaration [18387,18430]
+at 1
+
+New cluster:
+UPDATE from flrFundingAmount to correctedFlrFundingAmount
+------------
+===
+update-node
+---
+identifier: flrFundingAmount [19403,19419]
+replace flrFundingAmount by correctedFlrFundingAmount
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [28400,28543]
+    if: if [28400,28402]
+    binary_expression [28404,28452]
+        member_expression: fundingRequest.state [28404,28424]
+        comparison_operator: != [28425,28427]
+        member_expression: FundingRequestState.OPEN [28428,28452]
+    block_statement [28454,28543]
+        revert_statement [28472,28529]
+            revert: revert [28472,28478]
+            member_expression: Errors.DelegateCanOnlyCancelOpenFundingRequests [28479,28526]
+            revert_arguments [28526,28528]
+to
+block_statement [28251,28553]
+at 1
+
+New cluster:
+UPDATE from < to >=
+------------
+===
+update-node
+---
+comparison_operator: < [21343,21344]
+replace < by >=
+
+New cluster:
+MOVE from unary_expression [30725,30754]
+------------
+===
+move-tree
+---
+call_expression [21709,21737]
+    identifier: isFundingToken [21709,21723]
+    call_argument [21724,21736]
+        identifier: fundingToken [21724,21736]
+to
+unary_expression [30725,30754]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [30977,30994]
+    type_name: uint256 [30977,30984]
+    identifier: updatedAt [30985,30994]
+to
+variable_declaration_tuple [21891,21920]
+at 1
+
+New cluster:
+UPDATE from != to <=
+------------
+===
+update-node
+---
+comparison_operator: != [22012,22014]
+replace != by <=
+
+New cluster:
+===
+insert-node
+---
+binary_expression [16951,16982]
+to
+call_argument [13807,13815]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [16951,16977]
+to
+binary_expression [16951,16982]
+at 0
+===
+insert-node
+---
+arithmetic_operator: * [16968,16969]
+to
+binary_expression [16951,16972]
+at 1
+===
+insert-node
+---
+arithmetic_operator: * [16962,16963]
+to
+binary_expression [16951,16967]
+at 1
+===
+insert-node
+---
+number_literal: 60 [16975,16977]
+to
+binary_expression [16951,16977]
+at 2
+===
+insert-node
+---
+binary_expression [16951,16982]
+to
+call_argument [13807,13815]
+at 0
+===
+insert-node
+---
+number_literal: 24 [16970,16972]
+to
+binary_expression [16951,16972]
+at 2
+===
+insert-node
+---
+arithmetic_operator: * [16973,16974]
+to
+binary_expression [16951,16977]
+at 1
+===
+insert-node
+---
+parenthesized_expression [16951,16961]
+to
+binary_expression [16951,16967]
+at 0
+===
+insert-node
+---
+number_literal: 60 [16980,16982]
+to
+binary_expression [16951,16982]
+at 2
+===
+insert-node
+---
+binary_expression [16951,16967]
+to
+binary_expression [16951,16972]
+at 0
+===
+insert-node
+---
+binary_expression [16951,16972]
+to
+binary_expression [16951,16977]
+at 0
+===
+insert-node
+---
+number_literal: 365 [16964,16967]
+to
+binary_expression [16951,16967]
+at 2
+===
+insert-node
+---
+arithmetic_operator: * [16978,16979]
+to
+binary_expression [16951,16982]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: isDepositorWhitelisted [19809,19831]
+to
+call_expression [14752,14800]
+at 0
+------------
+===
+insert-node
+---
+identifier: isDepositorWhitelisted [19809,19831]
+to
+call_expression [14752,14800]
+at 0
+
+New cluster:
+MOVE from call_expression [21577,21628]
+------------
+===
+move-tree
+---
+call_argument [17539,17551]
+    call_expression [17539,17551]
+        identifier: _msgSender [17539,17549]
+to
+call_expression [21577,21628]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [21614,21627]
+    type_cast_expression [21614,21627]
+        primitive_type: address [21614,21621]
+        call_argument [21622,21626]
+            identifier: this [21622,21626]
+to
+call_expression [21577,21628]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [26976,27001]
+    identifier: correctedFlrFundingAmount [26976,27001]
+to
+call_expression [19421,19453]
+at 1
+
+New cluster:
+MOVE from if_statement [28265,28386]
+------------
+===
+move-tree
+---
+binary_expression [20222,20261]
+    member_expression: fundingRequest.delegate [20222,20245]
+    comparison_operator: == [20246,20248]
+    call_expression [20249,20261]
+        identifier: _msgSender [20249,20259]
+to
+if_statement [28265,28386]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [28310,28386]
+    revert_statement [28328,28372]
+        revert: revert [28328,28334]
+        member_expression: Errors.CallerMustBeOwnerOrDelegate [28335,28369]
+        revert_arguments [28369,28371]
+to
+if_statement [28265,28386]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [21867,21894]
+    identifier: openPendingFundingRequestId [21867,21894]
+to
+call_expression [21835,22180]
+at 1
+
+New cluster:
+MOVE from call_expression [21835,22180]
+------------
+===
+move-tree
+---
+call_argument [9834,9846]
+    call_expression [9834,9846]
+        identifier: _msgSender [9834,9844]
+to
+call_expression [21835,22180]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [21942,21954]
+    identifier: fundingToken [21942,21954]
+to
+call_expression [21835,22180]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [21972,21990]
+    identifier: fundingTokenAmount [21972,21990]
+to
+call_expression [21835,22180]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22008,22024]
+    identifier: flrFundingAmount [22008,22024]
+to
+call_expression [21835,22180]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22042,22048]
+    identifier: shares [22042,22048]
+to
+call_expression [21835,22180]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22066,22092]
+    identifier: fillableFundingTokenAmount [22066,22092]
+to
+call_expression [21835,22180]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22110,22121]
+    identifier: maxSlippage [22110,22121]
+to
+call_expression [21835,22180]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [22139,22166]
+    member_expression: FundingAttemptState.PENDING [22139,22166]
+to
+call_expression [21835,22180]
+at 9
+
+New cluster:
+UPDATE from == to !=
+------------
+===
+update-node
+---
+comparison_operator: == [20246,20248]
+replace == by !=
+
+New cluster:
+MOVE from parenthesized_expression [16951,16961]
+------------
+===
+move-tree
+---
+binary_expression [13807,13815]
+    number_literal: 10 [13807,13809]
+    **: ** [13810,13812]
+    number_literal: 18 [13813,13815]
+to
+parenthesized_expression [16951,16961]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: LoanVault [677,686]
+===
+------------
+===
+delete-node
+---
+identifier: LoanVault [677,686]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [687,689]
+===
+------------
+===
+delete-node
+---
+is: is [687,689]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [3692,3755]
+    type_name: uint256 [3692,3699]
+    visibility: public [3700,3706]
+    constant: constant [3707,3715]
+    identifier: NO_FUNDING_REQUEST [3716,3734]
+    affectation_operator: = [3735,3736]
+    member_expression: type(uint256).max [3737,3754]
+
+New cluster:
+===
+delete-node
+---
+modifier_definition [4561,4671]
+===
+------------
+===
+delete-node
+---
+identifier: onlyDelegate [4570,4582]
+===
+===
+delete-node
+---
+modifier_definition [4561,4671]
+===
+===
+delete-node
+---
+modifier: modifier [4561,4569]
+===
+===
+delete-node
+---
+function_body [4585,4671]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4595,4654]
+    call_expression [4595,4653]
+        identifier: require [4595,4602]
+        call_argument [4603,4625]
+            binary_expression [4603,4625]
+                identifier: delegate [4603,4611]
+                comparison_operator: == [4612,4614]
+                member_expression: msg.sender [4615,4625]
+        call_argument [4627,4652]
+            string_literal [4627,4652]
+                string: "caller must be delegate" [4627,4652]
+
+New cluster:
+===
+delete-node
+---
+memory: memory [6281,6287]
+===
+------------
+===
+delete-node
+---
+memory: memory [6281,6287]
+===
+
+New cluster:
+===
+delete-node
+---
+memory: memory [6301,6307]
+===
+------------
+===
+delete-node
+---
+memory: memory [6301,6307]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [8495,8657]
+    function: function [8495,8503]
+    identifier: deposit [8504,8511]
+    parameter [8512,8526]
+        type_name: uint256 [8512,8519]
+        identifier: assets [8520,8526]
+    parameter [8528,8544]
+        type_name: address [8528,8535]
+        identifier: receiver [8536,8544]
+    visibility: public [8546,8552]
+    virtual: virtual [8553,8560]
+    override_specifier [8561,8569]
+        override: override [8561,8569]
+    modifier_invocation [8570,8583]
+        identifier: whenNotPaused [8570,8583]
+    return_type_definition [8584,8601]
+        returns: returns [8584,8591]
+        parameter [8593,8600]
+            type_name: uint256 [8593,8600]
+    function_body [8602,8657]
+        return_statement [8612,8651]
+            return: return [8612,8618]
+            call_expression [8619,8650]
+                member_expression: super.deposit [8619,8632]
+                call_argument [8633,8639]
+                    identifier: assets [8633,8639]
+                call_argument [8641,8649]
+                    identifier: receiver [8641,8649]
+
+New cluster:
+===
+delete-node
+---
+function_definition [8735,8891]
+===
+------------
+===
+delete-node
+---
+identifier: mint [8744,8748]
+===
+===
+delete-node
+---
+return: return [8849,8855]
+===
+===
+delete-node
+---
+call_expression [8856,8884]
+===
+===
+delete-node
+---
+member_expression: super.mint [8856,8866]
+===
+===
+delete-node
+---
+return_statement [8849,8885]
+===
+===
+delete-node
+---
+virtual: virtual [8790,8797]
+===
+===
+delete-node
+---
+visibility: public [8783,8789]
+===
+===
+delete-node
+---
+function_body [8839,8891]
+===
+===
+delete-node
+---
+function_definition [8735,8891]
+===
+===
+delete-node
+---
+function: function [8735,8743]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8749,8763]
+    type_name: uint256 [8749,8756]
+    identifier: shares [8757,8763]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8765,8781]
+    type_name: address [8765,8772]
+    identifier: receiver [8773,8781]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [8798,8806]
+    override: override [8798,8806]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [8821,8838]
+    returns: returns [8821,8828]
+    parameter [8830,8837]
+        type_name: uint256 [8830,8837]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8875,8883]
+    identifier: receiver [8875,8883]
+
+New cluster:
+===
+delete-node
+---
+function_definition [8973,9159]
+===
+------------
+===
+delete-node
+---
+function: function [8973,8981]
+===
+===
+delete-node
+---
+function_definition [8973,9159]
+===
+===
+delete-node
+---
+identifier: withdraw [8982,8990]
+===
+===
+delete-node
+---
+virtual: virtual [9047,9054]
+===
+===
+delete-node
+---
+visibility: public [9040,9046]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8991,9005]
+    type_name: uint256 [8991,8998]
+    identifier: assets [8999,9005]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [9007,9023]
+    type_name: address [9007,9014]
+    identifier: receiver [9015,9023]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [9025,9038]
+    type_name: address [9025,9032]
+    identifier: owner [9033,9038]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [9055,9063]
+    override: override [9055,9063]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [9078,9095]
+    returns: returns [9078,9085]
+    parameter [9087,9094]
+        type_name: uint256 [9087,9094]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [9096,9159]
+    return_statement [9106,9153]
+        return: return [9106,9112]
+        call_expression [9113,9152]
+            member_expression: super.withdraw [9113,9127]
+            call_argument [9128,9134]
+                identifier: assets [9128,9134]
+            call_argument [9136,9144]
+                identifier: receiver [9136,9144]
+            call_argument [9146,9151]
+                identifier: owner [9146,9151]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [9638,9720]
+===
+------------
+===
+delete-node
+---
+identifier: require [9638,9645]
+===
+===
+delete-node
+---
+call_expression [9638,9719]
+===
+===
+delete-node
+---
+expression_statement [9638,9720]
+===
+===
+delete-node
+---
+call_argument [9646,9676]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [9678,9718]
+    string_literal [9678,9718]
+        string: "loanAmount must be <= loansOutstanding" [9678,9718]
+
+New cluster:
+===
+delete-node
+---
+member_expression: florinTreasury.depositEUR [9808,9833]
+===
+------------
+===
+delete-node
+---
+member_expression: florinTreasury.depositEUR [9808,9833]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [10211,10317]
+===
+------------
+===
+delete-node
+---
+identifier: require [10211,10218]
+===
+===
+delete-node
+---
+call_expression [10211,10316]
+===
+===
+delete-node
+---
+expression_statement [10211,10317]
+===
+===
+delete-node
+---
+call_argument [10219,10261]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10263,10315]
+    string_literal [10263,10315]
+        string: "estimatedDefaultAmount must be <= loansOutstanding" [10263,10315]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [10983,11076]
+===
+------------
+===
+delete-node
+---
+expression_statement [10983,11076]
+===
+===
+delete-node
+---
+call_expression [10983,11075]
+===
+===
+delete-node
+---
+identifier: require [10983,10990]
+===
+===
+delete-node
+---
+call_argument [10991,11023]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11025,11074]
+    string_literal [11025,11074]
+        string: "recoveredAmount must be <= previous write downs" [11025,11074]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [11578,11683]
+===
+------------
+===
+delete-node
+---
+call_expression [11578,11682]
+===
+===
+delete-node
+---
+expression_statement [11578,11683]
+===
+===
+delete-node
+---
+call_argument [11586,11624]
+===
+===
+delete-node
+---
+identifier: require [11578,11585]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11626,11681]
+    string_literal [11626,11681]
+        string: "definiteDefaultAmount must be <= previous write downs" [11626,11681]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [13375,13399]
+    type_name: uint256 [13375,13382]
+    identifier: rewardsPerSecond [13383,13399]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [13375,13493]
+===
+------------
+===
+delete-node
+---
+number_literal: 60 [13485,13487]
+===
+===
+delete-node
+---
+number_literal: 365 [13474,13477]
+===
+===
+delete-node
+---
+arithmetic_operator: / [13472,13473]
+===
+===
+delete-node
+---
+number_literal: 60 [13490,13492]
+===
+===
+delete-node
+---
+binary_expression [13402,13492]
+===
+===
+delete-node
+---
+arithmetic_operator: / [13478,13479]
+===
+===
+delete-node
+---
+number_literal: 24 [13480,13482]
+===
+===
+delete-node
+---
+affectation_operator: = [13400,13401]
+===
+===
+delete-node
+---
+binary_expression [13402,13482]
+===
+===
+delete-node
+---
+call_expression [13402,13471]
+===
+===
+delete-node
+---
+member_expression: loansOutstanding.mulDiv [13402,13425]
+===
+===
+delete-node
+---
+binary_expression [13402,13477]
+===
+===
+delete-node
+---
+variable_declaration_statement [13375,13493]
+===
+===
+delete-node
+---
+binary_expression [13402,13487]
+===
+===
+delete-node
+---
+arithmetic_operator: / [13488,13489]
+===
+===
+delete-node
+---
+arithmetic_operator: / [13483,13484]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13431,13439]
+    binary_expression [13431,13439]
+        number_literal: 10 [13431,13433]
+        **: ** [13434,13436]
+        number_literal: 18 [13437,13439]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [13598,13626]
+    type_name: uint256 [13598,13605]
+    identifier: percentVaultSupplied [13606,13626]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [13598,13717]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [13627,13628]
+===
+===
+delete-node
+---
+member_expression: absoluteVaultSupplied.mulDiv [13629,13657]
+===
+===
+delete-node
+---
+variable_declaration_statement [13598,13717]
+===
+===
+delete-node
+---
+call_expression [13629,13716]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13668,13684]
+    identifier: loansOutstanding [13668,13684]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13686,13715]
+    member_expression: MathUpgradeable.Rounding.Down [13686,13715]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13785,13805]
+    identifier: percentVaultSupplied [13785,13805]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13817,13846]
+    member_expression: MathUpgradeable.Rounding.Down [13817,13846]
+
+New cluster:
+===
+delete-node
+---
+member_expression: florinTreasury.depositEUR [14752,14777]
+===
+------------
+===
+delete-node
+---
+member_expression: florinTreasury.depositEUR [14752,14777]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [18144,18204]
+===
+------------
+===
+delete-node
+---
+call_argument [18152,18175]
+===
+===
+delete-node
+---
+expression_statement [18144,18204]
+===
+===
+delete-node
+---
+identifier: require [18144,18151]
+===
+===
+delete-node
+---
+call_expression [18144,18203]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18177,18202]
+    string_literal [18177,18202]
+        string: "caller must be delegate" [18177,18202]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [18213,18281]
+===
+------------
+===
+delete-node
+---
+expression_statement [18213,18281]
+===
+===
+delete-node
+---
+call_argument [18221,18249]
+===
+===
+delete-node
+---
+call_expression [18213,18280]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18251,18279]
+    string_literal [18251,18279]
+        string: "unrecognized funding token" [18251,18279]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [18290,18378]
+===
+------------
+===
+delete-node
+---
+identifier: require [18290,18297]
+===
+===
+delete-node
+---
+call_argument [18298,18349]
+===
+===
+delete-node
+---
+call_expression [18290,18377]
+===
+===
+delete-node
+---
+expression_statement [18290,18378]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [18351,18376]
+    string_literal [18351,18376]
+        string: "no open funding request" [18351,18376]
+
+New cluster:
+===
+delete-node
+---
+memory: memory [18402,18408]
+===
+------------
+===
+delete-node
+---
+memory: memory [18402,18408]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [19585,19645]
+===
+------------
+===
+delete-node
+---
+expression_statement [19585,19645]
+===
+===
+delete-node
+---
+call_expression [19585,19644]
+===
+===
+delete-node
+---
+call_argument [19593,19612]
+===
+===
+delete-node
+---
+identifier: require [19585,19592]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19614,19643]
+    string_literal [19614,19643]
+        string: "amountRequested must be > 0" [19614,19643]
+
+New cluster:
+===
+delete-node
+---
+function_definition [19907,20551]
+===
+------------
+===
+delete-node
+---
+call_expression [20214,20298]
+===
+===
+delete-node
+---
+function_body [19984,20551]
+===
+===
+delete-node
+---
+visibility: public [19963,19969]
+===
+===
+delete-node
+---
+call_argument [20222,20261]
+===
+===
+delete-node
+---
+function: function [19907,19915]
+===
+===
+delete-node
+---
+identifier: require [20214,20221]
+===
+===
+delete-node
+---
+block_statement [20200,20429]
+===
+===
+delete-node
+---
+identifier: cancelFundingRequest [19916,19936]
+===
+===
+delete-node
+---
+if: if [20171,20173]
+===
+===
+delete-node
+---
+expression_statement [20214,20299]
+===
+===
+delete-node
+---
+function_definition [19907,20551]
+===
+===
+delete-node
+---
+if_statement [20171,20429]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [19994,20078]
+    call_expression [19994,20077]
+        identifier: require [19994,20001]
+        call_argument [20002,20043]
+            binary_expression [20002,20043]
+                identifier: fundingRequestId [20002,20018]
+                comparison_operator: < [20019,20020]
+                member_expression: fundingRequests.length [20021,20043]
+        call_argument [20045,20076]
+            string_literal [20045,20076]
+                string: "fundingRequest does not exist" [20045,20076]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20263,20297]
+    string_literal [20263,20297]
+        string: "caller must be owner or delegate" [20263,20297]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [20312,20419]
+    call_expression [20312,20418]
+        identifier: require [20312,20319]
+        call_argument [20320,20368]
+            binary_expression [20320,20368]
+                member_expression: fundingRequest.state [20320,20340]
+                comparison_operator: == [20341,20343]
+                member_expression: FundingRequestState.OPEN [20344,20368]
+        call_argument [20370,20417]
+            string_literal [20370,20417]
+                string: "delegate can only cancel OPEN fundingRequests" [20370,20417]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [21318,21402]
+===
+------------
+===
+delete-node
+---
+call_expression [21318,21401]
+===
+===
+delete-node
+---
+expression_statement [21318,21402]
+===
+===
+delete-node
+---
+identifier: require [21318,21325]
+===
+===
+delete-node
+---
+call_argument [21326,21367]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [21369,21400]
+    string_literal [21369,21400]
+        string: "fundingRequest does not exist" [21369,21400]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [21701,21769]
+===
+------------
+===
+delete-node
+---
+call_argument [21709,21737]
+===
+===
+delete-node
+---
+expression_statement [21701,21769]
+===
+===
+delete-node
+---
+call_expression [21701,21768]
+===
+===
+delete-node
+---
+identifier: require [21701,21708]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [21739,21767]
+    string_literal [21739,21767]
+        string: "unrecognized funding token" [21739,21767]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [21778,21881]
+===
+------------
+===
+delete-node
+---
+expression_statement [21778,21881]
+===
+===
+delete-node
+---
+call_expression [21778,21880]
+===
+===
+delete-node
+---
+call_argument [21786,21849]
+===
+===
+delete-node
+---
+identifier: require [21778,21785]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [21851,21879]
+    string_literal [21851,21879]
+        string: "no exchange rate available" [21851,21879]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [21991,22040]
+===
+------------
+===
+delete-node
+---
+identifier: require [21991,21998]
+===
+===
+delete-node
+---
+expression_statement [21991,22040]
+===
+===
+delete-node
+---
+call_argument [21999,22016]
+===
+===
+delete-node
+---
+call_expression [21991,22039]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [22018,22038]
+    string_literal [22018,22038]
+        string: "zero exchange rate" [22018,22038]
+
+New cluster:
+===
+delete-node
+---
+function_definition [22898,23142]
+===
+------------
+===
+delete-node
+---
+visibility: external [22969,22977]
+===
+===
+delete-node
+---
+function: function [22898,22906]
+===
+===
+delete-node
+---
+function_definition [22898,23142]
+===
+===
+delete-node
+---
+identifier: getFundingTokenChainLinkFeed [22907,22935]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [22936,22967]
+    type_name: IERC20Upgradeable [22936,22953]
+    identifier: _fundingToken [22954,22967]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [23021,23142]
+    return_statement [23031,23136]
+        return: return [23031,23037]
+        tuple_expression [23038,23135]
+            array_access [23039,23080]
+                identifier: fundingTokenChainLinkFeeds [23039,23065]
+                identifier: _fundingToken [23066,23079]
+            array_access [23082,23134]
+                identifier: invertFundingTokenChainLinkFeedAnswer [23082,23119]
+                identifier: _fundingToken [23120,23133]
+
+New cluster:
+===
+delete-node
+---
+function_definition [23737,23873]
+===
+------------
+===
+delete-node
+---
+function_definition [23737,23873]
+===
+===
+delete-node
+---
+visibility: public [23794,23800]
+===
+===
+delete-node
+---
+function: function [23737,23745]
+===
+===
+delete-node
+---
+identifier: isFundingToken [23746,23760]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [23761,23792]
+    type_name: IERC20Upgradeable [23761,23778]
+    identifier: _fundingToken [23779,23792]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [23821,23873]
+    return_statement [23831,23867]
+        return: return [23831,23837]
+        array_access [23838,23866]
+            identifier: fundingTokens [23838,23851]
+            identifier: _fundingToken [23852,23865]
+
+New cluster:
+===
+delete-node
+---
+function_definition [24156,24286]
+===
+------------
+===
+delete-node
+---
+identifier: isPrimaryFunder [24165,24180]
+===
+===
+delete-node
+---
+function_definition [24156,24286]
+===
+===
+delete-node
+---
+visibility: public [24205,24211]
+===
+===
+delete-node
+---
+function: function [24156,24164]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [24181,24203]
+    type_name: address [24181,24188]
+    identifier: primaryFunder_ [24189,24203]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [24232,24286]
+    return_statement [24242,24280]
+        return: return [24242,24248]
+        array_access [24249,24279]
+            identifier: primaryFunders [24249,24263]
+            identifier: primaryFunder_ [24264,24278]
+
+New cluster:
+===
+delete-node
+---
+function_definition [24485,24598]
+===
+------------
+===
+delete-node
+---
+visibility: external [24524,24532]
+===
+===
+delete-node
+---
+function_definition [24485,24598]
+===
+===
+delete-node
+---
+function: function [24485,24493]
+===
+===
+delete-node
+---
+identifier: isDelegate [24494,24504]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [24505,24522]
+    type_name: address [24505,24512]
+    identifier: delegate_ [24513,24522]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [24553,24598]
+    return_statement [24563,24592]
+        return: return [24563,24569]
+        binary_expression [24570,24591]
+            identifier: delegate [24570,24578]
+            comparison_operator: == [24579,24581]
+            identifier: delegate_ [24582,24591]
+

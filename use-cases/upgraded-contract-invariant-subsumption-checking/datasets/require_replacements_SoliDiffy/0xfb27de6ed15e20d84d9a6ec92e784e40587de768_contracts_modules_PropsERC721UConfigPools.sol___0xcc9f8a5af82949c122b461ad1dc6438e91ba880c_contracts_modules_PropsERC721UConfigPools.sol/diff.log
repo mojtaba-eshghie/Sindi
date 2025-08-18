@@ -1,0 +1,857 @@
+New cluster:
+===
+insert-node
+---
+identifier: PropsERC721UConfigPools [1641,1664]
+to
+contract_declaration [1633,20515]
+at 0
+------------
+===
+insert-node
+---
+identifier: PropsERC721UConfigPools [1641,1664]
+to
+contract_declaration [1633,20515]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1665,1667]
+to
+contract_declaration [1633,20515]
+at 1
+------------
+===
+insert-node
+---
+is: is [1665,1667]
+to
+contract_declaration [1633,20515]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3675,3693]
+    error: error [3675,3680]
+    identifier: MaxSupply [3681,3690]
+to
+contract_body [1990,20515]
+at 32
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3698,3719]
+    error: error [3698,3703]
+    identifier: MaxPerWallet [3704,3716]
+to
+contract_body [1990,20515]
+at 33
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3724,3746]
+    error: error [3724,3729]
+    identifier: MalformedArgs [3730,3743]
+to
+contract_body [1990,20515]
+at 34
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+error_declaration [3751,3779]
+    error: error [3751,3756]
+    identifier: ConfigurationSupply [3757,3776]
+to
+contract_body [1990,20515]
+at 35
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [7738,7930]
+    if: if [7738,7740]
+    binary_expression [7741,7905]
+        member_expression: _quantities.length != _proofs.length || _proofs.length != _allotments.length || _allotments.length != _allowlistIds.length || _allowlistIds.length [7741,7887]
+        comparison_operator: != [7888,7890]
+        member_expression: _config.length [7891,7905]
+    revert_statement [7907,7930]
+        revert: revert [7907,7913]
+        identifier: MalformedArgs [7914,7927]
+        revert_arguments [7927,7929]
+to
+function_body [7568,9878]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [9257,9354]
+to
+function_body [7568,9878]
+at 4
+------------
+===
+insert-node
+---
+if_statement [9257,9354]
+to
+function_body [7568,9878]
+at 4
+===
+insert-node
+---
+if: if [9257,9259]
+to
+if_statement [9257,9354]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [9411,9497]
+    if: if [9411,9413]
+    member_expression: nextTokenId + cart._quantity - 1 > config.mintConfig.maxSupply [9414,9476]
+    revert_statement [9478,9497]
+        revert: revert [9478,9484]
+        identifier: MaxSupply [9485,9494]
+        revert_arguments [9494,9496]
+to
+function_body [7568,9878]
+at 7
+
+New cluster:
+===
+insert-node
+---
+if_statement [11987,12091]
+to
+function_body [11645,11788]
+at 0
+------------
+===
+insert-node
+---
+revert_arguments [12088,12090]
+to
+revert_statement [12062,12091]
+at 2
+===
+insert-node
+---
+revert_statement [12062,12091]
+to
+if_statement [11987,12091]
+at 2
+===
+insert-node
+---
+if: if [11987,11989]
+to
+if_statement [11987,12091]
+at 0
+===
+insert-node
+---
+revert: revert [12062,12068]
+to
+revert_statement [12062,12091]
+at 0
+===
+insert-node
+---
+if_statement [11987,12091]
+to
+function_body [11645,11788]
+at 0
+
+New cluster:
+UPDATE from cart._quantity + minted[_msgSender()] <= config.mintConfig.maxPerWallet to cart._quantity + minted[_msgSender()] > config.mintConfig.maxPerWallet
+------------
+===
+update-node
+---
+member_expression: cart._quantity + minted[_msgSender()] <= config.mintConfig.maxPerWallet [8761,8832]
+replace cart._quantity + minted[_msgSender()] <= config.mintConfig.maxPerWallet by cart._quantity + minted[_msgSender()] > config.mintConfig.maxPerWallet
+
+New cluster:
+MOVE from if_statement [9257,9354]
+------------
+===
+move-tree
+---
+member_expression: cart._quantity + minted[_msgSender()] <= config.mintConfig.maxPerWallet [8761,8832]
+to
+if_statement [9257,9354]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [9332,9354]
+    revert: revert [9332,9338]
+    identifier: MaxPerWallet [9339,9351]
+    revert_arguments [9351,9353]
+to
+if_statement [9257,9354]
+at 2
+
+New cluster:
+===
+insert-node
+---
+augmented_assignment_expression [9363,9401]
+to
+expression_statement [8857,8944]
+at 0
+------------
+===
+insert-node
+---
+affectation_operator: += [9384,9386]
+to
+augmented_assignment_expression [9363,9401]
+at 1
+===
+insert-node
+---
+augmented_assignment_expression [9363,9401]
+to
+expression_statement [8857,8944]
+at 0
+===
+insert-node
+---
+array_access [9363,9383]
+to
+augmented_assignment_expression [9363,9401]
+at 0
+
+New cluster:
+MOVE from if_statement [11987,12091]
+------------
+===
+move-tree
+---
+array_access [11662,11733]
+    binary_expression [11662,11721]
+        binary_expression [11662,11700]
+            array_access [11662,11688]
+                identifier: mintedByConfig [11662,11676]
+                array_access [11677,11687]
+                    identifier: _config [11677,11684]
+                    number_literal: 0 [11685,11686]
+            arithmetic_operator: + [11689,11690]
+            identifier: _quantity [11691,11700]
+        comparison_operator: <= [11701,11703]
+        identifier: configSupplyLimit [11704,11721]
+    array_access [11722,11732]
+        identifier: _config [11722,11729]
+        number_literal: 0 [11730,11731]
+to
+if_statement [11987,12091]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [8512,8618]
+to
+block_statement [7716,8744]
+at 5
+------------
+===
+insert-node
+---
+array_access [8512,8599]
+to
+augmented_assignment_expression [8512,8617]
+at 0
+===
+insert-node
+---
+array_access [8512,8543]
+to
+array_access [8512,8599]
+at 0
+===
+insert-node
+---
+identifier: mintedByAllowlist [8512,8529]
+to
+array_access [8512,8543]
+at 0
+===
+insert-node
+---
+augmented_assignment_expression [8512,8617]
+to
+expression_statement [8512,8618]
+at 0
+===
+insert-node
+---
+affectation_operator: += [8600,8602]
+to
+augmented_assignment_expression [8512,8617]
+at 1
+===
+insert-node
+---
+expression_statement [8512,8618]
+to
+block_statement [7716,8744]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8632,8691]
+    augmented_assignment_expression [8632,8690]
+        array_access [8632,8672]
+            identifier: totalMintedByAllowlist [8632,8654]
+            array_access [8655,8671]
+                identifier: _allowlistIds [8655,8668]
+                identifier: i [8669,8670]
+        affectation_operator: += [8673,8675]
+        array_access [8676,8690]
+            identifier: _quantities [8676,8687]
+            identifier: i [8688,8689]
+to
+block_statement [7716,8744]
+at 6
+
+New cluster:
+UPDATE from nextTokenId + cart._quantity - 1 <= config.mintConfig.maxSupply to cart._quantity
+------------
+===
+update-node
+---
+member_expression: nextTokenId + cart._quantity - 1 <= config.mintConfig.maxSupply [8865,8928]
+replace nextTokenId + cart._quantity - 1 <= config.mintConfig.maxSupply by cart._quantity
+
+New cluster:
+MOVE from augmented_assignment_expression [9363,9401]
+------------
+===
+move-tree
+---
+member_expression: nextTokenId + cart._quantity - 1 <= config.mintConfig.maxSupply [8865,8928]
+to
+augmented_assignment_expression [9363,9401]
+at 2
+
+New cluster:
+UPDATE from _config to ConfigurationSupply
+------------
+===
+update-node
+---
+identifier: _config [11760,11767]
+replace _config by ConfigurationSupply
+
+New cluster:
+MOVE from revert_statement [12062,12091]
+------------
+===
+move-tree
+---
+identifier: _config [11760,11767]
+to
+revert_statement [12062,12091]
+at 1
+
+New cluster:
+UPDATE from require to minted
+------------
+===
+update-node
+---
+identifier: require [8857,8864]
+replace require by minted
+
+New cluster:
+MOVE from array_access [9363,9383]
+------------
+===
+move-tree
+---
+identifier: require [8857,8864]
+to
+array_access [9363,9383]
+at 0
+
+New cluster:
+MOVE from array_access [9363,9383]
+------------
+===
+move-tree
+---
+call_expression [11487,11499]
+    identifier: _msgSender [11487,11497]
+to
+array_access [9363,9383]
+at 1
+
+New cluster:
+UPDATE from <= to >
+------------
+===
+update-node
+---
+comparison_operator: <= [11701,11703]
+replace <= by >
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [8603,8617]
+    identifier: _quantities [8603,8614]
+    identifier: i [8615,8616]
+to
+augmented_assignment_expression [8512,8617]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_access [8565,8581]
+    identifier: _allowlistIds [8565,8578]
+    identifier: i [8579,8580]
+to
+array_access [8512,8599]
+at 1
+
+New cluster:
+MOVE from array_access [8512,8543]
+------------
+===
+move-tree
+---
+call_expression [11323,11335]
+    identifier: _msgSender [11323,11333]
+to
+array_access [8512,8543]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: PropsERC721UConfigPools [1642,1665]
+===
+------------
+===
+delete-node
+---
+identifier: PropsERC721UConfigPools [1642,1665]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1666,1668]
+===
+------------
+===
+delete-node
+---
+is: is [1666,1668]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8753,8848]
+===
+------------
+===
+delete-node
+---
+call_argument [8761,8832]
+===
+===
+delete-node
+---
+identifier: require [8753,8760]
+===
+===
+delete-node
+---
+expression_statement [8753,8848]
+===
+===
+delete-node
+---
+call_expression [8753,8847]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8834,8846]
+    string_literal [8834,8846]
+        string: "Max wallet" [8834,8846]
+
+New cluster:
+===
+delete-node
+---
+call_expression [8857,8943]
+===
+------------
+===
+delete-node
+---
+call_argument [8865,8928]
+===
+===
+delete-node
+---
+call_expression [8857,8943]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [8930,8942]
+    string_literal [8930,8942]
+        string: "Max supply" [8930,8942]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [11297,11403]
+===
+------------
+===
+delete-node
+---
+identifier: mintedByAllowlist [11297,11314]
+===
+===
+delete-node
+---
+array_access [11297,11389]
+===
+===
+delete-node
+---
+call_argument [11323,11335]
+===
+===
+delete-node
+---
+array_access [11297,11337]
+===
+===
+delete-node
+---
+identifier: _allowlistId [11359,11371]
+===
+===
+delete-node
+---
+affectation_operator: += [11390,11392]
+===
+===
+delete-node
+---
+expression_statement [11297,11403]
+===
+===
+delete-node
+---
+identifier: _quantity [11393,11402]
+===
+===
+delete-node
+---
+augmented_assignment_expression [11297,11402]
+===
+===
+delete-node
+---
+primitive_type: address [11315,11322]
+===
+===
+delete-node
+---
+type_cast_expression [11315,11336]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [11413,11463]
+    augmented_assignment_expression [11413,11462]
+        array_access [11413,11449]
+            identifier: totalMintedByAllowlist [11413,11435]
+            identifier: _allowlistId [11436,11448]
+        affectation_operator: += [11450,11452]
+        identifier: _quantity [11453,11462]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [11472,11515]
+===
+------------
+===
+delete-node
+---
+array_access [11472,11501]
+===
+===
+delete-node
+---
+primitive_type: address [11479,11486]
+===
+===
+delete-node
+---
+type_cast_expression [11479,11500]
+===
+===
+delete-node
+---
+expression_statement [11472,11515]
+===
+===
+delete-node
+---
+augmented_assignment_expression [11472,11514]
+===
+===
+delete-node
+---
+identifier: _quantity [11505,11514]
+===
+===
+delete-node
+---
+identifier: minted [11472,11478]
+===
+===
+delete-node
+---
+affectation_operator: += [11502,11504]
+===
+===
+delete-node
+---
+call_argument [11487,11499]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [11654,11782]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [11768,11769]
+===
+===
+delete-node
+---
+array_access [11760,11770]
+===
+===
+delete-node
+---
+call_argument [11743,11779]
+===
+===
+delete-node
+---
+type_cast_expression [11735,11780]
+===
+===
+delete-node
+---
+member_expression: abi.encodePacked [11743,11759]
+===
+===
+delete-node
+---
+identifier: require [11654,11661]
+===
+===
+delete-node
+---
+expression_statement [11654,11782]
+===
+===
+delete-node
+---
+primitive_type: string [11735,11741]
+===
+===
+delete-node
+---
+call_expression [11743,11779]
+===
+===
+delete-node
+---
+call_expression [11654,11781]
+===
+===
+delete-node
+---
+call_argument [11735,11780]
+===
+===
+delete-node
+---
+call_argument [11760,11770]
+===
+===
+delete-node
+---
+call_argument [11662,11733]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11772,11778]
+    string_literal [11772,11778]
+        string: " max" [11772,11778]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [16959,17298]
+    function: function [16959,16967]
+    identifier: isUniqueArray [16968,16981]
+    parameter [16982,17007]
+        type_name: uint256[] [16982,16991]
+        calldata: calldata [16992,17000]
+        identifier: _array [17001,17007]
+    visibility: internal [17017,17025]
+    state_mutability [17034,17038]
+        pure: pure [17034,17038]
+    return_type_definition [17047,17061]
+        returns: returns [17047,17054]
+        parameter [17056,17060]
+            type_name: bool [17056,17060]
+    function_body [17066,17298]
+        for_statement [17076,17271]
+            for: for [17076,17079]
+            variable_declaration_statement [17081,17095]
+                variable_declaration [17081,17090]
+                    type_name: uint256 [17081,17088]
+                    identifier: i [17089,17090]
+                affectation_operator: = [17091,17092]
+                number_literal: 0 [17093,17094]
+            expression_statement [17096,17114]
+                binary_expression [17096,17113]
+                    identifier: i [17096,17097]
+                    comparison_operator: < [17098,17099]
+                    member_expression: _array.length [17100,17113]
+            update_expression [17115,17118]
+                identifier: i [17115,17116]
+                increment_operator: ++ [17116,17118]
+            block_statement [17120,17271]
+                for_statement [17134,17261]
+                    for: for [17134,17137]
+                    variable_declaration_statement [17139,17153]
+                        variable_declaration [17139,17148]
+                            type_name: uint256 [17139,17146]
+                            identifier: j [17147,17148]
+                        affectation_operator: = [17149,17150]
+                        number_literal: 0 [17151,17152]
+                    expression_statement [17154,17172]
+                        binary_expression [17154,17171]
+                            identifier: j [17154,17155]
+                            comparison_operator: < [17156,17157]
+                            member_expression: _array.length [17158,17171]
+                    update_expression [17173,17176]
+                        identifier: j [17173,17174]
+                        increment_operator: ++ [17174,17176]
+                    block_statement [17178,17261]
+                        if_statement [17196,17247]
+                            if: if [17196,17198]
+                            binary_expression [17200,17232]
+                                array_access [17200,17222]
+                                    binary_expression [17200,17219]
+                                        array_access [17200,17209]
+                                            identifier: _array [17200,17206]
+                                            identifier: i [17207,17208]
+                                        comparison_operator: == [17210,17212]
+                                        identifier: _array [17213,17219]
+                                    identifier: j [17220,17221]
+                                logical_operator: && [17223,17225]
+                                binary_expression [17226,17232]
+                                    identifier: i [17226,17227]
+                                    comparison_operator: != [17228,17230]
+                                    identifier: j [17231,17232]
+                            return_statement [17234,17247]
+                                return: return [17234,17240]
+                                boolean_literal: false [17241,17246]
+        return_statement [17280,17292]
+            return: return [17280,17286]
+            boolean_literal: true [17287,17291]
+

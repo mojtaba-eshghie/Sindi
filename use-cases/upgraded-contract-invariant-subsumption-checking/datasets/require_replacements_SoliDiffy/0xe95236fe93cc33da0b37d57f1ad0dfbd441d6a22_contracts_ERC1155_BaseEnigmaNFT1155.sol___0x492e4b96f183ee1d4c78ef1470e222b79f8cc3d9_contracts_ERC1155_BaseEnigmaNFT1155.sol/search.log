@@ -1,0 +1,5 @@
+results/differencing_results/0xe95236fe93cc33da0b37d57f1ad0dfbd441d6a22_contracts_ERC1155_BaseEnigmaNFT1155.sol___0x492e4b96f183ee1d4c78ef1470e222b79f8cc3d9_contracts_ERC1155_BaseEnigmaNFT1155.sol.log:
+  380  identifier: require [7291,7298]
+  381: replace require by recipient
+  382  
+

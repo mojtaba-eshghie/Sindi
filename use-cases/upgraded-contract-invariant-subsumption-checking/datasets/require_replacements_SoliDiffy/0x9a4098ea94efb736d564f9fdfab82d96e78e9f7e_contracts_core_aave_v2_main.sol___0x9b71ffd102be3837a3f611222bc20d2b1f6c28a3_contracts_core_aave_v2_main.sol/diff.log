@@ -1,0 +1,609 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [5492,6935]
+    function: function [5492,5500]
+    identifier: submitAutomationRequestMock [5501,5528]
+    parameter [5538,5551]
+        type_name: address [5538,5545]
+        identifier: user_ [5546,5551]
+    parameter [5561,5586]
+        type_name: uint256 [5561,5568]
+        identifier: safeHealthFactor_ [5569,5586]
+    parameter [5596,5626]
+        type_name: uint256 [5596,5603]
+        identifier: thresholdHealthFactor_ [5604,5626]
+    visibility: external [5633,5641]
+    modifier_invocation [5642,5656]
+        identifier: onlyDSA [5642,5649]
+        call_argument [5650,5655]
+            identifier: user_ [5650,5655]
+    function_body [5657,6935]
+        expression_statement [5667,5779]
+            call_expression [5667,5778]
+                identifier: require [5667,5674]
+                call_argument [5688,5724]
+                    member_expression: safeHealthFactor_ < type(uint72).max [5688,5724]
+                call_argument [5738,5768]
+                    string_literal [5738,5768]
+                        string: "safe-health-factor-too-large" [5738,5768]
+        expression_statement [5788,5977]
+            call_expression [5788,5976]
+                identifier: require [5788,5795]
+                call_argument [5809,5916]
+                    binary_expression [5809,5916]
+                        binary_expression [5809,5851]
+                            identifier: thresholdHealthFactor_ [5809,5831]
+                            comparison_operator: < [5832,5833]
+                            identifier: safeHealthFactor_ [5834,5851]
+                        logical_operator: && [5852,5854]
+                        binary_expression [5871,5916]
+                            identifier: thresholdHealthFactor_ [5871,5893]
+                            comparison_operator: >= [5894,5896]
+                            identifier: _minimumThresholdHf [5897,5916]
+                call_argument [5930,5966]
+                    string_literal [5930,5966]
+                        string: "thresholdHealthFactor-out-of-range" [5930,5966]
+        variable_declaration_statement [5987,6030]
+            variable_declaration [5987,6006]
+                type_name: uint32 [5987,5993]
+                identifier: userLatestId [5994,6006]
+            affectation_operator: = [6007,6008]
+            array_access [6009,6029]
+                identifier: _userLatestId [6009,6022]
+                identifier: user_ [6023,6028]
+        expression_statement [6039,6217]
+            call_expression [6039,6216]
+                identifier: require [6039,6046]
+                call_argument [6060,6160]
+                    binary_expression [6060,6160]
+                        member_expression: userLatestId == 0 ||                 _userAutomationConfigs[userLatestId].status [6060,6140]
+                        comparison_operator: != [6141,6143]
+                        member_expression: Status.AUTOMATED [6144,6160]
+                call_argument [6174,6206]
+                    string_literal [6174,6206]
+                        string: "position-already-in-protection" [6174,6206]
+        variable_declaration_statement [6227,6274]
+            variable_declaration [6227,6248]
+                type_name: uint256 [6227,6234]
+                identifier: healthFactor_ [6235,6248]
+            affectation_operator: = [6249,6250]
+            call_expression [6251,6273]
+                identifier: getHealthFactor [6251,6266]
+                call_argument [6267,6272]
+                    identifier: user_ [6267,6272]
+        expression_statement [6283,6418]
+            call_expression [6283,6417]
+                identifier: require [6283,6290]
+                call_argument [6304,6337]
+                    member_expression: healthFactor_ < type(uint128).max [6304,6337]
+                call_argument [6351,6407]
+                    string_literal [6351,6407]
+                        string: "current-health-factor-too-large-for-automation-request" [6351,6407]
+        emit_statement [6428,6623]
+            identifier: LogSubmittedAutomation [6433,6455]
+            call_argument [6469,6474]
+                identifier: user_ [6469,6474]
+            call_argument [6488,6491]
+                identifier: _id [6488,6491]
+            call_argument [6505,6531]
+                type_cast_expression [6505,6531]
+                    primitive_type: uint128 [6505,6512]
+                    call_argument [6513,6530]
+                        identifier: safeHealthFactor_ [6513,6530]
+            call_argument [6545,6576]
+                type_cast_expression [6545,6576]
+                    primitive_type: uint128 [6545,6552]
+                    call_argument [6553,6575]
+                        identifier: thresholdHealthFactor_ [6553,6575]
+            call_argument [6590,6612]
+                type_cast_expression [6590,6612]
+                    primitive_type: uint128 [6590,6597]
+                    call_argument [6598,6611]
+                        identifier: healthFactor_ [6598,6611]
+        expression_statement [6633,6877]
+            assignment_expression [6633,6876]
+                array_access [6633,6660]
+                    identifier: _userAutomationConfigs [6633,6655]
+                    identifier: _id [6656,6659]
+                affectation_operator: = [6661,6662]
+                call_expression [6663,6876]
+                    identifier: Automation [6663,6673]
+                    call_argument [6674,6875]
+                        call_struct_argument [6688,6699]
+                            identifier: user [6688,6692]
+                            :: : [6692,6693]
+                            identifier: user_ [6694,6699]
+                        call_struct_argument [6713,6721]
+                            identifier: nonce [6713,6718]
+                            :: : [6718,6719]
+                            number_literal: 0 [6720,6721]
+                        call_struct_argument [6735,6759]
+                            identifier: status [6735,6741]
+                            :: : [6741,6742]
+                            member_expression: Status.AUTOMATED [6743,6759]
+                        call_struct_argument [6773,6807]
+                            identifier: safeHF [6773,6779]
+                            :: : [6779,6780]
+                            type_cast_expression [6781,6807]
+                                primitive_type: uint128 [6781,6788]
+                                call_argument [6789,6806]
+                                    identifier: safeHealthFactor_ [6789,6806]
+                        call_struct_argument [6821,6865]
+                            identifier: thresholdHF [6821,6832]
+                            :: : [6832,6833]
+                            type_cast_expression [6834,6865]
+                                primitive_type: uint128 [6834,6841]
+                                call_argument [6842,6864]
+                                    identifier: thresholdHealthFactor_ [6842,6864]
+        expression_statement [6887,6914]
+            assignment_expression [6887,6913]
+                array_access [6887,6907]
+                    identifier: _userLatestId [6887,6900]
+                    identifier: user_ [6901,6906]
+                affectation_operator: = [6908,6909]
+                identifier: _id [6910,6913]
+        expression_statement [6923,6929]
+            update_expression [6923,6928]
+                identifier: _id [6923,6926]
+                increment_operator: ++ [6926,6928]
+to
+contract_body [3443,9001]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [8729,8747]
+    type_name: bool [8729,8733]
+    identifier: onCastRevert_ [8734,8747]
+to
+function_definition [7178,8999]
+at 5
+
+New cluster:
+UPDATE from params to params_
+------------
+===
+update-node
+---
+identifier: params [7917,7923]
+replace params by params_
+===
+update-node
+---
+identifier: params [7303,7309]
+replace params by params_
+===
+update-node
+---
+identifier: params [8818,8824]
+replace params by params_
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [9808,9863]
+to
+function_body [7387,8999]
+at 8
+------------
+===
+insert-node
+---
+affectation_operator: = [9822,9823]
+to
+variable_declaration_statement [9808,9863]
+at 1
+===
+insert-node
+---
+variable_declaration [9808,9821]
+to
+variable_declaration_statement [9808,9863]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [9808,9863]
+to
+function_body [7387,8999]
+at 8
+===
+insert-node
+---
+type_name: bool [9808,9812]
+to
+variable_declaration [9808,9821]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [9873,10954]
+to
+function_body [7387,8999]
+at 9
+------------
+===
+insert-node
+---
+emit_statement [9938,10162]
+to
+if_statement [9902,10213]
+at 2
+===
+insert-node
+---
+else: else [10175,10179]
+to
+if_statement [9902,10213]
+at 3
+===
+insert-node
+---
+else: else [10224,10228]
+to
+if_statement [9873,10954]
+at 3
+===
+insert-node
+---
+if: if [9873,9875]
+to
+if_statement [9873,10954]
+at 0
+===
+insert-node
+---
+block_statement [10229,10954]
+to
+if_statement [9873,10954]
+at 4
+===
+insert-node
+---
+if_statement [9902,10213]
+to
+block_statement [9888,10223]
+at 0
+===
+insert-node
+---
+if_statement [9873,10954]
+to
+function_body [7387,8999]
+at 9
+===
+insert-node
+---
+identifier: LogExecutionFailedAutomation [9943,9971]
+to
+emit_statement [9938,10162]
+at 0
+===
+insert-node
+---
+block_statement [9888,10223]
+to
+if_statement [9873,10954]
+at 2
+===
+insert-node
+---
+if: if [9902,9904]
+to
+if_statement [9902,10213]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [9808,9863]
+------------
+===
+move-tree
+---
+call_expression [8337,8375]
+    identifier: cast [8337,8341]
+    call_argument [8342,8365]
+        call_expression [8342,8365]
+            identifier: AccountInterface [8342,8358]
+            call_argument [8359,8364]
+                identifier: user_ [8359,8364]
+    call_argument [8367,8374]
+        identifier: spells_ [8367,8374]
+to
+variable_declaration_statement [9808,9863]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [9877,9886]
+    !: ! [9877,9878]
+    identifier: success_ [9878,9886]
+to
+if_statement [9873,10954]
+at 1
+
+New cluster:
+UPDATE from require to success_
+------------
+===
+update-node
+---
+identifier: require [8329,8336]
+replace require by success_
+
+New cluster:
+MOVE from variable_declaration [9808,9821]
+------------
+===
+move-tree
+---
+identifier: require [8329,8336]
+to
+variable_declaration [9808,9821]
+at 1
+===
+move-tree
+---
+call_argument [8377,8390]
+    string_literal [8377,8390]
+        string: "cast-failed" [8377,8390]
+to
+emit_statement [9938,10162]
+at 1
+
+New cluster:
+MOVE from block_statement [10229,10954]
+------------
+===
+move-tree
+---
+variable_declaration_statement [8439,8490]
+    variable_declaration [8439,8455]
+        type_name: uint128 [8439,8446]
+        identifier: finalHf_ [8447,8455]
+    affectation_operator: = [8456,8457]
+    type_cast_expression [8458,8489]
+        primitive_type: uint128 [8458,8465]
+        call_argument [8466,8488]
+            call_expression [8466,8488]
+                identifier: getHealthFactor [8466,8481]
+                call_argument [8482,8487]
+                    identifier: user_ [8482,8487]
+to
+block_statement [10229,10954]
+at 0
+===
+move-tree
+---
+expression_statement [8500,8632]
+    call_expression [8500,8631]
+        identifier: require [8500,8507]
+        call_argument [8521,8542]
+            binary_expression [8521,8542]
+                identifier: finalHf_ [8521,8529]
+                comparison_operator: > [8530,8531]
+                identifier: initialHf_ [8532,8542]
+        call_argument [8556,8621]
+            string_literal [8556,8621]
+                string: "automation-failed: Final-Health-Factor <= Initial-Health-factor" [8556,8621]
+to
+block_statement [10229,10954]
+at 1
+===
+move-tree
+---
+expression_statement [8401,8429]
+    assignment_expression [8401,8428]
+        member_expression: params.swap.callData [8401,8421]
+        affectation_operator: = [8422,8423]
+        string_literal [8424,8428]
+            string: "0x" [8424,8428]
+to
+block_statement [10229,10954]
+at 3
+===
+move-tree
+---
+emit_statement [8722,8953]
+    identifier: LogExecutedAutomation [8727,8748]
+    call_argument [8762,8767]
+        identifier: user_ [8762,8767]
+    call_argument [8781,8784]
+        identifier: id_ [8781,8784]
+    call_argument [8798,8804]
+        identifier: nonce_ [8798,8804]
+    call_argument [8818,8824]
+        identifier: params [8818,8824]
+    call_argument [8838,8845]
+        identifier: isSafe_ [8838,8845]
+    call_argument [8859,8873]
+        identifier: _automationFee [8859,8873]
+    call_argument [8887,8896]
+        identifier: metadata_ [8887,8896]
+    call_argument [8910,8918]
+        identifier: finalHf_ [8910,8918]
+    call_argument [8932,8942]
+        identifier: initialHf_ [8932,8942]
+to
+block_statement [10229,10954]
+at 4
+===
+move-tree
+---
+variable_declaration_statement [8642,8712]
+    variable_declaration [8642,8654]
+        type_name: bool [8642,8646]
+        identifier: isSafe_ [8647,8654]
+    affectation_operator: = [8655,8656]
+    binary_expression [8657,8711]
+        identifier: finalHf_ [8657,8665]
+        comparison_operator: >= [8666,8668]
+        parenthesized_expression [8669,8711]
+            binary_expression [8670,8710]
+                member_expression: _userAutomationConfig.safeHF [8670,8698]
+                arithmetic_operator: - [8699,8700]
+                identifier: _bufferHf [8701,8710]
+to
+block_statement [10229,10954]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [9906,9920]
+    !: ! [9906,9907]
+    identifier: onCastRevert_ [9907,9920]
+to
+if_statement [9902,10213]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+revert_statement [10180,10213]
+    revert: revert [10180,10186]
+    parenthesized_expression [10186,10212]
+        string_literal [10187,10211]
+            string: "automation-cast-failed" [10187,10211]
+to
+if_statement [9902,10213]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10020,10023]
+    identifier: id_ [10020,10023]
+to
+emit_statement [9938,10162]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10045,10051]
+    identifier: nonce_ [10045,10051]
+to
+emit_statement [9938,10162]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10073,10080]
+    identifier: params_ [10073,10080]
+to
+emit_statement [9938,10162]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10102,10111]
+    identifier: metadata_ [10102,10111]
+to
+emit_statement [9938,10162]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [10133,10143]
+    identifier: initialHf_ [10133,10143]
+to
+emit_statement [9938,10162]
+at 6
+
+New cluster:
+UPDATE from params.swap.callData to params_.swap.callData
+------------
+===
+update-node
+---
+member_expression: params.swap.callData [8401,8421]
+replace params.swap.callData by params_.swap.callData
+
+New cluster:
+===
+insert-node
+---
+identifier: user_ [9993,9998]
+to
+call_argument [8377,8390]
+at 0
+------------
+===
+insert-node
+---
+identifier: user_ [9993,9998]
+to
+call_argument [8377,8390]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [8377,8390]
+    string: "cast-failed" [8377,8390]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [8329,8392]
+===
+------------
+===
+delete-node
+---
+call_expression [8329,8391]
+===
+===
+delete-node
+---
+expression_statement [8329,8392]
+===
+===
+delete-node
+---
+call_argument [8337,8375]
+===
+

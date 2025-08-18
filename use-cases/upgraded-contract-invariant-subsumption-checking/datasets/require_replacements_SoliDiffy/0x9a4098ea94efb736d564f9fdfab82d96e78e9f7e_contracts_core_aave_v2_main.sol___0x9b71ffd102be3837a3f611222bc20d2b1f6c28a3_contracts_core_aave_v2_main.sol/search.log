@@ -1,0 +1,5 @@
+results/differencing_results/0x9a4098ea94efb736d564f9fdfab82d96e78e9f7e_contracts_core_aave_v2_main.sol___0x9b71ffd102be3837a3f611222bc20d2b1f6c28a3_contracts_core_aave_v2_main.sol.log:
+  345  identifier: require [8329,8336]
+  346: replace require by success_
+  347  
+

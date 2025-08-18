@@ -1,0 +1,5 @@
+results/differencing_results/0x75b3803ade7d1710328b85f28cc8543bb94647f2_contracts_TheRumClub.sol___0x4e3de613f7174c69c12ba47862c4601ef2b12603_contracts_TheRumClub.sol.log:
+  75  identifier: require [5426,5433]
+  76: replace require by _burn
+  77  
+

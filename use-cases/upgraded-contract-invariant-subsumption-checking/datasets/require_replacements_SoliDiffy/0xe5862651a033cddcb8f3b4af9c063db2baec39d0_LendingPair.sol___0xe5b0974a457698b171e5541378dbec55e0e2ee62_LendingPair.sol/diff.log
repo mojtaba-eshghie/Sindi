@@ -1,0 +1,268 @@
+New cluster:
+===
+insert-node
+---
+identifier: LendingPair [582,593]
+to
+contract_declaration [573,28050]
+at 0
+------------
+===
+insert-node
+---
+identifier: LendingPair [582,593]
+to
+contract_declaration [573,28050]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [594,596]
+to
+contract_declaration [573,28050]
+at 1
+------------
+===
+insert-node
+---
+is: is [594,596]
+to
+contract_declaration [573,28050]
+at 1
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [27630,27675]
+to
+function_body [27624,27974]
+at 0
+------------
+===
+insert-node
+---
+variable_declaration_statement [27630,27675]
+to
+function_body [27624,27974]
+at 0
+===
+insert-node
+---
+affectation_operator: = [27647,27648]
+to
+variable_declaration_statement [27630,27675]
+at 1
+===
+insert-node
+---
+variable_declaration [27630,27646]
+to
+variable_declaration_statement [27630,27675]
+at 0
+===
+insert-node
+---
+type_name: uint [27630,27634]
+to
+variable_declaration [27630,27646]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [27681,27823]
+to
+function_body [27624,27974]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [27696,27766]
+to
+call_argument [27696,27766]
+at 0
+===
+insert-node
+---
+identifier: require [27681,27688]
+to
+call_expression [27681,27822]
+at 0
+===
+insert-node
+---
+logical_operator: || [27713,27715]
+to
+binary_expression [27696,27766]
+at 1
+===
+insert-node
+---
+call_argument [27696,27766]
+to
+call_expression [27681,27822]
+at 1
+===
+insert-node
+---
+expression_statement [27681,27823]
+to
+function_body [27624,27974]
+at 1
+===
+insert-node
+---
+call_expression [27681,27822]
+to
+expression_statement [27681,27823]
+at 0
+===
+insert-node
+---
+identifier: accountDebt [27716,27727]
+to
+binary_expression [27716,27766]
+at 0
+===
+insert-node
+---
+binary_expression [27716,27766]
+to
+binary_expression [27696,27766]
+at 2
+
+New cluster:
+MOVE from binary_expression [27716,27766]
+------------
+===
+move-tree
+---
+comparison_operator: >= [27671,27673]
+to
+binary_expression [27716,27766]
+at 1
+===
+move-tree
+---
+call_expression [27645,27670]
+    identifier: _debtOf [27645,27652]
+    call_argument [27653,27659]
+        identifier: _token [27653,27659]
+    call_argument [27661,27669]
+        identifier: _account [27661,27669]
+to
+variable_declaration_statement [27630,27675]
+at 2
+===
+move-tree
+---
+call_expression [27674,27709]
+    member_expression: lendingController.minBorrow [27674,27701]
+    call_argument [27702,27708]
+        identifier: _token [27702,27708]
+to
+binary_expression [27716,27766]
+at 2
+
+New cluster:
+UPDATE from require to accountDebt
+------------
+===
+update-node
+---
+identifier: require [27630,27637]
+replace require by accountDebt
+
+New cluster:
+MOVE from call_expression [27681,27822]
+------------
+===
+move-tree
+---
+call_argument [27717,27759]
+    string_literal [27717,27759]
+        string: "LendingPair: borrow amount below minimum" [27717,27759]
+to
+call_expression [27681,27822]
+at 2
+===
+move-tree
+---
+identifier: require [27630,27637]
+to
+variable_declaration [27630,27646]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [27696,27712]
+    identifier: accountDebt [27696,27707]
+    comparison_operator: == [27708,27710]
+    number_literal: 0 [27711,27712]
+to
+binary_expression [27696,27766]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: LendingPair [582,593]
+===
+------------
+===
+delete-node
+---
+identifier: LendingPair [582,593]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [594,596]
+===
+------------
+===
+delete-node
+---
+is: is [594,596]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [27630,27766]
+===
+------------
+===
+delete-node
+---
+binary_expression [27645,27709]
+===
+===
+delete-node
+---
+call_argument [27645,27709]
+===
+===
+delete-node
+---
+call_expression [27630,27765]
+===
+===
+delete-node
+---
+expression_statement [27630,27766]
+===
+

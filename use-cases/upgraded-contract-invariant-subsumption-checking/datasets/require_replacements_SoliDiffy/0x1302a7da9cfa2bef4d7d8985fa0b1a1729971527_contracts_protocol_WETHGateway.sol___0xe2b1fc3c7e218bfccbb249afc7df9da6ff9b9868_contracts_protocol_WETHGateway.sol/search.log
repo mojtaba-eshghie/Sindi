@@ -1,0 +1,5 @@
+results/differencing_results/0x1302a7da9cfa2bef4d7d8985fa0b1a1729971527_contracts_protocol_WETHGateway.sol___0xe2b1fc3c7e218bfccbb249afc7df9da6ff9b9868_contracts_protocol_WETHGateway.sol.log:
+  264  identifier: require [3067,3074]
+  265: replace require by _checkValidCallerAndOnBehalfOf
+  266  
+

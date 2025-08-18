@@ -1,0 +1,5 @@
+results/differencing_results/0x24abed1b1d122da203539d880ed20944a9bd1cd1_contracts_Vault.sol___0x4251a1bcf9d3d89a722133d5a90ddd6b6034698b_contracts_Vault.sol.log:
+  849  identifier: require [5474,5481]
+  850: replace require by Burn
+  851  
+

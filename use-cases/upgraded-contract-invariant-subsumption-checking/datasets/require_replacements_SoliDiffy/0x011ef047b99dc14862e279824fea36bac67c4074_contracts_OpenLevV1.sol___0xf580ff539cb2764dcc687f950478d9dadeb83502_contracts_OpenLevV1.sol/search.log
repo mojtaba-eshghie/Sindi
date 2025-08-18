@@ -1,0 +1,9 @@
+results/differencing_results/0x011ef047b99dc14862e279824fea36bac67c4074_contracts_OpenLevV1.sol___0xf580ff539cb2764dcc687f950478d9dadeb83502_contracts_OpenLevV1.sol.log:
+  3667  identifier: require [12407,12414]
+  3668: replace require by buySuccess
+  3669  
+
+  6078  identifier: require [28795,28802]
+  6079: replace require by feesRate
+  6080  
+

@@ -1,0 +1,338 @@
+New cluster:
+===
+insert-node
+---
+function_definition [3156,3283]
+to
+contract_body [411,4861]
+at 8
+------------
+===
+insert-node
+---
+function_body [3245,3283]
+to
+function_definition [3156,3283]
+at 5
+===
+insert-node
+---
+function_definition [3156,3283]
+to
+contract_body [411,4861]
+at 8
+
+New cluster:
+===
+insert-node
+---
+function_definition [3356,3453]
+to
+contract_body [411,4861]
+at 9
+------------
+===
+insert-node
+---
+identifier: setBridge [3365,3374]
+to
+function_definition [3356,3453]
+at 1
+===
+insert-node
+---
+visibility: external [3394,3402]
+to
+function_definition [3356,3453]
+at 3
+===
+insert-node
+---
+function_body [3413,3453]
+to
+function_definition [3356,3453]
+at 5
+===
+insert-node
+---
+function: function [3356,3364]
+to
+function_definition [3356,3453]
+at 0
+===
+insert-node
+---
+function_definition [3356,3453]
+to
+contract_body [411,4861]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [4997,5127]
+    function: function [4997,5005]
+    identifier: _setBridge [5006,5016]
+    parameter [5017,5034]
+        type_name: address [5017,5024]
+        identifier: newBridge [5025,5034]
+    visibility: private [5036,5043]
+    function_body [5044,5127]
+        emit_statement [5055,5090]
+            identifier: SetBridge [5060,5069]
+            call_argument [5070,5079]
+                identifier: newBridge [5070,5079]
+            call_argument [5081,5088]
+                identifier: _bridge [5081,5088]
+        expression_statement [5100,5120]
+            assignment_expression [5100,5119]
+                identifier: _bridge [5100,5107]
+                affectation_operator: = [5108,5109]
+                identifier: newBridge [5110,5119]
+to
+contract_body [411,4861]
+at 16
+
+New cluster:
+MOVE from function_definition [3156,3283]
+------------
+===
+move-tree
+---
+parameter [3202,3217]
+    type_name: address [3202,3209]
+    identifier: bridge_ [3210,3217]
+to
+function_definition [3156,3283]
+at 2
+===
+move-tree
+---
+function: function [3156,3164]
+to
+function_definition [3156,3283]
+at 0
+===
+move-tree
+---
+visibility: internal [3219,3227]
+to
+function_definition [3156,3283]
+at 3
+===
+move-tree
+---
+modifier_invocation [3228,3244]
+    identifier: onlyInitializing [3228,3244]
+to
+function_definition [3156,3283]
+at 4
+===
+move-tree
+---
+identifier: __BRLCTokenBridgeable_init_unchained [3165,3201]
+to
+function_definition [3156,3283]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [3375,3392]
+    type_name: address [3375,3382]
+    identifier: newBridge [3383,3392]
+to
+function_definition [3356,3453]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [3403,3412]
+    identifier: onlyOwner [3403,3412]
+to
+function_definition [3356,3453]
+at 4
+
+New cluster:
+MOVE from function_body [3245,3283]
+------------
+===
+move-tree
+---
+expression_statement [3256,3287]
+    call_expression [3256,3286]
+        identifier: require [3256,3263]
+        call_argument [3264,3285]
+            binary_expression [3264,3285]
+                identifier: bridge_ [3264,3271]
+                comparison_operator: != [3272,3274]
+                type_cast_expression [3275,3285]
+                    primitive_type: address [3275,3282]
+                    call_argument [3283,3284]
+                        number_literal: 0 [3283,3284]
+to
+function_body [3245,3283]
+at 0
+===
+move-tree
+---
+expression_statement [3297,3315]
+    assignment_expression [3297,3314]
+        identifier: _bridge [3297,3304]
+        affectation_operator: = [3305,3306]
+        identifier: bridge_ [3307,3314]
+to
+function_body [3413,3453]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [3424,3445]
+to
+expression_statement [3297,3315]
+at 0
+------------
+===
+insert-node
+---
+call_expression [3424,3445]
+to
+expression_statement [3297,3315]
+at 0
+===
+insert-node
+---
+call_argument [3435,3444]
+to
+call_expression [3424,3445]
+at 1
+
+New cluster:
+UPDATE from _bridge to _setBridge
+------------
+===
+update-node
+---
+identifier: _bridge [3297,3304]
+replace _bridge by _setBridge
+===
+update-node
+---
+identifier: require [3256,3263]
+replace require by _setBridge
+
+New cluster:
+MOVE from call_expression [3424,3445]
+------------
+===
+move-tree
+---
+identifier: _bridge [3297,3304]
+to
+call_expression [3424,3445]
+at 0
+===
+move-tree
+---
+identifier: bridge_ [3307,3314]
+to
+call_argument [3435,3444]
+at 0
+
+New cluster:
+MOVE from call_argument [3264,3285]
+------------
+===
+move-tree
+---
+identifier: bridge_ [3264,3271]
+to
+call_argument [3264,3285]
+at 0
+
+New cluster:
+UPDATE from bridge_ to newBridge
+------------
+===
+update-node
+---
+identifier: bridge_ [3307,3314]
+replace bridge_ by newBridge
+
+New cluster:
+===
+delete-node
+---
+binary_expression [3264,3285]
+===
+------------
+===
+delete-node
+---
+comparison_operator: != [3272,3274]
+===
+===
+delete-node
+---
+binary_expression [3264,3285]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+type_cast_expression [3275,3285]
+    primitive_type: address [3275,3282]
+    call_argument [3283,3284]
+        number_literal: 0 [3283,3284]
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [3297,3314]
+===
+------------
+===
+delete-node
+---
+assignment_expression [3297,3314]
+===
+===
+delete-node
+---
+affectation_operator: = [3305,3306]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [3156,3322]
+===
+------------
+===
+delete-node
+---
+function_body [3245,3322]
+===
+===
+delete-node
+---
+function_definition [3156,3322]
+===
+

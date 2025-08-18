@@ -1,0 +1,5 @@
+results/differencing_results/0x4b2cf3be8677096310b32a648b0bdb8c5a8ddc94_contracts_tokenbridge_libraries_gateway_GatewayRouter.sol___0x555d10f9e4d1b60b9c3f87f4e835119b2c65c8b0_contracts_tokenbridge_libraries_gateway_GatewayRouter.sol.log:
+  490  identifier: require [3533,3540]
+  491: replace require by gateway
+  492  
+

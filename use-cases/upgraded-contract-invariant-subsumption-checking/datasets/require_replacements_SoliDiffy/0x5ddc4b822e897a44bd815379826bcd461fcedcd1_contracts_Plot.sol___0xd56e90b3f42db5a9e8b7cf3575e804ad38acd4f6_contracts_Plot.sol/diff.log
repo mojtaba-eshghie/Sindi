@@ -1,0 +1,878 @@
+New cluster:
+UPDATE from 0.8.0 to 0.8.4
+------------
+===
+update-node
+---
+solidity_version: 0.8.0 [55,60]
+replace 0.8.0 by 0.8.4
+
+New cluster:
+===
+insert-node
+---
+function_definition [1823,1987]
+to
+contract_body [870,4430]
+at 10
+------------
+===
+insert-node
+---
+function: function [1823,1831]
+to
+function_definition [1823,1987]
+at 0
+===
+insert-node
+---
+function_body [1947,1987]
+to
+function_definition [1823,1987]
+at 8
+===
+insert-node
+---
+expression_statement [1957,1981]
+to
+function_body [1947,1987]
+at 0
+===
+insert-node
+---
+identifier: _burn [1957,1962]
+to
+call_expression [1957,1980]
+at 0
+===
+insert-node
+---
+function_definition [1823,1987]
+to
+contract_body [870,4430]
+at 10
+===
+insert-node
+---
+visibility: external [1873,1881]
+to
+function_definition [1823,1987]
+at 4
+===
+insert-node
+---
+call_expression [1957,1980]
+to
+expression_statement [1957,1981]
+at 0
+===
+insert-node
+---
+identifier: burn [1832,1836]
+to
+function_definition [1823,1987]
+at 1
+
+New cluster:
+UPDATE from private to public
+------------
+===
+update-node
+---
+visibility: private [1134,1141]
+replace private by public
+
+New cluster:
+UPDATE from adminMint to mint
+------------
+===
+update-node
+---
+identifier: adminMint [2351,2360]
+replace adminMint by mint
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [1734,1746]
+to
+function_definition [2342,2508]
+at 6
+------------
+===
+insert-node
+---
+modifier_invocation [1734,1746]
+to
+function_definition [2342,2508]
+at 6
+
+New cluster:
+MOVE from function_definition [2342,2508]
+------------
+===
+move-tree
+---
+modifier_invocation [3425,3438]
+    identifier: whenNotPaused [3425,3438]
+to
+function_definition [2342,2508]
+at 7
+===
+move-tree
+---
+modifier_invocation [3415,3424]
+    identifier: onlyAdmin [3415,3424]
+to
+function_definition [3237,3377]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [1837,1847]
+    type_name: address [1837,1844]
+    identifier: to [1845,1847]
+to
+function_definition [1823,1987]
+at 2
+
+New cluster:
+MOVE from function_definition [1823,1987]
+------------
+===
+move-tree
+---
+modifier_invocation [1791,1803]
+    identifier: nonReentrant [1791,1803]
+to
+function_definition [1823,1987]
+at 6
+===
+move-tree
+---
+modifier_invocation [1804,1817]
+    identifier: whenNotPaused [1804,1817]
+to
+function_definition [1823,1987]
+at 7
+===
+move-tree
+---
+parameter [1758,1772]
+    type_name: uint256 [1758,1765]
+    identifier: amount [1766,1772]
+to
+function_definition [1823,1987]
+at 3
+
+New cluster:
+MOVE from function_definition [1823,1987]
+------------
+===
+move-tree
+---
+modifier_invocation [2646,2655]
+    identifier: onlyAdmin [2646,2655]
+to
+function_definition [1823,1987]
+at 5
+
+New cluster:
+UPDATE from enableMint to pause
+------------
+===
+update-node
+---
+identifier: enableMint [3246,3256]
+replace enableMint by pause
+
+New cluster:
+UPDATE from disableMint to unpause
+------------
+===
+update-node
+---
+identifier: disableMint [3392,3403]
+replace disableMint by unpause
+
+New cluster:
+MOVE from function_definition [3383,3504]
+------------
+===
+move-tree
+---
+modifier_invocation [3281,3290]
+    identifier: onlyAdmin [3281,3290]
+to
+function_definition [3383,3504]
+at 3
+
+New cluster:
+UPDATE from require to nonReentrant
+------------
+===
+update-node
+---
+identifier: require [2418,2425]
+replace require by nonReentrant
+
+New cluster:
+MOVE from modifier_invocation [1734,1746]
+------------
+===
+move-tree
+---
+identifier: require [2418,2425]
+to
+modifier_invocation [1734,1746]
+at 0
+
+New cluster:
+MOVE from function_body [3302,3377]
+------------
+===
+move-tree
+---
+expression_statement [3489,3498]
+    call_expression [3489,3497]
+        identifier: _pause [3489,3495]
+to
+function_body [3302,3377]
+at 0
+
+New cluster:
+MOVE from function_body [3439,3504]
+------------
+===
+move-tree
+---
+expression_statement [3360,3371]
+    call_expression [3360,3370]
+        identifier: _unpause [3360,3368]
+to
+function_body [3439,3504]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [1963,1965]
+    identifier: to [1963,1965]
+to
+call_expression [1957,1980]
+at 1
+
+New cluster:
+MOVE from call_expression [1957,1980]
+------------
+===
+move-tree
+---
+call_argument [2318,2324]
+    identifier: amount [2318,2324]
+to
+call_expression [1957,1980]
+at 3
+===
+move-tree
+---
+call_argument [2312,2316]
+    identifier: PLOT [2312,2316]
+to
+call_expression [1957,1980]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1318,1345]
+    call_expression [1318,1344]
+        identifier: __Context_init_unchained [1318,1342]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1354,1380]
+    call_expression [1354,1379]
+        identifier: __ERC165_init_unchained [1354,1377]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1389,1507]
+    call_expression [1389,1506]
+        identifier: __ERC1155_init_unchained [1389,1413]
+        call_argument [1427,1496]
+            string_literal [1427,1496]
+                string: "https://ipfs.io/ipfs/QmSsjfq7Ba2gr1A6qehuRTFg9ittakYWhvUAGYWGLxMrKX" [1427,1496]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1516,1549]
+    call_expression [1516,1548]
+        identifier: __ERC1155Supply_init_unchained [1516,1546]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1558,1585]
+    call_expression [1558,1584]
+        identifier: __Ownable_init_unchained [1558,1582]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1594,1622]
+    call_expression [1594,1621]
+        identifier: __Pausable_init_unchained [1594,1619]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1631,1656]
+    call_expression [1631,1655]
+        identifier: __ReentrancyGuard_init [1631,1653]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1665,1683]
+    assignment_expression [1665,1682]
+        identifier: _addressLimit [1665,1678]
+        affectation_operator: = [1679,1680]
+        number_literal: 1 [1681,1682]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1692,1714]
+    assignment_expression [1692,1713]
+        identifier: _transactionLimit [1692,1709]
+        affectation_operator: = [1710,1711]
+        number_literal: 1 [1712,1713]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1723,1732]
+    call_expression [1723,1731]
+        identifier: _pause [1723,1729]
+
+New cluster:
+===
+delete-node
+---
+function_definition [1744,2336]
+===
+------------
+===
+delete-node
+---
+identifier: mint [1753,1757]
+===
+===
+delete-node
+---
+call_expression [2294,2329]
+===
+===
+delete-node
+---
+function_body [1818,2336]
+===
+===
+delete-node
+---
+identifier: _mint [2294,2299]
+===
+===
+delete-node
+---
+expression_statement [2294,2330]
+===
+===
+delete-node
+---
+function: function [1744,1752]
+===
+===
+delete-node
+---
+function_definition [1744,2336]
+===
+===
+delete-node
+---
+visibility: external [1774,1782]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [1783,1790]
+    payable: payable [1783,1790]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1828,1875]
+    call_expression [1828,1874]
+        identifier: require [1828,1835]
+        call_argument [1836,1846]
+            binary_expression [1836,1846]
+                identifier: amount [1836,1842]
+                comparison_operator: > [1843,1844]
+                number_literal: 0 [1845,1846]
+        call_argument [1848,1873]
+            string_literal [1848,1873]
+                string: "You can't mint 0 tokens" [1848,1873]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1884,1944]
+    call_expression [1884,1943]
+        identifier: require [1884,1891]
+        call_argument [1892,1922]
+            binary_expression [1892,1922]
+                member_expression: msg.value [1892,1901]
+                comparison_operator: >= [1902,1904]
+                binary_expression [1905,1922]
+                    identifier: _ethCost [1905,1913]
+                    arithmetic_operator: * [1914,1915]
+                    identifier: amount [1916,1922]
+        call_argument [1924,1942]
+            string_literal [1924,1942]
+                string: "Not enough ether" [1924,1942]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1953,2070]
+    call_expression [1953,2069]
+        identifier: require [1953,1960]
+        call_argument [1974,2014]
+            binary_expression [1974,2014]
+                binary_expression [1974,2000]
+                    call_expression [1974,1991]
+                        identifier: totalSupply [1974,1985]
+                        call_argument [1986,1990]
+                            identifier: PLOT [1986,1990]
+                    arithmetic_operator: + [1992,1993]
+                    identifier: amount [1994,2000]
+                comparison_operator: <= [2001,2003]
+                identifier: _maxSupply [2004,2014]
+        call_argument [2028,2059]
+            string_literal [2028,2059]
+                string: "You can't mint so many tokens" [2028,2059]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [2079,2149]
+    call_expression [2079,2148]
+        identifier: require [2079,2086]
+        call_argument [2087,2114]
+            binary_expression [2087,2114]
+                identifier: amount [2087,2093]
+                comparison_operator: <= [2094,2096]
+                identifier: _transactionLimit [2097,2114]
+        call_argument [2116,2147]
+            string_literal [2116,2147]
+                string: "Limit per transaction reached" [2116,2147]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [2158,2285]
+    call_expression [2158,2284]
+        identifier: require [2158,2165]
+        call_argument [2179,2232]
+            binary_expression [2179,2232]
+                binary_expression [2179,2215]
+                    call_expression [2179,2206]
+                        identifier: balanceOf [2179,2188]
+                        call_argument [2189,2199]
+                            member_expression: msg.sender [2189,2199]
+                        call_argument [2201,2205]
+                            identifier: PLOT [2201,2205]
+                    arithmetic_operator: + [2207,2208]
+                    identifier: amount [2209,2215]
+                comparison_operator: <= [2216,2218]
+                identifier: _addressLimit [2219,2232]
+        call_argument [2246,2274]
+            string_literal [2246,2274]
+                string: "Limit per address reached!" [2246,2274]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2300,2310]
+    member_expression: msg.sender [2300,2310]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2326,2328]
+    string_literal [2326,2328]
+        string: "" [2326,2328]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2426,2436]
+    binary_expression [2426,2436]
+        identifier: amount [2426,2432]
+        comparison_operator: > [2433,2434]
+        number_literal: 0 [2435,2436]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2438,2463]
+    string_literal [2438,2463]
+        string: "You can't mint 0 tokens" [2438,2463]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [2418,2465]
+===
+------------
+===
+delete-node
+---
+call_expression [2418,2464]
+===
+===
+delete-node
+---
+expression_statement [2418,2465]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2514,2597]
+    function: function [2514,2522]
+    identifier: ethCost [2523,2530]
+    visibility: external [2533,2541]
+    state_mutability [2542,2546]
+        view: view [2542,2546]
+    return_type_definition [2547,2564]
+        returns: returns [2547,2554]
+        parameter [2556,2563]
+            type_name: uint256 [2556,2563]
+    function_body [2565,2597]
+        return_statement [2575,2591]
+            return: return [2575,2581]
+            identifier: _ethCost [2582,2590]
+
+New cluster:
+===
+delete-node
+---
+function_definition [2603,2688]
+===
+------------
+===
+delete-node
+---
+identifier: setEthCost [2612,2622]
+===
+===
+delete-node
+---
+function_definition [2603,2688]
+===
+===
+delete-node
+---
+function: function [2603,2611]
+===
+===
+delete-node
+---
+visibility: external [2637,2645]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2623,2635]
+    type_name: uint256 [2623,2630]
+    identifier: cost [2631,2635]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [2656,2688]
+    expression_statement [2666,2682]
+        assignment_expression [2666,2681]
+            identifier: _ethCost [2666,2674]
+            affectation_operator: = [2675,2676]
+            identifier: cost [2677,2681]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2694,2787]
+    function: function [2694,2702]
+    identifier: addressLimit [2703,2715]
+    visibility: external [2718,2726]
+    state_mutability [2727,2731]
+        view: view [2727,2731]
+    return_type_definition [2732,2749]
+        returns: returns [2732,2739]
+        parameter [2741,2748]
+            type_name: uint256 [2741,2748]
+    function_body [2750,2787]
+        return_statement [2760,2781]
+            return: return [2760,2766]
+            identifier: _addressLimit [2767,2780]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2793,2890]
+    function: function [2793,2801]
+    identifier: setAddressLimit [2802,2817]
+    parameter [2818,2831]
+        type_name: uint256 [2818,2825]
+        identifier: limit [2826,2831]
+    visibility: external [2833,2841]
+    modifier_invocation [2842,2851]
+        identifier: onlyAdmin [2842,2851]
+    function_body [2852,2890]
+        expression_statement [2862,2884]
+            assignment_expression [2862,2883]
+                identifier: _addressLimit [2862,2875]
+                affectation_operator: = [2876,2877]
+                identifier: limit [2878,2883]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2896,2997]
+    function: function [2896,2904]
+    identifier: transactionLimit [2905,2921]
+    visibility: external [2924,2932]
+    state_mutability [2933,2937]
+        view: view [2933,2937]
+    return_type_definition [2938,2955]
+        returns: returns [2938,2945]
+        parameter [2947,2954]
+            type_name: uint256 [2947,2954]
+    function_body [2956,2997]
+        return_statement [2966,2991]
+            return: return [2966,2972]
+            identifier: _transactionLimit [2973,2990]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [3003,3108]
+    function: function [3003,3011]
+    identifier: setTransactionLimit [3012,3031]
+    parameter [3032,3045]
+        type_name: uint256 [3032,3039]
+        identifier: limit [3040,3045]
+    visibility: external [3047,3055]
+    modifier_invocation [3056,3065]
+        identifier: onlyAdmin [3056,3065]
+    function_body [3066,3108]
+        expression_statement [3076,3102]
+            assignment_expression [3076,3101]
+                identifier: _transactionLimit [3076,3093]
+                affectation_operator: = [3094,3095]
+                identifier: limit [3096,3101]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [3114,3231]
+    function: function [3114,3122]
+    identifier: currentWindowSupply [3123,3142]
+    visibility: external [3145,3153]
+    state_mutability [3154,3158]
+        view: view [3154,3158]
+    return_type_definition [3159,3176]
+        returns: returns [3159,3166]
+        parameter [3168,3175]
+            type_name: uint256 [3168,3175]
+    function_body [3177,3231]
+        return_statement [3187,3225]
+            return: return [3187,3193]
+            binary_expression [3194,3224]
+                identifier: _maxSupply [3194,3204]
+                arithmetic_operator: - [3205,3206]
+                call_expression [3207,3224]
+                    identifier: totalSupply [3207,3218]
+                    call_argument [3219,3223]
+                        identifier: PLOT [3219,3223]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [3257,3270]
+    type_name: uint256 [3257,3264]
+    identifier: limit [3265,3270]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [3291,3301]
+    identifier: whenPaused [3291,3301]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3312,3351]
+    assignment_expression [3312,3350]
+        identifier: _maxSupply [3312,3322]
+        affectation_operator: = [3323,3324]
+        binary_expression [3325,3350]
+            call_expression [3325,3342]
+                identifier: totalSupply [3325,3336]
+                call_argument [3337,3341]
+                    identifier: PLOT [3337,3341]
+            arithmetic_operator: + [3343,3344]
+            identifier: limit [3345,3350]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3449,3480]
+    assignment_expression [3449,3479]
+        identifier: _maxSupply [3449,3459]
+        affectation_operator: = [3460,3461]
+        call_expression [3462,3479]
+            identifier: totalSupply [3462,3473]
+            call_argument [3474,3478]
+                identifier: PLOT [3474,3478]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [3881,3985]
+    function: function [3881,3889]
+    identifier: withdraw [3890,3898]
+    visibility: external [3901,3909]
+    modifier_invocation [3910,3919]
+        identifier: onlyAdmin [3910,3919]
+    function_body [3920,3985]
+        expression_statement [3930,3979]
+            call_expression [3930,3978]
+                member_expression: payable(owner()).transfer [3930,3955]
+                call_argument [3956,3977]
+                    member_expression: address(this).balance [3956,3977]
+

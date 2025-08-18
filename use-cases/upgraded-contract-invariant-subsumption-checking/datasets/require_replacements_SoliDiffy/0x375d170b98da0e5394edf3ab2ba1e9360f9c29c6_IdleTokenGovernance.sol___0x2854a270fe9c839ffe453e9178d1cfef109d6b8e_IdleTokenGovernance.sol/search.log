@@ -1,0 +1,5 @@
+results/differencing_results/0x375d170b98da0e5394edf3ab2ba1e9360f9c29c6_IdleTokenGovernance.sol___0x2854a270fe9c839ffe453e9178d1cfef109d6b8e_IdleTokenGovernance.sol.log:
+  9898  identifier: require [51224,51231]
+  9899: replace require by protocolTokenToGov
+  9900  
+

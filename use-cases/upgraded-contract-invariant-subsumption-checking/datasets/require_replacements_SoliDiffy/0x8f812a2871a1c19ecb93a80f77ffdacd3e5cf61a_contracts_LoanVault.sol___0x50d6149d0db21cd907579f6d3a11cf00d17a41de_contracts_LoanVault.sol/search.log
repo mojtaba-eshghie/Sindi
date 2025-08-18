@@ -1,0 +1,5 @@
+results/differencing_results/0x8f812a2871a1c19ecb93a80f77ffdacd3e5cf61a_contracts_LoanVault.sol___0x50d6149d0db21cd907579f6d3a11cf00d17a41de_contracts_LoanVault.sol.log:
+  3412  identifier: require [18213,18220]
+  3413: replace require by fundingTokenAmount
+  3414  
+

@@ -1,0 +1,17 @@
+results/differencing_results/0x847e3e4d335f118c8aed9a09c15261581e1a01ad_AlkemiEarnVerified.sol___0x75031d152d6c0e44df5eeb8f3c08d48f59991a50_AlkemiEarnVerified.sol.log:
+  14423  identifier: require [38597,38604]
+  14424: replace require by revertIfError
+  14425  ===
+
+  14428  identifier: require [37553,37560]
+  14429: replace require by revertIfError
+  14430  ===
+
+  14443  identifier: require [38849,38856]
+  14444: replace require by revertIfError
+  14445  ===
+
+  14448  identifier: require [37301,37308]
+  14449: replace require by revertIfError
+  14450  
+

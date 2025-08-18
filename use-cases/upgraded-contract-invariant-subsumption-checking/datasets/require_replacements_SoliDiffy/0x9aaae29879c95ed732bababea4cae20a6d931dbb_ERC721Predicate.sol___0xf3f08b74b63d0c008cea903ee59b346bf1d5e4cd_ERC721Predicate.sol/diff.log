@@ -1,0 +1,677 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [40810,40928]
+    type_name: bytes32 [40810,40817]
+    visibility: public [40818,40824]
+    constant: constant [40825,40833]
+    identifier: WITHDRAW_BATCH_EVENT_SIG [40834,40858]
+    affectation_operator: = [40859,40860]
+    number_literal: 0xf871896b17e9cb7a64941c62c188a4f5c621b86800e3d15452ece01ce56073df [40861,40927]
+to
+contract_body [40510,43766]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [40999,41040]
+    type_name: uint256 [40999,41006]
+    visibility: public [41007,41013]
+    constant: constant [41014,41022]
+    identifier: BATCH_LIMIT [41023,41034]
+    affectation_operator: = [41035,41036]
+    number_literal: 20 [41037,41039]
+to
+contract_body [40510,43766]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [41220,41394]
+    identifier: LockedERC721Batch [41226,41243]
+    event_paramater [41254,41279]
+        type_name: address [41254,41261]
+        indexed: indexed [41262,41269]
+        identifier: depositor [41270,41279]
+    event_paramater [41290,41321]
+        type_name: address [41290,41297]
+        indexed: indexed [41298,41305]
+        identifier: depositReceiver [41306,41321]
+    event_paramater [41332,41357]
+        type_name: address [41332,41339]
+        indexed: indexed [41340,41347]
+        identifier: rootToken [41348,41357]
+    event_paramater [41368,41386]
+        type_name: uint256[] [41368,41377]
+        identifier: tokenIds [41378,41386]
+to
+contract_body [40510,43766]
+at 8
+
+New cluster:
+UPDATE from withdrawer to sender
+------------
+===
+update-node
+---
+identifier: withdrawer [16525,16535]
+replace withdrawer by sender
+
+New cluster:
+===
+insert-node
+---
+if_statement [42563,43336]
+to
+function_body [42146,42374]
+at 0
+------------
+===
+insert-node
+---
+if_statement [42563,43336]
+to
+function_body [42146,42374]
+at 0
+===
+insert-node
+---
+if: if [42563,42565]
+to
+if_statement [42563,43336]
+at 0
+===
+insert-node
+---
+else: else [42866,42870]
+to
+if_statement [42563,43336]
+at 3
+===
+insert-node
+---
+block_statement [42593,42865]
+to
+if_statement [42563,43336]
+at 2
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [43967,44025]
+to
+function_body [42897,43763]
+at 2
+------------
+===
+insert-node
+---
+type_name: address [43967,43974]
+to
+variable_declaration [43967,43985]
+at 0
+===
+insert-node
+---
+variable_declaration [43967,43985]
+to
+variable_declaration_statement [43967,44025]
+at 0
+===
+insert-node
+---
+affectation_operator: = [43986,43987]
+to
+variable_declaration_statement [43967,44025]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [43967,44025]
+to
+function_body [42897,43763]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [44063,45105]
+to
+function_body [42897,43763]
+at 3
+------------
+===
+insert-node
+---
+if_statement [44063,45105]
+to
+function_body [42897,43763]
+at 3
+===
+insert-node
+---
+else: else [44550,44554]
+to
+if_statement [44063,45105]
+at 3
+===
+insert-node
+---
+revert: revert [45049,45055]
+to
+revert_statement [45049,45094]
+at 0
+===
+insert-node
+---
+if: if [44063,44065]
+to
+if_statement [44063,45105]
+at 0
+===
+insert-node
+---
+block_statement [45034,45105]
+to
+if_statement [44555,45105]
+at 4
+===
+insert-node
+---
+revert_statement [45049,45094]
+to
+block_statement [45034,45105]
+at 0
+===
+insert-node
+---
+if_statement [44555,45105]
+to
+if_statement [44063,45105]
+at 4
+===
+insert-node
+---
+if: if [44555,44557]
+to
+if_statement [44555,45105]
+at 0
+===
+insert-node
+---
+parenthesized_expression [45055,45093]
+to
+revert_statement [45049,45094]
+at 1
+===
+insert-node
+---
+block_statement [44127,44549]
+to
+if_statement [44063,45105]
+at 2
+===
+insert-node
+---
+else: else [45029,45033]
+to
+if_statement [44555,45105]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [42567,42591]
+    member_expression: depositData.length [42567,42585]
+    comparison_operator: == [42586,42588]
+    number_literal: 32 [42589,42591]
+to
+if_statement [42563,43336]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [42871,43336]
+    variable_declaration_statement [42886,42951]
+        variable_declaration [42886,42911]
+            type_name: uint256[] [42886,42895]
+            memory: memory [42896,42902]
+            identifier: tokenIds [42903,42911]
+        affectation_operator: = [42912,42913]
+        call_expression [42914,42950]
+            member_expression: abi.decode [42914,42924]
+            call_argument [42925,42936]
+                identifier: depositData [42925,42936]
+            call_argument [42938,42949]
+                parenthesized_expression [42938,42949]
+                    array_access [42939,42948]
+                        primitive_type: uint256 [42939,42946]
+    emit_statement [42965,43037]
+        identifier: LockedERC721Batch [42970,42987]
+        call_argument [42988,42997]
+            identifier: depositor [42988,42997]
+        call_argument [42999,43014]
+            identifier: depositReceiver [42999,43014]
+        call_argument [43016,43025]
+            identifier: rootToken [43016,43025]
+        call_argument [43027,43035]
+            identifier: tokenIds [43027,43035]
+    variable_declaration_statement [43051,43084]
+        variable_declaration [43051,43065]
+            type_name: uint256 [43051,43058]
+            identifier: length [43059,43065]
+        affectation_operator: = [43066,43067]
+        member_expression: tokenIds.length [43068,43083]
+    expression_statement [43098,43169]
+        call_expression [43098,43168]
+            identifier: require [43098,43105]
+            call_argument [43106,43127]
+                binary_expression [43106,43127]
+                    identifier: length [43106,43112]
+                    comparison_operator: <= [43113,43115]
+                    identifier: BATCH_LIMIT [43116,43127]
+            call_argument [43129,43167]
+                string_literal [43129,43167]
+                    string: "ERC721Predicate: EXCEEDS_BATCH_LIMIT" [43129,43167]
+    for_statement [43183,43325]
+        for: for [43183,43186]
+        variable_declaration_statement [43188,43198]
+            variable_declaration [43188,43197]
+                type_name: uint256 [43188,43195]
+                identifier: i [43196,43197]
+        expression_statement [43199,43210]
+            binary_expression [43199,43209]
+                identifier: i [43199,43200]
+                comparison_operator: < [43201,43202]
+                identifier: length [43203,43209]
+        update_expression [43211,43214]
+            identifier: i [43211,43212]
+            increment_operator: ++ [43212,43214]
+        block_statement [43216,43325]
+            expression_statement [43235,43310]
+                call_expression [43235,43309]
+                    member_expression: IERC721(rootToken).safeTransferFrom [43235,43270]
+                    call_argument [43271,43280]
+                        identifier: depositor [43271,43280]
+                    call_argument [43282,43295]
+                        type_cast_expression [43282,43295]
+                            primitive_type: address [43282,43289]
+                            call_argument [43290,43294]
+                                identifier: this [43290,43294]
+                    call_argument [43297,43308]
+                        array_access [43297,43308]
+                            identifier: tokenIds [43297,43305]
+                            identifier: i [43306,43307]
+to
+if_statement [42563,43336]
+at 4
+
+New cluster:
+MOVE from variable_declaration_statement [43967,44025]
+------------
+===
+move-tree
+---
+type_cast_expression [43285,43321]
+    primitive_type: address [43285,43292]
+    call_argument [43293,43320]
+        call_expression [43293,43320]
+            member_expression: logTopicRLPList[1].toUint [43293,43318]
+to
+variable_declaration_statement [43967,44025]
+at 2
+
+New cluster:
+MOVE from if_statement [44063,45105]
+------------
+===
+move-tree
+---
+binary_expression [43095,43153]
+    type_cast_expression [43095,43131]
+        primitive_type: bytes32 [43095,43102]
+        call_argument [43103,43130]
+            call_expression [43103,43130]
+                member_expression: logTopicRLPList[0].toUint [43103,43128]
+    comparison_operator: == [43132,43134]
+    identifier: TRANSFER_EVENT_SIG [43135,43153]
+to
+if_statement [44063,45105]
+at 1
+
+New cluster:
+MOVE from block_statement [42593,42865]
+------------
+===
+move-tree
+---
+emit_statement [42220,42286]
+    identifier: LockedERC721 [42225,42237]
+    call_argument [42238,42247]
+        identifier: depositor [42238,42247]
+    call_argument [42249,42264]
+        identifier: depositReceiver [42249,42264]
+    call_argument [42266,42275]
+        identifier: rootToken [42266,42275]
+    call_argument [42277,42284]
+        identifier: tokenId [42277,42284]
+to
+block_statement [42593,42865]
+at 1
+===
+move-tree
+---
+variable_declaration_statement [42157,42210]
+    variable_declaration [42157,42172]
+        type_name: uint256 [42157,42164]
+        identifier: tokenId [42165,42172]
+    affectation_operator: = [42173,42174]
+    call_expression [42175,42209]
+        member_expression: abi.decode [42175,42185]
+        call_argument [42186,42197]
+            identifier: depositData [42186,42197]
+        call_argument [42199,42208]
+            parenthesized_expression [42199,42208]
+                primitive_type: uint256 [42200,42207]
+to
+block_statement [42593,42865]
+at 0
+===
+move-tree
+---
+expression_statement [42296,42367]
+    call_expression [42296,42366]
+        member_expression: IERC721(rootToken).safeTransferFrom [42296,42331]
+        call_argument [42332,42341]
+            identifier: depositor [42332,42341]
+        call_argument [42343,42356]
+            type_cast_expression [42343,42356]
+                primitive_type: address [42343,42350]
+                call_argument [42351,42355]
+                    identifier: this [42351,42355]
+        call_argument [42358,42365]
+            identifier: tokenId [42358,42365]
+to
+block_statement [42593,42865]
+at 2
+
+New cluster:
+UPDATE from require to withdrawer
+------------
+===
+update-node
+---
+identifier: require [43073,43080]
+replace require by withdrawer
+
+New cluster:
+MOVE from variable_declaration [43967,43985]
+------------
+===
+move-tree
+---
+identifier: require [43073,43080]
+to
+variable_declaration [43967,43985]
+at 1
+
+New cluster:
+MOVE from block_statement [44127,44549]
+------------
+===
+move-tree
+---
+expression_statement [43587,43756]
+    call_expression [43587,43755]
+        member_expression: IERC721(rootToken).safeTransferFrom [43587,43622]
+        call_argument [43637,43650]
+            type_cast_expression [43637,43650]
+                primitive_type: address [43637,43644]
+                call_argument [43645,43649]
+                    identifier: this [43645,43649]
+        call_argument [43665,43675]
+            identifier: withdrawer [43665,43675]
+        call_argument [43690,43717]
+            call_expression [43690,43717]
+                member_expression: logTopicRLPList[3].toUint [43690,43715]
+to
+block_statement [44127,44549]
+at 1
+===
+move-tree
+---
+expression_statement [43417,43575]
+    call_expression [43417,43574]
+        identifier: require [43417,43424]
+        call_argument [43439,43489]
+            binary_expression [43439,43489]
+                type_cast_expression [43439,43475]
+                    primitive_type: address [43439,43446]
+                    call_argument [43447,43474]
+                        call_expression [43447,43474]
+                            member_expression: logTopicRLPList[2].toUint [43447,43472]
+                comparison_operator: == [43476,43478]
+                type_cast_expression [43479,43489]
+                    primitive_type: address [43479,43486]
+                    call_argument [43487,43488]
+                        number_literal: 0 [43487,43488]
+        call_argument [43528,43563]
+            string_literal [43528,43563]
+                string: "ERC721Predicate: INVALID_RECEIVER" [43528,43563]
+to
+block_statement [44127,44549]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [44559,44623]
+    type_cast_expression [44559,44595]
+        primitive_type: bytes32 [44559,44566]
+        call_argument [44567,44594]
+            call_expression [44567,44594]
+                member_expression: logTopicRLPList[0].toUint [44567,44592]
+    comparison_operator: == [44596,44598]
+    identifier: WITHDRAW_BATCH_EVENT_SIG [44599,44623]
+to
+if_statement [44555,45105]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [44625,45028]
+    variable_declaration_statement [44663,44710]
+        variable_declaration [44663,44683]
+            type_name: bytes [44663,44668]
+            memory: memory [44669,44675]
+            identifier: logData [44676,44683]
+        affectation_operator: = [44684,44685]
+        call_expression [44686,44709]
+            member_expression: logRLPList[2].toBytes [44686,44707]
+    variable_declaration_statement [44724,44787]
+        variable_declaration_tuple [44724,44751]
+            variable_declaration [44725,44750]
+                type_name: uint256[] [44725,44734]
+                memory: memory [44735,44741]
+                identifier: tokenIds [44742,44750]
+        affectation_operator: = [44752,44753]
+        call_expression [44754,44786]
+            member_expression: abi.decode [44754,44764]
+            call_argument [44765,44772]
+                identifier: logData [44765,44772]
+            call_argument [44774,44785]
+                parenthesized_expression [44774,44785]
+                    array_access [44775,44784]
+                        primitive_type: uint256 [44775,44782]
+    variable_declaration_statement [44825,44858]
+        variable_declaration [44825,44839]
+            type_name: uint256 [44825,44832]
+            identifier: length [44833,44839]
+        affectation_operator: = [44840,44841]
+        member_expression: tokenIds.length [44842,44857]
+    for_statement [44872,45015]
+        for: for [44872,44875]
+        variable_declaration_statement [44877,44887]
+            variable_declaration [44877,44886]
+                type_name: uint256 [44877,44884]
+                identifier: i [44885,44886]
+        expression_statement [44888,44899]
+            binary_expression [44888,44898]
+                identifier: i [44888,44889]
+                comparison_operator: < [44890,44891]
+                identifier: length [44892,44898]
+        update_expression [44900,44903]
+            identifier: i [44900,44901]
+            increment_operator: ++ [44901,44903]
+        block_statement [44905,45015]
+            expression_statement [44924,45000]
+                call_expression [44924,44999]
+                    member_expression: IERC721(rootToken).safeTransferFrom [44924,44959]
+                    call_argument [44960,44973]
+                        type_cast_expression [44960,44973]
+                            primitive_type: address [44960,44967]
+                            call_argument [44968,44972]
+                                identifier: this [44968,44972]
+                    call_argument [44975,44985]
+                        identifier: withdrawer [44975,44985]
+                    call_argument [44987,44998]
+                        array_access [44987,44998]
+                            identifier: tokenIds [44987,44995]
+                            identifier: i [44996,44997]
+to
+if_statement [44555,45105]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [45055,45093]
+------------
+===
+move-tree
+---
+string_literal [43191,43227]
+    string: "ERC721Predicate: INVALID_SIGNATURE" [43191,43227]
+to
+parenthesized_expression [45055,45093]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: withdrawer [42757,42767]
+===
+------------
+===
+delete-node
+---
+identifier: withdrawer [42757,42767]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [43073,43239]
+===
+------------
+===
+delete-node
+---
+call_argument [43095,43153]
+===
+===
+delete-node
+---
+call_argument [43191,43227]
+===
+===
+delete-node
+---
+call_expression [43073,43238]
+===
+===
+delete-node
+---
+expression_statement [43073,43239]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [43249,43407]
+===
+------------
+===
+delete-node
+---
+call_argument [43271,43321]
+===
+===
+delete-node
+---
+identifier: require [43249,43256]
+===
+===
+delete-node
+---
+call_expression [43249,43406]
+===
+===
+delete-node
+---
+comparison_operator: == [43282,43284]
+===
+===
+delete-node
+---
+expression_statement [43249,43407]
+===
+===
+delete-node
+---
+identifier: withdrawer [43271,43281]
+===
+===
+delete-node
+---
+binary_expression [43271,43321]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [43362,43395]
+    string_literal [43362,43395]
+        string: "ERC721Predicate: INVALID_SENDER" [43362,43395]
+

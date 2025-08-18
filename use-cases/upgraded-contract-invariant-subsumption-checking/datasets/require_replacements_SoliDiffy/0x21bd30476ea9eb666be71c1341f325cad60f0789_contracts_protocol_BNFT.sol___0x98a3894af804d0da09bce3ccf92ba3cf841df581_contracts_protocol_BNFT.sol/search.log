@@ -1,0 +1,9 @@
+results/differencing_results/0x21bd30476ea9eb666be71c1341f325cad60f0789_contracts_protocol_BNFT.sol___0x98a3894af804d0da09bce3ccf92ba3cf841df581_contracts_protocol_BNFT.sol.log:
+  365  identifier: require [4542,4549]
+  366: replace require by nonReentrant
+  367  
+
+  485  identifier: require [3776,3783]
+  486: replace require by isCA
+  487  
+

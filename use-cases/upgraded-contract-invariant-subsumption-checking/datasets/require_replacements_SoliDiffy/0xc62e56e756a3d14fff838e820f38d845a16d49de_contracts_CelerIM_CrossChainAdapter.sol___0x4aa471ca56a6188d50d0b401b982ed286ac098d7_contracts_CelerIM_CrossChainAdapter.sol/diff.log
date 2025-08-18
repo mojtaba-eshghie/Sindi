@@ -1,0 +1,5341 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [572,610]
+    import: import [572,578]
+    string: "../interfaces/ICurveSUSD.sol" [579,609]
+to
+source_file [0,25074]
+at 10
+
+New cluster:
+===
+insert-node
+---
+identifier: CrossChainAdapter [621,638]
+to
+contract_declaration [573,25073]
+at 0
+------------
+===
+insert-node
+---
+identifier: CrossChainAdapter [621,638]
+to
+contract_declaration [573,25073]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [639,641]
+to
+contract_declaration [573,25073]
+at 1
+------------
+===
+insert-node
+---
+is: is [639,641]
+to
+contract_declaration [573,25073]
+at 1
+
+New cluster:
+MOVE from contract_body [666,25073]
+------------
+===
+move-tree
+---
+function_definition [8836,9611]
+    function: function [8836,8844]
+    identifier: exerciseSportPosition [8845,8866]
+    parameter [8876,8890]
+        type_name: address [8876,8883]
+        identifier: market [8884,8890]
+    parameter [8900,8914]
+        type_name: uint8 [8900,8905]
+        identifier: position [8906,8914]
+    parameter [8924,8942]
+        type_name: uint64 [8924,8930]
+        identifier: _dstChainId [8931,8942]
+    visibility: external [8949,8957]
+    state_mutability [8958,8965]
+        payable: payable [8958,8965]
+    modifier_invocation [8966,8978]
+        identifier: nonReentrant [8966,8978]
+    modifier_invocation [8979,8988]
+        identifier: notPaused [8979,8988]
+    function_body [8989,9611]
+        variable_declaration_statement [9075,9127]
+            variable_declaration [9075,9095]
+                type_name: bytes [9075,9080]
+                memory: memory [9081,9087]
+                identifier: payload [9088,9095]
+            affectation_operator: = [9096,9097]
+            call_expression [9098,9126]
+                member_expression: abi.encode [9098,9108]
+                call_argument [9109,9115]
+                    identifier: market [9109,9115]
+                call_argument [9117,9125]
+                    identifier: position [9117,9125]
+        variable_declaration_statement [9136,9219]
+            variable_declaration [9136,9151]
+                type_name: bytes4 [9136,9142]
+                identifier: selector [9143,9151]
+            affectation_operator: = [9152,9153]
+            type_cast_expression [9154,9218]
+                primitive_type: bytes4 [9154,9160]
+                call_argument [9161,9217]
+                    call_expression [9161,9217]
+                        identifier: keccak256 [9161,9170]
+                        call_argument [9171,9216]
+                            type_cast_expression [9171,9216]
+                                primitive_type: bytes [9171,9176]
+                                call_argument [9177,9215]
+                                    string_literal [9177,9215]
+                                        string: "exerciseSportPosition(address,uint8)" [9177,9215]
+        variable_declaration_statement [9228,9308]
+            variable_declaration [9228,9248]
+                type_name: bytes [9228,9233]
+                memory: memory [9234,9240]
+                identifier: message [9241,9248]
+            affectation_operator: = [9249,9250]
+            call_expression [9251,9307]
+                member_expression: abi.encode [9251,9261]
+                call_argument [9262,9272]
+                    member_expression: msg.sender [9262,9272]
+                call_argument [9274,9287]
+                    member_expression: block.chainid [9274,9287]
+                call_argument [9289,9297]
+                    identifier: selector [9289,9297]
+                call_argument [9299,9306]
+                    identifier: payload [9299,9306]
+        if_statement [9379,9605]
+            if: if [9379,9381]
+            binary_expression [9383,9407]
+                identifier: _dstChainId [9383,9394]
+                comparison_operator: == [9395,9397]
+                identifier: testChain [9398,9407]
+            block_statement [9409,9508]
+                emit_statement [9423,9498]
+                    identifier: MessageSent [9428,9439]
+                    call_argument [9440,9450]
+                        member_expression: msg.sender [9440,9450]
+                    call_argument [9452,9472]
+                        identifier: adapterOnDestination [9452,9472]
+                    call_argument [9474,9487]
+                        member_expression: block.chainid [9474,9487]
+                    call_argument [9489,9496]
+                        identifier: message [9489,9496]
+            else: else [9509,9513]
+            block_statement [9514,9605]
+                expression_statement [9528,9595]
+                    call_expression [9528,9594]
+                        identifier: sendMessage [9528,9539]
+                        call_argument [9540,9560]
+                            identifier: adapterOnDestination [9540,9560]
+                        call_argument [9562,9573]
+                            identifier: _dstChainId [9562,9573]
+                        call_argument [9575,9582]
+                            identifier: message [9575,9582]
+                        call_argument [9584,9593]
+                            member_expression: msg.value [9584,9593]
+to
+contract_body [666,25073]
+at 31
+===
+move-tree
+---
+function_definition [9617,10316]
+    function: function [9617,9625]
+    identifier: exerciseParlay [9626,9640]
+    parameter [9641,9655]
+        type_name: address [9641,9648]
+        identifier: market [9649,9655]
+    parameter [9657,9675]
+        type_name: uint64 [9657,9663]
+        identifier: _dstChainId [9664,9675]
+    visibility: external [9677,9685]
+    state_mutability [9686,9693]
+        payable: payable [9686,9693]
+    modifier_invocation [9694,9706]
+        identifier: nonReentrant [9694,9706]
+    modifier_invocation [9707,9716]
+        identifier: notPaused [9707,9716]
+    function_body [9717,10316]
+        variable_declaration_statement [9803,9845]
+            variable_declaration [9803,9823]
+                type_name: bytes [9803,9808]
+                memory: memory [9809,9815]
+                identifier: payload [9816,9823]
+            affectation_operator: = [9824,9825]
+            call_expression [9826,9844]
+                member_expression: abi.encode [9826,9836]
+                call_argument [9837,9843]
+                    identifier: market [9837,9843]
+        variable_declaration_statement [9854,9924]
+            variable_declaration [9854,9869]
+                type_name: bytes4 [9854,9860]
+                identifier: selector [9861,9869]
+            affectation_operator: = [9870,9871]
+            type_cast_expression [9872,9923]
+                primitive_type: bytes4 [9872,9878]
+                call_argument [9879,9922]
+                    call_expression [9879,9922]
+                        identifier: keccak256 [9879,9888]
+                        call_argument [9889,9921]
+                            type_cast_expression [9889,9921]
+                                primitive_type: bytes [9889,9894]
+                                call_argument [9895,9920]
+                                    string_literal [9895,9920]
+                                        string: "exerciseParlay(address)" [9895,9920]
+        variable_declaration_statement [9933,10013]
+            variable_declaration [9933,9953]
+                type_name: bytes [9933,9938]
+                memory: memory [9939,9945]
+                identifier: message [9946,9953]
+            affectation_operator: = [9954,9955]
+            call_expression [9956,10012]
+                member_expression: abi.encode [9956,9966]
+                call_argument [9967,9977]
+                    member_expression: msg.sender [9967,9977]
+                call_argument [9979,9992]
+                    member_expression: block.chainid [9979,9992]
+                call_argument [9994,10002]
+                    identifier: selector [9994,10002]
+                call_argument [10004,10011]
+                    identifier: payload [10004,10011]
+        if_statement [10084,10310]
+            if: if [10084,10086]
+            binary_expression [10088,10112]
+                identifier: _dstChainId [10088,10099]
+                comparison_operator: == [10100,10102]
+                identifier: testChain [10103,10112]
+            block_statement [10114,10213]
+                emit_statement [10128,10203]
+                    identifier: MessageSent [10133,10144]
+                    call_argument [10145,10155]
+                        member_expression: msg.sender [10145,10155]
+                    call_argument [10157,10177]
+                        identifier: adapterOnDestination [10157,10177]
+                    call_argument [10179,10192]
+                        member_expression: block.chainid [10179,10192]
+                    call_argument [10194,10201]
+                        identifier: message [10194,10201]
+            else: else [10214,10218]
+            block_statement [10219,10310]
+                expression_statement [10233,10300]
+                    call_expression [10233,10299]
+                        identifier: sendMessage [10233,10244]
+                        call_argument [10245,10265]
+                            identifier: adapterOnDestination [10245,10265]
+                        call_argument [10267,10278]
+                            identifier: _dstChainId [10267,10278]
+                        call_argument [10280,10287]
+                            identifier: message [10280,10287]
+                        call_argument [10289,10298]
+                            member_expression: msg.value [10289,10298]
+to
+contract_body [666,25073]
+at 31
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1770,1798]
+    type_name: uint [1770,1774]
+    visibility: public [1775,1781]
+    identifier: defaultSlippage [1782,1797]
+to
+contract_body [666,25073]
+at 19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1841,1882]
+    type_name: uint [1841,1845]
+    visibility: private [1846,1853]
+    constant: constant [1854,1862]
+    identifier: ONE_PERCENT [1863,1874]
+    affectation_operator: = [1875,1876]
+    number_literal: 1e16 [1877,1881]
+to
+contract_body [666,25073]
+at 21
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1887,1926]
+    type_name: int128 [1887,1893]
+    visibility: private [1894,1901]
+    constant: constant [1902,1910]
+    identifier: USDC_INDEX [1911,1921]
+    affectation_operator: = [1922,1923]
+    number_literal: 2 [1924,1925]
+to
+contract_body [666,25073]
+at 22
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1932,1960]
+    type_name: ICurveSUSD [1932,1942]
+    visibility: public [1943,1949]
+    identifier: curveSUSD [1950,1959]
+to
+contract_body [666,25073]
+at 23
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1965,1985]
+    type_name: address [1965,1972]
+    visibility: public [1973,1979]
+    identifier: usdc [1980,1984]
+to
+contract_body [666,25073]
+at 24
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1990,2010]
+    type_name: address [1990,1997]
+    visibility: public [1998,2004]
+    identifier: usdt [2005,2009]
+to
+contract_body [666,25073]
+at 25
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2015,2034]
+    type_name: address [2015,2022]
+    visibility: public [2023,2029]
+    identifier: dai [2030,2033]
+to
+contract_body [666,25073]
+at 26
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2039,2083]
+    type_name: uint [2039,2043]
+    visibility: public [2044,2050]
+    identifier: maxAllowedPegSlippagePercentage [2051,2082]
+to
+contract_body [666,25073]
+at 27
+
+New cluster:
+===
+insert-node
+---
+function_definition [23865,24118]
+to
+contract_body [666,25073]
+at 51
+------------
+===
+insert-node
+---
+function_definition [23865,24118]
+to
+contract_body [666,25073]
+at 51
+===
+insert-node
+---
+block_statement [24029,24112]
+to
+if_statement [24014,24112]
+at 2
+===
+insert-node
+---
+if: if [24014,24016]
+to
+if_statement [24014,24112]
+at 0
+===
+insert-node
+---
+function_body [23930,24118]
+to
+function_definition [23865,24118]
+at 5
+===
+insert-node
+---
+if_statement [24014,24112]
+to
+function_body [23930,24118]
+at 1
+===
+insert-node
+---
+call_expression [24043,24101]
+to
+expression_statement [24043,24102]
+at 0
+===
+insert-node
+---
+identifier: withdrawFromContract [23874,23894]
+to
+function_definition [23865,24118]
+at 1
+===
+insert-node
+---
+function: function [23865,23873]
+to
+function_definition [23865,24118]
+at 0
+===
+insert-node
+---
+expression_statement [24043,24102]
+to
+block_statement [24029,24112]
+at 0
+===
+insert-node
+---
+visibility: external [23911,23919]
+to
+function_definition [23865,24118]
+at 3
+===
+insert-node
+---
+member_expression: IERC20Upgradeable(_token).safeTransfer [24043,24081]
+to
+call_expression [24043,24101]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [25158,25915]
+    function: function [25158,25166]
+    identifier: setCurveSUSD [25167,25179]
+    parameter [25189,25207]
+        type_name: address [25189,25196]
+        identifier: _curveSUSD [25197,25207]
+    parameter [25217,25229]
+        type_name: address [25217,25224]
+        identifier: _dai [25225,25229]
+    parameter [25239,25252]
+        type_name: address [25239,25246]
+        identifier: _usdc [25247,25252]
+    parameter [25262,25275]
+        type_name: address [25262,25269]
+        identifier: _usdt [25270,25275]
+    parameter [25285,25309]
+        type_name: bool [25285,25289]
+        identifier: _curveOnrampEnabled [25290,25309]
+    parameter [25319,25356]
+        type_name: uint [25319,25323]
+        identifier: _maxAllowedPegSlippagePercentage [25324,25356]
+    visibility: external [25363,25371]
+    modifier_invocation [25372,25381]
+        identifier: onlyOwner [25372,25381]
+    function_body [25382,25915]
+        expression_statement [25392,25427]
+            assignment_expression [25392,25426]
+                identifier: curveSUSD [25392,25401]
+                affectation_operator: = [25402,25403]
+                call_expression [25404,25426]
+                    identifier: ICurveSUSD [25404,25414]
+                    call_argument [25415,25425]
+                        identifier: _curveSUSD [25415,25425]
+        expression_statement [25436,25447]
+            assignment_expression [25436,25446]
+                identifier: dai [25436,25439]
+                affectation_operator: = [25440,25441]
+                identifier: _dai [25442,25446]
+        expression_statement [25456,25469]
+            assignment_expression [25456,25468]
+                identifier: usdc [25456,25460]
+                affectation_operator: = [25461,25462]
+                identifier: _usdc [25463,25468]
+        expression_statement [25478,25491]
+            assignment_expression [25478,25490]
+                identifier: usdt [25478,25482]
+                affectation_operator: = [25483,25484]
+                identifier: _usdt [25485,25490]
+        expression_statement [25500,25562]
+            call_expression [25500,25561]
+                member_expression: IERC20Upgradeable(dai).approve [25500,25530]
+                call_argument [25531,25541]
+                    identifier: _curveSUSD [25531,25541]
+                call_argument [25543,25560]
+                    member_expression: type(uint256).max [25543,25560]
+        expression_statement [25571,25634]
+            call_expression [25571,25633]
+                member_expression: IERC20Upgradeable(usdc).approve [25571,25602]
+                call_argument [25603,25613]
+                    identifier: _curveSUSD [25603,25613]
+                call_argument [25615,25632]
+                    member_expression: type(uint256).max [25615,25632]
+        expression_statement [25643,25706]
+            call_expression [25643,25705]
+                member_expression: IERC20Upgradeable(usdt).approve [25643,25674]
+                call_argument [25675,25685]
+                    identifier: _curveSUSD [25675,25685]
+                call_argument [25687,25704]
+                    member_expression: type(uint256).max [25687,25704]
+        expression_statement [25715,25759]
+            call_expression [25715,25758]
+                member_expression: sUSD.approve [25715,25727]
+                call_argument [25728,25738]
+                    identifier: _curveSUSD [25728,25738]
+                call_argument [25740,25757]
+                    member_expression: type(uint256).max [25740,25757]
+        expression_statement [25842,25909]
+            assignment_expression [25842,25908]
+                identifier: maxAllowedPegSlippagePercentage [25842,25873]
+                affectation_operator: = [25874,25875]
+                identifier: _maxAllowedPegSlippagePercentage [25876,25908]
+to
+contract_body [666,25073]
+at 53
+
+New cluster:
+===
+insert-node
+---
+function_definition [25921,26717]
+to
+contract_body [666,25073]
+at 54
+------------
+===
+insert-node
+---
+visibility: internal [25965,25973]
+to
+function_definition [25921,26717]
+at 3
+===
+insert-node
+---
+expression_statement [26621,26711]
+to
+function_body [26007,26717]
+at 3
+===
+insert-node
+---
+function: function [25921,25929]
+to
+function_definition [25921,26717]
+at 0
+===
+insert-node
+---
+call_expression [26641,26710]
+to
+assignment_expression [26621,26710]
+at 2
+===
+insert-node
+---
+identifier: transformedAmount [26621,26638]
+to
+assignment_expression [26621,26710]
+at 0
+===
+insert-node
+---
+identifier: _transferToCollateral [25930,25951]
+to
+function_definition [25921,26717]
+at 1
+===
+insert-node
+---
+function_body [26007,26717]
+to
+function_definition [25921,26717]
+at 5
+===
+insert-node
+---
+assignment_expression [26621,26710]
+to
+expression_statement [26621,26711]
+at 0
+===
+insert-node
+---
+affectation_operator: = [26639,26640]
+to
+assignment_expression [26621,26710]
+at 1
+===
+insert-node
+---
+member_expression: curveSUSD.exchange_underlying [26641,26670]
+to
+call_expression [26641,26710]
+at 0
+===
+insert-node
+---
+function_definition [25921,26717]
+to
+contract_body [666,25073]
+at 54
+
+New cluster:
+UPDATE from buyFromCryptoAMM to buyFromSportAMM
+------------
+===
+update-node
+---
+identifier: buyFromCryptoAMM [3858,3874]
+replace buyFromCryptoAMM by buyFromSportAMM
+
+New cluster:
+UPDATE from exerciseCryptoPosition to exerciseSportPosition
+------------
+===
+update-node
+---
+identifier: exerciseCryptoPosition [10331,10353]
+replace exerciseCryptoPosition by exerciseSportPosition
+
+New cluster:
+UPDATE from exerciseSportPosition to exerciseCryptoPosition
+------------
+===
+update-node
+---
+identifier: exerciseSportPosition [8845,8866]
+replace exerciseSportPosition by exerciseCryptoPosition
+
+New cluster:
+MOVE from function_definition [18754,19107]
+------------
+===
+move-tree
+---
+modifier_invocation [19427,19436]
+    identifier: onlyOwner [19427,19436]
+to
+function_definition [18754,19107]
+at 5
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [20772,20781]
+to
+function_definition [19113,19349]
+at 5
+------------
+===
+insert-node
+---
+modifier_invocation [20772,20781]
+to
+function_definition [19113,19349]
+at 5
+
+New cluster:
+MOVE from function_definition [23865,24118]
+------------
+===
+move-tree
+---
+parameter [19727,19741]
+    type_name: address [19727,19734]
+    identifier: _token [19735,19741]
+to
+function_definition [23865,24118]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [23920,23929]
+    identifier: onlyOwner [23920,23929]
+to
+function_definition [23865,24118]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [24318,24339]
+    type_name: uint [24318,24322]
+    identifier: _defaultSlippage [24323,24339]
+to
+function_definition [23583,24126]
+at 7
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [24355,24364]
+to
+function_definition [23583,24126]
+at 9
+------------
+===
+insert-node
+---
+modifier_invocation [24355,24364]
+to
+function_definition [23583,24126]
+at 9
+
+New cluster:
+MOVE from function_definition [25921,26717]
+------------
+===
+move-tree
+---
+parameter [2477,2488]
+    type_name: uint [2477,2481]
+    identifier: amount [2482,2488]
+to
+function_definition [25921,26717]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [25974,26006]
+    returns: returns [25974,25981]
+    parameter [25983,26005]
+        type_name: uint [25983,25987]
+        identifier: transformedAmount [25988,26005]
+to
+function_definition [25921,26717]
+at 4
+
+New cluster:
+MOVE from function_body [11297,18748]
+------------
+===
+move-tree
+---
+if_statement [13020,18742]
+    if: if [13020,13022]
+    binary_expression [13037,13144]
+        identifier: _selector [13037,13046]
+        comparison_operator: == [13047,13049]
+        type_cast_expression [13050,13144]
+            primitive_type: bytes4 [13050,13056]
+            call_argument [13057,13143]
+                call_expression [13057,13143]
+                    identifier: keccak256 [13057,13066]
+                    call_argument [13067,13142]
+                        type_cast_expression [13067,13142]
+                            primitive_type: bytes [13067,13072]
+                            call_argument [13073,13141]
+                                string_literal [13073,13141]
+                                    string: "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" [13073,13141]
+    block_statement [13155,14019]
+        variable_declaration_statement [13169,13489]
+            variable_declaration_tuple [13169,13416]
+                variable_declaration [13187,13210]
+                    type_name: address[] [13187,13196]
+                    memory: memory [13197,13203]
+                    identifier: market [13204,13210]
+                variable_declaration [13228,13251]
+                    type_name: uint8[] [13228,13235]
+                    memory: memory [13236,13242]
+                    identifier: position [13243,13251]
+                variable_declaration [13269,13280]
+                    type_name: uint [13269,13273]
+                    identifier: amount [13274,13280]
+                variable_declaration [13298,13321]
+                    type_name: uint [13298,13302]
+                    identifier: additionalSlippage [13303,13321]
+                variable_declaration [13339,13358]
+                    type_name: uint [13339,13343]
+                    identifier: expectedPayout [13344,13358]
+                variable_declaration [13376,13402]
+                    type_name: address [13376,13383]
+                    identifier: differentRecepient [13384,13402]
+            affectation_operator: = [13417,13418]
+            call_expression [13419,13488]
+                member_expression: abi.decode [13419,13429]
+                call_argument [13430,13438]
+                    identifier: _message [13430,13438]
+                call_argument [13440,13487]
+                    tuple_expression [13440,13487]
+                        array_access [13441,13450]
+                            primitive_type: address [13441,13448]
+                        array_access [13452,13459]
+                            primitive_type: uint8 [13452,13457]
+                        primitive_type: uint [13461,13465]
+                        primitive_type: uint [13467,13471]
+                        primitive_type: uint [13473,13477]
+                        primitive_type: address [13479,13486]
+        variable_declaration_statement [13502,13877]
+            variable_declaration_tuple [13502,13537]
+                variable_declaration [13503,13515]
+                    type_name: bool [13503,13507]
+                    identifier: success [13508,13515]
+                variable_declaration [13517,13536]
+                    type_name: bytes [13517,13522]
+                    memory: memory [13523,13529]
+                    identifier: result [13530,13536]
+            affectation_operator: = [13538,13539]
+            call_expression [13540,13876]
+                member_expression: selectorAddress[_selector].call [13540,13571]
+                call_argument [13589,13862]
+                    call_expression [13589,13862]
+                        member_expression: abi.encodeWithSelector [13589,13611]
+                        call_argument [13633,13642]
+                            identifier: _selector [13633,13642]
+                        call_argument [13664,13670]
+                            identifier: market [13664,13670]
+                        call_argument [13692,13700]
+                            identifier: position [13692,13700]
+                        call_argument [13722,13728]
+                            identifier: amount [13722,13728]
+                        call_argument [13750,13768]
+                            identifier: additionalSlippage [13750,13768]
+                        call_argument [13790,13804]
+                            identifier: expectedPayout [13790,13804]
+                        call_argument [13826,13844]
+                            identifier: differentRecepient [13826,13844]
+        if_statement [13890,13981]
+            if: if [13890,13892]
+            identifier: success [13894,13901]
+            block_statement [13903,13981]
+                expression_statement [13921,13967]
+                    call_expression [13921,13966]
+                        identifier: _updateParlayDetails [13921,13941]
+                        call_argument [13942,13949]
+                            identifier: _sender [13942,13949]
+                        call_argument [13951,13965]
+                            identifier: expectedPayout [13951,13965]
+        return_statement [13994,14009]
+            return: return [13994,14000]
+            identifier: success [14001,14008]
+    else: else [14020,14024]
+    if_statement [14025,18742]
+        if: if [14025,14027]
+        binary_expression [14029,14093]
+            identifier: _selector [14029,14038]
+            comparison_operator: == [14039,14041]
+            type_cast_expression [14042,14093]
+                primitive_type: bytes4 [14042,14048]
+                call_argument [14049,14092]
+                    call_expression [14049,14092]
+                        identifier: keccak256 [14049,14058]
+                        call_argument [14059,14091]
+                            type_cast_expression [14059,14091]
+                                primitive_type: bytes [14059,14064]
+                                call_argument [14065,14090]
+                                    string_literal [14065,14090]
+                                        string: "exerciseParlay(address)" [14065,14090]
+        block_statement [14095,15136]
+            expression_statement [14109,14139]
+                update_expression [14109,14138]
+                    array_access [14109,14136]
+                        identifier: noncePerSelector [14109,14125]
+                        identifier: _selector [14126,14135]
+                    increment_operator: ++ [14136,14138]
+            variable_declaration_statement [14152,14201]
+                variable_declaration [14152,14166]
+                    type_name: address [14152,14159]
+                    identifier: market [14160,14166]
+                affectation_operator: = [14167,14168]
+                call_expression [14169,14200]
+                    member_expression: abi.decode [14169,14179]
+                    call_argument [14180,14188]
+                        identifier: _message [14180,14188]
+                    call_argument [14190,14199]
+                        parenthesized_expression [14190,14199]
+                            primitive_type: address [14191,14198]
+            variable_declaration_statement [14214,14265]
+                variable_declaration [14214,14232]
+                    type_name: uint [14214,14218]
+                    identifier: initalBalance [14219,14232]
+                affectation_operator: = [14233,14234]
+                call_expression [14235,14264]
+                    member_expression: sUSD.balanceOf [14235,14249]
+                    call_argument [14250,14263]
+                        type_cast_expression [14250,14263]
+                            primitive_type: address [14250,14257]
+                            call_argument [14258,14262]
+                                identifier: this [14258,14262]
+            expression_statement [14278,14330]
+                call_expression [14278,14329]
+                    member_expression: IParlayMarketsAMM(parlayAMM).exerciseParlay [14278,14321]
+                    call_argument [14322,14328]
+                        identifier: market [14322,14328]
+            variable_declaration_statement [14343,14409]
+                variable_declaration [14343,14360]
+                    type_name: uint [14343,14347]
+                    identifier: issueBalance [14348,14360]
+                affectation_operator: = [14361,14362]
+                binary_expression [14363,14408]
+                    call_expression [14363,14392]
+                        member_expression: sUSD.balanceOf [14363,14377]
+                        call_argument [14378,14391]
+                            type_cast_expression [14378,14391]
+                                primitive_type: address [14378,14385]
+                                call_argument [14386,14390]
+                                    identifier: this [14386,14390]
+                    arithmetic_operator: - [14393,14394]
+                    identifier: initalBalance [14395,14408]
+            expression_statement [14422,14512]
+                call_expression [14422,14511]
+                    identifier: require [14422,14429]
+                    call_argument [14430,14487]
+                        binary_expression [14430,14487]
+                            array_access [14430,14483]
+                                array_access [14430,14475]
+                                    binary_expression [14430,14466]
+                                        binary_expression [14430,14447]
+                                            identifier: issueBalance [14430,14442]
+                                            comparison_operator: >= [14443,14445]
+                                            number_literal: 0 [14446,14447]
+                                        logical_operator: && [14448,14450]
+                                        identifier: userOwningToken [14451,14466]
+                                    identifier: _sender [14467,14474]
+                                identifier: market [14476,14482]
+                            comparison_operator: > [14484,14485]
+                            number_literal: 0 [14486,14487]
+                    call_argument [14489,14510]
+                        string_literal [14489,14510]
+                            string: "Balances dont match" [14489,14510]
+            if_statement [14525,15051]
+                if: if [14525,14527]
+                binary_expression [14529,14558]
+                    identifier: _sourceChain [14529,14541]
+                    comparison_operator: == [14542,14544]
+                    member_expression: block.chainid [14545,14558]
+                block_statement [14560,14629]
+                    expression_statement [14578,14615]
+                        call_expression [14578,14614]
+                            member_expression: sUSD.transfer [14578,14591]
+                            call_argument [14592,14599]
+                                identifier: _sender [14592,14599]
+                            call_argument [14601,14613]
+                                identifier: issueBalance [14601,14613]
+                else: else [14630,14634]
+                block_statement [14635,15051]
+                    expression_statement [14653,15037]
+                        call_expression [14653,15036]
+                            identifier: sendMessageWithTransfer [14653,14676]
+                            call_argument [14698,14705]
+                                identifier: _sender [14698,14705]
+                            call_argument [14727,14740]
+                                type_cast_expression [14727,14740]
+                                    primitive_type: address [14727,14734]
+                                    call_argument [14735,14739]
+                                        identifier: sUSD [14735,14739]
+                            call_argument [14762,14774]
+                                identifier: issueBalance [14762,14774]
+                            call_argument [14796,14816]
+                                type_cast_expression [14796,14816]
+                                    primitive_type: uint64 [14796,14802]
+                                    call_argument [14803,14815]
+                                        identifier: _sourceChain [14803,14815]
+                            call_argument [14838,14865]
+                                array_access [14838,14865]
+                                    identifier: noncePerSelector [14838,14854]
+                                    identifier: _selector [14855,14864]
+                            call_argument [14887,14904]
+                                identifier: minBridgeSlippage [14887,14904]
+                            call_argument [14926,14928]
+                                string_literal [14926,14928]
+                                    string: "" [14926,14928]
+                            call_argument [14950,14987]
+                                member_expression: MsgDataTypes.BridgeSendType.Liquidity [14950,14987]
+                            call_argument [15009,15018]
+                                member_expression: msg.value [15009,15018]
+            expression_statement [15064,15101]
+                assignment_expression [15064,15100]
+                    array_access [15064,15096]
+                        array_access [15064,15088]
+                            identifier: userOwningToken [15064,15079]
+                            identifier: _sender [15080,15087]
+                        identifier: market [15089,15095]
+                    affectation_operator: = [15097,15098]
+                    number_literal: 0 [15099,15100]
+            return_statement [15114,15126]
+                return: return [15114,15120]
+                boolean_literal: true [15121,15125]
+        else: else [15137,15141]
+        if_statement [15142,18742]
+            if: if [15142,15144]
+            binary_expression [15146,15224]
+                identifier: _selector [15146,15155]
+                comparison_operator: == [15156,15158]
+                type_cast_expression [15159,15224]
+                    primitive_type: bytes4 [15159,15165]
+                    call_argument [15166,15223]
+                        call_expression [15166,15223]
+                            identifier: keccak256 [15166,15175]
+                            call_argument [15176,15222]
+                                type_cast_expression [15176,15222]
+                                    primitive_type: bytes [15176,15181]
+                                    call_argument [15182,15221]
+                                        string_literal [15182,15221]
+                                            string: "exerciseCryptoPosition(address,uint8)" [15182,15221]
+            block_statement [15226,16771]
+                expression_statement [15240,15270]
+                    update_expression [15240,15269]
+                        array_access [15240,15267]
+                            identifier: noncePerSelector [15240,15256]
+                            identifier: _selector [15257,15266]
+                        increment_operator: ++ [15267,15269]
+                variable_declaration_statement [15283,15357]
+                    variable_declaration_tuple [15283,15315]
+                        variable_declaration [15284,15298]
+                            type_name: address [15284,15291]
+                            identifier: market [15292,15298]
+                        variable_declaration [15300,15314]
+                            type_name: uint8 [15300,15305]
+                            identifier: position [15306,15314]
+                    affectation_operator: = [15316,15317]
+                    call_expression [15318,15356]
+                        member_expression: abi.decode [15318,15328]
+                        call_argument [15329,15337]
+                            identifier: _message [15329,15337]
+                        call_argument [15339,15355]
+                            tuple_expression [15339,15355]
+                                primitive_type: address [15340,15347]
+                                primitive_type: uint8 [15349,15354]
+                if_statement [15370,15687]
+                    if: if [15370,15372]
+                    array_access [15374,15398]
+                        unary_expression [15374,15390]
+                            !: ! [15374,15375]
+                            identifier: marketExercised [15375,15390]
+                        identifier: market [15391,15397]
+                    block_statement [15400,15687]
+                        expression_statement [15418,15564]
+                            assignment_expression [15418,15563]
+                                tuple_expression [15418,15488]
+                                    array_access [15419,15452]
+                                        array_access [15419,15449]
+                                            identifier: exercisedMarketBalance [15419,15441]
+                                            identifier: market [15442,15448]
+                                        number_literal: 0 [15450,15451]
+                                    array_access [15454,15487]
+                                        array_access [15454,15484]
+                                            identifier: exercisedMarketBalance [15454,15476]
+                                            identifier: market [15477,15483]
+                                        number_literal: 1 [15485,15486]
+                                affectation_operator: = [15489,15490]
+                                call_expression [15491,15563]
+                                    member_expression: IPositionalMarket(market)                     .balancesOf [15491,15548]
+                                    call_argument [15549,15562]
+                                        type_cast_expression [15549,15562]
+                                            primitive_type: address [15549,15556]
+                                            call_argument [15557,15561]
+                                                identifier: this [15557,15561]
+                        expression_statement [15581,15625]
+                            call_expression [15581,15624]
+                                member_expression: IPositionalMarket(market).exerciseOptions [15581,15622]
+                        expression_statement [15642,15673]
+                            assignment_expression [15642,15672]
+                                array_access [15642,15665]
+                                    identifier: marketExercised [15642,15657]
+                                    identifier: market [15658,15664]
+                                affectation_operator: = [15666,15667]
+                                boolean_literal: true [15668,15672]
+                expression_statement [15700,15965]
+                    call_expression [15700,15964]
+                        identifier: require [15700,15707]
+                        call_argument [15725,15916]
+                            array_access [15725,15916]
+                                array_access [15725,15906]
+                                    array_access [15725,15898]
+                                        binary_expression [15725,15889]
+                                            call_expression [15725,15867]
+                                                member_expression: exercisedMarketBalance[market][position] >= userMarketBalances[_sender][market][position] &&                     sUSD.balanceOf [15725,15852]
+                                                call_argument [15853,15866]
+                                                    type_cast_expression [15853,15866]
+                                                        primitive_type: address [15853,15860]
+                                                        call_argument [15861,15865]
+                                                            identifier: this [15861,15865]
+                                            comparison_operator: >= [15868,15870]
+                                            identifier: userMarketBalances [15871,15889]
+                                        identifier: _sender [15890,15897]
+                                    identifier: market [15899,15905]
+                                identifier: position [15907,15915]
+                        call_argument [15934,15950]
+                            string_literal [15934,15950]
+                                string: "Invalid amount" [15934,15950]
+                if_statement [15978,16570]
+                    if: if [15978,15980]
+                    binary_expression [15982,16011]
+                        identifier: _sourceChain [15982,15994]
+                        comparison_operator: == [15995,15997]
+                        member_expression: block.chainid [15998,16011]
+                    block_statement [16013,16115]
+                        expression_statement [16031,16101]
+                            call_expression [16031,16100]
+                                member_expression: sUSD.transfer [16031,16044]
+                                call_argument [16045,16052]
+                                    identifier: _sender [16045,16052]
+                                call_argument [16054,16099]
+                                    array_access [16054,16099]
+                                        array_access [16054,16089]
+                                            array_access [16054,16081]
+                                                identifier: userMarketBalances [16054,16072]
+                                                identifier: _sender [16073,16080]
+                                            identifier: market [16082,16088]
+                                        identifier: position [16090,16098]
+                    else: else [16116,16120]
+                    block_statement [16121,16570]
+                        expression_statement [16139,16556]
+                            call_expression [16139,16555]
+                                identifier: sendMessageWithTransfer [16139,16162]
+                                call_argument [16184,16191]
+                                    identifier: _sender [16184,16191]
+                                call_argument [16213,16226]
+                                    type_cast_expression [16213,16226]
+                                        primitive_type: address [16213,16220]
+                                        call_argument [16221,16225]
+                                            identifier: sUSD [16221,16225]
+                                call_argument [16248,16293]
+                                    array_access [16248,16293]
+                                        array_access [16248,16283]
+                                            array_access [16248,16275]
+                                                identifier: userMarketBalances [16248,16266]
+                                                identifier: _sender [16267,16274]
+                                            identifier: market [16276,16282]
+                                        identifier: position [16284,16292]
+                                call_argument [16315,16335]
+                                    type_cast_expression [16315,16335]
+                                        primitive_type: uint64 [16315,16321]
+                                        call_argument [16322,16334]
+                                            identifier: _sourceChain [16322,16334]
+                                call_argument [16357,16384]
+                                    array_access [16357,16384]
+                                        identifier: noncePerSelector [16357,16373]
+                                        identifier: _selector [16374,16383]
+                                call_argument [16406,16423]
+                                    identifier: minBridgeSlippage [16406,16423]
+                                call_argument [16445,16447]
+                                    string_literal [16445,16447]
+                                        string: "" [16445,16447]
+                                call_argument [16469,16506]
+                                    member_expression: MsgDataTypes.BridgeSendType.Liquidity [16469,16506]
+                                call_argument [16528,16537]
+                                    member_expression: msg.value [16528,16537]
+                expression_statement [16583,16673]
+                    augmented_assignment_expression [16583,16672]
+                        array_access [16583,16623]
+                            array_access [16583,16613]
+                                identifier: exercisedMarketBalance [16583,16605]
+                                identifier: market [16606,16612]
+                            identifier: position [16614,16622]
+                        affectation_operator: -= [16624,16626]
+                        array_access [16627,16672]
+                            array_access [16627,16662]
+                                array_access [16627,16654]
+                                    identifier: userMarketBalances [16627,16645]
+                                    identifier: _sender [16646,16653]
+                                identifier: market [16655,16661]
+                            identifier: position [16663,16671]
+                expression_statement [16686,16736]
+                    assignment_expression [16686,16735]
+                        array_access [16686,16731]
+                            array_access [16686,16721]
+                                array_access [16686,16713]
+                                    identifier: userMarketBalances [16686,16704]
+                                    identifier: _sender [16705,16712]
+                                identifier: market [16714,16720]
+                            identifier: position [16722,16730]
+                        affectation_operator: = [16732,16733]
+                        number_literal: 0 [16734,16735]
+                return_statement [16749,16761]
+                    return: return [16749,16755]
+                    boolean_literal: true [16756,16760]
+            else: else [16772,16776]
+            if_statement [16777,18742]
+                if: if [16777,16779]
+                binary_expression [16781,16858]
+                    identifier: _selector [16781,16790]
+                    comparison_operator: == [16791,16793]
+                    type_cast_expression [16794,16858]
+                        primitive_type: bytes4 [16794,16800]
+                        call_argument [16801,16857]
+                            call_expression [16801,16857]
+                                identifier: keccak256 [16801,16810]
+                                call_argument [16811,16856]
+                                    type_cast_expression [16811,16856]
+                                        primitive_type: bytes [16811,16816]
+                                        call_argument [16817,16855]
+                                            string_literal [16817,16855]
+                                                string: "exerciseSportPosition(address,uint8)" [16817,16855]
+                block_statement [16860,18699]
+                    expression_statement [16874,16904]
+                        update_expression [16874,16903]
+                            array_access [16874,16901]
+                                identifier: noncePerSelector [16874,16890]
+                                identifier: _selector [16891,16900]
+                            increment_operator: ++ [16901,16903]
+                    variable_declaration_statement [16917,16991]
+                        variable_declaration_tuple [16917,16949]
+                            variable_declaration [16918,16932]
+                                type_name: address [16918,16925]
+                                identifier: market [16926,16932]
+                            variable_declaration [16934,16948]
+                                type_name: uint8 [16934,16939]
+                                identifier: position [16940,16948]
+                        affectation_operator: = [16950,16951]
+                        call_expression [16952,16990]
+                            member_expression: abi.decode [16952,16962]
+                            call_argument [16963,16971]
+                                identifier: _message [16963,16971]
+                            call_argument [16973,16989]
+                                tuple_expression [16973,16989]
+                                    primitive_type: address [16974,16981]
+                                    primitive_type: uint8 [16983,16988]
+                    if_statement [17004,17423]
+                        if: if [17004,17006]
+                        array_access [17008,17032]
+                            unary_expression [17008,17024]
+                                !: ! [17008,17009]
+                                identifier: marketExercised [17009,17024]
+                            identifier: market [17025,17031]
+                        block_statement [17034,17423]
+                            expression_statement [17052,17295]
+                                assignment_expression [17052,17294]
+                                    tuple_expression [17052,17235]
+                                        array_access [17074,17107]
+                                            array_access [17074,17104]
+                                                identifier: exercisedMarketBalance [17074,17096]
+                                                identifier: market [17097,17103]
+                                            number_literal: 0 [17105,17106]
+                                        array_access [17129,17162]
+                                            array_access [17129,17159]
+                                                identifier: exercisedMarketBalance [17129,17151]
+                                                identifier: market [17152,17158]
+                                            number_literal: 1 [17160,17161]
+                                        array_access [17184,17217]
+                                            array_access [17184,17214]
+                                                identifier: exercisedMarketBalance [17184,17206]
+                                                identifier: market [17207,17213]
+                                            number_literal: 2 [17215,17216]
+                                    affectation_operator: = [17236,17237]
+                                    call_expression [17238,17294]
+                                        member_expression: ISportPositionalMarket(market).balancesOf [17238,17279]
+                                        call_argument [17280,17293]
+                                            type_cast_expression [17280,17293]
+                                                primitive_type: address [17280,17287]
+                                                call_argument [17288,17292]
+                                                    identifier: this [17288,17292]
+                            expression_statement [17312,17361]
+                                call_expression [17312,17360]
+                                    member_expression: ISportPositionalMarket(market).exerciseOptions [17312,17358]
+                            expression_statement [17378,17409]
+                                assignment_expression [17378,17408]
+                                    array_access [17378,17401]
+                                        identifier: marketExercised [17378,17393]
+                                        identifier: market [17394,17400]
+                                    affectation_operator: = [17402,17403]
+                                    boolean_literal: true [17404,17408]
+                    expression_statement [17436,17701]
+                        call_expression [17436,17700]
+                            identifier: require [17436,17443]
+                            call_argument [17461,17652]
+                                array_access [17461,17652]
+                                    array_access [17461,17642]
+                                        array_access [17461,17634]
+                                            binary_expression [17461,17625]
+                                                call_expression [17461,17603]
+                                                    member_expression: exercisedMarketBalance[market][position] >= userMarketBalances[_sender][market][position] &&                     sUSD.balanceOf [17461,17588]
+                                                    call_argument [17589,17602]
+                                                        type_cast_expression [17589,17602]
+                                                            primitive_type: address [17589,17596]
+                                                            call_argument [17597,17601]
+                                                                identifier: this [17597,17601]
+                                                comparison_operator: >= [17604,17606]
+                                                identifier: userMarketBalances [17607,17625]
+                                            identifier: _sender [17626,17633]
+                                        identifier: market [17635,17641]
+                                    identifier: position [17643,17651]
+                            call_argument [17670,17686]
+                                string_literal [17670,17686]
+                                    string: "Invalid amount" [17670,17686]
+                    if_statement [17714,18498]
+                        if: if [17714,17716]
+                        binary_expression [17718,17747]
+                            identifier: _sourceChain [17718,17730]
+                            comparison_operator: == [17731,17733]
+                            member_expression: block.chainid [17734,17747]
+                        block_statement [17749,17851]
+                            expression_statement [17767,17837]
+                                call_expression [17767,17836]
+                                    member_expression: sUSD.transfer [17767,17780]
+                                    call_argument [17781,17788]
+                                        identifier: _sender [17781,17788]
+                                    call_argument [17790,17835]
+                                        array_access [17790,17835]
+                                            array_access [17790,17825]
+                                                array_access [17790,17817]
+                                                    identifier: userMarketBalances [17790,17808]
+                                                    identifier: _sender [17809,17816]
+                                                identifier: market [17818,17824]
+                                            identifier: position [17826,17834]
+                        else: else [17852,17856]
+                        block_statement [17857,18498]
+                            expression_statement [17875,18050]
+                                call_expression [17875,18049]
+                                    identifier: require [17875,17882]
+                                    call_argument [17904,17993]
+                                        array_access [17904,17993]
+                                            array_access [17904,17983]
+                                                array_access [17904,17975]
+                                                    binary_expression [17904,17966]
+                                                        array_access [17904,17944]
+                                                            array_access [17904,17934]
+                                                                identifier: exercisedMarketBalance [17904,17926]
+                                                                identifier: market [17927,17933]
+                                                            identifier: position [17935,17943]
+                                                        comparison_operator: >= [17945,17947]
+                                                        identifier: userMarketBalances [17948,17966]
+                                                    identifier: _sender [17967,17974]
+                                                identifier: market [17976,17982]
+                                            identifier: position [17984,17992]
+                                    call_argument [18015,18031]
+                                        string_literal [18015,18031]
+                                            string: "Invalid amount" [18015,18031]
+                            expression_statement [18067,18484]
+                                call_expression [18067,18483]
+                                    identifier: sendMessageWithTransfer [18067,18090]
+                                    call_argument [18112,18119]
+                                        identifier: _sender [18112,18119]
+                                    call_argument [18141,18154]
+                                        type_cast_expression [18141,18154]
+                                            primitive_type: address [18141,18148]
+                                            call_argument [18149,18153]
+                                                identifier: sUSD [18149,18153]
+                                    call_argument [18176,18221]
+                                        array_access [18176,18221]
+                                            array_access [18176,18211]
+                                                array_access [18176,18203]
+                                                    identifier: userMarketBalances [18176,18194]
+                                                    identifier: _sender [18195,18202]
+                                                identifier: market [18204,18210]
+                                            identifier: position [18212,18220]
+                                    call_argument [18243,18263]
+                                        type_cast_expression [18243,18263]
+                                            primitive_type: uint64 [18243,18249]
+                                            call_argument [18250,18262]
+                                                identifier: _sourceChain [18250,18262]
+                                    call_argument [18285,18312]
+                                        array_access [18285,18312]
+                                            identifier: noncePerSelector [18285,18301]
+                                            identifier: _selector [18302,18311]
+                                    call_argument [18334,18351]
+                                        identifier: minBridgeSlippage [18334,18351]
+                                    call_argument [18373,18375]
+                                        string_literal [18373,18375]
+                                            string: "" [18373,18375]
+                                    call_argument [18397,18434]
+                                        member_expression: MsgDataTypes.BridgeSendType.Liquidity [18397,18434]
+                                    call_argument [18456,18465]
+                                        member_expression: msg.value [18456,18465]
+                    expression_statement [18511,18601]
+                        augmented_assignment_expression [18511,18600]
+                            array_access [18511,18551]
+                                array_access [18511,18541]
+                                    identifier: exercisedMarketBalance [18511,18533]
+                                    identifier: market [18534,18540]
+                                identifier: position [18542,18550]
+                            affectation_operator: -= [18552,18554]
+                            array_access [18555,18600]
+                                array_access [18555,18590]
+                                    array_access [18555,18582]
+                                        identifier: userMarketBalances [18555,18573]
+                                        identifier: _sender [18574,18581]
+                                    identifier: market [18583,18589]
+                                identifier: position [18591,18599]
+                    expression_statement [18614,18664]
+                        assignment_expression [18614,18663]
+                            array_access [18614,18659]
+                                array_access [18614,18649]
+                                    array_access [18614,18641]
+                                        identifier: userMarketBalances [18614,18632]
+                                        identifier: _sender [18633,18640]
+                                    identifier: market [18642,18648]
+                                identifier: position [18650,18658]
+                            affectation_operator: = [18660,18661]
+                            number_literal: 0 [18662,18663]
+                    return_statement [18677,18689]
+                        return: return [18677,18683]
+                        boolean_literal: true [18684,18688]
+                else: else [18700,18704]
+                block_statement [18705,18742]
+                    return_statement [18719,18732]
+                        return: return [18719,18725]
+                        boolean_literal: false [18726,18731]
+to
+function_body [11297,18748]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [20619,20688]
+    call_expression [20619,20687]
+        member_expression: IERC20Upgradeable(usdc).approve [20619,20650]
+        call_argument [20651,20667]
+            identifier: _selectorAddress [20651,20667]
+        call_argument [20669,20686]
+            member_expression: type(uint256).max [20669,20686]
+to
+function_body [18848,19107]
+at 4
+
+New cluster:
+UPDATE from whitelistedOperator to onlyOwner
+------------
+===
+update-node
+---
+identifier: whitelistedOperator [23801,23820]
+replace whitelistedOperator by onlyOwner
+===
+update-node
+---
+identifier: whitelistedOperator [19203,19222]
+replace whitelistedOperator by onlyOwner
+
+New cluster:
+MOVE from modifier_invocation [20772,20781]
+------------
+===
+move-tree
+---
+identifier: whitelistedOperator [19203,19222]
+to
+modifier_invocation [20772,20781]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [21239,21295]
+    call_expression [21239,21294]
+        identifier: require [21239,21246]
+        call_argument [21247,21280]
+            array_access [21247,21280]
+                identifier: whitelistedToReceiveFrom [21247,21271]
+                identifier: _sender [21272,21279]
+        call_argument [21282,21293]
+            string_literal [21282,21293]
+                string: "InvSender" [21282,21293]
+to
+function_body [20588,20776]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [23940,24005]
+    variable_declaration [23940,23951]
+        type_name: uint [23940,23944]
+        identifier: amount [23945,23951]
+    affectation_operator: = [23952,23953]
+    call_expression [23954,24004]
+        member_expression: IERC20Upgradeable(_token).balanceOf [23954,23989]
+        call_argument [23990,24003]
+            type_cast_expression [23990,24003]
+                primitive_type: address [23990,23997]
+                call_argument [23998,24002]
+                    identifier: this [23998,24002]
+to
+function_body [23930,24118]
+at 0
+
+New cluster:
+MOVE from modifier_invocation [24355,24364]
+------------
+===
+move-tree
+---
+identifier: whitelistedOperator [23801,23820]
+to
+modifier_invocation [24355,24364]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [24641,24676]
+    assignment_expression [24641,24675]
+        identifier: defaultSlippage [24641,24656]
+        affectation_operator: = [24657,24658]
+        identifier: _defaultSlippage [24659,24675]
+to
+function_body [23783,24126]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [26193,26305]
+    variable_declaration [26193,26213]
+        type_name: uint [26193,26197]
+        identifier: collateralQuote [26198,26213]
+    affectation_operator: = [26214,26215]
+    call_expression [26216,26304]
+        member_expression: curveSUSD.get_dy_underlying [26216,26243]
+        call_argument [26244,26254]
+            identifier: USDC_INDEX [26244,26254]
+        call_argument [26256,26257]
+            number_literal: 0 [26256,26257]
+        call_argument [26259,26303]
+            parenthesized_expression [26259,26303]
+                binary_expression [26260,26302]
+                    parenthesized_expression [26260,26296]
+                        binary_expression [26261,26295]
+                            identifier: amount [26261,26267]
+                            arithmetic_operator: * [26268,26269]
+                            parenthesized_expression [26270,26295]
+                                binary_expression [26271,26294]
+                                    identifier: ONE [26271,26274]
+                                    arithmetic_operator: + [26275,26276]
+                                    parenthesized_expression [26277,26294]
+                                        binary_expression [26278,26293]
+                                            identifier: ONE_PERCENT [26278,26289]
+                                            arithmetic_operator: / [26290,26291]
+                                            number_literal: 5 [26292,26293]
+                    arithmetic_operator: / [26297,26298]
+                    identifier: ONE [26299,26302]
+to
+function_body [26007,26717]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [26315,26515]
+    call_expression [26315,26514]
+        identifier: require [26315,26322]
+        call_argument [26336,26477]
+            binary_expression [26336,26477]
+                binary_expression [26336,26371]
+                    identifier: maxAllowedPegSlippagePercentage [26336,26367]
+                    comparison_operator: > [26368,26369]
+                    number_literal: 0 [26370,26371]
+                logical_operator: && [26372,26374]
+                binary_expression [26391,26477]
+                    parenthesized_expression [26391,26415]
+                        binary_expression [26392,26414]
+                            identifier: collateralQuote [26392,26407]
+                            arithmetic_operator: * [26408,26409]
+                            number_literal: 1e12 [26410,26414]
+                    comparison_operator: >= [26416,26418]
+                    parenthesized_expression [26419,26477]
+                        binary_expression [26420,26476]
+                            parenthesized_expression [26420,26470]
+                                binary_expression [26421,26469]
+                                    identifier: amount [26421,26427]
+                                    arithmetic_operator: * [26428,26429]
+                                    parenthesized_expression [26430,26469]
+                                        binary_expression [26431,26468]
+                                            identifier: ONE [26431,26434]
+                                            arithmetic_operator: - [26435,26436]
+                                            identifier: maxAllowedPegSlippagePercentage [26437,26468]
+                            arithmetic_operator: / [26471,26472]
+                            identifier: ONE [26473,26476]
+        call_argument [26491,26504]
+            string_literal [26491,26504]
+                string: "maxExceeded" [26491,26504]
+to
+function_body [26007,26717]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [26525,26612]
+    call_expression [26525,26611]
+        identifier: require [26525,26532]
+        call_argument [26533,26594]
+            binary_expression [26533,26594]
+                parenthesized_expression [26533,26567]
+                    binary_expression [26534,26566]
+                        parenthesized_expression [26534,26557]
+                            binary_expression [26535,26556]
+                                identifier: collateralQuote [26535,26550]
+                                arithmetic_operator: * [26551,26552]
+                                identifier: ONE [26553,26556]
+                        arithmetic_operator: / [26558,26559]
+                        identifier: amount [26560,26566]
+                comparison_operator: <= [26568,26570]
+                parenthesized_expression [26571,26594]
+                    binary_expression [26572,26593]
+                        identifier: ONE [26572,26575]
+                        arithmetic_operator: + [26576,26577]
+                        identifier: defaultSlippage [26578,26593]
+        call_argument [26596,26610]
+            string_literal [26596,26610]
+                string: "SlippageHigh" [26596,26610]
+to
+function_body [26007,26717]
+at 2
+
+New cluster:
+MOVE from variable_declaration_statement [4333,4435]
+------------
+===
+move-tree
+---
+variable_declaration [9136,9151]
+    type_name: bytes4 [9136,9142]
+    identifier: selector [9143,9151]
+to
+variable_declaration_statement [4333,4435]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [5925,6038]
+------------
+===
+move-tree
+---
+variable_declaration [10647,10662]
+    type_name: bytes4 [10647,10653]
+    identifier: selector [10654,10662]
+to
+variable_declaration_statement [5925,6038]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [10647,10731]
+------------
+===
+move-tree
+---
+variable_declaration [9854,9869]
+    type_name: bytes4 [9854,9860]
+    identifier: selector [9861,9869]
+to
+variable_declaration_statement [10647,10731]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [9854,9924]
+------------
+===
+move-tree
+---
+variable_declaration [5925,5940]
+    type_name: bytes4 [5925,5931]
+    identifier: selector [5932,5940]
+to
+variable_declaration_statement [9854,9924]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [9136,9219]
+------------
+===
+move-tree
+---
+variable_declaration [4333,4348]
+    type_name: bytes4 [4333,4339]
+    identifier: selector [4340,4348]
+to
+variable_declaration_statement [9136,9219]
+at 0
+
+New cluster:
+MOVE from if_statement [13020,18742]
+------------
+===
+move-tree
+---
+block_statement [11408,12157]
+    variable_declaration_statement [11422,11522]
+        variable_declaration [11422,11441]
+            type_name: bytes4 [11422,11428]
+            identifier: realSelector [11429,11441]
+        affectation_operator: = [11442,11443]
+        type_cast_expression [11444,11521]
+            primitive_type: bytes4 [11444,11450]
+            call_argument [11451,11520]
+                call_expression [11451,11520]
+                    identifier: keccak256 [11451,11460]
+                    call_argument [11461,11519]
+                        type_cast_expression [11461,11519]
+                            primitive_type: bytes [11461,11466]
+                            call_argument [11467,11518]
+                                string_literal [11467,11518]
+                                    string: "buyFromAMM(address,uint8,uint256,uint256,uint256)" [11467,11518]
+    variable_declaration_statement [11535,11732]
+        variable_declaration_tuple [11535,11626]
+            variable_declaration [11536,11550]
+                type_name: address [11536,11543]
+                identifier: market [11544,11550]
+            variable_declaration [11552,11566]
+                type_name: uint8 [11552,11557]
+                identifier: position [11558,11566]
+            variable_declaration [11568,11579]
+                type_name: uint [11568,11572]
+                identifier: amount [11573,11579]
+            variable_declaration [11581,11600]
+                type_name: uint [11581,11585]
+                identifier: expectedPayout [11586,11600]
+            variable_declaration [11602,11625]
+                type_name: uint [11602,11606]
+                identifier: additionalSlippage [11607,11625]
+        affectation_operator: = [11627,11628]
+        call_expression [11629,11731]
+            member_expression: abi.decode [11629,11639]
+            call_argument [11657,11665]
+                identifier: _message [11657,11665]
+            call_argument [11683,11717]
+                tuple_expression [11683,11717]
+                    primitive_type: address [11684,11691]
+                    primitive_type: uint8 [11693,11698]
+                    primitive_type: uint [11700,11704]
+                    primitive_type: uint [11706,11710]
+                    primitive_type: uint [11712,11716]
+    variable_declaration_statement [11745,11945]
+        variable_declaration_tuple [11745,11780]
+            variable_declaration [11746,11758]
+                type_name: bool [11746,11750]
+                identifier: success [11751,11758]
+            variable_declaration [11760,11779]
+                type_name: bytes [11760,11765]
+                memory: memory [11766,11772]
+                identifier: result [11773,11779]
+        affectation_operator: = [11781,11782]
+        call_expression [11783,11944]
+            member_expression: selectorAddress[_selector].call [11783,11814]
+            call_argument [11832,11930]
+                call_expression [11832,11930]
+                    member_expression: abi.encodeWithSelector [11832,11854]
+                    call_argument [11855,11867]
+                        identifier: realSelector [11855,11867]
+                    call_argument [11869,11875]
+                        identifier: market [11869,11875]
+                    call_argument [11877,11885]
+                        identifier: position [11877,11885]
+                    call_argument [11887,11893]
+                        identifier: amount [11887,11893]
+                    call_argument [11895,11909]
+                        identifier: expectedPayout [11895,11909]
+                    call_argument [11911,11929]
+                        identifier: additionalSlippage [11911,11929]
+    if_statement [11958,12119]
+        if: if [11958,11960]
+        identifier: success [11962,11969]
+        block_statement [11971,12119]
+            expression_statement [11989,12032]
+                augmented_assignment_expression [11989,12031]
+                    array_access [11989,12021]
+                        array_access [11989,12013]
+                            identifier: userOwningToken [11989,12004]
+                            identifier: _sender [12005,12012]
+                        identifier: market [12014,12020]
+                    affectation_operator: += [12022,12024]
+                    identifier: amount [12025,12031]
+            expression_statement [12049,12105]
+                augmented_assignment_expression [12049,12104]
+                    array_access [12049,12094]
+                        array_access [12049,12084]
+                            array_access [12049,12076]
+                                identifier: userMarketBalances [12049,12067]
+                                identifier: _sender [12068,12075]
+                            identifier: market [12077,12083]
+                        identifier: position [12085,12093]
+                    affectation_operator: += [12095,12097]
+                    identifier: amount [12098,12104]
+    return_statement [12132,12147]
+        return: return [12132,12138]
+        identifier: success [12139,12146]
+to
+if_statement [13020,18742]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [24017,24027]
+    identifier: amount [24017,24023]
+    comparison_operator: > [24024,24025]
+    number_literal: 0 [24026,24027]
+to
+if_statement [24014,24112]
+at 1
+
+New cluster:
+MOVE from call_expression [4251,4323]
+------------
+===
+move-tree
+---
+call_argument [7830,7836]
+    identifier: _token [7830,7836]
+to
+call_expression [4251,4323]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [3328,3374]
+    call_expression [3328,3373]
+        identifier: require [3328,3335]
+        call_argument [3336,3359]
+            binary_expression [3336,3359]
+                identifier: expectedPayout [3336,3350]
+                comparison_operator: > [3351,3352]
+                binary_expression [3353,3359]
+                    number_literal: 20 [3353,3355]
+                    arithmetic_operator: * [3355,3356]
+                    identifier: ONE [3356,3359]
+        call_argument [3361,3372]
+            string_literal [3361,3372]
+                string: "LowAmount" [3361,3372]
+to
+block_statement [4870,5281]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [3387,3575]
+to
+block_statement [4870,5281]
+at 1
+------------
+===
+insert-node
+---
+call_expression [3387,3574]
+to
+expression_statement [3387,3575]
+at 0
+===
+insert-node
+---
+expression_statement [3387,3575]
+to
+block_statement [4870,5281]
+at 1
+===
+insert-node
+---
+member_expression: IERC20Upgradeable(_token).safeTransferFrom [3387,3429]
+to
+call_expression [3387,3574]
+at 0
+
+New cluster:
+MOVE from call_expression [5726,5915]
+------------
+===
+move-tree
+---
+call_argument [20176,20182]
+    identifier: _token [20176,20182]
+to
+call_expression [5726,5915]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [6545,6586]
+    call_expression [6545,6585]
+        identifier: require [6545,6552]
+        call_argument [6553,6571]
+            binary_expression [6553,6571]
+                identifier: _sUSDPaid [6553,6562]
+                comparison_operator: > [6563,6564]
+                binary_expression [6565,6571]
+                    number_literal: 20 [6565,6567]
+                    arithmetic_operator: * [6567,6568]
+                    identifier: ONE [6568,6571]
+        call_argument [6573,6584]
+            string_literal [6573,6584]
+                string: "LowAmount" [6573,6584]
+to
+block_statement [6406,6812]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [6599,6782]
+to
+block_statement [6406,6812]
+at 1
+------------
+===
+insert-node
+---
+expression_statement [6599,6782]
+to
+block_statement [6406,6812]
+at 1
+===
+insert-node
+---
+member_expression: IERC20Upgradeable(_token).safeTransferFrom [6599,6641]
+to
+call_expression [6599,6781]
+at 0
+===
+insert-node
+---
+call_expression [6599,6781]
+to
+expression_statement [6599,6782]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13339,13413]
+    call_expression [13339,13412]
+        member_expression: IERC20Upgradeable(collateral).approve [13339,13376]
+        call_argument [13377,13403]
+            array_access [13377,13403]
+                identifier: selectorAddress [13377,13392]
+                identifier: _selector [13393,13402]
+        call_argument [13405,13411]
+            identifier: amount [13405,13411]
+to
+block_statement [11408,12157]
+at 5
+
+New cluster:
+===
+insert-node
+---
+block_statement [14218,15334]
+to
+if_statement [14025,18742]
+at 2
+------------
+===
+insert-node
+---
+block_statement [14218,15334]
+to
+if_statement [14025,18742]
+at 2
+
+New cluster:
+MOVE from block_statement [14218,15334]
+------------
+===
+move-tree
+---
+variable_declaration_statement [12602,12802]
+    variable_declaration_tuple [12602,12637]
+        variable_declaration [12603,12615]
+            type_name: bool [12603,12607]
+            identifier: success [12608,12615]
+        variable_declaration [12617,12636]
+            type_name: bytes [12617,12622]
+            memory: memory [12623,12629]
+            identifier: result [12630,12636]
+    affectation_operator: = [12638,12639]
+    call_expression [12640,12801]
+        member_expression: selectorAddress[_selector].call [12640,12671]
+        call_argument [12689,12787]
+            call_expression [12689,12787]
+                member_expression: abi.encodeWithSelector [12689,12711]
+                call_argument [12712,12724]
+                    identifier: realSelector [12712,12724]
+                call_argument [12726,12732]
+                    identifier: market [12726,12732]
+                call_argument [12734,12742]
+                    identifier: position [12734,12742]
+                call_argument [12744,12750]
+                    identifier: amount [12744,12750]
+                call_argument [12752,12766]
+                    identifier: expectedPayout [12752,12766]
+                call_argument [12768,12786]
+                    identifier: additionalSlippage [12768,12786]
+to
+block_statement [14218,15334]
+at 2
+===
+move-tree
+---
+variable_declaration_statement [12279,12379]
+    variable_declaration [12279,12298]
+        type_name: bytes4 [12279,12285]
+        identifier: realSelector [12286,12298]
+    affectation_operator: = [12299,12300]
+    type_cast_expression [12301,12378]
+        primitive_type: bytes4 [12301,12307]
+        call_argument [12308,12377]
+            call_expression [12308,12377]
+                identifier: keccak256 [12308,12317]
+                call_argument [12318,12376]
+                    type_cast_expression [12318,12376]
+                        primitive_type: bytes [12318,12323]
+                        call_argument [12324,12375]
+                            string_literal [12324,12375]
+                                string: "buyFromAMM(address,uint8,uint256,uint256,uint256)" [12324,12375]
+to
+block_statement [14218,15334]
+at 0
+
+New cluster:
+MOVE from block_statement [14218,15334]
+------------
+===
+move-tree
+---
+variable_declaration_statement [13169,13489]
+    variable_declaration_tuple [13169,13416]
+        variable_declaration [13187,13210]
+            type_name: address[] [13187,13196]
+            memory: memory [13197,13203]
+            identifier: market [13204,13210]
+        variable_declaration [13228,13251]
+            type_name: uint8[] [13228,13235]
+            memory: memory [13236,13242]
+            identifier: position [13243,13251]
+        variable_declaration [13269,13280]
+            type_name: uint [13269,13273]
+            identifier: amount [13274,13280]
+        variable_declaration [13298,13321]
+            type_name: uint [13298,13302]
+            identifier: additionalSlippage [13303,13321]
+        variable_declaration [13339,13358]
+            type_name: uint [13339,13343]
+            identifier: expectedPayout [13344,13358]
+        variable_declaration [13376,13402]
+            type_name: address [13376,13383]
+            identifier: differentRecepient [13384,13402]
+    affectation_operator: = [13417,13418]
+    call_expression [13419,13488]
+        member_expression: abi.decode [13419,13429]
+        call_argument [13430,13438]
+            identifier: _message [13430,13438]
+        call_argument [13440,13487]
+            tuple_expression [13440,13487]
+                array_access [13441,13450]
+                    primitive_type: address [13441,13448]
+                array_access [13452,13459]
+                    primitive_type: uint8 [13452,13457]
+                primitive_type: uint [13461,13465]
+                primitive_type: uint [13467,13471]
+                primitive_type: uint [13473,13477]
+                primitive_type: address [13479,13486]
+to
+block_statement [14218,15334]
+at 1
+===
+move-tree
+---
+if_statement [13890,13981]
+    if: if [13890,13892]
+    identifier: success [13894,13901]
+    block_statement [13903,13981]
+        expression_statement [13921,13967]
+            call_expression [13921,13966]
+                identifier: _updateParlayDetails [13921,13941]
+                call_argument [13942,13949]
+                    identifier: _sender [13942,13949]
+                call_argument [13951,13965]
+                    identifier: expectedPayout [13951,13965]
+to
+block_statement [14218,15334]
+at 3
+===
+move-tree
+---
+return_statement [13994,14009]
+    return: return [13994,14000]
+    identifier: success [14001,14008]
+to
+block_statement [14218,15334]
+at 4
+
+New cluster:
+MOVE from if_statement [15142,18742]
+------------
+===
+move-tree
+---
+block_statement [14095,15136]
+    expression_statement [14109,14139]
+        update_expression [14109,14138]
+            array_access [14109,14136]
+                identifier: noncePerSelector [14109,14125]
+                identifier: _selector [14126,14135]
+            increment_operator: ++ [14136,14138]
+    variable_declaration_statement [14152,14201]
+        variable_declaration [14152,14166]
+            type_name: address [14152,14159]
+            identifier: market [14160,14166]
+        affectation_operator: = [14167,14168]
+        call_expression [14169,14200]
+            member_expression: abi.decode [14169,14179]
+            call_argument [14180,14188]
+                identifier: _message [14180,14188]
+            call_argument [14190,14199]
+                parenthesized_expression [14190,14199]
+                    primitive_type: address [14191,14198]
+    variable_declaration_statement [14214,14265]
+        variable_declaration [14214,14232]
+            type_name: uint [14214,14218]
+            identifier: initalBalance [14219,14232]
+        affectation_operator: = [14233,14234]
+        call_expression [14235,14264]
+            member_expression: sUSD.balanceOf [14235,14249]
+            call_argument [14250,14263]
+                type_cast_expression [14250,14263]
+                    primitive_type: address [14250,14257]
+                    call_argument [14258,14262]
+                        identifier: this [14258,14262]
+    expression_statement [14278,14330]
+        call_expression [14278,14329]
+            member_expression: IParlayMarketsAMM(parlayAMM).exerciseParlay [14278,14321]
+            call_argument [14322,14328]
+                identifier: market [14322,14328]
+    variable_declaration_statement [14343,14409]
+        variable_declaration [14343,14360]
+            type_name: uint [14343,14347]
+            identifier: issueBalance [14348,14360]
+        affectation_operator: = [14361,14362]
+        binary_expression [14363,14408]
+            call_expression [14363,14392]
+                member_expression: sUSD.balanceOf [14363,14377]
+                call_argument [14378,14391]
+                    type_cast_expression [14378,14391]
+                        primitive_type: address [14378,14385]
+                        call_argument [14386,14390]
+                            identifier: this [14386,14390]
+            arithmetic_operator: - [14393,14394]
+            identifier: initalBalance [14395,14408]
+    expression_statement [14422,14512]
+        call_expression [14422,14511]
+            identifier: require [14422,14429]
+            call_argument [14430,14487]
+                binary_expression [14430,14487]
+                    array_access [14430,14483]
+                        array_access [14430,14475]
+                            binary_expression [14430,14466]
+                                binary_expression [14430,14447]
+                                    identifier: issueBalance [14430,14442]
+                                    comparison_operator: >= [14443,14445]
+                                    number_literal: 0 [14446,14447]
+                                logical_operator: && [14448,14450]
+                                identifier: userOwningToken [14451,14466]
+                            identifier: _sender [14467,14474]
+                        identifier: market [14476,14482]
+                    comparison_operator: > [14484,14485]
+                    number_literal: 0 [14486,14487]
+            call_argument [14489,14510]
+                string_literal [14489,14510]
+                    string: "Balances dont match" [14489,14510]
+    if_statement [14525,15051]
+        if: if [14525,14527]
+        binary_expression [14529,14558]
+            identifier: _sourceChain [14529,14541]
+            comparison_operator: == [14542,14544]
+            member_expression: block.chainid [14545,14558]
+        block_statement [14560,14629]
+            expression_statement [14578,14615]
+                call_expression [14578,14614]
+                    member_expression: sUSD.transfer [14578,14591]
+                    call_argument [14592,14599]
+                        identifier: _sender [14592,14599]
+                    call_argument [14601,14613]
+                        identifier: issueBalance [14601,14613]
+        else: else [14630,14634]
+        block_statement [14635,15051]
+            expression_statement [14653,15037]
+                call_expression [14653,15036]
+                    identifier: sendMessageWithTransfer [14653,14676]
+                    call_argument [14698,14705]
+                        identifier: _sender [14698,14705]
+                    call_argument [14727,14740]
+                        type_cast_expression [14727,14740]
+                            primitive_type: address [14727,14734]
+                            call_argument [14735,14739]
+                                identifier: sUSD [14735,14739]
+                    call_argument [14762,14774]
+                        identifier: issueBalance [14762,14774]
+                    call_argument [14796,14816]
+                        type_cast_expression [14796,14816]
+                            primitive_type: uint64 [14796,14802]
+                            call_argument [14803,14815]
+                                identifier: _sourceChain [14803,14815]
+                    call_argument [14838,14865]
+                        array_access [14838,14865]
+                            identifier: noncePerSelector [14838,14854]
+                            identifier: _selector [14855,14864]
+                    call_argument [14887,14904]
+                        identifier: minBridgeSlippage [14887,14904]
+                    call_argument [14926,14928]
+                        string_literal [14926,14928]
+                            string: "" [14926,14928]
+                    call_argument [14950,14987]
+                        member_expression: MsgDataTypes.BridgeSendType.Liquidity [14950,14987]
+                    call_argument [15009,15018]
+                        member_expression: msg.value [15009,15018]
+    expression_statement [15064,15101]
+        assignment_expression [15064,15100]
+            array_access [15064,15096]
+                array_access [15064,15088]
+                    identifier: userOwningToken [15064,15079]
+                    identifier: _sender [15080,15087]
+                identifier: market [15089,15095]
+            affectation_operator: = [15097,15098]
+            number_literal: 0 [15099,15100]
+    return_statement [15114,15126]
+        return: return [15114,15120]
+        boolean_literal: true [15121,15125]
+to
+if_statement [15142,18742]
+at 2
+
+New cluster:
+===
+insert-node
+---
+array_access [22057,22090]
+to
+call_argument [21774,21798]
+at 0
+------------
+===
+insert-node
+---
+array_access [22057,22090]
+to
+call_argument [21774,21798]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [26671,26672]
+    number_literal: 0 [26671,26672]
+to
+call_expression [26641,26710]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [26674,26684]
+    identifier: USDC_INDEX [26674,26684]
+to
+call_expression [26641,26710]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [26686,26701]
+    identifier: collateralQuote [26686,26701]
+to
+call_expression [26641,26710]
+at 3
+
+New cluster:
+MOVE from call_expression [26641,26710]
+------------
+===
+move-tree
+---
+call_argument [2763,2769]
+    identifier: amount [2763,2769]
+to
+call_expression [26641,26710]
+at 4
+
+New cluster:
+MOVE from call_expression [3387,3574]
+------------
+===
+move-tree
+---
+call_argument [20006,20016]
+    member_expression: msg.sender [20006,20016]
+to
+call_expression [3387,3574]
+at 1
+===
+move-tree
+---
+call_argument [20018,20031]
+    type_cast_expression [20018,20031]
+        primitive_type: address [20018,20025]
+        call_argument [20026,20030]
+            identifier: this [20026,20030]
+to
+call_expression [3387,3574]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [3506,3560]
+    parenthesized_expression [3506,3560]
+        binary_expression [3507,3559]
+            parenthesized_expression [3507,3553]
+                binary_expression [3508,3552]
+                    identifier: expectedPayout [3508,3522]
+                    arithmetic_operator: * [3523,3524]
+                    parenthesized_expression [3525,3552]
+                        binary_expression [3526,3551]
+                            identifier: ONE [3526,3529]
+                            arithmetic_operator: + [3530,3531]
+                            identifier: bridgeFeePercentage [3532,3551]
+            arithmetic_operator: / [3554,3555]
+            identifier: ONE [3556,3559]
+to
+call_expression [3387,3574]
+at 3
+
+New cluster:
+MOVE from call_expression [6599,6781]
+------------
+===
+move-tree
+---
+call_argument [2274,2284]
+    member_expression: msg.sender [2274,2284]
+to
+call_expression [6599,6781]
+at 1
+
+New cluster:
+MOVE from call_expression [6599,6781]
+------------
+===
+move-tree
+---
+call_argument [15549,15562]
+    type_cast_expression [15549,15562]
+        primitive_type: address [15549,15556]
+        call_argument [15557,15561]
+            identifier: this [15557,15561]
+to
+call_expression [6599,6781]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [6718,6767]
+    parenthesized_expression [6718,6767]
+        binary_expression [6719,6766]
+            parenthesized_expression [6719,6760]
+                binary_expression [6720,6759]
+                    identifier: _sUSDPaid [6720,6729]
+                    arithmetic_operator: * [6730,6731]
+                    parenthesized_expression [6732,6759]
+                        binary_expression [6733,6758]
+                            identifier: ONE [6733,6736]
+                            arithmetic_operator: + [6737,6738]
+                            identifier: bridgeFeePercentage [6739,6758]
+            arithmetic_operator: / [6761,6762]
+            identifier: ONE [6763,6766]
+to
+call_expression [6599,6781]
+at 3
+
+New cluster:
+UPDATE from "Invalid sender" to "InvSender"
+------------
+===
+update-node
+---
+string: "Invalid sender" [7321,7337]
+replace "Invalid sender" by "InvSender"
+===
+update-node
+---
+string: "Invalid sender" [21800,21816]
+replace "Invalid sender" by "InvSender"
+
+New cluster:
+UPDATE from "Invalid selector" to "InvSelector"
+------------
+===
+update-node
+---
+string: "Invalid selector" [22089,22107]
+replace "Invalid selector" by "InvSelector"
+===
+update-node
+---
+string: "Invalid selector" [8379,8397]
+replace "Invalid selector" by "InvSelector"
+===
+update-node
+---
+string: "Invalid selector" [7565,7583]
+replace "Invalid selector" by "InvSelector"
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [15816,15866]
+to
+block_statement [14095,15136]
+at 6
+------------
+===
+insert-node
+---
+affectation_operator: = [15828,15829]
+to
+variable_declaration_statement [15816,15866]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [15816,15866]
+to
+block_statement [14095,15136]
+at 6
+
+New cluster:
+MOVE from block_statement [14095,15136]
+------------
+===
+move-tree
+---
+if_statement [15978,16570]
+    if: if [15978,15980]
+    binary_expression [15982,16011]
+        identifier: _sourceChain [15982,15994]
+        comparison_operator: == [15995,15997]
+        member_expression: block.chainid [15998,16011]
+    block_statement [16013,16115]
+        expression_statement [16031,16101]
+            call_expression [16031,16100]
+                member_expression: sUSD.transfer [16031,16044]
+                call_argument [16045,16052]
+                    identifier: _sender [16045,16052]
+                call_argument [16054,16099]
+                    array_access [16054,16099]
+                        array_access [16054,16089]
+                            array_access [16054,16081]
+                                identifier: userMarketBalances [16054,16072]
+                                identifier: _sender [16073,16080]
+                            identifier: market [16082,16088]
+                        identifier: position [16090,16098]
+    else: else [16116,16120]
+    block_statement [16121,16570]
+        expression_statement [16139,16556]
+            call_expression [16139,16555]
+                identifier: sendMessageWithTransfer [16139,16162]
+                call_argument [16184,16191]
+                    identifier: _sender [16184,16191]
+                call_argument [16213,16226]
+                    type_cast_expression [16213,16226]
+                        primitive_type: address [16213,16220]
+                        call_argument [16221,16225]
+                            identifier: sUSD [16221,16225]
+                call_argument [16248,16293]
+                    array_access [16248,16293]
+                        array_access [16248,16283]
+                            array_access [16248,16275]
+                                identifier: userMarketBalances [16248,16266]
+                                identifier: _sender [16267,16274]
+                            identifier: market [16276,16282]
+                        identifier: position [16284,16292]
+                call_argument [16315,16335]
+                    type_cast_expression [16315,16335]
+                        primitive_type: uint64 [16315,16321]
+                        call_argument [16322,16334]
+                            identifier: _sourceChain [16322,16334]
+                call_argument [16357,16384]
+                    array_access [16357,16384]
+                        identifier: noncePerSelector [16357,16373]
+                        identifier: _selector [16374,16383]
+                call_argument [16406,16423]
+                    identifier: minBridgeSlippage [16406,16423]
+                call_argument [16445,16447]
+                    string_literal [16445,16447]
+                        string: "" [16445,16447]
+                call_argument [16469,16506]
+                    member_expression: MsgDataTypes.BridgeSendType.Liquidity [16469,16506]
+                call_argument [16528,16537]
+                    member_expression: msg.value [16528,16537]
+to
+block_statement [14095,15136]
+at 7
+===
+move-tree
+---
+expression_statement [15700,15965]
+    call_expression [15700,15964]
+        identifier: require [15700,15707]
+        call_argument [15725,15916]
+            array_access [15725,15916]
+                array_access [15725,15906]
+                    array_access [15725,15898]
+                        binary_expression [15725,15889]
+                            call_expression [15725,15867]
+                                member_expression: exercisedMarketBalance[market][position] >= userMarketBalances[_sender][market][position] &&                     sUSD.balanceOf [15725,15852]
+                                call_argument [15853,15866]
+                                    type_cast_expression [15853,15866]
+                                        primitive_type: address [15853,15860]
+                                        call_argument [15861,15865]
+                                            identifier: this [15861,15865]
+                            comparison_operator: >= [15868,15870]
+                            identifier: userMarketBalances [15871,15889]
+                        identifier: _sender [15890,15897]
+                    identifier: market [15899,15905]
+                identifier: position [15907,15915]
+        call_argument [15934,15950]
+            string_literal [15934,15950]
+                string: "Invalid amount" [15934,15950]
+to
+block_statement [16860,18699]
+at 3
+
+New cluster:
+UPDATE from _sender to whitelistedToReceiveFrom
+------------
+===
+update-node
+---
+identifier: _sender [21774,21781]
+replace _sender by whitelistedToReceiveFrom
+
+New cluster:
+MOVE from array_access [22057,22090]
+------------
+===
+move-tree
+---
+identifier: _sender [21774,21781]
+to
+array_access [22057,22090]
+at 0
+===
+move-tree
+---
+identifier: sourceAdapter [21785,21798]
+to
+array_access [22057,22090]
+at 1
+
+New cluster:
+UPDATE from sourceAdapter to _sender
+------------
+===
+update-node
+---
+identifier: sourceAdapter [21785,21798]
+replace sourceAdapter by _sender
+
+New cluster:
+MOVE from call_expression [24043,24101]
+------------
+===
+move-tree
+---
+call_argument [20085,20095]
+    member_expression: msg.sender [20085,20095]
+to
+call_expression [24043,24101]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [24094,24100]
+    identifier: amount [24094,24100]
+to
+call_expression [24043,24101]
+at 2
+
+New cluster:
+UPDATE from uint to address
+------------
+===
+update-node
+---
+primitive_type: uint [11712,11716]
+replace uint by address
+===
+update-node
+---
+type_name: uint [11602,11606]
+replace uint by address
+
+New cluster:
+UPDATE from additionalSlippage to collateral
+------------
+===
+update-node
+---
+identifier: additionalSlippage [11607,11625]
+replace additionalSlippage by collateral
+===
+update-node
+---
+identifier: differentRecepient [13384,13402]
+replace differentRecepient by collateral
+===
+update-node
+---
+identifier: additionalSlippage [12768,12786]
+replace additionalSlippage by collateral
+===
+update-node
+---
+identifier: differentRecepient [13826,13844]
+replace differentRecepient by collateral
+
+New cluster:
+UPDATE from abi.decode to abi                 .decode
+------------
+===
+update-node
+---
+member_expression: abi.decode [13419,13429]
+replace abi.decode by abi                 .decode
+
+New cluster:
+MOVE from variable_declaration_statement [15816,15866]
+------------
+===
+move-tree
+---
+variable_declaration [12425,12436]
+    type_name: uint [12425,12429]
+    identifier: amount [12430,12436]
+to
+variable_declaration_statement [15816,15866]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [15816,15866]
+------------
+===
+move-tree
+---
+call_expression [14578,14614]
+    member_expression: sUSD.transfer [14578,14591]
+    call_argument [14592,14599]
+        identifier: _sender [14592,14599]
+    call_argument [14601,14613]
+        identifier: issueBalance [14601,14613]
+to
+variable_declaration_statement [15816,15866]
+at 2
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [19260,19343]
+to
+block_statement [16860,18699]
+at 4
+------------
+===
+insert-node
+---
+affectation_operator: = [19272,19273]
+to
+variable_declaration_statement [19260,19343]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [19260,19343]
+to
+block_statement [16860,18699]
+at 4
+
+New cluster:
+MOVE from block_statement [16860,18699]
+------------
+===
+move-tree
+---
+if_statement [14525,15051]
+    if: if [14525,14527]
+    binary_expression [14529,14558]
+        identifier: _sourceChain [14529,14541]
+        comparison_operator: == [14542,14544]
+        member_expression: block.chainid [14545,14558]
+    block_statement [14560,14629]
+        expression_statement [14578,14615]
+            call_expression [14578,14614]
+                member_expression: sUSD.transfer [14578,14591]
+                call_argument [14592,14599]
+                    identifier: _sender [14592,14599]
+                call_argument [14601,14613]
+                    identifier: issueBalance [14601,14613]
+    else: else [14630,14634]
+    block_statement [14635,15051]
+        expression_statement [14653,15037]
+            call_expression [14653,15036]
+                identifier: sendMessageWithTransfer [14653,14676]
+                call_argument [14698,14705]
+                    identifier: _sender [14698,14705]
+                call_argument [14727,14740]
+                    type_cast_expression [14727,14740]
+                        primitive_type: address [14727,14734]
+                        call_argument [14735,14739]
+                            identifier: sUSD [14735,14739]
+                call_argument [14762,14774]
+                    identifier: issueBalance [14762,14774]
+                call_argument [14796,14816]
+                    type_cast_expression [14796,14816]
+                        primitive_type: uint64 [14796,14802]
+                        call_argument [14803,14815]
+                            identifier: _sourceChain [14803,14815]
+                call_argument [14838,14865]
+                    array_access [14838,14865]
+                        identifier: noncePerSelector [14838,14854]
+                        identifier: _selector [14855,14864]
+                call_argument [14887,14904]
+                    identifier: minBridgeSlippage [14887,14904]
+                call_argument [14926,14928]
+                    string_literal [14926,14928]
+                        string: "" [14926,14928]
+                call_argument [14950,14987]
+                    member_expression: MsgDataTypes.BridgeSendType.Liquidity [14950,14987]
+                call_argument [15009,15018]
+                    member_expression: msg.value [15009,15018]
+to
+block_statement [16860,18699]
+at 5
+
+New cluster:
+MOVE from call_expression [15932,15981]
+------------
+===
+move-tree
+---
+call_argument [13722,13728]
+    identifier: amount [13722,13728]
+to
+call_expression [15932,15981]
+at 2
+===
+move-tree
+---
+call_argument [13750,13768]
+    identifier: additionalSlippage [13750,13768]
+to
+call_expression [12689,12787]
+at 5
+===
+move-tree
+---
+call_argument [13826,13844]
+    identifier: differentRecepient [13826,13844]
+to
+call_expression [11832,11930]
+at 7
+
+New cluster:
+===
+insert-node
+---
+call_argument [12435,12445]
+to
+call_expression [11832,11930]
+at 8
+------------
+===
+insert-node
+---
+call_argument [12435,12445]
+to
+call_expression [11832,11930]
+at 8
+
+New cluster:
+===
+insert-node
+---
+identifier: _transferToCollateral [15830,15851]
+to
+call_expression [14578,14614]
+at 0
+------------
+===
+insert-node
+---
+identifier: _transferToCollateral [15830,15851]
+to
+call_expression [14578,14614]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [19260,19271]
+    type_name: uint [19260,19264]
+    identifier: amount [19265,19271]
+to
+variable_declaration_statement [19260,19343]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [19260,19343]
+------------
+===
+move-tree
+---
+call_expression [16031,16100]
+    member_expression: sUSD.transfer [16031,16044]
+    call_argument [16045,16052]
+        identifier: _sender [16045,16052]
+    call_argument [16054,16099]
+        array_access [16054,16099]
+            array_access [16054,16089]
+                array_access [16054,16081]
+                    identifier: userMarketBalances [16054,16072]
+                    identifier: _sender [16073,16080]
+                identifier: market [16082,16088]
+            identifier: position [16090,16098]
+to
+variable_declaration_statement [19260,19343]
+at 2
+
+New cluster:
+UPDATE from additionalSlippage to defaultSlippage
+------------
+===
+update-node
+---
+identifier: additionalSlippage [13750,13768]
+replace additionalSlippage by defaultSlippage
+===
+update-node
+---
+identifier: additionalSlippage [11911,11929]
+replace additionalSlippage by defaultSlippage
+
+New cluster:
+MOVE from call_argument [12435,12445]
+------------
+===
+move-tree
+---
+type_cast_expression [19491,19501]
+    primitive_type: address [19491,19498]
+    call_argument [19499,19500]
+        number_literal: 0 [19499,19500]
+to
+call_argument [12435,12445]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [15165,15175]
+    type_cast_expression [15165,15175]
+        primitive_type: address [15165,15172]
+        call_argument [15173,15174]
+            number_literal: 0 [15173,15174]
+to
+call_expression [12689,12787]
+at 8
+
+New cluster:
+MOVE from call_expression [13921,13966]
+------------
+===
+move-tree
+---
+call_argument [16045,16052]
+    identifier: _sender [16045,16052]
+to
+call_expression [13921,13966]
+at 1
+===
+move-tree
+---
+member_expression: sUSD.transfer [16031,16044]
+to
+call_expression [15932,15981]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [15932,15981]
+to
+expression_statement [16031,16101]
+at 0
+------------
+===
+insert-node
+---
+call_expression [15932,15981]
+to
+expression_statement [16031,16101]
+at 0
+
+New cluster:
+UPDATE from require to _transferToCollateral
+------------
+===
+update-node
+---
+identifier: require [17436,17443]
+replace require by _transferToCollateral
+
+New cluster:
+MOVE from call_expression [16031,16100]
+------------
+===
+move-tree
+---
+identifier: require [17436,17443]
+to
+call_expression [16031,16100]
+at 0
+
+New cluster:
+MOVE from block_statement [14635,15051]
+------------
+===
+move-tree
+---
+expression_statement [17875,18050]
+    call_expression [17875,18049]
+        identifier: require [17875,17882]
+        call_argument [17904,17993]
+            array_access [17904,17993]
+                array_access [17904,17983]
+                    array_access [17904,17975]
+                        binary_expression [17904,17966]
+                            array_access [17904,17944]
+                                array_access [17904,17934]
+                                    identifier: exercisedMarketBalance [17904,17926]
+                                    identifier: market [17927,17933]
+                                identifier: position [17935,17943]
+                            comparison_operator: >= [17945,17947]
+                            identifier: userMarketBalances [17948,17966]
+                        identifier: _sender [17967,17974]
+                    identifier: market [17976,17982]
+                identifier: position [17984,17992]
+        call_argument [18015,18031]
+            string_literal [18015,18031]
+                string: "Invalid amount" [18015,18031]
+to
+block_statement [14635,15051]
+at 0
+
+New cluster:
+UPDATE from "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" to "buySport"
+------------
+===
+update-node
+---
+string: "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" [13073,13141]
+replace "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" by "buySport"
+===
+update-node
+---
+string: "buyFromCryptoAMM(address,uint8,uint256,uint256,uint256)" [4374,4431]
+replace "buyFromCryptoAMM(address,uint8,uint256,uint256,uint256)" by "buySport"
+
+New cluster:
+UPDATE from "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" to "buyParlay"
+------------
+===
+update-node
+---
+string: "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" [5966,6034]
+replace "buyFromParlay(address[],uint256[],uint256,uint256,uint256,address)" by "buyParlay"
+===
+update-node
+---
+string: "exerciseParlay(address)" [14065,14090]
+replace "exerciseParlay(address)" by "buyParlay"
+
+New cluster:
+UPDATE from "exerciseSportPosition(address,uint8)" to "exeSport"
+------------
+===
+update-node
+---
+string: "exerciseSportPosition(address,uint8)" [16817,16855]
+replace "exerciseSportPosition(address,uint8)" by "exeSport"
+===
+update-node
+---
+string: "exerciseCryptoPosition(address,uint8)" [10688,10727]
+replace "exerciseCryptoPosition(address,uint8)" by "exeSport"
+
+New cluster:
+UPDATE from "exerciseParlay(address)" to "exeParlay"
+------------
+===
+update-node
+---
+string: "exerciseParlay(address)" [9895,9920]
+replace "exerciseParlay(address)" by "exeParlay"
+===
+update-node
+---
+string: "exerciseCryptoPosition(address,uint8)" [15182,15221]
+replace "exerciseCryptoPosition(address,uint8)" by "exeParlay"
+
+New cluster:
+UPDATE from "exerciseSportPosition(address,uint8)" to "exeCrypto"
+------------
+===
+update-node
+---
+string: "exerciseSportPosition(address,uint8)" [9177,9215]
+replace "exerciseSportPosition(address,uint8)" by "exeCrypto"
+
+New cluster:
+UPDATE from "Balances dont match" to "Not match"
+------------
+===
+update-node
+---
+string: "Balances dont match" [14489,14510]
+replace "Balances dont match" by "Not match"
+
+New cluster:
+UPDATE from sUSD.transfer to IERC20Upgradeable(usdc).transfer
+------------
+===
+update-node
+---
+member_expression: sUSD.transfer [14578,14591]
+replace sUSD.transfer by IERC20Upgradeable(usdc).transfer
+===
+update-node
+---
+member_expression: sUSD.transfer [16031,16044]
+replace sUSD.transfer by IERC20Upgradeable(usdc).transfer
+
+New cluster:
+MOVE from call_expression [15932,15981]
+------------
+===
+move-tree
+---
+call_argument [13942,13949]
+    identifier: _sender [13942,13949]
+to
+call_expression [15932,15981]
+at 1
+
+New cluster:
+MOVE from call_expression [16139,16555]
+------------
+===
+move-tree
+---
+call_argument [16221,16225]
+    identifier: sUSD [16221,16225]
+to
+call_expression [16139,16555]
+at 2
+
+New cluster:
+MOVE from expression_statement [14578,14615]
+------------
+===
+move-tree
+---
+call_expression [17767,17836]
+    member_expression: sUSD.transfer [17767,17780]
+    call_argument [17781,17788]
+        identifier: _sender [17781,17788]
+    call_argument [17790,17835]
+        array_access [17790,17835]
+            array_access [17790,17825]
+                array_access [17790,17817]
+                    identifier: userMarketBalances [17790,17808]
+                    identifier: _sender [17809,17816]
+                identifier: market [17818,17824]
+            identifier: position [17826,17834]
+to
+expression_statement [14578,14615]
+at 0
+
+New cluster:
+UPDATE from sUSD to usdc
+------------
+===
+update-node
+---
+identifier: sUSD [16221,16225]
+replace sUSD by usdc
+===
+update-node
+---
+identifier: sUSD [14735,14739]
+replace sUSD by usdc
+
+New cluster:
+UPDATE from issueBalance to amount
+------------
+===
+update-node
+---
+identifier: issueBalance [14762,14774]
+replace issueBalance by amount
+===
+update-node
+---
+identifier: market [17818,17824]
+replace market by amount
+===
+update-node
+---
+identifier: market [16276,16282]
+replace market by amount
+
+New cluster:
+MOVE from call_argument [16248,16293]
+------------
+===
+move-tree
+---
+identifier: market [16276,16282]
+to
+call_argument [16248,16293]
+at 0
+
+New cluster:
+UPDATE from "Invalid amount" to "InvAmount"
+------------
+===
+update-node
+---
+string: "Invalid amount" [18015,18031]
+replace "Invalid amount" by "InvAmount"
+===
+update-node
+---
+string: "Invalid amount" [15934,15950]
+replace "Invalid amount" by "InvAmount"
+
+New cluster:
+MOVE from call_expression [17767,17836]
+------------
+===
+move-tree
+---
+call_argument [14592,14599]
+    identifier: _sender [14592,14599]
+to
+call_expression [17767,17836]
+at 1
+===
+move-tree
+---
+member_expression: sUSD.transfer [14578,14591]
+to
+call_expression [17767,17836]
+at 0
+
+New cluster:
+MOVE from call_expression [14653,15036]
+------------
+===
+move-tree
+---
+call_argument [14735,14739]
+    identifier: sUSD [14735,14739]
+to
+call_expression [14653,15036]
+at 2
+
+New cluster:
+UPDATE from "buyFromAMM(address,uint8,uint256,uint256,uint256)" to "buyFromAMMWithDifferentCollateralAndReferrer(address,uint8,uint256,uint256,uint256,address,address)"
+------------
+===
+update-node
+---
+string: "buyFromAMM(address,uint8,uint256,uint256,uint256)" [11467,11518]
+replace "buyFromAMM(address,uint8,uint256,uint256,uint256)" by "buyFromAMMWithDifferentCollateralAndReferrer(address,uint8,uint256,uint256,uint256,address,address)"
+
+New cluster:
+MOVE from call_argument [17790,17835]
+------------
+===
+move-tree
+---
+identifier: market [17818,17824]
+to
+call_argument [17790,17835]
+at 0
+
+New cluster:
+UPDATE from "buyFromAMM(address,uint8,uint256,uint256,uint256)" to "buyFromParlayWithDifferentCollateralAndReferrer(address[],uint256[],uint256,uint256,uint256,address,address)"
+------------
+===
+update-node
+---
+string: "buyFromAMM(address,uint8,uint256,uint256,uint256)" [12324,12375]
+replace "buyFromAMM(address,uint8,uint256,uint256,uint256)" by "buyFromParlayWithDifferentCollateralAndReferrer(address[],uint256[],uint256,uint256,uint256,address,address)"
+
+New cluster:
+===
+delete-node
+---
+identifier: CrossChainAdapter [582,599]
+===
+------------
+===
+delete-node
+---
+identifier: CrossChainAdapter [582,599]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [600,602]
+===
+------------
+===
+delete-node
+---
+is: is [600,602]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [2105,2365]
+===
+------------
+===
+delete-node
+---
+function: function [2105,2113]
+===
+===
+delete-node
+---
+member_expression: abi.encode [2263,2273]
+===
+===
+delete-node
+---
+variable_declaration_statement [2240,2293]
+===
+===
+delete-node
+---
+identifier: sendNote [2114,2122]
+===
+===
+delete-node
+---
+function_body [2230,2365]
+===
+===
+delete-node
+---
+call_expression [2263,2292]
+===
+===
+delete-node
+---
+function_definition [2105,2365]
+===
+===
+delete-node
+---
+affectation_operator: = [2261,2262]
+===
+===
+delete-node
+---
+visibility: public [2215,2221]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2132,2152]
+    type_name: address [2132,2139]
+    identifier: _dstContract [2140,2152]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2162,2180]
+    type_name: uint64 [2162,2168]
+    identifier: _dstChainId [2169,2180]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2190,2208]
+    type_name: bytes [2190,2195]
+    memory: memory [2196,2202]
+    identifier: _note [2203,2208]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [2222,2229]
+    payable: payable [2222,2229]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [2240,2260]
+    type_name: bytes [2240,2245]
+    memory: memory [2246,2252]
+    identifier: message [2253,2260]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2286,2291]
+    identifier: _note [2286,2291]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [2302,2359]
+    call_expression [2302,2358]
+        identifier: sendMessage [2302,2313]
+        call_argument [2314,2326]
+            identifier: _dstContract [2314,2326]
+        call_argument [2328,2339]
+            identifier: _dstChainId [2328,2339]
+        call_argument [2341,2346]
+            identifier: _note [2341,2346]
+        call_argument [2348,2357]
+            member_expression: msg.value [2348,2357]
+
+New cluster:
+===
+delete-node
+---
+function_definition [2371,3843]
+===
+------------
+===
+delete-node
+---
+visibility: external [2585,2593]
+===
+===
+delete-node
+---
+function_body [2625,3843]
+===
+===
+delete-node
+---
+affectation_operator: = [2732,2733]
+===
+===
+delete-node
+---
+call_expression [2734,2806]
+===
+===
+delete-node
+---
+identifier: buyFromSportAMM [2380,2395]
+===
+===
+delete-node
+---
+function: function [2371,2379]
+===
+===
+delete-node
+---
+function_definition [2371,3843]
+===
+===
+delete-node
+---
+member_expression: abi.encode [2734,2744]
+===
+===
+delete-node
+---
+variable_declaration_statement [2711,2807]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2405,2419]
+    type_name: address [2405,2412]
+    identifier: _token [2413,2419]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2429,2443]
+    type_name: address [2429,2436]
+    identifier: market [2437,2443]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2453,2467]
+    type_name: uint8 [2453,2458]
+    identifier: position [2459,2467]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2498,2517]
+    type_name: uint [2498,2502]
+    identifier: expectedPayout [2503,2517]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2527,2550]
+    type_name: uint [2527,2531]
+    identifier: additionalSlippage [2532,2550]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2560,2578]
+    type_name: uint64 [2560,2566]
+    identifier: _dstChainId [2567,2578]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [2594,2601]
+    payable: payable [2594,2601]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [2602,2614]
+    identifier: nonReentrant [2602,2614]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [2615,2624]
+    identifier: notPaused [2615,2624]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [2711,2731]
+    type_name: bytes [2711,2716]
+    memory: memory [2717,2723]
+    identifier: payload [2724,2731]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2745,2751]
+    identifier: market [2745,2751]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2753,2761]
+    identifier: position [2753,2761]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2771,2785]
+    identifier: expectedPayout [2771,2785]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2787,2805]
+    identifier: additionalSlippage [2787,2805]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [2816,2917]
+    variable_declaration [2816,2831]
+        type_name: bytes4 [2816,2822]
+        identifier: selector [2823,2831]
+    affectation_operator: = [2832,2833]
+    type_cast_expression [2834,2916]
+        primitive_type: bytes4 [2834,2840]
+        call_argument [2841,2915]
+            call_expression [2841,2915]
+                identifier: keccak256 [2841,2850]
+                call_argument [2851,2914]
+                    type_cast_expression [2851,2914]
+                        primitive_type: bytes [2851,2856]
+                        call_argument [2857,2913]
+                            string_literal [2857,2913]
+                                string: "buyFromSportAMM(address,uint8,uint256,uint256,uint256)" [2857,2913]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [2926,3006]
+    variable_declaration [2926,2946]
+        type_name: bytes [2926,2931]
+        memory: memory [2932,2938]
+        identifier: message [2939,2946]
+    affectation_operator: = [2947,2948]
+    call_expression [2949,3005]
+        member_expression: abi.encode [2949,2959]
+        call_argument [2960,2970]
+            member_expression: msg.sender [2960,2970]
+        call_argument [2972,2985]
+            member_expression: block.chainid [2972,2985]
+        call_argument [2987,2995]
+            identifier: selector [2987,2995]
+        call_argument [2997,3004]
+            identifier: payload [2997,3004]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3015,3118]
+    update_expression [3015,3117]
+        array_access [3015,3115]
+            identifier: noncePerSelector [3015,3031]
+            type_cast_expression [3032,3114]
+                primitive_type: bytes4 [3032,3038]
+                call_argument [3039,3113]
+                    call_expression [3039,3113]
+                        identifier: keccak256 [3039,3048]
+                        call_argument [3049,3112]
+                            type_cast_expression [3049,3112]
+                                primitive_type: bytes [3049,3054]
+                                call_argument [3055,3111]
+                                    string_literal [3055,3111]
+                                        string: "buyFromSportAMM(address,uint8,uint256,uint256,uint256)" [3055,3111]
+        increment_operator: ++ [3115,3117]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [3189,3837]
+    if: if [3189,3191]
+    binary_expression [3193,3217]
+        identifier: _dstChainId [3193,3204]
+        comparison_operator: == [3205,3207]
+        identifier: testChain [3208,3217]
+    block_statement [3219,3420]
+        expression_statement [3233,3322]
+            call_expression [3233,3321]
+                member_expression: IERC20Upgradeable(_token).transferFrom [3233,3271]
+                call_argument [3272,3282]
+                    member_expression: msg.sender [3272,3282]
+                call_argument [3284,3304]
+                    identifier: adapterOnDestination [3284,3304]
+                call_argument [3306,3320]
+                    identifier: expectedPayout [3306,3320]
+        emit_statement [3335,3410]
+            identifier: MessageSent [3340,3351]
+            call_argument [3352,3362]
+                member_expression: msg.sender [3352,3362]
+            call_argument [3364,3384]
+                identifier: adapterOnDestination [3364,3384]
+            call_argument [3386,3399]
+                member_expression: block.chainid [3386,3399]
+            call_argument [3401,3408]
+                identifier: message [3401,3408]
+    else: else [3421,3425]
+    block_statement [3426,3837]
+        expression_statement [3440,3827]
+            call_expression [3440,3826]
+                identifier: sendMessageWithTransfer [3440,3463]
+                call_argument [3481,3501]
+                    identifier: adapterOnDestination [3481,3501]
+                call_argument [3519,3525]
+                    identifier: _token [3519,3525]
+                call_argument [3543,3597]
+                    parenthesized_expression [3543,3597]
+                        binary_expression [3544,3596]
+                            parenthesized_expression [3544,3590]
+                                binary_expression [3545,3589]
+                                    identifier: expectedPayout [3545,3559]
+                                    arithmetic_operator: * [3560,3561]
+                                    parenthesized_expression [3562,3589]
+                                        binary_expression [3563,3588]
+                                            identifier: ONE [3563,3566]
+                                            arithmetic_operator: + [3567,3568]
+                                            identifier: bridgeFeePercentage [3569,3588]
+                            arithmetic_operator: / [3591,3592]
+                            identifier: ONE [3593,3596]
+                call_argument [3615,3626]
+                    identifier: _dstChainId [3615,3626]
+                call_argument [3644,3670]
+                    array_access [3644,3670]
+                        identifier: noncePerSelector [3644,3660]
+                        identifier: selector [3661,3669]
+                call_argument [3688,3705]
+                    identifier: minBridgeSlippage [3688,3705]
+                call_argument [3723,3730]
+                    identifier: message [3723,3730]
+                call_argument [3748,3785]
+                    member_expression: MsgDataTypes.BridgeSendType.Liquidity [3748,3785]
+                call_argument [3803,3812]
+                    member_expression: msg.value [3803,3812]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4006,4029]
+    type_name: uint [4006,4010]
+    identifier: additionalSlippage [4011,4029]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [4104,4118]
+    returns: returns [4104,4111]
+    parameter [4113,4117]
+        type_name: uint [4113,4117]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4304,4322]
+    identifier: additionalSlippage [4304,4322]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5451,5475]
+    type_name: uint [5451,5455]
+    identifier: _additionalSlippage [5456,5475]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5515,5542]
+    type_name: address [5515,5522]
+    identifier: _differentRecepient [5523,5542]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5824,5843]
+    identifier: _additionalSlippage [5824,5843]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5886,5905]
+    identifier: _differentRecepient [5886,5905]
+
+New cluster:
+===
+delete-node
+---
+emit_statement [7789,7870]
+===
+------------
+===
+delete-node
+---
+emit_statement [7789,7870]
+===
+===
+delete-node
+---
+identifier: MessageWithTransferReceived [7794,7821]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7822,7828]
+    identifier: sender [7822,7828]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7838,7845]
+    identifier: _amount [7838,7845]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7847,7858]
+    identifier: _srcChainId [7847,7858]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7860,7868]
+    identifier: _message [7860,7868]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+emit_statement [8515,8570]
+    identifier: MessageReceived [8520,8535]
+    call_argument [8536,8542]
+        identifier: sender [8536,8542]
+    call_argument [8544,8559]
+        type_cast_expression [8544,8559]
+            primitive_type: uint64 [8544,8550]
+            call_argument [8551,8558]
+                identifier: chainId [8551,8558]
+    call_argument [8561,8568]
+        identifier: payload [8561,8568]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_tuple [13502,13537]
+    variable_declaration [13503,13515]
+        type_name: bool [13503,13507]
+        identifier: success [13508,13515]
+    variable_declaration [13517,13536]
+        type_name: bytes [13517,13522]
+        memory: memory [13523,13529]
+        identifier: result [13530,13536]
+
+New cluster:
+===
+delete-node
+---
+block_statement [13155,14019]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [13502,13877]
+===
+===
+delete-node
+---
+call_argument [13589,13862]
+===
+===
+delete-node
+---
+member_expression: abi.encodeWithSelector [13589,13611]
+===
+===
+delete-node
+---
+affectation_operator: = [13538,13539]
+===
+===
+delete-node
+---
+block_statement [13155,14019]
+===
+===
+delete-node
+---
+member_expression: selectorAddress[_selector].call [13540,13571]
+===
+===
+delete-node
+---
+call_expression [13540,13876]
+===
+===
+delete-node
+---
+call_expression [13589,13862]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13633,13642]
+    identifier: _selector [13633,13642]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13664,13670]
+    identifier: market [13664,13670]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13692,13700]
+    identifier: position [13692,13700]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13790,13804]
+    identifier: expectedPayout [13790,13804]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [13298,13321]
+    type_name: uint [13298,13302]
+    identifier: additionalSlippage [13303,13321]
+
+New cluster:
+===
+delete-node
+---
+primitive_type: uint [13473,13477]
+===
+------------
+===
+delete-node
+---
+primitive_type: uint [13473,13477]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [13951,13965]
+    identifier: expectedPayout [13951,13965]
+
+New cluster:
+===
+delete-node
+---
+call_argument [16213,16226]
+===
+------------
+===
+delete-node
+---
+type_cast_expression [16213,16226]
+===
+===
+delete-node
+---
+primitive_type: address [16213,16220]
+===
+===
+delete-node
+---
+call_argument [16213,16226]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [16248,16275]
+    identifier: userMarketBalances [16248,16266]
+    identifier: _sender [16267,16274]
+
+New cluster:
+===
+delete-node
+---
+array_access [16248,16293]
+===
+------------
+===
+delete-node
+---
+identifier: position [16284,16292]
+===
+===
+delete-node
+---
+array_access [16248,16283]
+===
+===
+delete-node
+---
+array_access [16248,16293]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [15240,15270]
+    update_expression [15240,15269]
+        array_access [15240,15267]
+            identifier: noncePerSelector [15240,15256]
+            identifier: _selector [15257,15266]
+        increment_operator: ++ [15267,15269]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [15283,15357]
+    variable_declaration_tuple [15283,15315]
+        variable_declaration [15284,15298]
+            type_name: address [15284,15291]
+            identifier: market [15292,15298]
+        variable_declaration [15300,15314]
+            type_name: uint8 [15300,15305]
+            identifier: position [15306,15314]
+    affectation_operator: = [15316,15317]
+    call_expression [15318,15356]
+        member_expression: abi.decode [15318,15328]
+        call_argument [15329,15337]
+            identifier: _message [15329,15337]
+        call_argument [15339,15355]
+            tuple_expression [15339,15355]
+                primitive_type: address [15340,15347]
+                primitive_type: uint8 [15349,15354]
+
+New cluster:
+===
+delete-node
+---
+block_statement [15226,16771]
+===
+------------
+===
+delete-node
+---
+member_expression: IPositionalMarket(market)                     .balancesOf [15491,15548]
+===
+===
+delete-node
+---
+call_expression [15491,15563]
+===
+===
+delete-node
+---
+affectation_operator: = [15489,15490]
+===
+===
+delete-node
+---
+if: if [15370,15372]
+===
+===
+delete-node
+---
+block_statement [15226,16771]
+===
+===
+delete-node
+---
+block_statement [15400,15687]
+===
+===
+delete-node
+---
+assignment_expression [15418,15563]
+===
+===
+delete-node
+---
+if_statement [15370,15687]
+===
+===
+delete-node
+---
+expression_statement [15418,15564]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [15374,15398]
+    unary_expression [15374,15390]
+        !: ! [15374,15375]
+        identifier: marketExercised [15375,15390]
+    identifier: market [15391,15397]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+tuple_expression [15418,15488]
+    array_access [15419,15452]
+        array_access [15419,15449]
+            identifier: exercisedMarketBalance [15419,15441]
+            identifier: market [15442,15448]
+        number_literal: 0 [15450,15451]
+    array_access [15454,15487]
+        array_access [15454,15484]
+            identifier: exercisedMarketBalance [15454,15476]
+            identifier: market [15477,15483]
+        number_literal: 1 [15485,15486]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [15581,15625]
+    call_expression [15581,15624]
+        member_expression: IPositionalMarket(market).exerciseOptions [15581,15622]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [15642,15673]
+    assignment_expression [15642,15672]
+        array_access [15642,15665]
+            identifier: marketExercised [15642,15657]
+            identifier: market [15658,15664]
+        affectation_operator: = [15666,15667]
+        boolean_literal: true [15668,15672]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [16583,16673]
+    augmented_assignment_expression [16583,16672]
+        array_access [16583,16623]
+            array_access [16583,16613]
+                identifier: exercisedMarketBalance [16583,16605]
+                identifier: market [16606,16612]
+            identifier: position [16614,16622]
+        affectation_operator: -= [16624,16626]
+        array_access [16627,16672]
+            array_access [16627,16662]
+                array_access [16627,16654]
+                    identifier: userMarketBalances [16627,16645]
+                    identifier: _sender [16646,16653]
+                identifier: market [16655,16661]
+            identifier: position [16663,16671]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [16686,16736]
+    assignment_expression [16686,16735]
+        array_access [16686,16731]
+            array_access [16686,16721]
+                array_access [16686,16713]
+                    identifier: userMarketBalances [16686,16704]
+                    identifier: _sender [16705,16712]
+                identifier: market [16714,16720]
+            identifier: position [16722,16730]
+        affectation_operator: = [16732,16733]
+        number_literal: 0 [16734,16735]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [16749,16761]
+    return: return [16749,16755]
+    boolean_literal: true [16756,16760]
+
+New cluster:
+===
+delete-node
+---
+member_expression: sUSD.transfer [17767,17780]
+===
+------------
+===
+delete-node
+---
+member_expression: sUSD.transfer [17767,17780]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17781,17788]
+    identifier: _sender [17781,17788]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [17790,17817]
+    identifier: userMarketBalances [17790,17808]
+    identifier: _sender [17809,17816]
+
+New cluster:
+===
+delete-node
+---
+array_access [17790,17835]
+===
+------------
+===
+delete-node
+---
+array_access [17790,17835]
+===
+===
+delete-node
+---
+array_access [17790,17825]
+===
+===
+delete-node
+---
+identifier: position [17826,17834]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [14727,14740]
+===
+------------
+===
+delete-node
+---
+primitive_type: address [14727,14734]
+===
+===
+delete-node
+---
+type_cast_expression [14727,14740]
+===
+===
+delete-node
+---
+call_argument [14727,14740]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17461,17652]
+    array_access [17461,17652]
+        array_access [17461,17642]
+            array_access [17461,17634]
+                binary_expression [17461,17625]
+                    call_expression [17461,17603]
+                        member_expression: exercisedMarketBalance[market][position] >= userMarketBalances[_sender][market][position] &&                     sUSD.balanceOf [17461,17588]
+                        call_argument [17589,17602]
+                            type_cast_expression [17589,17602]
+                                primitive_type: address [17589,17596]
+                                call_argument [17597,17601]
+                                    identifier: this [17597,17601]
+                    comparison_operator: >= [17604,17606]
+                    identifier: userMarketBalances [17607,17625]
+                identifier: _sender [17626,17633]
+            identifier: market [17635,17641]
+        identifier: position [17643,17651]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [17670,17686]
+    string_literal [17670,17686]
+        string: "Invalid amount" [17670,17686]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [17436,17701]
+===
+------------
+===
+delete-node
+---
+call_expression [17436,17700]
+===
+===
+delete-node
+---
+expression_statement [17436,17701]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [17714,18498]
+===
+------------
+===
+delete-node
+---
+if_statement [17714,18498]
+===
+===
+delete-node
+---
+block_statement [17857,18498]
+===
+===
+delete-node
+---
+expression_statement [17767,17837]
+===
+===
+delete-node
+---
+if: if [17714,17716]
+===
+===
+delete-node
+---
+else: else [17852,17856]
+===
+===
+delete-node
+---
+block_statement [17749,17851]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [17718,17747]
+    identifier: _sourceChain [17718,17730]
+    comparison_operator: == [17731,17733]
+    member_expression: block.chainid [17734,17747]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [18067,18484]
+    call_expression [18067,18483]
+        identifier: sendMessageWithTransfer [18067,18090]
+        call_argument [18112,18119]
+            identifier: _sender [18112,18119]
+        call_argument [18141,18154]
+            type_cast_expression [18141,18154]
+                primitive_type: address [18141,18148]
+                call_argument [18149,18153]
+                    identifier: sUSD [18149,18153]
+        call_argument [18176,18221]
+            array_access [18176,18221]
+                array_access [18176,18211]
+                    array_access [18176,18203]
+                        identifier: userMarketBalances [18176,18194]
+                        identifier: _sender [18195,18202]
+                    identifier: market [18204,18210]
+                identifier: position [18212,18220]
+        call_argument [18243,18263]
+            type_cast_expression [18243,18263]
+                primitive_type: uint64 [18243,18249]
+                call_argument [18250,18262]
+                    identifier: _sourceChain [18250,18262]
+        call_argument [18285,18312]
+            array_access [18285,18312]
+                identifier: noncePerSelector [18285,18301]
+                identifier: _selector [18302,18311]
+        call_argument [18334,18351]
+            identifier: minBridgeSlippage [18334,18351]
+        call_argument [18373,18375]
+            string_literal [18373,18375]
+                string: "" [18373,18375]
+        call_argument [18397,18434]
+            member_expression: MsgDataTypes.BridgeSendType.Liquidity [18397,18434]
+        call_argument [18456,18465]
+            member_expression: msg.value [18456,18465]
+
+New cluster:
+===
+delete-node
+---
+if_statement [11307,18742]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [12484,12485]
+===
+===
+delete-node
+---
+if: if [12163,12165]
+===
+===
+delete-node
+---
+else: else [13015,13019]
+===
+===
+delete-node
+---
+if_statement [11307,18742]
+===
+===
+delete-node
+---
+variable_declaration_statement [12392,12589]
+===
+===
+delete-node
+---
+block_statement [12265,13014]
+===
+===
+delete-node
+---
+if: if [11307,11309]
+===
+===
+delete-node
+---
+if_statement [12163,18742]
+===
+===
+delete-node
+---
+variable_declaration_tuple [12392,12483]
+===
+===
+delete-node
+---
+else: else [12158,12162]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [11311,11406]
+    identifier: _selector [11311,11320]
+    comparison_operator: == [11321,11323]
+    type_cast_expression [11324,11406]
+        primitive_type: bytes4 [11324,11330]
+        call_argument [11331,11405]
+            call_expression [11331,11405]
+                identifier: keccak256 [11331,11340]
+                call_argument [11341,11404]
+                    type_cast_expression [11341,11404]
+                        primitive_type: bytes [11341,11346]
+                        call_argument [11347,11403]
+                            string_literal [11347,11403]
+                                string: "buyFromSportAMM(address,uint8,uint256,uint256,uint256)" [11347,11403]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [12167,12263]
+    identifier: _selector [12167,12176]
+    comparison_operator: == [12177,12179]
+    type_cast_expression [12180,12263]
+        primitive_type: bytes4 [12180,12186]
+        call_argument [12187,12262]
+            call_expression [12187,12262]
+                identifier: keccak256 [12187,12196]
+                call_argument [12197,12261]
+                    type_cast_expression [12197,12261]
+                        primitive_type: bytes [12197,12202]
+                        call_argument [12203,12260]
+                            string_literal [12203,12260]
+                                string: "buyFromCryptoAMM(address,uint8,uint256,uint256,uint256)" [12203,12260]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [12393,12407]
+    type_name: address [12393,12400]
+    identifier: market [12401,12407]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [12409,12423]
+    type_name: uint8 [12409,12414]
+    identifier: position [12415,12423]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [12438,12457]
+    type_name: uint [12438,12442]
+    identifier: expectedPayout [12443,12457]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [12459,12482]
+    type_name: uint [12459,12463]
+    identifier: additionalSlippage [12464,12482]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [12486,12588]
+    member_expression: abi.decode [12486,12496]
+    call_argument [12514,12522]
+        identifier: _message [12514,12522]
+    call_argument [12540,12574]
+        tuple_expression [12540,12574]
+            primitive_type: address [12541,12548]
+            primitive_type: uint8 [12550,12555]
+            primitive_type: uint [12557,12561]
+            primitive_type: uint [12563,12567]
+            primitive_type: uint [12569,12573]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [12815,12976]
+    if: if [12815,12817]
+    identifier: success [12819,12826]
+    block_statement [12828,12976]
+        expression_statement [12846,12889]
+            augmented_assignment_expression [12846,12888]
+                array_access [12846,12878]
+                    array_access [12846,12870]
+                        identifier: userOwningToken [12846,12861]
+                        identifier: _sender [12862,12869]
+                    identifier: market [12871,12877]
+                affectation_operator: += [12879,12881]
+                identifier: amount [12882,12888]
+        expression_statement [12906,12962]
+            augmented_assignment_expression [12906,12961]
+                array_access [12906,12951]
+                    array_access [12906,12941]
+                        array_access [12906,12933]
+                            identifier: userMarketBalances [12906,12924]
+                            identifier: _sender [12925,12932]
+                        identifier: market [12934,12940]
+                    identifier: position [12942,12950]
+                affectation_operator: += [12952,12954]
+                identifier: amount [12955,12961]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [12989,13004]
+    return: return [12989,12995]
+    identifier: success [12996,13003]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [18858,18919]
+    call_expression [18858,18918]
+        identifier: require [18858,18865]
+        call_argument [18866,18897]
+            array_access [18866,18897]
+                identifier: whitelistedOperator [18866,18885]
+                member_expression: msg.sender [18886,18896]
+        call_argument [18899,18917]
+            string_literal [18899,18917]
+                string: "Invalid operator" [18899,18917]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [19195,19256]
+===
+------------
+===
+delete-node
+---
+identifier: require [19195,19202]
+===
+===
+delete-node
+---
+call_argument [19203,19234]
+===
+===
+delete-node
+---
+call_expression [19195,19255]
+===
+===
+delete-node
+---
+array_access [19203,19234]
+===
+===
+delete-node
+---
+expression_statement [19195,19256]
+===
+===
+delete-node
+---
+member_expression: msg.sender [19223,19233]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [19236,19254]
+    string_literal [19236,19254]
+        string: "Invalid operator" [19236,19254]
+
+New cluster:
+===
+delete-node
+---
+function_definition [19354,19526]
+===
+------------
+===
+delete-node
+---
+comparison_operator: != [19488,19490]
+===
+===
+delete-node
+---
+expression_statement [19447,19520]
+===
+===
+delete-node
+---
+ternary_expression [19479,19519]
+===
+===
+delete-node
+---
+boolean_literal: false [19514,19519]
+===
+===
+delete-node
+---
+?: ? [19502,19503]
+===
+===
+delete-node
+---
+identifier: _enable [19504,19511]
+===
+===
+delete-node
+---
+function_body [19437,19526]
+===
+===
+delete-node
+---
+identifier: _account [19479,19487]
+===
+===
+delete-node
+---
+assignment_expression [19447,19519]
+===
+===
+delete-node
+---
+function_definition [19354,19526]
+===
+===
+delete-node
+---
+affectation_operator: = [19477,19478]
+===
+===
+delete-node
+---
+binary_expression [19479,19501]
+===
+===
+delete-node
+---
+visibility: external [19418,19426]
+===
+===
+delete-node
+---
+:: : [19512,19513]
+===
+===
+delete-node
+---
+identifier: setWhitelistedOperator [19363,19385]
+===
+===
+delete-node
+---
+function: function [19354,19362]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19386,19402]
+    type_name: address [19386,19393]
+    identifier: _account [19394,19402]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19404,19416]
+    type_name: bool [19404,19408]
+    identifier: _enable [19409,19416]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [19447,19476]
+    identifier: whitelistedOperator [19447,19466]
+    identifier: _account [19467,19475]
+
+New cluster:
+===
+delete-node
+---
+function_definition [19661,20364]
+===
+------------
+===
+delete-node
+---
+variable_declaration_statement [20051,20104]
+===
+===
+delete-node
+---
+identifier: sendMessageWithTransfer [20113,20136]
+===
+===
+delete-node
+---
+visibility: external [19936,19944]
+===
+===
+delete-node
+---
+function_body [19953,20364]
+===
+===
+delete-node
+---
+expression_statement [20113,20358]
+===
+===
+delete-node
+---
+member_expression: IERC20Upgradeable(_token).safeTransferFrom [19963,20005]
+===
+===
+delete-node
+---
+call_expression [20113,20357]
+===
+===
+delete-node
+---
+expression_statement [19963,20042]
+===
+===
+delete-node
+---
+call_expression [19963,20041]
+===
+===
+delete-node
+---
+affectation_operator: = [20072,20073]
+===
+===
+delete-node
+---
+member_expression: abi.encode [20074,20084]
+===
+===
+delete-node
+---
+identifier: sendTokenWithNote [19670,19687]
+===
+===
+delete-node
+---
+call_expression [20074,20103]
+===
+===
+delete-node
+---
+function: function [19661,19669]
+===
+===
+delete-node
+---
+function_definition [19661,20364]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19697,19717]
+    type_name: address [19697,19704]
+    identifier: _dstContract [19705,19717]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19751,19766]
+    type_name: uint256 [19751,19758]
+    identifier: _amount [19759,19766]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19776,19794]
+    type_name: uint64 [19776,19782]
+    identifier: _dstChainId [19783,19794]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19804,19817]
+    type_name: uint64 [19804,19810]
+    identifier: _nonce [19811,19817]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19827,19846]
+    type_name: uint32 [19827,19833]
+    identifier: _maxSlippage [19834,19846]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19856,19876]
+    type_name: bytes [19856,19861]
+    calldata: calldata [19862,19870]
+    identifier: _note [19871,19876]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [19886,19929]
+    type_name: MsgDataTypes.BridgeSendType [19886,19913]
+    identifier: _bridgeSendType [19914,19929]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [19945,19952]
+    payable: payable [19945,19952]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20033,20040]
+    identifier: _amount [20033,20040]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration [20051,20071]
+    type_name: bytes [20051,20056]
+    memory: memory [20057,20063]
+    identifier: message [20064,20071]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20097,20102]
+    identifier: _note [20097,20102]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20150,20162]
+    identifier: _dstContract [20150,20162]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20196,20203]
+    identifier: _amount [20196,20203]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20217,20228]
+    identifier: _dstChainId [20217,20228]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20242,20248]
+    identifier: _nonce [20242,20248]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20262,20274]
+    identifier: _maxSlippage [20262,20274]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20288,20295]
+    identifier: message [20288,20295]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20309,20324]
+    identifier: _bridgeSendType [20309,20324]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [20338,20347]
+    member_expression: msg.value [20338,20347]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [20782,21199]
+    function: function [20782,20790]
+    identifier: executeMessage [20791,20805]
+    parameter [20815,20837]
+        type_name: bytes [20815,20820]
+        calldata: calldata [20821,20829]
+        identifier: _sender [20830,20837]
+    parameter [20847,20865]
+        type_name: uint64 [20847,20853]
+        identifier: _srcChainId [20854,20865]
+    parameter [20875,20898]
+        type_name: bytes [20875,20880]
+        calldata: calldata [20881,20889]
+        identifier: _message [20890,20898]
+    parameter [20908,20925]
+        type_name: address [20908,20915]
+        identifier: _executor [20916,20925]
+    visibility: external [20932,20940]
+    state_mutability [20941,20948]
+        payable: payable [20941,20948]
+    virtual: virtual [20949,20956]
+    override_specifier [20957,20965]
+        override: override [20957,20965]
+    modifier_invocation [20966,20980]
+        identifier: onlyMessageBus [20966,20980]
+    return_type_definition [20981,21006]
+        returns: returns [20981,20988]
+        parameter [20990,21005]
+            type_name: ExecutionStatus [20990,21005]
+    function_body [21007,21199]
+        variable_declaration_statement [21017,21096]
+            variable_declaration_tuple [21017,21052]
+                variable_declaration [21018,21032]
+                    type_name: address [21018,21025]
+                    identifier: sender [21026,21032]
+                variable_declaration [21034,21051]
+                    type_name: bytes [21034,21039]
+                    memory: memory [21040,21046]
+                    identifier: note [21047,21051]
+            affectation_operator: = [21053,21054]
+            call_expression [21055,21095]
+                member_expression: abi.decode [21055,21065]
+                call_argument [21066,21076]
+                    parenthesized_expression [21066,21076]
+                        identifier: _message [21067,21075]
+                call_argument [21078,21094]
+                    tuple_expression [21078,21094]
+                        primitive_type: address [21079,21086]
+                        primitive_type: bytes [21088,21093]
+        emit_statement [21105,21153]
+            identifier: MessageReceived [21110,21125]
+            call_argument [21126,21132]
+                identifier: sender [21126,21132]
+            call_argument [21134,21145]
+                identifier: _srcChainId [21134,21145]
+            call_argument [21147,21151]
+                identifier: note [21147,21151]
+        return_statement [21162,21193]
+            return: return [21162,21168]
+            member_expression: ExecutionStatus.Success [21169,21192]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [21774,21798]
+===
+------------
+===
+delete-node
+---
+binary_expression [21774,21798]
+===
+===
+delete-node
+---
+comparison_operator: == [21782,21784]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [23793,23854]
+===
+------------
+===
+delete-node
+---
+expression_statement [23793,23854]
+===
+===
+delete-node
+---
+member_expression: msg.sender [23821,23831]
+===
+===
+delete-node
+---
+call_expression [23793,23853]
+===
+===
+delete-node
+---
+identifier: require [23793,23800]
+===
+===
+delete-node
+---
+call_argument [23801,23832]
+===
+===
+delete-node
+---
+array_access [23801,23832]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [23834,23852]
+    string_literal [23834,23852]
+        string: "Invalid operator" [23834,23852]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [24179,24199]
+    type_name: uint [24179,24183]
+    identifier: _expectedPayout [24184,24199]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [24581,24685]
+    identifier: Message [24587,24594]
+    event_paramater [24595,24617]
+        type_name: address [24595,24602]
+        indexed: indexed [24603,24610]
+        identifier: sender [24611,24617]
+    event_paramater [24619,24635]
+        type_name: address [24619,24626]
+        identifier: receiver [24627,24635]
+    event_paramater [24637,24655]
+        type_name: uint256 [24637,24644]
+        identifier: dstChainId [24645,24655]
+    event_paramater [24657,24670]
+        type_name: bytes [24657,24662]
+        identifier: message [24663,24670]
+    event_paramater [24672,24683]
+        type_name: uint256 [24672,24679]
+        identifier: fee [24680,24683]
+

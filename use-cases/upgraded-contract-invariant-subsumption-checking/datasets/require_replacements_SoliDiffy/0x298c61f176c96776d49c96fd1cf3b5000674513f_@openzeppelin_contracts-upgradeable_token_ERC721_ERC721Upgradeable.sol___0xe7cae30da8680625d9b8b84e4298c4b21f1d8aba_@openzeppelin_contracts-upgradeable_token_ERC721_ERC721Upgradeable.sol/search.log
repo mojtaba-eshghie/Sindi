@@ -1,0 +1,9 @@
+results/differencing_results/0x298c61f176c96776d49c96fd1cf3b5000674513f_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol___0xe7cae30da8680625d9b8b84e4298c4b21f1d8aba_@openzeppelin_contracts-upgradeable_token_ERC721_ERC721Upgradeable.sol.log:
+  803  identifier: require [4566,4573]
+  804: replace require by _requireMinted
+  805  ===
+
+  808  identifier: require [3377,3384]
+  809: replace require by _requireMinted
+  810  
+

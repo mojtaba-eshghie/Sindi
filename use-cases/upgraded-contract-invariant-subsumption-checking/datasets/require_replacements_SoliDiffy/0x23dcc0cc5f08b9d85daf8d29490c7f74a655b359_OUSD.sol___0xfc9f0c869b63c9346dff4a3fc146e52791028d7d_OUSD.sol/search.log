@@ -1,0 +1,5 @@
+results/differencing_results/0x23dcc0cc5f08b9d85daf8d29490c7f74a655b359_OUSD.sol___0xfc9f0c869b63c9346dff4a3fc146e52791028d7d_OUSD.sol.log:
+  1500  identifier: require [3849,3856]
+  1501: replace require by sub
+  1502  
+

@@ -1,0 +1,5 @@
+results/differencing_results/0xfc9f0c869b63c9346dff4a3fc146e52791028d7d_OUSD.sol___0xb248c975daeac47c4960ecbd10a79e486ebd1ca8_OUSDResolutionUpgrade.sol.log:
+  2301  identifier: require [40923,40930]
+  2302: replace require by nrc
+  2303  
+

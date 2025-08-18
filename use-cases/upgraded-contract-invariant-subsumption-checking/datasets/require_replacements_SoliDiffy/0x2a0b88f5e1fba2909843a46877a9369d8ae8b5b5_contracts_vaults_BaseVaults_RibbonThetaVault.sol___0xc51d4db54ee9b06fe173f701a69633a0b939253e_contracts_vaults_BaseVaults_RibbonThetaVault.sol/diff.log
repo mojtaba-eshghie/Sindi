@@ -1,0 +1,588 @@
+New cluster:
+===
+insert-node
+---
+identifier: RibbonThetaVault [1070,1086]
+to
+contract_declaration [1061,15588]
+at 0
+------------
+===
+insert-node
+---
+identifier: RibbonThetaVault [1070,1086]
+to
+contract_declaration [1061,15588]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1087,1089]
+to
+contract_declaration [1061,15588]
+at 1
+------------
+===
+insert-node
+---
+is: is [1087,1089]
+to
+contract_declaration [1061,15588]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [9380,9548]
+    function: function [9380,9388]
+    identifier: setOptionsPurchaseQueue [9389,9412]
+    parameter [9413,9444]
+        type_name: address [9413,9420]
+        identifier: newOptionsPurchaseQueue [9421,9444]
+    visibility: external [9454,9462]
+    modifier_invocation [9471,9480]
+        identifier: onlyOwner [9471,9480]
+    function_body [9485,9548]
+        expression_statement [9495,9542]
+            assignment_expression [9495,9541]
+                identifier: optionsPurchaseQueue [9495,9515]
+                affectation_operator: = [9516,9517]
+                identifier: newOptionsPurchaseQueue [9518,9541]
+to
+contract_body [1127,15588]
+at 21
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [15945,16164]
+    function: function [15945,15953]
+    identifier: sellOptionsToQueue [15954,15972]
+    visibility: external [15975,15983]
+    modifier_invocation [15984,15994]
+        identifier: onlyKeeper [15984,15994]
+    modifier_invocation [15995,16007]
+        identifier: nonReentrant [15995,16007]
+    function_body [16008,16164]
+        expression_statement [16018,16158]
+            call_expression [16018,16157]
+                member_expression: VaultLifecycle.sellOptionsToQueue [16018,16051]
+                call_argument [16065,16085]
+                    identifier: optionsPurchaseQueue [16065,16085]
+                call_argument [16099,16118]
+                    identifier: GNOSIS_EASY_AUCTION [16099,16118]
+                call_argument [16132,16147]
+                    identifier: optionAuctionID [16132,16147]
+to
+contract_body [1127,15588]
+at 30
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [16855,17302]
+    function: function [16855,16863]
+    identifier: recoverTokens [16864,16877]
+    parameter [16878,16891]
+        type_name: address [16878,16885]
+        identifier: token [16886,16891]
+    parameter [16893,16910]
+        type_name: address [16893,16900]
+        identifier: recipient [16901,16910]
+    visibility: external [16920,16928]
+    modifier_invocation [16937,16946]
+        identifier: onlyOwner [16937,16946]
+    function_body [16951,17302]
+        expression_statement [16961,17028]
+            call_expression [16961,17027]
+                identifier: require [16961,16968]
+                call_argument [16969,16995]
+                    binary_expression [16969,16995]
+                        identifier: token [16969,16974]
+                        comparison_operator: != [16975,16977]
+                        member_expression: vaultParams.asset [16978,16995]
+                call_argument [16997,17026]
+                    string_literal [16997,17026]
+                        string: "Vault asset not recoverable" [16997,17026]
+        expression_statement [17037,17100]
+            call_expression [17037,17099]
+                identifier: require [17037,17044]
+                call_argument [17045,17067]
+                    binary_expression [17045,17067]
+                        identifier: token [17045,17050]
+                        comparison_operator: != [17051,17053]
+                        type_cast_expression [17054,17067]
+                            primitive_type: address [17054,17061]
+                            call_argument [17062,17066]
+                                identifier: this [17062,17066]
+                call_argument [17069,17098]
+                    string_literal [17069,17098]
+                        string: "Vault share not recoverable" [17069,17098]
+        expression_statement [17109,17174]
+            call_expression [17109,17173]
+                identifier: require [17109,17116]
+                call_argument [17117,17143]
+                    binary_expression [17117,17143]
+                        identifier: recipient [17117,17126]
+                        comparison_operator: != [17127,17129]
+                        type_cast_expression [17130,17143]
+                            primitive_type: address [17130,17137]
+                            call_argument [17138,17142]
+                                identifier: this [17138,17142]
+                call_argument [17145,17172]
+                    string_literal [17145,17172]
+                        string: "Recipient cannot be vault" [17145,17172]
+        expression_statement [17184,17296]
+            call_expression [17184,17295]
+                member_expression: IERC20(token).safeTransfer [17184,17210]
+                call_argument [17224,17233]
+                    identifier: recipient [17224,17233]
+                call_argument [17247,17285]
+                    call_expression [17247,17285]
+                        member_expression: IERC20(token).balanceOf [17247,17270]
+                        call_argument [17271,17284]
+                            type_cast_expression [17271,17284]
+                                primitive_type: address [17271,17278]
+                                call_argument [17279,17283]
+                                    identifier: this [17279,17283]
+to
+contract_body [1127,15588]
+at 32
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [14481,14683]
+to
+function_body [13720,14316]
+at 5
+------------
+===
+insert-node
+---
+variable_declaration_statement [14481,14683]
+to
+function_body [13720,14316]
+at 5
+===
+insert-node
+---
+affectation_operator: = [14507,14508]
+to
+variable_declaration_statement [14481,14683]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [14693,14874]
+    call_expression [14693,14873]
+        member_expression: VaultLifecycle.allocateOptions [14693,14723]
+        call_argument [14737,14757]
+            identifier: optionsPurchaseQueue [14737,14757]
+        call_argument [14771,14780]
+            identifier: newOption [14771,14780]
+        call_argument [14794,14811]
+            identifier: optionsMintAmount [14794,14811]
+        call_argument [14825,14863]
+            member_expression: VaultLifecycle.QUEUE_OPTION_ALLOCATION [14825,14863]
+to
+function_body [13720,14316]
+at 6
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [15171,15221]
+to
+function_body [14510,15125]
+at 1
+------------
+===
+insert-node
+---
+variable_declaration_statement [15171,15221]
+to
+function_body [14510,15125]
+at 1
+===
+insert-node
+---
+member_expression: optionState.currentOption [15195,15220]
+to
+variable_declaration_statement [15171,15221]
+at 2
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [15230,15418]
+to
+function_body [14510,15125]
+at 2
+------------
+===
+insert-node
+---
+affectation_operator: = [15256,15257]
+to
+variable_declaration_statement [15230,15418]
+at 1
+===
+insert-node
+---
+variable_declaration_statement [15230,15418]
+to
+function_body [14510,15125]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [14481,14506]
+    type_name: uint256 [14481,14488]
+    identifier: optionsMintAmount [14489,14506]
+to
+variable_declaration_statement [14481,14683]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [14481,14683]
+------------
+===
+move-tree
+---
+call_expression [14142,14283]
+    member_expression: VaultLifecycle.createShort [14142,14168]
+    call_argument [14182,14198]
+        identifier: GAMMA_CONTROLLER [14182,14198]
+    call_argument [14212,14223]
+        identifier: MARGIN_POOL [14212,14223]
+    call_argument [14237,14246]
+        identifier: newOption [14237,14246]
+    call_argument [14260,14273]
+        identifier: lockedBalance [14260,14273]
+to
+variable_declaration_statement [14481,14683]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration [15171,15192]
+    type_name: address [15171,15178]
+    identifier: currentOtoken [15179,15192]
+to
+variable_declaration_statement [15171,15221]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [15171,15221]
+------------
+===
+move-tree
+---
+affectation_operator: = [14607,14608]
+to
+variable_declaration_statement [15171,15221]
+at 1
+===
+move-tree
+---
+variable_declaration [14581,14606]
+    type_name: uint256 [14581,14588]
+    identifier: currOtokenPremium [14589,14606]
+to
+variable_declaration_statement [15230,15418]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [15230,15418]
+------------
+===
+move-tree
+---
+call_expression [14640,14695]
+    identifier: require [14640,14647]
+    call_argument [14648,14669]
+        binary_expression [14648,14669]
+            identifier: currOtokenPremium [14648,14665]
+            comparison_operator: > [14666,14667]
+            number_literal: 0 [14668,14669]
+    call_argument [14671,14694]
+        string_literal [14671,14694]
+            string: "!currentOtokenPremium" [14671,14694]
+to
+variable_declaration_statement [15230,15418]
+at 2
+
+New cluster:
+===
+insert-node
+---
+member_expression: VaultLifecycle.getOTokenPremium [15270,15301]
+to
+call_expression [14640,14695]
+at 0
+------------
+===
+insert-node
+---
+member_expression: VaultLifecycle.getOTokenPremium [15270,15301]
+to
+call_expression [14640,14695]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_argument [15319,15332]
+to
+call_expression [14640,14695]
+at 1
+------------
+===
+insert-node
+---
+call_argument [15319,15332]
+to
+call_expression [14640,14695]
+at 1
+
+New cluster:
+MOVE from call_expression [14640,14695]
+------------
+===
+move-tree
+---
+call_argument [12358,12373]
+    identifier: premiumDiscount [12358,12373]
+to
+call_expression [14640,14695]
+at 3
+===
+move-tree
+---
+call_argument [12320,12340]
+    identifier: optionsPremiumPricer [12320,12340]
+to
+call_expression [14640,14695]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: currentOtoken [15459,15472]
+to
+assignment_expression [14706,14762]
+at 2
+------------
+===
+insert-node
+---
+identifier: currentOtoken [15459,15472]
+to
+assignment_expression [14706,14762]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_struct_argument [12440,12472]
+    identifier: strikeSelection [12440,12455]
+    :: : [12455,12456]
+    identifier: strikeSelection [12457,12472]
+to
+call_argument [11789,12079]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_struct_argument [12490,12532]
+    identifier: optionsPremiumPricer [12490,12510]
+    :: : [12510,12511]
+    identifier: optionsPremiumPricer [12512,12532]
+to
+call_argument [11789,12079]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_struct_argument [12550,12582]
+    identifier: premiumDiscount [12550,12565]
+    :: : [12565,12566]
+    identifier: premiumDiscount [12567,12582]
+to
+call_argument [11789,12079]
+at 8
+
+New cluster:
+UPDATE from require to currentOtoken
+------------
+===
+update-node
+---
+identifier: require [14640,14647]
+replace require by currentOtoken
+
+New cluster:
+MOVE from call_argument [15319,15332]
+------------
+===
+move-tree
+---
+identifier: require [14640,14647]
+to
+call_argument [15319,15332]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: RibbonThetaVault [1070,1086]
+===
+------------
+===
+delete-node
+---
+identifier: RibbonThetaVault [1070,1086]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1087,1089]
+===
+------------
+===
+delete-node
+---
+is: is [1087,1089]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [12287,12302]
+    identifier: strikeSelection [12287,12302]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [14142,14284]
+===
+------------
+===
+delete-node
+---
+expression_statement [14142,14284]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14648,14669]
+    binary_expression [14648,14669]
+        identifier: currOtokenPremium [14648,14665]
+        comparison_operator: > [14666,14667]
+        number_literal: 0 [14668,14669]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [14671,14694]
+    string_literal [14671,14694]
+        string: "!currentOtokenPremium" [14671,14694]
+
+New cluster:
+===
+delete-node
+---
+variable_declaration_statement [14581,14630]
+===
+------------
+===
+delete-node
+---
+identifier: currentOtokenPremium [14609,14629]
+===
+===
+delete-node
+---
+variable_declaration_statement [14581,14630]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [14640,14696]
+===
+------------
+===
+delete-node
+---
+expression_statement [14640,14696]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: optionState.currentOption [14737,14762]
+===
+------------
+===
+delete-node
+---
+member_expression: optionState.currentOption [14737,14762]
+===
+

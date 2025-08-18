@@ -1,0 +1,879 @@
+New cluster:
+===
+insert-node
+---
+identifier: ASTILO [1086,1092]
+to
+contract_declaration [1077,12063]
+at 0
+------------
+===
+insert-node
+---
+identifier: ASTILO [1086,1092]
+to
+contract_declaration [1077,12063]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1093,1095]
+to
+contract_declaration [1077,12063]
+at 1
+------------
+===
+insert-node
+---
+is: is [1093,1095]
+to
+contract_declaration [1077,12063]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2170,2214]
+    type_name: mapping(uint256 => bool) [2170,2194]
+    visibility: internal [2195,2203]
+    identifier: saleIdMap [2204,2213]
+to
+contract_body [1164,12063]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2497,2524]
+    type_name: uint256 [2497,2504]
+    visibility: private [2505,2512]
+    identifier: seedSaleId [2513,2523]
+to
+contract_body [1164,12063]
+at 14
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2529,2559]
+    type_name: uint256 [2529,2536]
+    visibility: private [2537,2544]
+    identifier: privateSaleId [2545,2558]
+to
+contract_body [1164,12063]
+at 15
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2564,2593]
+    type_name: uint256 [2564,2571]
+    visibility: private [2572,2579]
+    identifier: publicSaleId [2580,2592]
+to
+contract_body [1164,12063]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [2599,2633]
+    type_name: bytes32 [2599,2606]
+    visibility: private [2607,2614]
+    identifier: privateMerkleRoot [2615,2632]
+to
+contract_body [1164,12063]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3343,3623]
+    function: function [3343,3351]
+    identifier: updateSaleIdbyType [3352,3370]
+    parameter [3371,3388]
+        type_name: uint256 [3371,3378]
+        identifier: _saleType [3379,3388]
+    parameter [3390,3405]
+        type_name: uint256 [3390,3397]
+        identifier: _saleId [3398,3405]
+    visibility: internal [3407,3415]
+    function_body [3416,3623]
+        if_statement [3426,3617]
+            if: if [3426,3428]
+            binary_expression [3429,3443]
+                identifier: _saleType [3429,3438]
+                comparison_operator: == [3439,3441]
+                number_literal: 0 [3442,3443]
+            block_statement [3445,3490]
+                expression_statement [3459,3480]
+                    assignment_expression [3459,3479]
+                        identifier: seedSaleId [3459,3469]
+                        affectation_operator: = [3470,3471]
+                        identifier: _saleId [3472,3479]
+            else: else [3491,3495]
+            if_statement [3496,3617]
+                if: if [3496,3498]
+                binary_expression [3500,3514]
+                    identifier: _saleType [3500,3509]
+                    comparison_operator: == [3510,3512]
+                    number_literal: 1 [3513,3514]
+                block_statement [3516,3564]
+                    expression_statement [3530,3554]
+                        assignment_expression [3530,3553]
+                            identifier: privateSaleId [3530,3543]
+                            affectation_operator: = [3544,3545]
+                            identifier: _saleId [3546,3553]
+                else: else [3565,3569]
+                block_statement [3570,3617]
+                    expression_statement [3584,3607]
+                        assignment_expression [3584,3606]
+                            identifier: publicSaleId [3584,3596]
+                            affectation_operator: = [3597,3598]
+                            identifier: _saleId [3599,3606]
+to
+contract_body [1164,12063]
+at 20
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [3629,3887]
+    function: function [3629,3637]
+    identifier: getSaleIdbyType [3638,3653]
+    parameter [3654,3671]
+        type_name: uint256 [3654,3661]
+        identifier: _saleType [3662,3671]
+    visibility: internal [3673,3681]
+    state_mutability [3682,3686]
+        view: view [3682,3686]
+    return_type_definition [3687,3703]
+        returns: returns [3687,3694]
+        parameter [3695,3702]
+            type_name: uint256 [3695,3702]
+    function_body [3704,3887]
+        variable_declaration_statement [3714,3857]
+            variable_declaration [3714,3729]
+                type_name: uint256 [3714,3721]
+                identifier: _saleId [3722,3729]
+            affectation_operator: = [3730,3731]
+            ternary_expression [3732,3856]
+                ternary_expression [3732,3801]
+                    binary_expression [3732,3746]
+                        identifier: _saleType [3732,3741]
+                        comparison_operator: == [3742,3744]
+                        number_literal: 0 [3745,3746]
+                    ?: ? [3760,3761]
+                    identifier: seedSaleId [3762,3772]
+                    :: : [3785,3786]
+                    binary_expression [3787,3801]
+                        identifier: _saleType [3787,3796]
+                        comparison_operator: == [3797,3799]
+                        number_literal: 1 [3800,3801]
+                ?: ? [3814,3815]
+                identifier: privateSaleId [3816,3829]
+                :: : [3842,3843]
+                identifier: publicSaleId [3844,3856]
+        return_statement [3866,3881]
+            return: return [3866,3872]
+            identifier: _saleId [3873,3880]
+to
+contract_body [1164,12063]
+at 21
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [5135,5271]
+    function: function [5135,5143]
+    identifier: setPrivateSaleMerkleRoot [5144,5168]
+    parameter [5178,5197]
+        type_name: bytes32 [5178,5185]
+        identifier: _merkleRoot [5186,5197]
+    visibility: external [5204,5212]
+    modifier_invocation [5213,5222]
+        identifier: onlyOwner [5213,5222]
+    function_body [5223,5271]
+        expression_statement [5233,5265]
+            assignment_expression [5233,5264]
+                identifier: privateMerkleRoot [5233,5250]
+                affectation_operator: = [5251,5252]
+                identifier: _merkleRoot [5253,5264]
+to
+contract_body [1164,12063]
+at 24
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [5662,5817]
+    function: function [5662,5670]
+    identifier: updateSaleIdStatus [5671,5689]
+    parameter [5699,5714]
+        type_name: uint256 [5699,5706]
+        identifier: _saleId [5707,5714]
+    visibility: external [5729,5737]
+    modifier_invocation [5746,5755]
+        identifier: onlyOwner [5746,5755]
+    function_body [5760,5817]
+        expression_statement [5770,5811]
+            assignment_expression [5770,5810]
+                array_access [5770,5788]
+                    identifier: saleIdMap [5770,5779]
+                    identifier: _saleId [5780,5787]
+                affectation_operator: = [5789,5790]
+                array_access [5791,5810]
+                    unary_expression [5791,5801]
+                        !: ! [5791,5792]
+                        identifier: saleIdMap [5792,5801]
+                    identifier: _saleId [5802,5809]
+to
+contract_body [1164,12063]
+at 29
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [6074,6207]
+    function: function [6074,6082]
+    identifier: getPrivateMerkleRoot [6083,6103]
+    visibility: external [6114,6122]
+    state_mutability [6131,6135]
+        view: view [6131,6135]
+    return_type_definition [6144,6161]
+        returns: returns [6144,6151]
+        parameter [6153,6160]
+            type_name: bytes32 [6153,6160]
+    function_body [6166,6207]
+        return_statement [6176,6201]
+            return: return [6176,6182]
+            identifier: privateMerkleRoot [6183,6200]
+to
+contract_body [1164,12063]
+at 31
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [3926,3943]
+    type_name: uint256 [3926,3933]
+    identifier: _saleType [3934,3943]
+to
+function_definition [3152,3894]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [3953,3968]
+    type_name: uint256 [3953,3960]
+    identifier: _saleId [3961,3968]
+to
+function_definition [3152,3894]
+at 3
+
+New cluster:
+UPDATE from setMerkleRoot to setSeedMerkleRoot
+------------
+===
+update-node
+---
+identifier: setMerkleRoot [4024,4037]
+replace setMerkleRoot by setSeedMerkleRoot
+
+New cluster:
+UPDATE from getMerkleRoot to getSeedMerkleRoot
+------------
+===
+update-node
+---
+identifier: getMerkleRoot [4594,4607]
+replace getMerkleRoot by getSeedMerkleRoot
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [6382,6399]
+    type_name: uint256 [6382,6389]
+    identifier: _saleType [6390,6399]
+to
+modifier_definition [4855,5131]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [8006,8023]
+    type_name: uint256 [8006,8013]
+    identifier: _saleType [8014,8023]
+to
+function_definition [6310,7752]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4270,4351]
+    call_expression [4270,4350]
+        identifier: require [4270,4277]
+        call_argument [4278,4328]
+            binary_expression [4278,4328]
+                binary_expression [4278,4310]
+                    binary_expression [4278,4292]
+                        identifier: _saleType [4278,4287]
+                        comparison_operator: == [4288,4290]
+                        number_literal: 0 [4291,4292]
+                    logical_operator: || [4293,4295]
+                    binary_expression [4296,4310]
+                        identifier: _saleType [4296,4305]
+                        comparison_operator: == [4306,4308]
+                        number_literal: 1 [4309,4310]
+                logical_operator: || [4311,4313]
+                binary_expression [4314,4328]
+                    identifier: _saleType [4314,4323]
+                    comparison_operator: == [4324,4326]
+                    number_literal: 2 [4327,4328]
+        call_argument [4330,4349]
+            string_literal [4330,4349]
+                string: "Invalid sale type" [4330,4349]
+to
+function_body [3467,3894]
+at 0
+
+New cluster:
+MOVE from function_body [3467,3894]
+------------
+===
+move-tree
+---
+expression_statement [6490,6572]
+    call_expression [6490,6571]
+        identifier: require [6490,6497]
+        call_argument [6511,6527]
+            call_expression [6511,6527]
+                identifier: isActive [6511,6519]
+                call_argument [6520,6526]
+                    identifier: saleId [6520,6526]
+        call_argument [6541,6561]
+            string_literal [6541,6561]
+                string: "Sale is not active" [6541,6561]
+to
+function_body [3467,3894]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4729,4782]
+    assignment_expression [4729,4781]
+        member_expression: detail.tokenSold [4729,4745]
+        affectation_operator: = [4746,4747]
+        member_expression: salesDetailMap[_saleId].tokenSold [4748,4781]
+to
+function_body [3467,3894]
+at 12
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [6510,6580]
+    variable_declaration [6510,6529]
+        type_name: bytes32 [6510,6517]
+        identifier: _merkleRoot [6518,6529]
+    affectation_operator: = [6530,6531]
+    ternary_expression [6532,6579]
+        binary_expression [6532,6546]
+            identifier: _saleType [6532,6541]
+            comparison_operator: == [6542,6544]
+            number_literal: 0 [6545,6546]
+        ?: ? [6547,6548]
+        identifier: merkleRoot [6549,6559]
+        :: : [6560,6561]
+        identifier: privateMerkleRoot [6562,6579]
+to
+function_body [4910,5131]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [8162,8171]
+    identifier: _saleType [8162,8171]
+to
+modifier_invocation [6453,6475]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8195,8292]
+    call_expression [8195,8291]
+        identifier: require [8195,8202]
+        call_argument [8216,8248]
+            binary_expression [8216,8248]
+                binary_expression [8216,8230]
+                    identifier: _saleType [8216,8225]
+                    comparison_operator: == [8226,8228]
+                    number_literal: 0 [8229,8230]
+                logical_operator: || [8231,8233]
+                binary_expression [8234,8248]
+                    identifier: _saleType [8234,8243]
+                    comparison_operator: == [8244,8246]
+                    number_literal: 1 [8247,8248]
+        call_argument [8262,8281]
+            string_literal [8262,8281]
+                string: "Invalid sale type" [8262,8281]
+to
+function_body [6480,7752]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [8301,8346]
+    variable_declaration [8301,8316]
+        type_name: uint256 [8301,8308]
+        identifier: _saleId [8309,8316]
+    affectation_operator: = [8317,8318]
+    call_expression [8319,8345]
+        identifier: getSaleIdbyType [8319,8334]
+        call_argument [8335,8344]
+            identifier: _saleType [8335,8344]
+to
+function_body [6480,7752]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [8355,8438]
+to
+function_body [6480,7752]
+at 2
+------------
+===
+insert-node
+---
+expression_statement [8355,8438]
+to
+function_body [6480,7752]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9500,9533]
+    assignment_expression [9500,9532]
+        array_access [9500,9523]
+            identifier: salesDetailMap [9500,9514]
+            identifier: _saleId [9515,9522]
+        affectation_operator: = [9524,9525]
+        identifier: detail [9526,9532]
+to
+function_body [6480,7752]
+at 19
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [12403,12440]
+    variable_declaration [12403,12418]
+        type_name: uint256 [12403,12410]
+        identifier: _saleId [12411,12418]
+    affectation_operator: = [12419,12420]
+    call_expression [12421,12439]
+        identifier: getSaleIdbyType [12421,12436]
+        call_argument [12437,12438]
+            number_literal: 2 [12437,12438]
+to
+function_body [10480,11349]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [13177,13210]
+    assignment_expression [13177,13209]
+        array_access [13177,13200]
+            identifier: salesDetailMap [13177,13191]
+            identifier: _saleId [13192,13199]
+        affectation_operator: = [13201,13202]
+        identifier: detail [13203,13209]
+to
+function_body [10480,11349]
+at 11
+
+New cluster:
+MOVE from expression_statement [6490,6572]
+------------
+===
+move-tree
+---
+call_expression [6511,6527]
+    identifier: isActive [6511,6519]
+    call_argument [6520,6526]
+        identifier: saleId [6520,6526]
+to
+expression_statement [6490,6572]
+at 0
+
+New cluster:
+===
+insert-node
+---
+array_access [7007,7292]
+to
+return_statement [5398,5620]
+at 1
+------------
+===
+insert-node
+---
+array_access [7007,7292]
+to
+return_statement [5398,5620]
+at 1
+===
+insert-node
+---
+identifier: _saleId [7284,7291]
+to
+array_access [7007,7292]
+at 1
+===
+insert-node
+---
+logical_operator: && [7222,7224]
+to
+binary_expression [7007,7283]
+at 1
+===
+insert-node
+---
+binary_expression [7007,7283]
+to
+array_access [7007,7292]
+at 0
+
+New cluster:
+MOVE from expression_statement [8355,8438]
+------------
+===
+move-tree
+---
+call_expression [6490,6571]
+    identifier: require [6490,6497]
+    call_argument [6511,6527]
+        call_expression [6511,6527]
+            identifier: isActive [6511,6519]
+            call_argument [6520,6526]
+                identifier: saleId [6520,6526]
+    call_argument [6541,6561]
+        string_literal [6541,6561]
+            string: "Sale is not active" [6541,6561]
+to
+expression_statement [8355,8438]
+at 0
+
+New cluster:
+UPDATE from require to updateSaleIdbyType
+------------
+===
+update-node
+---
+identifier: require [6490,6497]
+replace require by updateSaleIdbyType
+
+New cluster:
+MOVE from call_expression [6511,6527]
+------------
+===
+move-tree
+---
+identifier: require [6490,6497]
+to
+call_expression [6511,6527]
+at 0
+===
+move-tree
+---
+call_argument [6541,6561]
+    string_literal [6541,6561]
+        string: "Sale is not active" [6541,6561]
+to
+call_expression [10490,10571]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [4397,4406]
+to
+call_expression [6511,6527]
+at 1
+------------
+===
+insert-node
+---
+call_argument [4397,4406]
+to
+call_expression [6511,6527]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: require [8355,8362]
+to
+call_expression [6490,6571]
+at 0
+------------
+===
+insert-node
+---
+identifier: require [8355,8362]
+to
+call_expression [6490,6571]
+at 0
+
+New cluster:
+MOVE from call_expression [6490,6571]
+------------
+===
+move-tree
+---
+call_argument [10541,10561]
+    string_literal [10541,10561]
+        string: "Sale is not active" [10541,10561]
+to
+call_expression [6490,6571]
+at 2
+
+New cluster:
+UPDATE from saleId to _saleId
+------------
+===
+update-node
+---
+identifier: saleId [10801,10807]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [7134,7140]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [6786,6792]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [7643,7649]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [7444,7450]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [11031,11037]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [6845,6851]
+replace saleId by _saleId
+===
+update-node
+---
+identifier: saleId [10520,10526]
+replace saleId by _saleId
+
+New cluster:
+UPDATE from isActive to _saleType
+------------
+===
+update-node
+---
+identifier: isActive [6511,6519]
+replace isActive by _saleType
+
+New cluster:
+MOVE from call_argument [4397,4406]
+------------
+===
+move-tree
+---
+identifier: isActive [6511,6519]
+to
+call_argument [4397,4406]
+at 0
+
+New cluster:
+MOVE from binary_expression [7007,7283]
+------------
+===
+move-tree
+---
+parenthesized_expression [5405,5619]
+    binary_expression [5406,5618]
+        binary_expression [5406,5542]
+            member_expression: block.timestamp >= detail.start && // Must be after the start date             block.timestamp <= detail.start [5406,5516]
+            arithmetic_operator: + [5517,5518]
+            parenthesized_expression [5519,5542]
+                binary_expression [5520,5541]
+                    member_expression: detail._days [5520,5532]
+                    arithmetic_operator: * [5533,5534]
+                    number_literal: 1 days [5535,5541]
+        logical_operator: && [5543,5545]
+        binary_expression [5589,5618]
+            call_expression [5589,5609]
+                identifier: goalReached [5589,5600]
+                call_argument [5601,5608]
+                    identifier: _saleId [5601,5608]
+            comparison_operator: == [5610,5612]
+            boolean_literal: false [5613,5618]
+to
+binary_expression [7007,7283]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [7273,7283]
+    !: ! [7273,7274]
+    identifier: saleIdMap [7274,7283]
+to
+binary_expression [7007,7283]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [8376,8393]
+    identifier: isActive [8376,8384]
+    call_argument [8385,8392]
+        identifier: _saleId [8385,8392]
+to
+call_argument [6511,6527]
+at 0
+
+New cluster:
+UPDATE from merkleRoot to _merkleRoot
+------------
+===
+update-node
+---
+identifier: merkleRoot [5053,5063]
+replace merkleRoot by _merkleRoot
+
+New cluster:
+===
+delete-node
+---
+identifier: ASTILO [1086,1092]
+===
+------------
+===
+delete-node
+---
+identifier: ASTILO [1086,1092]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1093,1095]
+===
+------------
+===
+delete-node
+---
+is: is [1093,1095]
+===
+

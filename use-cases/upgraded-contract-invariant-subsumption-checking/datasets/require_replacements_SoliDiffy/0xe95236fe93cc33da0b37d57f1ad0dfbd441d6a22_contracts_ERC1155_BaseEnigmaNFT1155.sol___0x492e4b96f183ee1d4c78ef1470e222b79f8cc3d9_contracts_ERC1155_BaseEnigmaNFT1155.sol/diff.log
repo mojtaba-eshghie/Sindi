@@ -1,0 +1,553 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [386,437]
+    import: import [386,392]
+    string: "@openzeppelin/contracts/proxy/IBeacon.sol" [393,436]
+to
+source_file [0,8666]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [7629,7796]
+    function: function [7629,7637]
+    identifier: _increaseNextId [7638,7653]
+    visibility: internal [7656,7664]
+    return_type_definition [7665,7682]
+        returns: returns [7665,7672]
+        parameter [7674,7681]
+            type_name: uint256 [7674,7681]
+    function_body [7683,7796]
+        variable_declaration_statement [7693,7726]
+            variable_declaration [7693,7713]
+                type_name: uint256 [7693,7700]
+                identifier: tokenCounter [7701,7713]
+            affectation_operator: = [7714,7715]
+            identifier: newItemId [7716,7725]
+        expression_statement [7735,7761]
+            assignment_expression [7735,7760]
+                identifier: newItemId [7735,7744]
+                affectation_operator: = [7745,7746]
+                binary_expression [7747,7760]
+                    identifier: newItemId [7747,7756]
+                    arithmetic_operator: + [7757,7758]
+                    number_literal: 1 [7759,7760]
+        return_statement [7770,7790]
+            return: return [7770,7776]
+            identifier: tokenCounter [7777,7789]
+to
+contract_body [780,8665]
+at 27
+
+New cluster:
+UPDATE from private to internal
+------------
+===
+update-node
+---
+visibility: private [1005,1012]
+replace private by internal
+===
+update-node
+---
+visibility: external [2000,2008]
+replace external by internal
+
+New cluster:
+UPDATE from ITransferGatekeeper to IBeacon
+------------
+===
+update-node
+---
+type_name: ITransferGatekeeper [8546,8565]
+replace ITransferGatekeeper by IBeacon
+===
+update-node
+---
+type_name: ITransferGatekeeper [1557,1576]
+replace ITransferGatekeeper by IBeacon
+
+New cluster:
+UPDATE from transferGatekeeper to transferGatekeeperBeacon
+------------
+===
+update-node
+---
+identifier: transferGatekeeper [1584,1602]
+replace transferGatekeeper by transferGatekeeperBeacon
+===
+update-node
+---
+identifier: transferGatekeeper [8616,8634]
+replace transferGatekeeper by transferGatekeeperBeacon
+
+New cluster:
+UPDATE from initialize to _initialize
+------------
+===
+update-node
+---
+identifier: initialize [1884,1894]
+replace initialize by _initialize
+
+New cluster:
+UPDATE from _mint to _mintNew
+------------
+===
+update-node
+---
+identifier: _mint [6925,6930]
+replace _mint by _mintNew
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [7003,7020]
+    type_name: address [7003,7010]
+    identifier: recipient [7011,7020]
+to
+function_definition [6916,7545]
+at 2
+
+New cluster:
+MOVE from function_definition [6916,7545]
+------------
+===
+move-tree
+---
+parameter [3367,3382]
+    type_name: uint256 [3367,3374]
+    identifier: tokenId [3375,3382]
+to
+function_definition [6916,7545]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [7136,7153]
+    returns: returns [7136,7143]
+    parameter [7145,7152]
+        type_name: uint256 [7145,7152]
+to
+function_definition [6916,7545]
+at 9
+
+New cluster:
+MOVE from function_body [7047,7545]
+------------
+===
+move-tree
+---
+expression_statement [7492,7539]
+    call_expression [7492,7538]
+        member_expression: super._mint [7492,7503]
+        call_argument [7504,7514]
+            member_expression: msg.sender [7504,7514]
+        call_argument [7516,7524]
+            identifier: tokenId_ [7516,7524]
+        call_argument [7526,7533]
+            identifier: supply_ [7526,7533]
+        call_argument [7535,7537]
+            string_literal [7535,7537]
+                string: "" [7535,7537]
+to
+function_body [7047,7545]
+at 3
+
+New cluster:
+UPDATE from setTransferGatekeeper to setTransferGatekeeperBeacon
+------------
+===
+update-node
+---
+identifier: setTransferGatekeeper [8524,8545]
+replace setTransferGatekeeper by setTransferGatekeeperBeacon
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [5708,5812]
+    variable_declaration [5708,5746]
+        type_name: ITransferGatekeeper [5708,5727]
+        identifier: transferGatekeeper [5728,5746]
+    affectation_operator: = [5747,5748]
+    call_expression [5749,5811]
+        identifier: ITransferGatekeeper [5749,5768]
+        call_argument [5769,5810]
+            call_expression [5769,5810]
+                member_expression: transferGatekeeperBeacon.implementation [5769,5808]
+to
+function_body [5729,5982]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [6373,6477]
+    variable_declaration [6373,6411]
+        type_name: ITransferGatekeeper [6373,6392]
+        identifier: transferGatekeeper [6393,6411]
+    affectation_operator: = [6412,6413]
+    call_expression [6414,6476]
+        identifier: ITransferGatekeeper [6414,6433]
+        call_argument [6434,6475]
+            call_expression [6434,6475]
+                member_expression: transferGatekeeperBeacon.implementation [6434,6473]
+to
+function_body [6278,6542]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [7234,7313]
+to
+function_body [7047,7545]
+at 1
+------------
+===
+insert-node
+---
+call_expression [7234,7312]
+to
+expression_statement [7234,7313]
+at 0
+===
+insert-node
+---
+expression_statement [7234,7313]
+to
+function_body [7047,7545]
+at 1
+===
+insert-node
+---
+identifier: require [7234,7241]
+to
+call_expression [7234,7312]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [7564,7592]
+    assignment_expression [7564,7591]
+        array_access [7564,7584]
+            identifier: _royaltyFee [7564,7575]
+            identifier: tokenId [7576,7583]
+        affectation_operator: = [7585,7586]
+        identifier: fee_ [7587,7591]
+to
+function_body [7047,7545]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [7602,7617]
+    return: return [7602,7608]
+    identifier: tokenId [7609,7616]
+to
+function_body [7047,7545]
+at 11
+
+New cluster:
+UPDATE from _transferGatekeeper to transferGatekeeperBeacon_
+------------
+===
+update-node
+---
+identifier: _transferGatekeeper [8566,8585]
+replace _transferGatekeeper by transferGatekeeperBeacon_
+===
+update-node
+---
+identifier: _transferGatekeeper [8637,8656]
+replace _transferGatekeeper by transferGatekeeperBeacon_
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [7242,7278]
+    call_expression [7242,7278]
+        member_expression: _tokenOwners.set [7242,7258]
+        call_argument [7259,7266]
+            identifier: tokenId [7259,7266]
+        call_argument [7268,7277]
+            identifier: recipient [7268,7277]
+to
+call_expression [7234,7312]
+at 1
+
+New cluster:
+MOVE from call_argument [7504,7514]
+------------
+===
+move-tree
+---
+identifier: require [7291,7298]
+to
+call_argument [7504,7514]
+at 0
+===
+move-tree
+---
+call_argument [7339,7370]
+    string_literal [7339,7370]
+        string: "ERC1155: token already minted" [7339,7370]
+to
+call_expression [7234,7312]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: _mint [7445,7450]
+to
+call_expression [7492,7538]
+at 0
+------------
+===
+insert-node
+---
+identifier: _mint [7445,7450]
+to
+call_expression [7492,7538]
+at 0
+
+New cluster:
+UPDATE from tokenId_ to tokenId
+------------
+===
+update-node
+---
+identifier: tokenId_ [7473,7481]
+replace tokenId_ by tokenId
+===
+update-node
+---
+identifier: tokenId_ [7432,7440]
+replace tokenId_ by tokenId
+===
+update-node
+---
+identifier: tokenId_ [7074,7082]
+replace tokenId_ by tokenId
+===
+update-node
+---
+identifier: tokenId_ [7516,7524]
+replace tokenId_ by tokenId
+
+New cluster:
+UPDATE from require to recipient
+------------
+===
+update-node
+---
+identifier: require [7291,7298]
+replace require by recipient
+
+New cluster:
+===
+delete-node
+---
+function_definition [3347,3474]
+===
+------------
+===
+delete-node
+---
+virtual: virtual [3398,3405]
+===
+===
+delete-node
+---
+identifier: getCreator [3356,3366]
+===
+===
+delete-node
+---
+visibility: external [3384,3392]
+===
+===
+delete-node
+---
+function_definition [3347,3474]
+===
+===
+delete-node
+---
+function: function [3347,3355]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [3393,3397]
+    view: view [3393,3397]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+override_specifier [3406,3414]
+    override: override [3406,3414]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [3415,3432]
+    returns: returns [3415,3422]
+    parameter [3424,3431]
+        type_name: address [3424,3431]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [3433,3474]
+    return_statement [3443,3468]
+        return: return [3443,3449]
+        array_access [3450,3467]
+            identifier: creators [3450,3458]
+            identifier: tokenId [3459,3466]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [6940,6956]
+    type_name: uint256 [6940,6947]
+    identifier: tokenId_ [6948,6956]
+
+New cluster:
+===
+delete-node
+---
+member_expression: super._mint [7492,7503]
+===
+------------
+===
+delete-node
+---
+member_expression: super._mint [7492,7503]
+===
+
+New cluster:
+===
+delete-node
+---
+member_expression: msg.sender [7504,7514]
+===
+------------
+===
+delete-node
+---
+member_expression: msg.sender [7504,7514]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7250,7282]
+    assignment_expression [7250,7281]
+        array_access [7250,7268]
+            identifier: creators [7250,7258]
+            identifier: tokenId_ [7259,7267]
+        affectation_operator: = [7269,7270]
+        member_expression: msg.sender [7271,7281]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [7299,7337]
+    call_expression [7299,7337]
+        member_expression: _tokenOwners.set [7299,7315]
+        call_argument [7316,7324]
+            identifier: tokenId_ [7316,7324]
+        call_argument [7326,7336]
+            member_expression: msg.sender [7326,7336]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [7291,7372]
+===
+------------
+===
+delete-node
+---
+call_expression [7291,7371]
+===
+===
+delete-node
+---
+expression_statement [7291,7372]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [7381,7410]
+    assignment_expression [7381,7409]
+        array_access [7381,7402]
+            identifier: _royaltyFee [7381,7392]
+            identifier: tokenId_ [7393,7401]
+        affectation_operator: = [7403,7404]
+        identifier: fee_ [7405,7409]
+

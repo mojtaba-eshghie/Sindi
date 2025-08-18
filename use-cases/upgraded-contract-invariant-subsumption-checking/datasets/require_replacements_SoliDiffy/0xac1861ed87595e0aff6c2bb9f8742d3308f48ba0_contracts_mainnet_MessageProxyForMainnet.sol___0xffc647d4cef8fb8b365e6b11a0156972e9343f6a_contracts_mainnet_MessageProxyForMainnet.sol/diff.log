@@ -1,0 +1,1005 @@
+New cluster:
+===
+insert-node
+---
+identifier: MessageProxyForMainnet [1882,1904]
+to
+contract_declaration [1873,15877]
+at 0
+------------
+===
+insert-node
+---
+identifier: MessageProxyForMainnet [1882,1904]
+to
+contract_declaration [1873,15877]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1905,1907]
+to
+contract_declaration [1873,15877]
+at 1
+------------
+===
+insert-node
+---
+is: is [1905,1907]
+to
+contract_declaration [1873,15877]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [3358,3443]
+    type_name: mapping(bytes32 => EnumerableSetUpgradeable.AddressSet) [3358,3413]
+    visibility: private [3414,3421]
+    identifier: _reimbursedContracts [3422,3442]
+to
+contract_body [1966,15877]
+at 11
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [4132,4237]
+    identifier: ReimbursedContractAdded [4138,4161]
+    event_paramater [4171,4197]
+        type_name: bytes32 [4171,4178]
+        indexed: indexed [4179,4186]
+        identifier: schainHash [4187,4197]
+    event_paramater [4207,4230]
+        type_name: address [4207,4214]
+        identifier: contractAddress [4215,4230]
+to
+contract_body [1966,15877]
+at 16
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+event_definition [4315,4422]
+    identifier: ReimbursedContractRemoved [4321,4346]
+    event_paramater [4356,4382]
+        type_name: bytes32 [4356,4363]
+        indexed: indexed [4364,4371]
+        identifier: schainHash [4372,4382]
+    event_paramater [4392,4415]
+        type_name: address [4392,4399]
+        identifier: contractAddress [4400,4415]
+to
+contract_body [1966,15877]
+at 17
+
+New cluster:
+===
+insert-node
+---
+function_definition [8260,9185]
+to
+contract_body [1966,15877]
+at 24
+------------
+===
+insert-node
+---
+function: function [8260,8268]
+to
+function_definition [8260,9185]
+at 0
+===
+insert-node
+---
+function_definition [8260,9185]
+to
+contract_body [1966,15877]
+at 24
+===
+insert-node
+---
+call_expression [8557,8607]
+to
+binary_expression [8557,8660]
+at 0
+===
+insert-node
+---
+expression_statement [8536,8736]
+to
+function_body [8363,9185]
+at 2
+===
+insert-node
+---
+call_expression [8536,8735]
+to
+expression_statement [8536,8736]
+at 0
+===
+insert-node
+---
+identifier: isSchainOwner [8623,8636]
+to
+call_expression [8623,8660]
+at 0
+===
+insert-node
+---
+function_body [8363,9185]
+to
+function_definition [8260,9185]
+at 6
+===
+insert-node
+---
+binary_expression [8557,8660]
+to
+call_argument [8557,8660]
+at 0
+===
+insert-node
+---
+call_expression [8623,8660]
+to
+binary_expression [8557,8660]
+at 2
+===
+insert-node
+---
+call_argument [8557,8660]
+to
+call_expression [8536,8735]
+at 1
+===
+insert-node
+---
+identifier: hasRole [8557,8564]
+to
+call_expression [8557,8607]
+at 0
+===
+insert-node
+---
+logical_operator: || [8608,8610]
+to
+binary_expression [8557,8660]
+at 1
+===
+insert-node
+---
+visibility: external [8345,8353]
+to
+function_definition [8260,9185]
+at 4
+===
+insert-node
+---
+identifier: addReimbursedContract [8269,8290]
+to
+function_definition [8260,9185]
+at 1
+===
+insert-node
+---
+identifier: require [8536,8543]
+to
+call_expression [8536,8735]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [9614,10277]
+    function: function [9614,9622]
+    identifier: removeReimbursedContract [9623,9647]
+    parameter [9648,9672]
+        type_name: string [9648,9654]
+        memory: memory [9655,9661]
+        identifier: schainName [9662,9672]
+    parameter [9674,9700]
+        type_name: address [9674,9681]
+        identifier: reimbursedContract [9682,9700]
+    visibility: external [9702,9710]
+    override_specifier [9711,9719]
+        override: override [9711,9719]
+    function_body [9720,10277]
+        variable_declaration_statement [9730,9791]
+            variable_declaration [9730,9748]
+                type_name: bytes32 [9730,9737]
+                identifier: schainHash [9738,9748]
+            affectation_operator: = [9749,9750]
+            call_expression [9751,9790]
+                identifier: keccak256 [9751,9760]
+                call_argument [9761,9789]
+                    call_expression [9761,9789]
+                        member_expression: abi.encodePacked [9761,9777]
+                        call_argument [9778,9788]
+                            identifier: schainName [9778,9788]
+        expression_statement [9800,9876]
+            call_expression [9800,9875]
+                identifier: require [9800,9807]
+                call_argument [9808,9834]
+                    binary_expression [9808,9834]
+                        identifier: schainHash [9808,9818]
+                        comparison_operator: != [9819,9821]
+                        identifier: MAINNET_HASH [9822,9834]
+                call_argument [9836,9874]
+                    string_literal [9836,9874]
+                        string: "Schain hash can not be equal Mainnet" [9836,9874]
+        expression_statement [9885,10088]
+            call_expression [9885,10087]
+                identifier: require [9885,9892]
+                call_argument [9906,10009]
+                    binary_expression [9906,10009]
+                        call_expression [9906,9956]
+                            identifier: hasRole [9906,9913]
+                            call_argument [9914,9943]
+                                identifier: EXTRA_CONTRACT_REGISTRAR_ROLE [9914,9943]
+                            call_argument [9945,9955]
+                                member_expression: msg.sender [9945,9955]
+                        logical_operator: || [9957,9959]
+                        call_expression [9972,10009]
+                            identifier: isSchainOwner [9972,9985]
+                            call_argument [9986,9996]
+                                member_expression: msg.sender [9986,9996]
+                            call_argument [9998,10008]
+                                identifier: schainHash [9998,10008]
+                call_argument [10023,10077]
+                    string_literal [10023,10077]
+                        string: "Not enough permissions to remove reimbursed contract" [10023,10077]
+        expression_statement [10097,10204]
+            call_expression [10097,10203]
+                identifier: require [10097,10104]
+                call_argument [10105,10166]
+                    call_expression [10105,10166]
+                        member_expression: _reimbursedContracts[schainHash].contains [10105,10146]
+                        call_argument [10147,10165]
+                            identifier: reimbursedContract [10147,10165]
+                call_argument [10168,10202]
+                    string_literal [10168,10202]
+                        string: "Reimbursed contract is not added" [10168,10202]
+        expression_statement [10213,10271]
+            call_expression [10213,10270]
+                identifier: _removeReimbursedContract [10213,10238]
+                call_argument [10239,10249]
+                    identifier: schainHash [10239,10249]
+                call_argument [10251,10269]
+                    identifier: reimbursedContract [10251,10269]
+to
+contract_body [1966,15877]
+at 25
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [15499,15663]
+    function: function [15499,15507]
+    identifier: getReimbursedContractsLength [15508,15536]
+    parameter [15537,15555]
+        type_name: bytes32 [15537,15544]
+        identifier: schainHash [15545,15555]
+    visibility: external [15557,15565]
+    state_mutability [15566,15570]
+        view: view [15566,15570]
+    override_specifier [15571,15579]
+        override: override [15571,15579]
+    return_type_definition [15580,15597]
+        returns: returns [15580,15587]
+        parameter [15589,15596]
+            type_name: uint256 [15589,15596]
+    function_body [15598,15663]
+        return_statement [15608,15657]
+            return: return [15608,15614]
+            call_expression [15615,15656]
+                member_expression: _reimbursedContracts[schainHash].length [15615,15654]
+to
+contract_body [1966,15877]
+at 32
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [15837,16404]
+    function: function [15837,15845]
+    identifier: getReimbursedContractsRange [15846,15873]
+    parameter [15883,15901]
+        type_name: bytes32 [15883,15890]
+        identifier: schainHash [15891,15901]
+    parameter [15911,15923]
+        type_name: uint256 [15911,15918]
+        identifier: from [15919,15923]
+    parameter [15933,15943]
+        type_name: uint256 [15933,15940]
+        identifier: to [15941,15943]
+    visibility: external [15958,15966]
+    state_mutability [15975,15979]
+        view: view [15975,15979]
+    override_specifier [15988,15996]
+        override: override [15988,15996]
+    return_type_definition [16005,16048]
+        returns: returns [16005,16012]
+        parameter [16014,16047]
+            type_name: address[] [16014,16023]
+            memory: memory [16024,16030]
+            identifier: contractsInRange [16031,16047]
+    function_body [16053,16404]
+        expression_statement [16063,16208]
+            call_expression [16063,16207]
+                identifier: require [16063,16070]
+                call_argument [16084,16163]
+                    call_expression [16084,16163]
+                        member_expression: from < to && to - from <= 10 && to <= _reimbursedContracts[schainHash].length [16084,16161]
+                call_argument [16177,16197]
+                    string_literal [16177,16197]
+                        string: "Range is incorrect" [16177,16197]
+        expression_statement [16217,16261]
+            assignment_expression [16217,16260]
+                identifier: contractsInRange [16217,16233]
+                affectation_operator: = [16234,16235]
+                call_expression [16236,16260]
+                    new_expression [16236,16249]
+                        new: new [16236,16239]
+                        type_name: address[] [16240,16249]
+                    call_argument [16250,16259]
+                        binary_expression [16250,16259]
+                            identifier: to [16250,16252]
+                            arithmetic_operator: - [16253,16254]
+                            identifier: from [16255,16259]
+        for_statement [16270,16398]
+            for: for [16270,16273]
+            variable_declaration_statement [16275,16292]
+                variable_declaration [16275,16284]
+                    type_name: uint256 [16275,16282]
+                    identifier: i [16283,16284]
+                affectation_operator: = [16285,16286]
+                identifier: from [16287,16291]
+            expression_statement [16293,16300]
+                binary_expression [16293,16299]
+                    identifier: i [16293,16294]
+                    comparison_operator: < [16295,16296]
+                    identifier: to [16297,16299]
+            update_expression [16301,16304]
+                identifier: i [16301,16302]
+                increment_operator: ++ [16302,16304]
+            block_statement [16306,16398]
+                expression_statement [16320,16388]
+                    assignment_expression [16320,16387]
+                        array_access [16320,16346]
+                            identifier: contractsInRange [16320,16336]
+                            binary_expression [16337,16345]
+                                identifier: i [16337,16338]
+                                arithmetic_operator: - [16339,16340]
+                                identifier: from [16341,16345]
+                        affectation_operator: = [16347,16348]
+                        call_expression [16349,16387]
+                            member_expression: _reimbursedContracts[schainHash].at [16349,16384]
+                            call_argument [16385,16386]
+                                identifier: i [16385,16386]
+to
+contract_body [1966,15877]
+at 33
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [18122,18392]
+    function: function [18122,18130]
+    identifier: isReimbursedContract [18131,18151]
+    parameter [18152,18170]
+        type_name: bytes32 [18152,18159]
+        identifier: schainHash [18160,18170]
+    parameter [18172,18195]
+        type_name: address [18172,18179]
+        identifier: contractAddress [18180,18195]
+    visibility: public [18197,18203]
+    state_mutability [18204,18208]
+        view: view [18204,18208]
+    override_specifier [18209,18217]
+        override: override [18209,18217]
+    return_type_definition [18218,18232]
+        returns: returns [18218,18225]
+        parameter [18227,18231]
+            type_name: bool [18227,18231]
+    function_body [18233,18392]
+        return_statement [18243,18386]
+            return: return [18243,18249]
+            call_expression [18262,18385]
+                member_expression: isContractRegistered(bytes32(0), contractAddress) ||             _reimbursedContracts[schainHash].contains [18262,18368]
+                call_argument [18369,18384]
+                    identifier: contractAddress [18369,18384]
+to
+contract_body [1966,15877]
+at 38
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [20176,20415]
+    function: function [20176,20184]
+    identifier: _removeReimbursedContract [20185,20210]
+    parameter [20211,20229]
+        type_name: bytes32 [20211,20218]
+        identifier: schainHash [20219,20229]
+    parameter [20231,20257]
+        type_name: address [20231,20238]
+        identifier: reimbursedContract [20239,20257]
+    visibility: private [20259,20266]
+    function_body [20267,20415]
+        expression_statement [20277,20337]
+            call_expression [20277,20336]
+                member_expression: _reimbursedContracts[schainHash].remove [20277,20316]
+                call_argument [20317,20335]
+                    identifier: reimbursedContract [20317,20335]
+        emit_statement [20346,20409]
+            identifier: ReimbursedContractRemoved [20351,20376]
+            call_argument [20377,20387]
+                identifier: schainHash [20377,20387]
+            call_argument [20389,20407]
+                identifier: reimbursedContract [20389,20407]
+to
+contract_body [1966,15877]
+at 43
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [5820,5829]
+to
+function_definition [5125,5452]
+at 5
+------------
+===
+insert-node
+---
+modifier_invocation [5820,5829]
+to
+function_definition [5125,5452]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [8291,8315]
+    type_name: string [8291,8297]
+    memory: memory [8298,8304]
+    identifier: schainName [8305,8315]
+to
+function_definition [8260,9185]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [8317,8343]
+    type_name: address [8317,8324]
+    identifier: reimbursedContract [8325,8343]
+to
+function_definition [8260,9185]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+override_specifier [8354,8362]
+    override: override [8354,8362]
+to
+function_definition [8260,9185]
+at 5
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [14085,14094]
+to
+function_definition [10865,11110]
+at 5
+------------
+===
+insert-node
+---
+modifier_invocation [14085,14094]
+to
+function_definition [10865,11110]
+at 5
+
+New cluster:
+UPDATE from require to onlyOwner
+------------
+===
+update-node
+---
+identifier: require [10941,10948]
+replace require by onlyOwner
+===
+update-node
+---
+identifier: require [5219,5226]
+replace require by onlyOwner
+
+New cluster:
+MOVE from modifier_invocation [5820,5829]
+------------
+===
+move-tree
+---
+identifier: require [5219,5226]
+to
+modifier_invocation [5820,5829]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [7668,7807]
+    if: if [7668,7670]
+    call_expression [7672,7728]
+        member_expression: _reimbursedContracts[schainHash].contains [7672,7713]
+        call_argument [7714,7727]
+            identifier: extraContract [7714,7727]
+    block_statement [7730,7807]
+        expression_statement [7744,7797]
+            call_expression [7744,7796]
+                identifier: _removeReimbursedContract [7744,7769]
+                call_argument [7770,7780]
+                    identifier: schainHash [7770,7780]
+                call_argument [7782,7795]
+                    identifier: extraContract [7782,7795]
+to
+function_body [6699,7127]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [8373,8434]
+    variable_declaration [8373,8391]
+        type_name: bytes32 [8373,8380]
+        identifier: schainHash [8381,8391]
+    affectation_operator: = [8392,8393]
+    call_expression [8394,8433]
+        identifier: keccak256 [8394,8403]
+        call_argument [8404,8432]
+            call_expression [8404,8432]
+                member_expression: abi.encodePacked [8404,8420]
+                call_argument [8421,8431]
+                    identifier: schainName [8421,8431]
+to
+function_body [8363,9185]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8443,8519]
+    call_expression [8443,8518]
+        identifier: require [8443,8450]
+        call_argument [8451,8477]
+            binary_expression [8451,8477]
+                identifier: schainHash [8451,8461]
+                comparison_operator: != [8462,8464]
+                identifier: MAINNET_HASH [8465,8477]
+        call_argument [8479,8517]
+            string_literal [8479,8517]
+                string: "Schain hash can not be equal Mainnet" [8479,8517]
+to
+function_body [8363,9185]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8745,8821]
+    call_expression [8745,8820]
+        identifier: require [8745,8752]
+        call_argument [8753,8784]
+            call_expression [8753,8784]
+                member_expression: reimbursedContract.isContract [8753,8782]
+        call_argument [8786,8819]
+            string_literal [8786,8819]
+                string: "Given address is not a contract" [8786,8819]
+to
+function_body [8363,9185]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8830,8922]
+    call_expression [8830,8921]
+        identifier: require [8830,8837]
+        call_argument [8838,8890]
+            call_expression [8838,8890]
+                identifier: isContractRegistered [8838,8858]
+                call_argument [8859,8869]
+                    identifier: schainHash [8859,8869]
+                call_argument [8871,8889]
+                    identifier: reimbursedContract [8871,8889]
+        call_argument [8892,8920]
+            string_literal [8892,8920]
+                string: "Contract is not registered" [8892,8920]
+to
+function_body [8363,9185]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8931,9043]
+    call_expression [8931,9042]
+        identifier: require [8931,8938]
+        call_argument [8939,9001]
+            call_expression [8939,9001]
+                member_expression: !_reimbursedContracts[schainHash].contains [8939,8981]
+                call_argument [8982,9000]
+                    identifier: reimbursedContract [8982,9000]
+        call_argument [9003,9041]
+            string_literal [9003,9041]
+                string: "Reimbursed contract is already added" [9003,9041]
+to
+function_body [8363,9185]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9052,9109]
+    call_expression [9052,9108]
+        member_expression: _reimbursedContracts[schainHash].add [9052,9088]
+        call_argument [9089,9107]
+            identifier: reimbursedContract [9089,9107]
+to
+function_body [8363,9185]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+emit_statement [9118,9179]
+    identifier: ReimbursedContractAdded [9123,9146]
+    call_argument [9147,9157]
+        identifier: schainHash [9147,9157]
+    call_argument [9159,9177]
+        identifier: reimbursedContract [9159,9177]
+to
+function_body [8363,9185]
+at 7
+
+New cluster:
+MOVE from modifier_invocation [14085,14094]
+------------
+===
+move-tree
+---
+identifier: require [10941,10948]
+to
+modifier_invocation [14085,14094]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [8674,8725]
+    string_literal [8674,8725]
+        string: "Not enough permissions to add reimbursed contract" [8674,8725]
+to
+call_expression [8536,8735]
+at 2
+
+New cluster:
+UPDATE from isContractRegistered to isReimbursedContract
+------------
+===
+update-node
+---
+identifier: isContractRegistered [9033,9053]
+replace isContractRegistered by isReimbursedContract
+
+New cluster:
+MOVE from call_expression [9033,9098]
+------------
+===
+move-tree
+---
+call_argument [9062,9063]
+    number_literal: 0 [9062,9063]
+to
+call_expression [9033,9098]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [8565,8594]
+    identifier: EXTRA_CONTRACT_REGISTRAR_ROLE [8565,8594]
+to
+call_expression [8557,8607]
+at 1
+
+New cluster:
+MOVE from call_expression [8557,8607]
+------------
+===
+move-tree
+---
+call_argument [5255,5265]
+    member_expression: msg.sender [5255,5265]
+to
+call_expression [8557,8607]
+at 2
+
+New cluster:
+MOVE from call_expression [8623,8660]
+------------
+===
+move-tree
+---
+call_argument [10977,10987]
+    member_expression: msg.sender [10977,10987]
+to
+call_expression [8623,8660]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [8649,8659]
+    identifier: schainHash [8649,8659]
+to
+call_expression [8623,8660]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: fromSchainHash [12204,12218]
+to
+call_argument [9062,9063]
+at 0
+------------
+===
+insert-node
+---
+identifier: fromSchainHash [12204,12218]
+to
+call_argument [9062,9063]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: MessageProxyForMainnet [1882,1904]
+===
+------------
+===
+delete-node
+---
+identifier: MessageProxyForMainnet [1882,1904]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1905,1907]
+===
+------------
+===
+delete-node
+---
+is: is [1905,1907]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [5219,5293]
+===
+------------
+===
+delete-node
+---
+call_argument [5227,5266]
+===
+===
+delete-node
+---
+expression_statement [5219,5293]
+===
+===
+delete-node
+---
+identifier: hasRole [5227,5234]
+===
+===
+delete-node
+---
+call_expression [5219,5292]
+===
+===
+delete-node
+---
+call_expression [5227,5266]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5235,5253]
+    identifier: DEFAULT_ADMIN_ROLE [5235,5253]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5268,5291]
+    string_literal [5268,5291]
+        string: "Not authorized caller" [5268,5291]
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [9062,9063]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [9062,9063]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [9054,9064]
+===
+------------
+===
+delete-node
+---
+primitive_type: bytes32 [9054,9061]
+===
+===
+delete-node
+---
+type_cast_expression [9054,9064]
+===
+===
+delete-node
+---
+call_argument [9054,9064]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [10941,11024]
+===
+------------
+===
+delete-node
+---
+identifier: hasRole [10949,10956]
+===
+===
+delete-node
+---
+call_argument [10949,10988]
+===
+===
+delete-node
+---
+call_expression [10941,11023]
+===
+===
+delete-node
+---
+expression_statement [10941,11024]
+===
+===
+delete-node
+---
+call_expression [10949,10988]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10957,10975]
+    identifier: DEFAULT_ADMIN_ROLE [10957,10975]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [10990,11022]
+    string_literal [10990,11022]
+        string: "DEFAULT_ADMIN_ROLE is required" [10990,11022]
+

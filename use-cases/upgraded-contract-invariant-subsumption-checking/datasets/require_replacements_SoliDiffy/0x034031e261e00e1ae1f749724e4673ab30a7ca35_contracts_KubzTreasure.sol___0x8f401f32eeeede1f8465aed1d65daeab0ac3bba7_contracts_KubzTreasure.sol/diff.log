@@ -1,0 +1,1574 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1117,1143]
+    type_name: uint256 [1117,1124]
+    visibility: public [1125,1131]
+    identifier: MAX_SUPPLY [1132,1142]
+to
+contract_body [733,8936]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [1454,1653]
+    function: function [1454,1462]
+    identifier: setMaxSupplyPhase [1463,1480]
+    parameter [1481,1494]
+        type_name: uint256 [1481,1488]
+        identifier: phase [1489,1494]
+    visibility: public [1496,1502]
+    modifier_invocation [1503,1512]
+        identifier: onlyOwner [1503,1512]
+    function_body [1513,1653]
+        if_statement [1523,1647]
+            if: if [1523,1525]
+            binary_expression [1527,1537]
+                identifier: phase [1527,1532]
+                comparison_operator: == [1533,1535]
+                number_literal: 1 [1536,1537]
+            block_statement [1539,1582]
+                expression_statement [1553,1572]
+                    assignment_expression [1553,1571]
+                        identifier: MAX_SUPPLY [1553,1563]
+                        affectation_operator: = [1564,1565]
+                        number_literal: 39999 [1566,1571]
+            else: else [1583,1587]
+            if_statement [1588,1647]
+                if: if [1588,1590]
+                binary_expression [1592,1602]
+                    identifier: phase [1592,1597]
+                    comparison_operator: == [1598,1600]
+                    number_literal: 2 [1601,1602]
+                block_statement [1604,1647]
+                    expression_statement [1618,1637]
+                        assignment_expression [1618,1636]
+                            identifier: MAX_SUPPLY [1618,1628]
+                            affectation_operator: = [1629,1630]
+                            number_literal: 40069 [1631,1636]
+to
+contract_body [733,8936]
+at 11
+
+New cluster:
+===
+insert-node
+---
+function_definition [2186,2370]
+to
+contract_body [733,8936]
+at 17
+------------
+===
+insert-node
+---
+function_definition [2186,2370]
+to
+contract_body [733,8936]
+at 17
+===
+insert-node
+---
+function_body [2249,2370]
+to
+function_definition [2186,2370]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_definition [5292,5449]
+to
+contract_body [733,8936]
+at 31
+------------
+===
+insert-node
+---
+function_definition [5292,5449]
+to
+contract_body [733,8936]
+at 31
+===
+insert-node
+---
+function: function [5292,5300]
+to
+function_definition [5292,5449]
+at 0
+===
+insert-node
+---
+visibility: external [5335,5343]
+to
+function_definition [5292,5449]
+at 3
+===
+insert-node
+---
+for_statement [5354,5443]
+to
+function_body [5344,5449]
+at 0
+===
+insert-node
+---
+for: for [5354,5357]
+to
+for_statement [5354,5443]
+at 0
+===
+insert-node
+---
+identifier: burn [5301,5305]
+to
+function_definition [5292,5449]
+at 1
+===
+insert-node
+---
+function_body [5344,5449]
+to
+function_definition [5292,5449]
+at 4
+
+New cluster:
+UPDATE from claim to ownerClaim
+------------
+===
+update-node
+---
+identifier: claim [2722,2727]
+replace claim by ownerClaim
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [2126,2135]
+to
+function_definition [2713,3593]
+at 5
+------------
+===
+insert-node
+---
+modifier_invocation [2126,2135]
+to
+function_definition [2713,3593]
+at 5
+
+New cluster:
+===
+insert-node
+---
+function_body [2136,2180]
+to
+function_definition [2713,3593]
+at 6
+------------
+===
+insert-node
+---
+function_body [2136,2180]
+to
+function_definition [2713,3593]
+at 6
+
+New cluster:
+MOVE from function_definition [2186,2370]
+------------
+===
+move-tree
+---
+function: function [3599,3607]
+to
+function_definition [2186,2370]
+at 0
+===
+move-tree
+---
+parameter [3627,3646]
+    type_name: uint256 [3627,3634]
+    identifier: kubzTokenId [3635,3646]
+to
+function_definition [2186,2370]
+at 2
+===
+move-tree
+---
+identifier: kubzClaim [3608,3617]
+to
+function_definition [2186,2370]
+at 1
+===
+move-tree
+---
+visibility: external [3711,3719]
+to
+function_definition [2186,2370]
+at 4
+===
+move-tree
+---
+parameter [3656,3670]
+    type_name: uint256 [3656,3663]
+    identifier: rarity [3664,3670]
+to
+function_definition [2186,2370]
+at 3
+
+New cluster:
+UPDATE from _mint to safeMint
+------------
+===
+update-node
+---
+identifier: _mint [3264,3269]
+replace _mint by safeMint
+===
+update-node
+---
+identifier: kubzClaim [3608,3617]
+replace kubzClaim by safeMint
+
+New cluster:
+UPDATE from external to internal
+------------
+===
+update-node
+---
+visibility: external [3711,3719]
+replace external by internal
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [5306,5333]
+    type_name: uint256[] [5306,5315]
+    calldata: calldata [5316,5324]
+    identifier: tokenIds [5325,5333]
+to
+function_definition [5292,5449]
+at 2
+
+New cluster:
+UPDATE from uint256[] to uint256
+------------
+===
+update-node
+---
+type_name: uint256[] [2728,2737]
+replace uint256[] by uint256
+
+New cluster:
+UPDATE from rarities to count
+------------
+===
+update-node
+---
+identifier: rarities [2747,2755]
+replace rarities by count
+
+New cluster:
+UPDATE from require to onlyOwner
+------------
+===
+update-node
+---
+identifier: require [2814,2821]
+replace require by onlyOwner
+
+New cluster:
+MOVE from modifier_invocation [2126,2135]
+------------
+===
+move-tree
+---
+identifier: require [2814,2821]
+to
+modifier_invocation [2126,2135]
+at 0
+
+New cluster:
+MOVE from function_body [2136,2180]
+------------
+===
+move-tree
+---
+expression_statement [3264,3299]
+    call_expression [3264,3298]
+        identifier: _mint [3264,3269]
+        call_argument [3270,3280]
+            member_expression: msg.sender [3270,3280]
+        call_argument [3282,3297]
+            member_expression: rarities.length [3282,3297]
+to
+function_body [2136,2180]
+at 0
+
+New cluster:
+UPDATE from uint256 to address
+------------
+===
+update-node
+---
+type_name: uint256 [3627,3634]
+replace uint256 by address
+
+New cluster:
+UPDATE from signature to receiver
+------------
+===
+update-node
+---
+identifier: signature [5408,5417]
+replace signature by receiver
+===
+update-node
+---
+identifier: kubzTokenId [3635,3646]
+replace kubzTokenId by receiver
+
+New cluster:
+UPDATE from rarity to quantity
+------------
+===
+update-node
+---
+identifier: rarity [3664,3670]
+replace rarity by quantity
+===
+update-node
+---
+identifier: boxRarity [4358,4367]
+replace boxRarity by quantity
+===
+update-node
+---
+identifier: action [5419,5425]
+replace action by quantity
+
+New cluster:
+MOVE from function_body [2249,2370]
+------------
+===
+move-tree
+---
+expression_statement [4303,4412]
+    call_expression [4303,4411]
+        identifier: require [4303,4310]
+        call_argument [4324,4381]
+            binary_expression [4324,4381]
+                array_access [4324,4376]
+                    binary_expression [4324,4367]
+                        binary_expression [4324,4354]
+                            call_expression [4324,4340]
+                                identifier: ownerOf [4324,4331]
+                                call_argument [4332,4339]
+                                    identifier: tokenId [4332,4339]
+                            comparison_operator: == [4341,4343]
+                            member_expression: msg.sender [4344,4354]
+                        logical_operator: && [4355,4357]
+                        identifier: boxRarity [4358,4367]
+                    identifier: tokenId [4368,4375]
+                comparison_operator: == [4377,4379]
+                number_literal: 0 [4380,4381]
+        call_argument [4395,4401]
+            string_literal [4395,4401]
+                string: "Fail" [4395,4401]
+to
+function_body [2249,2370]
+at 0
+
+New cluster:
+MOVE from function_body [2249,2370]
+------------
+===
+move-tree
+---
+expression_statement [5391,5427]
+    call_expression [5391,5426]
+        identifier: checkValidityAlt [5391,5407]
+        call_argument [5408,5417]
+            identifier: signature [5408,5417]
+        call_argument [5419,5425]
+            identifier: action [5419,5425]
+to
+function_body [2249,2370]
+at 1
+
+New cluster:
+MOVE from for_statement [5354,5443]
+------------
+===
+move-tree
+---
+variable_declaration_statement [4678,4692]
+    variable_declaration [4678,4687]
+        type_name: uint256 [4678,4685]
+        identifier: i [4686,4687]
+    affectation_operator: = [4688,4689]
+    number_literal: 0 [4690,4691]
+to
+for_statement [5354,5443]
+at 1
+===
+move-tree
+---
+update_expression [4718,4721]
+    identifier: i [4718,4719]
+    increment_operator: ++ [4719,4721]
+to
+for_statement [5354,5443]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [5374,5394]
+    binary_expression [5374,5393]
+        identifier: i [5374,5375]
+        comparison_operator: < [5376,5377]
+        member_expression: tokenIds.length [5378,5393]
+to
+for_statement [5354,5443]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+block_statement [5400,5443]
+    expression_statement [5414,5433]
+        call_expression [5414,5432]
+            identifier: _burn [5414,5419]
+            call_argument [5420,5431]
+                array_access [5420,5431]
+                    identifier: tokenIds [5420,5428]
+                    identifier: i [5429,5430]
+to
+for_statement [5354,5443]
+at 4
+
+New cluster:
+MOVE from call_expression [3264,3298]
+------------
+===
+move-tree
+---
+call_argument [5499,5509]
+    member_expression: msg.sender [5499,5509]
+to
+call_expression [3264,3298]
+at 1
+
+New cluster:
+UPDATE from checkValidityAlt to _mint
+------------
+===
+update-node
+---
+identifier: checkValidityAlt [5391,5407]
+replace checkValidityAlt by _mint
+
+New cluster:
+===
+insert-node
+---
+identifier: count [2167,2172]
+to
+call_argument [3282,3297]
+at 0
+------------
+===
+insert-node
+---
+identifier: count [2167,2172]
+to
+call_argument [3282,3297]
+at 0
+
+New cluster:
+MOVE from binary_expression [4324,4381]
+------------
+===
+move-tree
+---
+binary_expression [4324,4367]
+    binary_expression [4324,4354]
+        call_expression [4324,4340]
+            identifier: ownerOf [4324,4331]
+            call_argument [4332,4339]
+                identifier: tokenId [4332,4339]
+        comparison_operator: == [4341,4343]
+        member_expression: msg.sender [4344,4354]
+    logical_operator: && [4355,4357]
+    identifier: boxRarity [4358,4367]
+to
+binary_expression [4324,4381]
+at 0
+
+New cluster:
+UPDATE from == to <=
+------------
+===
+update-node
+---
+comparison_operator: == [4377,4379]
+replace == by <=
+
+New cluster:
+===
+insert-node
+---
+identifier: MAX_SUPPLY [2296,2306]
+to
+binary_expression [4324,4381]
+at 3
+------------
+===
+insert-node
+---
+identifier: MAX_SUPPLY [2296,2306]
+to
+binary_expression [4324,4381]
+at 3
+
+New cluster:
+UPDATE from "Fail" to "exceed MAX_SUPPLY"
+------------
+===
+update-node
+---
+string: "Fail" [4395,4401]
+replace "Fail" by "exceed MAX_SUPPLY"
+
+New cluster:
+MOVE from binary_expression [4324,4367]
+------------
+===
+move-tree
+---
+call_expression [4324,4340]
+    identifier: ownerOf [4324,4331]
+    call_argument [4332,4339]
+        identifier: tokenId [4332,4339]
+to
+binary_expression [4324,4367]
+at 0
+
+New cluster:
+===
+insert-node
+---
+arithmetic_operator: + [2282,2283]
+to
+binary_expression [4324,4367]
+at 1
+------------
+===
+insert-node
+---
+arithmetic_operator: + [2282,2283]
+to
+binary_expression [4324,4367]
+at 1
+
+New cluster:
+UPDATE from tokenId to _totalMinted
+------------
+===
+update-node
+---
+identifier: tokenId [4332,4339]
+replace tokenId by _totalMinted
+
+New cluster:
+MOVE from call_expression [4324,4340]
+------------
+===
+move-tree
+---
+identifier: tokenId [4332,4339]
+to
+call_expression [4324,4340]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [1845,2270]
+    function: function [1845,1853]
+    identifier: checkValidity [1854,1867]
+    parameter [1868,1892]
+        type_name: bytes [1868,1873]
+        calldata: calldata [1874,1882]
+        identifier: signature [1883,1892]
+    parameter [1894,1914]
+        type_name: string [1894,1900]
+        memory: memory [1901,1907]
+        identifier: action [1908,1914]
+    visibility: public [1924,1930]
+    state_mutability [1939,1943]
+        view: view [1939,1943]
+    return_type_definition [1952,1966]
+        returns: returns [1952,1959]
+        parameter [1961,1965]
+            type_name: bool [1961,1965]
+    function_body [1971,2270]
+        expression_statement [1981,2243]
+            call_expression [1981,2242]
+                identifier: require [1981,1988]
+                call_argument [2002,2199]
+                    binary_expression [2002,2199]
+                        call_expression [2002,2189]
+                            member_expression: ECDSA.recover [2002,2015]
+                            call_argument [2033,2148]
+                                call_expression [2033,2148]
+                                    member_expression: ECDSA.toEthSignedMessageHash [2033,2061]
+                                    call_argument [2083,2130]
+                                        call_expression [2083,2130]
+                                            identifier: keccak256 [2083,2092]
+                                            call_argument [2093,2129]
+                                                call_expression [2093,2129]
+                                                    member_expression: abi.encodePacked [2093,2109]
+                                                    call_argument [2110,2120]
+                                                        member_expression: msg.sender [2110,2120]
+                                                    call_argument [2122,2128]
+                                                        identifier: action [2122,2128]
+                            call_argument [2166,2175]
+                                identifier: signature [2166,2175]
+                        comparison_operator: == [2190,2192]
+                        identifier: signer [2193,2199]
+                call_argument [2213,2232]
+                    string_literal [2213,2232]
+                        string: "invalid signature" [2213,2232]
+        return_statement [2252,2264]
+            return: return [2252,2258]
+            boolean_literal: true [2259,2263]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2276,2707]
+    function: function [2276,2284]
+    identifier: checkValidityAlt [2285,2301]
+    parameter [2302,2326]
+        type_name: bytes [2302,2307]
+        calldata: calldata [2308,2316]
+        identifier: signature [2317,2326]
+    parameter [2328,2348]
+        type_name: string [2328,2334]
+        memory: memory [2335,2341]
+        identifier: action [2342,2348]
+    visibility: public [2358,2364]
+    state_mutability [2373,2377]
+        view: view [2373,2377]
+    return_type_definition [2386,2400]
+        returns: returns [2386,2393]
+        parameter [2395,2399]
+            type_name: bool [2395,2399]
+    function_body [2405,2707]
+        expression_statement [2415,2680]
+            call_expression [2415,2679]
+                identifier: require [2415,2422]
+                call_argument [2436,2636]
+                    binary_expression [2436,2636]
+                        call_expression [2436,2623]
+                            member_expression: ECDSA.recover [2436,2449]
+                            call_argument [2467,2582]
+                                call_expression [2467,2582]
+                                    member_expression: ECDSA.toEthSignedMessageHash [2467,2495]
+                                    call_argument [2517,2564]
+                                        call_expression [2517,2564]
+                                            identifier: keccak256 [2517,2526]
+                                            call_argument [2527,2563]
+                                                call_expression [2527,2563]
+                                                    member_expression: abi.encodePacked [2527,2543]
+                                                    call_argument [2544,2554]
+                                                        member_expression: msg.sender [2544,2554]
+                                                    call_argument [2556,2562]
+                                                        identifier: action [2556,2562]
+                            call_argument [2600,2609]
+                                identifier: signature [2600,2609]
+                        comparison_operator: == [2624,2626]
+                        identifier: signerAlt [2627,2636]
+                call_argument [2650,2669]
+                    string_literal [2650,2669]
+                        string: "invalid signature" [2650,2669]
+        return_statement [2689,2701]
+            return: return [2689,2695]
+            boolean_literal: true [2696,2700]
+
+New cluster:
+===
+delete-node
+---
+calldata: calldata [2738,2746]
+===
+------------
+===
+delete-node
+---
+calldata: calldata [2738,2746]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2757,2781]
+    type_name: bytes [2757,2762]
+    calldata: calldata [2763,2771]
+    identifier: signature [2772,2781]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3270,3280]
+    member_expression: msg.sender [3270,3280]
+
+New cluster:
+===
+delete-node
+---
+member_expression: rarities.length [3282,3297]
+===
+------------
+===
+delete-node
+---
+member_expression: rarities.length [3282,3297]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2822,2856]
+    unary_expression [2822,2856]
+        !: ! [2822,2823]
+        call_expression [2823,2856]
+            member_expression: claimedUsers.contains [2823,2844]
+            call_argument [2845,2855]
+                member_expression: msg.sender [2845,2855]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [2858,2875]
+    string_literal [2858,2875]
+        string: "Already claimed" [2858,2875]
+
+New cluster:
+===
+delete-node
+---
+function_body [2804,3593]
+===
+------------
+===
+delete-node
+---
+expression_statement [2814,2877]
+===
+===
+delete-node
+---
+function_body [2804,3593]
+===
+===
+delete-node
+---
+call_expression [2814,2876]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [2886,2928]
+    variable_declaration [2886,2906]
+        type_name: string [2886,2892]
+        memory: memory [2893,2899]
+        identifier: action [2900,2906]
+    affectation_operator: = [2907,2908]
+    string_literal [2909,2927]
+        string: "prize-box_claim_" [2909,2927]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+for_statement [2970,3102]
+    for: for [2970,2973]
+    variable_declaration_statement [2975,2989]
+        variable_declaration [2975,2984]
+            type_name: uint256 [2975,2982]
+            identifier: i [2983,2984]
+        affectation_operator: = [2985,2986]
+        number_literal: 0 [2987,2988]
+    expression_statement [2990,3010]
+        binary_expression [2990,3009]
+            identifier: i [2990,2991]
+            comparison_operator: < [2992,2993]
+            member_expression: rarities.length [2994,3009]
+    update_expression [3011,3014]
+        identifier: i [3011,3012]
+        increment_operator: ++ [3012,3014]
+    block_statement [3016,3102]
+        expression_statement [3030,3092]
+            assignment_expression [3030,3091]
+                identifier: action [3030,3036]
+                affectation_operator: = [3037,3038]
+                call_expression [3039,3091]
+                    member_expression: string.concat [3039,3052]
+                    call_argument [3053,3059]
+                        identifier: action [3053,3059]
+                    call_argument [3061,3090]
+                        call_expression [3061,3090]
+                            member_expression: Strings.toString [3061,3077]
+                            call_argument [3078,3089]
+                                array_access [3078,3089]
+                                    identifier: rarities [3078,3086]
+                                    identifier: i [3087,3088]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3143,3176]
+    call_expression [3143,3175]
+        identifier: checkValidity [3143,3156]
+        call_argument [3157,3166]
+            identifier: signature [3157,3166]
+        call_argument [3168,3174]
+            identifier: action [3168,3174]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [3186,3217]
+    variable_declaration [3186,3199]
+        type_name: uint256 [3186,3193]
+        identifier: start [3194,3199]
+    affectation_operator: = [3200,3201]
+    call_expression [3202,3216]
+        identifier: _nextTokenId [3202,3214]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3226,3255]
+    call_expression [3226,3254]
+        member_expression: claimedUsers.add [3226,3242]
+        call_argument [3243,3253]
+            member_expression: msg.sender [3243,3253]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+for_statement [3309,3587]
+    for: for [3309,3312]
+    variable_declaration_statement [3314,3328]
+        variable_declaration [3314,3323]
+            type_name: uint256 [3314,3321]
+            identifier: i [3322,3323]
+        affectation_operator: = [3324,3325]
+        number_literal: 0 [3326,3327]
+    expression_statement [3329,3349]
+        binary_expression [3329,3348]
+            identifier: i [3329,3330]
+            comparison_operator: < [3331,3332]
+            member_expression: rarities.length [3333,3348]
+    update_expression [3350,3353]
+        identifier: i [3350,3351]
+        increment_operator: ++ [3351,3353]
+    block_statement [3355,3587]
+        variable_declaration_statement [3369,3397]
+            variable_declaration [3369,3384]
+                type_name: uint256 [3369,3376]
+                identifier: tokenId [3377,3384]
+            affectation_operator: = [3385,3386]
+            binary_expression [3387,3396]
+                identifier: start [3387,3392]
+                arithmetic_operator: + [3393,3394]
+                identifier: i [3395,3396]
+        expression_statement [3410,3531]
+            call_expression [3410,3530]
+                identifier: require [3410,3417]
+                call_argument [3435,3492]
+                    binary_expression [3435,3492]
+                        array_access [3435,3487]
+                            binary_expression [3435,3478]
+                                binary_expression [3435,3465]
+                                    call_expression [3435,3451]
+                                        identifier: ownerOf [3435,3442]
+                                        call_argument [3443,3450]
+                                            identifier: tokenId [3443,3450]
+                                    comparison_operator: == [3452,3454]
+                                    member_expression: msg.sender [3455,3465]
+                                logical_operator: && [3466,3468]
+                                identifier: boxRarity [3469,3478]
+                            identifier: tokenId [3479,3486]
+                        comparison_operator: == [3488,3490]
+                        number_literal: 0 [3491,3492]
+                call_argument [3510,3516]
+                    string_literal [3510,3516]
+                        string: "Fail" [3510,3516]
+        expression_statement [3544,3577]
+            assignment_expression [3544,3576]
+                array_access [3544,3562]
+                    identifier: boxRarity [3544,3553]
+                    identifier: tokenId [3554,3561]
+                affectation_operator: = [3563,3564]
+                array_access [3565,3576]
+                    identifier: rarities [3565,3573]
+                    identifier: i [3574,3575]
+
+New cluster:
+===
+delete-node
+---
+identifier: ownerOf [4324,4331]
+===
+------------
+===
+delete-node
+---
+identifier: ownerOf [4324,4331]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [4332,4339]
+===
+------------
+===
+delete-node
+---
+call_argument [4332,4339]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [4324,4354]
+===
+------------
+===
+delete-node
+---
+member_expression: msg.sender [4344,4354]
+===
+===
+delete-node
+---
+comparison_operator: == [4341,4343]
+===
+===
+delete-node
+---
+binary_expression [4324,4354]
+===
+
+New cluster:
+===
+delete-node
+---
+logical_operator: && [4355,4357]
+===
+------------
+===
+delete-node
+---
+logical_operator: && [4355,4357]
+===
+
+New cluster:
+===
+delete-node
+---
+array_access [4324,4376]
+===
+------------
+===
+delete-node
+---
+identifier: tokenId [4368,4375]
+===
+===
+delete-node
+---
+array_access [4324,4376]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [4380,4381]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [4380,4381]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [3680,3704]
+    type_name: bytes [3680,3685]
+    calldata: calldata [3686,3694]
+    identifier: signature [3695,3704]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3730,3791]
+    call_expression [3730,3790]
+        identifier: require [3730,3737]
+        call_argument [3738,3770]
+            binary_expression [3738,3770]
+                array_access [3738,3765]
+                    identifier: kubzToTreasure [3738,3752]
+                    identifier: kubzTokenId [3753,3764]
+                comparison_operator: == [3766,3768]
+                number_literal: 0 [3769,3770]
+        call_argument [3772,3789]
+            string_literal [3772,3789]
+                string: "Already claimed" [3772,3789]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3800,3912]
+    call_expression [3800,3911]
+        identifier: require [3800,3807]
+        call_argument [3821,3868]
+            binary_expression [3821,3868]
+                call_expression [3821,3854]
+                    member_expression: kubzContract.ownerOf [3821,3841]
+                    call_argument [3842,3853]
+                        identifier: kubzTokenId [3842,3853]
+                comparison_operator: == [3855,3857]
+                member_expression: msg.sender [3858,3868]
+        call_argument [3882,3901]
+            string_literal [3882,3901]
+                string: "Not owner of kubz" [3882,3901]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [3960,4142]
+    variable_declaration [3960,3980]
+        type_name: string [3960,3966]
+        memory: memory [3967,3973]
+        identifier: action [3974,3980]
+    affectation_operator: = [3981,3982]
+    call_expression [3983,4141]
+        member_expression: string.concat [3983,3996]
+        call_argument [4010,4033]
+            string_literal [4010,4033]
+                string: "prize-box_kubz_claim_" [4010,4033]
+        call_argument [4047,4076]
+            call_expression [4047,4076]
+                member_expression: Strings.toString [4047,4063]
+                call_argument [4064,4075]
+                    identifier: kubzTokenId [4064,4075]
+        call_argument [4090,4093]
+            string_literal [4090,4093]
+                string: "," [4090,4093]
+        call_argument [4107,4131]
+            call_expression [4107,4131]
+                member_expression: Strings.toString [4107,4123]
+                call_argument [4124,4130]
+                    identifier: rarity [4124,4130]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4184,4220]
+    call_expression [4184,4219]
+        identifier: checkValidityAlt [4184,4200]
+        call_argument [4201,4210]
+            identifier: signature [4201,4210]
+        call_argument [4212,4218]
+            identifier: action [4212,4218]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [4230,4263]
+    variable_declaration [4230,4245]
+        type_name: uint256 [4230,4237]
+        identifier: tokenId [4238,4245]
+    affectation_operator: = [4246,4247]
+    call_expression [4248,4262]
+        identifier: _nextTokenId [4248,4260]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4273,4294]
+    call_expression [4273,4293]
+        identifier: _mint [4273,4278]
+        call_argument [4279,4289]
+            member_expression: msg.sender [4279,4289]
+        call_argument [4291,4292]
+            number_literal: 1 [4291,4292]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4421,4449]
+    assignment_expression [4421,4448]
+        array_access [4421,4439]
+            identifier: boxRarity [4421,4430]
+            identifier: tokenId [4431,4438]
+        affectation_operator: = [4440,4441]
+        identifier: rarity [4442,4448]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4458,4496]
+    assignment_expression [4458,4495]
+        array_access [4458,4485]
+            identifier: kubzToTreasure [4458,4472]
+            identifier: kubzTokenId [4473,4484]
+        affectation_operator: = [4486,4487]
+        identifier: tokenId [4488,4495]
+
+New cluster:
+===
+delete-node
+---
+function_definition [3599,4502]
+===
+------------
+===
+delete-node
+---
+function_definition [3599,4502]
+===
+===
+delete-node
+---
+function_body [3720,4502]
+===
+
+New cluster:
+===
+delete-node
+---
+function_definition [4508,5976]
+===
+------------
+===
+delete-node
+---
+function_definition [4508,5976]
+===
+===
+delete-node
+---
+visibility: public [4656,4662]
+===
+===
+delete-node
+---
+function_body [4663,5976]
+===
+===
+delete-node
+---
+for: for [4673,4676]
+===
+===
+delete-node
+---
+call_expression [5493,5531]
+===
+===
+delete-node
+---
+identifier: _mint [5493,5498]
+===
+===
+delete-node
+---
+function: function [4508,4516]
+===
+===
+delete-node
+---
+identifier: kubzClaimMultiple [4517,4534]
+===
+===
+delete-node
+---
+for_statement [4673,5437]
+===
+===
+delete-node
+---
+expression_statement [5493,5532]
+===
+===
+delete-node
+---
+block_statement [4723,5437]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4544,4575]
+    type_name: uint256[] [4544,4553]
+    calldata: calldata [4554,4562]
+    identifier: kubzTokenIds [4563,4575]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4585,4612]
+    type_name: uint256[] [4585,4594]
+    calldata: calldata [4595,4603]
+    identifier: rarities [4604,4612]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [4622,4649]
+    type_name: bytes[] [4622,4629]
+    calldata: calldata [4630,4638]
+    identifier: signatures [4639,4649]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4693,4717]
+    binary_expression [4693,4716]
+        identifier: i [4693,4694]
+        comparison_operator: < [4695,4696]
+        member_expression: kubzTokenIds.length [4697,4716]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [4737,4775]
+    variable_declaration [4737,4756]
+        type_name: uint256 [4737,4744]
+        identifier: kubzTokenId [4745,4756]
+    affectation_operator: = [4757,4758]
+    array_access [4759,4774]
+        identifier: kubzTokenIds [4759,4771]
+        identifier: i [4772,4773]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [4788,4817]
+    variable_declaration [4788,4802]
+        type_name: uint256 [4788,4795]
+        identifier: rarity [4796,4802]
+    affectation_operator: = [4803,4804]
+    array_access [4805,4816]
+        identifier: rarities [4805,4813]
+        identifier: i [4814,4815]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [4830,4871]
+    variable_declaration [4830,4854]
+        type_name: bytes [4830,4835]
+        calldata: calldata [4836,4844]
+        identifier: signature [4845,4854]
+    affectation_operator: = [4855,4856]
+    array_access [4857,4870]
+        identifier: signatures [4857,4867]
+        identifier: i [4868,4869]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4885,4946]
+    call_expression [4885,4945]
+        identifier: require [4885,4892]
+        call_argument [4893,4925]
+            binary_expression [4893,4925]
+                array_access [4893,4920]
+                    identifier: kubzToTreasure [4893,4907]
+                    identifier: kubzTokenId [4908,4919]
+                comparison_operator: == [4921,4923]
+                number_literal: 0 [4924,4925]
+        call_argument [4927,4944]
+            string_literal [4927,4944]
+                string: "Already claimed" [4927,4944]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [4959,5083]
+    call_expression [4959,5082]
+        identifier: require [4959,4966]
+        call_argument [4984,5031]
+            binary_expression [4984,5031]
+                call_expression [4984,5017]
+                    member_expression: kubzContract.ownerOf [4984,5004]
+                    call_argument [5005,5016]
+                        identifier: kubzTokenId [5005,5016]
+                comparison_operator: == [5018,5020]
+                member_expression: msg.sender [5021,5031]
+        call_argument [5049,5068]
+            string_literal [5049,5068]
+                string: "Not owner of kubz" [5049,5068]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [5139,5341]
+    variable_declaration [5139,5159]
+        type_name: string [5139,5145]
+        memory: memory [5146,5152]
+        identifier: action [5153,5159]
+    affectation_operator: = [5160,5161]
+    call_expression [5162,5340]
+        member_expression: string.concat [5162,5175]
+        call_argument [5193,5216]
+            string_literal [5193,5216]
+                string: "prize-box_kubz_claim_" [5193,5216]
+        call_argument [5234,5263]
+            call_expression [5234,5263]
+                member_expression: Strings.toString [5234,5250]
+                call_argument [5251,5262]
+                    identifier: kubzTokenId [5251,5262]
+        call_argument [5281,5284]
+            string_literal [5281,5284]
+                string: "," [5281,5284]
+        call_argument [5302,5326]
+            call_expression [5302,5326]
+                member_expression: Strings.toString [5302,5318]
+                call_argument [5319,5325]
+                    identifier: rarity [5319,5325]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [5446,5484]
+    variable_declaration [5446,5466]
+        type_name: uint256 [5446,5453]
+        identifier: startTokenId [5454,5466]
+    affectation_operator: = [5467,5468]
+    call_expression [5469,5483]
+        identifier: _nextTokenId [5469,5481]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5511,5530]
+    member_expression: kubzTokenIds.length [5511,5530]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+for_statement [5541,5970]
+    for: for [5541,5544]
+    variable_declaration_statement [5546,5560]
+        variable_declaration [5546,5555]
+            type_name: uint256 [5546,5553]
+            identifier: i [5554,5555]
+        affectation_operator: = [5556,5557]
+        number_literal: 0 [5558,5559]
+    expression_statement [5561,5585]
+        binary_expression [5561,5584]
+            identifier: i [5561,5562]
+            comparison_operator: < [5563,5564]
+            member_expression: kubzTokenIds.length [5565,5584]
+    update_expression [5586,5589]
+        identifier: i [5586,5587]
+        increment_operator: ++ [5587,5589]
+    block_statement [5591,5970]
+        variable_declaration_statement [5605,5643]
+            variable_declaration [5605,5624]
+                type_name: uint256 [5605,5612]
+                identifier: kubzTokenId [5613,5624]
+            affectation_operator: = [5625,5626]
+            array_access [5627,5642]
+                identifier: kubzTokenIds [5627,5639]
+                identifier: i [5640,5641]
+        variable_declaration_statement [5656,5691]
+            variable_declaration [5656,5671]
+                type_name: uint256 [5656,5663]
+                identifier: tokenId [5664,5671]
+            affectation_operator: = [5672,5673]
+            binary_expression [5674,5690]
+                identifier: startTokenId [5674,5686]
+                arithmetic_operator: + [5687,5688]
+                identifier: i [5689,5690]
+        variable_declaration_statement [5704,5733]
+            variable_declaration [5704,5718]
+                type_name: uint256 [5704,5711]
+                identifier: rarity [5712,5718]
+            affectation_operator: = [5719,5720]
+            array_access [5721,5732]
+                identifier: rarities [5721,5729]
+                identifier: i [5730,5731]
+        expression_statement [5747,5868]
+            call_expression [5747,5867]
+                identifier: require [5747,5754]
+                call_argument [5772,5829]
+                    binary_expression [5772,5829]
+                        array_access [5772,5824]
+                            binary_expression [5772,5815]
+                                binary_expression [5772,5802]
+                                    call_expression [5772,5788]
+                                        identifier: ownerOf [5772,5779]
+                                        call_argument [5780,5787]
+                                            identifier: tokenId [5780,5787]
+                                    comparison_operator: == [5789,5791]
+                                    member_expression: msg.sender [5792,5802]
+                                logical_operator: && [5803,5805]
+                                identifier: boxRarity [5806,5815]
+                            identifier: tokenId [5816,5823]
+                        comparison_operator: == [5825,5827]
+                        number_literal: 0 [5828,5829]
+                call_argument [5847,5853]
+                    string_literal [5847,5853]
+                        string: "Fail" [5847,5853]
+        expression_statement [5881,5909]
+            assignment_expression [5881,5908]
+                array_access [5881,5899]
+                    identifier: boxRarity [5881,5890]
+                    identifier: tokenId [5891,5898]
+                affectation_operator: = [5900,5901]
+                identifier: rarity [5902,5908]
+        expression_statement [5922,5960]
+            assignment_expression [5922,5959]
+                array_access [5922,5949]
+                    identifier: kubzToTreasure [5922,5936]
+                    identifier: kubzTokenId [5937,5948]
+                affectation_operator: = [5950,5951]
+                identifier: tokenId [5952,5959]
+

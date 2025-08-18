@@ -1,0 +1,5 @@
+results/differencing_results/0x368e41a003249270ac26db71ee1535f679187b42_home_vadim_code_skale-manager_contracts_delegation_DelegationController.sol___0x5089d6bb87e87ee34b00a92ddb48d1dcdfd3cb3e_home_vadim_code_skale-manager_contracts_delegation_DelegationController.sol.log:
+  784  identifier: require [29075,29082]
+  785: replace require by assert
+  786  
+

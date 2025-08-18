@@ -1,0 +1,9 @@
+results/differencing_results/0x02113b595af3bafd390bc4b0a44224c789de3824_contracts_MessageProxy.sol___0xf0551a55e73734751324bf8299f50c9229754c56_contracts_MessageProxy.sol.log:
+  1929  identifier: require [5748,5755]
+  1930: replace require by _authorizeOutgoingMessageSender
+  1931  
+
+  2374  identifier: require [10102,10109]
+  2375: replace require by _getSlice
+  2376  
+

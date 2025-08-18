@@ -1,0 +1,922 @@
+New cluster:
+UPDATE from 0.8.0 to 0.7.0
+------------
+===
+update-node
+---
+solidity_version: 0.8.0 [58,63]
+replace 0.8.0 by 0.7.0
+
+New cluster:
+===
+insert-node
+---
+bitwise_operator:  ^ [48,50]
+to
+solidity_version_comparison_operator [48,51]
+at 0
+------------
+===
+insert-node
+---
+bitwise_operator:  ^ [48,50]
+to
+solidity_version_comparison_operator [48,51]
+at 0
+
+New cluster:
+UPDATE from _verifyCallResult to _functionCallWithValue
+------------
+===
+update-node
+---
+identifier: _verifyCallResult [7100,7117]
+replace _verifyCallResult by _functionCallWithValue
+===
+update-node
+---
+identifier: _verifyCallResult [5072,5089]
+replace _verifyCallResult by _functionCallWithValue
+===
+update-node
+---
+identifier: functionCallWithValue [3715,3736]
+replace functionCallWithValue by _functionCallWithValue
+
+New cluster:
+MOVE from function_definition [7091,7816]
+------------
+===
+move-tree
+---
+parameter [5717,5731]
+    type_name: address [5717,5724]
+    identifier: target [5725,5731]
+to
+function_definition [7091,7816]
+at 2
+===
+move-tree
+---
+parameter [5733,5750]
+    type_name: bytes [5733,5738]
+    memory: memory [5739,5745]
+    identifier: data [5746,5750]
+to
+function_definition [7091,7816]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parameter [5184,5200]
+    type_name: uint256 [5184,5191]
+    identifier: weiValue [5192,5200]
+to
+function_definition [7091,7816]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [1062,1151]
+    variable_declaration [1062,1081]
+        type_name: bytes32 [1062,1069]
+        identifier: accountHash [1070,1081]
+    affectation_operator: = [1082,1083]
+    number_literal: 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 [1084,1150]
+to
+function_body [792,1139]
+at 1
+
+New cluster:
+MOVE from function_body [7220,7816]
+------------
+===
+move-tree
+---
+expression_statement [4850,4911]
+    call_expression [4850,4910]
+        identifier: require [4850,4857]
+        call_argument [4858,4876]
+            call_expression [4858,4876]
+                identifier: isContract [4858,4868]
+                call_argument [4869,4875]
+                    identifier: target [4869,4875]
+        call_argument [4878,4909]
+            string_literal [4878,4909]
+                string: "Address: call to non-contract" [4878,4909]
+to
+function_body [7220,7816]
+at 0
+
+New cluster:
+MOVE from function_body [7220,7816]
+------------
+===
+move-tree
+---
+variable_declaration_statement [5964,6030]
+    variable_declaration_tuple [5964,6003]
+        variable_declaration [5965,5977]
+            type_name: bool [5965,5969]
+            identifier: success [5970,5977]
+        variable_declaration [5979,6002]
+            type_name: bytes [5979,5984]
+            memory: memory [5985,5991]
+            identifier: returndata [5992,6002]
+    affectation_operator: = [6004,6005]
+    call_expression [6006,6029]
+        member_expression: target.staticcall [6006,6023]
+        call_argument [6024,6028]
+            identifier: data [6024,6028]
+to
+function_body [7220,7816]
+at 1
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [1277,1321]
+to
+return_statement [1117,1133]
+at 1
+------------
+===
+insert-node
+---
+parenthesized_expression [1277,1321]
+to
+return_statement [1117,1133]
+at 1
+===
+insert-node
+---
+logical_operator: && [1302,1304]
+to
+binary_expression [1278,1320]
+at 1
+===
+insert-node
+---
+binary_expression [1278,1320]
+to
+parenthesized_expression [1277,1321]
+at 0
+
+New cluster:
+UPDATE from uint256 to bytes32
+------------
+===
+update-node
+---
+type_name: uint256 [989,996]
+replace uint256 by bytes32
+
+New cluster:
+UPDATE from size to codehash
+------------
+===
+update-node
+---
+identifier: size [1124,1128]
+replace size by codehash
+===
+update-node
+---
+identifier: size [997,1001]
+replace size by codehash
+===
+update-node
+---
+identifier: size [1078,1082]
+replace size by codehash
+
+New cluster:
+MOVE from call_expression [5072,5124]
+------------
+===
+move-tree
+---
+call_argument [5444,5450]
+    identifier: target [5444,5450]
+to
+call_expression [5072,5124]
+at 1
+===
+move-tree
+---
+call_argument [5452,5456]
+    identifier: data [5452,5456]
+to
+call_expression [5072,5124]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [5084,5089]
+    identifier: value [5084,5089]
+to
+call_expression [5072,5124]
+at 3
+
+New cluster:
+===
+insert-node
+---
+struct_expression [5443,5473]
+to
+call_expression [6006,6029]
+at 0
+------------
+===
+insert-node
+---
+struct_expression [5443,5473]
+to
+call_expression [6006,6029]
+at 0
+===
+insert-node
+---
+:: : [5461,5462]
+to
+struct_field_assignment [5456,5471]
+at 1
+===
+insert-node
+---
+struct_field_assignment [5456,5471]
+to
+struct_expression [5443,5473]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1278,1301]
+    identifier: codehash [1278,1286]
+    comparison_operator: != [1287,1289]
+    identifier: accountHash [1290,1301]
+to
+binary_expression [1278,1320]
+at 0
+
+New cluster:
+MOVE from binary_expression [1278,1320]
+------------
+===
+move-tree
+---
+binary_expression [1124,1132]
+    identifier: size [1124,1128]
+    comparison_operator: > [1129,1130]
+    number_literal: 0 [1131,1132]
+to
+binary_expression [1278,1320]
+at 2
+
+New cluster:
+UPDATE from target.staticcall to target.call
+------------
+===
+update-node
+---
+member_expression: target.staticcall [6006,6023]
+replace target.staticcall by target.call
+
+New cluster:
+MOVE from struct_expression [5443,5473]
+------------
+===
+move-tree
+---
+member_expression: target.staticcall [6006,6023]
+to
+struct_expression [5443,5473]
+at 0
+
+New cluster:
+===
+insert-node
+---
+extcodehash: extcodehash [1239,1250]
+to
+yul_evm_builtin [1086,1097]
+at 0
+------------
+===
+insert-node
+---
+extcodehash: extcodehash [1239,1250]
+to
+yul_evm_builtin [1086,1097]
+at 0
+
+New cluster:
+UPDATE from > to !=
+------------
+===
+update-node
+---
+comparison_operator: > [1129,1130]
+replace > by !=
+
+New cluster:
+UPDATE from 0 to 0x0
+------------
+===
+update-node
+---
+number_literal: 0 [1131,1132]
+replace 0 by 0x0
+
+New cluster:
+UPDATE from errorMessage to value
+------------
+===
+update-node
+---
+identifier: errorMessage [6085,6097]
+replace errorMessage by value
+
+New cluster:
+MOVE from struct_field_assignment [5456,5471]
+------------
+===
+move-tree
+---
+identifier: errorMessage [6085,6097]
+to
+struct_field_assignment [5456,5471]
+at 0
+
+New cluster:
+UPDATE from require to weiValue
+------------
+===
+update-node
+---
+identifier: require [6803,6810]
+replace require by weiValue
+
+New cluster:
+MOVE from struct_field_assignment [5456,5471]
+------------
+===
+move-tree
+---
+identifier: require [6803,6810]
+to
+struct_field_assignment [5456,5471]
+at 2
+
+New cluster:
+===
+delete-node
+---
+comparison_operator:  >= [48,51]
+===
+------------
+===
+delete-node
+---
+comparison_operator:  >= [48,51]
+===
+
+New cluster:
+===
+delete-node
+---
+solidity_version: 0.6.2 [51,56]
+===
+------------
+===
+delete-node
+---
+solidity_version: 0.6.2 [51,56]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+solidity_version_comparison_operator [56,58]
+    <:  < [56,58]
+
+New cluster:
+===
+delete-node
+---
+extcodesize: extcodesize [1086,1097]
+===
+------------
+===
+delete-node
+---
+extcodesize: extcodesize [1086,1097]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [4980,5056]
+    variable_declaration_tuple [4980,5019]
+        variable_declaration [4981,4993]
+            type_name: bool [4981,4985]
+            identifier: success [4986,4993]
+        variable_declaration [4995,5018]
+            type_name: bytes [4995,5000]
+            memory: memory [5001,5007]
+            identifier: returndata [5008,5018]
+    affectation_operator: = [5020,5021]
+    call_expression [5022,5055]
+        struct_expression [5022,5049]
+            member_expression: target.call [5022,5033]
+            struct_field_assignment [5035,5047]
+                identifier: value [5035,5040]
+                :: : [5040,5041]
+                identifier: value [5042,5047]
+        call_argument [5050,5054]
+            identifier: data [5050,5054]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5090,5097]
+    identifier: success [5090,5097]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5099,5109]
+    identifier: returndata [5099,5109]
+
+New cluster:
+===
+delete-node
+---
+function_definition [5308,5505]
+===
+------------
+===
+delete-node
+---
+function: function [5308,5316]
+===
+===
+delete-node
+---
+return_statement [5418,5499]
+===
+===
+delete-node
+---
+identifier: functionStaticCall [5425,5443]
+===
+===
+delete-node
+---
+visibility: internal [5371,5379]
+===
+===
+delete-node
+---
+return: return [5418,5424]
+===
+===
+delete-node
+---
+identifier: functionStaticCall [5317,5335]
+===
+===
+delete-node
+---
+function_definition [5308,5505]
+===
+===
+delete-node
+---
+function_body [5408,5505]
+===
+===
+delete-node
+---
+call_expression [5425,5498]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5336,5350]
+    type_name: address [5336,5343]
+    identifier: target [5344,5350]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5352,5369]
+    type_name: bytes [5352,5357]
+    memory: memory [5358,5364]
+    identifier: data [5365,5369]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [5380,5384]
+    view: view [5380,5384]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [5385,5407]
+    returns: returns [5385,5392]
+    parameter [5394,5406]
+        type_name: bytes [5394,5399]
+        memory: memory [5400,5406]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5458,5497]
+    string_literal [5458,5497]
+        string: "Address: low-level static call failed" [5458,5497]
+
+New cluster:
+===
+delete-node
+---
+function_definition [5689,6105]
+===
+------------
+===
+delete-node
+---
+return: return [6039,6045]
+===
+===
+delete-node
+---
+function_definition [5689,6105]
+===
+===
+delete-node
+---
+return_statement [6039,6099]
+===
+===
+delete-node
+---
+call_argument [6085,6097]
+===
+===
+delete-node
+---
+call_expression [6046,6098]
+===
+===
+delete-node
+---
+identifier: _verifyCallResult [6046,6063]
+===
+===
+delete-node
+---
+function: function [5689,5697]
+===
+===
+delete-node
+---
+identifier: functionStaticCall [5698,5716]
+===
+===
+delete-node
+---
+visibility: internal [5780,5788]
+===
+===
+delete-node
+---
+function_body [5817,6105]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5752,5778]
+    type_name: string [5752,5758]
+    memory: memory [5759,5765]
+    identifier: errorMessage [5766,5778]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [5789,5793]
+    view: view [5789,5793]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [5794,5816]
+    returns: returns [5794,5801]
+    parameter [5803,5815]
+        type_name: bytes [5803,5808]
+        memory: memory [5809,5815]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [5827,5895]
+    call_expression [5827,5894]
+        identifier: require [5827,5834]
+        call_argument [5835,5853]
+            call_expression [5835,5853]
+                identifier: isContract [5835,5845]
+                call_argument [5846,5852]
+                    identifier: target [5846,5852]
+        call_argument [5855,5893]
+            string_literal [5855,5893]
+                string: "Address: static call to non-contract" [5855,5893]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6064,6071]
+    identifier: success [6064,6071]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6073,6083]
+    identifier: returndata [6073,6083]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [6284,6482]
+    function: function [6284,6292]
+    identifier: functionDelegateCall [6293,6313]
+    parameter [6314,6328]
+        type_name: address [6314,6321]
+        identifier: target [6322,6328]
+    parameter [6330,6347]
+        type_name: bytes [6330,6335]
+        memory: memory [6336,6342]
+        identifier: data [6343,6347]
+    visibility: internal [6349,6357]
+    return_type_definition [6358,6380]
+        returns: returns [6358,6365]
+        parameter [6367,6379]
+            type_name: bytes [6367,6372]
+            memory: memory [6373,6379]
+    function_body [6381,6482]
+        return_statement [6391,6476]
+            return: return [6391,6397]
+            call_expression [6398,6475]
+                identifier: functionDelegateCall [6398,6418]
+                call_argument [6419,6425]
+                    identifier: target [6419,6425]
+                call_argument [6427,6431]
+                    identifier: data [6427,6431]
+                call_argument [6433,6474]
+                    string_literal [6433,6474]
+                        string: "Address: low-level delegate call failed" [6433,6474]
+
+New cluster:
+===
+delete-node
+---
+function_definition [6668,7085]
+===
+------------
+===
+delete-node
+---
+expression_statement [6803,6873]
+===
+===
+delete-node
+---
+visibility: internal [6761,6769]
+===
+===
+delete-node
+---
+call_expression [6803,6872]
+===
+===
+delete-node
+---
+function: function [6668,6676]
+===
+===
+delete-node
+---
+identifier: functionDelegateCall [6677,6697]
+===
+===
+delete-node
+---
+function_body [6793,7085]
+===
+===
+delete-node
+---
+function_definition [6668,7085]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [6698,6712]
+    type_name: address [6698,6705]
+    identifier: target [6706,6712]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [6714,6731]
+    type_name: bytes [6714,6719]
+    memory: memory [6720,6726]
+    identifier: data [6727,6731]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [6733,6759]
+    type_name: string [6733,6739]
+    memory: memory [6740,6746]
+    identifier: errorMessage [6747,6759]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [6770,6792]
+    returns: returns [6770,6777]
+    parameter [6779,6791]
+        type_name: bytes [6779,6784]
+        memory: memory [6785,6791]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6811,6829]
+    call_expression [6811,6829]
+        identifier: isContract [6811,6821]
+        call_argument [6822,6828]
+            identifier: target [6822,6828]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6831,6871]
+    string_literal [6831,6871]
+        string: "Address: delegate call to non-contract" [6831,6871]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [6942,7010]
+    variable_declaration_tuple [6942,6981]
+        variable_declaration [6943,6955]
+            type_name: bool [6943,6947]
+            identifier: success [6948,6955]
+        variable_declaration [6957,6980]
+            type_name: bytes [6957,6962]
+            memory: memory [6963,6969]
+            identifier: returndata [6970,6980]
+    affectation_operator: = [6982,6983]
+    call_expression [6984,7009]
+        member_expression: target.delegatecall [6984,7003]
+        call_argument [7004,7008]
+            identifier: data [7004,7008]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [7019,7079]
+    return: return [7019,7025]
+    call_expression [7026,7078]
+        identifier: _verifyCallResult [7026,7043]
+        call_argument [7044,7051]
+            identifier: success [7044,7051]
+        call_argument [7053,7063]
+            identifier: returndata [7053,7063]
+        call_argument [7065,7077]
+            identifier: errorMessage [7065,7077]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7118,7130]
+    type_name: bool [7118,7122]
+    identifier: success [7123,7130]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7132,7155]
+    type_name: bytes [7132,7137]
+    memory: memory [7138,7144]
+    identifier: returndata [7145,7155]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_mutability [7193,7197]
+    pure: pure [7193,7197]
+

@@ -1,0 +1,6266 @@
+New cluster:
+===
+insert-node
+---
+interface_declaration [60,316]
+to
+source_file [0,14888]
+at 1
+------------
+===
+insert-node
+---
+interface: interface [60,69]
+to
+interface_declaration [60,316]
+at 0
+===
+insert-node
+---
+interface_declaration [60,316]
+to
+source_file [0,14888]
+at 1
+===
+insert-node
+---
+contract_body [77,316]
+to
+interface_declaration [60,316]
+at 2
+
+New cluster:
+===
+insert-node
+---
+contract_declaration [324,2178]
+to
+source_file [0,14888]
+at 2
+------------
+===
+insert-node
+---
+state_variable_declaration [351,373]
+to
+contract_body [344,2178]
+at 0
+===
+insert-node
+---
+contract_declaration [324,2178]
+to
+source_file [0,14888]
+at 2
+===
+insert-node
+---
+function_definition [1920,2169]
+to
+contract_body [344,2178]
+at 14
+===
+insert-node
+---
+variable_declaration [2014,2026]
+to
+variable_declaration_statement [2014,2061]
+at 0
+===
+insert-node
+---
+affectation_operator: = [2027,2028]
+to
+variable_declaration_statement [2014,2061]
+at 1
+===
+insert-node
+---
+constructor_definition [489,622]
+to
+contract_body [344,2178]
+at 4
+===
+insert-node
+---
+event_paramater [462,481]
+to
+event_definition [444,483]
+at 1
+===
+insert-node
+---
+function_definition [956,1101]
+to
+contract_body [344,2178]
+at 8
+===
+insert-node
+---
+function_body [2003,2169]
+to
+function_definition [1920,2169]
+at 6
+===
+insert-node
+---
+function_definition [1696,1914]
+to
+contract_body [344,2178]
+at 13
+===
+insert-node
+---
+function_body [1766,1914]
+to
+function_definition [1696,1914]
+at 5
+===
+insert-node
+---
+variable_declaration [1777,1789]
+to
+variable_declaration_statement [1777,1824]
+at 0
+===
+insert-node
+---
+event_definition [444,483]
+to
+contract_body [344,2178]
+at 3
+===
+insert-node
+---
+call_expression [1792,1823]
+to
+variable_declaration_statement [1777,1824]
+at 2
+===
+insert-node
+---
+modifier_definition [628,722]
+to
+contract_body [344,2178]
+at 5
+===
+insert-node
+---
+variable_declaration_statement [1777,1824]
+to
+function_body [1766,1914]
+at 0
+===
+insert-node
+---
+contract_body [344,2178]
+to
+contract_declaration [324,2178]
+at 1
+===
+insert-node
+---
+constructor: constructor [489,500]
+to
+constructor_definition [489,622]
+at 0
+===
+insert-node
+---
+modifier: modifier [628,636]
+to
+modifier_definition [628,722]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [2014,2061]
+to
+function_body [2003,2169]
+at 0
+===
+insert-node
+---
+type_name: bytes32 [2014,2021]
+to
+variable_declaration [2014,2026]
+at 0
+===
+insert-node
+---
+public: public [503,509]
+to
+constructor_definition [489,622]
+at 1
+===
+insert-node
+---
+call_argument [1802,1822]
+to
+call_expression [1792,1823]
+at 1
+
+New cluster:
+UPDATE from SafeMath to IERC20
+------------
+===
+update-node
+---
+identifier: SafeMath [130,138]
+replace SafeMath by IERC20
+===
+update-node
+---
+type_name: uint [11323,11327]
+replace uint by IERC20
+===
+update-node
+---
+type_name: uint [14206,14210]
+replace uint by IERC20
+
+New cluster:
+MOVE from interface_declaration [60,316]
+------------
+===
+move-tree
+---
+identifier: SafeMath [130,138]
+to
+interface_declaration [60,316]
+at 1
+
+New cluster:
+UPDATE from constant to Shapeshift
+------------
+===
+update-node
+---
+identifier: constant [2531,2539]
+replace constant by Shapeshift
+
+New cluster:
+MOVE from contract_declaration [324,2178]
+------------
+===
+move-tree
+---
+identifier: constant [2531,2539]
+to
+contract_declaration [324,2178]
+at 0
+
+New cluster:
+UPDATE from 0.4.17 to 0.6.0
+------------
+===
+update-node
+---
+solidity_version: 0.4.17 [17,23]
+replace 0.4.17 by 0.6.0
+
+New cluster:
+MOVE from contract_body [77,316]
+------------
+===
+move-tree
+---
+function_definition [146,354]
+    function: function [146,154]
+    identifier: mul [155,158]
+    parameter [159,168]
+        type_name: uint256 [159,166]
+        identifier: a [167,168]
+    parameter [170,179]
+        type_name: uint256 [170,177]
+        identifier: b [178,179]
+    visibility: internal [181,189]
+    state_mutability [190,194]
+        pure: pure [190,194]
+    return_type_definition [195,212]
+        returns: returns [195,202]
+        parameter [204,211]
+            type_name: uint256 [204,211]
+    function_body [213,354]
+        if_statement [224,271]
+            if: if [224,226]
+            binary_expression [228,234]
+                identifier: a [228,229]
+                comparison_operator: == [230,232]
+                number_literal: 0 [233,234]
+            block_statement [236,271]
+                return_statement [251,260]
+                    return: return [251,257]
+                    number_literal: 0 [258,259]
+        variable_declaration_statement [281,299]
+            variable_declaration [281,290]
+                type_name: uint256 [281,288]
+                identifier: c [289,290]
+            affectation_operator: = [291,292]
+            binary_expression [293,298]
+                identifier: a [293,294]
+                arithmetic_operator: * [295,296]
+                identifier: b [297,298]
+        expression_statement [309,328]
+            call_expression [309,327]
+                identifier: assert [309,315]
+                call_argument [316,326]
+                    binary_expression [316,326]
+                        binary_expression [316,321]
+                            identifier: c [316,317]
+                            arithmetic_operator: / [318,319]
+                            identifier: a [320,321]
+                        comparison_operator: == [322,324]
+                        identifier: b [325,326]
+        return_statement [338,347]
+            return: return [338,344]
+            identifier: c [345,346]
+to
+contract_body [77,316]
+at 0
+===
+move-tree
+---
+function_definition [362,650]
+    function: function [362,370]
+    identifier: div [371,374]
+    parameter [375,384]
+        type_name: uint256 [375,382]
+        identifier: a [383,384]
+    parameter [386,395]
+        type_name: uint256 [386,393]
+        identifier: b [394,395]
+    visibility: internal [397,405]
+    state_mutability [406,410]
+        pure: pure [406,410]
+    return_type_definition [411,428]
+        returns: returns [411,418]
+        parameter [420,427]
+            type_name: uint256 [420,427]
+    function_body [429,650]
+        variable_declaration_statement [519,537]
+            variable_declaration [519,528]
+                type_name: uint256 [519,526]
+                identifier: c [527,528]
+            affectation_operator: = [529,530]
+            binary_expression [531,536]
+                identifier: a [531,532]
+                arithmetic_operator: / [533,534]
+                identifier: b [535,536]
+        return_statement [634,643]
+            return: return [634,640]
+            identifier: c [641,642]
+to
+contract_body [77,316]
+at 1
+
+New cluster:
+MOVE from contract_body [77,316]
+------------
+===
+move-tree
+---
+event_definition [2268,2337]
+    identifier: Transfer [2274,2282]
+    event_paramater [2283,2303]
+        type_name: address [2283,2290]
+        indexed: indexed [2291,2298]
+        identifier: from [2299,2303]
+    event_paramater [2305,2323]
+        type_name: address [2305,2312]
+        indexed: indexed [2313,2320]
+        identifier: to [2321,2323]
+    event_paramater [2325,2335]
+        type_name: uint [2325,2329]
+        identifier: value [2330,2335]
+to
+contract_body [77,316]
+at 2
+
+New cluster:
+MOVE from contract_body [344,2178]
+------------
+===
+move-tree
+---
+state_variable_declaration [2951,2992]
+    type_name: mapping(address => uint) [2951,2975]
+    visibility: public [2976,2982]
+    identifier: balances [2983,2991]
+to
+contract_body [344,2178]
+at 1
+===
+move-tree
+---
+state_variable_declaration [3079,3111]
+    type_name: uint [3079,3083]
+    visibility: public [3084,3090]
+    identifier: basisPointsRate [3091,3106]
+    affectation_operator: = [3107,3108]
+    number_literal: 0 [3109,3110]
+to
+contract_body [344,2178]
+at 2
+
+New cluster:
+MOVE from contract_body [344,2178]
+------------
+===
+move-tree
+---
+function_definition [6291,6864]
+    function: function [6291,6299]
+    identifier: approve [6300,6307]
+    parameter [6308,6324]
+        type_name: address [6308,6315]
+        identifier: _spender [6316,6324]
+    parameter [6326,6337]
+        type_name: uint [6326,6330]
+        identifier: _value [6331,6337]
+    visibility: public [6339,6345]
+    modifier_invocation [6346,6369]
+        identifier: onlyPayloadSize [6346,6361]
+        call_argument [6362,6368]
+            binary_expression [6362,6368]
+                number_literal: 2 [6362,6363]
+                arithmetic_operator: * [6364,6365]
+                number_literal: 32 [6366,6368]
+    function_body [6370,6864]
+        expression_statement [6691,6757]
+            call_expression [6691,6756]
+                identifier: require [6691,6698]
+                call_argument [6699,6755]
+                    unary_expression [6699,6755]
+                        !: ! [6699,6700]
+                        parenthesized_expression [6700,6755]
+                            binary_expression [6701,6754]
+                                parenthesized_expression [6701,6714]
+                                    binary_expression [6702,6713]
+                                        identifier: _value [6702,6708]
+                                        comparison_operator: != [6709,6711]
+                                        number_literal: 0 [6712,6713]
+                                logical_operator: && [6715,6717]
+                                parenthesized_expression [6718,6754]
+                                    binary_expression [6719,6753]
+                                        array_access [6719,6748]
+                                            array_access [6719,6738]
+                                                identifier: allowed [6719,6726]
+                                                member_expression: msg.sender [6727,6737]
+                                            identifier: _spender [6739,6747]
+                                        comparison_operator: != [6749,6751]
+                                        number_literal: 0 [6752,6753]
+        expression_statement [6769,6808]
+            assignment_expression [6769,6807]
+                array_access [6769,6798]
+                    array_access [6769,6788]
+                        identifier: allowed [6769,6776]
+                        member_expression: msg.sender [6777,6787]
+                    identifier: _spender [6789,6797]
+                affectation_operator: = [6799,6800]
+                identifier: _value [6801,6807]
+        expression_statement [6818,6857]
+            call_expression [6818,6856]
+                identifier: Approval [6818,6826]
+                call_argument [6827,6837]
+                    member_expression: msg.sender [6827,6837]
+                call_argument [6839,6847]
+                    identifier: _spender [6839,6847]
+                call_argument [6849,6855]
+                    identifier: _value [6849,6855]
+to
+contract_body [344,2178]
+at 6
+===
+move-tree
+---
+function_definition [7197,7342]
+    function: function [7197,7205]
+    identifier: allowance [7206,7215]
+    parameter [7216,7230]
+        type_name: address [7216,7223]
+        identifier: _owner [7224,7230]
+    parameter [7232,7248]
+        type_name: address [7232,7239]
+        identifier: _spender [7240,7248]
+    visibility: public [7250,7256]
+    modifier_invocation [7257,7265]
+        identifier: constant [7257,7265]
+    return_type_definition [7266,7290]
+        returns: returns [7266,7273]
+        parameter [7275,7289]
+            type_name: uint [7275,7279]
+            identifier: remaining [7280,7289]
+    function_body [7291,7342]
+        return_statement [7302,7335]
+            return: return [7302,7308]
+            array_access [7309,7334]
+                array_access [7309,7324]
+                    identifier: allowed [7309,7316]
+                    identifier: _owner [7317,7323]
+                identifier: _spender [7325,7333]
+to
+contract_body [344,2178]
+at 7
+
+New cluster:
+MOVE from contract_body [344,2178]
+------------
+===
+move-tree
+---
+function_definition [8560,8647]
+    function: function [8560,8568]
+    identifier: getOwner [8569,8577]
+    visibility: external [8580,8588]
+    modifier_invocation [8589,8597]
+        identifier: constant [8589,8597]
+    return_type_definition [8598,8615]
+        returns: returns [8598,8605]
+        parameter [8607,8614]
+            type_name: address [8607,8614]
+    function_body [8616,8647]
+        return_statement [8627,8640]
+            return: return [8627,8633]
+            identifier: owner [8634,8639]
+to
+contract_body [344,2178]
+at 9
+
+New cluster:
+MOVE from contract_body [344,2178]
+------------
+===
+move-tree
+---
+function_definition [10862,11188]
+    function: function [10862,10870]
+    identifier: transfer [10871,10879]
+    parameter [10880,10891]
+        type_name: address [10880,10887]
+        identifier: _to [10888,10891]
+    parameter [10893,10904]
+        type_name: uint [10893,10897]
+        identifier: _value [10898,10904]
+    visibility: public [10906,10912]
+    modifier_invocation [10913,10926]
+        identifier: whenNotPaused [10913,10926]
+    function_body [10927,11188]
+        expression_statement [10938,10974]
+            call_expression [10938,10973]
+                identifier: require [10938,10945]
+                call_argument [10946,10972]
+                    array_access [10946,10972]
+                        unary_expression [10946,10960]
+                            !: ! [10946,10947]
+                            identifier: isBlackListed [10947,10960]
+                        member_expression: msg.sender [10961,10971]
+        if_statement [10984,11181]
+            if: if [10984,10986]
+            identifier: deprecated [10988,10998]
+            block_statement [11000,11114]
+                return_statement [11015,11103]
+                    return: return [11015,11021]
+                    call_expression [11022,11102]
+                        member_expression: UpgradedStandardToken(upgradedAddress).transferByLegacy [11022,11077]
+                        call_argument [11078,11088]
+                            member_expression: msg.sender [11078,11088]
+                        call_argument [11090,11093]
+                            identifier: _to [11090,11093]
+                        call_argument [11095,11101]
+                            identifier: _value [11095,11101]
+            else: else [11115,11119]
+            block_statement [11120,11181]
+                return_statement [11135,11170]
+                    return: return [11135,11141]
+                    call_expression [11142,11169]
+                        member_expression: super.transfer [11142,11156]
+                        call_argument [11157,11160]
+                            identifier: _to [11157,11160]
+                        call_argument [11162,11168]
+                            identifier: _value [11162,11168]
+to
+contract_body [344,2178]
+at 10
+===
+move-tree
+---
+function_definition [11273,11635]
+    function: function [11273,11281]
+    identifier: transferFrom [11282,11294]
+    parameter [11295,11308]
+        type_name: address [11295,11302]
+        identifier: _from [11303,11308]
+    parameter [11310,11321]
+        type_name: address [11310,11317]
+        identifier: _to [11318,11321]
+    parameter [11323,11334]
+        type_name: uint [11323,11327]
+        identifier: _value [11328,11334]
+    visibility: public [11336,11342]
+    modifier_invocation [11343,11356]
+        identifier: whenNotPaused [11343,11356]
+    function_body [11357,11635]
+        expression_statement [11368,11399]
+            call_expression [11368,11398]
+                identifier: require [11368,11375]
+                call_argument [11376,11397]
+                    array_access [11376,11397]
+                        unary_expression [11376,11390]
+                            !: ! [11376,11377]
+                            identifier: isBlackListed [11377,11390]
+                        identifier: _from [11391,11396]
+        if_statement [11409,11628]
+            if: if [11409,11411]
+            identifier: deprecated [11413,11423]
+            block_statement [11425,11550]
+                return_statement [11440,11539]
+                    return: return [11440,11446]
+                    call_expression [11447,11538]
+                        member_expression: UpgradedStandardToken(upgradedAddress).transferFromByLegacy [11447,11506]
+                        call_argument [11507,11517]
+                            member_expression: msg.sender [11507,11517]
+                        call_argument [11519,11524]
+                            identifier: _from [11519,11524]
+                        call_argument [11526,11529]
+                            identifier: _to [11526,11529]
+                        call_argument [11531,11537]
+                            identifier: _value [11531,11537]
+            else: else [11551,11555]
+            block_statement [11556,11628]
+                return_statement [11571,11617]
+                    return: return [11571,11577]
+                    call_expression [11578,11616]
+                        member_expression: super.transferFrom [11578,11596]
+                        call_argument [11597,11602]
+                            identifier: _from [11597,11602]
+                        call_argument [11604,11607]
+                            identifier: _to [11604,11607]
+                        call_argument [11609,11615]
+                            identifier: _value [11609,11615]
+to
+contract_body [344,2178]
+at 11
+===
+move-tree
+---
+function_definition [11720,11964]
+    function: function [11720,11728]
+    identifier: balanceOf [11729,11738]
+    parameter [11739,11750]
+        type_name: address [11739,11746]
+        identifier: who [11747,11750]
+    visibility: public [11752,11758]
+    modifier_invocation [11759,11767]
+        identifier: constant [11759,11767]
+    return_type_definition [11768,11782]
+        returns: returns [11768,11775]
+        parameter [11777,11781]
+            type_name: uint [11777,11781]
+    function_body [11783,11964]
+        if_statement [11794,11957]
+            if: if [11794,11796]
+            identifier: deprecated [11798,11808]
+            block_statement [11810,11897]
+                return_statement [11825,11886]
+                    return: return [11825,11831]
+                    call_expression [11832,11885]
+                        member_expression: UpgradedStandardToken(upgradedAddress).balanceOf [11832,11880]
+                        call_argument [11881,11884]
+                            identifier: who [11881,11884]
+            else: else [11898,11902]
+            block_statement [11903,11957]
+                return_statement [11918,11946]
+                    return: return [11918,11924]
+                    call_expression [11925,11945]
+                        member_expression: super.balanceOf [11925,11940]
+                        call_argument [11941,11944]
+                            identifier: who [11941,11944]
+to
+contract_body [344,2178]
+at 12
+
+New cluster:
+UPDATE from mul to balanceOf
+------------
+===
+update-node
+---
+identifier: mul [155,158]
+replace mul by balanceOf
+
+New cluster:
+UPDATE from internal to external
+------------
+===
+update-node
+---
+visibility: internal [397,405]
+replace internal by external
+===
+update-node
+---
+visibility: internal [181,189]
+replace internal by external
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_mutability [129,133]
+    view: view [129,133]
+to
+function_definition [146,354]
+at 5
+
+New cluster:
+UPDATE from div to transfer
+------------
+===
+update-node
+---
+identifier: div [371,374]
+replace div by transfer
+
+New cluster:
+MOVE from function_definition [362,650]
+------------
+===
+move-tree
+---
+return_type_definition [8490,8504]
+    returns: returns [8490,8497]
+    parameter [8499,8503]
+        type_name: bool [8499,8503]
+to
+function_definition [362,650]
+at 5
+===
+move-tree
+---
+function_body [8505,8552]
+    return_statement [8516,8545]
+        return: return [8516,8522]
+        array_access [8523,8544]
+            identifier: isBlackListed [8523,8536]
+            identifier: _maker [8537,8543]
+to
+function_definition [956,1101]
+at 5
+
+New cluster:
+MOVE from state_variable_declaration [351,373]
+------------
+===
+move-tree
+---
+type_name: address [2583,2590]
+to
+state_variable_declaration [351,373]
+at 0
+
+New cluster:
+UPDATE from public to private
+------------
+===
+update-node
+---
+visibility: public [3084,3090]
+replace public by private
+===
+update-node
+---
+visibility: public [2976,2982]
+replace public by private
+===
+update-node
+---
+visibility: public [2621,2627]
+replace public by private
+
+New cluster:
+MOVE from state_variable_declaration [351,373]
+------------
+===
+move-tree
+---
+visibility: public [2621,2627]
+to
+state_variable_declaration [351,373]
+at 1
+
+New cluster:
+MOVE from state_variable_declaration [351,373]
+------------
+===
+move-tree
+---
+identifier: owner [2724,2729]
+to
+state_variable_declaration [351,373]
+at 2
+
+New cluster:
+UPDATE from uint to bytes32
+------------
+===
+update-node
+---
+type_name: uint [6326,6330]
+replace uint by bytes32
+===
+update-node
+---
+type_name: mapping(address => uint) [2951,2975]
+replace mapping(address => uint) by bytes32
+===
+update-node
+---
+type_name: uint [12514,12518]
+replace uint by bytes32
+===
+update-node
+---
+type_name: uint [11777,11781]
+replace uint by bytes32
+
+New cluster:
+UPDATE from balances to vaulthash
+------------
+===
+update-node
+---
+identifier: balances [2983,2991]
+replace balances by vaulthash
+===
+update-node
+---
+identifier: _totalSupply [13512,13524]
+replace _totalSupply by vaulthash
+===
+update-node
+---
+identifier: allowed [6769,6776]
+replace allowed by vaulthash
+
+New cluster:
+UPDATE from uint to uint256
+------------
+===
+update-node
+---
+type_name: uint [2325,2329]
+replace uint by uint256
+===
+update-node
+---
+type_name: uint [3079,3083]
+replace uint by uint256
+===
+update-node
+---
+type_name: uint [3530,3534]
+replace uint by uint256
+
+New cluster:
+UPDATE from isBlackListed to unlockDate
+------------
+===
+update-node
+---
+identifier: isBlackListed [11377,11390]
+replace isBlackListed by unlockDate
+===
+update-node
+---
+identifier: basisPointsRate [3091,3106]
+replace basisPointsRate by unlockDate
+===
+update-node
+---
+identifier: balances [3832,3840]
+replace balances by unlockDate
+===
+update-node
+---
+identifier: isBlackListed [10947,10960]
+replace isBlackListed by unlockDate
+===
+update-node
+---
+identifier: fee [3954,3957]
+replace fee by unlockDate
+
+New cluster:
+UPDATE from fee to Initialized
+------------
+===
+update-node
+---
+identifier: fee [3892,3895]
+replace fee by Initialized
+===
+update-node
+---
+identifier: size [3251,3255]
+replace size by Initialized
+
+New cluster:
+MOVE from event_definition [444,483]
+------------
+===
+move-tree
+---
+identifier: size [3251,3255]
+to
+event_definition [444,483]
+at 0
+
+New cluster:
+MOVE from constructor_definition [489,622]
+------------
+===
+move-tree
+---
+function_body [3574,4072]
+    variable_declaration_statement [3585,3637]
+        variable_declaration [3585,3593]
+            type_name: uint [3585,3589]
+            identifier: fee [3590,3593]
+        affectation_operator: = [3594,3595]
+        call_expression [3596,3636]
+            member_expression: (_value.mul(basisPointsRate)).div [3596,3629]
+            call_argument [3630,3635]
+                number_literal: 10000 [3630,3635]
+    if_statement [3647,3712]
+        if: if [3647,3649]
+        binary_expression [3651,3667]
+            identifier: fee [3651,3654]
+            comparison_operator: > [3655,3656]
+            identifier: maximumFee [3657,3667]
+        block_statement [3669,3712]
+            expression_statement [3684,3701]
+                assignment_expression [3684,3700]
+                    identifier: fee [3684,3687]
+                    affectation_operator: = [3688,3689]
+                    identifier: maximumFee [3690,3700]
+    variable_declaration_statement [3722,3756]
+        variable_declaration [3722,3737]
+            type_name: uint [3722,3726]
+            identifier: sendAmount [3727,3737]
+        affectation_operator: = [3738,3739]
+        call_expression [3740,3755]
+            member_expression: _value.sub [3740,3750]
+            call_argument [3751,3754]
+                identifier: fee [3751,3754]
+    expression_statement [3766,3822]
+        assignment_expression [3766,3821]
+            array_access [3766,3786]
+                identifier: balances [3766,3774]
+                member_expression: msg.sender [3775,3785]
+            affectation_operator: = [3787,3788]
+            call_expression [3789,3821]
+                member_expression: balances[msg.sender].sub [3789,3813]
+                call_argument [3814,3820]
+                    identifier: _value [3814,3820]
+    expression_statement [3832,3878]
+        assignment_expression [3832,3877]
+            array_access [3832,3845]
+                identifier: balances [3832,3840]
+                identifier: _to [3841,3844]
+            affectation_operator: = [3846,3847]
+            call_expression [3848,3877]
+                member_expression: balances[_to].add [3848,3865]
+                call_argument [3866,3876]
+                    identifier: sendAmount [3866,3876]
+    if_statement [3888,4017]
+        if: if [3888,3890]
+        binary_expression [3892,3899]
+            identifier: fee [3892,3895]
+            comparison_operator: > [3896,3897]
+            number_literal: 0 [3898,3899]
+        block_statement [3901,4017]
+            expression_statement [3916,3959]
+                assignment_expression [3916,3958]
+                    array_access [3916,3931]
+                        identifier: balances [3916,3924]
+                        identifier: owner [3925,3930]
+                    affectation_operator: = [3932,3933]
+                    call_expression [3934,3958]
+                        member_expression: balances[owner].add [3934,3953]
+                        call_argument [3954,3957]
+                            identifier: fee [3954,3957]
+            expression_statement [3973,4006]
+                call_expression [3973,4005]
+                    identifier: Transfer [3973,3981]
+                    call_argument [3982,3992]
+                        member_expression: msg.sender [3982,3992]
+                    call_argument [3994,3999]
+                        identifier: owner [3994,3999]
+                    call_argument [4001,4004]
+                        identifier: fee [4001,4004]
+    expression_statement [4027,4065]
+        call_expression [4027,4064]
+            identifier: Transfer [4027,4035]
+            call_argument [4036,4046]
+                member_expression: msg.sender [4036,4046]
+            call_argument [4048,4051]
+                identifier: _to [4048,4051]
+            call_argument [4053,4063]
+                identifier: sendAmount [4053,4063]
+to
+constructor_definition [489,622]
+at 2
+===
+move-tree
+---
+parameter [3517,3528]
+    type_name: address [3517,3524]
+    identifier: _to [3525,3528]
+to
+function_definition [11273,11635]
+at 2
+
+New cluster:
+UPDATE from _owner to onlyOwner
+------------
+===
+update-node
+---
+identifier: _owner [4317,4323]
+replace _owner by onlyOwner
+
+New cluster:
+MOVE from modifier_definition [628,722]
+------------
+===
+move-tree
+---
+identifier: _owner [4317,4323]
+to
+modifier_definition [628,722]
+at 1
+
+New cluster:
+MOVE from function_definition [1920,2169]
+------------
+===
+move-tree
+---
+parameter [5180,5191]
+    type_name: address [5180,5187]
+    identifier: _to [5188,5191]
+to
+function_definition [1920,2169]
+at 3
+===
+move-tree
+---
+function_body [5237,6044]
+    variable_declaration_statement [5248,5292]
+        variable_declaration [5248,5262]
+            type_name: var [5248,5251]
+            identifier: _allowance [5252,5262]
+        affectation_operator: = [5263,5264]
+        array_access [5265,5291]
+            array_access [5265,5279]
+                identifier: allowed [5265,5272]
+                identifier: _from [5273,5278]
+            member_expression: msg.sender [5280,5290]
+    variable_declaration_statement [5462,5514]
+        variable_declaration [5462,5470]
+            type_name: uint [5462,5466]
+            identifier: fee [5467,5470]
+        affectation_operator: = [5471,5472]
+        call_expression [5473,5513]
+            member_expression: (_value.mul(basisPointsRate)).div [5473,5506]
+            call_argument [5507,5512]
+                number_literal: 10000 [5507,5512]
+    if_statement [5524,5589]
+        if: if [5524,5526]
+        binary_expression [5528,5544]
+            identifier: fee [5528,5531]
+            comparison_operator: > [5532,5533]
+            identifier: maximumFee [5534,5544]
+        block_statement [5546,5589]
+            expression_statement [5561,5578]
+                assignment_expression [5561,5577]
+                    identifier: fee [5561,5564]
+                    affectation_operator: = [5565,5566]
+                    identifier: maximumFee [5567,5577]
+    if_statement [5599,5704]
+        if: if [5599,5601]
+        binary_expression [5603,5624]
+            identifier: _allowance [5603,5613]
+            comparison_operator: < [5614,5615]
+            identifier: MAX_UINT [5616,5624]
+        block_statement [5626,5704]
+            expression_statement [5641,5693]
+                assignment_expression [5641,5692]
+                    array_access [5641,5667]
+                        array_access [5641,5655]
+                            identifier: allowed [5641,5648]
+                            identifier: _from [5649,5654]
+                        member_expression: msg.sender [5656,5666]
+                    affectation_operator: = [5668,5669]
+                    call_expression [5670,5692]
+                        member_expression: _allowance.sub [5670,5684]
+                        call_argument [5685,5691]
+                            identifier: _value [5685,5691]
+    variable_declaration_statement [5714,5748]
+        variable_declaration [5714,5729]
+            type_name: uint [5714,5718]
+            identifier: sendAmount [5719,5729]
+        affectation_operator: = [5730,5731]
+        call_expression [5732,5747]
+            member_expression: _value.sub [5732,5742]
+            call_argument [5743,5746]
+                identifier: fee [5743,5746]
+    expression_statement [5758,5804]
+        assignment_expression [5758,5803]
+            array_access [5758,5773]
+                identifier: balances [5758,5766]
+                identifier: _from [5767,5772]
+            affectation_operator: = [5774,5775]
+            call_expression [5776,5803]
+                member_expression: balances[_from].sub [5776,5795]
+                call_argument [5796,5802]
+                    identifier: _value [5796,5802]
+    expression_statement [5814,5860]
+        assignment_expression [5814,5859]
+            array_access [5814,5827]
+                identifier: balances [5814,5822]
+                identifier: _to [5823,5826]
+            affectation_operator: = [5828,5829]
+            call_expression [5830,5859]
+                member_expression: balances[_to].add [5830,5847]
+                call_argument [5848,5858]
+                    identifier: sendAmount [5848,5858]
+    if_statement [5870,5994]
+        if: if [5870,5872]
+        binary_expression [5874,5881]
+            identifier: fee [5874,5877]
+            comparison_operator: > [5878,5879]
+            number_literal: 0 [5880,5881]
+        block_statement [5883,5994]
+            expression_statement [5898,5941]
+                assignment_expression [5898,5940]
+                    array_access [5898,5913]
+                        identifier: balances [5898,5906]
+                        identifier: owner [5907,5912]
+                    affectation_operator: = [5914,5915]
+                    call_expression [5916,5940]
+                        member_expression: balances[owner].add [5916,5935]
+                        call_argument [5936,5939]
+                            identifier: fee [5936,5939]
+            expression_statement [5955,5983]
+                call_expression [5955,5982]
+                    identifier: Transfer [5955,5963]
+                    call_argument [5964,5969]
+                        identifier: _from [5964,5969]
+                    call_argument [5971,5976]
+                        identifier: owner [5971,5976]
+                    call_argument [5978,5981]
+                        identifier: fee [5978,5981]
+    expression_statement [6004,6037]
+        call_expression [6004,6036]
+            identifier: Transfer [6004,6012]
+            call_argument [6013,6018]
+                identifier: _from [6013,6018]
+            call_argument [6020,6023]
+                identifier: _to [6020,6023]
+            call_argument [6025,6035]
+                identifier: sendAmount [6025,6035]
+to
+modifier_definition [628,722]
+at 2
+
+New cluster:
+UPDATE from approve to setVault
+------------
+===
+update-node
+---
+identifier: approve [6300,6307]
+replace approve by setVault
+
+New cluster:
+MOVE from function_definition [6291,6864]
+------------
+===
+move-tree
+---
+modifier_invocation [1786,1795]
+    identifier: onlyOwner [1786,1795]
+to
+function_definition [6291,6864]
+at 5
+
+New cluster:
+UPDATE from allowance to message
+------------
+===
+update-node
+---
+identifier: allowance [7206,7215]
+replace allowance by message
+
+New cluster:
+MOVE from function_definition [7197,7342]
+------------
+===
+move-tree
+---
+state_mutability [833,837]
+    pure: pure [833,837]
+to
+function_definition [7197,7342]
+at 5
+
+New cluster:
+MOVE from function_definition [956,1101]
+------------
+===
+move-tree
+---
+identifier: pause [7994,7999]
+to
+function_definition [956,1101]
+at 1
+===
+move-tree
+---
+function: function [7985,7993]
+to
+function_definition [956,1101]
+at 0
+===
+move-tree
+---
+visibility: public [8026,8032]
+to
+function_definition [956,1101]
+at 2
+===
+move-tree
+---
+modifier_invocation [8002,8011]
+    identifier: onlyOwner [8002,8011]
+to
+function_definition [11273,11635]
+at 7
+
+New cluster:
+UPDATE from pause to message2
+------------
+===
+update-node
+---
+identifier: pause [7994,7999]
+replace pause by message2
+
+New cluster:
+MOVE from function_definition [956,1101]
+------------
+===
+move-tree
+---
+state_mutability [702,706]
+    pure: pure [702,706]
+to
+function_definition [956,1101]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_type_definition [988,1011]
+    returns: returns [988,995]
+    parameter [997,1010]
+        type_name: string [997,1003]
+        memory: memory [1004,1010]
+to
+function_definition [956,1101]
+at 4
+
+New cluster:
+UPDATE from getOwner to message3
+------------
+===
+update-node
+---
+identifier: getOwner [8569,8577]
+replace getOwner by message3
+
+New cluster:
+UPDATE from external to public
+------------
+===
+update-node
+---
+visibility: external [8580,8588]
+replace external by public
+
+New cluster:
+MOVE from function_definition [8560,8647]
+------------
+===
+move-tree
+---
+state_mutability [406,410]
+    pure: pure [406,410]
+to
+function_definition [8560,8647]
+at 3
+
+New cluster:
+UPDATE from transfer to withdraw
+------------
+===
+update-node
+---
+identifier: transfer [10871,10879]
+replace transfer by withdraw
+
+New cluster:
+MOVE from function_definition [10862,11188]
+------------
+===
+move-tree
+---
+modifier_invocation [8179,8188]
+    identifier: onlyOwner [8179,8188]
+to
+function_definition [10862,11188]
+at 5
+
+New cluster:
+UPDATE from transferFrom to withdrawTokens
+------------
+===
+update-node
+---
+identifier: transferFrom [11282,11294]
+replace transferFrom by withdrawTokens
+
+New cluster:
+UPDATE from balanceOf to getHashOf
+------------
+===
+update-node
+---
+identifier: balanceOf [11729,11738]
+replace balanceOf by getHashOf
+
+New cluster:
+MOVE from function_definition [11720,11964]
+------------
+===
+move-tree
+---
+state_mutability [190,194]
+    pure: pure [190,194]
+to
+function_definition [11720,11964]
+at 4
+
+New cluster:
+MOVE from function_definition [1696,1914]
+------------
+===
+move-tree
+---
+parameter [12066,12082]
+    type_name: address [12066,12073]
+    identifier: _spender [12074,12082]
+to
+function_definition [1696,1914]
+at 2
+===
+move-tree
+---
+function: function [12049,12057]
+to
+function_definition [1696,1914]
+at 0
+===
+move-tree
+---
+identifier: approve [12058,12065]
+to
+function_definition [1696,1914]
+at 1
+
+New cluster:
+UPDATE from approve to retrieve
+------------
+===
+update-node
+---
+identifier: approve [12058,12065]
+replace approve by retrieve
+
+New cluster:
+MOVE from function_definition [1696,1914]
+------------
+===
+move-tree
+---
+parameter [12455,12469]
+    type_name: address [12455,12462]
+    identifier: _owner [12463,12469]
+to
+function_definition [1696,1914]
+at 3
+===
+move-tree
+---
+visibility: public [12489,12495]
+to
+function_definition [1696,1914]
+at 4
+
+New cluster:
+MOVE from function_definition [1920,2169]
+------------
+===
+move-tree
+---
+function: function [13921,13929]
+to
+function_definition [1920,2169]
+at 0
+===
+move-tree
+---
+parameter [13937,13948]
+    type_name: uint [13937,13941]
+    identifier: amount [13942,13948]
+to
+function_definition [1920,2169]
+at 2
+===
+move-tree
+---
+identifier: redeem [13930,13936]
+to
+function_definition [1920,2169]
+at 1
+
+New cluster:
+UPDATE from redeem to retrieveTokens
+------------
+===
+update-node
+---
+identifier: redeem [13930,13936]
+replace redeem by retrieveTokens
+
+New cluster:
+MOVE from function_definition [1920,2169]
+------------
+===
+move-tree
+---
+visibility: public [14222,14228]
+to
+function_definition [1920,2169]
+at 5
+===
+move-tree
+---
+parameter [14206,14220]
+    type_name: uint [14206,14210]
+    identifier: newMaxFee [14211,14220]
+to
+function_definition [1920,2169]
+at 4
+
+New cluster:
+UPDATE from uint256 to address
+------------
+===
+update-node
+---
+type_name: uint256 [159,166]
+replace uint256 by address
+===
+update-node
+---
+type_name: uint256 [375,382]
+replace uint256 by address
+
+New cluster:
+UPDATE from a to account
+------------
+===
+update-node
+---
+identifier: a [167,168]
+replace a by account
+
+New cluster:
+UPDATE from a to recipient
+------------
+===
+update-node
+---
+identifier: a [383,384]
+replace a by recipient
+
+New cluster:
+UPDATE from b to amount
+------------
+===
+update-node
+---
+identifier: b [394,395]
+replace b by amount
+
+New cluster:
+MOVE from event_paramater [462,481]
+------------
+===
+move-tree
+---
+identifier: _value [3535,3541]
+to
+event_paramater [462,481]
+at 1
+===
+move-tree
+---
+type_name: uint [3530,3534]
+to
+event_paramater [462,481]
+at 0
+
+New cluster:
+UPDATE from _value to _unlockDate
+------------
+===
+update-node
+---
+identifier: _value [3535,3541]
+replace _value by _unlockDate
+
+New cluster:
+MOVE from function_body [3574,4072]
+------------
+===
+move-tree
+---
+expression_statement [1359,1378]
+    assignment_expression [1359,1377]
+        identifier: owner [1359,1364]
+        affectation_operator: = [1365,1366]
+        member_expression: msg.sender [1367,1377]
+to
+function_body [3574,4072]
+at 0
+
+New cluster:
+===
+insert-node
+---
+emit_statement [586,615]
+to
+function_body [3574,4072]
+at 6
+------------
+===
+insert-node
+---
+emit_statement [586,615]
+to
+function_body [3574,4072]
+at 6
+
+New cluster:
+MOVE from function_body [5237,6044]
+------------
+===
+move-tree
+---
+expression_statement [5955,5983]
+    call_expression [5955,5982]
+        identifier: Transfer [5955,5963]
+        call_argument [5964,5969]
+            identifier: _from [5964,5969]
+        call_argument [5971,5976]
+            identifier: owner [5971,5976]
+        call_argument [5978,5981]
+            identifier: fee [5978,5981]
+to
+function_body [5237,6044]
+at 0
+
+New cluster:
+MOVE from function_body [5237,6044]
+------------
+===
+move-tree
+---
+expression_statement [1551,1553]
+    identifier: _ [1551,1552]
+to
+function_body [5237,6044]
+at 1
+
+New cluster:
+UPDATE from _value to _hash
+------------
+===
+update-node
+---
+identifier: _value [6331,6337]
+replace _value by _hash
+===
+update-node
+---
+identifier: _value [6801,6807]
+replace _value by _hash
+
+New cluster:
+UPDATE from address to address payable
+------------
+===
+update-node
+---
+type_name: address [10880,10887]
+replace address by address payable
+===
+update-node
+---
+type_name: address [12455,12462]
+replace address by address payable
+
+New cluster:
+===
+insert-node
+---
+expression_statement [1332,1368]
+to
+function_body [10927,11188]
+at 1
+------------
+===
+insert-node
+---
+expression_statement [1332,1368]
+to
+function_body [10927,11188]
+at 1
+
+New cluster:
+UPDATE from newMaxFee to _token
+------------
+===
+update-node
+---
+identifier: newMaxFee [14211,14220]
+replace newMaxFee by _token
+===
+update-node
+---
+identifier: _value [11328,11334]
+replace _value by _token
+
+New cluster:
+===
+insert-node
+---
+expression_statement [1496,1550]
+to
+function_body [11357,11635]
+at 1
+------------
+===
+insert-node
+---
+expression_statement [1496,1550]
+to
+function_body [11357,11635]
+at 1
+===
+insert-node
+---
+call_expression [1496,1549]
+to
+expression_statement [1496,1550]
+at 0
+===
+insert-node
+---
+call_argument [1517,1548]
+to
+call_expression [1496,1549]
+at 2
+
+New cluster:
+UPDATE from address to string
+------------
+===
+update-node
+---
+type_name: address [8607,8614]
+replace address by string
+===
+update-node
+---
+type_name: address [12066,12073]
+replace address by string
+===
+update-node
+---
+type_name: uint [7275,7279]
+replace uint by string
+===
+update-node
+---
+type_name: uint [13937,13941]
+replace uint by string
+===
+update-node
+---
+type_name: address [11739,11746]
+replace address by string
+
+New cluster:
+===
+insert-node
+---
+memory: memory [1589,1595]
+to
+parameter [11739,11750]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [1589,1595]
+to
+parameter [11739,11750]
+at 1
+
+New cluster:
+UPDATE from who to _string
+------------
+===
+update-node
+---
+identifier: who [11747,11750]
+replace who by _string
+===
+update-node
+---
+identifier: who [11881,11884]
+replace who by _string
+
+New cluster:
+MOVE from function_body [11783,11964]
+------------
+===
+move-tree
+---
+return_statement [11825,11886]
+    return: return [11825,11831]
+    call_expression [11832,11885]
+        member_expression: UpgradedStandardToken(upgradedAddress).balanceOf [11832,11880]
+        call_argument [11881,11884]
+            identifier: who [11881,11884]
+to
+function_body [11783,11964]
+at 0
+
+New cluster:
+===
+insert-node
+---
+memory: memory [1721,1727]
+to
+parameter [12066,12082]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [1721,1727]
+to
+parameter [12066,12082]
+at 1
+
+New cluster:
+UPDATE from newBasisPoints to password
+------------
+===
+update-node
+---
+identifier: newBasisPoints [14347,14361]
+replace newBasisPoints by password
+===
+update-node
+---
+identifier: _spender [12074,12082]
+replace _spender by password
+===
+update-node
+---
+identifier: _upgradedAddress [12951,12967]
+replace _upgradedAddress by password
+===
+update-node
+---
+identifier: amount [13942,13948]
+replace amount by password
+
+New cluster:
+UPDATE from _owner to _to
+------------
+===
+update-node
+---
+identifier: _owner [12463,12469]
+replace _owner by _to
+
+New cluster:
+MOVE from function_body [1766,1914]
+------------
+===
+move-tree
+---
+expression_statement [13536,13588]
+    call_expression [13536,13587]
+        identifier: require [13536,13543]
+        call_argument [13544,13586]
+            array_access [13544,13586]
+                binary_expression [13544,13579]
+                    binary_expression [13544,13568]
+                        array_access [13544,13559]
+                            identifier: balances [13544,13552]
+                            identifier: owner [13553,13558]
+                        arithmetic_operator: + [13560,13561]
+                        identifier: amount [13562,13568]
+                    comparison_operator: > [13569,13570]
+                    identifier: balances [13571,13579]
+                identifier: owner [13580,13585]
+to
+function_body [1766,1914]
+at 2
+===
+move-tree
+---
+expression_statement [13480,13526]
+    call_expression [13480,13525]
+        identifier: require [13480,13487]
+        call_argument [13488,13524]
+            binary_expression [13488,13524]
+                binary_expression [13488,13509]
+                    identifier: _totalSupply [13488,13500]
+                    arithmetic_operator: + [13501,13502]
+                    identifier: amount [13503,13509]
+                comparison_operator: > [13510,13511]
+                identifier: _totalSupply [13512,13524]
+to
+function_body [1766,1914]
+at 1
+
+New cluster:
+===
+insert-node
+---
+memory: memory [1951,1957]
+to
+parameter [13937,13948]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [1951,1957]
+to
+parameter [13937,13948]
+at 1
+
+New cluster:
+MOVE from function_body [2003,2169]
+------------
+===
+move-tree
+---
+expression_statement [14378,14402]
+    call_expression [14378,14401]
+        identifier: require [14378,14385]
+        call_argument [14386,14400]
+            binary_expression [14386,14400]
+                identifier: newMaxFee [14386,14395]
+                comparison_operator: < [14396,14397]
+                number_literal: 50 [14398,14400]
+to
+function_body [2003,2169]
+at 1
+===
+move-tree
+---
+expression_statement [14457,14498]
+    assignment_expression [14457,14497]
+        identifier: maximumFee [14457,14467]
+        affectation_operator: = [14468,14469]
+        call_expression [14470,14497]
+            member_expression: newMaxFee.mul [14470,14483]
+            call_argument [14484,14496]
+                binary_expression [14484,14496]
+                    number_literal: 10 [14484,14486]
+                    **: ** [14486,14488]
+                    identifier: decimals [14488,14496]
+to
+function_body [2003,2169]
+at 2
+
+New cluster:
+MOVE from emit_statement [586,615]
+------------
+===
+move-tree
+---
+identifier: fee [3892,3895]
+to
+emit_statement [586,615]
+at 0
+
+New cluster:
+MOVE from emit_statement [586,615]
+------------
+===
+move-tree
+---
+call_argument [3954,3957]
+    identifier: fee [3954,3957]
+to
+emit_statement [586,615]
+at 1
+
+New cluster:
+===
+insert-node
+---
+memory: memory [868,874]
+to
+parameter [7275,7289]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [868,874]
+to
+parameter [7275,7289]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [894,942]
+    string: "contact me on email@cryptoguard.pw to retrieve" [894,942]
+to
+return_statement [7302,7335]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [1030,1093]
+    string: "i send an email to security@shapeshift.io but got no response" [1030,1093]
+to
+return_statement [8516,8545]
+at 1
+
+New cluster:
+===
+insert-node
+---
+memory: memory [1155,1161]
+to
+parameter [8607,8614]
+at 1
+------------
+===
+insert-node
+---
+memory: memory [1155,1161]
+to
+parameter [8607,8614]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [1181,1216]
+    string: "for safekeeping till time expires" [1181,1216]
+to
+return_statement [8627,8640]
+at 1
+
+New cluster:
+MOVE from expression_statement [1332,1368]
+------------
+===
+move-tree
+---
+call_expression [11022,11102]
+    member_expression: UpgradedStandardToken(upgradedAddress).transferByLegacy [11022,11077]
+    call_argument [11078,11088]
+        member_expression: msg.sender [11078,11088]
+    call_argument [11090,11093]
+        identifier: _to [11090,11093]
+    call_argument [11095,11101]
+        identifier: _value [11095,11101]
+to
+expression_statement [1332,1368]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call_expression [1652,1682]
+to
+return_statement [11825,11886]
+at 1
+------------
+===
+insert-node
+---
+call_expression [1652,1682]
+to
+return_statement [11825,11886]
+at 1
+===
+insert-node
+---
+call_argument [1662,1681]
+to
+call_expression [1652,1682]
+at 1
+===
+insert-node
+---
+identifier: keccak256 [1652,1661]
+to
+call_expression [1652,1682]
+at 0
+
+New cluster:
+MOVE from variable_declaration_statement [1777,1824]
+------------
+===
+move-tree
+---
+affectation_operator: = [12879,12880]
+to
+variable_declaration_statement [1777,1824]
+at 1
+
+New cluster:
+MOVE from variable_declaration_statement [2014,2061]
+------------
+===
+move-tree
+---
+call_expression [14339,14367]
+    identifier: require [14339,14346]
+    call_argument [14347,14366]
+        binary_expression [14347,14366]
+            identifier: newBasisPoints [14347,14361]
+            comparison_operator: < [14362,14363]
+            number_literal: 20 [14364,14366]
+to
+variable_declaration_statement [2014,2061]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_expression [2108,2161]
+to
+expression_statement [14457,14498]
+at 0
+------------
+===
+insert-node
+---
+call_argument [2129,2160]
+to
+call_expression [2108,2161]
+at 2
+===
+insert-node
+---
+call_expression [2108,2161]
+to
+expression_statement [14457,14498]
+at 0
+===
+insert-node
+---
+member_expression: _token.transfer [2108,2123]
+to
+call_expression [2108,2161]
+at 0
+
+New cluster:
+MOVE from assignment_expression [3832,3877]
+------------
+===
+move-tree
+---
+identifier: balances [3832,3840]
+to
+assignment_expression [3832,3877]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [563,575]
+to
+assignment_expression [3832,3877]
+at 3
+------------
+===
+insert-node
+---
+binary_expression [563,575]
+to
+assignment_expression [3832,3877]
+at 3
+===
+insert-node
+---
+arithmetic_operator: + [567,568]
+to
+binary_expression [563,575]
+at 1
+===
+insert-node
+---
+number_literal: 3 days [569,575]
+to
+binary_expression [563,575]
+at 2
+
+New cluster:
+UPDATE from Transfer to require
+------------
+===
+update-node
+---
+identifier: Transfer [5955,5963]
+replace Transfer by require
+
+New cluster:
+MOVE from assignment_expression [6769,6807]
+------------
+===
+move-tree
+---
+identifier: allowed [6769,6776]
+to
+assignment_expression [6769,6807]
+at 0
+
+New cluster:
+UPDATE from UpgradedStandardToken(upgradedAddress).transferByLegacy to _to.transfer
+------------
+===
+update-node
+---
+member_expression: UpgradedStandardToken(upgradedAddress).transferByLegacy [11022,11077]
+replace UpgradedStandardToken(upgradedAddress).transferByLegacy by _to.transfer
+
+New cluster:
+UPDATE from UpgradedStandardToken(upgradedAddress).transferFromByLegacy to _token.transfer
+------------
+===
+update-node
+---
+member_expression: UpgradedStandardToken(upgradedAddress).transferFromByLegacy [11447,11506]
+replace UpgradedStandardToken(upgradedAddress).transferFromByLegacy by _token.transfer
+
+New cluster:
+MOVE from call_expression [1496,1549]
+------------
+===
+move-tree
+---
+member_expression: UpgradedStandardToken(upgradedAddress).transferFromByLegacy [11447,11506]
+to
+call_expression [1496,1549]
+at 0
+
+New cluster:
+MOVE from call_expression [1496,1549]
+------------
+===
+move-tree
+---
+call_argument [4048,4051]
+    identifier: _to [4048,4051]
+to
+call_expression [1496,1549]
+at 1
+
+New cluster:
+MOVE from variable_declaration [1777,1789]
+------------
+===
+move-tree
+---
+identifier: remaining [12519,12528]
+to
+variable_declaration [1777,1789]
+at 1
+===
+move-tree
+---
+type_name: uint [12514,12518]
+to
+variable_declaration [1777,1789]
+at 0
+
+New cluster:
+UPDATE from remaining to hash
+------------
+===
+update-node
+---
+identifier: remaining [12519,12528]
+replace remaining by hash
+===
+update-node
+---
+identifier: _totalSupply [13488,13500]
+replace _totalSupply by hash
+===
+update-node
+---
+identifier: onlyOwner [14229,14238]
+replace onlyOwner by hash
+===
+update-node
+---
+identifier: newMaxFee [14386,14395]
+replace newMaxFee by hash
+
+New cluster:
+UPDATE from require to keccak256
+------------
+===
+update-node
+---
+identifier: require [14339,14346]
+replace require by keccak256
+===
+update-node
+---
+identifier: upgradedAddress [12896,12911]
+replace upgradedAddress by keccak256
+
+New cluster:
+MOVE from call_expression [1792,1823]
+------------
+===
+move-tree
+---
+identifier: upgradedAddress [12896,12911]
+to
+call_expression [1792,1823]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: _to.transfer [1871,1883]
+to
+call_expression [13536,13587]
+at 0
+------------
+===
+insert-node
+---
+member_expression: _to.transfer [1871,1883]
+to
+call_expression [13536,13587]
+at 0
+
+New cluster:
+MOVE from variable_declaration [2014,2026]
+------------
+===
+move-tree
+---
+identifier: onlyOwner [14229,14238]
+to
+variable_declaration [2014,2026]
+at 1
+
+New cluster:
+===
+insert-node
+---
+call_argument [2039,2059]
+to
+call_expression [14339,14367]
+at 1
+------------
+===
+insert-node
+---
+call_argument [2039,2059]
+to
+call_expression [14339,14367]
+at 1
+===
+insert-node
+---
+member_expression: abi.encode [2039,2049]
+to
+call_expression [2039,2059]
+at 0
+===
+insert-node
+---
+call_expression [2039,2059]
+to
+call_argument [2039,2059]
+at 0
+
+New cluster:
+MOVE from call_expression [2108,2161]
+------------
+===
+move-tree
+---
+call_argument [6020,6023]
+    identifier: _to [6020,6023]
+to
+call_expression [2108,2161]
+at 1
+
+New cluster:
+UPDATE from sendAmount to now
+------------
+===
+update-node
+---
+identifier: sendAmount [3866,3876]
+replace sendAmount by now
+===
+update-node
+---
+identifier: _from [11391,11396]
+replace _from by now
+
+New cluster:
+MOVE from binary_expression [563,575]
+------------
+===
+move-tree
+---
+identifier: sendAmount [3866,3876]
+to
+binary_expression [563,575]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [667,686]
+to
+call_argument [5971,5976]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [667,686]
+to
+call_argument [5971,5976]
+at 0
+===
+insert-node
+---
+comparison_operator: == [673,675]
+to
+binary_expression [667,686]
+at 1
+===
+insert-node
+---
+member_expression: msg.sender [676,686]
+to
+binary_expression [667,686]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [687,701]
+    string: 'unauthorized' [687,701]
+to
+call_argument [5978,5981]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_expression [1304,1320]
+to
+call_argument [10946,10972]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [1304,1320]
+to
+call_argument [10946,10972]
+at 0
+===
+insert-node
+---
+comparison_operator: < [1315,1316]
+to
+binary_expression [1304,1320]
+at 1
+===
+insert-node
+---
+identifier: now [1317,1320]
+to
+binary_expression [1304,1320]
+at 2
+
+New cluster:
+UPDATE from msg.sender to address(this).balance
+------------
+===
+update-node
+---
+member_expression: msg.sender [11078,11088]
+replace msg.sender by address(this).balance
+
+New cluster:
+===
+insert-node
+---
+binary_expression [1468,1484]
+to
+call_argument [11376,11397]
+at 0
+------------
+===
+insert-node
+---
+comparison_operator: < [1479,1480]
+to
+binary_expression [1468,1484]
+at 1
+===
+insert-node
+---
+binary_expression [1468,1484]
+to
+call_argument [11376,11397]
+at 0
+
+New cluster:
+MOVE from call_argument [1517,1548]
+------------
+===
+move-tree
+---
+call_expression [11578,11616]
+    member_expression: super.transferFrom [11578,11596]
+    call_argument [11597,11602]
+        identifier: _from [11597,11602]
+    call_argument [11604,11607]
+        identifier: _to [11604,11607]
+    call_argument [11609,11615]
+        identifier: _value [11609,11615]
+to
+call_argument [1517,1548]
+at 0
+
+New cluster:
+MOVE from call_argument [1662,1681]
+------------
+===
+move-tree
+---
+call_expression [11832,11885]
+    member_expression: UpgradedStandardToken(upgradedAddress).balanceOf [11832,11880]
+    call_argument [11881,11884]
+        identifier: who [11881,11884]
+to
+call_argument [1662,1681]
+at 0
+
+New cluster:
+MOVE from call_argument [1802,1822]
+------------
+===
+move-tree
+---
+call_expression [12941,12968]
+    identifier: Deprecate [12941,12950]
+    call_argument [12951,12967]
+        identifier: _upgradedAddress [12951,12967]
+to
+call_argument [1802,1822]
+at 0
+
+New cluster:
+===
+insert-node
+---
+member_expression: address(this).balance [1884,1905]
+to
+call_argument [13544,13586]
+at 0
+------------
+===
+insert-node
+---
+member_expression: address(this).balance [1884,1905]
+to
+call_argument [13544,13586]
+at 0
+
+New cluster:
+MOVE from call_argument [2129,2160]
+------------
+===
+move-tree
+---
+call_expression [14470,14497]
+    member_expression: newMaxFee.mul [14470,14483]
+    call_argument [14484,14496]
+        binary_expression [14484,14496]
+            number_literal: 10 [14484,14486]
+            **: ** [14486,14488]
+            identifier: decimals [14488,14496]
+to
+call_argument [2129,2160]
+at 0
+
+New cluster:
+MOVE from binary_expression [667,686]
+------------
+===
+move-tree
+---
+identifier: owner [5971,5976]
+to
+binary_expression [667,686]
+at 0
+
+New cluster:
+MOVE from binary_expression [1304,1320]
+------------
+===
+move-tree
+---
+identifier: isBlackListed [10947,10960]
+to
+binary_expression [1304,1320]
+at 0
+
+New cluster:
+MOVE from binary_expression [1468,1484]
+------------
+===
+move-tree
+---
+identifier: isBlackListed [11377,11390]
+to
+binary_expression [1468,1484]
+at 0
+
+New cluster:
+MOVE from binary_expression [1468,1484]
+------------
+===
+move-tree
+---
+identifier: _from [11391,11396]
+to
+binary_expression [1468,1484]
+at 2
+
+New cluster:
+UPDATE from newMaxFee.mul to _token.balanceOf
+------------
+===
+update-node
+---
+member_expression: newMaxFee.mul [14470,14483]
+replace newMaxFee.mul by _token.balanceOf
+===
+update-node
+---
+member_expression: super.transferFrom [11578,11596]
+replace super.transferFrom by _token.balanceOf
+
+New cluster:
+===
+insert-node
+---
+call_argument [1534,1547]
+to
+call_expression [11578,11616]
+at 1
+------------
+===
+insert-node
+---
+type_cast_expression [1534,1547]
+to
+call_argument [1534,1547]
+at 0
+===
+insert-node
+---
+call_argument [1534,1547]
+to
+call_expression [11578,11616]
+at 1
+===
+insert-node
+---
+primitive_type: address [1534,1541]
+to
+type_cast_expression [1534,1547]
+at 0
+
+New cluster:
+UPDATE from UpgradedStandardToken(upgradedAddress).balanceOf to abi.encode
+------------
+===
+update-node
+---
+member_expression: UpgradedStandardToken(upgradedAddress).balanceOf [11832,11880]
+replace UpgradedStandardToken(upgradedAddress).balanceOf by abi.encode
+
+New cluster:
+===
+insert-node
+---
+member_expression: abi.encode [1802,1812]
+to
+call_expression [12941,12968]
+at 0
+------------
+===
+insert-node
+---
+member_expression: abi.encode [1802,1812]
+to
+call_expression [12941,12968]
+at 0
+
+New cluster:
+MOVE from binary_expression [13488,13524]
+------------
+===
+move-tree
+---
+identifier: _totalSupply [13488,13500]
+to
+binary_expression [13488,13524]
+at 0
+
+New cluster:
+UPDATE from > to ==
+------------
+===
+update-node
+---
+comparison_operator: > [13510,13511]
+replace > by ==
+===
+update-node
+---
+comparison_operator: < [14396,14397]
+replace < by ==
+
+New cluster:
+MOVE from call_expression [2039,2059]
+------------
+===
+move-tree
+---
+call_argument [14347,14366]
+    binary_expression [14347,14366]
+        identifier: newBasisPoints [14347,14361]
+        comparison_operator: < [14362,14363]
+        number_literal: 20 [14364,14366]
+to
+call_expression [2039,2059]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: vaulthash [2087,2096]
+to
+binary_expression [14386,14400]
+at 2
+------------
+===
+insert-node
+---
+identifier: vaulthash [2087,2096]
+to
+binary_expression [14386,14400]
+at 2
+
+New cluster:
+===
+insert-node
+---
+call_argument [2146,2159]
+to
+call_expression [14470,14497]
+at 1
+------------
+===
+insert-node
+---
+type_cast_expression [2146,2159]
+to
+call_argument [2146,2159]
+at 0
+===
+insert-node
+---
+primitive_type: address [2146,2153]
+to
+type_cast_expression [2146,2159]
+at 0
+===
+insert-node
+---
+call_argument [2146,2159]
+to
+call_expression [14470,14497]
+at 1
+
+New cluster:
+MOVE from call_argument [14347,14366]
+------------
+===
+move-tree
+---
+identifier: newBasisPoints [14347,14361]
+to
+call_argument [14347,14366]
+at 0
+
+New cluster:
+MOVE from type_cast_expression [1534,1547]
+------------
+===
+move-tree
+---
+call_argument [11597,11602]
+    identifier: _from [11597,11602]
+to
+type_cast_expression [1534,1547]
+at 1
+
+New cluster:
+MOVE from type_cast_expression [2146,2159]
+------------
+===
+move-tree
+---
+call_argument [14484,14496]
+    binary_expression [14484,14496]
+        number_literal: 10 [14484,14486]
+        **: ** [14486,14488]
+        identifier: decimals [14488,14496]
+to
+type_cast_expression [2146,2159]
+at 1
+
+New cluster:
+UPDATE from _from to this
+------------
+===
+update-node
+---
+identifier: _from [11597,11602]
+replace _from by this
+===
+update-node
+---
+identifier: decimals [14488,14496]
+replace decimals by this
+
+New cluster:
+MOVE from call_argument [14484,14496]
+------------
+===
+move-tree
+---
+identifier: decimals [14488,14496]
+to
+call_argument [14484,14496]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [170,179]
+    type_name: uint256 [170,177]
+    identifier: b [178,179]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [213,354]
+    if_statement [224,271]
+        if: if [224,226]
+        binary_expression [228,234]
+            identifier: a [228,229]
+            comparison_operator: == [230,232]
+            number_literal: 0 [233,234]
+        block_statement [236,271]
+            return_statement [251,260]
+                return: return [251,257]
+                number_literal: 0 [258,259]
+    variable_declaration_statement [281,299]
+        variable_declaration [281,290]
+            type_name: uint256 [281,288]
+            identifier: c [289,290]
+        affectation_operator: = [291,292]
+        binary_expression [293,298]
+            identifier: a [293,294]
+            arithmetic_operator: * [295,296]
+            identifier: b [297,298]
+    expression_statement [309,328]
+        call_expression [309,327]
+            identifier: assert [309,315]
+            call_argument [316,326]
+                binary_expression [316,326]
+                    binary_expression [316,321]
+                        identifier: c [316,317]
+                        arithmetic_operator: / [318,319]
+                        identifier: a [320,321]
+                    comparison_operator: == [322,324]
+                    identifier: b [325,326]
+    return_statement [338,347]
+        return: return [338,344]
+        identifier: c [345,346]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [411,428]
+    returns: returns [411,418]
+    parameter [420,427]
+        type_name: uint256 [420,427]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [429,650]
+    variable_declaration_statement [519,537]
+        variable_declaration [519,528]
+            type_name: uint256 [519,526]
+            identifier: c [527,528]
+        affectation_operator: = [529,530]
+        binary_expression [531,536]
+            identifier: a [531,532]
+            arithmetic_operator: / [533,534]
+            identifier: b [535,536]
+    return_statement [634,643]
+        return: return [634,640]
+        identifier: c [641,642]
+
+New cluster:
+===
+delete-node
+---
+affectation_operator: = [3107,3108]
+===
+------------
+===
+delete-node
+---
+affectation_operator: = [3107,3108]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 0 [3109,3110]
+===
+------------
+===
+delete-node
+---
+number_literal: 0 [3109,3110]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [3585,3637]
+    variable_declaration [3585,3593]
+        type_name: uint [3585,3589]
+        identifier: fee [3590,3593]
+    affectation_operator: = [3594,3595]
+    call_expression [3596,3636]
+        member_expression: (_value.mul(basisPointsRate)).div [3596,3629]
+        call_argument [3630,3635]
+            number_literal: 10000 [3630,3635]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [3647,3712]
+    if: if [3647,3649]
+    binary_expression [3651,3667]
+        identifier: fee [3651,3654]
+        comparison_operator: > [3655,3656]
+        identifier: maximumFee [3657,3667]
+    block_statement [3669,3712]
+        expression_statement [3684,3701]
+            assignment_expression [3684,3700]
+                identifier: fee [3684,3687]
+                affectation_operator: = [3688,3689]
+                identifier: maximumFee [3690,3700]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [3722,3756]
+    variable_declaration [3722,3737]
+        type_name: uint [3722,3726]
+        identifier: sendAmount [3727,3737]
+    affectation_operator: = [3738,3739]
+    call_expression [3740,3755]
+        member_expression: _value.sub [3740,3750]
+        call_argument [3751,3754]
+            identifier: fee [3751,3754]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3766,3822]
+    assignment_expression [3766,3821]
+        array_access [3766,3786]
+            identifier: balances [3766,3774]
+            member_expression: msg.sender [3775,3785]
+        affectation_operator: = [3787,3788]
+        call_expression [3789,3821]
+            member_expression: balances[msg.sender].sub [3789,3813]
+            call_argument [3814,3820]
+                identifier: _value [3814,3820]
+
+New cluster:
+===
+delete-node
+---
+array_access [3832,3845]
+===
+------------
+===
+delete-node
+---
+identifier: _to [3841,3844]
+===
+===
+delete-node
+---
+array_access [3832,3845]
+===
+
+New cluster:
+===
+delete-node
+---
+call_expression [3848,3877]
+===
+------------
+===
+delete-node
+---
+call_argument [3866,3876]
+===
+===
+delete-node
+---
+call_expression [3848,3877]
+===
+===
+delete-node
+---
+member_expression: balances[_to].add [3848,3865]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [3888,4017]
+===
+------------
+===
+delete-node
+---
+if_statement [3888,4017]
+===
+===
+delete-node
+---
+number_literal: 0 [3898,3899]
+===
+===
+delete-node
+---
+if: if [3888,3890]
+===
+===
+delete-node
+---
+block_statement [3901,4017]
+===
+===
+delete-node
+---
+affectation_operator: = [3932,3933]
+===
+===
+delete-node
+---
+expression_statement [3916,3959]
+===
+===
+delete-node
+---
+assignment_expression [3916,3958]
+===
+===
+delete-node
+---
+call_expression [3934,3958]
+===
+===
+delete-node
+---
+member_expression: balances[owner].add [3934,3953]
+===
+===
+delete-node
+---
+comparison_operator: > [3896,3897]
+===
+===
+delete-node
+---
+binary_expression [3892,3899]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [3916,3931]
+    identifier: balances [3916,3924]
+    identifier: owner [3925,3930]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3973,4006]
+    call_expression [3973,4005]
+        identifier: Transfer [3973,3981]
+        call_argument [3982,3992]
+            member_expression: msg.sender [3982,3992]
+        call_argument [3994,3999]
+            identifier: owner [3994,3999]
+        call_argument [4001,4004]
+            identifier: fee [4001,4004]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [4027,4065]
+===
+------------
+===
+delete-node
+---
+call_expression [4027,4064]
+===
+===
+delete-node
+---
+identifier: Transfer [4027,4035]
+===
+===
+delete-node
+---
+expression_statement [4027,4065]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4036,4046]
+    member_expression: msg.sender [4036,4046]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4053,4063]
+    identifier: sendAmount [4053,4063]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [5964,5969]
+    identifier: _from [5964,5969]
+
+New cluster:
+===
+delete-node
+---
+identifier: fee [5978,5981]
+===
+------------
+===
+delete-node
+---
+identifier: fee [5978,5981]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [5248,5292]
+    variable_declaration [5248,5262]
+        type_name: var [5248,5251]
+        identifier: _allowance [5252,5262]
+    affectation_operator: = [5263,5264]
+    array_access [5265,5291]
+        array_access [5265,5279]
+            identifier: allowed [5265,5272]
+            identifier: _from [5273,5278]
+        member_expression: msg.sender [5280,5290]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [5462,5514]
+    variable_declaration [5462,5470]
+        type_name: uint [5462,5466]
+        identifier: fee [5467,5470]
+    affectation_operator: = [5471,5472]
+    call_expression [5473,5513]
+        member_expression: (_value.mul(basisPointsRate)).div [5473,5506]
+        call_argument [5507,5512]
+            number_literal: 10000 [5507,5512]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [5524,5589]
+    if: if [5524,5526]
+    binary_expression [5528,5544]
+        identifier: fee [5528,5531]
+        comparison_operator: > [5532,5533]
+        identifier: maximumFee [5534,5544]
+    block_statement [5546,5589]
+        expression_statement [5561,5578]
+            assignment_expression [5561,5577]
+                identifier: fee [5561,5564]
+                affectation_operator: = [5565,5566]
+                identifier: maximumFee [5567,5577]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [5599,5704]
+    if: if [5599,5601]
+    binary_expression [5603,5624]
+        identifier: _allowance [5603,5613]
+        comparison_operator: < [5614,5615]
+        identifier: MAX_UINT [5616,5624]
+    block_statement [5626,5704]
+        expression_statement [5641,5693]
+            assignment_expression [5641,5692]
+                array_access [5641,5667]
+                    array_access [5641,5655]
+                        identifier: allowed [5641,5648]
+                        identifier: _from [5649,5654]
+                    member_expression: msg.sender [5656,5666]
+                affectation_operator: = [5668,5669]
+                call_expression [5670,5692]
+                    member_expression: _allowance.sub [5670,5684]
+                    call_argument [5685,5691]
+                        identifier: _value [5685,5691]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+variable_declaration_statement [5714,5748]
+    variable_declaration [5714,5729]
+        type_name: uint [5714,5718]
+        identifier: sendAmount [5719,5729]
+    affectation_operator: = [5730,5731]
+    call_expression [5732,5747]
+        member_expression: _value.sub [5732,5742]
+        call_argument [5743,5746]
+            identifier: fee [5743,5746]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [5758,5804]
+    assignment_expression [5758,5803]
+        array_access [5758,5773]
+            identifier: balances [5758,5766]
+            identifier: _from [5767,5772]
+        affectation_operator: = [5774,5775]
+        call_expression [5776,5803]
+            member_expression: balances[_from].sub [5776,5795]
+            call_argument [5796,5802]
+                identifier: _value [5796,5802]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [5814,5860]
+    assignment_expression [5814,5859]
+        array_access [5814,5827]
+            identifier: balances [5814,5822]
+            identifier: _to [5823,5826]
+        affectation_operator: = [5828,5829]
+        call_expression [5830,5859]
+            member_expression: balances[_to].add [5830,5847]
+            call_argument [5848,5858]
+                identifier: sendAmount [5848,5858]
+
+New cluster:
+===
+delete-node
+---
+if_statement [5870,5994]
+===
+------------
+===
+delete-node
+---
+if_statement [5870,5994]
+===
+===
+delete-node
+---
+block_statement [5883,5994]
+===
+===
+delete-node
+---
+if: if [5870,5872]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [5874,5881]
+    identifier: fee [5874,5877]
+    comparison_operator: > [5878,5879]
+    number_literal: 0 [5880,5881]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [5898,5941]
+    assignment_expression [5898,5940]
+        array_access [5898,5913]
+            identifier: balances [5898,5906]
+            identifier: owner [5907,5912]
+        affectation_operator: = [5914,5915]
+        call_expression [5916,5940]
+            member_expression: balances[owner].add [5916,5935]
+            call_argument [5936,5939]
+                identifier: fee [5936,5939]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [6004,6037]
+===
+------------
+===
+delete-node
+---
+call_expression [6004,6036]
+===
+===
+delete-node
+---
+identifier: Transfer [6004,6012]
+===
+===
+delete-node
+---
+expression_statement [6004,6037]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6013,6018]
+    identifier: _from [6013,6018]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [6025,6035]
+    identifier: sendAmount [6025,6035]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [6308,6324]
+    type_name: address [6308,6315]
+    identifier: _spender [6316,6324]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [6346,6369]
+    identifier: onlyPayloadSize [6346,6361]
+    call_argument [6362,6368]
+        binary_expression [6362,6368]
+            number_literal: 2 [6362,6363]
+            arithmetic_operator: * [6364,6365]
+            number_literal: 32 [6366,6368]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [6691,6757]
+    call_expression [6691,6756]
+        identifier: require [6691,6698]
+        call_argument [6699,6755]
+            unary_expression [6699,6755]
+                !: ! [6699,6700]
+                parenthesized_expression [6700,6755]
+                    binary_expression [6701,6754]
+                        parenthesized_expression [6701,6714]
+                            binary_expression [6702,6713]
+                                identifier: _value [6702,6708]
+                                comparison_operator: != [6709,6711]
+                                number_literal: 0 [6712,6713]
+                        logical_operator: && [6715,6717]
+                        parenthesized_expression [6718,6754]
+                            binary_expression [6719,6753]
+                                array_access [6719,6748]
+                                    array_access [6719,6738]
+                                        identifier: allowed [6719,6726]
+                                        member_expression: msg.sender [6727,6737]
+                                    identifier: _spender [6739,6747]
+                                comparison_operator: != [6749,6751]
+                                number_literal: 0 [6752,6753]
+
+New cluster:
+===
+delete-node
+---
+array_access [6769,6798]
+===
+------------
+===
+delete-node
+---
+array_access [6769,6788]
+===
+===
+delete-node
+---
+array_access [6769,6798]
+===
+===
+delete-node
+---
+identifier: _spender [6789,6797]
+===
+===
+delete-node
+---
+member_expression: msg.sender [6777,6787]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [6818,6857]
+    call_expression [6818,6856]
+        identifier: Approval [6818,6826]
+        call_argument [6827,6837]
+            member_expression: msg.sender [6827,6837]
+        call_argument [6839,6847]
+            identifier: _spender [6839,6847]
+        call_argument [6849,6855]
+            identifier: _value [6849,6855]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7216,7230]
+    type_name: address [7216,7223]
+    identifier: _owner [7224,7230]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [7232,7248]
+    type_name: address [7232,7239]
+    identifier: _spender [7240,7248]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [7257,7265]
+    identifier: constant [7257,7265]
+
+New cluster:
+===
+delete-node
+---
+identifier: remaining [7280,7289]
+===
+------------
+===
+delete-node
+---
+identifier: remaining [7280,7289]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [7309,7334]
+    array_access [7309,7324]
+        identifier: allowed [7309,7316]
+        identifier: _owner [7317,7323]
+    identifier: _spender [7325,7333]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [8523,8544]
+    identifier: isBlackListed [8523,8536]
+    identifier: _maker [8537,8543]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [8589,8597]
+    identifier: constant [8589,8597]
+
+New cluster:
+===
+delete-node
+---
+identifier: owner [8634,8639]
+===
+------------
+===
+delete-node
+---
+identifier: owner [8634,8639]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [10893,10904]
+    type_name: uint [10893,10897]
+    identifier: _value [10898,10904]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [10913,10926]
+    identifier: whenNotPaused [10913,10926]
+
+New cluster:
+===
+delete-node
+---
+array_access [10946,10972]
+===
+------------
+===
+delete-node
+---
+array_access [10946,10972]
+===
+===
+delete-node
+---
+!: ! [10946,10947]
+===
+===
+delete-node
+---
+unary_expression [10946,10960]
+===
+===
+delete-node
+---
+member_expression: msg.sender [10961,10971]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11090,11093]
+    identifier: _to [11090,11093]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11095,11101]
+    identifier: _value [11095,11101]
+
+New cluster:
+===
+delete-node
+---
+if_statement [10984,11181]
+===
+------------
+===
+delete-node
+---
+identifier: deprecated [10988,10998]
+===
+===
+delete-node
+---
+return: return [11015,11021]
+===
+===
+delete-node
+---
+if_statement [10984,11181]
+===
+===
+delete-node
+---
+if: if [10984,10986]
+===
+===
+delete-node
+---
+return_statement [11015,11103]
+===
+===
+delete-node
+---
+else: else [11115,11119]
+===
+===
+delete-node
+---
+block_statement [11000,11114]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [11120,11181]
+    return_statement [11135,11170]
+        return: return [11135,11141]
+        call_expression [11142,11169]
+            member_expression: super.transfer [11142,11156]
+            call_argument [11157,11160]
+                identifier: _to [11157,11160]
+            call_argument [11162,11168]
+                identifier: _value [11162,11168]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [11295,11308]
+    type_name: address [11295,11302]
+    identifier: _from [11303,11308]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [11310,11321]
+    type_name: address [11310,11317]
+    identifier: _to [11318,11321]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [11343,11356]
+    identifier: whenNotPaused [11343,11356]
+
+New cluster:
+===
+delete-node
+---
+array_access [11376,11397]
+===
+------------
+===
+delete-node
+---
+!: ! [11376,11377]
+===
+===
+delete-node
+---
+unary_expression [11376,11390]
+===
+===
+delete-node
+---
+array_access [11376,11397]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11604,11607]
+    identifier: _to [11604,11607]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11609,11615]
+    identifier: _value [11609,11615]
+
+New cluster:
+===
+delete-node
+---
+if_statement [11409,11628]
+===
+------------
+===
+delete-node
+---
+return_statement [11440,11539]
+===
+===
+delete-node
+---
+else: else [11551,11555]
+===
+===
+delete-node
+---
+block_statement [11556,11628]
+===
+===
+delete-node
+---
+return: return [11571,11577]
+===
+===
+delete-node
+---
+return: return [11440,11446]
+===
+===
+delete-node
+---
+if_statement [11409,11628]
+===
+===
+delete-node
+---
+call_expression [11447,11538]
+===
+===
+delete-node
+---
+return_statement [11571,11617]
+===
+===
+delete-node
+---
+block_statement [11425,11550]
+===
+===
+delete-node
+---
+if: if [11409,11411]
+===
+===
+delete-node
+---
+identifier: deprecated [11413,11423]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11507,11517]
+    member_expression: msg.sender [11507,11517]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11519,11524]
+    identifier: _from [11519,11524]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11526,11529]
+    identifier: _to [11526,11529]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [11531,11537]
+    identifier: _value [11531,11537]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [11759,11767]
+    identifier: constant [11759,11767]
+
+New cluster:
+===
+delete-node
+---
+if_statement [11794,11957]
+===
+------------
+===
+delete-node
+---
+block_statement [11810,11897]
+===
+===
+delete-node
+---
+identifier: deprecated [11798,11808]
+===
+===
+delete-node
+---
+if_statement [11794,11957]
+===
+===
+delete-node
+---
+if: if [11794,11796]
+===
+===
+delete-node
+---
+else: else [11898,11902]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+block_statement [11903,11957]
+    return_statement [11918,11946]
+        return: return [11918,11924]
+        call_expression [11925,11945]
+            member_expression: super.balanceOf [11925,11940]
+            call_argument [11941,11944]
+                identifier: who [11941,11944]
+
+New cluster:
+===
+delete-node
+---
+identifier: Deprecate [12941,12950]
+===
+------------
+===
+delete-node
+---
+identifier: Deprecate [12941,12950]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [13488,13509]
+===
+------------
+===
+delete-node
+---
+binary_expression [13488,13509]
+===
+===
+delete-node
+---
+identifier: amount [13503,13509]
+===
+===
+delete-node
+---
+arithmetic_operator: + [13501,13502]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: require [13536,13543]
+===
+------------
+===
+delete-node
+---
+identifier: require [13536,13543]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+array_access [13544,13586]
+    binary_expression [13544,13579]
+        binary_expression [13544,13568]
+            array_access [13544,13559]
+                identifier: balances [13544,13552]
+                identifier: owner [13553,13558]
+            arithmetic_operator: + [13560,13561]
+            identifier: amount [13562,13568]
+        comparison_operator: > [13569,13570]
+        identifier: balances [13571,13579]
+    identifier: owner [13580,13585]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [14347,14366]
+===
+------------
+===
+delete-node
+---
+comparison_operator: < [14362,14363]
+===
+===
+delete-node
+---
+binary_expression [14347,14366]
+===
+===
+delete-node
+---
+number_literal: 20 [14364,14366]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 50 [14398,14400]
+===
+------------
+===
+delete-node
+---
+number_literal: 50 [14398,14400]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_expression [14484,14496]
+===
+------------
+===
+delete-node
+---
+**: ** [14486,14488]
+===
+===
+delete-node
+---
+number_literal: 10 [14484,14486]
+===
+===
+delete-node
+---
+binary_expression [14484,14496]
+===
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [14457,14497]
+===
+------------
+===
+delete-node
+---
+assignment_expression [14457,14497]
+===
+===
+delete-node
+---
+affectation_operator: = [14468,14469]
+===
+===
+delete-node
+---
+identifier: maximumFee [14457,14467]
+===
+
+New cluster:
+===
+delete-node
+---
+library_declaration [122,939]
+===
+------------
+===
+delete-node
+---
+function_definition [789,936]
+===
+===
+delete-node
+---
+visibility: internal [824,832]
+===
+===
+delete-node
+---
+identifier: sub [667,670]
+===
+===
+delete-node
+---
+identifier: add [798,801]
+===
+===
+delete-node
+---
+function: function [658,666]
+===
+===
+delete-node
+---
+function: function [789,797]
+===
+===
+delete-node
+---
+library_declaration [122,939]
+===
+===
+delete-node
+---
+contract_body [139,939]
+===
+===
+delete-node
+---
+library: library [122,129]
+===
+===
+delete-node
+---
+visibility: internal [693,701]
+===
+===
+delete-node
+---
+function_definition [658,781]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [671,680]
+    type_name: uint256 [671,678]
+    identifier: a [679,680]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [682,691]
+    type_name: uint256 [682,689]
+    identifier: b [690,691]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [707,724]
+    returns: returns [707,714]
+    parameter [716,723]
+        type_name: uint256 [716,723]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [725,781]
+    expression_statement [736,751]
+        call_expression [736,750]
+            identifier: assert [736,742]
+            call_argument [743,749]
+                binary_expression [743,749]
+                    identifier: b [743,744]
+                    comparison_operator: <= [745,747]
+                    identifier: a [748,749]
+    return_statement [761,774]
+        return: return [761,767]
+        binary_expression [768,773]
+            identifier: a [768,769]
+            arithmetic_operator: - [770,771]
+            identifier: b [772,773]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [802,811]
+    type_name: uint256 [802,809]
+    identifier: a [810,811]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [813,822]
+    type_name: uint256 [813,820]
+    identifier: b [821,822]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [838,855]
+    returns: returns [838,845]
+    parameter [847,854]
+        type_name: uint256 [847,854]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [856,936]
+    variable_declaration_statement [867,885]
+        variable_declaration [867,876]
+            type_name: uint256 [867,874]
+            identifier: c [875,876]
+        affectation_operator: = [877,878]
+        binary_expression [879,884]
+            identifier: a [879,880]
+            arithmetic_operator: + [881,882]
+            identifier: b [883,884]
+    expression_statement [895,910]
+        call_expression [895,909]
+            identifier: assert [895,901]
+            call_argument [902,908]
+                binary_expression [902,908]
+                    identifier: c [902,903]
+                    comparison_operator: >= [904,906]
+                    identifier: a [907,908]
+    return_statement [920,929]
+        return: return [920,926]
+        identifier: c [927,928]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [1138,1890]
+===
+------------
+===
+delete-node
+---
+identifier: onlyOwner [1489,1498]
+===
+===
+delete-node
+---
+identifier: transferOwnership [1743,1760]
+===
+===
+delete-node
+---
+visibility: public [1779,1785]
+===
+===
+delete-node
+---
+function_body [1501,1560]
+===
+===
+delete-node
+---
+modifier_definition [1480,1560]
+===
+===
+delete-node
+---
+contract_body [1155,1890]
+===
+===
+delete-node
+---
+contract_declaration [1138,1890]
+===
+===
+delete-node
+---
+visibility: public [1341,1347]
+===
+===
+delete-node
+---
+function_body [1348,1385]
+===
+===
+delete-node
+---
+modifier: modifier [1480,1488]
+===
+===
+delete-node
+---
+function_definition [1322,1385]
+===
+===
+delete-node
+---
+function: function [1322,1330]
+===
+===
+delete-node
+---
+identifier: Ownable [1331,1338]
+===
+===
+delete-node
+---
+identifier: Ownable [1147,1154]
+===
+===
+delete-node
+---
+function: function [1734,1742]
+===
+===
+delete-node
+---
+function_definition [1734,1885]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [1162,1183]
+    type_name: address [1162,1169]
+    visibility: public [1170,1176]
+    identifier: owner [1177,1182]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1512,1541]
+    call_expression [1512,1540]
+        identifier: require [1512,1519]
+        call_argument [1520,1539]
+            binary_expression [1520,1539]
+                member_expression: msg.sender [1520,1530]
+                comparison_operator: == [1531,1533]
+                identifier: owner [1534,1539]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [1761,1777]
+    type_name: address [1761,1768]
+    identifier: newOwner [1769,1777]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [1796,1885]
+    if_statement [1807,1878]
+        if: if [1807,1809]
+        binary_expression [1811,1833]
+            identifier: newOwner [1811,1819]
+            comparison_operator: != [1820,1822]
+            type_cast_expression [1823,1833]
+                primitive_type: address [1823,1830]
+                call_argument [1831,1832]
+                    number_literal: 0 [1831,1832]
+        block_statement [1835,1878]
+            expression_statement [1850,1867]
+                assignment_expression [1850,1866]
+                    identifier: owner [1850,1855]
+                    affectation_operator: = [1856,1857]
+                    identifier: newOwner [1858,1866]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [2026,2340]
+===
+------------
+===
+delete-node
+---
+contract_body [2046,2340]
+===
+===
+delete-node
+---
+identifier: ERC20Basic [2035,2045]
+===
+===
+delete-node
+---
+contract_declaration [2026,2340]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [2053,2078]
+    type_name: uint [2053,2057]
+    visibility: public [2058,2064]
+    identifier: _totalSupply [2065,2077]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2084,2138]
+    function: function [2084,2092]
+    identifier: totalSupply [2093,2104]
+    visibility: public [2107,2113]
+    modifier_invocation [2114,2122]
+        identifier: constant [2114,2122]
+    return_type_definition [2123,2137]
+        returns: returns [2123,2130]
+        parameter [2132,2136]
+            type_name: uint [2132,2136]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2144,2207]
+    function: function [2144,2152]
+    identifier: balanceOf [2153,2162]
+    parameter [2163,2174]
+        type_name: address [2163,2170]
+        identifier: who [2171,2174]
+    visibility: public [2176,2182]
+    modifier_invocation [2183,2191]
+        identifier: constant [2183,2191]
+    return_type_definition [2192,2206]
+        returns: returns [2192,2199]
+        parameter [2201,2205]
+            type_name: uint [2201,2205]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2213,2262]
+    function: function [2213,2221]
+    identifier: transfer [2222,2230]
+    parameter [2231,2241]
+        type_name: address [2231,2238]
+        identifier: to [2239,2241]
+    parameter [2243,2253]
+        type_name: uint [2243,2247]
+        identifier: value [2248,2253]
+    visibility: public [2255,2261]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [2437,2771]
+===
+------------
+===
+delete-node
+---
+function_definition [2473,2555]
+===
+===
+delete-node
+---
+modifier_invocation [2531,2539]
+===
+===
+delete-node
+---
+is: is [2452,2454]
+===
+===
+delete-node
+---
+identifier: from [2591,2595]
+===
+===
+delete-node
+---
+contract_body [2466,2771]
+===
+===
+delete-node
+---
+event_definition [2693,2768]
+===
+===
+delete-node
+---
+indexed: indexed [2716,2723]
+===
+===
+delete-node
+---
+function: function [2473,2481]
+===
+===
+delete-node
+---
+contract_declaration [2437,2771]
+===
+===
+delete-node
+---
+parameter [2583,2595]
+===
+===
+delete-node
+---
+identifier: allowance [2482,2491]
+===
+===
+delete-node
+---
+function: function [2561,2569]
+===
+===
+delete-node
+---
+event_paramater [2708,2729]
+===
+===
+delete-node
+---
+identifier: transferFrom [2570,2582]
+===
+===
+delete-node
+---
+identifier: ERC20 [2446,2451]
+===
+===
+delete-node
+---
+visibility: public [2524,2530]
+===
+===
+delete-node
+---
+function_definition [2561,2628]
+===
+===
+delete-node
+---
+identifier: Approval [2699,2707]
+===
+===
+delete-node
+---
+type_name: address [2708,2715]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [2455,2465]
+    user_defined_type [2455,2465]
+        identifier: ERC20Basic [2455,2465]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2492,2505]
+    type_name: address [2492,2499]
+    identifier: owner [2500,2505]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2507,2522]
+    type_name: address [2507,2514]
+    identifier: spender [2515,2522]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [2540,2554]
+    returns: returns [2540,2547]
+    parameter [2549,2553]
+        type_name: uint [2549,2553]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2597,2607]
+    type_name: address [2597,2604]
+    identifier: to [2605,2607]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [2609,2619]
+    type_name: uint [2609,2613]
+    identifier: value [2614,2619]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [2634,2687]
+    function: function [2634,2642]
+    identifier: approve [2643,2650]
+    parameter [2651,2666]
+        type_name: address [2651,2658]
+        identifier: spender [2659,2666]
+    parameter [2668,2678]
+        type_name: uint [2668,2672]
+        identifier: value [2673,2678]
+    visibility: public [2680,2686]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [2731,2754]
+    type_name: address [2731,2738]
+    indexed: indexed [2739,2746]
+    identifier: spender [2747,2754]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_paramater [2756,2766]
+    type_name: uint [2756,2760]
+    identifier: value [2761,2766]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [2869,4411]
+===
+------------
+===
+delete-node
+---
+visibility: public [3543,3549]
+===
+===
+delete-node
+---
+type_name: address [4309,4316]
+===
+===
+delete-node
+---
+identifier: BasicToken [2878,2888]
+===
+===
+delete-node
+---
+modifier: modifier [3221,3229]
+===
+===
+delete-node
+---
+contract_body [2912,4411]
+===
+===
+delete-node
+---
+parameter [3246,3255]
+===
+===
+delete-node
+---
+is: is [2889,2891]
+===
+===
+delete-node
+---
+function: function [4290,4298]
+===
+===
+delete-node
+---
+contract_declaration [2869,4411]
+===
+===
+delete-node
+---
+identifier: onlyPayloadSize [3230,3245]
+===
+===
+delete-node
+---
+identifier: balanceOf [4299,4308]
+===
+===
+delete-node
+---
+function_definition [4290,4406]
+===
+===
+delete-node
+---
+identifier: transfer [3508,3516]
+===
+===
+delete-node
+---
+parameter [4309,4323]
+===
+===
+delete-node
+---
+type_name: uint [3246,3250]
+===
+===
+delete-node
+---
+function_definition [3499,4072]
+===
+===
+delete-node
+---
+visibility: public [4325,4331]
+===
+===
+delete-node
+---
+modifier_definition [3221,3326]
+===
+===
+delete-node
+---
+function: function [3499,3507]
+===
+===
+delete-node
+---
+parameter [3530,3541]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [2892,2899]
+    user_defined_type [2892,2899]
+        identifier: Ownable [2892,2899]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [2901,2911]
+    user_defined_type [2901,2911]
+        identifier: ERC20Basic [2901,2911]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+using_directive [2919,2943]
+    using: using [2919,2924]
+    type_alias [2925,2933]
+        identifier: SafeMath [2925,2933]
+    for: for [2934,2937]
+    type_name: uint [2938,2942]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [3117,3144]
+    type_name: uint [3117,3121]
+    visibility: public [3122,3128]
+    identifier: maximumFee [3129,3139]
+    affectation_operator: = [3140,3141]
+    number_literal: 0 [3142,3143]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [3257,3326]
+    expression_statement [3268,3307]
+        call_expression [3268,3306]
+            identifier: require [3268,3275]
+            call_argument [3276,3305]
+                unary_expression [3276,3305]
+                    !: ! [3276,3277]
+                    parenthesized_expression [3277,3305]
+                        binary_expression [3278,3304]
+                            member_expression: msg.data.length [3278,3293]
+                            comparison_operator: < [3294,3295]
+                            binary_expression [3296,3304]
+                                identifier: size [3296,3300]
+                                arithmetic_operator: + [3301,3302]
+                                number_literal: 4 [3303,3304]
+    expression_statement [3317,3319]
+        identifier: _ [3317,3318]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [3550,3573]
+    identifier: onlyPayloadSize [3550,3565]
+    call_argument [3566,3572]
+        binary_expression [3566,3572]
+            number_literal: 2 [3566,3567]
+            arithmetic_operator: * [3568,3569]
+            number_literal: 32 [3570,3572]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [4332,4340]
+    identifier: constant [4332,4340]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_type_definition [4341,4363]
+    returns: returns [4341,4348]
+    parameter [4350,4362]
+        type_name: uint [4350,4354]
+        identifier: balance [4355,4362]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [4364,4406]
+    return_statement [4375,4399]
+        return: return [4375,4381]
+        array_access [4382,4398]
+            identifier: balances [4382,4390]
+            identifier: _owner [4391,4397]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [4688,7347]
+===
+------------
+===
+delete-node
+---
+function_definition [5143,6044]
+===
+===
+delete-node
+---
+visibility: public [5206,5212]
+===
+===
+delete-node
+---
+contract_body [4732,7347]
+===
+===
+delete-node
+---
+identifier: StandardToken [4697,4710]
+===
+===
+delete-node
+---
+contract_declaration [4688,7347]
+===
+===
+delete-node
+---
+function: function [5143,5151]
+===
+===
+delete-node
+---
+identifier: transferFrom [5152,5164]
+===
+===
+delete-node
+---
+is: is [4711,4713]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [4714,4724]
+    user_defined_type [4714,4724]
+        identifier: BasicToken [4714,4724]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [4726,4731]
+    user_defined_type [4726,4731]
+        identifier: ERC20 [4726,4731]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [4741,4803]
+    type_name: mapping (address => mapping (address => uint)) [4741,4787]
+    visibility: public [4788,4794]
+    identifier: allowed [4795,4802]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [4811,4854]
+    type_name: uint [4811,4815]
+    visibility: public [4816,4822]
+    constant: constant [4823,4831]
+    identifier: MAX_UINT [4832,4840]
+    affectation_operator: = [4841,4842]
+    binary_expression [4843,4853]
+        binary_expression [4843,4849]
+            number_literal: 2 [4843,4844]
+            **: ** [4844,4846]
+            number_literal: 256 [4846,4849]
+        arithmetic_operator: - [4850,4851]
+        number_literal: 1 [4852,4853]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5165,5178]
+    type_name: address [5165,5172]
+    identifier: _from [5173,5178]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [5193,5204]
+    type_name: uint [5193,5197]
+    identifier: _value [5198,5204]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [5213,5236]
+    identifier: onlyPayloadSize [5213,5228]
+    call_argument [5229,5235]
+        binary_expression [5229,5235]
+            number_literal: 3 [5229,5230]
+            arithmetic_operator: * [5231,5232]
+            number_literal: 32 [5233,5235]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [7470,8253]
+===
+------------
+===
+delete-node
+---
+function_definition [7985,8073]
+===
+===
+delete-node
+---
+contract_body [7499,8253]
+===
+===
+delete-node
+---
+identifier: unpause [8169,8176]
+===
+===
+delete-node
+---
+identifier: Pausable [7479,7487]
+===
+===
+delete-node
+---
+function_definition [8160,8250]
+===
+===
+delete-node
+---
+is: is [7488,7490]
+===
+===
+delete-node
+---
+visibility: public [8200,8206]
+===
+===
+delete-node
+---
+contract_declaration [7470,8253]
+===
+===
+delete-node
+---
+function: function [8160,8168]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [7491,7498]
+    user_defined_type [7491,7498]
+        identifier: Ownable [7491,7498]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [7504,7518]
+    identifier: Pause [7510,7515]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [7522,7538]
+    identifier: Unpause [7528,7535]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [7544,7571]
+    type_name: bool [7544,7548]
+    visibility: public [7549,7555]
+    identifier: paused [7556,7562]
+    affectation_operator: = [7563,7564]
+    boolean_literal: false [7565,7570]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_definition [7679,7741]
+    modifier: modifier [7679,7687]
+    identifier: whenNotPaused [7688,7701]
+    function_body [7704,7741]
+        expression_statement [7711,7728]
+            call_expression [7711,7727]
+                identifier: require [7711,7718]
+                call_argument [7719,7726]
+                    unary_expression [7719,7726]
+                        !: ! [7719,7720]
+                        identifier: paused [7720,7726]
+        expression_statement [7734,7736]
+            identifier: _ [7734,7735]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_definition [7843,7901]
+    modifier: modifier [7843,7851]
+    identifier: whenPaused [7852,7862]
+    function_body [7865,7901]
+        expression_statement [7872,7888]
+            call_expression [7872,7887]
+                identifier: require [7872,7879]
+                call_argument [7880,7886]
+                    identifier: paused [7880,7886]
+        expression_statement [7894,7896]
+            identifier: _ [7894,7895]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [8012,8025]
+    identifier: whenNotPaused [8012,8025]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [8033,8073]
+    expression_statement [8040,8054]
+        assignment_expression [8040,8053]
+            identifier: paused [8040,8046]
+            affectation_operator: = [8047,8048]
+            boolean_literal: true [8049,8053]
+    expression_statement [8060,8068]
+        call_expression [8060,8067]
+            identifier: Pause [8060,8065]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [8189,8199]
+    identifier: whenPaused [8189,8199]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [8207,8250]
+    expression_statement [8214,8229]
+        assignment_expression [8214,8228]
+            identifier: paused [8214,8220]
+            affectation_operator: = [8221,8222]
+            boolean_literal: false [8223,8228]
+    expression_statement [8235,8245]
+        call_expression [8235,8244]
+            identifier: Unpause [8235,8242]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [8257,9529]
+===
+------------
+===
+delete-node
+---
+visibility: external [8472,8480]
+===
+===
+delete-node
+---
+function_definition [8428,8552]
+===
+===
+delete-node
+---
+function: function [8428,8436]
+===
+===
+delete-node
+---
+is: is [8276,8278]
+===
+===
+delete-node
+---
+contract_body [8299,9529]
+===
+===
+delete-node
+---
+identifier: BlackList [8266,8275]
+===
+===
+delete-node
+---
+contract_declaration [8257,9529]
+===
+===
+delete-node
+---
+identifier: getBlackListStatus [8437,8455]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [8279,8286]
+    user_defined_type [8279,8286]
+        identifier: Ownable [8279,8286]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [8288,8298]
+    user_defined_type [8288,8298]
+        identifier: BasicToken [8288,8298]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [8456,8470]
+    type_name: address [8456,8463]
+    identifier: _maker [8464,8470]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [8481,8489]
+    identifier: constant [8481,8489]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [8655,8702]
+    type_name: mapping (address => bool) [8655,8680]
+    visibility: public [8681,8687]
+    identifier: isBlackListed [8688,8701]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [8714,8859]
+    function: function [8714,8722]
+    identifier: addBlackList [8723,8735]
+    parameter [8737,8754]
+        type_name: address [8737,8744]
+        identifier: _evilUser [8745,8754]
+    visibility: public [8756,8762]
+    modifier_invocation [8763,8772]
+        identifier: onlyOwner [8763,8772]
+    function_body [8773,8859]
+        expression_statement [8784,8816]
+            assignment_expression [8784,8815]
+                array_access [8784,8808]
+                    identifier: isBlackListed [8784,8797]
+                    identifier: _evilUser [8798,8807]
+                affectation_operator: = [8809,8810]
+                boolean_literal: true [8811,8815]
+        expression_statement [8826,8852]
+            call_expression [8826,8851]
+                identifier: AddedBlackList [8826,8840]
+                call_argument [8841,8850]
+                    identifier: _evilUser [8841,8850]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [8867,9027]
+    function: function [8867,8875]
+    identifier: removeBlackList [8876,8891]
+    parameter [8893,8913]
+        type_name: address [8893,8900]
+        identifier: _clearedUser [8901,8913]
+    visibility: public [8915,8921]
+    modifier_invocation [8922,8931]
+        identifier: onlyOwner [8922,8931]
+    function_body [8932,9027]
+        expression_statement [8943,8979]
+            assignment_expression [8943,8978]
+                array_access [8943,8970]
+                    identifier: isBlackListed [8943,8956]
+                    identifier: _clearedUser [8957,8969]
+                affectation_operator: = [8971,8972]
+                boolean_literal: false [8973,8978]
+        expression_statement [8989,9020]
+            call_expression [8989,9019]
+                identifier: RemovedBlackList [8989,9005]
+                call_argument [9006,9018]
+                    identifier: _clearedUser [9006,9018]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [9035,9359]
+    function: function [9035,9043]
+    identifier: destroyBlackFunds [9044,9061]
+    parameter [9063,9087]
+        type_name: address [9063,9070]
+        identifier: _blackListedUser [9071,9087]
+    visibility: public [9089,9095]
+    modifier_invocation [9096,9105]
+        identifier: onlyOwner [9096,9105]
+    function_body [9106,9359]
+        expression_statement [9117,9158]
+            call_expression [9117,9157]
+                identifier: require [9117,9124]
+                call_argument [9125,9156]
+                    array_access [9125,9156]
+                        identifier: isBlackListed [9125,9138]
+                        identifier: _blackListedUser [9139,9155]
+        variable_declaration_statement [9168,9214]
+            variable_declaration [9168,9183]
+                type_name: uint [9168,9172]
+                identifier: dirtyFunds [9173,9183]
+            affectation_operator: = [9184,9185]
+            call_expression [9186,9213]
+                identifier: balanceOf [9186,9195]
+                call_argument [9196,9212]
+                    identifier: _blackListedUser [9196,9212]
+        expression_statement [9224,9255]
+            assignment_expression [9224,9254]
+                array_access [9224,9250]
+                    identifier: balances [9224,9232]
+                    identifier: _blackListedUser [9233,9249]
+                affectation_operator: = [9251,9252]
+                number_literal: 0 [9253,9254]
+        expression_statement [9265,9292]
+            augmented_assignment_expression [9265,9291]
+                identifier: _totalSupply [9265,9277]
+                affectation_operator: -= [9278,9280]
+                identifier: dirtyFunds [9281,9291]
+        expression_statement [9302,9352]
+            call_expression [9302,9351]
+                identifier: DestroyedBlackFunds [9302,9321]
+                call_argument [9322,9338]
+                    identifier: _blackListedUser [9322,9338]
+                call_argument [9340,9350]
+                    identifier: dirtyFunds [9340,9350]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [9367,9434]
+    identifier: DestroyedBlackFunds [9373,9392]
+    event_paramater [9393,9417]
+        type_name: address [9393,9400]
+        identifier: _blackListedUser [9401,9417]
+    event_paramater [9419,9432]
+        type_name: uint [9419,9423]
+        identifier: _balance [9424,9432]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [9442,9478]
+    identifier: AddedBlackList [9448,9462]
+    event_paramater [9463,9476]
+        type_name: address [9463,9470]
+        identifier: _user [9471,9476]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [9486,9524]
+    identifier: RemovedBlackList [9492,9508]
+    event_paramater [9509,9522]
+        type_name: address [9509,9516]
+        identifier: _user [9517,9522]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+contract_declaration [9533,9967]
+    identifier: UpgradedStandardToken [9542,9563]
+    is: is [9564,9566]
+    inheritance_specifier [9567,9580]
+        user_defined_type [9567,9580]
+            identifier: StandardToken [9567,9580]
+    contract_body [9580,9967]
+        function_definition [9710,9781]
+            function: function [9710,9718]
+            identifier: transferByLegacy [9719,9735]
+            parameter [9736,9748]
+                type_name: address [9736,9743]
+                identifier: from [9744,9748]
+            parameter [9750,9760]
+                type_name: address [9750,9757]
+                identifier: to [9758,9760]
+            parameter [9762,9772]
+                type_name: uint [9762,9766]
+                identifier: value [9767,9772]
+            visibility: public [9774,9780]
+        function_definition [9787,9883]
+            function: function [9787,9795]
+            identifier: transferFromByLegacy [9796,9816]
+            parameter [9817,9831]
+                type_name: address [9817,9824]
+                identifier: sender [9825,9831]
+            parameter [9833,9845]
+                type_name: address [9833,9840]
+                identifier: from [9841,9845]
+            parameter [9847,9862]
+                type_name: address [9847,9854]
+                identifier: spender [9855,9862]
+            parameter [9864,9874]
+                type_name: uint [9864,9868]
+                identifier: value [9869,9874]
+            visibility: public [9876,9882]
+        function_definition [9889,9964]
+            function: function [9889,9897]
+            identifier: approveByLegacy [9898,9913]
+            parameter [9914,9926]
+                type_name: address [9914,9921]
+                identifier: from [9922,9926]
+            parameter [9928,9943]
+                type_name: address [9928,9935]
+                identifier: spender [9936,9943]
+            parameter [9945,9955]
+                type_name: uint [9945,9949]
+                identifier: value [9950,9955]
+            visibility: public [9957,9963]
+
+New cluster:
+===
+delete-node
+---
+contract_declaration [9971,14888]
+===
+------------
+===
+delete-node
+---
+function_body [13469,13690]
+===
+===
+delete-node
+---
+function_definition [13921,14158]
+===
+===
+delete-node
+---
+visibility: public [13452,13458]
+===
+===
+delete-node
+---
+function_body [14239,14553]
+===
+===
+delete-node
+---
+contract_declaration [9971,14888]
+===
+===
+delete-node
+---
+returns: returns [12505,12512]
+===
+===
+delete-node
+---
+visibility: public [12097,12103]
+===
+===
+delete-node
+---
+expression_statement [12896,12931]
+===
+===
+delete-node
+---
+function_definition [13424,13690]
+===
+===
+delete-node
+---
+function: function [12436,12444]
+===
+===
+delete-node
+---
+function: function [14166,14174]
+===
+===
+delete-node
+---
+is: is [9992,9994]
+===
+===
+delete-node
+---
+identifier: allowance [12445,12454]
+===
+===
+delete-node
+---
+identifier: TetherToken [9980,9991]
+===
+===
+delete-node
+---
+identifier: setParams [14175,14184]
+===
+===
+delete-node
+---
+affectation_operator: = [12912,12913]
+===
+===
+delete-node
+---
+identifier: issue [13433,13438]
+===
+===
+delete-node
+---
+boolean_literal: true [12881,12885]
+===
+===
+delete-node
+---
+function_definition [12049,12351]
+===
+===
+delete-node
+---
+modifier_invocation [14229,14238]
+===
+===
+delete-node
+---
+return_type_definition [12505,12529]
+===
+===
+delete-node
+---
+function_definition [12795,12976]
+===
+===
+delete-node
+---
+expression_statement [12868,12886]
+===
+===
+delete-node
+---
+identifier: _upgradedAddress [12914,12930]
+===
+===
+delete-node
+---
+parameter [12514,12528]
+===
+===
+delete-node
+---
+visibility: public [13950,13956]
+===
+===
+delete-node
+---
+assignment_expression [12896,12930]
+===
+===
+delete-node
+---
+function: function [12795,12803]
+===
+===
+delete-node
+---
+expression_statement [14339,14368]
+===
+===
+delete-node
+---
+identifier: deprecated [12868,12878]
+===
+===
+delete-node
+---
+expression_statement [12941,12969]
+===
+===
+delete-node
+---
+contract_body [10030,14888]
+===
+===
+delete-node
+---
+function: function [13424,13432]
+===
+===
+delete-node
+---
+function_body [12857,12976]
+===
+===
+delete-node
+---
+identifier: deprecate [12804,12813]
+===
+===
+delete-node
+---
+visibility: public [12840,12846]
+===
+===
+delete-node
+---
+function_definition [12436,12729]
+===
+===
+delete-node
+---
+assignment_expression [12868,12885]
+===
+===
+delete-node
+---
+function_definition [14166,14553]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [9995,10003]
+    user_defined_type [9995,10003]
+        identifier: Pausable [9995,10003]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [10005,10018]
+    user_defined_type [10005,10018]
+        identifier: StandardToken [10005,10018]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+inheritance_specifier [10020,10029]
+    user_defined_type [10020,10029]
+        identifier: BlackList [10020,10029]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [10039,10058]
+    type_name: string [10039,10045]
+    visibility: public [10046,10052]
+    identifier: name [10053,10057]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [10064,10085]
+    type_name: string [10064,10070]
+    visibility: public [10071,10077]
+    identifier: symbol [10078,10084]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [10091,10112]
+    type_name: uint [10091,10095]
+    visibility: public [10096,10102]
+    identifier: decimals [10103,10111]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [10118,10149]
+    type_name: address [10118,10125]
+    visibility: public [10126,10132]
+    identifier: upgradedAddress [10133,10148]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+state_variable_declaration [10155,10178]
+    type_name: bool [10155,10159]
+    visibility: public [10160,10166]
+    identifier: deprecated [10167,10177]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [10481,10777]
+    function: function [10481,10489]
+    identifier: TetherToken [10490,10501]
+    parameter [10502,10521]
+        type_name: uint [10502,10506]
+        identifier: _initialSupply [10507,10521]
+    parameter [10523,10535]
+        type_name: string [10523,10529]
+        identifier: _name [10530,10535]
+    parameter [10537,10551]
+        type_name: string [10537,10543]
+        identifier: _symbol [10544,10551]
+    parameter [10553,10567]
+        type_name: uint [10553,10557]
+        identifier: _decimals [10558,10567]
+    visibility: public [10569,10575]
+    function_body [10576,10777]
+        expression_statement [10587,10617]
+            assignment_expression [10587,10616]
+                identifier: _totalSupply [10587,10599]
+                affectation_operator: = [10600,10601]
+                identifier: _initialSupply [10602,10616]
+        expression_statement [10627,10640]
+            assignment_expression [10627,10639]
+                identifier: name [10627,10631]
+                affectation_operator: = [10632,10633]
+                identifier: _name [10634,10639]
+        expression_statement [10650,10667]
+            assignment_expression [10650,10666]
+                identifier: symbol [10650,10656]
+                affectation_operator: = [10657,10658]
+                identifier: _symbol [10659,10666]
+        expression_statement [10677,10698]
+            assignment_expression [10677,10697]
+                identifier: decimals [10677,10685]
+                affectation_operator: = [10686,10687]
+                identifier: _decimals [10688,10697]
+        expression_statement [10708,10741]
+            assignment_expression [10708,10740]
+                array_access [10708,10723]
+                    identifier: balances [10708,10716]
+                    identifier: owner [10717,10722]
+                affectation_operator: = [10724,10725]
+                identifier: _initialSupply [10726,10740]
+        expression_statement [10751,10770]
+            assignment_expression [10751,10769]
+                identifier: deprecated [10751,10761]
+                affectation_operator: = [10762,10763]
+                boolean_literal: false [10764,10769]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [12084,12095]
+    type_name: uint [12084,12088]
+    identifier: _value [12089,12095]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [12104,12127]
+    identifier: onlyPayloadSize [12104,12119]
+    call_argument [12120,12126]
+        binary_expression [12120,12126]
+            number_literal: 2 [12120,12121]
+            arithmetic_operator: * [12122,12123]
+            number_literal: 32 [12124,12126]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [12128,12351]
+    if_statement [12139,12344]
+        if: if [12139,12141]
+        identifier: deprecated [12143,12153]
+        block_statement [12155,12273]
+            return_statement [12170,12262]
+                return: return [12170,12176]
+                call_expression [12177,12261]
+                    member_expression: UpgradedStandardToken(upgradedAddress).approveByLegacy [12177,12231]
+                    call_argument [12232,12242]
+                        member_expression: msg.sender [12232,12242]
+                    call_argument [12244,12252]
+                        identifier: _spender [12244,12252]
+                    call_argument [12254,12260]
+                        identifier: _value [12254,12260]
+        else: else [12274,12278]
+        block_statement [12279,12344]
+            return_statement [12294,12333]
+                return: return [12294,12300]
+                call_expression [12301,12332]
+                    member_expression: super.approve [12301,12314]
+                    call_argument [12315,12323]
+                        identifier: _spender [12315,12323]
+                    call_argument [12325,12331]
+                        identifier: _value [12325,12331]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [12471,12487]
+    type_name: address [12471,12478]
+    identifier: _spender [12479,12487]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [12496,12504]
+    identifier: constant [12496,12504]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [12530,12729]
+    if_statement [12541,12722]
+        if: if [12541,12543]
+        identifier: deprecated [12545,12555]
+        block_statement [12557,12649]
+            return_statement [12572,12638]
+                return: return [12572,12578]
+                call_expression [12579,12637]
+                    member_expression: StandardToken(upgradedAddress).allowance [12579,12619]
+                    call_argument [12620,12626]
+                        identifier: _owner [12620,12626]
+                    call_argument [12628,12636]
+                        identifier: _spender [12628,12636]
+        else: else [12650,12654]
+        block_statement [12655,12722]
+            return_statement [12670,12711]
+                return: return [12670,12676]
+                call_expression [12677,12710]
+                    member_expression: super.allowance [12677,12692]
+                    call_argument [12693,12699]
+                        identifier: _owner [12693,12699]
+                    call_argument [12701,12709]
+                        identifier: _spender [12701,12709]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [12814,12838]
+    type_name: address [12814,12821]
+    identifier: _upgradedAddress [12822,12838]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [12847,12856]
+    identifier: onlyOwner [12847,12856]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_definition [13042,13260]
+    function: function [13042,13050]
+    identifier: totalSupply [13051,13062]
+    visibility: public [13065,13071]
+    modifier_invocation [13072,13080]
+        identifier: constant [13072,13080]
+    return_type_definition [13081,13095]
+        returns: returns [13081,13088]
+        parameter [13090,13094]
+            type_name: uint [13090,13094]
+    function_body [13096,13260]
+        if_statement [13107,13253]
+            if: if [13107,13109]
+            identifier: deprecated [13111,13121]
+            block_statement [13123,13201]
+                return_statement [13138,13190]
+                    return: return [13138,13144]
+                    call_expression [13145,13189]
+                        member_expression: StandardToken(upgradedAddress).totalSupply [13145,13187]
+            else: else [13202,13206]
+            block_statement [13207,13253]
+                return_statement [13222,13242]
+                    return: return [13222,13228]
+                    identifier: _totalSupply [13229,13241]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [13439,13450]
+    type_name: uint [13439,13443]
+    identifier: amount [13444,13450]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [13459,13468]
+    identifier: onlyOwner [13459,13468]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [13600,13626]
+    augmented_assignment_expression [13600,13625]
+        array_access [13600,13615]
+            identifier: balances [13600,13608]
+            identifier: owner [13609,13614]
+        affectation_operator: += [13616,13618]
+        identifier: amount [13619,13625]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [13636,13659]
+    augmented_assignment_expression [13636,13658]
+        identifier: _totalSupply [13636,13648]
+        affectation_operator: += [13649,13651]
+        identifier: amount [13652,13658]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [13669,13683]
+    call_expression [13669,13682]
+        identifier: Issue [13669,13674]
+        call_argument [13675,13681]
+            identifier: amount [13675,13681]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+modifier_invocation [13957,13966]
+    identifier: onlyOwner [13957,13966]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+function_body [13967,14158]
+    expression_statement [13978,14010]
+        call_expression [13978,14009]
+            identifier: require [13978,13985]
+            call_argument [13986,14008]
+                binary_expression [13986,14008]
+                    identifier: _totalSupply [13986,13998]
+                    comparison_operator: >= [13999,14001]
+                    identifier: amount [14002,14008]
+    expression_statement [14020,14055]
+        call_expression [14020,14054]
+            identifier: require [14020,14027]
+            call_argument [14028,14053]
+                binary_expression [14028,14053]
+                    array_access [14028,14043]
+                        identifier: balances [14028,14036]
+                        identifier: owner [14037,14042]
+                    comparison_operator: >= [14044,14046]
+                    identifier: amount [14047,14053]
+    expression_statement [14067,14090]
+        augmented_assignment_expression [14067,14089]
+            identifier: _totalSupply [14067,14079]
+            affectation_operator: -= [14080,14082]
+            identifier: amount [14083,14089]
+    expression_statement [14100,14126]
+        augmented_assignment_expression [14100,14125]
+            array_access [14100,14115]
+                identifier: balances [14100,14108]
+                identifier: owner [14109,14114]
+            affectation_operator: -= [14116,14118]
+            identifier: amount [14119,14125]
+    expression_statement [14136,14151]
+        call_expression [14136,14150]
+            identifier: Redeem [14136,14142]
+            call_argument [14143,14149]
+                identifier: amount [14143,14149]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parameter [14185,14204]
+    type_name: uint [14185,14189]
+    identifier: newBasisPoints [14190,14204]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [14414,14447]
+    assignment_expression [14414,14446]
+        identifier: basisPointsRate [14414,14429]
+        affectation_operator: = [14430,14431]
+        identifier: newBasisPoints [14432,14446]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [14510,14546]
+    call_expression [14510,14545]
+        identifier: Params [14510,14516]
+        call_argument [14517,14532]
+            identifier: basisPointsRate [14517,14532]
+        call_argument [14534,14544]
+            identifier: maximumFee [14534,14544]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [14602,14627]
+    identifier: Issue [14608,14613]
+    event_paramater [14614,14625]
+        type_name: uint [14614,14618]
+        identifier: amount [14619,14625]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [14675,14701]
+    identifier: Redeem [14681,14687]
+    event_paramater [14688,14699]
+        type_name: uint [14688,14692]
+        identifier: amount [14693,14699]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [14752,14788]
+    identifier: Deprecate [14758,14767]
+    event_paramater [14768,14786]
+        type_name: address [14768,14775]
+        identifier: newAddress [14776,14786]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+event_definition [14838,14885]
+    identifier: Params [14844,14850]
+    event_paramater [14851,14870]
+        type_name: uint [14851,14855]
+        identifier: feeBasisPoints [14856,14870]
+    event_paramater [14872,14883]
+        type_name: uint [14872,14876]
+        identifier: maxFee [14877,14883]
+

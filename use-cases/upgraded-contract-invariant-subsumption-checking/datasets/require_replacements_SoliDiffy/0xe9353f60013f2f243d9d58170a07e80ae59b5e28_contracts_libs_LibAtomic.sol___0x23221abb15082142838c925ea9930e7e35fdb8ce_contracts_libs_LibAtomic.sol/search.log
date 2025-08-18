@@ -1,0 +1,5 @@
+results/differencing_results/0xe9353f60013f2f243d9d58170a07e80ae59b5e28_contracts_libs_LibAtomic.sol___0x23221abb15082142838c925ea9930e7e35fdb8ce_contracts_libs_LibAtomic.sol.log:
+  681  identifier: require [1600,1607]
+  682: replace require by remaining
+  683  
+

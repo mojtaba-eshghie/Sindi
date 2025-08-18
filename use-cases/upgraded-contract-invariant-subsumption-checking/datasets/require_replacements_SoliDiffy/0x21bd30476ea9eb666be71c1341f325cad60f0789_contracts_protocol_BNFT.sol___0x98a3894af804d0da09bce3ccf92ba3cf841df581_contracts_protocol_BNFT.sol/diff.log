@@ -1,0 +1,622 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+import_directive [182,282]
+    import: import [182,188]
+    identifier: StringsUpgradeable [190,208]
+    from: from [210,214]
+    string: "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol" [215,281]
+to
+source_file [0,10430]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: BNFT [1433,1437]
+to
+contract_declaration [1323,10429]
+at 0
+------------
+===
+insert-node
+---
+identifier: BNFT [1433,1437]
+to
+contract_declaration [1323,10429]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1438,1440]
+to
+contract_declaration [1323,10429]
+at 1
+------------
+===
+insert-node
+---
+is: is [1438,1440]
+to
+contract_declaration [1323,10429]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1692,1734]
+    type_name: uint256 [1692,1699]
+    visibility: private [1700,1707]
+    constant: constant [1708,1716]
+    identifier: _NOT_ENTERED [1717,1729]
+    affectation_operator: = [1730,1731]
+    number_literal: 0 [1732,1733]
+to
+contract_body [1432,10429]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1737,1775]
+    type_name: uint256 [1737,1744]
+    visibility: private [1745,1752]
+    constant: constant [1753,1761]
+    identifier: _ENTERED [1762,1770]
+    affectation_operator: = [1771,1772]
+    number_literal: 1 [1773,1774]
+to
+contract_body [1432,10429]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+state_variable_declaration [1778,1802]
+    type_name: uint256 [1778,1785]
+    visibility: private [1786,1793]
+    identifier: _status [1794,1801]
+to
+contract_body [1432,10429]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_definition [2163,2574]
+    modifier: modifier [2163,2171]
+    identifier: nonReentrant [2172,2184]
+    function_body [2187,2574]
+        expression_statement [2260,2324]
+            call_expression [2260,2323]
+                identifier: require [2260,2267]
+                call_argument [2268,2287]
+                    binary_expression [2268,2287]
+                        identifier: _status [2268,2275]
+                        comparison_operator: != [2276,2278]
+                        identifier: _ENTERED [2279,2287]
+                call_argument [2289,2322]
+                    string_literal [2289,2322]
+                        string: "ReentrancyGuard: reentrant call" [2289,2322]
+        expression_statement [2390,2409]
+            assignment_expression [2390,2408]
+                identifier: _status [2390,2397]
+                affectation_operator: = [2398,2399]
+                identifier: _ENTERED [2400,2408]
+        expression_statement [2415,2417]
+            identifier: _ [2415,2416]
+        expression_statement [2547,2570]
+            assignment_expression [2547,2569]
+                identifier: _status [2547,2554]
+                affectation_operator: = [2555,2556]
+                identifier: _NOT_ENTERED [2557,2569]
+to
+contract_body [1432,10429]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+function_definition [7782,8039]
+    function: function [7782,7790]
+    identifier: contractURI [7791,7802]
+    visibility: external [7805,7813]
+    state_mutability [7814,7818]
+        view: view [7814,7818]
+    override_specifier [7819,7827]
+        override: override [7819,7827]
+    return_type_definition [7828,7851]
+        returns: returns [7828,7835]
+        parameter [7837,7850]
+            type_name: string [7837,7843]
+            memory: memory [7844,7850]
+    function_body [7852,8039]
+        variable_declaration_statement [7858,7953]
+            variable_declaration [7858,7882]
+                type_name: string [7858,7864]
+                memory: memory [7865,7871]
+                identifier: hexAddress [7872,7882]
+            affectation_operator: = [7883,7884]
+            call_expression [7885,7952]
+                member_expression: StringsUpgradeable.toHexString [7885,7915]
+                call_argument [7916,7947]
+                    type_cast_expression [7916,7947]
+                        primitive_type: uint256 [7916,7923]
+                        call_argument [7924,7946]
+                            type_cast_expression [7924,7946]
+                                primitive_type: uint160 [7924,7931]
+                                call_argument [7932,7945]
+                                    type_cast_expression [7932,7945]
+                                        primitive_type: address [7932,7939]
+                                        call_argument [7940,7944]
+                                            identifier: this [7940,7944]
+                call_argument [7949,7951]
+                    number_literal: 20 [7949,7951]
+        return_statement [7958,8035]
+            return: return [7958,7964]
+            type_cast_expression [7965,8034]
+                primitive_type: string [7965,7971]
+                call_argument [7972,8033]
+                    call_expression [7972,8033]
+                        member_expression: abi.encodePacked [7972,7988]
+                        call_argument [7989,8020]
+                            string_literal [7989,8020]
+                                string: "https://metadata.benddao.xyz/" [7989,8020]
+                        call_argument [8022,8032]
+                            identifier: hexAddress [8022,8032]
+to
+contract_body [1432,10429]
+at 17
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [4763,4775]
+    identifier: nonReentrant [4763,4775]
+to
+function_definition [3709,4305]
+at 6
+
+New cluster:
+===
+insert-node
+---
+modifier_invocation [5604,5616]
+to
+function_definition [4487,5045]
+at 5
+------------
+===
+insert-node
+---
+modifier_invocation [5604,5616]
+to
+function_definition [4487,5045]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [6218,6230]
+    identifier: nonReentrant [6218,6230]
+to
+function_definition [5094,6501]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [8147,8159]
+    identifier: nonReentrant [8147,8159]
+to
+function_definition [6731,7031]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [8549,8561]
+    identifier: nonReentrant [8549,8561]
+to
+function_definition [7035,7421]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+modifier_invocation [9086,9098]
+    identifier: nonReentrant [9086,9098]
+to
+function_definition [7425,7848]
+at 9
+
+New cluster:
+===
+insert-node
+---
+variable_declaration_statement [4782,4838]
+to
+function_body [3770,4305]
+at 0
+------------
+===
+insert-node
+---
+affectation_operator: = [4792,4793]
+to
+variable_declaration_statement [4782,4838]
+at 1
+===
+insert-node
+---
+variable_declaration [4782,4791]
+to
+variable_declaration_statement [4782,4838]
+at 0
+===
+insert-node
+---
+variable_declaration_statement [4782,4838]
+to
+function_body [3770,4305]
+at 0
+===
+insert-node
+---
+type_name: bool [4782,4786]
+to
+variable_declaration [4782,4791]
+at 0
+
+New cluster:
+===
+insert-node
+---
+if_statement [4843,4922]
+to
+function_body [3770,4305]
+at 1
+------------
+===
+insert-node
+---
+block_statement [4854,4922]
+to
+if_statement [4843,4922]
+at 2
+===
+insert-node
+---
+expression_statement [4862,4916]
+to
+block_statement [4854,4922]
+at 0
+===
+insert-node
+---
+if_statement [4843,4922]
+to
+function_body [3770,4305]
+at 1
+===
+insert-node
+---
+identifier: require [4862,4869]
+to
+call_expression [4862,4915]
+at 0
+===
+insert-node
+---
+if: if [4843,4845]
+to
+if_statement [4843,4922]
+at 0
+===
+insert-node
+---
+call_expression [4862,4915]
+to
+expression_statement [4862,4916]
+at 0
+
+New cluster:
+UPDATE from require to nonReentrant
+------------
+===
+update-node
+---
+identifier: require [4542,4549]
+replace require by nonReentrant
+
+New cluster:
+MOVE from modifier_invocation [5604,5616]
+------------
+===
+move-tree
+---
+identifier: require [4542,4549]
+to
+modifier_invocation [5604,5616]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8259,8330]
+    call_expression [8259,8329]
+        identifier: require [8259,8266]
+        call_argument [8267,8289]
+            binary_expression [8267,8289]
+                identifier: token [8267,8272]
+                comparison_operator: != [8273,8275]
+                type_cast_expression [8276,8289]
+                    primitive_type: address [8276,8283]
+                    call_argument [8284,8288]
+                        identifier: this [8284,8288]
+        call_argument [8291,8328]
+            string_literal [8291,8328]
+                string: "BNFT: token can not be self address" [8291,8328]
+to
+function_body [6845,7031]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [8661,8732]
+    call_expression [8661,8731]
+        identifier: require [8661,8668]
+        call_argument [8669,8691]
+            binary_expression [8669,8691]
+                identifier: token [8669,8674]
+                comparison_operator: != [8675,8677]
+                type_cast_expression [8678,8691]
+                    primitive_type: address [8678,8685]
+                    call_argument [8686,8690]
+                        identifier: this [8686,8690]
+        call_argument [8693,8730]
+            string_literal [8693,8730]
+                string: "BNFT: token can not be self address" [8693,8730]
+to
+function_body [7158,7421]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [9198,9269]
+    call_expression [9198,9268]
+        identifier: require [9198,9205]
+        call_argument [9206,9228]
+            binary_expression [9206,9228]
+                identifier: token [9206,9211]
+                comparison_operator: != [9212,9214]
+                type_cast_expression [9215,9228]
+                    primitive_type: address [9215,9222]
+                    call_argument [9223,9227]
+                        identifier: this [9223,9227]
+        call_argument [9230,9267]
+            string_literal [9230,9267]
+                string: "BNFT: token can not be self address" [9230,9267]
+to
+function_body [7606,7848]
+at 1
+
+New cluster:
+MOVE from variable_declaration_statement [4782,4838]
+------------
+===
+move-tree
+---
+call_expression [4550,4593]
+    member_expression: AddressUpgradeable.isContract [4550,4579]
+    call_argument [4580,4592]
+        call_expression [4580,4592]
+            identifier: _msgSender [4580,4590]
+to
+variable_declaration_statement [4782,4838]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [4847,4852]
+    !: ! [4847,4848]
+    identifier: isCA [4848,4852]
+to
+if_statement [4843,4922]
+at 1
+
+New cluster:
+UPDATE from require to isCA
+------------
+===
+update-node
+---
+identifier: require [3776,3783]
+replace require by isCA
+
+New cluster:
+MOVE from call_expression [4862,4915]
+------------
+===
+move-tree
+---
+call_argument [3829,3859]
+    string_literal [3829,3859]
+        string: "BNFT: caller is not contract" [3829,3859]
+to
+call_expression [4862,4915]
+at 2
+===
+move-tree
+---
+identifier: require [3776,3783]
+to
+variable_declaration [4782,4791]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [4870,4888]
+    binary_expression [4870,4888]
+        identifier: to [4870,4872]
+        comparison_operator: == [4873,4875]
+        call_expression [4876,4888]
+            identifier: _msgSender [4876,4886]
+to
+call_expression [4862,4915]
+at 1
+
+New cluster:
+UPDATE from "BNFT: caller is not contract" to "BNFT: caller is not to"
+------------
+===
+update-node
+---
+string: "BNFT: caller is not contract" [3829,3859]
+replace "BNFT: caller is not contract" by "BNFT: caller is not to"
+
+New cluster:
+===
+delete-node
+---
+identifier: BNFT [1332,1336]
+===
+------------
+===
+delete-node
+---
+identifier: BNFT [1332,1336]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1337,1339]
+===
+------------
+===
+delete-node
+---
+is: is [1337,1339]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [3784,3827]
+    call_expression [3784,3827]
+        member_expression: AddressUpgradeable.isContract [3784,3813]
+        call_argument [3814,3826]
+            call_expression [3814,3826]
+                identifier: _msgSender [3814,3824]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [3776,3861]
+===
+------------
+===
+delete-node
+---
+expression_statement [3776,3861]
+===
+===
+delete-node
+---
+call_expression [3776,3860]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [4542,4627]
+===
+------------
+===
+delete-node
+---
+call_expression [4542,4626]
+===
+===
+delete-node
+---
+expression_statement [4542,4627]
+===
+===
+delete-node
+---
+call_argument [4550,4593]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_argument [4595,4625]
+    string_literal [4595,4625]
+        string: "BNFT: caller is not contract" [4595,4625]
+

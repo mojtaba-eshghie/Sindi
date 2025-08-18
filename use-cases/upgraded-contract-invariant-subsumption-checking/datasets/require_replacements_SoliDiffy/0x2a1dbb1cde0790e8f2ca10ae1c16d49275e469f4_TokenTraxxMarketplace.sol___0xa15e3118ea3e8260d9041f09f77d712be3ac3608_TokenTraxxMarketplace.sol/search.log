@@ -1,0 +1,9 @@
+results/differencing_results/0x2a1dbb1cde0790e8f2ca10ae1c16d49275e469f4_TokenTraxxMarketplace.sol___0xa15e3118ea3e8260d9041f09f77d712be3ac3608_TokenTraxxMarketplace.sol.log:
+  17712  identifier: require [107350,107357]
+  17713: replace require by isPrivileged
+  17714  
+
+  18703  identifier: require [107650,107657]
+  18704: replace require by _price
+  18705  
+

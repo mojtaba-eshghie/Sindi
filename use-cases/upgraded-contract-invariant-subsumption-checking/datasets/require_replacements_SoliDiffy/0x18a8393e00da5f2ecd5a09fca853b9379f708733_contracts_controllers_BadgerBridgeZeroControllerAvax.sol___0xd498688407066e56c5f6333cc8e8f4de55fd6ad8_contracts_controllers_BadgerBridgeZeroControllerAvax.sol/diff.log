@@ -1,0 +1,425 @@
+New cluster:
+===
+insert-node
+---
+identifier: BadgerBridgeZeroControllerAvax [1662,1692]
+to
+contract_declaration [1653,23427]
+at 0
+------------
+===
+insert-node
+---
+identifier: BadgerBridgeZeroControllerAvax [1662,1692]
+to
+contract_declaration [1653,23427]
+at 0
+
+New cluster:
+===
+insert-node
+---
+is: is [1693,1695]
+to
+contract_declaration [1653,23427]
+at 1
+------------
+===
+insert-node
+---
+is: is [1693,1695]
+to
+contract_declaration [1653,23427]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+variable_declaration_statement [12551,12564]
+    variable_declaration [12551,12563]
+        type_name: bool [12551,12555]
+        identifier: success [12556,12563]
+to
+block_statement [12433,12846]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [12643,12723]
+    assignment_expression [12643,12722]
+        tuple_expression [12643,12654]
+            identifier: success [12644,12651]
+        affectation_operator: = [12655,12656]
+        call_expression [12657,12722]
+            struct_expression [12657,12718]
+                member_expression: governancePayable.call [12657,12679]
+                struct_field_assignment [12681,12700]
+                    identifier: value [12681,12686]
+                    :: : [12686,12687]
+                    identifier: toGovernance [12688,12700]
+                struct_field_assignment [12702,12716]
+                    identifier: gas [12702,12705]
+                    :: : [12705,12706]
+                    call_expression [12707,12716]
+                        identifier: gasleft [12707,12714]
+            call_argument [12719,12721]
+                string_literal [12719,12721]
+                    string: "" [12719,12721]
+to
+block_statement [12433,12846]
+at 4
+
+New cluster:
+===
+insert-node
+---
+expression_statement [12857,12949]
+to
+block_statement [12433,12846]
+at 7
+------------
+===
+insert-node
+---
+affectation_operator: = [12869,12870]
+to
+assignment_expression [12857,12948]
+at 1
+===
+insert-node
+---
+tuple_expression [12857,12868]
+to
+assignment_expression [12857,12948]
+at 0
+===
+insert-node
+---
+expression_statement [12857,12949]
+to
+block_statement [12433,12846]
+at 7
+===
+insert-node
+---
+assignment_expression [12857,12948]
+to
+expression_statement [12857,12949]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [12956,13004]
+to
+block_statement [12433,12846]
+at 8
+------------
+===
+insert-node
+---
+expression_statement [12956,13004]
+to
+block_statement [12433,12846]
+at 8
+===
+insert-node
+---
+identifier: require [12956,12963]
+to
+call_expression [12956,13003]
+at 0
+===
+insert-node
+---
+call_expression [12956,13003]
+to
+expression_statement [12956,13004]
+at 0
+
+New cluster:
+MOVE from call_expression [12623,12685]
+------------
+===
+move-tree
+---
+call_argument [12654,12666]
+    identifier: toGovernance [12654,12666]
+to
+call_expression [12623,12685]
+at 1
+
+New cluster:
+MOVE from assignment_expression [12857,12948]
+------------
+===
+move-tree
+---
+call_expression [12773,12821]
+    member_expression: strategistPayable.send [12773,12795]
+    call_argument [12796,12820]
+        call_expression [12796,12820]
+            member_expression: output.sub [12796,12806]
+            call_argument [12807,12819]
+                identifier: toGovernance [12807,12819]
+to
+assignment_expression [12857,12948]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12964,12971]
+    identifier: success [12964,12971]
+to
+call_expression [12956,13003]
+at 1
+
+New cluster:
+MOVE from call_expression [12956,13003]
+------------
+===
+move-tree
+---
+call_argument [12823,12838]
+    string_literal [12823,12838]
+        string: "error on send" [12823,12838]
+to
+call_expression [12956,13003]
+at 2
+===
+move-tree
+---
+identifier: require [12765,12772]
+to
+tuple_expression [12857,12868]
+at 0
+
+New cluster:
+UPDATE from toGovernance to success
+------------
+===
+update-node
+---
+identifier: toGovernance [12654,12666]
+replace toGovernance by success
+===
+update-node
+---
+identifier: require [12765,12772]
+replace require by success
+
+New cluster:
+===
+insert-node
+---
+struct_expression [12871,12944]
+to
+call_expression [12773,12821]
+at 0
+------------
+===
+insert-node
+---
+struct_field_assignment [12895,12926]
+to
+struct_expression [12871,12944]
+at 1
+===
+insert-node
+---
+struct_expression [12871,12944]
+to
+call_expression [12773,12821]
+at 0
+===
+insert-node
+---
+:: : [12900,12901]
+to
+struct_field_assignment [12895,12926]
+at 1
+===
+insert-node
+---
+identifier: value [12895,12900]
+to
+struct_field_assignment [12895,12926]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_argument [12945,12947]
+    string_literal [12945,12947]
+        string: "" [12945,12947]
+to
+call_expression [12773,12821]
+at 1
+
+New cluster:
+UPDATE from "error on send" to "error sending to governance"
+------------
+===
+update-node
+---
+string: "error on send" [12669,12684]
+replace "error on send" by "error sending to governance"
+
+New cluster:
+UPDATE from strategistPayable.send to strategistPayable.call
+------------
+===
+update-node
+---
+member_expression: strategistPayable.send [12773,12795]
+replace strategistPayable.send by strategistPayable.call
+
+New cluster:
+MOVE from struct_expression [12871,12944]
+------------
+===
+move-tree
+---
+member_expression: strategistPayable.send [12773,12795]
+to
+struct_expression [12871,12944]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+struct_field_assignment [12928,12942]
+    identifier: gas [12928,12931]
+    :: : [12931,12932]
+    call_expression [12933,12942]
+        identifier: gasleft [12933,12940]
+to
+struct_expression [12871,12944]
+at 2
+
+New cluster:
+UPDATE from "error on send" to "error sending to strategist"
+------------
+===
+update-node
+---
+string: "error on send" [12823,12838]
+replace "error on send" by "error sending to strategist"
+
+New cluster:
+MOVE from struct_field_assignment [12895,12926]
+------------
+===
+move-tree
+---
+call_expression [12796,12820]
+    member_expression: output.sub [12796,12806]
+    call_argument [12807,12819]
+        identifier: toGovernance [12807,12819]
+to
+struct_field_assignment [12895,12926]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: BadgerBridgeZeroControllerAvax [1662,1692]
+===
+------------
+===
+delete-node
+---
+identifier: BadgerBridgeZeroControllerAvax [1662,1692]
+===
+
+New cluster:
+===
+delete-node
+---
+is: is [1693,1695]
+===
+------------
+===
+delete-node
+---
+is: is [1693,1695]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [12631,12667]
+===
+------------
+===
+delete-node
+---
+call_argument [12631,12667]
+===
+===
+delete-node
+---
+call_expression [12631,12667]
+===
+===
+delete-node
+---
+member_expression: governancePayable.send [12631,12653]
+===
+
+New cluster:
+===
+delete-node
+---
+call_argument [12796,12820]
+===
+------------
+===
+delete-node
+---
+call_argument [12796,12820]
+===
+
+New cluster:
+===
+delete-node
+---
+expression_statement [12765,12840]
+===
+------------
+===
+delete-node
+---
+call_expression [12765,12839]
+===
+===
+delete-node
+---
+call_argument [12773,12821]
+===
+===
+delete-node
+---
+expression_statement [12765,12840]
+===
+

@@ -1,0 +1,5 @@
+results/differencing_results/0x2ef01ae8abd9a6af9ebd882c1021f445f87aecdf_contracts_ElmoSOLID.sol___0x68fd40fb0713a35627c98ba9549c7cced73827f9_contracts_ElmoSOLID.sol.log:
+  24  identifier: require [2138,2145]
+  25: replace require by whenNotPaused
+  26  
+

@@ -1,0 +1,5 @@
+results/differencing_results/0xc62e56e756a3d14fff838e820f38d845a16d49de_contracts_CelerIM_CrossChainAdapter.sol___0x4aa471ca56a6188d50d0b401b982ed286ac098d7_contracts_CelerIM_CrossChainAdapter.sol.log:
+  3005  identifier: require [17436,17443]
+  3006: replace require by _transferToCollateral
+  3007  
+

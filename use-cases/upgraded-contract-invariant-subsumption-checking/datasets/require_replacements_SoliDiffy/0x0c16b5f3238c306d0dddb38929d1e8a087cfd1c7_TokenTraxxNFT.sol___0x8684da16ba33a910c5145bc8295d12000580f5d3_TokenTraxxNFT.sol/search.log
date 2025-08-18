@@ -1,0 +1,9 @@
+results/differencing_results/0x0c16b5f3238c306d0dddb38929d1e8a087cfd1c7_TokenTraxxNFT.sol___0x8684da16ba33a910c5145bc8295d12000580f5d3_TokenTraxxNFT.sol.log:
+  12100  identifier: require [27910,27917]
+  12101: replace require by _requireMinted
+  12102  ===
+
+  12105  identifier: require [29267,29274]
+  12106: replace require by _requireMinted
+  12107  
+
