@@ -28,9 +28,6 @@ class Rewriter:
 
     # Bare _owner / owner -> owner()
     _BARE__OWNER = re.compile(r"(?<!\.)\b_owner\b")
-    # Bare 'owner' (not member access foo.owner, not a call owner(), not part of ownerOf)
-    # Preceding char must NOT be dot or a word char; following must NOT start a '('.
-    # This matches start-of-string, whitespace, operators, etc.
     _BARE_OWNER = re.compile(r"(?<![\.\w])owner(?!\s*\()", flags=0)
 
     # Interface ID literals
@@ -39,7 +36,6 @@ class Rewriter:
         re.compile(r"\b0x80ac58cd\b", re.IGNORECASE): "type(IERC721).interfaceId",
         re.compile(r"\b0xd9b67a26\b", re.IGNORECASE): "type(IERC1155).interfaceId",
     }
-    # Normalize any spaced form of type(IERCX).interfaceId to a single canonical text
     _TYPE_IFACE_NORMALIZER = re.compile(
         r"\btype\s*\(\s*(IERC20|IERC721|IERC1155)\s*\)\s*\.\s*interfaceId\b"
     )
@@ -51,7 +47,7 @@ class Rewriter:
     _SM_DIV = re.compile(r"\bSafeMath\s*\.\s*div\s*\(\s*([^,()]+?)\s*,\s*([^)]+?)\s*\)")
     _SM_MOD = re.compile(r"\bSafeMath\s*\.\s*mod\s*\(\s*([^,()]+?)\s*,\s*([^)]+?)\s*\)")
 
-    # SafeMath (extension methods) — works with a.balances[idx].add(x) etc.
+    # SafeMath (extension methods)
     _EXT_ADD = re.compile(r"(\b[A-Za-z_]\w*(?:\[[^\]]+\])?(?:\.[A-Za-z_]\w*(?:\[[^\]]+\])?)*)\s*\.s*add\s*\(\s*([^)]+?)\s*\)")
     _EXT_SUB = re.compile(r"(\b[A-Za-z_]\w*(?:\[[^\]]+\])?(?:\.[A-Za-z_]\w*(?:\[[^\]]+\])?)*)\s*\.s*sub\s*\(\s*([^)]+?)\s*\)")
     _EXT_MUL = re.compile(r"(\b[A-Za-z_]\w*(?:\[[^\]]+\])?(?:\.[A-Za-z_]\w*(?:\[[^\]]+\])?)*)\s*\.s*mul\s*\(\s*([^)]+?)\s*\)")
@@ -59,6 +55,18 @@ class Rewriter:
     _EXT_MOD = re.compile(r"(\b[A-Za-z_]\w*(?:\[[^\]]+\])?(?:\.[A-Za-z_]\w*(?:\[[^\]]+\])?)*)\s*\.s*mod\s*\(\s*([^)]+?)\s*\)")
 
     _ETH_MULT = {"ether": 10**18, "gwei": 10**9, "wei": 1}
+
+    # ---------------- NEW: parenthesized assignment and finalization mask ----------------
+    # Replace occurrences of '(var = expr)' with 'expr' (single '=' only).
+    _PAREN_ASSIGN = re.compile(
+        r"\(\s*([A-Za-z_]\w*)\s*=\s*(.*?)\s*\)"
+    )
+
+    # (X & MarketplaceLib.FLAG_MASK_FINALIZED) == 0  -->  !MarketplaceLib.isFinalized(X)
+    _FINALIZED_CLEAR = re.compile(
+        r"\(\s*(?P<x>[^()]+?)\s*&\s*MarketplaceLib\.FLAG_MASK_FINALIZED\s*\)\s*==\s*0"
+    )
+    # -------------------------------------------------------------------------------------
 
     def apply(self, s: str) -> str:
         # 1) Trivial textual normalizations
@@ -73,7 +81,6 @@ class Rewriter:
         # 3) Interface IDs (hex -> type(...).interfaceId)
         for pat, repl in self._IFACE_MAP.items():
             s = pat.sub(repl, s)
-        # Normalize any spaced `type(IERCX).interfaceId`
         s = self._TYPE_IFACE_NORMALIZER.sub(lambda m: f"type({m.group(1)}).interfaceId", s)
 
         # 4) Owner forms
@@ -82,6 +89,19 @@ class Rewriter:
 
         # 5) Ether unit canonicalization to raw wei integer
         s = self._canon_ether_units(s)
+
+        # ---------------- NEW: strip parenthesized assignments ----------------
+        # Apply repeatedly in case there are multiple occurrences.
+        while True:
+            new_s = self._PAREN_ASSIGN.sub(lambda m: m.group(2), s)
+            if new_s == s:
+                break
+            s = new_s
+        # ----------------------------------------------------------------------
+
+        # ---------------- NEW: bitmask → library predicate canonicalization ----
+        s = self._FINALIZED_CLEAR.sub(lambda m: f"!MarketplaceLib.isFinalized({m.group('x').strip()})", s)
+        # ----------------------------------------------------------------------
 
         # 6) SafeMath → operators (iterate a few times to catch nested cases)
         for _ in range(4):
@@ -104,23 +124,19 @@ class Rewriter:
         return s
 
     # ----- helpers -----
-
     def _canon_ether_units(self, s: str) -> str:
-        # 10**K wei  → integer
         def _pow10_to_int(m):
             k = int(m.group(1))
             return str(10 ** k)
 
         s = self._WEI_POW10.sub(_pow10_to_int, s)
 
-        # 1e18 wei → integer
         def _sci_to_int(m):
             n = m.group(1)
             return str(int(Decimal(n)))
 
         s = self._WEI_SCI.sub(_sci_to_int, s)
 
-        # N ether/gwei/wei → integer wei
         def _simple_to_wei(m):
             n = int(m.group(1))
             unit = m.group(2).lower()
