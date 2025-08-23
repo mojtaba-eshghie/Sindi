@@ -56,10 +56,10 @@ class Rewriter:
 
     _ETH_MULT = {"ether": 10**18, "gwei": 10**9, "wei": 1}
 
-    # ---------------- NEW: parenthesized assignment and finalization mask ----------------
+    # ---------------- Parenthesized assignment and finalization mask ----------------
     # Replace occurrences of '(var = expr)' with 'expr' (single '=' only).
     _PAREN_ASSIGN = re.compile(
-        r"\(\s*([A-Za-z_]\w*)\s*=\s*(.*?)\s*\)"
+        r"\(\s*([A-Za-z_]\w*)\s*=\s*(?![=])(.*?)\s*\)"
     )
 
     # (X & MarketplaceLib.FLAG_MASK_FINALIZED) == 0  -->  !MarketplaceLib.isFinalized(X)
