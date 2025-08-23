@@ -7,6 +7,7 @@ from src.sindi.simplifier import Simplifier
 from src.sindi.rewriter import Rewriter
 from src.sindi.utils import printer
 import z3
+import re
 
 
 class Comparator:
@@ -51,16 +52,7 @@ class Comparator:
         # Convert ASTs to SymPy expressions
         expr1 = self._to_sympy_expr(ast1)
         expr2 = self._to_sympy_expr(ast2)
-
-
-        printer('*' * 140)
-        printer('*' * 140)
-        printer(f"expr1 this time is: {self.simplifier._to_sympy(ast1)}")
-        printer(f"expr2 this time is: {self.simplifier._to_sympy(ast2)}")
-        printer('*' * 140)
-        printer('*' * 140)
-
-        
+     
         printer(f'> expr1: {expr1}')
         printer(f'> expr2: {expr2}')
 
@@ -134,6 +126,19 @@ class Comparator:
         return False
 
     def _to_sympy_expr(self, ast):
+        def _sanitize_sym_name(s: str) -> str:
+            # keep alnum/underscore; collapse others to single '_'
+            s = re.sub(r"[^A-Za-z0-9_]", "_", str(s))
+            s = re.sub(r"_+", "_", s).strip("_")
+            return s or "sym"
+
+        def _symbol_from_call(func_name: str, arg_exprs):
+            # include args in the symbol name for disambiguation
+            parts = [_sanitize_sym_name(func_name)]
+            if arg_exprs:
+                parts.extend(_sanitize_sym_name(a) for a in arg_exprs)
+            return sp.Symbol("__".join(parts))
+
         if not ast.children:
             try:
                 return sp.Number(float(ast.value)) if '.' in ast.value else sp.Number(int(ast.value))
@@ -145,20 +150,19 @@ class Comparator:
                     return sp.false
                 return sp.Symbol(ast.value.replace('.', '_'))
 
-        # Handle indexed attributes: a[b].c
+        
+        # Handle indexed attributes: a[b].c  -> symbolic atom with args baked in
         if '[]' in ast.value and '.' in ast.value:
-            # Create a single function name from the complex expression
-            # e.g., "coinMap[].coinContract.balanceOf()" becomes a function call
             func_name = ast.value.replace('[]', '').replace('()', '').replace('.', '_')
             args = [self._to_sympy_expr(child) for child in ast.children]
-            return sp.Function(func_name)(*args)
+            return _symbol_from_call(func_name, args)
 
         # Handle indexing without attributes: a[b]
         if '[]' in ast.value:
             base_name = ast.value.replace('[]', '')
             base = sp.IndexedBase(base_name)
             index = self._to_sympy_expr(ast.children[0])
-            return base[index]
+            return _symbol_from_call(base_name, [index])
 
         args = [self._to_sympy_expr(child) for child in ast.children]
         
@@ -198,8 +202,9 @@ class Comparator:
         elif ast.value == '*':
             return sp.Mul(*args)
         elif '()' in ast.value:
-            func_name = ast.value.replace('()', '')
-            return sp.Function(func_name)(*args)
+            # Treat calls as Boolean/unknown atoms so And/Or/Not accept them
+            func_name = ast.value.replace('()', '').replace('.', '_')
+            return _symbol_from_call(func_name, args)
 
         return sp.Symbol(ast.value.replace('.', '_'))
 

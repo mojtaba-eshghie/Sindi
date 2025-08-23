@@ -57,7 +57,8 @@
             ["fee == 10**18 wei", "fee == 1000000000000000000"],
             ["x == 1e18 wei", "x == 1000000000000000000"],
             ["to != 0x0000000000000000000000000000000000000000", "to != address(0)"],
-            ["x == 0x80ac58cd", "x == type(IERC721).interfaceId"]
+            ["x == 0x80ac58cd", "x == type(IERC721).interfaceId"],
+            ["_msgSender() == owner || isApprovedForAll(owner, _msgSender())", "_msgSender() == owner || isApprovedForAll(owner, _msgSender())"]
         ],
         "The predicates are not equivalent and neither is stronger.": [
             ["a > 0", "a < 0"],
