@@ -166,6 +166,6 @@ cython_debug/
 private_datasets/*.csv
 *.csv
 private_datasets/*/*.csv
-*.pdf
+
 
 src/predi/*.backup.*
