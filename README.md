@@ -1,14 +1,14 @@
-# Δ SInDi — Semantic Invariant Differencing for Solidity Smart Contracts
+# Δ Sindi: Semantic Invariant Differencing for Solidity Smart Contracts
 
-SInDi compares two Solidity boolean predicates (e.g., the guards in `require`/`assert`) and decides whether they are **equivalent**, **one is stronger**, or **unrelated**. It’s designed to survive real-world Solidity syntax variations across versions and frameworks (e.g., OpenZeppelin patterns) by normalizing source, tokenizing, parsing to an AST, and reasoning over the structure.
+Sindi compares two Solidity boolean predicates (e.g., the guards in `require`/`assert`) and decides whether they are **equivalent**, **one is stronger**, or **unrelated**. It’s designed to survive real-world Solidity syntax variations across versions and frameworks (e.g., OpenZeppelin patterns) by normalizing source, tokenizing, parsing to an AST, and reasoning over the structure.
 
 ---
 
-## Why SInDi?
+## Why Sindi?
 
-* **Contract evolution:** When you refactor or upgrade a contract (proxy patterns, library changes, Solidity version bumps), the *same* invariant often appears in a different syntactic form. SInDi checks whether behavior is preserved.
-* **Invariant denoising:** Auto-mined invariants can be redundant or weak. SInDi helps find equivalences and strength relationships to keep only the strongest set.
-* **Fast iteration:** The API lets you run individual stages (rewrite → tokenize → parse → simplify → compare), so you can see what SInDi “understands” at each step.
+* **Contract evolution:** When you refactor or upgrade a contract (proxy patterns, library changes, Solidity version bumps), the *same* invariant often appears in a different syntactic form. Sindi checks whether behavior is preserved.
+* **Invariant denoising:** Auto-mined invariants can be redundant or weak. Sindi helps find equivalences and strength relationships to keep only the strongest set.
+* **Fast iteration:** The API lets you run individual stages (rewrite → tokenize → parse → simplify → compare), so you can see what Sindi “understands” at each step.
 
 ---
 
@@ -48,7 +48,7 @@ SInDi compares two Solidity boolean predicates (e.g., the guards in `require`/`a
 ### From PyPI
 
 ```bash
-pip install sindi
+pip install Sindi
 ```
 
 ### From source (this repo)
@@ -70,11 +70,11 @@ We pin SymPy in `requirements.txt`. The full comparator uses `z3-solver` (alread
 The new CLI is exposed by `main.py` with subcommands:
 
 ```
-sindi rewrite   <predicate> [--from-file]
-sindi tokenize  <predicate> [--from-file] [--skip-rewrite] [--json]
-sindi parse     <predicate> [--from-file] [--skip-rewrite] [--tree|--json]
-sindi simplify  <predicate> [--from-file] [--skip-rewrite] [--show-sympy] [--json]
-sindi compare   <p1> <p2> [--p1-file] [--p2-file] [--light] [--verbose|--json] [--debug-logs]
+Sindi rewrite   <predicate> [--from-file]
+Sindi tokenize  <predicate> [--from-file] [--skip-rewrite] [--json]
+Sindi parse     <predicate> [--from-file] [--skip-rewrite] [--tree|--json]
+Sindi simplify  <predicate> [--from-file] [--skip-rewrite] [--show-sympy] [--json]
+Sindi compare   <p1> <p2> [--p1-file] [--p2-file] [--light] [--verbose|--json] [--debug-logs]
 ```
 
 Run via Python:
@@ -128,7 +128,7 @@ By default, the CLI silences internal debug prints.
 Enable logs with:
 
 * `--debug-logs` (per-command), or
-* `SINDI_QUIET=0` (environment variable)
+* `Sindi_QUIET=0` (environment variable)
 
 ---
 
@@ -137,7 +137,7 @@ Enable logs with:
 If you installed from PyPI:
 
 ```python
-from src.sindi.comparator import Comparator
+from src.Sindi.comparator import Comparator
 
 cmp = Comparator()
 print(cmp.compare("a < b", "a <= b"))
@@ -147,7 +147,7 @@ print(cmp.compare("a < b", "a <= b"))
 From source (without installing the package), set your `PYTHONPATH` or use relative imports:
 
 ```bash
-PYTHONPATH=src:. python -c 'from src.sindi.comparator import Comparator; \
+PYTHONPATH=src:. python -c 'from src.Sindi.comparator import Comparator; \
 print(Comparator().compare("a > b", "a < b"))'
 # The predicates are not equivalent and neither is stronger.
 ```
@@ -155,10 +155,10 @@ print(Comparator().compare("a > b", "a < b"))'
 You can also use building blocks:
 
 ```python
-from src.sindi.rewriter import Rewriter
-from src.sindi.tokenizer import Tokenizer
-from src.sindi.parser import Parser
-from src.sindi.simplifier import Simplifier
+from src.Sindi.rewriter import Rewriter
+from src.Sindi.tokenizer import Tokenizer
+from src.Sindi.parser import Parser
+from src.Sindi.simplifier import Simplifier
 
 rw, tk, sp = Rewriter(), Tokenizer(), Simplifier()
 
@@ -193,7 +193,7 @@ simplified_ast = sp.simplify(ast)
 A lightweight comparator (no Z3, purely structural/rewrites/AST reasoning) can be provided at:
 
 ```
-src/sindi/comparator_rules.py
+src/Sindi/comparator_rules.py
 ```
 
 If present, the CLI gains `--light`. Some **light** tests (`tests/test_cli_light.py`) will run only if this file exists; otherwise they are skipped. The **full** test suite does not require it.
@@ -245,7 +245,7 @@ PYTHONPATH=src:. pytest -q tests/test_cli_light.py
 * **Division:** We model `a / b` as `a * (b ** -1)` in symbolic form (not integer division).
 * **Functions & arrays:** Uninterpreted in reasoning unless specialized; treated as symbols or function terms.
 * **Scope:** Focused on boolean predicates used in `require`/`assert`—not full contract semantics.
-* **Logging:** All internal debug goes through `src.sindi.utils.printer`. Set `SINDI_QUIET=1` to suppress globally.
+* **Logging:** All internal debug goes through `src.Sindi.utils.printer`. Set `Sindi_QUIET=1` to suppress globally.
 
 ---
 
@@ -263,5 +263,5 @@ Issues and PRs are welcome. If you add rewrite rules or parser coverage, please 
 
 If you use Sindi in academic work, please cite the **Sindi** paper (upcoming) and this repository.
 
-* Tool: `https://github.com/mojtaba-eshghie/SInDi`
-* PyPI: `https://pypi.org/project/sindi/`
+* Tool: `https://github.com/mojtaba-eshghie/Sindi`
+* PyPI: `https://pypi.org/project/Sindi/`
