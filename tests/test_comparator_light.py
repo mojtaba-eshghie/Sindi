@@ -1,4 +1,4 @@
-from sindi.comparator_light import ComparatorRulesOnly
+from src.sindi.comparator_light import ComparatorRulesOnly
 
 C = ComparatorRulesOnly()
 
