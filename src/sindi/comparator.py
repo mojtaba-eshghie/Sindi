@@ -1,11 +1,11 @@
 import sympy as sp
 from sympy.logic.boolalg import And, Or, Not
 from sympy.logic.inference import satisfiable
-from src.sindi.tokenizer import Tokenizer
-from src.sindi.parser import Parser, ASTNode
-from src.sindi.simplifier import Simplifier
-from src.sindi.rewriter import Rewriter
-from src.sindi.utils import printer
+from .tokenizer import Tokenizer
+from .parser import Parser, ASTNode
+from .simplifier import Simplifier
+from .rewriter import Rewriter
+from .utils import printer
 import z3
 import re
 
