@@ -1,3 +1,7 @@
-include README.md
 include LICENSE
+include README-PYPI.md
 recursive-include src *.py
+
+# Do NOT ship large/non-package folders
+prune datasets
+prune use-cases
