@@ -1,10 +1,10 @@
 # Light version of SInDi comparator
 # This version does not use SMT solvers, only AST normalization and rule-based reasoning.
 from typing import List, Tuple, Optional, Union
-from src.sindi.rewriter import Rewriter
-from src.sindi.tokenizer import Tokenizer
-from src.sindi.parser import Parser, ASTNode
-from src.sindi.utils import printer
+from .rewriter import Rewriter
+from .tokenizer import Tokenizer
+from .parser import Parser, ASTNode
+from .utils import printer
 
 # ------------ Small helpers on AST ------------
 
