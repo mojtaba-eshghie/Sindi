@@ -1,6 +1,5 @@
 import csv
 import random
-from sindi.config import debug_print
 
 def advanced_diversify_predicate(predicate):
     # Define the diversification strategies
