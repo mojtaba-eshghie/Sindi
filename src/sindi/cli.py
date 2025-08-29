@@ -5,28 +5,19 @@ import json
 import sys
 from typing import Any, Dict
 from contextlib import redirect_stdout
-from src.sindi.rewriter import Rewriter
-from src.sindi.tokenizer import Tokenizer
-from src.sindi.parser import Parser, ASTNode
-from src.sindi.simplifier import Simplifier
-from src.sindi.comparator import Comparator
-from src.sindi.utils import printer, set_quiet
-from src.sindi.comparator_light import ComparatorRulesOnly
-from src.sindi.utils import printer, set_quiet, set_debug
+from .rewriter import Rewriter
+from .tokenizer import Tokenizer
+from .parser import Parser, ASTNode
+from .simplifier import Simplifier
+from .comparator import Comparator
+from .utils import printer, set_quiet, set_debug
+from .comparator_light import ComparatorRulesOnly
 import os
-
 
 def _env_truthy(name: str) -> bool:
     return os.environ.get(name, "").strip().lower() in ("1", "true", "yes", "on")
 
 def _configure_logging(args) -> None:
-    """
-    CLI logging policy:
-      - If --debug-logs: enable debug.
-      - Else if SINDI_DEBUG is truthy: enable debug.
-      - Else: keep quiet.
-      - If SINDI_QUIET is truthy: force quiet (overrides both).
-    """
     if getattr(args, "debug_logs", False):
         set_debug(True)
     elif _env_truthy("SINDI_DEBUG"):
@@ -50,8 +41,6 @@ def read_predicate(value: str, is_file: bool) -> str:
         return value
     with open(value, "r", encoding="utf-8") as f:
         return f.read().strip()
-
-# ---- subcommands ----
 
 def cmd_rewrite(args: argparse.Namespace) -> int:
     _configure_logging(args)
@@ -129,7 +118,6 @@ def cmd_simplify(args: argparse.Namespace) -> int:
 
 def cmd_compare(args: argparse.Namespace) -> int:
     _configure_logging(args)
-    
     rw = Rewriter()
     tk = Tokenizer()
 
@@ -137,14 +125,10 @@ def cmd_compare(args: argparse.Namespace) -> int:
     p2 = read_predicate(args.predicate2, args.p2_file)
 
     if args.light:
-        if ComparatorRulesOnly is None:
-            print("Error: light comparator not available (src/sindi/comparator_rules.py missing).", file=sys.stderr)
-            return 2
         cmp = ComparatorRulesOnly(verbose=args.verbose)
     else:
         cmp = Comparator()
 
-    # Capture any stray prints from comparator (belt & suspenders)
     sink = io.StringIO()
     with redirect_stdout(sink):
         verdict = cmp.compare(p1, p2)
@@ -171,8 +155,6 @@ def cmd_compare(args: argparse.Namespace) -> int:
         print("\n[AST p2]")
         print_tree(ast2)
     return 0
-
-# ---- arg parser ----
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
@@ -215,7 +197,7 @@ def build_parser() -> argparse.ArgumentParser:
     pc.add_argument("--p1-file", action="store_true")
     pc.add_argument("--p2-file", action="store_true")
     pc.add_argument("--light", action="store_true",
-                    help="Use solver-free ComparatorRulesOnly (if available).")
+                    help="Use solver-free ComparatorRulesOnly.")
     pc.add_argument("--verbose", action="store_true",
                     help="Show rewritten predicates and ASTs.")
     pc.add_argument("--json", action="store_true")
