@@ -33,6 +33,9 @@ class Tokenizer:
             (r'\]', 'RBRACKET'),
             (r'\"[^\"]*\"', 'STRING_LITERAL'),
 
+            # --- Handle 10**k wei as one numeric token (fallback if string rewriter didn't run) ---
+            (r'(?i)\b10\s*\*\*\s*(\d+)\s*wei\b', 'WEI_POW10'),
+
             # ---- Numbers (order matters: scientific before float/int) ----
             (r'\b\d(?:_?\d)*(?:\.\d(?:_?\d)*)?[eE][+-]?\d+(?:_?\d)*\b', 'SCIENTIFIC'),
             (r'\b\d(?:_?\d)*\.\d(?:_?\d)*\b', 'FLOAT'),
@@ -81,6 +84,13 @@ class Tokenizer:
                             num, unit = re.match(r'(\d(?:_?\d)*)\s*(\w+)', value).groups()
                             num = int(num.replace('_', ''))
                             value = str(num * self.time_units[unit])
+                            tag = 'INTEGER'
+
+                        elif tag == 'WEI_POW10':
+                            # Turn "10**18 wei" into a big integer literal token
+                            m = re.match(r'(?i)\b10\s*\*\*\s*(\d+)\s*wei\b', value)
+                            k = int(m.group(1)) if m else 0
+                            value = str(10 ** k)
                             tag = 'INTEGER'
 
                         elif tag in ('SCIENTIFIC', 'FLOAT', 'INTEGER'):
