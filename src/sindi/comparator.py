@@ -6,6 +6,7 @@ from .parser import Parser, ASTNode
 from .simplifier import Simplifier
 from .rewriter import Rewriter
 from .utils import printer
+from .ast_rewriter import ASTRewriter
 import z3
 import re
 
@@ -16,6 +17,7 @@ class Comparator:
         self.simplifier = Simplifier()
         self.parser = Parser([])
         self.rewriter = Rewriter() 
+        self.ast_rewriter = ASTRewriter()
     
     def _parse_predicate(self, predicate_str):
         predicate_str = self.rewriter.apply(predicate_str)
@@ -24,8 +26,8 @@ class Comparator:
         return self.parser.parse()
 
     def compare(self, predicate1: str, predicate2: str) -> str:
-        predicate1 = self.rewriter.apply(predicate1)
-        predicate2 = self.rewriter.apply(predicate2)
+        # predicate1 = self.rewriter.apply(predicate1)
+        # predicate2 = self.rewriter.apply(predicate2)
 
         # Tokenize, parse, and simplify the first predicate
         tokens1 = self.tokenizer.tokenize(predicate1)
@@ -40,6 +42,10 @@ class Comparator:
         parser2 = Parser(tokens2)
         ast2 = parser2.parse()
         printer(f"Parsed AST2: {ast2}")
+
+        # AST-based rewriter
+        ast1 = self.ast_rewriter.normalize(ast1)  
+        ast2 = self.ast_rewriter.normalize(ast2)
 
         # Special-case: identical LHS/RHS with strict compare vs '!=' (both UNSAT),
         # but tests expect the '!=' side to be considered stronger.
