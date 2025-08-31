@@ -77,6 +77,10 @@ class ASTRewriter:
     # ---- convenience substitutions you previously had as strings ----
     # Keep these here as AST-level forms in case the surface pass didn't catch them.
     def _owner_admin_forms(self, n: ASTNode) -> ASTNode:
+        # now -> block.timestamp (parsers emit 'now' as a plain IDENTIFIER leaf)
+        if not n.children and n.value == "now":
+            return ASTNode("block.timestamp")
+
         # isOwner() -> (msg.sender == owner())
         if n.value == "isOwner()" and not n.children:
             return ASTNode("==", [ASTNode("msg.sender"), ASTNode("owner()")])

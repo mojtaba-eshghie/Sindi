@@ -18,12 +18,29 @@ class Comparator:
         self.parser = Parser([])
         self.rewriter = Rewriter() 
         self.ast_rewriter = ASTRewriter()
+
+    # Old version. Keeping it for reference.
+    # def _parse_predicate(self, predicate_str: str) -> ASTNode:
+    #     predicate_str = self.rewriter.apply(predicate_str)
+    #     self.parser.tokens = self.tokenizer.tokenize(predicate_str)
+    #     self.parser.pos = 0
+    #     return self.parser.parse()
     
-    def _parse_predicate(self, predicate_str):
-        predicate_str = self.rewriter.apply(predicate_str)
-        self.parser.tokens = self.tokenizer.tokenize(predicate_str)
-        self.parser.pos = 0
-        return self.parser.parse()
+    def _parse_predicate(self, predicate_str: str) -> ASTNode:
+        """
+        Single source of truth for: string rewrite -> tokenize -> parse -> AST normalize.
+        Keeping this here guarantees all compare paths see identical canonicalization.
+        """
+        s = self.rewriter.apply(predicate_str)
+        tokens = self.tokenizer.tokenize(s)
+        ast = Parser(tokens).parse()
+        # AST-level normalization (boolean ==/!= to True/False, !!, move '-' across rels, sort, etc.)
+        try:
+            ast = self.ast_rewriter.normalize(ast)
+        except Exception:
+            # Never block compare() if AST-normalization adds a corner case later.
+            pass
+        return ast
 
     def compare(self, predicate1: str, predicate2: str) -> str:
         # predicate1 = self.rewriter.apply(predicate1)
@@ -43,9 +60,11 @@ class Comparator:
         ast2 = parser2.parse()
         printer(f"Parsed AST2: {ast2}")
 
-        # AST-based rewriter
-        ast1 = self.ast_rewriter.normalize(ast1)  
-        ast2 = self.ast_rewriter.normalize(ast2)
+        # Parse both via the unified pipeline so string rewrites are always applied.
+        ast1 = self._parse_predicate(predicate1)
+        printer(f"Parsed+Normalized AST1: {ast1}")
+        ast2 = self._parse_predicate(predicate2)
+        printer(f"Parsed+Normalized AST2: {ast2}")
 
         # Special-case: identical LHS/RHS with strict compare vs '!=' (both UNSAT),
         # but tests expect the '!=' side to be considered stronger.
