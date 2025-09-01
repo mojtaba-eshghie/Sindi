@@ -5,6 +5,9 @@ class Rewriter:
     """
     Canonicalizes Solidity predicate strings before tokenization/parsing,
     implementing the rewrite rules in Table \\ref{tab:canonicalized}.
+    This is a surface-level rewriting pass, working on the raw string which is
+    then tokenized and parsed into an AST. We have replaced this by the AST-level
+    rewriter class `ASTRewriter`.
     """
 
     _HEX_ZERO_ADDR = re.compile(r"\b0x0{40}\b", flags=re.IGNORECASE)

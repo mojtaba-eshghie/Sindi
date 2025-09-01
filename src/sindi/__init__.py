@@ -5,6 +5,7 @@ from .rewriter import Rewriter
 from .tokenizer import Tokenizer
 from .parser import Parser, ASTNode
 from .simplifier import Simplifier
+from .ast_rewriter import ASTRewriter
 
 __all__ = [
     "Comparator",
@@ -14,6 +15,7 @@ __all__ = [
     "Parser",
     "ASTNode",
     "Simplifier",
+    "ASTRewriter",
 ]
 
 __version__ = "0.2.0"
