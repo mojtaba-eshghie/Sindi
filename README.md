@@ -262,6 +262,17 @@ Issues and PRs are welcome. If you add rewrite rules or parser coverage, please 
 ## Citation (paper & code)
 
 If you use Sindi in academic work, please cite the **Sindi** paper (upcoming) and this repository.
-
+* Cite our preprint report:
+```bibtex
+@techreport{SInDi,
+  author      = {Eshghie, Mojtaba and Andersson Kasche, Gustav and Artho, Cyrille and Monperrus, Martin},
+  title       = {{SInDi: Semantic Invariant Differencing for Solidity Smart Contracts}},
+  institution = {KTH Royal Institute of Technology, Theoretical Computer Science Division},
+  year        = {2025},
+  type        = {Technical Report},
+  url         = {https://kth.diva-portal.org/smash/record.jsf?pid=diva2:1956137},
+  note        = {Published via KTH DiVA Portal}
+}
+```
 * Tool: `https://github.com/mojtaba-eshghie/Sindi`
 * PyPI: `https://pypi.org/project/Sindi/`
